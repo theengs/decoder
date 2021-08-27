@@ -1,0 +1,160 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  gcc:
+    name: GCC
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - gcc: "4.6"
+          - gcc: "4.7"
+          - gcc: "4.8"
+          - gcc: "4.9"
+          - gcc: "5"
+          - gcc: "6"
+          - gcc: "7"
+            cxxflags: -fsanitize=leak -fno-sanitize-recover=all
+          - gcc: "8"
+            cxxflags: -fsanitize=undefined -fno-sanitize-recover=all
+          - gcc: "9"
+            cxxflags: -fsanitize=address -fno-sanitize-recover=all
+          - gcc: "10"
+          - gcc: "11"
+    steps:
+      - name: Install
+        run: |
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty main'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty universe'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial main'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial universe' 
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic main'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic universe' 
+          sudo add-apt-repository -yn 'deb http://mirrors.kernel.org/ubuntu hirsute main universe' 
+          sudo apt-get update
+          sudo apt-get install -y gcc-${{ matrix.gcc }} g++-${{ matrix.gcc }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+      - name: Configure
+        run: cmake -DCMAKE_BUILD_TYPE=Debug .
+        env:
+          CC: gcc-${{ matrix.gcc }}
+          CXX: g++-${{ matrix.gcc }}
+          CXXFLAGS: ${{ matrix.cxxflags }}
+      - name: Build
+        run: cmake --build .
+      - name: Test
+        run: ctest --output-on-failure -V -C Debug .
+        env:
+          UBSAN_OPTIONS: print_stacktrace=1
+
+  clang:
+    name: Clang
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - clang: "3.5"
+            cxxflags: "-stdlib=libc++"
+          - clang: "3.6"
+            cxxflags: "-stdlib=libc++"
+          - clang: "3.7"
+            cxxflags: "-stdlib=libc++"
+          - clang: "3.8"
+            cxxflags: "-stdlib=libc++"
+          - clang: "3.9"
+            cxxflags: "-stdlib=libc++"
+          - clang: "4.0"
+            cxxflags: "-stdlib=libc++"
+          - clang: "5.0"
+          - clang: "6.0"
+          - clang: "7"
+          - clang: "8"
+            cxxflags: -fsanitize=leak -fno-sanitize-recover=all
+          - clang: "9"
+            cxxflags: -fsanitize=undefined -fno-sanitize-recover=all
+          - clang: "10"
+            cxxflags: -fsanitize=address -fno-sanitize-recover=all
+    steps:
+      - name: Install
+        run: |
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty main'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty universe'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial main'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial universe' 
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic main'
+          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic universe' 
+          sudo apt-get update
+          sudo apt-get install -y clang-${{ matrix.clang }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+      - name: Configure
+        run: cmake -DCMAKE_BUILD_TYPE=Debug .
+        env:
+          CC: clang-${{ matrix.clang }}
+          CXX: clang++-${{ matrix.clang }}
+          CXXFLAGS: >-
+            ${{ matrix.cxxflags }}
+            ${{ contains(matrix.cxxflags, 'libc++') && '-I/usr/lib/llvm-10/include/c++/v1/' || '' }}
+      - name: Build
+        run: cmake --build .
+      - name: Test
+        run: ctest --output-on-failure -V -C Debug .
+        env:
+          UBSAN_OPTIONS: print_stacktrace=1
+
+  xcode:
+    name: XCode
+    needs: clang
+    runs-on: macos-10.15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - xcode: "10.3"
+          - xcode: "11.7"
+          - xcode: "12.4"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+      - name: Select XCode version
+        run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode }}.app
+      - name: Configure
+        run: cmake -DCMAKE_BUILD_TYPE=Debug .
+      - name: Build
+        run: cmake --build .
+      - name: Test
+        run: ctest --output-on-failure -V -C Debug .
+
+  msvc:
+    name: Visual Studio
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-2016
+          - os: windows-2019
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+      - name: Configure
+        run: cmake -DCMAKE_BUILD_TYPE=Debug .
+      - name: Build
+        run: cmake --build .
+      - name: Test
+        run: ctest --output-on-failure -V -C Debug .
+
+  
