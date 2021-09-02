@@ -45,6 +45,18 @@ long value_from_hex_string(const char* data_str, int offset, int data_length, bo
 }
 
 /*
+ * @brief Removes the underscores at the beginning of key strings when duplicate properties exist in a device.
+ */
+
+std::string sanitizeJsonKey(const char* key_in) {
+  unsigned int key_index = 0;
+  while (key_in[key_index] == '_') {
+    key_index++;
+  }
+  return std::string(key_in + key_index);
+}
+
+/*
  * @breif Compares the input json values to the known devices and decodes the data if a match is found.
  */
 bool decodeBLEJson(JsonObject& jsondata) {
@@ -179,12 +191,7 @@ bool decodeBLEJson(JsonObject& jsondata) {
               /* If there is any underscores at the beginning of the property name, there is multiple 
                * properties of this type, we need remove the underscores for creating the key.
                */
-              unsigned int key_index = 0;
-              while (kv.key().c_str()[key_index] == '_') {
-                key_index++;
-              }
-
-              std::string _key(&kv.key().c_str()[key_index]);
+              std::string _key = sanitizeJsonKey(kv.key().c_str());
 
               /* Cast to a differnt value type if specified */
               if (prop.containsKey("val_bits")) {
@@ -217,6 +224,8 @@ bool decodeBLEJson(JsonObject& jsondata) {
 
               success = true;
               DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
+            } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
+              jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
             }
           }
         }
