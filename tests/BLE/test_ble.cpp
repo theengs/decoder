@@ -40,7 +40,8 @@ const char* test_mfgdata[][3] = {
 
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
-    {"MiBand", "fee0", "servicedata", "a21e0000"}};
+    {"MiBand", "fee0", "servicedata", "a21e0000"},
+    {"Miscale", "0x181d", "servicedata", "223e30b207010708031f"}};
 
 int main() {
   StaticJsonDocument<1024> doc;

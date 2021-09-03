@@ -60,7 +60,7 @@ std::string sanitizeJsonKey(const char* key_in) {
  * @breif Compares the input json values to the known devices and decodes the data if a match is found.
  */
 bool decodeBLEJson(JsonObject& jsondata) {
-  DynamicJsonDocument doc(2048);
+  DynamicJsonDocument doc(4096);
   const char* svc_data = jsondata["servicedata"].as<const char*>();
   const char* mfg_data = jsondata["manufacturerdata"].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
@@ -74,6 +74,8 @@ bool decodeBLEJson(JsonObject& jsondata) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
       return success;
     }
+
+    DEBUG_PRINT("JsonDocument size: %u\n", doc.memoryUsage());
 
     JsonArray condition = doc["condition"];
     bool match = false;
@@ -226,6 +228,7 @@ bool decodeBLEJson(JsonObject& jsondata) {
               DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
             } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
               jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
+              success = true;
             }
           }
         }
