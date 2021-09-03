@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "device_json.h"
+#include "devices.h"
 
 #ifdef DEBUG_DECODER
 #  include <stdio.h>

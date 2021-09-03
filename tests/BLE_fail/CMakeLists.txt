@@ -8,6 +8,8 @@ target_compile_features(test_ble_fail PRIVATE cxx_std_11)
 
 target_link_libraries(test_ble_fail PUBLIC 1decoder)
 
+target_compile_definitions(1decoder PRIVATE DEBUG_DECODER)
+
 target_include_directories(test_ble_fail PUBLIC 
                            "${PROJECT_BINARY_DIR}"
                            )
