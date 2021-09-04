@@ -197,18 +197,19 @@ bool decodeBLEJson(JsonObject& jsondata) {
 
               /* Cast to a differnt value type if specified */
               if (prop.containsKey("val_bits")) {
+                int temp_int = (int)temp_val; // Workaround clang ubsan error
                 switch (prop["val_bits"].as<int>()) {
                   case 1:
-                    jsondata[_key] = (bool)temp_val;
+                    jsondata[_key] = (bool)temp_int;
                     break;
                   case 8:
-                    jsondata[_key] = (int8_t)temp_val;
+                    jsondata[_key] = (int8_t)temp_int;
                     break;
                   case 16:
-                    jsondata[_key] = (int16_t)temp_val;
+                    jsondata[_key] = (int16_t)temp_int;
                     break;
                   case 32:
-                    jsondata[_key] = (int32_t)temp_val;
+                    jsondata[_key] = (int32_t)temp_int;
                     break;
                   default:
                     jsondata[_key] = temp_val;
@@ -228,6 +229,15 @@ bool decodeBLEJson(JsonObject& jsondata) {
               DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
             } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
               jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
+              success = true;
+            } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
+              const char* src = svc_data;
+              if (strstr((const char*)decoder[1], "manufacturerdata")) {
+                src = mfg_data;
+              }
+
+              std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
+              jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
               success = true;
             }
           }

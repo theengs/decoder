@@ -10,6 +10,11 @@
 #include "IBS_TH1_json.h"
 #include "Miband_json.h"
 #include "Miscale_json.h"
+#include "TPMS_10CA8F_json.h"
+#include "LYWSD03MMC_ATC_json.h"
+#include "CGPR1_json.h"
+#include "iBeacon_json.h"
+
 
 const char* _devices[] = {
 _miflora_json,
@@ -25,4 +30,8 @@ _JQJCY01YM_json,
 _IBS_TH1_json,
 _Miband_json,
 _Miscale_v1_json,
+_TPMS_10CA8F_json,
+_LYWSD03MMC_ATC_json,
+_CGPR1_json,
+_ibeacon_json,
 };
