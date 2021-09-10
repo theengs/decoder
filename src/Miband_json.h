@@ -1,6 +1,6 @@
 const char* _Miband_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"Miband",
    "model_id":"MiBand",
    "condition":["uuid", "contain", "fee0"],

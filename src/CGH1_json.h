@@ -31,18 +31,3 @@ const char* _CGH1_json = R""""(
       }
    }
 })"""";
-/*
-R""""(
-{
-   "brand":"Qingping",
-   "model":"Door sensor",
-   "model_id":"CGH1",
-   "condition":["servicedata", "index", 0, "0804", '|', "servicedata", "index", 0, "8804"],
-   "properties":{
-      "open":{
-         "decoder":["value_from_hex_data", "servicedata", 33, 1, false],
-         "val_bits":1,
-         "post_proc":['!']
-      }
-   }
-})"""",*/

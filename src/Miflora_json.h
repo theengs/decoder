@@ -1,7 +1,7 @@
-const char* _miflora_json = R""""(
-{ 
+const char* _Miflora_json = R""""(
+{
    "brand":"Xiaomi",
-   "model":"miflora",
+   "model":"Miflora",
    "model_id":"HHCCJCY01HHCC",
    "condition":["servicedata", "contain", "209800"],
    "properties":{
@@ -12,7 +12,8 @@ const char* _miflora_json = R""""(
       },
       "moi":{
          "condition":["servicedata", 25, "8"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 2, false]
+         "decoder":["value_from_hex_data", "servicedata", 30, 2, false],
+         "val_bits":8
       },
       "lux":{
          "condition":["servicedata", 25, "7"],

@@ -1,8 +1,8 @@
-const char* _TPMS_10CA8F_json = R""""(
+const char* _TPMS_json = R""""(
 {
    "brand":"GENERIC",
    "model":"TPMS",
-   "model_id":"TPMS1_10CA8F",
+   "model_id":"TPMS1",
    "condition":["name", "index", 0, "TPMS1_10CA8F"],
    "properties":{
       "count":{
@@ -18,7 +18,8 @@ const char* _TPMS_10CA8F_json = R""""(
          "post_proc":['/', 100]
       },
       "batt":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 32, 2, true]
+         "decoder":["value_from_hex_data", "manufacturerdata", 32, 2, true],
+         "val_bits":8
       },
       "alarm":{
          "decoder":["value_from_hex_data", "manufacturerdata", 35, 1, false],

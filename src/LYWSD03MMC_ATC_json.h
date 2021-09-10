@@ -1,6 +1,6 @@
 const char* _LYWSD03MMC_ATC_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"LYWSD03MMC",
    "model_id":"LYWSD03MMC_ATC",
    "condition":["servicedata", "contain", "a4c138"],

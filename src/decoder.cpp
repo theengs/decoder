@@ -36,8 +36,8 @@ long value_from_hex_string(const char* data_str, int offset, int data_length, bo
     reverse_hex_data(&data_str[offset], &data[0], data_length);
   }
 
-  DEBUG_PRINT("extracting value from %s\n", data.c_str());
   long value = strtol(data.c_str(), NULL, 16);
+  DEBUG_PRINT("extracted value from %s = 0x%08x\n", data.c_str(), value);
 
   if (value > 65000 && data_length <= 4 && canBeNegative)
     value = value - 65535;

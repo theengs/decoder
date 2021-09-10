@@ -1,6 +1,6 @@
 const char* _CGP1W_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"CG_THP",
    "model_id":"CGP1W",
    "condition":["servicedata", "index", 0, "0809"],
