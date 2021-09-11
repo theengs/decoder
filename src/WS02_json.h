@@ -10,7 +10,7 @@ const char* _WS02_json = R""""(
          "post_proc":['/', 16]
       },
       "hum":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 28, 2, true],
+         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true],
          "post_proc":['/', 16]
       },
       "volt":{
