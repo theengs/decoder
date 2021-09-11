@@ -1,7 +1,6 @@
-name: Build
+name: PR_Build
 
-on:
-  workflow_dispatch:
+on: [push, pull_request]
 
 jobs:
   gcc:
@@ -11,20 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - gcc: "4.6"
-          - gcc: "4.7"
-          - gcc: "4.8"
-          - gcc: "4.9"
-          - gcc: "5"
-          - gcc: "6"
-          - gcc: "7"
-            cxxflags: -fsanitize=leak -fno-sanitize-recover=all
-          - gcc: "8"
-            cxxflags: -fsanitize=undefined -fno-sanitize-recover=all
           - gcc: "9"
-            cxxflags: -fsanitize=address -fno-sanitize-recover=all
-          - gcc: "10"
-          - gcc: "11"
     steps:
       - name: Install
         run: |
@@ -51,8 +37,6 @@ jobs:
         run: cmake --build .
       - name: Test
         run: ctest --output-on-failure -V -C Debug .
-        env:
-          UBSAN_OPTIONS: print_stacktrace=1
 
   clang:
     name: Clang
@@ -61,27 +45,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - clang: "3.5"
-            cxxflags: "-stdlib=libc++"
-          - clang: "3.6"
-            cxxflags: "-stdlib=libc++"
-          - clang: "3.7"
-            cxxflags: "-stdlib=libc++"
-          - clang: "3.8"
-            cxxflags: "-stdlib=libc++"
-          - clang: "3.9"
-            cxxflags: "-stdlib=libc++"
-          - clang: "4.0"
-            cxxflags: "-stdlib=libc++"
-          - clang: "5.0"
-          - clang: "6.0"
-          - clang: "7"
-          - clang: "8"
-            cxxflags: -fsanitize=leak -fno-sanitize-recover=all
-          - clang: "9"
-            cxxflags: -fsanitize=undefined -fno-sanitize-recover=all
           - clang: "10"
-            cxxflags: -fsanitize=address -fno-sanitize-recover=all
     steps:
       - name: Install
         run: |
@@ -109,8 +73,6 @@ jobs:
         run: cmake --build .
       - name: Test
         run: ctest --output-on-failure -V -C Debug .
-        env:
-          UBSAN_OPTIONS: print_stacktrace=1
 
   xcode:
     name: XCode
@@ -120,8 +82,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - xcode: "10.3"
-          - xcode: "11.7"
           - xcode: "12.4"
     steps:
       - name: Checkout
@@ -143,7 +103,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: windows-2016
           - os: windows-2019
     runs-on: ${{ matrix.os }}
     steps:
