@@ -43,6 +43,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"model_id\":\"IBS-TH1\",\"tempc\":26.62,\"tempf\":79.916,\"hum\":53.79,\"batt\":89}",
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS1\",\"count\":1,\"pres\":222.708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false}",
     "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"model_id\":\"IBEACON\",\"mfid\":\"4c00\",\"uuid\":\"426c7565436861726d426561636f6e73\",\"major\":3838,\"minor\":4949,\"power\":-59}",
+    "{\"brand\":\"ThermoBeacon\",\"model\":\"WS02\",\"model_id\":\"WS02\",\"tempc\":31.3125,\"tempf\":88.3625,\"hum\":70.75,\"volt\":3.160}",
 };
 
 const char* expected_uuid[] = {
@@ -90,6 +91,7 @@ const char* test_mfgdata[][3] = {
     {"Inkbird TH1", "sps", "660a03150110805908"},
     {"TPMS", "TPMS1_10CA8F", "000180eaca10ca8ff46503007c0c00003300"},
     {"iBeacon", "BlueCharm_135727", "4c000215426c7565436861726d426561636f6e730efe1355c5"},
+    {"WS02", "ThermoBeacon", "100000001a110000f770580cf5016c0443090000"},
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
