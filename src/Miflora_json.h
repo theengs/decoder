@@ -1,7 +1,7 @@
-const char* _miflora_json = R""""(
-{ 
+const char* _Miflora_json = R""""(
+{
    "brand":"Xiaomi",
-   "model":"miflora",
+   "model":"Miflora",
    "model_id":"HHCCJCY01HHCC",
    "condition":["servicedata", "contain", "209800"],
    "properties":{

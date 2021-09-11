@@ -1,6 +1,6 @@
 const char* _CGG1_json_v1 = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"CG_round_v1",
    "model_id":"CGG1",
    "condition":["servicedata", "index", 0, "0807", '|', "servicedata", "index", 0, "8816"],
@@ -18,7 +18,7 @@ const char* _CGG1_json_v1 = R""""(
 
 const char* _CGG1_json_v2 = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"CG_round_v2",
    "model_id":"CGG1",
    "condition":["servicedata", "index", 4, "4703"],

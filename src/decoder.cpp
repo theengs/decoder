@@ -1,5 +1,6 @@
 #include "decoder.h"
 
+#include <climits>
 #include <string>
 
 #include "devices.h"
@@ -36,11 +37,17 @@ long value_from_hex_string(const char* data_str, int offset, int data_length, bo
     reverse_hex_data(&data_str[offset], &data[0], data_length);
   }
 
-  DEBUG_PRINT("extracting value from %s\n", data.c_str());
   long value = strtol(data.c_str(), NULL, 16);
+  DEBUG_PRINT("extracted value from %s = 0x%08x\n", data.c_str(), value);
 
-  if (value > 65000 && data_length <= 4 && canBeNegative)
-    value = value - 65535;
+  if (canBeNegative) {
+    if (data_length <= 2 && value > SCHAR_MAX) {
+      value -= (UCHAR_MAX + 1);
+    } else if (data_length <= 4 && value > INT_MAX) {
+      value -= (UINT_MAX + 1);
+    }
+  }
+
   return value;
 }
 
@@ -196,24 +203,8 @@ bool decodeBLEJson(JsonObject& jsondata) {
               std::string _key = sanitizeJsonKey(kv.key().c_str());
 
               /* Cast to a differnt value type if specified */
-              if (prop.containsKey("val_bits")) {
-                switch (prop["val_bits"].as<int>()) {
-                  case 1:
-                    jsondata[_key] = (bool)temp_val;
-                    break;
-                  case 8:
-                    jsondata[_key] = (int8_t)temp_val;
-                    break;
-                  case 16:
-                    jsondata[_key] = (int16_t)temp_val;
-                    break;
-                  case 32:
-                    jsondata[_key] = (int32_t)temp_val;
-                    break;
-                  default:
-                    jsondata[_key] = temp_val;
-                    break;
-                }
+              if (prop.containsKey("is_bool")) {
+                jsondata[_key] = (bool)temp_val;
               } else {
                 jsondata[_key] = temp_val;
               }
@@ -228,6 +219,15 @@ bool decodeBLEJson(JsonObject& jsondata) {
               DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
             } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
               jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
+              success = true;
+            } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
+              const char* src = svc_data;
+              if (strstr((const char*)decoder[1], "manufacturerdata")) {
+                src = mfg_data;
+              }
+
+              std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
+              jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
               success = true;
             }
           }

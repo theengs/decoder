@@ -1,6 +1,6 @@
 const char* _JQJCY01YM_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"Formaldehyde detector",
    "model_id":"JQJCY01YM",
    "condition":["servicedata", "contain", "20df02"],
