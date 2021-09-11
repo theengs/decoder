@@ -14,6 +14,7 @@
 #include "LYWSD03MMC_ATC_json.h"
 #include "CGPR1_json.h"
 #include "iBeacon_json.h"
+#include "WS02_json.h"
 
 
 const char* _devices[] = {
@@ -34,4 +35,5 @@ _TPMS_json,
 _LYWSD03MMC_ATC_json,
 _CGPR1_json,
 _ibeacon_json,
+_WS02_json,
 };
