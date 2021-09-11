@@ -1,9 +1,10 @@
-const char* _Miscale_v1_json = R""""(
+const char* _Miscale_v1_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1\",\"model_id\":\"XMTZC04HM\",\"condition\":[\"uuid\",\"contain\",\"181d\",\"&\",\"servicedata\",\"index\",0,\"2\"],\"properties\":{\"unit\":{\"condition\":[\"servicedata\",1,\"2\"],\"decoder\":[\"static_value\",\"kg\"]},\"weight\":{\"condition\":[\"servicedata\",1,\"2\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",2,4,true,false],\"post_proc\":[\"/\",200]},\"_unit\":{\"condition\":[\"servicedata\",1,\"3\"],\"decoder\":[\"static_value\",\"lbs\"]},\"_weight\":{\"condition\":[\"servicedata\",1,\"3\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",2,4,true,false],\"post_proc\":[\"/\",100]}}}";
+/*R""""(
 {
    "brand":"Xiaomi",
    "model":"Miscale_v1",
    "model_id":"XMTZC04HM",
-   "condition":["uuid", "contain", "181d", '&', "servicedata", "index", 0, "2"],
+   "condition":["uuid", "contain", "181d", "&", "servicedata", "index", 0, "2"],
    "properties":{
       "unit":{
          "condition":["servicedata", 1, "2"],
@@ -12,7 +13,7 @@ const char* _Miscale_v1_json = R""""(
       "weight":{
          "condition":["servicedata", 1, "2"],
          "decoder":["value_from_hex_data", "servicedata", 2, 4, true, false],
-         "post_proc":['/', 200]
+         "post_proc":["/", 200]
       },
       "_unit":{
          "condition":["servicedata", 1, "3"],
@@ -21,7 +22,7 @@ const char* _Miscale_v1_json = R""""(
       "_weight":{
          "condition":["servicedata", 1, "3"],
          "decoder":["value_from_hex_data", "servicedata", 2, 4, true, false],
-         "post_proc":['/', 100]
+         "post_proc":["/", 100]
       }
    }
-})"""";
+})"""";*/
