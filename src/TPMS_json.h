@@ -18,12 +18,11 @@ const char* _TPMS_json = R""""(
          "post_proc":['/', 100]
       },
       "batt":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 32, 2, true],
-         "val_bits":8
+         "decoder":["value_from_hex_data", "manufacturerdata", 32, 2, true]
       },
       "alarm":{
          "decoder":["value_from_hex_data", "manufacturerdata", 35, 1, false],
-         "val_bits":1
+         "is_bool":1
       }
    }
 })"""";

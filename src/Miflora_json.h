@@ -12,8 +12,7 @@ const char* _Miflora_json = R""""(
       },
       "moi":{
          "condition":["servicedata", 25, "8"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 2, false],
-         "val_bits":8
+         "decoder":["value_from_hex_data", "servicedata", 30, 2, false]
       },
       "lux":{
          "condition":["servicedata", 25, "7"],

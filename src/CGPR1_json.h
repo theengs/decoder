@@ -12,7 +12,7 @@ const char* _CGPR1_json = R""""(
       "pres":{
          "condition":["servicedata", 0, "4812"],
          "decoder":["value_from_hex_data", "servicedata", 21, 1, false],
-         "val_bits":1
+         "is_bool":1
       }
    }
 })"""";

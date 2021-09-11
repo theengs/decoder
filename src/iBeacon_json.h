@@ -18,8 +18,7 @@ const char* _ibeacon_json = R""""(
          "decoder":["value_from_hex_data", "manufacturerdata", 44, 4, false]
       },
       "power":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 48, 2, false],
-         "val_bits":8
+         "decoder":["value_from_hex_data", "manufacturerdata", 48, 2, false]
       }
    }
 })"""";

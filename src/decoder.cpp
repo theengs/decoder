@@ -1,5 +1,6 @@
 #include "decoder.h"
 
+#include <climits>
 #include <string>
 
 #include "devices.h"
@@ -39,8 +40,14 @@ long value_from_hex_string(const char* data_str, int offset, int data_length, bo
   long value = strtol(data.c_str(), NULL, 16);
   DEBUG_PRINT("extracted value from %s = 0x%08x\n", data.c_str(), value);
 
-  if (value > 65000 && data_length <= 4 && canBeNegative)
-    value = value - 65535;
+  if (canBeNegative) {
+    if (data_length <= 2 && value > SCHAR_MAX) {
+      value -= (UCHAR_MAX + 1);
+    } else if (data_length <= 4 && value > INT_MAX) {
+      value -= (UINT_MAX + 1);
+    }
+  }
+
   return value;
 }
 
@@ -196,25 +203,8 @@ bool decodeBLEJson(JsonObject& jsondata) {
               std::string _key = sanitizeJsonKey(kv.key().c_str());
 
               /* Cast to a differnt value type if specified */
-              if (prop.containsKey("val_bits")) {
-                int temp_int = (int)temp_val; // Workaround clang ubsan error
-                switch (prop["val_bits"].as<int>()) {
-                  case 1:
-                    jsondata[_key] = (bool)temp_int;
-                    break;
-                  case 8:
-                    jsondata[_key] = (int8_t)temp_int;
-                    break;
-                  case 16:
-                    jsondata[_key] = (int16_t)temp_int;
-                    break;
-                  case 32:
-                    jsondata[_key] = (int32_t)temp_int;
-                    break;
-                  default:
-                    jsondata[_key] = temp_val;
-                    break;
-                }
+              if (prop.containsKey("is_bool")) {
+                jsondata[_key] = (bool)temp_val;
               } else {
                 jsondata[_key] = temp_val;
               }
