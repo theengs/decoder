@@ -7,15 +7,15 @@ const char* _WS02_json = R""""(
    "properties":{
       "tempc":{
          "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true],
-         "post_proc":['/', 16]
+         "post_proc":["/", 16]
       },
       "hum":{
          "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true],
-         "post_proc":['/', 16]
+         "post_proc":["/", 16]
       },
       "volt":{
          "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true],
-         "post_proc":['/', 1000]
+         "post_proc":["/", 1000]
       }
    }
 })"""";
