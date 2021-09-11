@@ -1,6 +1,6 @@
 const char* _IBS_TH1_json = R""""(
 {
-   "brand":"inkbird",
+   "brand":"Inkbird",
    "model":"TH Sensor",
    "model_id":"IBS-TH1",
    "condition":["name", "index", 0, "sps"],

@@ -1,6 +1,6 @@
 const char* _CGD1_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"CG_alarm_clock",
    "model_id":"CGD1",
    "condition":["servicedata", "index", 0, "080caf", '|', "servicedata", "index", 0, "080c09", '|', "servicedata", "index", 0, "080cd0"],

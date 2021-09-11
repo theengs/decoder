@@ -1,6 +1,6 @@
 const char* _LYWSDCGQ_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"Mi Jia round",
    "model_id":"LYWSDCGQ",
    "condition":["servicedata", "contain", "20aa01"],

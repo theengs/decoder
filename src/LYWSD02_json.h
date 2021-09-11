@@ -1,6 +1,6 @@
 const char* _LYWSD02_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"Cleargrass clock",
    "model_id":"LYWSD02",
    "condition":["servicedata", "contain", "205b04"],

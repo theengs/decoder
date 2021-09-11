@@ -1,6 +1,6 @@
 const char* _Miscale_v1_json = R""""(
 {
-   "brand":"xiaomi",
+   "brand":"Xiaomi",
    "model":"Miscale_v1",
    "model_id":"XMTZC04HM",
    "condition":["uuid", "contain", "181d", '&', "servicedata", "index", 0, "2"],
