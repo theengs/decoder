@@ -178,6 +178,11 @@ bool decodeBLEJson(JsonObject& jsondata) {
                     case '+':
                       temp_val += post_proc[i + 1].as<double>();
                       break;
+                    case '%': {
+                      long val = (long)temp_val;
+                      temp_val = val % post_proc[i + 1].as<long>();
+                      break;
+                    }
                     case '<': {
                       long val = (long)temp_val;
                       temp_val = val << post_proc[i + 1].as<unsigned int>();
