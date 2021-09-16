@@ -14,5 +14,5 @@ target_include_directories(test_ble_fail PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            )
                            
-add_test(NAME run_test_ble_fail COMMAND test_ble_fail)
+#add_test(NAME run_test_ble_fail COMMAND test_ble_fail)
 

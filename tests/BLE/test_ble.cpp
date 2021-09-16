@@ -46,7 +46,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"ThermoBeacon\",\"model\":\"WS02\",\"model_id\":\"WS02\",\"tempc\":31.3125,\"tempf\":88.3625,\"hum\":70.75,\"volt\":3.160}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrometer\",\"model_id\":\"H5075\",\"tempc\":26.8,\"tempf\":80.24,\"hum\":52.6,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072\",\"tempc\":27.5,\"tempf\":81.5,\"hum\":53.1,\"batt\":100}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\"\"model_id\":\"IBS-X4S\",\"tempc\":26,\"tempf\":78.8,\"tempc2\":25,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBS-X4S\",\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77}",
     "{\"brand\":\"Inkbird\",\"model\":\"T Sensor\",\"model_id\":\"IBS-TH2\",\"tempc\":26.62,\"tempf\":79.916,\"batt\":89}",
 };
 
