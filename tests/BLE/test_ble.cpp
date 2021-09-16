@@ -1,9 +1,8 @@
+#include <cmath>
 #include <iostream>
 #include <limits>
-#include <cmath>
 
 #include "decoder.h"
-
 
 const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miflora\",\"model_id\":\"HHCCJCY01HHCC\",\"lux\":9971}",
@@ -96,9 +95,9 @@ const char* test_mfgdata[][3] = {
     {"TPMS", "TPMS1_10CA8F", "000180eaca10ca8ff46503007c0c00003300"},
     {"iBeacon", "BlueCharm_135727", "4c000215426c7565436861726d426561636f6e730efe1355c5"},
     {"WS02", "ThermoBeacon", "100000001a110000f770580cf5016c0443090000"},
-    {"H5075","GVH5075_1234","88ec000418ee6400"},
-    {"H5072","GVH5072_1234","88ec0004344b6400"},
-    {"IBT-4XS","iBBQ","0000000010082c40abe604010401fa00fa00"},
+    {"H5075", "GVH5075_1234", "88ec000418ee6400"},
+    {"H5072", "GVH5072_1234", "88ec0004344b6400"},
+    {"IBT-4XS", "iBBQ", "0000000010082c40abe604010401fa00fa00"},
     {"Inkbird TH2", "tps", "660a03150110805908"},
 };
 
@@ -114,6 +113,11 @@ static bool floatEqual(T f1, T f2) {
 }
 
 bool checkResult(JsonObject result, JsonObject expected) {
+  if (result.size() != expected.size()) {
+    std::cout << "Key:value count mismatch, result " << result.size() << ", expected " << expected.size() << std::endl;
+    return false;
+  }
+
   for (JsonPair kv : expected) {
     if (result[kv.key()] != kv.value()) {
       if (kv.value().is<double>() || kv.value().is<float>()) {
