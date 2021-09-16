@@ -1,4 +1,5 @@
 #include "HHCCJCY01HHCC_json.h"
+#include "VEGTRUG_json.h"
 #include "LYWSD02_json.h"
 #include "LYWSDCGQ_json.h"
 #include "CGP1W_json.h"
@@ -25,6 +26,7 @@
 
 const char* _devices[] = {
 _HHCCJCY01HHCC_json,
+_VEGTRUG_json,
 _LYWSD02_json,
 _LYWSDCGQ_json,
 _CGP1W_json,
