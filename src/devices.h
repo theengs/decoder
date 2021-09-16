@@ -12,6 +12,7 @@
 #include "IBS_X4S_json.h"
 #include "Miband_json.h"
 #include "XMTZC04HM_json.h"
+#include "XMTZC05HM_json.h"
 #include "TPMS_json.h"
 #include "LYWSD03MMC_ATC_json.h"
 #include "CGPR1_json.h"
@@ -38,6 +39,7 @@ _IBS_TH2_json,
 _IBS_X4S_json,
 _Miband_json,
 _XMTZC04HM_json,
+_XMTZC05HM_json,
 _TPMS_json,
 _LYWSD03MMC_ATC_json,
 _CGPR1_json,
