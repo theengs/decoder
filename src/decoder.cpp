@@ -215,9 +215,11 @@ bool decodeBLEJson(JsonObject& jsondata) {
               }
 
               /* If the property is temp in C, make sure to convert and add temp in F */
-              if (_key == "tempc") {
+              if (_key.find("tempc", 0, 5) != std::string::npos) {
                 double tc = jsondata[_key];
-                jsondata["tempf"] = tc * 1.8 + 32;
+                _key[4] = 'f';
+                jsondata[_key] = tc * 1.8 + 32;
+                _key[4] = 'c';
               }
 
               success = true;
