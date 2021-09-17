@@ -20,7 +20,7 @@ private:
 
   size_t m_docMax = 4096;
   size_t m_minSvcDataLen = 20;
-  size_t m_minMfgDataLen = 18;
+  size_t m_minMfgDataLen = 16;
 };
 
 #endif
