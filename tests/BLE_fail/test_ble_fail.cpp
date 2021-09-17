@@ -48,13 +48,15 @@ const char* test_uuid[][4] = {
 int main() {
   StaticJsonDocument<1024> doc;
   JsonObject bleObject;
+  ThingDecoder decoder;
 
   for (unsigned int i = 0; i < sizeof(test_servicedata) / sizeof(test_servicedata[0]); ++i) {
     doc.clear();
     std::cout << "trying " << test_servicedata[i][0] << " : " << test_servicedata[i][1] << std::endl;
     doc["servicedata"] = test_servicedata[i][1];
     bleObject = doc.as<JsonObject>();
-    if (decodeBLEJson(bleObject)) {
+
+    if (decoder.decodeBLEJson(bleObject)) {
       std::cout << "Found : ";
       bleObject.remove("servicedata");
       serializeJson(doc, std::cout);
@@ -73,7 +75,8 @@ int main() {
     doc["name"] = test_mfgdata[i][1];
     doc["manufacturerdata"] = test_mfgdata[i][2];
     bleObject = doc.as<JsonObject>();
-    if (decodeBLEJson(bleObject)) {
+
+    if (decoder.decodeBLEJson(bleObject)) {
       std::cout << "Found : ";
       bleObject.remove("name");
       bleObject.remove("manufacturerdata");
@@ -93,7 +96,8 @@ int main() {
     doc[test_uuid[i][2]] = test_uuid[i][3];
     doc["servicedatauuid"] = test_uuid[i][1];
     bleObject = doc.as<JsonObject>();
-    if (decodeBLEJson(bleObject)) {
+
+    if (decoder.decodeBLEJson(bleObject)) {
       std::cout << "Found : ";
       bleObject.remove("servicedatauuid");
       bleObject.remove(test_uuid[i][2]);
