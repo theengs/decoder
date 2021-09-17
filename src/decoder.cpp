@@ -15,7 +15,7 @@
 /*
  * @breif revert the string data 2 by 2 to get the correct endianness
  */
-void reverse_hex_data(const char* in, char* out, int l) {
+void ThingDecoder::reverse_hex_data(const char* in, char* out, int l) {
   int i = l, j = 0;
   while (i) {
     out[j] = in[i - 2];
@@ -29,7 +29,7 @@ void reverse_hex_data(const char* in, char* out, int l) {
 /*
  * @breif Extracts the data value from the data string
  */
-long value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true) {
+long ThingDecoder::value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative) {
   DEBUG_PRINT("offset: %d, len %d, rev %u, neg, %u\n", offset, data_length, reverse, canBeNegative);
   std::string data(&data_str[offset], data_length);
 
@@ -54,8 +54,7 @@ long value_from_hex_string(const char* data_str, int offset, int data_length, bo
 /*
  * @brief Removes the underscores at the beginning of key strings when duplicate properties exist in a device.
  */
-
-std::string sanitizeJsonKey(const char* key_in) {
+std::string ThingDecoder::sanitizeJsonKey(const char* key_in) {
   unsigned int key_index = 0;
   while (key_in[key_index] == '_') {
     key_index++;
@@ -64,10 +63,20 @@ std::string sanitizeJsonKey(const char* key_in) {
 }
 
 /*
+ * @brief Checks to ensure accessing data at the index + length of the string is valid.
+ */
+bool ThingDecoder::data_index_is_valid(const char* str, size_t index, size_t len) {
+  if (strlen(str) < (index + len)) {
+    return false;
+  }
+  return true;
+}
+
+/*
  * @breif Compares the input json values to the known devices and decodes the data if a match is found.
  */
-bool decodeBLEJson(JsonObject& jsondata) {
-  DynamicJsonDocument doc(4096);
+bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
+  DynamicJsonDocument doc(m_docMax);
   const char* svc_data = jsondata["servicedata"].as<const char*>();
   const char* mfg_data = jsondata["manufacturerdata"].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
@@ -88,9 +97,11 @@ bool decodeBLEJson(JsonObject& jsondata) {
     bool match = false;
     for (unsigned int i = 0; i < condition.size();) {
       const char* data_str;
-      if (strstr(condition[i].as<const char*>(), "servicedata") != nullptr && svc_data != nullptr) {
+      if (strstr(condition[i].as<const char*>(), "servicedata") != nullptr &&
+          svc_data != nullptr && strlen(svc_data) >= m_minSvcDataLen) {
         data_str = svc_data;
-      } else if (strstr(condition[i].as<const char*>(), "manufacturerdata") != nullptr && mfg_data != nullptr) {
+      } else if (strstr(condition[i].as<const char*>(), "manufacturerdata") != nullptr &&
+                 mfg_data != nullptr && strlen(mfg_data) >= m_minMfgDataLen) {
         data_str = mfg_data;
       } else if (strstr(condition[i].as<const char*>(), "name") != nullptr && dev_name != nullptr) {
         data_str = dev_name;
@@ -106,10 +117,15 @@ bool decodeBLEJson(JsonObject& jsondata) {
         }
         i += 3;
       } else if (strstr(condition[i + 1].as<const char*>(), "index") != nullptr) {
+        size_t cond_index = condition[i + 2].as<size_t>();
+        size_t cond_len = strlen(condition[i + 3].as<const char*>());
+        if (!data_index_is_valid(data_str, cond_index, cond_len)) {
+          DEBUG_PRINT("Invalid data %s; skipping", data_str);
+          break;
+        }
         DEBUG_PRINT("comparing index: %s to %s at index %u\n", &data_str[condition[i + 2].as<unsigned int>()],
                     condition[i + 3].as<const char*>(), condition[i + 2].as<unsigned int>());
-        if (strncmp(&data_str[condition[i + 2].as<unsigned int>()], condition[i + 3].as<const char*>(),
-                    strlen(condition[i + 3].as<const char*>())) == 0) {
+        if (strncmp(&data_str[cond_index], condition[i + 3].as<const char*>(), cond_len) == 0) {
           match = true;
         }
         i += 4;
@@ -153,12 +169,16 @@ bool decodeBLEJson(JsonObject& jsondata) {
 
               /* use a double for all values and cast later if required */
               double temp_val;
-              if (decoder.size() == 5) {
-                temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
-                                                         decoder[4].as<bool>());
-              } else if (decoder.size() == 6) {
-                temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
-                                                         decoder[4].as<bool>(), decoder[6].as<bool>());
+              if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
+                if (decoder.size() == 5) {
+                  temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
+                                                           decoder[4].as<bool>());
+                } else if (decoder.size() == 6) {
+                  temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
+                                                           decoder[4].as<bool>(), decoder[6].as<bool>());
+                }
+              } else {
+                break;
               }
 
               /* Do any required post processing of the value */
@@ -244,4 +264,12 @@ bool decodeBLEJson(JsonObject& jsondata) {
     }
   }
   return success;
+}
+
+void ThingDecoder::setMinServiceDataLen(size_t len) {
+  m_minSvcDataLen = len;
+}
+
+void ThingDecoder::setMinManufacturerDataLen(size_t len) {
+  m_minMfgDataLen = len;
 }
