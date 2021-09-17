@@ -13,28 +13,6 @@
 #endif
 
 /*
- * @breif constructor
- */
-ThingDecoder::ThingDecoder() {
-  DynamicJsonDocument doc(4096);
-
-  /* loop through the devices and find the max size allocation needed */
-  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0]); ++i) {
-    DeserializationError error = deserializeJson(doc, _devices[i]);
-    if (error) {
-      DEBUG_PRINT("deserializeJson() failed: %s; aborting!\n", error.c_str());
-      abort();
-    }
-
-    if (doc.memoryUsage() > m_docMax) {
-      m_docMax = doc.memoryUsage();
-    }
-  }
-
-  DEBUG_PRINT("ThingDecoder max size: %u\n", m_docMax);
-}
-
-/*
  * @breif revert the string data 2 by 2 to get the correct endianness
  */
 void ThingDecoder::reverse_hex_data(const char* in, char* out, int l) {
@@ -112,6 +90,8 @@ bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
       return success;
     }
+
+    DEBUG_PRINT("JsonDocument size: %u\n", doc.memoryUsage());
 
     JsonArray condition = doc["condition"];
     bool match = false;

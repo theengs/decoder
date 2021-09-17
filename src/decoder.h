@@ -5,7 +5,7 @@
 
 class ThingDecoder {
 public:
-  ThingDecoder();
+  ThingDecoder(){}
   ~ThingDecoder() {}
 
   bool decodeBLEJson(JsonObject& jsondata);
@@ -18,7 +18,7 @@ private:
   bool data_index_is_valid(const char* str, size_t index, size_t len);
   std::string sanitizeJsonKey(const char* key_in);
 
-  size_t m_docMax = 0;
+  size_t m_docMax = 4096;
   size_t m_minSvcDataLen = 20;
   size_t m_minMfgDataLen = 18;
 };
