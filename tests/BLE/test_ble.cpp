@@ -47,11 +47,15 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072\",\"tempc\":27.5,\"tempf\":81.5,\"hum\":53.1,\"batt\":100}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBS-X4S\",\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77}",
     "{\"brand\":\"Inkbird\",\"model\":\"T Sensor\",\"model_id\":\"IBS-TH2\",\"tempc\":26.62,\"tempf\":79.916,\"batt\":89}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":2376,\"energy\":21.2928,\"batt\":80}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":5304,\"energy\":18.8804,\"batt\":80}",
 };
 
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1\",\"model_id\":\"XMTZC04HM\",\"unit\":\"kg\",\"weight\":61.75}",
+    "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"batt\":100,\"x_axis\":40960,\"y_axis\":61695,\"z_axis\":57347}",
+    "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":49.4,\"volt\":3.247}",
 };
 
 // Service data test input [test name] [data]
@@ -99,12 +103,16 @@ const char* test_mfgdata[][3] = {
     {"H5072", "GVH5072_1234", "88ec0004344b6400"},
     {"IBT-4XS", "iBBQ", "0000000010082c40abe604010401fa00fa00"},
     {"Inkbird TH2", "tps", "660a03150110805908"},
+    {"iNode", "test1", "90826300f0cf0000c409a20080"},
+    {"iNode", "test2", "9082dd0061b80000c409a00080"},
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
     {"Miscale", "0x181d", "servicedata", "223e30b207010708031f"},
+    {"Mokobeacon", "0xff01", "servicedata", "64000000005085a000f0ffe003"},
+    {"MokoXPro", "0xfeab", "servicedata", "70000a011201ee0caf03def14635998a"},
 };
 
 template <typename T>
