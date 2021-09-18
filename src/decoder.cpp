@@ -120,7 +120,7 @@ bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
         size_t cond_index = condition[i + 2].as<size_t>();
         size_t cond_len = strlen(condition[i + 3].as<const char*>());
         if (!data_index_is_valid(data_str, cond_index, cond_len)) {
-          DEBUG_PRINT("Invalid data %s; skipping", data_str);
+          DEBUG_PRINT("Invalid data %s; skipping\n", data_str);
           break;
         }
         DEBUG_PRINT("comparing index: %s to %s at index %u\n", &data_str[condition[i + 2].as<unsigned int>()],
@@ -169,6 +169,8 @@ bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
 
               /* use a double for all values and cast later if required */
               double temp_val;
+              static long cal_val = 0;
+
               if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
                 if (decoder.size() == 5) {
                   temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
@@ -185,38 +187,61 @@ bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
               if (prop.containsKey("post_proc")) {
                 JsonArray post_proc = prop["post_proc"];
                 for (unsigned int i = 0; i < post_proc.size(); i += 2) {
-                  switch (*post_proc[i].as<const char*>()) {
-                    case '/':
-                      temp_val /= post_proc[i + 1].as<double>();
-                      break;
-                    case '*':
-                      temp_val *= post_proc[i + 1].as<double>();
-                      break;
-                    case '-':
-                      temp_val -= post_proc[i + 1].as<double>();
-                      break;
-                    case '+':
-                      temp_val += post_proc[i + 1].as<double>();
-                      break;
-                    case '%': {
-                      long val = (long)temp_val;
-                      temp_val = val % post_proc[i + 1].as<long>();
-                      break;
+                  if (cal_val && post_proc[i + 1].as<const char*>() != NULL &&
+                      strncmp(post_proc[i + 1].as<const char*>(), ".cal", 4) == 0) {
+                    switch (*post_proc[i].as<const char*>()) {
+                      case '/':
+                        temp_val /= cal_val;
+                        break;
+                      case '*':
+                        temp_val *= cal_val;
+                        break;
+                      case '-':
+                        temp_val -= cal_val;
+                        break;
+                      case '+':
+                        temp_val += cal_val;
+                        break;
                     }
-                    case '<': {
-                      long val = (long)temp_val;
-                      temp_val = val << post_proc[i + 1].as<unsigned int>();
-                      break;
-                    }
-                    case '>': {
-                      long val = (long)temp_val;
-                      temp_val = val >> post_proc[i + 1].as<unsigned int>();
-                      break;
-                    }
-                    case '!': {
-                      bool val = (bool)temp_val;
-                      temp_val = !val;
-                      break;
+                  } else {
+                    switch (*post_proc[i].as<const char*>()) {
+                      case '/':
+                        temp_val /= post_proc[i + 1].as<double>();
+                        break;
+                      case '*':
+                        temp_val *= post_proc[i + 1].as<double>();
+                        break;
+                      case '-':
+                        temp_val -= post_proc[i + 1].as<double>();
+                        break;
+                      case '+':
+                        temp_val += post_proc[i + 1].as<double>();
+                        break;
+                      case '%': {
+                        long val = (long)temp_val;
+                        temp_val = val % post_proc[i + 1].as<long>();
+                        break;
+                      }
+                      case '<': {
+                        long val = (long)temp_val;
+                        temp_val = val << post_proc[i + 1].as<unsigned int>();
+                        break;
+                      }
+                      case '>': {
+                        long val = (long)temp_val;
+                        temp_val = val >> post_proc[i + 1].as<unsigned int>();
+                        break;
+                      }
+                      case '!': {
+                        bool val = (bool)temp_val;
+                        temp_val = !val;
+                        break;
+                      }
+                      case '&': {
+                        long val = (long)temp_val;
+                        temp_val = val & post_proc[i + 1].as<unsigned int>();
+                        break;
+                      }
                     }
                   }
                 }
@@ -226,6 +251,14 @@ bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
                * properties of this type, we need remove the underscores for creating the key.
                */
               std::string _key = sanitizeJsonKey(kv.key().c_str());
+
+              /* calculation values extracted from data are not added to the deocded outupt
+               * instead we store them teporarily to use with the next data properties.
+               */
+              if (_key == ".cal") {
+                cal_val = (long)temp_val;
+                continue;
+              }
 
               /* Cast to a differnt value type if specified */
               if (prop.containsKey("is_bool")) {

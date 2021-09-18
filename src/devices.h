@@ -23,6 +23,9 @@
 #include "H5072_json.h"
 #include "LYWSD03MMC_PVVX_json.h"
 #include "MUE4094RT_json.h"
+#include "Mokobeacon_json.h"
+#include "MBXPRO_json.h"
+#include "iNode_json.h"
 
 const char* _devices[] = {
 _HHCCJCY01HHCC_json,
@@ -51,4 +54,7 @@ _H5075_json,
 _H5072_json,
 _LYWSD03MMC_PVVX_json,
 _MUE4094RT_json,
+_Mokobeacon_json,
+_MBXPRO_json,
+_iNode_json,
 };
