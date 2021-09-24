@@ -1,3 +1,4 @@
+# VEGTRUG
 
 |Model Id|[VEGTRUG](./../../src/devices/VEGTRUG_json.h)|
 |-|-|

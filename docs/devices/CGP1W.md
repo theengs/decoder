@@ -1,3 +1,4 @@
+# Cleargrass CGP1W
 
 |Model Id|[CGP1W](./../../src/devices/CGP1W_json.h)|
 |-|-|

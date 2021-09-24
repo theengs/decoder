@@ -1,3 +1,4 @@
+# Xiaomi Formaldehyde detector
 
 |Model Id|[JQJCY01YM](./../../src/devices/JQJCY01YM_json.h)|
 |-|-|

@@ -1,3 +1,4 @@
+# Xiaomi MiScale V1
 
 |Model Id|[XMTZC04HM](./../../src/devices/XMTZC04HM_json.h)|
 |-|-|

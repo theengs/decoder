@@ -1,3 +1,4 @@
+# Xiaomi Mi Flora
 
 |Model Id|[HHCCJCY01HHCC](./../../src/devices/HHCCJCY01HHCC_json.h)|
 |-|-|

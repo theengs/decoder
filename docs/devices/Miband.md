@@ -1,3 +1,4 @@
+# Xiaomi Mi Band
 
 |Model Id|[LYWSDCGQ](./../../src/devices/LYWSDCGQ_json.h)|
 |-|-|

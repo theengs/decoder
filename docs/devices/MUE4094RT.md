@@ -1,3 +1,4 @@
+# Xiaomi Motion sensor and light
 
 |Model Id|[MUE4094RT](./../../src/devices/MUE4094RT_json.h)|
 |-|-|

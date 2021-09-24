@@ -1,3 +1,4 @@
+# Qingping CGDK2
 
 |Model Id|[CGDK2](./../../src/devices/CGDK2_json.h)|
 |-|-|

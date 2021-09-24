@@ -1,3 +1,4 @@
+# Inkbird TH2
 
 |Model Id|[IBS_TH2](./../../src/devices/IBS_TH2_json.h)|
 |-|-|

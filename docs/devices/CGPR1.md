@@ -1,3 +1,4 @@
+# Qingping CGPR1
 
 |Model Id|[CGPR1](./../../src/devices/CGPR1_json.h)|
 |-|-|

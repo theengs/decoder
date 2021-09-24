@@ -1,3 +1,5 @@
+# Inkbird X4S BBQ
+
 |Model Id|[IBS_X4S](./../../src/devices/IBS_X4S_json.h)|
 |-|-|
 |Brand|Inkbird|

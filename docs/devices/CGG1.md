@@ -1,3 +1,4 @@
+# Xiaomi CGG1
 
 |Model Id|[CGG1](./../../src/devices/CGG1_json.h)|
 |-|-|

@@ -1,3 +1,4 @@
+# Xiaomi LYWSDCGQ
 
 |Model Id|[LYWSDCGQ](./../../src/devices/LYWSDCGQ_json.h)|
 |-|-|
