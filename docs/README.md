@@ -5,7 +5,7 @@ Theengs decoder is a library that gather things decoders and operate them so as 
 Theengs Decoder leverages json format to receive data and provide an enriched output.
 It's also a simplified way of defining the thing properties and how to decode these.
 
-![Overview](/docs/img/Theengs_decoder.jpg)
+![Overview](./img/Theengs_decoder.jpg)
 
 Theengs Decoder can be used on memory constraint environment like micro controllers (ESP32, ESP8266, Arduino), on PC or on a Unix server.
 It is setup with unit testing so as to assure that the modification done on the library doesn't affect previous capabilities.
