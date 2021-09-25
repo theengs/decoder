@@ -1,4 +1,4 @@
-# Using the library
+# Using the library in a project
 
 Call `decodeBLEJson(JsonObject)` with the input being of the Arduino JSON JsonObject type. If the device is known the JsonObject will have the decoded device data added to it.
 

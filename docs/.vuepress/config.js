@@ -29,32 +29,39 @@ module.exports = {
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
             'devices/CGD1',
-            'devices/CGDK2',
-            'devices/CGG1',
-            'devices/CGH1',
             'devices/CGP1W',
-            'devices/CGPR1',
             'devices/H5072',
             'devices/H5075',
+            'devices/IBS_TH1',
+            'devices/IBS_TH2',
+            'devices/IBS_X4S',
+            'devices/iNode',
+            'devices/MokoBeacon',
+            'devices/MBXPRO',
+            'devices/CGDK2',
+            'devices/CGH1',
+            'devices/CGPR1',
+            'devices/TPMS',
+            'devices/VEGTRUG',
+            'devices/WS02',
             'devices/HHCCJCY01HHCC',
+            'devices/XMTZC04HM',
+            'devices/XMTZC05HM',
+            'devices/CGG1',
             'devices/LYWSD02',
             'devices/LYWSD03MMC_ATC',
             'devices/LYWSD03MMC_PVVX',
             'devices/LYWSDCGQ',
             'devices/Miband',
-            'devices/MUE4094RT',
-            'devices/TPMS',
-            'devices/VEGTRUG',
-            'devices/WS02',
-            'devices/XMTZC04HM',
-            'devices/XMTZC05HM'
+            'devices/MUE4094RT'
           ]
         },
         {
           title: '2 - Use ✈️',   // required
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
-            'use/use'
+            'use/include',
+            'use/ESP32'
           ]
         },
         {
