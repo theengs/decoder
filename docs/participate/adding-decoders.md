@@ -79,14 +79,16 @@ Here we have a single property that defines a value that we want to decode. The 
 The second parameter is the index of the data source to look for the value. The third parameter is the value to test for.
 If the condition is met the data will be decoded and added to the JsonObject.
 
-`decoder` is a JSON array that specifies the decoder function and parameters to decode the value. The first parameter is the name of the function to call, currently only "value_from_hex_data" is valid. The other parameters are:
+`decoder` is a JSON array that specifies the decoder function and parameters to decode the value. The first parameter is the name of the function to call, currently "value_from_hex_data" and "static_value" are the only valid parameters. The other parameters are:
 - "servicedata", Extract the value from the service data. Could also be "manufacturerdata"
 - 30, The index of the data source where the value exists.
 - 4, The length of the data in bytes (characters in the string).
 - true/false, If the value in the data source should have it's endianness reversed before converting.
 - (optional)true/false, Sets if the resulting value can be a negative number.
 
-`post_proc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the '/' divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations. Valid operations are:
+`post_proc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the '/' divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations.  
+
+Valid operations are:
 - '/' divide
 - '*' multiply
 - '+' add
@@ -95,6 +97,21 @@ If the condition is met the data will be decoded and added to the JsonObject.
 - '<' shift left
 - '>' shift right
 - '!' Not (invert), useful for bool types
+- '&' Logical And the values
 
-`val_bits` (Not shown in the example) is an additional parameter that can be added to define the value. It will convert the post processed result into a value with the number of bits specified by `val_bits`. Valid values are: 1 (for bool), 8, 16, 32. Double is the default type if this is omitted.
+#### Special property .cal
+.cal is a special property that can extracted from the provided data and used in calculations of other properties following it's definition. For example:
+```
+"properties":{
+      ".cal":{
+         "decoder":["value_from_hex_data", "manufacturerdata", 16, 4, true],
+         "post_proc":["&", 16383]
+      },
+      "power":{
+         "decoder":["value_from_hex_data", "manufacturerdata", 4, 4, true],
+         "post_proc":["/", ".cal", "*", 60000]
+      }
+   }
+```
+Here the calculation value extracted first from the data stream and used by the next property to calculate the data value.
 
