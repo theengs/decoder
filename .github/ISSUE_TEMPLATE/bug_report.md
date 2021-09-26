@@ -27,5 +27,5 @@ If applicable, add screenshots to help explain your problem.
 Add any other context about the problem here.
 
 * You should not have a compilation error if you use the versions of the libraries linked into the libraries folder, this badges show you the state of the compilation 
-[![Build Status](https://github.com/theengs/1decoder/workflows/Build/badge.svg?branch=development)](https://github.com/theengs/1decoder/actions)
+[![Build Status](https://github.com/theengs/decoder/workflows/Build/badge.svg?branch=development)](https://github.com/theengs/decoder/actions)
 * If you are not sure this is a bug or an enhancement post your question to the forum

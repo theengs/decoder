@@ -36,7 +36,7 @@
 /*
  * @breif revert the string data 2 by 2 to get the correct endianness
  */
-void ThingDecoder::reverse_hex_data(const char* in, char* out, int l) {
+void TheengsDecoder::reverse_hex_data(const char* in, char* out, int l) {
   int i = l, j = 0;
   while (i) {
     out[j] = in[i - 2];
@@ -50,7 +50,7 @@ void ThingDecoder::reverse_hex_data(const char* in, char* out, int l) {
 /*
  * @breif Extracts the data value from the data string
  */
-long ThingDecoder::value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative) {
+long TheengsDecoder::value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative) {
   DEBUG_PRINT("offset: %d, len %d, rev %u, neg, %u\n", offset, data_length, reverse, canBeNegative);
   std::string data(&data_str[offset], data_length);
 
@@ -75,7 +75,7 @@ long ThingDecoder::value_from_hex_string(const char* data_str, int offset, int d
 /*
  * @brief Removes the underscores at the beginning of key strings when duplicate properties exist in a device.
  */
-std::string ThingDecoder::sanitizeJsonKey(const char* key_in) {
+std::string TheengsDecoder::sanitizeJsonKey(const char* key_in) {
   unsigned int key_index = 0;
   while (key_in[key_index] == '_') {
     key_index++;
@@ -86,7 +86,7 @@ std::string ThingDecoder::sanitizeJsonKey(const char* key_in) {
 /*
  * @brief Checks to ensure accessing data at the index + length of the string is valid.
  */
-bool ThingDecoder::data_index_is_valid(const char* str, size_t index, size_t len) {
+bool TheengsDecoder::data_index_is_valid(const char* str, size_t index, size_t len) {
   if (strlen(str) < (index + len)) {
     return false;
   }
@@ -96,7 +96,7 @@ bool ThingDecoder::data_index_is_valid(const char* str, size_t index, size_t len
 /*
  * @breif Compares the input json values to the known devices and decodes the data if a match is found.
  */
-bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
+bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   DynamicJsonDocument doc(m_docMax);
   const char* svc_data = jsondata["servicedata"].as<const char*>();
   const char* mfg_data = jsondata["manufacturerdata"].as<const char*>();
@@ -320,10 +320,10 @@ bool ThingDecoder::decodeBLEJson(JsonObject& jsondata) {
   return success;
 }
 
-void ThingDecoder::setMinServiceDataLen(size_t len) {
+void TheengsDecoder::setMinServiceDataLen(size_t len) {
   m_minSvcDataLen = len;
 }
 
-void ThingDecoder::setMinManufacturerDataLen(size_t len) {
+void TheengsDecoder::setMinManufacturerDataLen(size_t len) {
   m_minMfgDataLen = len;
 }

@@ -2,7 +2,7 @@
 
 Adding your device protocol to Theengs decoder enable to increase interoperability and to create new use cases with your device. You will find below some guidance to do that. 
 
-You can do a pull request directly to the [Repository](https://github.com/theengs/1decoder).
+You can do a pull request directly to the [Repository](https://github.com/theengs/decoder).
 
 
 # Adding device decoding
