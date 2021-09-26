@@ -15,7 +15,3 @@ In a few words:
 * Portable
 * Expandable
 * Interoperable
-
-::: warning Note
-The material and information contained in this documentation is for general information purposes only. You should not rely upon the material or information on this documentation as a basis for making any business, legal or any other decisions. There is no warranty given on this documentation content. If you decide to follow the information and materials given it is at your own risk. I will not be liable for any false, inaccurate, inappropriate or incomplete information presented on this website.
-:::
