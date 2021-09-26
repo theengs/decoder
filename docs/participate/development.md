@@ -59,7 +59,7 @@ Some things that will increase the chance that your pull request is accepted:
         this project or the open source license(s) involved.
 ```
 
-This Developer Certificate Of Origin (DCO) was adopted on June 7, 2021.
+This Developer Certificate Of Origin (DCO) was adopted on September 24, 2021.
 
 The text of this license is available under the [Creative Commons Attribution-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).  It is based on the Linux [Developer Certificate Of Origin](http://elinux.org/Developer_Certificate_Of_Origin).
 
