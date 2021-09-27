@@ -4,7 +4,6 @@ Adding your device protocol to Theengs decoder enable to increase interoperabili
 
 You can do a pull request directly to the [Repository](https://github.com/theengs/decoder).
 
-
 # Adding device decoding
 
 Device decode specifications are located in a json file, example [HHCCJCY01HHCC_json.h](../../src/device_json.h). The format is:
