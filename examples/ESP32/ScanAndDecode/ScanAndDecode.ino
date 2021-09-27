@@ -5,7 +5,7 @@
 
 NimBLEScan* pBLEScan;
 
-ThingDecoder decoder;
+TheengsDecoder decoder;
 
 StaticJsonDocument<512> doc;
 
@@ -54,7 +54,7 @@ class MyAdvertisedDeviceCallbacks: public NimBLEAdvertisedDeviceCallbacks {
     if (decoder.decodeBLEJson(BLEdata)) {
       BLEdata.remove("manufacturerdata");
       BLEdata.remove("servicedata");
-      Serial.print("1decoder found device: ");
+      Serial.print("TheengsDecoder found device: ");
       serializeJson(BLEdata, Serial);
       Serial.println("");
     }

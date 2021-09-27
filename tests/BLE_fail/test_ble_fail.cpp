@@ -48,7 +48,7 @@ const char* test_uuid[][4] = {
 int main() {
   StaticJsonDocument<1024> doc;
   JsonObject bleObject;
-  ThingDecoder decoder;
+  TheengsDecoder decoder;
 
   for (unsigned int i = 0; i < sizeof(test_servicedata) / sizeof(test_servicedata[0]); ++i) {
     doc.clear();

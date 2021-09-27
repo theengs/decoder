@@ -17,7 +17,7 @@ module.exports = {
     ],
     themeConfig: {
       smoothScroll: true,
-      repo: 'theengs/1decoder',
+      repo: 'theengs/decoder',
       docsDir: 'docs',
       docsBranch: 'master',
       lastUpdated: 'Last Updated',

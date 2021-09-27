@@ -6,9 +6,9 @@ add_executable(test_ble test_ble.cpp)
 
 target_compile_features(test_ble PRIVATE cxx_std_11)
 
-target_link_libraries(test_ble PUBLIC 1decoder)
+target_link_libraries(test_ble PUBLIC decoder)
 
-target_compile_definitions(1decoder PRIVATE DEBUG_DECODER)
+target_compile_definitions(decoder PRIVATE DEBUG_DECODER)
 
 target_include_directories(test_ble PUBLIC 
                            "${PROJECT_BINARY_DIR}"

@@ -24,10 +24,10 @@
 #include "ArduinoJson.h"
 //#define DEBUG_DECODER
 
-class ThingDecoder {
+class TheengsDecoder {
 public:
-  ThingDecoder(){}
-  ~ThingDecoder() {}
+  TheengsDecoder(){}
+  ~TheengsDecoder() {}
 
   bool decodeBLEJson(JsonObject& jsondata);
   void setMinServiceDataLen(size_t len);
