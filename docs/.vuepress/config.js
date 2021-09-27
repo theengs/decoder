@@ -68,9 +68,9 @@ module.exports = {
           title: '3 - Participate 💻',   // required
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
+            'participate/adding-decoders',
             'participate/support',
-            'participate/development',
-            'participate/adding-decoders'
+            'participate/development'
           ]
         }
     ]
