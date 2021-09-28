@@ -4,6 +4,7 @@ module.exports = {
     },
     title: 'Theengs decoder',
     description: 'One decoder for many devices, decode easily your BLE devices data and transform these into a readable format',
+    base:"/decoder/",
     head: [
       ['link', { rel: 'icon', href: '/img/Openmqttgateway_logo_mini.png' }],
       ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -19,7 +20,7 @@ module.exports = {
       smoothScroll: true,
       repo: 'theengs/decoder',
       docsDir: 'docs',
-      docsBranch: 'master',
+      docsBranch: 'development',
       lastUpdated: 'Last Updated',
       editLinks: true,
       sidebar: [
