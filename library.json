@@ -1,0 +1,33 @@
+{
+    "name": "TheengsDecoder",
+    "keywords": "ble, json, decoder",
+    "description": "A simple, efficient, portable and lightweight library for Internet of Things messages decoding.",
+    "homepage": "https://theengs.github.io/decoder/",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/theengs/decoder.git"
+    },
+    "version": "0.1",
+    "authors":
+    [
+        {
+            "name": "Florian Robert",
+            "url": "https://1technophile.blogspot.com/"
+        },
+        {
+            "name": "Ryan Powell"
+        }
+    ],
+    "export": {
+        "exclude": [
+            "*.github",
+            "*.gitmodules",
+            "examples/*",
+            "tests/*",
+            "src/arduino_json/*"
+          ]
+    },
+    "frameworks": "*",
+    "platforms": "*",
+    "license":"GPL-3.0-or-later"
+  }
