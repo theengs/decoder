@@ -7,7 +7,7 @@
       "type": "git",
       "url": "https://github.com/theengs/decoder.git"
     },
-    "version": "0.1",
+    "version": "0.1.1",
     "authors":
     [
         {
@@ -18,9 +18,6 @@
             "name": "Ryan Powell"
         }
     ],
-    "build": {
-        "srcFilter": "+<*> -<.git/> -<examples/> -<tests/> -<arduino_json/>"
-    },
     "export": {
         "exclude": [
             "*.github",
