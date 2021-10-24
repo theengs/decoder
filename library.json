@@ -18,6 +18,9 @@
             "name": "Ryan Powell"
         }
     ],
+    "build": {
+        "srcFilter": "+<*> -<.git/> -<examples/> -<tests/> -<arduino_json/>"
+    },
     "export": {
         "exclude": [
             "*.github",
