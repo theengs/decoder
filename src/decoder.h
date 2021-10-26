@@ -21,7 +21,10 @@
 
 #ifndef _DECODER_H_
 #define _DECODER_H_
+
+#define ARDUINOJSON_USE_LONG_LONG 1
 #include "ArduinoJson.h"
+
 //#define DEBUG_DECODER
 
 class TheengsDecoder {
