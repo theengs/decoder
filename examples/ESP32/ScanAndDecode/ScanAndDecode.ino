@@ -1,5 +1,8 @@
 #include <Arduino.h>
+
+#define ARDUINOJSON_USE_LONG_LONG 1
 #include "ArduinoJson.h"
+
 #include "NimBLEDevice.h"
 #include "decoder.h"
 

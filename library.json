@@ -19,7 +19,7 @@
         }
     ],
     "build": {
-        "srcFilter": "+<*> -<.git/> -<examples/> -<tests/>"
+        "extraScript": "scripts/remove_arduino_json.py"
     },
     "export": {
         "exclude": [

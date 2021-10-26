@@ -21,3 +21,7 @@ JsonObject after decoding:
   "tempf":89.6
 }
 ```
+
+::: tip
+If you are using ArduinoJson library with your project (like TheengsDecoder) you may have to align the ArduinoJson build options into TheengDecoder with it. To do so, go to [decoder.h](./../../src/decoder.h) and align the flags with your project. In particular you may have to remove `ARDUINOJSON_USE_LONG_LONG=1`.
+:::
