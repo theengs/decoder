@@ -31,7 +31,7 @@
 #include "devices/JQJCY01YM_json.h"
 #include "devices/IBS_TH1_json.h"
 #include "devices/IBS_TH2_json.h"
-#include "devices/IBS_X4S_json.h"
+#include "devices/IBT_4XS_json.h"
 #include "devices/Miband_json.h"
 #include "devices/XMTZC04HM_json.h"
 #include "devices/XMTZC05HM_json.h"
@@ -62,7 +62,7 @@ _CGH1_json,
 _JQJCY01YM_json,
 _IBS_TH1_json,
 _IBS_TH2_json,
-_IBS_X4S_json,
+_IBT_4XS_json,
 _Miband_json,
 _XMTZC04HM_json,
 _XMTZC05HM_json,
