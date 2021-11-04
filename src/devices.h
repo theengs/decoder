@@ -47,6 +47,7 @@
 #include "devices/Mokobeacon_json.h"
 #include "devices/MBXPRO_json.h"
 #include "devices/iNode_json.h"
+#include "devices/IBT_2X_json.h"
 
 const char* _devices[] = {
 _HHCCJCY01HHCC_json,
@@ -78,4 +79,5 @@ _MUE4094RT_json,
 _Mokobeacon_json,
 _MBXPRO_json,
 _iNode_json,
+_IBT_2X_json,
 };
