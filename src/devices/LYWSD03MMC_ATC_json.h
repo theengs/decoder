@@ -22,3 +22,26 @@ const char* _LYWSD03MMC_ATC_json = "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC
       }
    }
 })"""";*/
+
+const char* _LYWSD03MMC_ATC_props = 
+R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "volt":{
+         "unit":"V",
+         "name":"voltage"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

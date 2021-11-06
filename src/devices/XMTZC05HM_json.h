@@ -26,3 +26,14 @@ const char* _XMTZC05HM_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v2\",\"
       }
    }
 })"""";*/
+
+const char* _XMTZC05HM_json_props = 
+R""""(
+{
+   "properties":{
+      "weight":{
+         "unit":"kg",
+         "name":"weight"
+      }
+   }
+})"""";

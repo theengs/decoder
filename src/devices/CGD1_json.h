@@ -17,3 +17,18 @@ const char* _CGD1_json = "{\"brand\":\"Xiaomi\",\"model\":\"CG_alarm_clock\",\"m
       }
    }
 })"""";*/
+
+const char* _CGD1_json_props = 
+R""""(
+{
+   "properties":{
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

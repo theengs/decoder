@@ -27,3 +27,30 @@ const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\"
       }
    }
 })"""";*/
+
+const char* _TPMS_json_props = 
+R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "pres":{
+         "unit":"kPa",
+         "name":"temperature"
+      },
+      "count":{
+         "unit":"num",
+         "name":"count"
+      },
+      "alarm":{
+         "unit":"status",
+         "name":"alarm"
+      }
+   }
+})"""";

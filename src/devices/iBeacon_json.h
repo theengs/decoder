@@ -24,3 +24,30 @@ const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"mode
       }
    }
 })"""";*/
+
+const char* _ibeacon_json_props = 
+R""""(
+{
+   "properties":{
+      "mfid":{
+         "unit":"hex",
+         "name":"manufacturer id"
+      },
+      "uuid":{
+         "unit":"hex",
+         "name":"service uuid"
+      },
+      "major":{
+         "unit":"hex",
+         "name":"major value"
+      },
+      "minor":{
+         "unit":"hex",
+         "name":"minor value"
+      },
+      "power":{
+         "unit":"int",
+         "name":"tx power"
+      }
+   }
+})"""";

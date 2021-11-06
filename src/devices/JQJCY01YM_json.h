@@ -22,3 +22,26 @@ const char* _JQJCY01YM_json = "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde de
       }
    }
 })"""";*/
+
+const char* _JQJCY01YM_json_props = 
+R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      },
+      "for":{
+         "unit":"%",
+         "name":"formaldehyde"
+      }
+   }
+})"""";

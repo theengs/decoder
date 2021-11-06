@@ -25,3 +25,26 @@ const char* _VEGTRUG_json = "{\"brand\":\"VEGTRUG\",\"model\":\"VEGTRUG\",\"mode
       }
    }
 })"""";*/
+
+const char* _VEGTRUG_json_props = 
+R""""(
+{
+   "properties":{
+      "lux":{
+         "unit":"lx",
+         "name":"illuminance"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "fer":{
+         "unit":"µS/cm",
+         "name":"fertility"
+      },
+      "moi":{
+         "unit":"%",
+         "name":"moisture"
+      }
+   }
+})"""";

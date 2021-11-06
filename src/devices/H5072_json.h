@@ -20,3 +20,22 @@ const char* _H5072_json = "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",
       }
    }
 })"""";*/
+
+const char* _H5072_json_props = 
+R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

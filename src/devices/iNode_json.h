@@ -24,3 +24,22 @@ const char* _iNode_json = "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"mod
       }
    }
 })"""";*/
+
+const char* _iNode_json_props = 
+R""""(
+{
+   "properties":{
+      "power":{
+         "unit":"W",
+         "name":"watts"
+      },
+      "energy":{
+         "unit":"kWh",
+         "name":"consumption"
+      },
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      }
+   }
+})"""";

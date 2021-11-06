@@ -105,10 +105,10 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   bool success = false;
 
   /* loop through the devices and attempt to match the input data to a device parameter set */
-  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0]); ++i) {
-    DeserializationError error = deserializeJson(doc, _devices[i]);
+  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0][0]); ++i) {
+    DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
-      DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
+      printf("deserializeJson() failed: %s\n", error.c_str());
       return success;
     }
 
@@ -318,6 +318,28 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
     }
   }
   return success;
+}
+
+const char* TheengsDecoder::getTheengProperties(const char* model_id) {
+  int mid_len = strlen(model_id);
+  DynamicJsonDocument doc(m_docMax);
+
+  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0][0]); ++i) {
+    DeserializationError error = deserializeJson(doc, _devices[i][0]);
+    if (error) {
+      DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
+      break;
+    }
+
+    if (strlen(doc["model_id"].as<const char*>()) != mid_len) {
+      continue;
+    }
+
+    if (!strncmp(model_id, doc["model_id"], mid_len)) {
+      return _devices[i][1];
+    }
+  }
+  return "";
 }
 
 void TheengsDecoder::setMinServiceDataLen(size_t len) {

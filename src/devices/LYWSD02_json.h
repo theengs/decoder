@@ -18,3 +18,22 @@ const char* _LYWSD02_json = "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\
       }
    }
 })"""";*/
+
+const char* _LYWSD02_json_props = 
+R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

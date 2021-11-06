@@ -16,3 +16,18 @@ const char* _CGDK2_json = "{\"brand\":\"Qingping\",\"model\":\"TH lite\",\"model
       }
    }
 })"""";*/
+
+const char* _CGDK2_json_props = 
+R""""(
+{
+   "properties":{
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

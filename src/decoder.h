@@ -29,12 +29,13 @@
 
 class TheengsDecoder {
 public:
-  TheengsDecoder(){}
+  TheengsDecoder() {}
   ~TheengsDecoder() {}
 
   bool decodeBLEJson(JsonObject& jsondata);
   void setMinServiceDataLen(size_t len);
   void setMinManufacturerDataLen(size_t len);
+  const char* getTheengProperties(const char* model_id);
 
 private:
   void reverse_hex_data(const char* in, char* out, int l);

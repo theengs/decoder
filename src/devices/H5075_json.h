@@ -20,3 +20,22 @@ const char* _H5075_json = "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrome
       }
    }
 })"""";*/
+
+const char* _H5075_json_props = 
+R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

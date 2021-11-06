@@ -21,3 +21,22 @@ const char* _WS02_json = "{\"brand\":\"ThermoBeacon\",\"model\":\"WS02\",\"model
       }
    }
 })"""";*/
+
+const char* _WS02_json_props = 
+R""""(
+{
+   "properties":{
+      "volt":{
+         "unit":"V",
+         "name":"voltage"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

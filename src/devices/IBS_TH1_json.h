@@ -20,3 +20,22 @@ const char* _IBS_TH1_json = "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"mo
       }
    }
 })"""";*/
+
+const char* _IBS_TH1_json_props = 
+R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      }
+   }
+})"""";

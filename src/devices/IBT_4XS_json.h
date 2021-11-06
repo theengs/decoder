@@ -25,3 +25,26 @@ const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_i
       }
    }
 })"""";*/
+
+const char* _IBT_4XS_json_props = 
+R""""(
+{
+   "properties":{
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "tempc2":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "tempc3":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "tempc4":{
+         "unit":"°C",
+         "name":"temperature"
+      }
+   }
+})"""";
