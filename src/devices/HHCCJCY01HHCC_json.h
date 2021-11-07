@@ -26,8 +26,8 @@ const char* _HHCCJCY01HHCC_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miflora\",\
    }
 })"""";*/
 
-const char* _HHCCJCY01HHCC_json_props = 
-R""""(
+const char* _HHCCJCY01HHCC_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"lux\":{\"unit\":\"lx\",\"name\":\"illuminance\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"fer\":{\"unit\":\"µS/cm\",\"name\":\"fertility\"},\"moi\":{\"unit\":\"%\",\"name\":\"moisture\"}}}";
+/*R""""(
 {
    "properties":{
       "batt":{
@@ -51,4 +51,4 @@ R""""(
          "name":"moisture"
       }
    }
-})"""";
+})"""";*/

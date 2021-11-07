@@ -21,8 +21,8 @@ const char* _CGP1W_json = "{\"brand\":\"Xiaomi\",\"model\":\"CG_THP\",\"model_id
    }
 })"""";*/
 
-const char* _CGP1W_json_props = 
-R""""(
+const char* _CGP1W_json_props = "{\"properties\":{\"pres\":{\"unit\":\"kpa\",\"name\":\"pressure\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"}}}";
+/*R""""(
 {
    "properties":{
       "pres":{
@@ -38,4 +38,4 @@ R""""(
          "name":"humidity"
       }
    }
-})"""";
+})"""";*/

@@ -18,8 +18,8 @@ const char* _IBT_2X_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id
    }
 })"""";*/
 
-const char* _IBT_2X_json_props = 
-R""""(
+const char* _IBT_2X_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc2\":{\"unit\":\"°C\",\"name\":\"temperature\"}}}";
+/*R""""(
 {
    "properties":{
       "tempc":{
@@ -31,4 +31,4 @@ R""""(
          "name":"temperature"
       }
    }
-})"""";
+})"""";*/

@@ -46,8 +46,8 @@ const char* _MBXPRO_json = "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\
    }
 })"""";*/
 
-const char* _MBXPRO_json_props = 
-R""""(
+const char* _MBXPRO_json_props = "{\"properties\":{\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"},\"x_axis\":{\"unit\":\"int\",\"name\":\"x_axis\"},\"y_axis\":{\"unit\":\"int\",\"name\":\"y_axis\"},\"z_axis\":{\"unit\":\"int\",\"name\":\"z_axis\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"}}}";
+/*R""""(
 {
    "properties":{
       "volt":{
@@ -75,4 +75,4 @@ R""""(
          "name":"humidity"
       }
    }
-})"""";
+})"""";*/

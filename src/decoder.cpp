@@ -108,7 +108,7 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0][0]); ++i) {
     DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
-      printf("deserializeJson() failed: %s\n", error.c_str());
+      DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
       return success;
     }
 

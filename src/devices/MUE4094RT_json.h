@@ -19,8 +19,8 @@ R""""(
    }
 })"""";*/
 
-const char* _MUE4094RT_json_props = 
-R""""(
+const char* _MUE4094RT_json_props = "{\"properties\":{\"pres\":{\"unit\":\"status\",\"name\":\"presence\"},\"darkness\":{\"unit\":\"lx\",\"name\":\"illuminance\"}}}";
+/*R""""(
 {
    "properties":{
       "pres":{
@@ -32,4 +32,4 @@ R""""(
          "name":"illuminance"
       }
    }
-})"""";
+})"""";*/

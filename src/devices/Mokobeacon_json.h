@@ -21,8 +21,8 @@ const char* _Mokobeacon_json = "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"
    }
 })"""";*/
 
-const char* _Mokobeacon_json_props = 
-R""""(
+const char* _Mokobeacon_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"x_axis\":{\"unit\":\"int\",\"name\":\"x_axis\"},\"y_axis\":{\"unit\":\"int\",\"name\":\"y_axis\"},\"z_axis\":{\"unit\":\"int\",\"name\":\"z_axis\"}}}";
+/*R""""(
 {
    "properties":{
       "batt":{
@@ -42,4 +42,4 @@ R""""(
          "name":"z_axis"
       }
    }
-})"""";
+})"""";*/

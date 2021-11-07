@@ -28,8 +28,8 @@ const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\"
    }
 })"""";*/
 
-const char* _TPMS_json_props = 
-R""""(
+const char* _TPMS_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"pres\":{\"unit\":\"kPa\",\"name\":\"temperature\"},\"count\":{\"unit\":\"int\",\"name\":\"count\"},\"alarm\":{\"unit\":\"status\",\"name\":\"alarm\"}}}";
+/*R""""(
 {
    "properties":{
       "batt":{
@@ -45,7 +45,7 @@ R""""(
          "name":"temperature"
       },
       "count":{
-         "unit":"num",
+         "unit":"int",
          "name":"count"
       },
       "alarm":{
@@ -53,4 +53,4 @@ R""""(
          "name":"alarm"
       }
    }
-})"""";
+})"""";*/
