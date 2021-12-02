@@ -18,3 +18,18 @@ R""""(
       }
    }
 })"""";*/
+
+const char* _CGPR1_json_props = "{\"properties\":{\"pres\":{\"unit\":\"status\",\"name\":\"presence\"},\"lux\":{\"unit\":\"lx\",\"name\":\"illuminance\"}}}";
+/*R""""(
+{
+   "properties":{
+      "pres":{
+         "unit":"status",
+         "name":"presence"
+      },
+      "lux":{
+         "unit":"lx",
+         "name":"illuminance"
+      }
+   }
+})"""";*/

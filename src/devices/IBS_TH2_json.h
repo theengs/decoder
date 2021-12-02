@@ -16,3 +16,18 @@ const char* _IBS_TH2_json = "{\"brand\":\"Inkbird\",\"model\":\"T Sensor\",\"mod
       }
    }
 })"""";*/
+
+const char* _IBS_TH2_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"}}}";
+/*R""""(
+{
+   "properties":{
+      "batt":{
+         "unit":"%",
+         "name":"battery"
+      },
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      }
+   }
+})"""";*/

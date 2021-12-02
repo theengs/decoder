@@ -11,3 +11,14 @@ const char* _Miband_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_i
       }
    }
 })"""";*/
+
+const char* _Miband_json_props = "{\"properties\":{\"steps\":{\"unit\":\"int\",\"name\":\"step-count\"}}}";
+/*R""""(
+{
+   "properties":{
+      "steps":{
+         "unit":"int",
+         "name":"step-count"
+      }
+   }
+})"""";*/

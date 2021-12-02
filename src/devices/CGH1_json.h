@@ -32,3 +32,13 @@ const char* _CGH1_json = "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"mo
       }
    }
 })"""";*/
+
+const char* _CGH1_json_props = "{\"properties\":{\"open\":{\"name\":\"door\"}}}";
+/*R""""(
+{
+   "properties":{
+      "open":{
+         "name":"door"
+      }
+   }
+})"""";*/
