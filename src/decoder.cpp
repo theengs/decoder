@@ -330,14 +330,16 @@ int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
       break;
     }
 
-    if (strlen(doc["model_id"].as<const char*>()) != mid_len) {
-      continue;
-    }
-
-    if (!strncmp(model_id, doc["model_id"], mid_len)) {
-      return i;
+    if (doc.containsKey("model_id")) {
+      if (strlen(doc["model_id"].as<const char*>()) != mid_len) {
+        continue;
+      }
+      if (!strncmp(model_id, doc["model_id"], mid_len)) {
+        return i;
+      }
     }
   }
+
   return -1;
 }
 
