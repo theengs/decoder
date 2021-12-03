@@ -35,7 +35,7 @@ public:
   bool decodeBLEJson(JsonObject& jsondata);
   void setMinServiceDataLen(size_t len);
   void setMinManufacturerDataLen(size_t len);
-  const char* getTheengProperties(const char* model_id);
+  std::string getTheengProperties(const char* model_id);
   std::string getTheengAttribute(const char* model_id, const char* attribute);
   int getTheengModel(JsonDocument& doc, const char* model_id);
 

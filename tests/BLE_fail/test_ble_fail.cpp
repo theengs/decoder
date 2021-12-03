@@ -112,4 +112,9 @@ int main() {
       return 1;
     }
   }
+
+  if (!decoder.getTheengProperties("SHOULD_FAIL").empty()){
+    std::cout << "FAILED! Should fail getTheengProperties returned a value" << std::endl;
+    return 1;
+  }
 }

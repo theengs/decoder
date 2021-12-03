@@ -341,7 +341,7 @@ int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
   return -1;
 }
 
-const char* TheengsDecoder::getTheengProperties(const char* model_id) {
+std::string TheengsDecoder::getTheengProperties(const char* model_id) {
   DynamicJsonDocument doc(m_docMax);
   int mod_index = getTheengModel(doc, model_id);
   return mod_index < 0 ? "" : _devices[mod_index][1];
