@@ -36,6 +36,8 @@ public:
   void setMinServiceDataLen(size_t len);
   void setMinManufacturerDataLen(size_t len);
   const char* getTheengProperties(const char* model_id);
+  std::string getTheengAttribute(const char* model_id, const char* attribute);
+  int getTheengModel(JsonDocument& doc, const char* model_id);
 
 private:
   void reverse_hex_data(const char* in, char* out, int l);
