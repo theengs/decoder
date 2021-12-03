@@ -174,6 +174,14 @@ int main() {
         return 1;
       }
 
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
+
       DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
@@ -211,6 +219,14 @@ int main() {
         return 1;
       }
 
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
+
       DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
@@ -247,6 +263,14 @@ int main() {
       if (!checkResult(bleObject, expected)) {
         return 1;
       }
+
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
       DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
       if (error) {
