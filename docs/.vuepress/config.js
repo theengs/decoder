@@ -36,6 +36,7 @@ module.exports = {
             'devices/IBS_TH1',
             'devices/IBS_TH2',
             'devices/IBT_4XS',
+            'devices/IBT_6XS',
             'devices/IBT_2X',
             'devices/iNode',
             'devices/MokoBeacon',
