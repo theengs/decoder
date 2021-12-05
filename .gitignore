@@ -1,5 +1,9 @@
 /build
 /node_modules
+/CMakeFiles
+/decoder.dir
+/x64
 .vscode
 .pio
-
+.CMakeFiles
+.cmake
