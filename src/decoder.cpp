@@ -116,14 +116,32 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
     JsonArray condition = doc["condition"];
     bool match = false;
+    size_t min_len = m_minMfgDataLen;
+
     for (unsigned int i = 0; i < condition.size();) {
       const char* data_str;
-      if (strstr(condition[i].as<const char*>(), "servicedata") != nullptr &&
-          svc_data != nullptr && strlen(svc_data) >= m_minSvcDataLen) {
-        data_str = svc_data;
-      } else if (strstr(condition[i].as<const char*>(), "manufacturerdata") != nullptr &&
-                 mfg_data != nullptr && strlen(mfg_data) >= m_minMfgDataLen) {
-        data_str = mfg_data;
+      if (strstr(condition[i].as<const char*>(), "servicedata") != nullptr) {
+        if (condition[i + 1].is<size_t>()) {
+          min_len = condition[i + 1].as<size_t>();
+          i++;
+        }
+
+        if (svc_data != nullptr && strlen(svc_data) >= min_len) {
+          data_str = svc_data;
+        } else {
+          break;
+        }
+      } else if (strstr(condition[i].as<const char*>(), "manufacturerdata") != nullptr) {
+        if (condition[i + 1].is<size_t>()) {
+          min_len = condition[i + 1].as<size_t>();
+          i++;
+        }
+
+        if (mfg_data != nullptr && strlen(mfg_data) >= min_len) {
+          data_str = mfg_data;
+        } else {
+          break;
+        }
       } else if (strstr(condition[i].as<const char*>(), "name") != nullptr && dev_name != nullptr) {
         data_str = dev_name;
       } else if (strstr(condition[i].as<const char*>(), "uuid") != nullptr && svc_uuid != nullptr) {

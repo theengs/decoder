@@ -48,11 +48,15 @@ Each device must provide a `brand`, `model`, `model_id`, `condition`, and `prope
 - "name"
 - "uuid"
 
-The second parameter is how the data should be tested. Valid inputs are:
+The second parameter is variable. If required, further qualification can be made by setting a minimum data length in the case of "servicedata" or "manufacturerdata" as the first condition. This is a numeric value that specifies the minimum length of the data to accept as a valid input. If no minimum data length is defined the second paramater must indicate how the data should be tested. Valid inputs are:
 - "contain" tests if the specified value (see below) exists the data source 
 - "index" tests if the specified value exists at the index location (see below) in the data source
 
-The third parameter can be either the index value or the data value to find. If the second parameter is `contain`, the third parameter should be the value to look for in the data source. If the second parameter is `index`, the third parameter should be the location in the data source to look for the value provided as the fourth parameter.
+Examples:
+`"condition":["servicedata", "index", 0, "0804"` -- no data length check
+`"condition":["servicedata", 40, "index", 0, "0804"` -- data length must be equal to or greater than 40 bytes
+
+The third parameter (fourth if minimum data length is specified) can be either the index value or the data value to find. If the second parameter is `contain`, the third parameter should be the value to look for in the data source. If the second parameter is `index`, the third parameter should be the location in the data source to look for the value provided as the fourth parameter.
 
 `condition` can have multiple conditions chanined together using '|' and '&' between them.  
 For example: `"condition":["servicedata", "index", 0, "0804", '|', "servicedata", "index", 0, "8804"]`  
