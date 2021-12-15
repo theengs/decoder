@@ -56,7 +56,7 @@ const char* expected_mfg[] = {
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1\",\"model_id\":\"XMTZC04HM\",\"unit\":\"kg\",\"weight\":61.75}",
-    "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"batt\":100,\"x_axis\":40960,\"y_axis\":61695,\"z_axis\":57347}",
+    "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"batt\":100,\"x_axis\":-24576,\"y_axis\":-3841,\"z_axis\":-8189}",
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":49.4,\"volt\":3.247}",
 };
 
