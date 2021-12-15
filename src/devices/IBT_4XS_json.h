@@ -1,4 +1,4 @@
-const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4XS\",\"condition\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",36,\"index\",0,\"00000000\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true],\"post_proc\":[\"/\",10]},\"tempc2\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true],\"post_proc\":[\"/\",10]},\"tempc3\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true],\"post_proc\":[\"/\",10]},\"tempc4\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true],\"post_proc\":[\"/\",10]}}}";
+const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4XS\",\"condition\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",36,\"index\",0,\"00000000\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"tempc2\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"tempc3\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false],\"post_proc\":[\"/\",10]},\"tempc4\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true,false],\"post_proc\":[\"/\",10]}}}";
 
 /*R""""(
 {
@@ -8,19 +8,19 @@ const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_i
    "condition":["name", "index", 0, "iBBQ","&","manufacturerdata",36 ,"index", 0, "00000000"],
    "properties":{
       "tempc":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true],
+         "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc2":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true],
+         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc3":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true],
+         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc4":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 32, 4, true],
+         "decoder":["value_from_hex_data", "manufacturerdata", 32, 4, true, false],
          "post_proc":["/", 10]
       }
    }

@@ -64,8 +64,8 @@ long TheengsDecoder::value_from_hex_string(const char* data_str, int offset, int
   if (canBeNegative) {
     if (data_length <= 2 && value > SCHAR_MAX) {
       value -= (UCHAR_MAX + 1);
-    } else if (data_length <= 4 && value > INT_MAX) {
-      value -= (UINT_MAX + 1);
+    } else if (data_length == 4 && value > SHRT_MAX) {
+      value -= (USHRT_MAX + 1);
     }
   }
 
