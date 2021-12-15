@@ -33,6 +33,7 @@ module.exports = {
             'devices/CGP1W',
             'devices/H5072',
             'devices/H5075',
+            'devices/H5102',
             'devices/IBS_TH1',
             'devices/IBS_TH2',
             'devices/IBT_4XS',
