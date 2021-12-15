@@ -47,6 +47,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072\",\"tempc\":27.5,\"tempf\":81.5,\"hum\":53.1,\"batt\":100}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4XS\",\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77}",
     "{\"brand\":\"Inkbird\",\"model\":\"T Sensor\",\"model_id\":\"IBS-TH2\",\"tempc\":26.62,\"tempf\":79.916,\"batt\":89}",
+    "{\"brand\":\"Inkbird\",\"model\":\"T Sensor\",\"model_id\":\"IBS-TH2\",\"tempc\":-11.62,\"tempf\":11.084,\"batt\":89}",
     "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":2376,\"energy\":21.2928,\"batt\":80}",
     "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":5304,\"energy\":18.8804,\"batt\":80}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4}",
@@ -56,7 +57,7 @@ const char* expected_mfg[] = {
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1\",\"model_id\":\"XMTZC04HM\",\"unit\":\"kg\",\"weight\":61.75}",
-    "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"batt\":100,\"x_axis\":40960,\"y_axis\":61695,\"z_axis\":57347}",
+    "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"batt\":100,\"x_axis\":-24576,\"y_axis\":-3841,\"z_axis\":-8189}",
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":49.4,\"volt\":3.247}",
 };
 
@@ -105,6 +106,7 @@ const char* test_mfgdata[][3] = {
     {"H5072", "GVH5072_1234", "88ec0004344b6400"},
     {"IBT-4XS", "iBBQ", "0000000010082c40abe604010401fa00fa00"},
     {"Inkbird TH2", "tps", "660a03150110805908"},
+    {"Inkbird TH2", "tps", "76fb03150110805908"},
     {"iNode", "test1", "90826300f0cf0000c409a20080"},
     {"iNode", "test2", "9082dd0061b80000c409a00080"},
     {"IBT-2X", "iBBQ", "0000FC45C30C458EE600E600"},
