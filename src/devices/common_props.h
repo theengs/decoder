@@ -66,6 +66,10 @@ const char* _common_weight_props = "{\"properties\":{\"weight\":{\"unit\":\"kg\"
       "weight":{
          "unit":"kg",
          "name":"weight"
+      },
+      "impedance":{
+         "unit":"Ω",
+         "name":"impedance"
       }
    }
 })"""";*/
