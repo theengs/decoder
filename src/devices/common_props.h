@@ -59,17 +59,13 @@ const char* _common_BVTH_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"na
    }
 })"""";*/
 
-const char* _common_weight_props = "{\"properties\":{\"weight\":{\"unit\":\"kg\",\"name\":\"weight\"},\"impedance\":{\"unit\":\"Ohm\",\"name\":\"impedance\"}}}";
+const char* _common_weight_props = "{\"properties\":{\"weight\":{\"unit\":\"kg\",\"name\":\"weight\"}}}";
 /*R""""(
 {
    "properties":{
       "weight":{
          "unit":"kg",
          "name":"weight"
-      },
-      "impedance":{
-         "unit":"Ohm",
-         "name":"impedance"
       }
    }
 })"""";*/
