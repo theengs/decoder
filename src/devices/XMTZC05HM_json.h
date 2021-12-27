@@ -32,4 +32,4 @@ const char* _XMTZC05HM_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v2\",\"
    }
 })"""";*/
 
-const char* _XMTZC05HM_json_props = _common_weight_props;
+const char* _XMTZC05HM_json_props = _common_weight_impedance_props;
