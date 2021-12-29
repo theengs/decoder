@@ -37,7 +37,7 @@ const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"mode
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
          "post_proc":["/", 10]
       }
-      "___battery":{
+      "__battery":{
          "condition":["manufacturerdata", 48, "2"],
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
          "post_proc":["/", 10]
