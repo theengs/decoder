@@ -230,7 +230,9 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
         if (prop_condition.isNull() || strstr((const char*)prop_condition[0], "servicedata") != nullptr ||
             strstr((const char*)prop_condition[0], "manufacturerdata") != nullptr) {
-          if (prop_condition.isNull() || svc_data[prop_condition[1].as<int>()] == *prop_condition[2].as<const char*>()) {
+          if (prop_condition.isNull() ||
+              (svc_data && svc_data[prop_condition[1].as<int>()] == *prop_condition[2].as<const char*>()) ||
+              (mfg_data && mfg_data[prop_condition[1].as<int>()] == *prop_condition[2].as<const char*>())) {
             JsonArray decoder = prop["decoder"];
             if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
               const char* src = svc_data;
