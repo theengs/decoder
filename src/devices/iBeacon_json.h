@@ -83,11 +83,6 @@ const char* _ibeacon_json = R""""(
          "condition":["manufacturerdata", 48, "6"],
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
          "post_proc":["/", 10]
-      },
-      "_______battery":{
-         "condition":["manufacturerdata", 48, "7"],
-         "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
-         "post_proc":["/", 10]
       }
    }
 })"""";
