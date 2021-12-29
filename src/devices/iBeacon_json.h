@@ -33,6 +33,10 @@ const char* _ibeacon_json = R""""(
          "condition":["manufacturerdata", 48, "b"],
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false]
       },
+      "____power":{
+         "condition":["manufacturerdata", 48, "c"],
+         "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false]
+      },
       "battery":{
          "condition":["manufacturerdata", 48, "0"],
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
@@ -50,6 +54,11 @@ const char* _ibeacon_json = R""""(
       },
       "___battery":{
          "condition":["manufacturerdata", 48, "3"],
+         "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
+         "post_proc":["/", 10]
+      },
+      "____battery":{
+         "condition":["manufacturerdata", 48, "4"],
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
          "post_proc":["/", 10]
       }
