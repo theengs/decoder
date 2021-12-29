@@ -20,11 +20,11 @@ const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"mode
          "decoder":["value_from_hex_data", "manufacturerdata", 44, 4, false]
       },
       "power":{
-         "condition":["manufacturerdata", 48, "8", "|", "manufacturerdata", 48, "9", "|", "manufacturerdata", 48, "a", "|", "manufacturerdata", 48, "b", "|", "manufacturerdata", 48, "c", "|", "manufacturerdata", 48, "d", "|", "manufacturerdata", 48, "e", "|", "manufacturerdata", 48, "f"],
+         "condition":["manufacturerdata", 48, "b", "|", "manufacturerdata", 48, "9", "|", "manufacturerdata", 48, "a", "|", "manufacturerdata", 48, "b", "|", "manufacturerdata", 48, "c", "|", "manufacturerdata", 48, "d", "|", "manufacturerdata", 48, "e", "|", "manufacturerdata", 48, "f"],
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false]
       }
       "battery":{
-         "condition":["manufacturerdata", 48, "0", "|", "manufacturerdata", 48, "1", "|", "manufacturerdata", 48, "2", "|", "manufacturerdata", 48, "3", "|", "manufacturerdata", 48, "4", "|", "manufacturerdata", 48, "5", "|", "manufacturerdata", 48, "6", "|", "manufacturerdata", 48, "7"],
+         "condition":["manufacturerdata", 48, "1", "|", "manufacturerdata", 48, "1", "|", "manufacturerdata", 48, "2", "|", "manufacturerdata", 48, "3", "|", "manufacturerdata", 48, "4", "|", "manufacturerdata", 48, "5", "|", "manufacturerdata", 48, "6", "|", "manufacturerdata", 48, "7"],
          "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
          "post_proc":["/", 10]
       }
