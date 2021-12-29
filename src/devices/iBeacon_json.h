@@ -20,7 +20,7 @@ const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"mode
          "decoder":["value_from_hex_data", "manufacturerdata", 44, 4, false]
       },
       "power":{
-         "condition":["manufacturerdata", 48, "8"],
+         "condition":["manufacturerdata", 48, "b"],
          "decoder":["value_from_hex_data", "manufacturerdata", 48, 2, false]
       }
       "battery":{
