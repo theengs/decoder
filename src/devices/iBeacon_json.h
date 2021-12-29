@@ -14,7 +14,7 @@ const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"mode
          "decoder":["string_from_hex_data", "manufacturerdata", 8, 32]
       },
       "major":{
-         "decoder":["value_from_hex_data", "manufacturerdata",40, 4, false]
+         "decoder":["value_from_hex_data", "manufacturerdata", 40, 4, false]
       },
       "minor":{
          "decoder":["value_from_hex_data", "manufacturerdata", 44, 4, false]
