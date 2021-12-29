@@ -46,7 +46,7 @@ private:
   int data_length_is_valid(size_t data_len, size_t default_min, JsonArray& condition, int idx);
   std::string sanitizeJsonKey(const char* key_in);
 
-  size_t m_docMax = 7168;
+  size_t m_docMax = 6656;
   size_t m_minSvcDataLen = 20;
   size_t m_minMfgDataLen = 16;
 };
