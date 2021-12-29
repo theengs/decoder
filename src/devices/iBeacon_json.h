@@ -68,7 +68,7 @@ const char* _ibeacon_json_props = "{\"properties\":{\"mfid\":{\"unit\":\"hex\",\
       "power":{
          "unit":"int",
          "name":"tx power"
-      }
+      }.
       "battery":{
          "unit":"Volt",
          "name":"battery"
