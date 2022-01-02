@@ -34,8 +34,9 @@
 #endif
 
 #ifdef UNIT_TESTING
-#  define ABS_MAX_HEAP 16384
-static uint32_t peakDocSize = 0;
+#  define TEST_MAX_DOC 16384UL
+#  include <assert.h>
+static size_t peakDocSize = 0;
 #endif
 
 /*
@@ -64,7 +65,7 @@ long TheengsDecoder::value_from_hex_string(const char* data_str, int offset, int
   }
 
   long value = strtol(data.c_str(), NULL, 16);
-  DEBUG_PRINT("extracted value from %s = 0x%08x\n", data.c_str(), value);
+  DEBUG_PRINT("extracted value from %s = 0x%08lx\n", data.c_str(), value);
 
   if (canBeNegative) {
     if (data_length <= 2 && value > SCHAR_MAX) {
@@ -124,7 +125,7 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min, Js
  */
 bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #ifdef UNIT_TESTING
-  DynamicJsonDocument doc(ABS_MAX_HEAP);
+  DynamicJsonDocument doc(TEST_MAX_DOC);
 #else
   DynamicJsonDocument doc(m_docMax);
 #endif
@@ -145,6 +146,9 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
     DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
+#ifdef UNIT_TESTING
+      assert(0);
+#endif
       return success;
     }
 #ifdef UNIT_TESTING
@@ -392,10 +396,13 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
   int mid_len = strlen(model_id);
 
-  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0][0]); ++i) {
+  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0]); ++i) {
     DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
+#ifdef UNIT_TESTING
+      assert(0);
+#endif
       break;
     }
 #ifdef UNIT_TESTING
@@ -418,7 +425,7 @@ int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
 
 std::string TheengsDecoder::getTheengProperties(const char* model_id) {
 #ifdef UNIT_TESTING
-  DynamicJsonDocument doc(ABS_MAX_HEAP);
+  DynamicJsonDocument doc(TEST_MAX_DOC);
 #else
   DynamicJsonDocument doc(m_docMax);
 #endif
@@ -428,7 +435,7 @@ std::string TheengsDecoder::getTheengProperties(const char* model_id) {
 
 std::string TheengsDecoder::getTheengAttribute(const char* model_id, const char* attribute) {
 #ifdef UNIT_TESTING
-  DynamicJsonDocument doc(ABS_MAX_HEAP);
+  DynamicJsonDocument doc(TEST_MAX_DOC);
 #else
   DynamicJsonDocument doc(m_docMax);
 #endif
@@ -451,7 +458,7 @@ void TheengsDecoder::setMinManufacturerDataLen(size_t len) {
 #ifdef UNIT_TESTING
 int TheengsDecoder::testDocMax() {
   if (peakDocSize > m_docMax) {
-    DEBUG_PRINT("Error: peak doc size > max; peak: %u, max: %u\n", peakDocSize, m_docMax);
+    DEBUG_PRINT("Error: peak doc size > max; peak: %lu, max: %lu\n", peakDocSize, m_docMax);
   }
   return m_docMax - peakDocSize;
 }
