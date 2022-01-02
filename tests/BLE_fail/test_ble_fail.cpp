@@ -113,7 +113,7 @@ int main() {
     }
   }
 
-  if (!decoder.getTheengProperties("SHOULD_FAIL").empty()){
+  if (!decoder.getTheengProperties("SHOULD_FAIL").empty()) {
     std::cout << "FAILED! Should fail getTheengProperties returned a value" << std::endl;
     return 1;
   }
@@ -124,6 +124,10 @@ int main() {
   bleObject = doc.as<JsonObject>();
   if (decoder.decodeBLEJson(bleObject) != false) {
     std::cout << "FAILED! garbage input returned true" << std::endl;
+    return 1;
+  }
+  
+  if (decoder.testDocMax() < 0) {
     return 1;
   }
 }
