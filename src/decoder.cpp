@@ -125,8 +125,14 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   const char* svc_uuid = jsondata["servicedatauuid"].as<const char*>();
   bool success = false;
 
+  // if there is no data to decode just return
+  if (svc_data == nullptr && mfg_data == nullptr) {
+    DEBUG_PRINT("Invalid data\n");
+    return success;
+  }
+
   /* loop through the devices and attempt to match the input data to a device parameter set */
-  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0][0]); ++i) {
+  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0]); ++i) {
     DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
