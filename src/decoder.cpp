@@ -126,7 +126,7 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   bool success = false;
 
   /* loop through the devices and attempt to match the input data to a device parameter set */
-  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0][0]); ++i) {
+  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0]); ++i) {
     DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());

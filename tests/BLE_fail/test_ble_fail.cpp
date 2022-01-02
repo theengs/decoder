@@ -117,4 +117,13 @@ int main() {
     std::cout << "FAILED! Should fail getTheengProperties returned a value" << std::endl;
     return 1;
   }
+
+  doc.clear();
+  std::cout << "trying garbage inputs" << std::endl;
+  doc["garbage"] = "input";
+  bleObject = doc.as<JsonObject>();
+  if (decoder.decodeBLEJson(bleObject) != false) {
+    std::cout << "FAILED! garbage input returned true" << std::endl;
+    return 1;
+  }
 }
