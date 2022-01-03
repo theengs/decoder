@@ -33,6 +33,12 @@
 #  define DEBUG_PRINT
 #endif
 
+#ifdef UNIT_TESTING
+#  define TEST_MAX_DOC 16384UL
+#  include <assert.h>
+static size_t peakDocSize = 0;
+#endif
+
 /*
  * @breif revert the string data 2 by 2 to get the correct endianness
  */
@@ -59,7 +65,7 @@ long TheengsDecoder::value_from_hex_string(const char* data_str, int offset, int
   }
 
   long value = strtol(data.c_str(), NULL, 16);
-  DEBUG_PRINT("extracted value from %s = 0x%08x\n", data.c_str(), value);
+  DEBUG_PRINT("extracted value from %s = 0x%08lx\n", data.c_str(), value);
 
   if (canBeNegative) {
     if (data_length <= 2 && value > SCHAR_MAX) {
@@ -118,7 +124,11 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min, Js
  * @breif Compares the input json values to the known devices and decodes the data if a match is found.
  */
 bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
+#ifdef UNIT_TESTING
+  DynamicJsonDocument doc(TEST_MAX_DOC);
+#else
   DynamicJsonDocument doc(m_docMax);
+#endif
   const char* svc_data = jsondata["servicedata"].as<const char*>();
   const char* mfg_data = jsondata["manufacturerdata"].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
@@ -136,10 +146,15 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
     DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
+#ifdef UNIT_TESTING
+      assert(0);
+#endif
       return success;
     }
-
-    DEBUG_PRINT("JsonDocument size: %u\n", doc.memoryUsage());
+#ifdef UNIT_TESTING
+    if (doc.memoryUsage() > peakDocSize)
+      peakDocSize = doc.memoryUsage();
+#endif
 
     JsonArray condition = doc["condition"];
     bool match = false;
@@ -381,12 +396,19 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
   int mid_len = strlen(model_id);
 
-  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0][0]); ++i) {
+  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0]); ++i) {
     DeserializationError error = deserializeJson(doc, _devices[i][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
+#ifdef UNIT_TESTING
+      assert(0);
+#endif
       break;
     }
+#ifdef UNIT_TESTING
+    if (doc.memoryUsage() > peakDocSize)
+      peakDocSize = doc.memoryUsage();
+#endif
 
     if (doc.containsKey("model_id")) {
       if (strlen(doc["model_id"].as<const char*>()) != mid_len) {
@@ -402,14 +424,23 @@ int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
 }
 
 std::string TheengsDecoder::getTheengProperties(const char* model_id) {
+#ifdef UNIT_TESTING
+  DynamicJsonDocument doc(TEST_MAX_DOC);
+#else
   DynamicJsonDocument doc(m_docMax);
+#endif
   int mod_index = getTheengModel(doc, model_id);
   return mod_index < 0 ? "" : _devices[mod_index][1];
 }
 
 std::string TheengsDecoder::getTheengAttribute(const char* model_id, const char* attribute) {
+#ifdef UNIT_TESTING
+  DynamicJsonDocument doc(TEST_MAX_DOC);
+#else
   DynamicJsonDocument doc(m_docMax);
+#endif
   int mod_index = getTheengModel(doc, model_id);
+
   if (mod_index >= 0 && !doc[attribute].isNull()) {
     return std::string(doc[attribute].as<std::string>());
   }
@@ -423,3 +454,12 @@ void TheengsDecoder::setMinServiceDataLen(size_t len) {
 void TheengsDecoder::setMinManufacturerDataLen(size_t len) {
   m_minMfgDataLen = len;
 }
+
+#ifdef UNIT_TESTING
+int TheengsDecoder::testDocMax() {
+  if (peakDocSize > m_docMax) {
+    DEBUG_PRINT("Error: peak doc size > max; peak: %lu, max: %lu\n", peakDocSize, m_docMax);
+  }
+  return m_docMax - peakDocSize;
+}
+#endif

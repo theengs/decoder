@@ -38,6 +38,9 @@ public:
   std::string getTheengProperties(const char* model_id);
   std::string getTheengAttribute(const char* model_id, const char* attribute);
   int getTheengModel(JsonDocument& doc, const char* model_id);
+#ifdef UNIT_TESTING
+  int testDocMax();
+#endif
 
 private:
   void reverse_hex_data(const char* in, char* out, int l);

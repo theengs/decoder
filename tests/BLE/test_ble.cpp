@@ -297,4 +297,8 @@ int main() {
       return 1;
     }
   }
+
+  if (decoder.testDocMax() < 0) {
+    return 1;
+  }
 }
