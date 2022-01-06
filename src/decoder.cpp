@@ -194,6 +194,10 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
       cond_str = condition[i + 1].as<const char*>();
       if (cond_str) {
+        if (cmp_str == svc_uuid && !strncmp(cmp_str, "0x", 2)) {
+          cmp_str += 2;
+        }
+
         if (strstr(cond_str, "contain") != nullptr) {
           if (strstr(cmp_str, condition[i + 2].as<const char*>()) != nullptr) {
             match = true;

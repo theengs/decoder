@@ -124,7 +124,7 @@ const char* test_uuid[][4] = {
     {"Miscale", "0x181d", "servicedata", "223e30b207010708031f"},
     {"Miscale_v2", "0x181b", "servicedata", "0284e5070c170c301df7019a38"},
     {"Mokobeacon", "0xff01", "servicedata", "64000000005085a000f0ffe003"},
-    {"MokoXPro", "0xfeab", "servicedata", "70000a011201ee0caf03def14635998a"},
+    {"MokoXPro", "feab", "servicedata", "70000a011201ee0caf03def14635998a"},
 };
 
 template <typename T>
