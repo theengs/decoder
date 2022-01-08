@@ -54,6 +54,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":5304,\"energy\":18.8804,\"batt\":80}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-6XS\",\"tempc\":20,\"tempf\":68,\"tempc2\":6552.6,\"tempf2\":11826.68,\"tempc3\":21,\"tempf3\":69.8,\"tempc4\":6552.6,\"tempf4\":11826.68,\"tempc5\":6552.6,\"tempf5\":11826.68,\"tempc6\":6552.6,\"tempf6\":11826.68}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag\",\"hum\":20.5,\"tempc\":26.3,\"tempf\":79.34,\"pres\":2017.66,\"accx\":-1,\"accy\":-1.726,\"accz\":0.714,\"volt\":2.899}",
 };
 
 const char* expected_uuid[] = {
@@ -116,6 +117,7 @@ const char* test_mfgdata[][3] = {
     {"iNode", "test2", "9082dd0061b80000c409a00080"},
     {"IBT-2X", "iBBQ", "0000FC45C30C458EE600E600"},
     {"IBT-6XS", "iBBQ", "00003403DE2745CDD200C800F6FFD200F6FFF6FF"},
+    {"RuuviTag RAWv1", "RuuviTag", "990403291A1ECE1EFC18F94202CA0B53"},
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
