@@ -43,7 +43,8 @@ const char* test_mfgdata[][3] = {
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
-    {"SHOULD FAIL", "fa11", "servicedata", "123456789ABCDEF"}};
+    {"SHOULD FAIL", "fa11", "servicedata", "123456789ABCDEF"},
+    {"SHOULD FAIL", "0x181d", "servicedata", "a2a22bb2070103003526"}};
 
 int main() {
   StaticJsonDocument<1024> doc;
