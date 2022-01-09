@@ -198,7 +198,7 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                                                            decoder[4].as<bool>());
                 } else if (decoder.size() == 6) {
                   temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
-                                                           decoder[4].as<bool>(), decoder[6].as<bool>());
+                                                           decoder[4].as<bool>(), decoder[5].as<bool>());
                 }
               } else {
                 break;
