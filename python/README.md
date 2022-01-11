@@ -11,7 +11,7 @@ apt-get install cmake
 
 From a terminal cd to this folder and execute:
 ```
-pip install .
+python setup.py install --user
 ```
 
 ## using
