@@ -32,7 +32,7 @@ public:
   TheengsDecoder() {}
   ~TheengsDecoder() {}
 
-  bool decodeBLEJson(JsonObject& jsondata);
+  int decodeBLEJson(JsonObject& jsondata);
   void setMinServiceDataLen(size_t len);
   void setMinManufacturerDataLen(size_t len);
   std::string getTheengProperties(const char* model_id);
@@ -41,6 +41,42 @@ public:
 #ifdef UNIT_TESTING
   int testDocMax();
 #endif
+
+  enum BLE_ID_NUM {
+    UNKNOWN_MODEL = -1,
+    HHCCJCY01HHCC = 0,
+    VEGTRUG,
+    LYWSD02,
+    LYWSDCGQ,
+    CGP1W,
+    CGG1_V1,
+    CGG1_V2,
+    CGD1,
+    CGDK2,
+    CGH1,
+    JQJCY01YM,
+    IBSTH1,
+    IBSTH2,
+    IBT4XS,
+    IBT6XS,
+    MIBAND,
+    XMTZC04HM,
+    XMTZC05HM,
+    TPMS,
+    LYWSD03MMC_ATC,
+    CGPR1,
+    IBEACON,
+    WS02,
+    H5075,
+    H5072,
+    H5102,
+    LYWSD03MMC_PVVX,
+    MUE4094RT,
+    MOKOBEACON,
+    MOKOBEACONXPRO,
+    INODE_EM,
+    IBT_2X,
+  };
 
 private:
   void reverse_hex_data(const char* in, char* out, int l);

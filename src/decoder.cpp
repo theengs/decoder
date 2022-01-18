@@ -150,7 +150,7 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
  * @breif Compares the input json values to the known devices and
  * decodes the data if a match is found.
  */
-bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
+int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #ifdef UNIT_TESTING
   DynamicJsonDocument doc(TEST_MAX_DOC);
 #else
@@ -160,7 +160,7 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   const char* mfg_data = jsondata["manufacturerdata"].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
   const char* svc_uuid = jsondata["servicedatauuid"].as<const char*>();
-  bool success = false;
+  int success = -1;
 
   // if there is no data to decode just return
   if (svc_data == nullptr && mfg_data == nullptr) {
@@ -169,8 +169,8 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   }
 
   /* loop through the devices and attempt to match the input data to a device parameter set */
-  for (auto i = 0; i < sizeof(_devices) / sizeof(_devices[0]); ++i) {
-    DeserializationError error = deserializeJson(doc, _devices[i][0]);
+  for (auto i_main = 0; i_main < sizeof(_devices) / sizeof(_devices[0]); ++i_main) {
+    DeserializationError error = deserializeJson(doc, _devices[i_main][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
 #ifdef UNIT_TESTING
@@ -405,11 +405,11 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                 _key[4] = 'c';
               }
 
-              success = true;
+              success = i_main;
               DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
             } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
               jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
-              success = true;
+              success = i_main;
             } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
               const char* src = svc_data;
               if (strstr((const char*)decoder[1], "manufacturerdata")) {
@@ -418,7 +418,7 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
               std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
               jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
-              success = true;
+              success = i_main;
             }
           }
         }
