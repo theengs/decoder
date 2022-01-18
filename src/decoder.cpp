@@ -429,6 +429,10 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   return success;
 }
 
+std::string TheengsDecoder::getTheengProperties(int mod_index) {
+  return mod_index < 0 ? "" : _devices[mod_index][1];
+}
+
 int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
   int mid_len = strlen(model_id);
 
@@ -467,6 +471,28 @@ std::string TheengsDecoder::getTheengProperties(const char* model_id) {
 #endif
   int mod_index = getTheengModel(doc, model_id);
   return mod_index < 0 ? "" : _devices[mod_index][1];
+}
+
+std::string TheengsDecoder::getTheengAttribute(int model_id, const char* attribute) {
+#ifdef UNIT_TESTING
+  DynamicJsonDocument doc(TEST_MAX_DOC);
+#else
+  DynamicJsonDocument doc(m_docMax);
+#endif
+  std::string ret_attr = "";
+  if (model_id >= 0 && model_id < sizeof(_devices) / sizeof(_devices[0])) {
+    DeserializationError error = deserializeJson(doc, _devices[model_id][0]);
+    if (error) {
+      DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
+#ifdef UNIT_TESTING
+      assert(0);
+#endif
+    } else if (!doc[attribute].isNull()) {
+      ret_attr = doc[attribute].as<std::string>();
+    }
+  }
+
+  return ret_attr;
 }
 
 std::string TheengsDecoder::getTheengAttribute(const char* model_id, const char* attribute) {
