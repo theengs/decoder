@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|Sensor dependent|
-|Exchanged data|mfid, uuid, minor, major, power|
+|Exchanged data|mfid, uuid, minor, major, power/battery|
 |Encrypted|No|
