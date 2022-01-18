@@ -39,6 +39,10 @@
 static size_t peakDocSize = 0;
 #endif
 
+typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
+                                                   int offset, int data_length,
+                                                   bool reverse, bool canBeNegative);
+
 /*
  * @breif revert the string data 2 by 2 to get the correct endianness
  */
@@ -53,19 +57,39 @@ void TheengsDecoder::reverse_hex_data(const char* in, char* out, int l) {
   out[l] = '\0';
 }
 
+double TheengsDecoder::bf_value_from_hex_string(const char* data_str,
+                                                int offset, int data_length,
+                                                bool reverse, bool canBeNegative) {
+  DEBUG_PRINT("extracting BCF data\n");
+
+  long value = (long)value_from_hex_string(data_str, offset, data_length, reverse, false);
+  double d_value = ((((value >> 8) * 100) + (uint8_t)value)) / 100.0;
+
+  if (canBeNegative) {
+    if (data_length == 4 && value > SHRT_MAX) {
+      d_value = -d_value + (SCHAR_MAX + 1);
+    }
+  }
+
+  return d_value;
+}
+
 /*
  * @breif Extracts the data value from the data string
  */
-long TheengsDecoder::value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative) {
-  DEBUG_PRINT("offset: %d, len %d, rev %u, neg, %u\n", offset, data_length, reverse, canBeNegative);
+double TheengsDecoder::value_from_hex_string(const char* data_str,
+                                             int offset, int data_length,
+                                             bool reverse, bool canBeNegative) {
+  DEBUG_PRINT("offset: %d, len %d, rev %u, neg, %u\n",
+              offset, data_length, reverse, canBeNegative);
   std::string data(&data_str[offset], data_length);
 
   if (reverse) {
     reverse_hex_data(&data_str[offset], &data[0], data_length);
   }
 
-  long value = strtol(data.c_str(), NULL, 16);
-  DEBUG_PRINT("extracted value from %s = 0x%08lx\n", data.c_str(), value);
+  double value = strtol(data.c_str(), NULL, 16);
+  DEBUG_PRINT("extracted value from %s = 0x%08lx\n", data.c_str(), (long)value);
 
   if (canBeNegative) {
     if (data_length <= 2 && value > SCHAR_MAX) {
@@ -79,7 +103,8 @@ long TheengsDecoder::value_from_hex_string(const char* data_str, int offset, int
 }
 
 /*
- * @brief Removes the underscores at the beginning of key strings when duplicate properties exist in a device.
+ * @brief Removes the underscores at the beginning of key strings
+ * when duplicate properties exist in a device.
  */
 std::string TheengsDecoder::sanitizeJsonKey(const char* key_in) {
   unsigned int key_index = 0;
@@ -99,7 +124,8 @@ bool TheengsDecoder::data_index_is_valid(const char* str, size_t index, size_t l
   return true;
 }
 
-int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min, JsonArray& condition, int idx) {
+int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
+                                         JsonArray& condition, int idx) {
   std::string op = condition[idx + 1].as<std::string>();
   if (!op.empty() && op.length() > 2) {
     return (data_len >= default_min) ? 0 : -1;
@@ -121,7 +147,8 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min, Js
 }
 
 /*
- * @breif Compares the input json values to the known devices and decodes the data if a match is found.
+ * @breif Compares the input json values to the known devices and
+ * decodes the data if a match is found.
  */
 bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #ifdef UNIT_TESTING
@@ -214,7 +241,8 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             match = false;
             break;
           }
-          DEBUG_PRINT("comparing index: %s to %s at index %u\n", &cmp_str[condition[i + 2].as<unsigned int>()],
+          DEBUG_PRINT("comparing index: %s to %s at index %u\n",
+                      &cmp_str[condition[i + 2].as<unsigned int>()],
                       condition[i + 3].as<const char*>(), condition[i + 2].as<unsigned int>());
           if (strncmp(&cmp_str[cond_index], condition[i + 3].as<const char*>(), cond_len) == 0) {
             match = true;
@@ -270,13 +298,17 @@ bool TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               static long cal_val = 0;
 
               if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
-                if (decoder.size() == 5) {
-                  temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
-                                                           decoder[4].as<bool>());
-                } else if (decoder.size() == 6) {
-                  temp_val = (double)value_from_hex_string(src, decoder[2].as<int>(), decoder[3].as<int>(),
-                                                           decoder[4].as<bool>(), decoder[5].as<bool>());
+                decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
+
+                if (strstr((const char*)decoder[0], "bf") != nullptr) {
+                  dec_fun = &TheengsDecoder::bf_value_from_hex_string;
                 }
+
+                temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
+                                            decoder[3].as<int>(),
+                                            decoder[4].as<bool>(),
+                                            decoder[5].isNull() ? true : decoder[5].as<bool>());
+
               } else {
                 break;
               }
