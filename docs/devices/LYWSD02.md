@@ -1,6 +1,6 @@
 # Xiaomi LYWSD02
 
-|Model Id|[LYWSD02](./../../src/devices/LYWSD02_json.h)|
+|Model Id|[LYWSD02](https://github.com/theengs/decoder/blob/development/src/devices/LYWSD02_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|Cleargrass clock|

@@ -1,6 +1,6 @@
 # Xiaomi CGG1
 
-|Model Id|[CGG1](./../../src/devices/CGG1_json.h)|
+|Model Id|[CGG1](https://github.com/theengs/decoder/blob/development/src/devices/CGG1_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|Round sensor V1|

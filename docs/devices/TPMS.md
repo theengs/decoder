@@ -1,6 +1,6 @@
 # TPMS
 
-|Model Id|[TPMS](./../../src/devices/TPMS_json.h)|
+|Model Id|[TPMS](https://github.com/theengs/decoder/blob/development/src/devices/TPMS_json.h)|
 |-|-|
 |Brand|Generic|
 |Model|Tire pressure monitoring system|

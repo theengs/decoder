@@ -1,6 +1,6 @@
 # Qingping CGDK2
 
-|Model Id|[CGDK2](./../../src/devices/CGDK2_json.h)|
+|Model Id|[CGDK2](https://github.com/theengs/decoder/blob/development/src/devices/CGDK2_json.h)|
 |-|-|
 |Brand|QINGPING|
 |Model|TH lite|

@@ -1,6 +1,6 @@
 # Qingping CGPR1
 
-|Model Id|[CGPR1](./../../src/devices/CGPR1_json.h)|
+|Model Id|[CGPR1](https://github.com/theengs/decoder/blob/development/src/devices/CGPR1_json.h)|
 |-|-|
 |Brand|Qingping|
 |Model|Motion and Light|

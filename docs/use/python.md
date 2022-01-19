@@ -18,7 +18,7 @@ pip install .
 
 `import TheengsDecoder`
 
-The library includes a BLE decoder [example](./../../examples/python/ScanAndDecode.py). To run the example, open the folder [ScanAndDecode](./../../examples/python/ScanAndDecode.py) in a terminal and type 'python ScanAndDecode.py`
+The library includes a BLE decoder [example](https://github.com/theengs/decoder/blob/development/examples/python/ScanAndDecode.py). To run the example, open the folder [ScanAndDecode](https://github.com/theengs/decoder/blob/development/examples/python/ScanAndDecode.py) in a terminal and type 'python ScanAndDecode.py`
 
 If Theengs Decoder recognized a device, it will print a message like the example below, otherwise None.
 ```

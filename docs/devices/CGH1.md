@@ -1,6 +1,6 @@
 # Qingping CGH1
 
-|Model Id|[CGH1](./../../src/devices/CGH1_json.h)|
+|Model Id|[CGH1](https://github.com/theengs/decoder/blob/development/src/devices/CGH1_json.h)|
 |-|-|
 |Brand|Qingping|
 |Model|Door sensor|
