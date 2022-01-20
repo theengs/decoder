@@ -1,6 +1,6 @@
 # Inkbird TH1
 
-|Model Id|[IBS_TH1](./../../src/devices/IBS_TH1_json.h)|
+|Model Id|[IBS_TH1](https://github.com/theengs/decoder/blob/development/src/devices/IBS_TH1_json.h)|
 |-|-|
 |Brand|Inkbird|
 |Model|Smart Temperature sensor|

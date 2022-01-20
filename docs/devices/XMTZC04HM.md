@@ -1,6 +1,6 @@
 # Xiaomi MiScale V1
 
-|Model Id|[XMTZC04HM](./../../src/devices/XMTZC04HM_json.h)|
+|Model Id|[XMTZC04HM](https://github.com/theengs/decoder/blob/development/src/devices/XMTZC04HM_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|MiScale V1|

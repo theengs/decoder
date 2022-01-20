@@ -1,6 +1,6 @@
 # Cleargrass CGD1
 
-|Model Id|[CGD1](./../../src/devices/CGD1_json.h)|
+|Model Id|[CGD1](https://github.com/theengs/decoder/blob/development/src/devices/CGD1_json.h)|
 |-|-|
 |Brand|CLEARGRASS|
 |Model|Alarm clock|

@@ -1,6 +1,6 @@
 # iNode INEM
 
-|Model Id|[INEM](./../../src/devices/iNode_json.h)|
+|Model Id|[INEM](https://github.com/theengs/decoder/blob/development/src/devices/iNode_json.h)|
 |-|-|
 |Brand|INODE|
 |Model|INEM|
