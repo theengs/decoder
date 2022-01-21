@@ -43,7 +43,7 @@
 #include "devices/MUE4094RT_json.h"
 #include "devices/Miband_json.h"
 #include "devices/Mokobeacon_json.h"
-#include "devices/RuuviTag_RAWv1.h"
+#include "devices/RuuviTag_RAWv1_json.h"
 #include "devices/TPMS_json.h"
 #include "devices/VEGTRUG_json.h"
 #include "devices/WS02_json.h"
