@@ -82,8 +82,15 @@ Here we have a single property that defines a value that we want to decode. The 
 The second parameter is the index of the data source to look for the value. The third parameter is the value to test for.
 If the condition is met the data will be decoded and added to the JsonObject.
 
-`decoder` is a JSON array that specifies the decoder function and parameters to decode the value. The first parameter is the name of the function to call, currently "value_from_hex_data" and "static_value" are the only valid parameters. The other parameters are:
-- "servicedata", Extract the value from the service data. Could also be "manufacturerdata"
+`decoder` is a JSON array that specifies the decoder function and parameters to decode the value.
+The first parameter is the name of the function to call, The available functions are:
+- "value_from_hex_data"  - converts the hex string value into an `integer` or `double` type.
+- "bf_value_from_hex_data" - converts the (binary fraction) hex string value into a `double` type.  This should be used when the hex data is represented in the format of `XX.XX`. For example: when `0x1a1e` should output 26.30.
+- "static_value" - sets the value to the static value specified if the condition is met.
+- "string_from_hex_data" - converts the hex value to a string type.
+
+The other parameters are:
+- "servicedata" or "manufacturerdata" Extract the value from the specified data.
 - 30, The index of the data source where the value exists.
 - 4, The length of the data in bytes (characters in the string).
 - true/false, If the value in the data source should have it's endianness reversed before converting.
