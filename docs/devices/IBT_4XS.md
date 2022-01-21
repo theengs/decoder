@@ -1,6 +1,6 @@
 # Inkbird 4XS BBQ
 
-|Model Id|[IBT_4XS](./../../src/devices/IBS_4XS_json.h)|
+|Model Id|[IBT_4XS](https://github.com/theengs/decoder/blob/development/src/devices/IBS_4XS_json.h)|
 |-|-|
 |Brand|Inkbird|
 |Model|BBQ Temperature sensor|

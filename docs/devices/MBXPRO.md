@@ -1,6 +1,6 @@
 # MokoSmart Pro
 
-|Model Id|[MBXPRO](./../../src/devices/MBXPRO_json.h)|
+|Model Id|[MBXPRO](https://github.com/theengs/decoder/blob/development/src/devices/MBXPRO_json.h)|
 |-|-|
 |Brand|MOKOSMART|
 |Model|H4|

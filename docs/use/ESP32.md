@@ -1,6 +1,6 @@
 # Using with ESP32
 
-The library includes a BLE decoder [example](./../../examples/ESP32/ScanAndDecode/ScanAndDecode.ino) based on ESP32, you can open the folder [ScanAndDecode](./../../examples/ESP32/ScanAndDecode)  with a platformio environment or directly [ScanAndDecode.ino](./../../examples/ESP32/ScanAndDecode/ScanAndDecode.ino) with an Arduino IDE.
+The library includes a BLE decoder [example](https://github.com/theengs/decoder/blob/development/examples/ESP32/ScanAndDecode/ScanAndDecode.ino) based on ESP32, you can open the folder [ScanAndDecode](https://github.com/theengs/decoder/blob/development/examples/ESP32/ScanAndDecode)  with a platformio environment or directly [ScanAndDecode.ino](https://github.com/theengs/decoder/blob/development/examples/ESP32/ScanAndDecode/ScanAndDecode.ino) with an Arduino IDE.
 
 If Theengs Decoder recognize a device, it will print in the serial output a message like the example below:
 ```

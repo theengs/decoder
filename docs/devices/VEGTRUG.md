@@ -1,6 +1,6 @@
 # VEGTRUG
 
-|Model Id|[VEGTRUG](./../../src/devices/VEGTRUG_json.h)|
+|Model Id|[VEGTRUG](https://github.com/theengs/decoder/blob/development/src/devices/VEGTRUG_json.h)|
 |-|-|
 |Brand|VEGTRUG|
 |Model|VEGTRUG|

@@ -1,7 +1,7 @@
 # Xiaomi LYWSD03MMC PVVX
 ![LYWSD03MMC](./../img/LYWSD03MMC.png)
 
-|Model Id|[LYWSD03MMC_PVVX](./../../src/devices/LYWSD03MMC_PVVX_json.h)|
+|Model Id|[LYWSD03MMC_PVVX](https://github.com/theengs/decoder/blob/development/src/devices/LYWSD03MMC_PVVX_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|Compact Temperature sensor|

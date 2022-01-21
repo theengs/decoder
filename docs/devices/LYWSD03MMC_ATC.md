@@ -1,7 +1,7 @@
 # Xiaomi LYWSD03MMC ATC
 ![LYWSD03MMC](./../img/LYWSD03MMC.png)
 
-|Model Id|[LYWSD03MMC_ATC](./../../src/devices/LYWSD03MMC_ATC_json.h)|
+|Model Id|[LYWSD03MMC_ATC](https://github.com/theengs/decoder/blob/development/src/devices/LYWSD03MMC_ATC_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|Compact Temperature sensor|

@@ -1,6 +1,6 @@
 # Xiaomi Mi Flora
 
-|Model Id|[HHCCJCY01HHCC](./../../src/devices/HHCCJCY01HHCC_json.h)|
+|Model Id|[HHCCJCY01HHCC](https://github.com/theengs/decoder/blob/development/src/devices/HHCCJCY01HHCC_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|MiFlora|

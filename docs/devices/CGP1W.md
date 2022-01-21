@@ -1,6 +1,6 @@
 # Cleargrass CGP1W
 
-|Model Id|[CGP1W](./../../src/devices/CGP1W_json.h)|
+|Model Id|[CGP1W](https://github.com/theengs/decoder/blob/development/src/devices/CGP1W_json.h)|
 |-|-|
 |Brand|Cleargrass|
 |Model|CG_THP|

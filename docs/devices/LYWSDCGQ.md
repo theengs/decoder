@@ -1,6 +1,6 @@
 # Xiaomi LYWSDCGQ
 
-|Model Id|[LYWSDCGQ](./../../src/devices/LYWSDCGQ_json.h)|
+|Model Id|[LYWSDCGQ](https://github.com/theengs/decoder/blob/development/src/devices/LYWSDCGQ_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|Mi Jia|
