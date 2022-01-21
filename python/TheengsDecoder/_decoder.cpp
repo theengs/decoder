@@ -21,7 +21,7 @@ static PyObject *decode_BLE(PyObject *self, PyObject *args)
     JsonObject bleObject;
     bleObject = doc.as<JsonObject>();
 
-    if (decoder.decodeBLEJson(bleObject)) {
+    if (decoder.decodeBLEJson(bleObject) >= 0) {
       std::string buf;
       bleObject.remove("servicedata");
       bleObject.remove("manufacturerdata");
