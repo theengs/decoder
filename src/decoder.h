@@ -79,6 +79,7 @@ public:
     INODE_EM,
     IBT_2X,
     RUUVITAG_RAWV1,
+    RUUVITAG_RAWV2,
   };
 
 private:
