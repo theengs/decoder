@@ -65,7 +65,8 @@ module.exports = {
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
             'use/include',
-            'use/ESP32'
+            'use/ESP32',
+            'use/python'
           ]
         },
         {
