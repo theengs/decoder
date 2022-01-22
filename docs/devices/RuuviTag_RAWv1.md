@@ -1,4 +1,4 @@
-# RuuiTag
+# RuuviTag (RAWv1 data format)
 
 |Model Id|[RuuviTag_RAWv1](https://github.com/theengs/decoder/blob/development/src/devices/RuuviTag_RAWv1_json.h)|
 |-|-|
