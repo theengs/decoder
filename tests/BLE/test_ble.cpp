@@ -102,6 +102,40 @@ const char* test_servicedata[][2] = {
     {"Qingping Motion & Light", "0812443660342d580201530f0118090400000000"},
 };
 
+TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::LYWSD02,
+  TheengsDecoder::BLE_ID_NUM::LYWSD02,
+  TheengsDecoder::BLE_ID_NUM::LYWSD02,
+  TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
+  TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
+  TheengsDecoder::BLE_ID_NUM::CGP1W,
+  TheengsDecoder::BLE_ID_NUM::CGP1W,
+  TheengsDecoder::BLE_ID_NUM::CGP1W,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+  TheengsDecoder::BLE_ID_NUM::CGD1,
+  TheengsDecoder::BLE_ID_NUM::CGD1,
+  TheengsDecoder::BLE_ID_NUM::CGD1,
+  TheengsDecoder::BLE_ID_NUM::CGDK2,
+  TheengsDecoder::BLE_ID_NUM::CGDK2,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
+  TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
+  TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
+  TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_ATC,
+  TheengsDecoder::BLE_ID_NUM::CGPR1,
+};
+
 // manufacturer data test input [test name] [device name] [data]
 const char* test_mfgdata[][3] = {
     {"Inkbird TH1", "sps", "660a03150110805908"},
@@ -124,6 +158,27 @@ const char* test_mfgdata[][3] = {
     {"RuuviTag RAWv1", "RuuviTag minimum values", "99040300FF6300008001800180010000"},
 };
 
+TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::IBSTH1,
+  TheengsDecoder::BLE_ID_NUM::TPMS,
+  TheengsDecoder::BLE_ID_NUM::IBEACON,
+  TheengsDecoder::BLE_ID_NUM::IBEACON,
+  TheengsDecoder::BLE_ID_NUM::WS02,
+  TheengsDecoder::BLE_ID_NUM::H5075,
+  TheengsDecoder::BLE_ID_NUM::H5072,
+  TheengsDecoder::BLE_ID_NUM::H5102,
+  TheengsDecoder::BLE_ID_NUM::IBT4XS,
+  TheengsDecoder::BLE_ID_NUM::IBSTH2,
+  TheengsDecoder::BLE_ID_NUM::IBSTH2,
+  TheengsDecoder::BLE_ID_NUM::INODE_EM,
+  TheengsDecoder::BLE_ID_NUM::INODE_EM,
+  TheengsDecoder::BLE_ID_NUM::IBT_2X,
+  TheengsDecoder::BLE_ID_NUM::IBT6XS,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
+};
+
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
@@ -131,6 +186,14 @@ const char* test_uuid[][4] = {
     {"Miscale_v2", "0x181b", "servicedata", "0284e5070c170c301df7019a38"},
     {"Mokobeacon", "0xff01", "servicedata", "64000000005085a000f0ffe003"},
     {"MokoXPro", "feab", "servicedata", "70000a011201ee0caf03def14635998a"},
+};
+
+TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::MIBAND,
+  TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::MOKOBEACON,
+  TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
 };
 
 template <typename T>
@@ -165,10 +228,10 @@ bool checkResult(JsonObject result, JsonObject expected) {
 }
 
 int main() {
-  StaticJsonDocument<1024> doc;
+  StaticJsonDocument<2048> doc;
   JsonObject bleObject;
-
   TheengsDecoder decoder;
+  int decode_res = -1;
 
   for (unsigned int i = 0; i < sizeof(test_servicedata) / sizeof(test_servicedata[0]); ++i) {
     doc.clear();
@@ -176,8 +239,9 @@ int main() {
     doc["servicedata"] = test_servicedata[i][1];
     bleObject = doc.as<JsonObject>();
 
-    if (decoder.decodeBLEJson(bleObject)) {
-      std::cout << "Found : ";
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_svcdata_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
       bleObject.remove("servicedata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
@@ -220,8 +284,9 @@ int main() {
     doc["manufacturerdata"] = test_mfgdata[i][2];
     bleObject = doc.as<JsonObject>();
 
-    if (decoder.decodeBLEJson(bleObject)) {
-      std::cout << "Found : ";
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_mfgdata_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
       bleObject.remove("name");
       bleObject.remove("manufacturerdata");
       serializeJson(doc, std::cout);
@@ -265,8 +330,9 @@ int main() {
     doc["servicedatauuid"] = test_uuid[i][1];
     bleObject = doc.as<JsonObject>();
 
-    if (decoder.decodeBLEJson(bleObject)) {
-      std::cout << "Found : ";
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_uuid_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
       bleObject.remove("servicedatauuid");
       bleObject.remove(test_uuid[i][2]);
       serializeJson(doc, std::cout);

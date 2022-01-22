@@ -52,7 +52,6 @@
 #include "devices/iBeacon_json.h"
 #include "devices/iNode_json.h"
 
-
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
     {_VEGTRUG_json, _VEGTRUG_json_props},

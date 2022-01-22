@@ -33,23 +33,70 @@ const char* test_servicedata[][2] = {
     {"Formaldehyde detector", "5020df02383a5c014357480a10015e"},
     {"Formaldehyde detector", "5020df02283a5c014357480610025302"},
     {"Formaldehyde detector", "5020df025b3a5c014357481010020800"},
-    {"SHOULD FAIL", "0c01810207024d270201508094c0140342d5801040"}};
+    {"SHOULD FAIL", "0c01810207024d270201508094c0140342d5801040"}
+};
+
+TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
+    TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+    TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+    TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+    TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+    TheengsDecoder::BLE_ID_NUM::LYWSD02,
+    TheengsDecoder::BLE_ID_NUM::LYWSD02,
+    TheengsDecoder::BLE_ID_NUM::LYWSD02,
+    TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
+    TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
+    TheengsDecoder::BLE_ID_NUM::CGP1W,
+    TheengsDecoder::BLE_ID_NUM::CGP1W,
+    TheengsDecoder::BLE_ID_NUM::CGP1W,
+    TheengsDecoder::BLE_ID_NUM::CGG1_V2,
+    TheengsDecoder::BLE_ID_NUM::CGG1_V2,
+    TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+    TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+    TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+    TheengsDecoder::BLE_ID_NUM::CGD1,
+    TheengsDecoder::BLE_ID_NUM::CGD1,
+    TheengsDecoder::BLE_ID_NUM::CGD1,
+    TheengsDecoder::BLE_ID_NUM::CGDK2,
+    TheengsDecoder::BLE_ID_NUM::CGDK2,
+    TheengsDecoder::BLE_ID_NUM::CGH1,
+    TheengsDecoder::BLE_ID_NUM::CGH1,
+    TheengsDecoder::BLE_ID_NUM::CGH1,
+    TheengsDecoder::BLE_ID_NUM::CGH1,
+    TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
+    TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
+    TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
+    TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
+};
 
 // manufacturer data test input [test name] [device name] [data]
 const char* test_mfgdata[][3] = {
     {"Inkbird TH1", "sps", "660a03150110805908"},
-    {"SHOULD FAIL", "fail", "270201508094c014"}};
+    {"SHOULD FAIL", "fail", "270201508094c014"}
+};
+
+TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
+    TheengsDecoder::BLE_ID_NUM::IBSTH1,
+    TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
+};
 
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
     {"SHOULD FAIL", "fa11", "servicedata", "123456789ABCDEF"},
-    {"SHOULD FAIL", "0x181d", "servicedata", "a2a22bb2070103003526"}};
+    {"SHOULD FAIL", "0x181d", "servicedata", "a2a22bb2070103003526"}
+};
 
+TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
+    TheengsDecoder::BLE_ID_NUM::MIBAND,
+    TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
+    TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
+};
 int main() {
-  StaticJsonDocument<1024> doc;
+  StaticJsonDocument<2048> doc;
   JsonObject bleObject;
   TheengsDecoder decoder;
+  int decode_res = -1;
 
   for (unsigned int i = 0; i < sizeof(test_servicedata) / sizeof(test_servicedata[0]); ++i) {
     doc.clear();
@@ -57,7 +104,8 @@ int main() {
     doc["servicedata"] = test_servicedata[i][1];
     bleObject = doc.as<JsonObject>();
 
-    if (decoder.decodeBLEJson(bleObject)) {
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_svcdata_id_num[i]) {
       std::cout << "Found : ";
       bleObject.remove("servicedata");
       serializeJson(doc, std::cout);
@@ -77,7 +125,8 @@ int main() {
     doc["manufacturerdata"] = test_mfgdata[i][2];
     bleObject = doc.as<JsonObject>();
 
-    if (decoder.decodeBLEJson(bleObject)) {
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_mfgdata_id_num[i]) {
       std::cout << "Found : ";
       bleObject.remove("name");
       bleObject.remove("manufacturerdata");
@@ -98,7 +147,8 @@ int main() {
     doc["servicedatauuid"] = test_uuid[i][1];
     bleObject = doc.as<JsonObject>();
 
-    if (decoder.decodeBLEJson(bleObject)) {
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_uuid_id_num[i]) {
       std::cout << "Found : ";
       bleObject.remove("servicedatauuid");
       bleObject.remove(test_uuid[i][2]);
@@ -123,11 +173,12 @@ int main() {
   std::cout << "trying garbage inputs" << std::endl;
   doc["garbage"] = "input";
   bleObject = doc.as<JsonObject>();
-  if (decoder.decodeBLEJson(bleObject) != false) {
-    std::cout << "FAILED! garbage input returned true" << std::endl;
+  decode_res = decoder.decodeBLEJson(bleObject);
+  if (decode_res >= 0) {
+    std::cout << "FAILED! garbage input returned " << decode_res << std::endl;
     return 1;
   }
-  
+
   if (decoder.testDocMax() < 0) {
     return 1;
   }
