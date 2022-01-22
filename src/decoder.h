@@ -78,6 +78,7 @@ public:
     MOKOBEACONXPRO,
     INODE_EM,
     IBT_2X,
+    RUUVITAG_RAWV1,
   };
 
 private:

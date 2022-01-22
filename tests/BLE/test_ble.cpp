@@ -174,6 +174,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::INODE_EM,
   TheengsDecoder::BLE_ID_NUM::IBT_2X,
   TheengsDecoder::BLE_ID_NUM::IBT6XS,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]

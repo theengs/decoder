@@ -429,10 +429,6 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   return success;
 }
 
-std::string TheengsDecoder::getTheengProperties(int mod_index) {
-  return mod_index < 0 ? "" : _devices[mod_index][1];
-}
-
 int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
   int mid_len = strlen(model_id);
 
@@ -461,6 +457,10 @@ int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
   }
 
   return -1;
+}
+
+std::string TheengsDecoder::getTheengProperties(int mod_index) {
+  return mod_index < 0 ? "" : _devices[mod_index][1];
 }
 
 std::string TheengsDecoder::getTheengProperties(const char* model_id) {
