@@ -45,6 +45,7 @@ module.exports = {
             'devices/CGDK2',
             'devices/CGH1',
             'devices/CGPR1',
+            'devices/RuuviTag_RAWv1',
             'devices/TPMS',
             'devices/VEGTRUG',
             'devices/WS02',
