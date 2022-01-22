@@ -228,7 +228,7 @@ bool checkResult(JsonObject result, JsonObject expected) {
 }
 
 int main() {
-  StaticJsonDocument<1024> doc;
+  StaticJsonDocument<2048> doc;
   JsonObject bleObject;
   TheengsDecoder decoder;
   int decode_res = -1;

@@ -93,7 +93,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
 };
 int main() {
-  StaticJsonDocument<1024> doc;
+  StaticJsonDocument<2048> doc;
   JsonObject bleObject;
   TheengsDecoder decoder;
   int decode_res = -1;
