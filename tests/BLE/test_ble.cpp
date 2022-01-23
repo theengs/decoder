@@ -57,6 +57,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":20.5,\"tempc\":26.3,\"tempf\":79.34,\"pres\":1027.66,\"accx\":-1,\"accy\":-1.726,\"accz\":0.714,\"volt\":2.899}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":127.5,\"tempc\":127.99,\"tempf\":262.382,\"pres\":1155.35,\"accx\":32.767,\"accy\":32.767,\"accz\":32.767,\"volt\":65.535}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":0,\"tempc\":-127.99,\"tempf\":-198.382,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":0}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":24.3,\"tempf\":75.74,\"hum\":53.49,\"pres\":1000.44,\"accx\":0.004,\"accy\":-0.004,\"accz\":1.036,\"volt\":2.977,\"tx\":4,\"mov\":66,\"seq\":205}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":163.835,\"tempf\":326.903,\"hum\":163.8350,\"pres\":1155.34,\"accx\":32.767,\"accy\":32.767,\"accz\":32.767,\"volt\":3.646,\"tx\":20,\"mov\":254,\"seq\":65534}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":-163.835,\"tempf\":-262.903,\"hum\":0,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":1.6,\"tx\":-40,\"mov\":0,\"seq\":0}",
 };
 
 const char* expected_uuid[] = {
@@ -156,6 +159,9 @@ const char* test_mfgdata[][3] = {
     {"RuuviTag RAWv1", "RuuviTag", "990403291A1ECE1EFC18F94202CA0B53"},
     {"RuuviTag RAWv1", "RuuviTag maximum values", "990403FF7F63FFFF7FFF7FFF7FFFFFFF"},
     {"RuuviTag RAWv1", "RuuviTag minimum values", "99040300FF6300008001800180010000"},
+    {"RuuviTag RAWv2", "RuuviTag", "99040512FC5394C37C0004FFFC040CAC364200CDCBB8334C884F"},
+    {"RuuviTag RAWv2", "RuuviTag maximum values", "9904057FFFFFFEFFFE7FFF7FFF7FFFFFDEFEFFFECBB8334C884F"},
+    {"RuuviTag RAWv2", "RuuviTag minimum values", "9904058001000000008001800180010000000000CBB8334C884F"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -177,6 +183,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV2,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV2,
+  TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV2,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
@@ -246,7 +255,7 @@ int main() {
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
-      StaticJsonDocument<1024> doc_exp;
+      StaticJsonDocument<2048> doc_exp;
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_servicedata[i]);
 
@@ -292,7 +301,7 @@ int main() {
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
-      StaticJsonDocument<1024> doc_exp;
+      StaticJsonDocument<2048> doc_exp;
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_mfg[i]);
 
@@ -338,7 +347,7 @@ int main() {
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
-      StaticJsonDocument<1024> doc_exp;
+      StaticJsonDocument<2048> doc_exp;
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_uuid[i]);
 
