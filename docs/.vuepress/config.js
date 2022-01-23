@@ -50,6 +50,7 @@ module.exports = {
             'devices/TPMS',
             'devices/VEGTRUG',
             'devices/WS02',
+            'devices/WS08',
             'devices/HHCCJCY01HHCC',
             'devices/XMTZC04HM',
             'devices/XMTZC05HM',

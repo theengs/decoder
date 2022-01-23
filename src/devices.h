@@ -48,6 +48,7 @@
 #include "devices/TPMS_json.h"
 #include "devices/VEGTRUG_json.h"
 #include "devices/WS02_json.h"
+#include "devices/WS08_json.h"
 #include "devices/XMTZC04HM_json.h"
 #include "devices/XMTZC05HM_json.h"
 #include "devices/iBeacon_json.h"
@@ -77,6 +78,7 @@ const char* _devices[][2] = {
     {_CGPR1_json, _CGPR1_json_props},
     {_ibeacon_json, _ibeacon_json_props},
     {_WS02_json, _WS02_json_props},
+    {_WS08_json, _WS08_json_props},
     {_H5075_json, _H5075_json_props},
     {_H5072_json, _H5072_json_props},
     {_H5102_json, _H5102_json_props},
