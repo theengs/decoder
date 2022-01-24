@@ -69,6 +69,7 @@ public:
     CGPR1,
     IBEACON,
     WS02,
+    WS08,
     H5075,
     H5072,
     H5102,
