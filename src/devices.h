@@ -53,6 +53,7 @@
 #include "devices/XMTZC05HM_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/iNode_json.h"
+#include "devices/BM_V23_json.h"
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
@@ -90,4 +91,5 @@ const char* _devices[][2] = {
     {_IBT_2X_json, _IBT_2X_json_props},
     {_RuuviTag_RAWv1_json, _RuuviTag_RAWv1_json_props},
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},
+    {_BM_V23_json, _BM_V23_json_props},
 };

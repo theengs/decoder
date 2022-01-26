@@ -29,6 +29,7 @@ module.exports = {
           title: '1 - Devices 🌡️',   // required
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
+            'devices/BM_V23',
             'devices/CGD1',
             'devices/CGP1W',
             'devices/H5072',
