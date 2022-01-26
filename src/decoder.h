@@ -81,6 +81,7 @@ public:
     IBT_2X,
     RUUVITAG_RAWV1,
     RUUVITAG_RAWV2,
+    BLE_ID_MAX
   };
 
 private:

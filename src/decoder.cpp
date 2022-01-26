@@ -460,7 +460,7 @@ int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
 }
 
 std::string TheengsDecoder::getTheengProperties(int mod_index) {
-  return mod_index < 0 ? "" : _devices[mod_index][1];
+  return (mod_index < 0 || mod_index >= BLE_ID_NUM::BLE_ID_MAX) ? "" : _devices[mod_index][1];
 }
 
 std::string TheengsDecoder::getTheengProperties(const char* model_id) {
@@ -470,7 +470,7 @@ std::string TheengsDecoder::getTheengProperties(const char* model_id) {
   DynamicJsonDocument doc(m_docMax);
 #endif
   int mod_index = getTheengModel(doc, model_id);
-  return mod_index < 0 ? "" : _devices[mod_index][1];
+  return (mod_index < 0 || mod_index >= BLE_ID_NUM::BLE_ID_MAX) ? "" : _devices[mod_index][1];
 }
 
 std::string TheengsDecoder::getTheengAttribute(int model_id, const char* attribute) {
@@ -480,7 +480,7 @@ std::string TheengsDecoder::getTheengAttribute(int model_id, const char* attribu
   DynamicJsonDocument doc(m_docMax);
 #endif
   std::string ret_attr = "";
-  if (model_id >= 0 && model_id < sizeof(_devices) / sizeof(_devices[0])) {
+  if (model_id >= 0 && model_id < BLE_ID_NUM::BLE_ID_MAX) {
     DeserializationError error = deserializeJson(doc, _devices[model_id][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
