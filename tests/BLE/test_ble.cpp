@@ -200,8 +200,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
-    {"Miscale", "0x181d", "servicedata", "223e30b207010708031f"},
-    {"Miscale_v2", "0x181b", "servicedata", "0284e5070c170c301df7019a38"},
+    {"Miscale", "0x181d", "servicedata", "a23e30b207010708031f"},
+    {"Miscale_v2", "0x181b", "servicedata", "02a4e5070c170c301df7019a38"},
     {"Mokobeacon", "0xff01", "servicedata", "64000000005085a000f0ffe003"},
     {"MokoXPro", "feab", "servicedata", "70000a011201ee0caf03def14635998a"},
 };
