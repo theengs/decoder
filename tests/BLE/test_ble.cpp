@@ -208,7 +208,7 @@ const char* test_uuid[][4] = {
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::MIBAND,
-  TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC04HM_va,
   TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACON,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
