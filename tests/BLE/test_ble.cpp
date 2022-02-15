@@ -68,6 +68,7 @@ const char* expected_mfg[] = {
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1_a\",\"model_id\":\"XMTZC04HM\",\"unit\":\"kg\",\"weight\":61.75}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1_2\",\"model_id\":\"XMTZC04HM\",\"unit\":\"kg\",\"weight\":61.75}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v2\",\"model_id\":\"XMTZC05HM\",\"unit\":\"kg\",\"weight\":72.45,\"impedance\":503}",
     "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"batt\":100,\"x_axis\":-24576,\"y_axis\":-3841,\"z_axis\":-8189}",
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":49.4,\"volt\":3.247}",
@@ -201,6 +202,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
     {"Miscale", "0x181d", "servicedata", "a23e30b207010708031f"},
+    {"Miscale", "0x181d", "servicedata", "223e30b207010708031f"},
     {"Miscale_v2", "0x181b", "servicedata", "02a4e5070c170c301df7019a38"},
     {"Mokobeacon", "0xff01", "servicedata", "64000000005085a000f0ffe003"},
     {"MokoXPro", "feab", "servicedata", "70000a011201ee0caf03def14635998a"},
@@ -209,6 +211,7 @@ const char* test_uuid[][4] = {
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::MIBAND,
   TheengsDecoder::BLE_ID_NUM::XMTZC04HM_va,
+  TheengsDecoder::BLE_ID_NUM::XMTZC04HM_v2,
   TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACON,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
