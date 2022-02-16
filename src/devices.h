@@ -40,6 +40,7 @@
 #include "devices/LYWSD03MMC_PVVX_json.h"
 #include "devices/LYWSDCGQ_json.h"
 #include "devices/MBXPRO_json.h"
+#include "devices/MS_CDP_json.h"
 #include "devices/MUE4094RT_json.h"
 #include "devices/Miband_json.h"
 #include "devices/Mokobeacon_json.h"
@@ -92,4 +93,5 @@ const char* _devices[][2] = {
     {_RuuviTag_RAWv1_json, _RuuviTag_RAWv1_json_props},
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},
     {_BM_V23_json, _BM_V23_json_props},
+    {_MS_CDP_json, _MS_CDP_json_props},
 };
