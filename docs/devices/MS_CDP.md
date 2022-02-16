@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|Dependent on device|
-|Exchanged data|device type|
+|Exchanged data|device type, salt, device hash|
 |Encrypted|No|
