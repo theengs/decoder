@@ -25,6 +25,7 @@
 #include "devices/CGH1_json.h"
 #include "devices/CGP1W_json.h"
 #include "devices/CGPR1_json.h"
+#include "devices/GAEN_json.h"
 #include "devices/H5072_json.h"
 #include "devices/H5075_json.h"
 #include "devices/H5102_json.h"
@@ -94,4 +95,5 @@ const char* _devices[][2] = {
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},
     {_BM_V23_json, _BM_V23_json_props},
     {_MS_CDP_json, _MS_CDP_json_props},
+    {_GAEN_json, _GAEN_json_props},
 };

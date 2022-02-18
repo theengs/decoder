@@ -32,6 +32,7 @@ module.exports = {
             'devices/BM_V23',
             'devices/CGD1',
             'devices/CGP1W',
+            'devices/GAEN',
             'devices/H5072',
             'devices/H5075',
             'devices/H5102',
