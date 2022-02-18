@@ -41,6 +41,7 @@ module.exports = {
             'devices/IBT_6XS',
             'devices/IBT_2X',
             'devices/iNode',
+            'devices/MS_CDP',
             'devices/MokoBeacon',
             'devices/MBXPRO',
             'devices/CGDK2',
