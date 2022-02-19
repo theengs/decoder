@@ -83,6 +83,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"mode\":\"person\",\"unit\":\"lbs\",\"weight\":140.65}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"mode\":\"object\",\"unit\":\"lbs\",\"weight\":12.3}",
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":49.4,\"volt\":3.247}",
+    "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"rpi\":\"e7c6d34c71e48baf278bd99be74685bc\",\"aem\":\"a78126ab\"}",
 };
 
 // Service data test input [test name] [data]
@@ -229,6 +230,7 @@ const char* test_uuid[][4] = {
     {"Mi_Body_Scale_2", "0x181b", "servicedata", "07a4e607020e10293a0000ce04"},
     {"Mokobeacon", "0xff01", "servicedata", "64000000005085a000f0ffe003"},
     {"MokoXPro", "feab", "servicedata", "70000a011201ee0caf03def14635998a"},
+    {"GAEN", "fd6f", "servicedata", "e7c6d34c71e48baf278bd99be74685bca78126ab"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -248,6 +250,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::XMTZC05HM_Va,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACON,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
+  TheengsDecoder::BLE_ID_NUM::GAEN,
 };
 
 template <typename T>

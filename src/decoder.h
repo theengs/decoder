@@ -84,6 +84,7 @@ public:
     RUUVITAG_RAWV2,
     BM_V23,
     MS_CDP,
+    GAEN,
     BLE_ID_MAX
   };
 
