@@ -1,35 +1,100 @@
-#include "common_props.h"
-
-const char* _XMTZC05HM_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v2\",\"model_id\":\"XMTZC05HM\",\"condition\":[\"uuid\",\"contain\",\"181b\"],\"properties\":{\"unit\":{\"condition\":[\"servicedata\",1,\"2\"],\"decoder\":[\"static_value\",\"kg\"]},\"weight\":{\"condition\":[\"servicedata\",1,\"2\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",200]},\"_unit\":{\"condition\":[\"servicedata\",1,\"3\"],\"decoder\":[\"static_value\",\"lbs\"]},\"_weight\":{\"condition\":[\"servicedata\",1,\"3\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",100]},\"impedance\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,true,false]}}}";
+const char* _XMTZC05HM_json_v2 = "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"condition\":[\"uuid\",\"contain\",\"181b\",\"&\",\"servicedata\",\"index\",2,\"2\"],\"properties\":{\"mode\":{\"condition\":[\"servicedata\",1,\"2\",\"|\",\"servicedata\",1,\"3\"],\"decoder\":[\"static_value\",\"person\"]},\"_mode\":{\"condition\":[\"servicedata\",1,\"6\",\"|\",\"servicedata\",1,\"7\"],\"decoder\":[\"static_value\",\"object\"]},\"unit\":{\"condition\":[\"servicedata\",1,\"2\",\"|\",\"servicedata\",1,\"6\"],\"decoder\":[\"static_value\",\"kg\"]},\"_unit\":{\"condition\":[\"servicedata\",1,\"3\",\"|\",\"servicedata\",1,\"7\"],\"decoder\":[\"static_value\",\"lbs\"]},\"weight\":{\"condition\":[\"servicedata\",1,\"2\",\"|\",\"servicedata\",1,\"6\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",200]},\"_weight\":{\"condition\":[\"servicedata\",1,\"3\",\"|\",\"servicedata\",1,\"7\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",100]},\"impedance\":{\"condition\":[\"servicedata\",3,\"6\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,true,false]}}}";
 /*R""""(
 {
    "brand":"Xiaomi",
-   "model":"Miscale_v2",
+   "model":"Mi_Body_Scale_2",
    "model_id":"XMTZC05HM",
-   "condition":["uuid", "contain", "181b"],
+   "condition":["uuid", "contain", "181b", "&", "servicedata", "index", 2, "2"],
    "properties":{
+      "mode":{
+         "condition":["servicedata", 1, "2", "|", "servicedata", 1, "3"],
+         "decoder":["static_value", "person"]
+      },
+      "_mode":{
+         "condition":["servicedata", 1, "6", "|", "servicedata", 1, "7"],
+         "decoder":["static_value", "object"]
+      },
       "unit":{
-         "condition":["servicedata", 1, "2"],
+         "condition":["servicedata", 1, "2", "|", "servicedata", 1, "6"],
          "decoder":["static_value", "kg"]
       },
+      "_unit":{
+         "condition":["servicedata", 1, "3", "|", "servicedata", 1, "7"],
+         "decoder":["static_value", "lbs"]
+      },
       "weight":{
-         "condition":["servicedata", 1, "2"],
+         "condition":["servicedata", 1, "2", "|", "servicedata", 1, "6"],
          "decoder":["value_from_hex_data", "servicedata", 22, 4, true, false],
          "post_proc":["/", 200]
       },
-      "_unit":{
-         "condition":["servicedata", 1, "3"],
-         "decoder":["static_value", "lbs"]
-      },
       "_weight":{
-         "condition":["servicedata", 1, "3"],
+         "condition":["servicedata", 1, "3", "|", "servicedata", 1, "7"],
          "decoder":["value_from_hex_data", "servicedata", 22, 4, true, false],
          "post_proc":["/", 100]
       },
       "impedance":{
+         "condition":["servicedata", 3, "6"],
          "decoder":["value_from_hex_data", "servicedata", 18, 4, true, false]
       }
    }
 })"""";*/
 
-const char* _XMTZC05HM_json_props = _common_weight_impedance_props;
+const char* _XMTZC05HM_json_va = "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"condition\":[\"uuid\",\"contain\",\"181b\",\"&\",\"servicedata\",\"index\",2,\"a\"],\"properties\":{\"mode\":{\"condition\":[\"servicedata\",1,\"2\",\"|\",\"servicedata\",1,\"3\"],\"decoder\":[\"static_value\",\"person\"]},\"_mode\":{\"condition\":[\"servicedata\",1,\"6\",\"|\",\"servicedata\",1,\"7\"],\"decoder\":[\"static_value\",\"object\"]},\"unit\":{\"condition\":[\"servicedata\",1,\"2\",\"|\",\"servicedata\",1,\"6\"],\"decoder\":[\"static_value\",\"kg\"]},\"_unit\":{\"condition\":[\"servicedata\",1,\"3\",\"|\",\"servicedata\",1,\"7\"],\"decoder\":[\"static_value\",\"lbs\"]},\"weight\":{\"condition\":[\"servicedata\",1,\"2\",\"|\",\"servicedata\",1,\"6\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",200]},\"_weight\":{\"condition\":[\"servicedata\",1,\"3\",\"|\",\"servicedata\",1,\"7\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",100]},\"impedance\":{\"condition\":[\"servicedata\",3,\"6\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,true,false]}}}";
+/*R""""(
+{
+   "brand":"Xiaomi",
+   "model":"Mi_Body_Scale_2",
+   "model_id":"XMTZC05HM",
+   "condition":["uuid", "contain", "181b", "&", "servicedata", "index", 2, "a"],
+   "properties":{
+      "mode":{
+         "condition":["servicedata", 1, "2", "|", "servicedata", 1, "3"],
+         "decoder":["static_value", "person"]
+      },
+      "_mode":{
+         "condition":["servicedata", 1, "6", "|", "servicedata", 1, "7"],
+         "decoder":["static_value", "object"]
+      },
+      "unit":{
+         "condition":["servicedata", 1, "2", "|", "servicedata", 1, "6"],
+         "decoder":["static_value", "kg"]
+      },
+      "_unit":{
+         "condition":["servicedata", 1, "3", "|", "servicedata", 1, "7"],
+         "decoder":["static_value", "lbs"]
+      },
+      "weight":{
+         "condition":["servicedata", 1, "2", "|", "servicedata", 1, "6"],
+         "decoder":["value_from_hex_data", "servicedata", 22, 4, true, false],
+         "post_proc":["/", 200]
+      },
+      "_weight":{
+         "condition":["servicedata", 1, "3", "|", "servicedata", 1, "7"],
+         "decoder":["value_from_hex_data", "servicedata", 22, 4, true, false],
+         "post_proc":["/", 100]
+      },
+      "impedance":{
+         "condition":["servicedata", 3, "6"],
+         "decoder":["value_from_hex_data", "servicedata", 18, 4, true, false]
+      }
+   }
+})"""";*/
+
+const char* _XMTZC05HM_json_props = "{\"properties\":{\"mode\":{\"unit\":\"string\",\"name\":\"mode\"},\"weight\":{\"unit\":\"kg\",\"name\":\"weight\"},\"impedance\":{\"unit\":\"Ohm\",\"name\":\"impedance\"}}}";
+/*R""""(
+{
+   "properties":{
+      "mode":{
+         "unit":"string",
+         "name":"mode"
+      },
+      "weight":{
+         "unit":"kg",
+         "name":"weight"
+      },
+      "impedance":{
+         "unit":"Ohm",
+         "name":"impedance"
+      }
+   }
+})"""";*/
