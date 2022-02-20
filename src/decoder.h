@@ -63,7 +63,7 @@ public:
     IBT6XS,
     MIBAND,
     XMTZC04HM,
-    XMTZC05HM_V2,
+    XMTZC05HM,
     TPMS,
     LYWSD03MMC_ATC,
     CGPR1,
