@@ -281,145 +281,162 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
         JsonObject prop = kv.value().as<JsonObject>();
         JsonArray prop_condition = prop["condition"];
 
-        if (prop_condition.isNull() || strstr((const char*)prop_condition[0], "servicedata") != nullptr ||
-            strstr((const char*)prop_condition[0], "manufacturerdata") != nullptr) {
-          if (prop_condition.isNull() ||
-              (svc_data && svc_data[prop_condition[1].as<int>()] == *prop_condition[2].as<const char*>()) ||
-              (mfg_data && mfg_data[prop_condition[1].as<int>()] == *prop_condition[2].as<const char*>())) {
-            JsonArray decoder = prop["decoder"];
-            if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
-              const char* src = svc_data;
-              if (strstr((const char*)decoder[1], "manufacturerdata")) {
-                src = mfg_data;
+        int cond_size = prop_condition.size();
+        bool cond_met = prop_condition.isNull();
+
+        for (int i = 0; i < cond_size; i += 4) {
+          if (svc_data &&
+              strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
+              svc_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
+            cond_met = true;
+          } else if (mfg_data &&
+                     strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
+                     mfg_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
+            cond_met = true;
+          }
+
+          if (!cond_met && cond_size > (i + 3) && *prop_condition[i + 3].as<const char*>() == '|') {
+            continue;
+          } else if (cond_met && cond_size > (i + 3) && *prop_condition[i + 3].as<const char*>() == '&') {
+            cond_met = false;
+            continue;
+          }
+        }
+
+        if (cond_met) {
+          JsonArray decoder = prop["decoder"];
+          if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
+            const char* src = svc_data;
+            if (strstr((const char*)decoder[1], "manufacturerdata")) {
+              src = mfg_data;
+            }
+
+            /* use a double for all values and cast later if required */
+            double temp_val;
+            static long cal_val = 0;
+
+            if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
+              decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
+
+              if (strstr((const char*)decoder[0], "bf") != nullptr) {
+                dec_fun = &TheengsDecoder::bf_value_from_hex_string;
               }
 
-              /* use a double for all values and cast later if required */
-              double temp_val;
-              static long cal_val = 0;
+              temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
+                                          decoder[3].as<int>(),
+                                          decoder[4].as<bool>(),
+                                          decoder[5].isNull() ? true : decoder[5].as<bool>());
 
-              if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
-                decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
+            } else {
+              break;
+            }
 
-                if (strstr((const char*)decoder[0], "bf") != nullptr) {
-                  dec_fun = &TheengsDecoder::bf_value_from_hex_string;
-                }
-
-                temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
-                                            decoder[3].as<int>(),
-                                            decoder[4].as<bool>(),
-                                            decoder[5].isNull() ? true : decoder[5].as<bool>());
-
-              } else {
-                break;
-              }
-
-              /* Do any required post processing of the value */
-              if (prop.containsKey("post_proc")) {
-                JsonArray post_proc = prop["post_proc"];
-                for (unsigned int i = 0; i < post_proc.size(); i += 2) {
-                  if (cal_val && post_proc[i + 1].as<const char*>() != NULL &&
-                      strncmp(post_proc[i + 1].as<const char*>(), ".cal", 4) == 0) {
-                    switch (*post_proc[i].as<const char*>()) {
-                      case '/':
-                        temp_val /= cal_val;
-                        break;
-                      case '*':
-                        temp_val *= cal_val;
-                        break;
-                      case '-':
-                        temp_val -= cal_val;
-                        break;
-                      case '+':
-                        temp_val += cal_val;
-                        break;
+            /* Do any required post processing of the value */
+            if (prop.containsKey("post_proc")) {
+              JsonArray post_proc = prop["post_proc"];
+              for (unsigned int i = 0; i < post_proc.size(); i += 2) {
+                if (cal_val && post_proc[i + 1].as<const char*>() != NULL &&
+                    strncmp(post_proc[i + 1].as<const char*>(), ".cal", 4) == 0) {
+                  switch (*post_proc[i].as<const char*>()) {
+                    case '/':
+                      temp_val /= cal_val;
+                      break;
+                    case '*':
+                      temp_val *= cal_val;
+                      break;
+                    case '-':
+                      temp_val -= cal_val;
+                      break;
+                    case '+':
+                      temp_val += cal_val;
+                      break;
+                  }
+                } else {
+                  switch (*post_proc[i].as<const char*>()) {
+                    case '/':
+                      temp_val /= post_proc[i + 1].as<double>();
+                      break;
+                    case '*':
+                      temp_val *= post_proc[i + 1].as<double>();
+                      break;
+                    case '-':
+                      temp_val -= post_proc[i + 1].as<double>();
+                      break;
+                    case '+':
+                      temp_val += post_proc[i + 1].as<double>();
+                      break;
+                    case '%': {
+                      long val = (long)temp_val;
+                      temp_val = val % post_proc[i + 1].as<long>();
+                      break;
                     }
-                  } else {
-                    switch (*post_proc[i].as<const char*>()) {
-                      case '/':
-                        temp_val /= post_proc[i + 1].as<double>();
-                        break;
-                      case '*':
-                        temp_val *= post_proc[i + 1].as<double>();
-                        break;
-                      case '-':
-                        temp_val -= post_proc[i + 1].as<double>();
-                        break;
-                      case '+':
-                        temp_val += post_proc[i + 1].as<double>();
-                        break;
-                      case '%': {
-                        long val = (long)temp_val;
-                        temp_val = val % post_proc[i + 1].as<long>();
-                        break;
-                      }
-                      case '<': {
-                        long val = (long)temp_val;
-                        temp_val = val << post_proc[i + 1].as<unsigned int>();
-                        break;
-                      }
-                      case '>': {
-                        long val = (long)temp_val;
-                        temp_val = val >> post_proc[i + 1].as<unsigned int>();
-                        break;
-                      }
-                      case '!': {
-                        bool val = (bool)temp_val;
-                        temp_val = !val;
-                        break;
-                      }
-                      case '&': {
-                        long val = (long)temp_val;
-                        temp_val = val & post_proc[i + 1].as<unsigned int>();
-                        break;
-                      }
+                    case '<': {
+                      long val = (long)temp_val;
+                      temp_val = val << post_proc[i + 1].as<unsigned int>();
+                      break;
+                    }
+                    case '>': {
+                      long val = (long)temp_val;
+                      temp_val = val >> post_proc[i + 1].as<unsigned int>();
+                      break;
+                    }
+                    case '!': {
+                      bool val = (bool)temp_val;
+                      temp_val = !val;
+                      break;
+                    }
+                    case '&': {
+                      long val = (long)temp_val;
+                      temp_val = val & post_proc[i + 1].as<unsigned int>();
+                      break;
                     }
                   }
                 }
               }
-
-              /* If there is any underscores at the beginning of the property name, there is multiple 
-               * properties of this type, we need remove the underscores for creating the key.
-               */
-              std::string _key = sanitizeJsonKey(kv.key().c_str());
-
-              /* calculation values extracted from data are not added to the deocded outupt
-               * instead we store them teporarily to use with the next data properties.
-               */
-              if (_key == ".cal") {
-                cal_val = (long)temp_val;
-                continue;
-              }
-
-              /* Cast to a differnt value type if specified */
-              if (prop.containsKey("is_bool")) {
-                jsondata[_key] = (bool)temp_val;
-              } else {
-                jsondata[_key] = temp_val;
-              }
-
-              /* If the property is temp in C, make sure to convert and add temp in F */
-              if (_key.find("tempc", 0, 5) != std::string::npos) {
-                double tc = jsondata[_key];
-                _key[4] = 'f';
-                jsondata[_key] = tc * 1.8 + 32;
-                _key[4] = 'c';
-              }
-
-              success = i_main;
-              DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
-            } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
-              jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
-              success = i_main;
-            } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
-              const char* src = svc_data;
-              if (strstr((const char*)decoder[1], "manufacturerdata")) {
-                src = mfg_data;
-              }
-
-              std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
-              jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
-              success = i_main;
             }
+
+            /* If there is any underscores at the beginning of the property name, there is multiple 
+                * properties of this type, we need remove the underscores for creating the key.
+                */
+            std::string _key = sanitizeJsonKey(kv.key().c_str());
+
+            /* calculation values extracted from data are not added to the deocded outupt
+                * instead we store them teporarily to use with the next data properties.
+                */
+            if (_key == ".cal") {
+              cal_val = (long)temp_val;
+              continue;
+            }
+
+            /* Cast to a differnt value type if specified */
+            if (prop.containsKey("is_bool")) {
+              jsondata[_key] = (bool)temp_val;
+            } else {
+              jsondata[_key] = temp_val;
+            }
+
+            /* If the property is temp in C, make sure to convert and add temp in F */
+            if (_key.find("tempc", 0, 5) != std::string::npos) {
+              double tc = jsondata[_key];
+              _key[4] = 'f';
+              jsondata[_key] = tc * 1.8 + 32;
+              _key[4] = 'c';
+            }
+
+            success = i_main;
+            DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
+          } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
+            jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
+            success = i_main;
+          } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
+            const char* src = svc_data;
+            if (strstr((const char*)decoder[1], "manufacturerdata")) {
+              src = mfg_data;
+            }
+
+            std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
+            jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
+            success = i_main;
           }
         }
       }

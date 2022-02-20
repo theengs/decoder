@@ -76,7 +76,6 @@ const char* _devices[][2] = {
     {_Miband_json, _Miband_json_props},
     {_XMTZC04HM_json, _XMTZC04HM_json_props},
     {_XMTZC05HM_json_v2, _XMTZC05HM_json_props},
-    {_XMTZC05HM_json_va, _XMTZC05HM_json_props},
     {_TPMS_json, _TPMS_json_props},
     {_LYWSD03MMC_ATC_json, _LYWSD03MMC_ATC_props},
     {_CGPR1_json, _CGPR1_json_props},
