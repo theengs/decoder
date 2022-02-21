@@ -69,7 +69,18 @@ const char* expected_mfg[] = {
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1\",\"model_id\":\"XMTZC04HM\",\"unit\":\"kg\",\"weight\":61.75}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v2\",\"model_id\":\"XMTZC05HM\",\"unit\":\"kg\",\"weight\":72.45,\"impedance\":503}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":72.45,\"impedance\":503}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":72.45}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"object\",\"unit\":\"kg\",\"weight\":5.1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"lbs\",\"weight\":140.65,\"impedance\":503}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"lbs\",\"weight\":140.65}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"object\",\"unit\":\"lbs\",\"weight\":12.3}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":72.45,\"impedance\":503}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":72.45}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"object\",\"unit\":\"kg\",\"weight\":5.1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"lbs\",\"weight\":140.65,\"impedance\":503}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"lbs\",\"weight\":140.65}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"object\",\"unit\":\"lbs\",\"weight\":12.3}",
     "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"batt\":100,\"x_axis\":-24576,\"y_axis\":-3841,\"z_axis\":-8189}",
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":49.4,\"volt\":3.247}",
     "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"rpi\":\"e7c6d34c71e48baf278bd99be74685bc\",\"aem\":\"a78126ab\"}",
@@ -205,7 +216,18 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
     {"Miscale", "0x181d", "servicedata", "223e30b207010708031f"},
-    {"Miscale_v2", "0x181b", "servicedata", "0284e5070c170c301df7019a38"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "0226e607020e10293af7019a38"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "0224e607020e10293a00009a38"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "0624e607020e10293a0000fc03"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "0326e607020e10293af701f136"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "0324e607020e10293a0000f136"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "0724e607020e10293a0000ce04"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "02a6e607020e10293af7019a38"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "02a4e607020e10293a00009a38"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "06a4e607020e10293a0000fc03"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "03a6e607020e10293af701f136"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "03a4e607020e10293a0000f136"},
+    {"Mi_Body_Scale_2", "0x181b", "servicedata", "07a4e607020e10293a0000ce04"},
     {"Mokobeacon", "0xff01", "servicedata", "64000000005085a000f0ffe003"},
     {"MokoXPro", "feab", "servicedata", "70000a011201ee0caf03def14635998a"},
     {"GAEN", "fd6f", "servicedata", "e7c6d34c71e48baf278bd99be74685bca78126ab"},
@@ -214,6 +236,17 @@ const char* test_uuid[][4] = {
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::MIBAND,
   TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
   TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACON,
   TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
@@ -228,6 +261,11 @@ static bool floatEqual(T f1, T f2) {
 bool checkResult(JsonObject result, JsonObject expected) {
   if (result.size() != expected.size()) {
     std::cout << "Key:value count mismatch, result " << result.size() << ", expected " << expected.size() << std::endl;
+    std::cout << "Expected: ";
+    serializeJson(expected, std::cout);
+    std::cout << std::endl;
+    std::cout << "Got JSON: ";
+    serializeJson(result, std::cout);
     return false;
   }
 

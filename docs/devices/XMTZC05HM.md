@@ -1,12 +1,12 @@
-# Xiaomi MiScale V2
+# Xiaomi Mi Body Composition Scale 2
 
 |Model Id|[XMTZC05HM](https://github.com/theengs/decoder/blob/development/src/devices/XMTZC05HM_json.h)|
 |-|-|
 |Brand|Xiaomi|
-|Model|MiScale V2|
-|Short Description|Second version of the scale|
+|Model|Mi Body Scale 2|
+|Short Description|Second version of the Mi Body Composition Scale|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|3 AAA|
-|Exchanged data|unit, weight, impedance|
+|Power source|4 AAA|
+|Exchanged data|weighing_mode, unit, weight, impedance|
 |Encrypted|No|
