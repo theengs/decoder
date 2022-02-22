@@ -68,7 +68,10 @@ const char* expected_mfg[] = {
 
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":7842}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Miscale_v1\",\"model_id\":\"XMTZC04HM\",\"unit\":\"kg\",\"weight\":61.75}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale_2\",\"model_id\":\"XMTZC04HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":61.75}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"object\",\"unit\":\"kg\",\"weight\":9.55}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale_2\",\"model_id\":\"XMTZC04HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":61.75}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"object\",\"unit\":\"kg\",\"weight\":9.55}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":72.45,\"impedance\":503}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":72.45}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Body_Scale_2\",\"model_id\":\"XMTZC05HM\",\"weighing_mode\":\"object\",\"unit\":\"kg\",\"weight\":5.1}",
@@ -215,7 +218,10 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
-    {"Miscale", "0x181d", "servicedata", "223e30b207010708031f"},
+    {"Mi_Smart_Scale_2", "0x181d", "servicedata", "223e30e607020e10293a"},
+    {"Mi_Smart_Scale_2", "0x181d", "servicedata", "627607e607020e10293a"},
+    {"Mi_Smart_Scale_2", "0x181d", "servicedata", "a23e30e607020e10293a"},
+    {"Mi_Smart_Scale_2", "0x181d", "servicedata", "e27607e607020e10293a"},
     {"Mi_Body_Scale_2", "0x181b", "servicedata", "0226e607020e10293af7019a38"},
     {"Mi_Body_Scale_2", "0x181b", "servicedata", "0224e607020e10293a00009a38"},
     {"Mi_Body_Scale_2", "0x181b", "servicedata", "0624e607020e10293a0000fc03"},
@@ -235,8 +241,10 @@ const char* test_uuid[][4] = {
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::MIBAND,
-  TheengsDecoder::BLE_ID_NUM::XMTZC04HM_va,
-  TheengsDecoder::BLE_ID_NUM::XMTZC04HM_v2,
+  TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
+  TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
   TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
   TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
   TheengsDecoder::BLE_ID_NUM::XMTZC05HM,
