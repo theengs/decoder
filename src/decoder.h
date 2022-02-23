@@ -84,6 +84,7 @@ public:
     BM_V23,
     MS_CDP,
     GAEN,
+    SOLIS_6,
     BLE_ID_MAX
   };
 

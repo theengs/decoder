@@ -64,6 +64,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":-163.835,\"tempf\":-262.903,\"hum\":0,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":1.6,\"tx\":-40,\"mov\":0,\"seq\":0}",
     "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"tempc\":23.9,\"tempf\":75.02,\"dp\":10.8,\"hum\":43.5,\"volt\":2.56}",
     "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
+    "{\"brand\":\"Tenergy\",\"model\":\"SOLIS 6 probes\",\"model_id\":\"SOLIS_6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc3\":6552.6,\"tempf3\":11826.68,\"tempc4\":6552.6,\"tempf4\":11826.68,\"tempc5\":6552.6,\"tempf5\":11826.68,\"tempc6\":6552.6,\"tempf6\":11826.68}",
+
 };
 
 const char* expected_uuid[] = {
@@ -183,6 +185,7 @@ const char* test_mfgdata[][3] = {
     {"RuuviTag RAWv2", "RuuviTag minimum values", "9904058001000000008001800180010000000000CBB8334C884F"},
     {"BM_V23", "V23", "330117560e10177000ef01b3006c0100"},
     {"MS-CDP", "Windows 10 Desktop", "060001092002ac6d90ec0132b3204cd39c7ced3e48436ba15dc6314778"},
+    {"SOLIS_6", "iBBQ", "000000000cb2b71b5b18c800c800f6fff6fff6fff6ff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -210,6 +213,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV2,
   TheengsDecoder::BLE_ID_NUM::BM_V23,
   TheengsDecoder::BLE_ID_NUM::MS_CDP,
+  TheengsDecoder::BLE_ID_NUM::SOLIS_6,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
