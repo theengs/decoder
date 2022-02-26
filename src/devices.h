@@ -56,6 +56,7 @@
 #include "devices/iBeacon_json.h"
 #include "devices/iNode_json.h"
 #include "devices/BM_V23_json.h"
+#include "devices/SOLIS_6_json.h"
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
@@ -96,4 +97,5 @@ const char* _devices[][2] = {
     {_BM_V23_json, _BM_V23_json_props},
     {_MS_CDP_json, _MS_CDP_json_props},
     {_GAEN_json, _GAEN_json_props},
+    {_SOLIS_6_json, _SOLIS_6_json_props},
 };
