@@ -1,10 +1,10 @@
-# Xiaomi Mi Body Composition Scale 2
+# Xiaomi Mi Body Composition Scale
 
-|Model Id|[XMTZC05HM](https://github.com/theengs/decoder/blob/development/src/devices/XMTZC05HM_json.h)|
+|Model Id|[XMTZC02HM/XMTZC05HM](https://github.com/theengs/decoder/blob/development/src/devices/XMTZC05HM_json.h)|
 |-|-|
 |Brand|Xiaomi|
-|Model|Mi Body Scale 2|
-|Short Description|Second version of the Mi Body Composition Scale|
+|Model|Mi Body Composition Scale|
+|Short Description|First (MIBCS) and second (MIBFS) version of the Mi Body Composition Scale|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|4 AAA|
