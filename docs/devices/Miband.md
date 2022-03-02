@@ -1,6 +1,6 @@
 # Xiaomi Mi Band
 
-|Model Id|[LYWSDCGQ](https://github.com/theengs/decoder/blob/development/src/devices/LYWSDCGQ_json.h)|
+|Model Id|[MiBand](https://github.com/theengs/decoder/blob/development/src/devices/Miband_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|Mi Band|
