@@ -255,7 +255,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
         cond_str = condition[i].as<const char*>();
       }
 
-      if (i < condition.size() && cond_str != nullptr) {
+      unsigned int cond_size = condition.size();
+
+      if (i < cond_size && cond_str != nullptr) {
         if (!match && *cond_str == '|') {
           i++;
           continue;
@@ -263,6 +265,19 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
           i++;
           match = false;
           continue;
+        } else if (match) { // check for AND case before exit
+          while (i < cond_size && *cond_str != '&') {
+            if (!condition[++i].is<const char*>()) {
+              continue;
+            }
+            cond_str = condition[++i].as<const char*>();
+          }
+
+          if (i < condition.size() && cond_str != nullptr) {
+            i++;
+            match = false;
+            continue;
+          }
         }
       }
       break;
