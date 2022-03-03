@@ -24,6 +24,10 @@ module.exports = {
       docsBranch: 'development',
       lastUpdated: 'Last Updated',
       editLinks: true,
+      nav: [
+        { text: 'Gateway', link: 'https://theengs.github.io/gateway'},
+        { text: 'Decoder', link: 'https://theengs.github.io/decoder'}
+      ],
       sidebar: [
         ['/','0 - What is it for 🏠'],
         {
