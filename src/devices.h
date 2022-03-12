@@ -26,6 +26,7 @@
 #include "devices/CGP1W_json.h"
 #include "devices/CGPR1_json.h"
 #include "devices/GAEN_json.h"
+#include "devices/H5055_json.h"
 #include "devices/H5072_json.h"
 #include "devices/H5075_json.h"
 #include "devices/H5102_json.h"
@@ -83,6 +84,7 @@ const char* _devices[][2] = {
     {_ibeacon_json, _ibeacon_json_props},
     {_WS02_json, _WS02_json_props},
     {_WS08_json, _WS08_json_props},
+    {_H5055_json, _H5055_json_props},
     {_H5075_json, _H5075_json_props},
     {_H5072_json, _H5072_json_props},
     {_H5102_json, _H5102_json_props},

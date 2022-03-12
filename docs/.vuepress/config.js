@@ -38,6 +38,7 @@ module.exports = {
             'devices/CGD1',
             'devices/CGP1W',
             'devices/GAEN',
+            'devices/H5055',
             'devices/H5072',
             'devices/H5075',
             'devices/H5102',
