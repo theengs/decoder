@@ -70,6 +70,10 @@ const char* expected_mfg[] = {
 
 };
 
+const char* expected_uuid_mfgsvcdata[] = {
+    "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":9101,\"act_bpm\":125}",
+};
+
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale\",\"model_id\":\"XMTZC01HM/XMTZC04HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":61.75}",
@@ -227,6 +231,15 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::BM_V23,
   TheengsDecoder::BLE_ID_NUM::MS_CDP,
   TheengsDecoder::BLE_ID_NUM::SOLIS_6,
+};
+
+// uuid test input [test name] [uuid] [manufacturer data] [service data]
+const char* test_uuid_mfgsvcdata[][4] = {
+    {"MiBand", "fee0", "57010202017dffffffffffffffffffffffffff02de7b8490725c2", "8d230000"},
+};
+
+TheengsDecoder::BLE_ID_NUM test_uuid_mfgsvcdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::MIBAND,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
@@ -412,6 +425,55 @@ int main() {
       std::cout << std::endl;
     } else {
       std::cout << "FAILED! Error parsing: " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
+      return 1;
+    }
+  }
+
+  for (unsigned int i = 0; i < sizeof(test_uuid_mfgsvcdata) / sizeof(test_uuid_mfgsvcdata[0]); ++i) {
+    doc.clear();
+    std::cout << "trying " << test_uuid_mfgsvcdata[i][0] << " : " << test_uuid_mfgsvcdata[i][1] << std::endl;
+    doc["servicedatauuid"] = test_uuid_mfgsvcdata[i][1];
+    doc["manufacturerdata"] = test_uuid_mfgsvcdata[i][2];
+    doc["servicedata"] = test_uuid_mfgsvcdata[i][3];
+    bleObject = doc.as<JsonObject>();
+
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_uuid_mfgsvcdata_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
+      bleObject.remove("servicedatauuid");
+      bleObject.remove("manufacturerdata");
+      bleObject.remove("servicedata");
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
+
+      StaticJsonDocument<2048> doc_exp;
+      JsonObject expected = doc_exp.to<JsonObject>();
+      deserializeJson(doc_exp, expected_uuid_mfgsvcdata[i]);
+
+      if (!checkResult(bleObject, expected)) {
+        return 1;
+      }
+
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
+
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      if (error) {
+        std::cout << "deserializeJson() failed: " << error << std::endl;
+        return 1;
+      }
+      std::cout << "Properties: ";
+      serializeJson(doc_exp, std::cout);
+      std::cout << std::endl;
+    } else {
+      std::cout << "FAILED! Error parsing: " << test_uuid_mfgsvcdata[i][0] << " : " << test_uuid_mfgsvcdata[i][1] << " : " << test_uuid_mfgsvcdata[i][2] << " : " << test_uuid_mfgsvcdata[i][3] << std::endl;
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
       return 1;
     }
   }
