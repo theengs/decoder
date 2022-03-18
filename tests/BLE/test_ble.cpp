@@ -135,6 +135,8 @@ const char* expected_uuid[] = {
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"motion\":false,\"position\":25,\"calibrated\":true,\"lightlevel\":7,\"batt\":76}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"motion\":true,\"position\":25,\"calibrated\":false,\"lightlevel\":10,\"batt\":85}",
 };
 
 // Service data test input [test name] [data]
@@ -366,6 +368,8 @@ const char* test_uuid[][4] = {
     {"bParasite", "181a", "servicedata", "11c30b8658aca6666b85aabbccddeeff30d4"},
     {"bParasite", "181a", "servicedata", "20c30c1c0a00e6667fffaabbccddeeff"},
     {"bParasite", "181a", "servicedata", "21c30b8608dea6666b85aabbccddeeff30d4"},
+    {"Switchbot_Curtain", "0d00", "servicedata", "63c04c1970"},
+    {"Switchbot_Curtain", "0d00", "servicedata", "63805599a0"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -405,6 +409,8 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::BPARASITE,
   TheengsDecoder::BLE_ID_NUM::BPARASITE,
   TheengsDecoder::BLE_ID_NUM::BPARASITE,
+  TheengsDecoder::BLE_ID_NUM::SBCU,
+  TheengsDecoder::BLE_ID_NUM::SBCU,
 };
 
 template <typename T>
