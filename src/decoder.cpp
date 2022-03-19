@@ -441,6 +441,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             success = i_main;
             DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
           } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
+            if (prop.containsKey("is_bool") && !decoder[1].is<std::string>()) {
+              decoder[1] = (bool)decoder[1] ;
+            }
             jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
             success = i_main;
           } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
