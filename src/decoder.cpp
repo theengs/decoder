@@ -300,14 +300,27 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
         bool cond_met = prop_condition.isNull();
 
         for (int i = 0; i < cond_size; i += 4) {
-          if (svc_data &&
-              strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
-              svc_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
-            cond_met = true;
-          } else if (mfg_data &&
-                     strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
-                     mfg_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
-            cond_met = true;
+          if (strstr((const char*)prop_condition[i + 2], "!") != nullptr) {
+            if (svc_data &&
+                strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
+                svc_data[prop_condition[i + 1].as<int>()] != *prop_condition[i + 3].as<const char*>()) {
+              cond_met = true;
+            } else if (mfg_data &&
+                      strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
+                      mfg_data[prop_condition[i + 1].as<int>()] != *prop_condition[i + 3].as<const char*>()) {
+              cond_met = true;
+            }
+            i++;
+          } else {
+            if (svc_data &&
+                strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
+                svc_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
+              cond_met = true;
+            } else if (mfg_data &&
+                      strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
+                      mfg_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
+              cond_met = true;
+            }
           }
 
           if (!cond_met && cond_size > (i + 3) && *prop_condition[i + 3].as<const char*>() == '|') {

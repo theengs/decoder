@@ -82,6 +82,22 @@ Here we have a single property that defines a value that we want to decode. The 
 The second parameter is the index of the data source to look for the value. The third parameter is the value to test for.
 If the condition is met the data will be decoded and added to the JsonObject.
 
+Property conditions also allow for a NOT comparison, as in
+```
+ "properties":{
+      "tempc":{
+         "condition":["manufacturerdata", 24, "!", "ffff"],
+         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true, false],
+         "post_proc":["/", 10]
+      },
+```
+
+where then the fourth parameter is the value to test for.
+
+::: warning Note
+The NOT comparison is case sensitive! Therefor any NOT comparisons should be defined in lower case, as this is the format in which devices' "servicedata" and "manufacturerdata" are being reported.
+:::
+
 `decoder` is a JSON array that specifies the decoder function and parameters to decode the value.
 The first parameter is the name of the function to call, The available functions are:
 - "value_from_hex_data"  - converts the hex string value into an `integer` or `double` type.

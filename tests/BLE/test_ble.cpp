@@ -61,7 +61,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":5304,\"energy\":18.8804,\"batt\":80}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc\":22,\"tempf\":71.6,\"tempc2\":21,\"tempf2\":69.8}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-6XS\",\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc3\":6552.6,\"tempf3\":11826.68,\"tempc4\":21,\"tempf4\":69.8,\"tempc5\":6552.6,\"tempf5\":11826.68,\"tempc6\":6552.6,\"tempf6\":11826.68}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-6XS\",\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":20.5,\"tempc\":26.3,\"tempf\":79.34,\"pres\":1027.66,\"accx\":-1,\"accy\":-1.726,\"accz\":0.714,\"volt\":2.899}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":127.5,\"tempc\":127.99,\"tempf\":262.382,\"pres\":1155.35,\"accx\":32.767,\"accy\":32.767,\"accz\":32.767,\"volt\":65.535}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":0,\"tempc\":-127.99,\"tempf\":-198.382,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":0}",
@@ -70,7 +70,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":-163.835,\"tempf\":-262.903,\"hum\":0,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":1.6,\"tx\":-40,\"mov\":0,\"seq\":0}",
     "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"tempc\":23.9,\"tempf\":75.02,\"dp\":10.8,\"hum\":43.5,\"volt\":2.56}",
     "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
-    "{\"brand\":\"Tenergy\",\"model\":\"SOLIS 6 probes\",\"model_id\":\"SOLIS_6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc3\":6552.6,\"tempf3\":11826.68,\"tempc4\":6552.6,\"tempf4\":11826.68,\"tempc5\":6552.6,\"tempf5\":11826.68,\"tempc6\":6552.6,\"tempf6\":11826.68}",
+    "{\"brand\":\"Tenergy\",\"model\":\"SOLIS 6 Probes\",\"model_id\":\"SOLIS_6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68}",
 
 };
 
@@ -201,9 +201,9 @@ const char* test_mfgdata[][3] = {
     {"Inkbird TH2", "tps", "76fb03150110805908"},
     {"iNode", "test1", "90826300f0cf0000c409a20080"},
     {"iNode", "test2", "9082dd0061b80000c409a00080"},
-    {"IBT-2X", "iBBQ", "0000FC45C30C458EE600E600"},
+    {"IBT-2X", "iBBQ", "0000fc45c30c458ee600e600"},
     {"IBT-2X", "iBBQ", "00000000fc45c30d38a8dc00d200"},
-    {"IBT-6XS", "iBBQ", "00003403DE2745CDD200C800F6FFD200F6FFF6FF"},
+    {"IBT-6XS", "iBBQ", "00003403de2745cdd200c800f6ffd200f6fff6ff"},
     {"RuuviTag RAWv1", "RuuviTag", "990403291A1ECE1EFC18F94202CA0B53"},
     {"RuuviTag RAWv1", "RuuviTag maximum values", "990403FF7F63FFFF7FFF7FFF7FFFFFFF"},
     {"RuuviTag RAWv1", "RuuviTag minimum values", "99040300FF6300008001800180010000"},
