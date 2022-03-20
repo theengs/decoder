@@ -301,24 +301,26 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
         for (int i = 0; i < cond_size; i += 4) {
           if (strstr((const char*)prop_condition[i + 2], "!") != nullptr) {
+            size_t condition_len = strlen(prop_condition[i + 3].as<const char*>());
             if (svc_data &&
                 strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
-                svc_data[prop_condition[i + 1].as<int>()] != *prop_condition[i + 3].as<const char*>()) {
+                (strncmp(&svc_data[prop_condition[i + 1].as<int>()], prop_condition[i + 3], condition_len) != 0)) {
               cond_met = true;
             } else if (mfg_data &&
                       strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
-                      mfg_data[prop_condition[i + 1].as<int>()] != *prop_condition[i + 3].as<const char*>()) {
+                      (strncmp(&mfg_data[prop_condition[i + 1].as<int>()], prop_condition[i + 3], condition_len) != 0)) {
               cond_met = true;
             }
             i++;
           } else {
+            size_t condition_len = strlen(prop_condition[i + 2].as<const char*>());
             if (svc_data &&
                 strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
-                svc_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
+                (strncmp(&svc_data[prop_condition[i + 1].as<int>()], prop_condition[i + 2], condition_len) == 0)) {
               cond_met = true;
             } else if (mfg_data &&
                       strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
-                      mfg_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
+                      (strncmp(&mfg_data[prop_condition[i + 1].as<int>()], prop_condition[i + 2], condition_len) == 0)) {
               cond_met = true;
             }
           }
