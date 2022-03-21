@@ -62,6 +62,7 @@ module.exports = {
             'devices/RuuviTag_RAWv1',
             'devices/RuuviTag_RAWv2',
             'devices/SBCU',
+            'devices/SBMS',
             'devices/SBMT',
             'devices/SBS1',
             'devices/TPMS',

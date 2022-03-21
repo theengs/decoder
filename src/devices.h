@@ -51,6 +51,7 @@
 #include "devices/RuuviTag_RAWv1_json.h"
 #include "devices/RuuviTag_RAWv2_json.h"
 #include "devices/SBCU_json.h"
+#include "devices/SBMS_json.h"
 #include "devices/SBMT_json.h"
 #include "devices/SBS1_json.h"
 #include "devices/TPMS_json.h"
@@ -100,6 +101,7 @@ const char* _devices[][2] = {
     {_RuuviTag_RAWv1_json, _RuuviTag_RAWv1_json_props},
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},
     {_SBCU_json, _SBCU_json_props},
+    {_SBMS_json, _SBMS_json_props},
     {_SBMT_json, _SBMT_json_props},
     {_SBS1_json, _SBS1_json_props},
     {_BM_V23_json, _BM_V23_json_props},

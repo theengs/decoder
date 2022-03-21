@@ -141,6 +141,8 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"fer\":0}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"movement\":false,\"led\":false,\"sensingdistance\":\"middle\",\"lightlevel\":\"dark\",\"batt\":55}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"movement\":true,\"led\":true,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":85}",
 };
 
 // Service data test input [test name] [data]
@@ -373,6 +375,8 @@ const char* test_uuid[][4] = {
     {"Mi flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
     {"Mi flora", "fe95", "servicedata", "712098000863b6658d7cc40d0910020000"},
     {"VegTrug flora", "fe95", "servicedata", "7120bc030163b6658d7cc40d0410024001"},
+    {"Switchbot_MotionSensor", "0d00", "servicedata", "73b037000045"},
+    {"Switchbot_MotionSensor", "0d00", "servicedata", "7340d50000f2"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -423,6 +427,8 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
   TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
   TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::SBMS,
+  TheengsDecoder::BLE_ID_NUM::SBMS,
 };
 
 template <typename T>

@@ -81,6 +81,7 @@ public:
     RUUVITAG_RAWV1,
     RUUVITAG_RAWV2,
     SBCU,
+    SBMS,
     SBMT,
     SBS1,
     BM_V23,
@@ -106,7 +107,7 @@ private:
                                const char* dev_name, const char* svc_uuid);
   std::string sanitizeJsonKey(const char* key_in);
 
-  size_t m_docMax = 12288;
+  size_t m_docMax = 11000;
   size_t m_minSvcDataLen = 20;
   size_t m_minMfgDataLen = 16;
 };
