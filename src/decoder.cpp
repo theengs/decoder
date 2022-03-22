@@ -149,15 +149,33 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
   return -1;
 }
 
-bool TheengsDecoder::checkPropCondition(const JsonObject& prop,
+bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
                                         const char* svc_data,
                                         const char* mfg_data) {
-  JsonArray prop_condition = prop["condition"];
+  //JsonArray prop_condition = prop["condition"];
   int cond_size = prop_condition.size();
   bool cond_met = prop_condition.isNull();
 
   if (!cond_met) {
     for (int i = 0; i < cond_size; i += 4) {
+      if (prop_condition[i].is<JsonArray>()) {
+        DEBUG_PRINT("found nested array\n");
+        cond_met = checkPropCondition(prop_condition[i], svc_data, mfg_data);
+
+        if (++i < cond_size) {
+          if (!cond_met && *prop_condition[i].as<const char*>() == '|') {
+            i++;
+          } else if (cond_met && *prop_condition[i].as<const char*>() == '&') {
+            cond_met = false;
+            i++;
+          } else {
+            break;
+          }
+        } else {
+          break;
+        }
+      }
+
       bool inverse = false;
       if (*(const char*)prop_condition[i + 2] == '!') {
         inverse = true;
@@ -342,7 +360,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       /* Loop through all the devices properties and extract the values */
       for (JsonPair kv : properties) {
         JsonObject prop = kv.value().as<JsonObject>();
-        bool cond_met = checkPropCondition(prop, svc_data, mfg_data);
+        bool cond_met = checkPropCondition(prop["condition"], svc_data, mfg_data);
 
         if (cond_met) {
           JsonArray decoder = prop["decoder"];
