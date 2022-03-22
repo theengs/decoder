@@ -152,7 +152,6 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
 bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
                                         const char* svc_data,
                                         const char* mfg_data) {
-  //JsonArray prop_condition = prop["condition"];
   int cond_size = prop_condition.size();
   bool cond_met = prop_condition.isNull();
 
@@ -164,23 +163,18 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
 
         if (++i < cond_size) {
           if (!cond_met && *prop_condition[i].as<const char*>() == '|') {
-            i++;
           } else if (cond_met && *prop_condition[i].as<const char*>() == '&') {
             cond_met = false;
-            i++;
           } else {
             break;
           }
+          i++;
         } else {
           break;
         }
       }
 
-      bool inverse = false;
-      if (*(const char*)prop_condition[i + 2] == '!') {
-        inverse = true;
-      }
-
+      bool inverse = *(const char*)prop_condition[i + 2] == '!';
       const char* prop_data_src = prop_condition[i];
       const char* data_src = nullptr;
 
@@ -198,13 +192,22 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
         } else if (inverse) {
           cond_met = true;
         }
+      } else {
+        DEBUG_PRINT("ERROR property condition data source invalid\n");
+        return false;
       }
 
-      if (!cond_met && cond_size > (i + 3) && *prop_condition[i + 3].as<const char*>() == '|') {
-        continue;
-      } else if (cond_met && cond_size > (i + 3) && *prop_condition[i + 3].as<const char*>() == '&') {
-        cond_met = false;
-        continue;
+      if (inverse) {
+        i++;
+      }
+
+      if (cond_size > (i + 3)) {
+        if (!cond_met && *prop_condition[i + 3].as<const char*>() == '|') {
+          continue;
+        } else if (cond_met && *prop_condition[i + 3].as<const char*>() == '&') {
+          cond_met = false;
+          continue;
+        }
       }
     }
   }
