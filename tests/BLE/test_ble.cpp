@@ -397,7 +397,7 @@ int main() {
 
       DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
       if (error) {
-        std::cout << "deserializeJson() failed: " << error << std::endl;
+        std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
         return 1;
       }
 
