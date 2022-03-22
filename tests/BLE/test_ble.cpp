@@ -412,7 +412,7 @@ int main() {
 
   for (unsigned int i = 0; i < sizeof(test_mfgdata) / sizeof(test_mfgdata[0]); ++i) {
     doc.clear();
-    std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << std::endl;
+    std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
     doc["name"] = test_mfgdata[i][1];
     doc["manufacturerdata"] = test_mfgdata[i][2];
     bleObject = doc.as<JsonObject>();
