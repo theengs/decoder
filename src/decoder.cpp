@@ -128,7 +128,7 @@ bool TheengsDecoder::data_index_is_valid(const char* str, size_t index, size_t l
 }
 
 int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
-                                         JsonArray& condition, int idx) {
+                                         const JsonArray& condition, int idx) {
   std::string op = condition[idx + 1].as<std::string>();
   if (!op.empty() && op.length() > 2) {
     return (data_len >= default_min) ? 0 : -1;
@@ -147,6 +147,140 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
   if (op == "<=" && data_len <= req_len) return 2;
 
   return -1;
+}
+
+bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
+                                      const char* svc_data,
+                                      const char* mfg_data,
+                                      const char* dev_name,
+                                      const char* svc_uuid) {
+  bool match = false;
+  size_t cond_size = condition.size();
+
+  for (size_t i = 0; i < cond_size;) {
+    if (condition[i].is<JsonArray>()) {
+      DEBUG_PRINT("found nested array\n");
+      match = checkDeviceMatch(condition[i], svc_data, mfg_data, dev_name, svc_uuid);
+
+      if (++i < cond_size) {
+        if (!match && *condition[i].as<const char*>() == '|') {
+        } else if (match && *condition[i].as<const char*>() == '&') {
+          match = false;
+        } else {
+          break;
+        }
+        i++;
+      } else {
+        break;
+      }
+    }
+
+    const char* cmp_str;
+    const char* cond_str = condition[i].as<const char*>();
+    int len_idx;
+    if (svc_data != nullptr && strstr(cond_str, SVC_DATA) != nullptr) {
+      len_idx = data_length_is_valid(strlen(svc_data), m_minSvcDataLen, condition, i);
+      if (len_idx >= 0) {
+        i += len_idx;
+        cmp_str = svc_data;
+        match = true;
+      } else {
+        match = false;
+        break;
+      }
+    } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
+      len_idx = data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, i);
+      if (len_idx >= 0) {
+        i += len_idx;
+        cmp_str = mfg_data;
+        match = true;
+      } else {
+        match = false;
+        break;
+      }
+    } else if (dev_name != nullptr && strstr(cond_str, "name") != nullptr) {
+      cmp_str = dev_name;
+    } else if (svc_uuid != nullptr && strstr(cond_str, "uuid") != nullptr) {
+      cmp_str = svc_uuid;
+    } else {
+      break;
+    }
+
+    cond_str = condition[i + 1].as<const char*>();
+    if (cond_str) {
+      if (cmp_str == svc_uuid && !strncmp(cmp_str, "0x", 2)) {
+        cmp_str += 2;
+      }
+
+      if (strstr(cond_str, "contain") != nullptr) {
+        if (strstr(cmp_str, condition[i + 2].as<const char*>()) != nullptr) {
+          match = true;
+        } else {
+          match = false;
+        }
+        i += 3;
+      } else if (strstr(cond_str, "index") != nullptr) {
+        size_t cond_index = condition[i + 2].as<size_t>();
+        size_t cond_len = strlen(condition[i + 3].as<const char*>());
+
+        if (!data_index_is_valid(cmp_str, cond_index, cond_len)) {
+          DEBUG_PRINT("Invalid data %s; skipping\n", cmp_str);
+          match = false;
+          break;
+        }
+
+        bool inverse = false;
+        if (*condition[i + 3].as<const char*>() == '!') {
+          inverse = true;
+        }
+
+        DEBUG_PRINT("comparing value: %s to %s at index %u\n",
+                    &cmp_str[cond_index],
+                    condition[i + 3 + inverse].as<const char*>(),
+                    condition[i + 2].as<size_t>());
+
+        if (strncmp(&cmp_str[cond_index],
+                    condition[i + 3 + inverse].as<const char*>(),
+                    cond_len) == 0) {
+          match = inverse ? false : true;
+        } else {
+          match = inverse ? true : false;
+        }
+
+        i += 4 + inverse;
+      }
+
+      cond_str = condition[i].as<const char*>();
+    }
+
+    size_t cond_size = condition.size();
+
+    if (i < cond_size && cond_str != nullptr) {
+      if (!match && *cond_str == '|') {
+        i++;
+        continue;
+      } else if (match && *cond_str == '&') {
+        i++;
+        match = false;
+        continue;
+      } else if (match) { // check for AND case before exit
+        while (i < cond_size && *cond_str != '&') {
+          if (!condition[++i].is<const char*>()) {
+            continue;
+          }
+          cond_str = condition[++i].as<const char*>();
+        }
+
+        if (i < cond_size && cond_str != nullptr) {
+          i++;
+          match = false;
+          continue;
+        }
+      }
+    }
+    break;
+  }
+  return match;
 }
 
 bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
@@ -189,17 +323,15 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
         if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
                      prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
           cond_met = inverse ? false : true;
-        } else if (inverse) {
-          cond_met = true;
+        } else {
+          cond_met = inverse ? true : false;
         }
       } else {
         DEBUG_PRINT("ERROR property condition data source invalid\n");
         return false;
       }
 
-      if (inverse) {
-        i++;
-      }
+      i += inverse;
 
       if (cond_size > (i + 3)) {
         if (!cond_met && *prop_condition[i + 3].as<const char*>() == '|') {
@@ -254,108 +386,8 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       peakDocSize = doc.memoryUsage();
 #endif
 
-    JsonArray condition = doc["condition"];
-    bool match = false;
-    size_t min_len = m_minMfgDataLen;
-
-    for (unsigned int i = 0; i < condition.size();) {
-      const char* cmp_str;
-      const char* cond_str = condition[i].as<const char*>();
-      int len_idx;
-      if (svc_data != nullptr && strstr(cond_str, SVC_DATA) != nullptr) {
-        len_idx = data_length_is_valid(strlen(svc_data), m_minSvcDataLen, condition, i);
-        if (len_idx >= 0) {
-          i += len_idx;
-          cmp_str = svc_data;
-          match = true;
-        } else {
-          match = false;
-          break;
-        }
-      } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
-        len_idx = data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, i);
-        if (len_idx >= 0) {
-          i += len_idx;
-          cmp_str = mfg_data;
-          match = true;
-        } else {
-          match = false;
-          break;
-        }
-      } else if (dev_name != nullptr && strstr(cond_str, "name") != nullptr) {
-        cmp_str = dev_name;
-      } else if (svc_uuid != nullptr && strstr(cond_str, "uuid") != nullptr) {
-        cmp_str = svc_uuid;
-      } else {
-        break;
-      }
-
-      cond_str = condition[i + 1].as<const char*>();
-      if (cond_str) {
-        if (cmp_str == svc_uuid && !strncmp(cmp_str, "0x", 2)) {
-          cmp_str += 2;
-        }
-
-        if (strstr(cond_str, "contain") != nullptr) {
-          if (strstr(cmp_str, condition[i + 2].as<const char*>()) != nullptr) {
-            match = true;
-          } else {
-            match = false;
-          }
-          i += 3;
-        } else if (strstr(cond_str, "index") != nullptr) {
-          size_t cond_index = condition[i + 2].as<size_t>();
-          size_t cond_len = strlen(condition[i + 3].as<const char*>());
-
-          if (!data_index_is_valid(cmp_str, cond_index, cond_len)) {
-            DEBUG_PRINT("Invalid data %s; skipping\n", cmp_str);
-            match = false;
-            break;
-          }
-          DEBUG_PRINT("comparing index: %s to %s at index %u\n",
-                      &cmp_str[condition[i + 2].as<unsigned int>()],
-                      condition[i + 3].as<const char*>(), condition[i + 2].as<unsigned int>());
-          if (strncmp(&cmp_str[cond_index], condition[i + 3].as<const char*>(), cond_len) == 0) {
-            match = true;
-          } else {
-            match = false;
-          }
-          i += 4;
-        }
-
-        cond_str = condition[i].as<const char*>();
-      }
-
-      unsigned int cond_size = condition.size();
-
-      if (i < cond_size && cond_str != nullptr) {
-        if (!match && *cond_str == '|') {
-          i++;
-          continue;
-        } else if (match && *cond_str == '&') {
-          i++;
-          match = false;
-          continue;
-        } else if (match) { // check for AND case before exit
-          while (i < cond_size && *cond_str != '&') {
-            if (!condition[++i].is<const char*>()) {
-              continue;
-            }
-            cond_str = condition[++i].as<const char*>();
-          }
-
-          if (i < condition.size() && cond_str != nullptr) {
-            i++;
-            match = false;
-            continue;
-          }
-        }
-      }
-      break;
-    }
-
     /* found a match, extract the data */
-    if (match) {
+    if (checkDeviceMatch(doc["condition"], svc_data, mfg_data, dev_name, svc_uuid)) {
       jsondata["brand"] = doc["brand"];
       jsondata["model"] = doc["model"];
       jsondata["model_id"] = doc["model_id"];
@@ -365,9 +397,8 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       /* Loop through all the devices properties and extract the values */
       for (JsonPair kv : properties) {
         JsonObject prop = kv.value().as<JsonObject>();
-        bool cond_met = checkPropCondition(prop["condition"], svc_data, mfg_data);
 
-        if (cond_met) {
+        if (checkPropCondition(prop["condition"], svc_data, mfg_data)) {
           JsonArray decoder = prop["decoder"];
           if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
             const char* src = svc_data;
