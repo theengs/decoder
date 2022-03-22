@@ -1,4 +1,4 @@
-const char* _H5055_json = "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"condition\":[\"manufacturerdata\",\">=\",41,\"index\",12,\"06\",\"&\",\"manufacturerdata\",\"index\",26,\"06\",\"&\",\"manufacturerdata\",\"index\",40,\"0\"],\"properties\":{\"tempc1\":{\"condition\":[[\"manufacturerdata\",10,\"0\",\"|\",\"manufacturerdata\",10,\"1\",\"|\",\"manufacturerdata\",10,\"2\",\"|\",\"manufacturerdata\",10,\"3\"],\"&\",\"manufacturerdata\",14,\"!\",\"ffff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,true,false]},\"tempc2\":{\"condition\":[[\"manufacturerdata\",10,\"0\",\"|\",\"manufacturerdata\",10,\"1\",\"|\",\"manufacturerdata\",10,\"2\",\"|\",\"manufacturerdata\",10,\"3\"],\"&\",\"manufacturerdata\",28,\"!\",\"ffff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false]},\"tempc3\":{\"condition\":[[\"manufacturerdata\",10,\"4\",\"|\",\"manufacturerdata\",10,\"5\",\"|\",\"manufacturerdata\",10,\"6\",\"|\",\"manufacturerdata\",10,\"7\"],\"&\",\"manufacturerdata\",14,\"!\",\"ffff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,true,false]},\"tempc4\":{\"condition\":[[\"manufacturerdata\",10,\"4\",\"|\",\"manufacturerdata\",10,\"5\",\"|\",\"manufacturerdata\",10,\"6\",\"|\",\"manufacturerdata\",10,\"7\"],\"&\",\"manufacturerdata\",28,\"!\",\"ffff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false]},\"tempc5\":{\"condition\":[[\"manufacturerdata\",10,\"8\",\"|\",\"manufacturerdata\",10,\"9\",\"|\",\"manufacturerdata\",10,\"a\",\"|\",\"manufacturerdata\",10,\"b\"],\"&\",\"manufacturerdata\",14,\"!\",\"ffff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,true,false]},\"tempc6\":{\"condition\":[[\"manufacturerdata\",10,\"8\",\"|\",\"manufacturerdata\",10,\"9\",\"|\",\"manufacturerdata\",10,\"a\",\"|\",\"manufacturerdata\",10,\"b\"],\"&\",\"manufacturerdata\",28,\"!\",\"ffff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,2,false]}}}";
+const char* _H5055_json = "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"condition\":[\"manufacturerdata\",\">=\",41,\"index\",12,\"06\",\"&\",\"manufacturerdata\",\"index\",26,\"06\",\"&\",\"manufacturerdata\",\"index\",40,\"0\"],\"properties\":{\"tempc1\":{\"condition\":[\"manufacturerdata\",14,\"!\",\"ffff\",\"&\",\"manufacturerdata\",10,\"0\",\"|\",\"manufacturerdata\",10,\"1\",\"|\",\"manufacturerdata\",10,\"2\",\"|\",\"manufacturerdata\",10,\"3\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,true,false]},\"tempc2\":{\"condition\":[\"manufacturerdata\",28,\"!\",\"ffff\",\"&\",\"manufacturerdata\",10,\"0\",\"|\",\"manufacturerdata\",10,\"1\",\"|\",\"manufacturerdata\",10,\"2\",\"|\",\"manufacturerdata\",10,\"3\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false]},\"tempc3\":{\"condition\":[\"manufacturerdata\",14,\"!\",\"ffff\",\"&\",\"manufacturerdata\",10,\"4\",\"|\",\"manufacturerdata\",10,\"5\",\"|\",\"manufacturerdata\",10,\"6\",\"|\",\"manufacturerdata\",10,\"7\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,true,false]},\"tempc4\":{\"condition\":[\"manufacturerdata\",28,\"!\",\"ffff\",\"&\",\"manufacturerdata\",10,\"4\",\"|\",\"manufacturerdata\",10,\"5\",\"|\",\"manufacturerdata\",10,\"6\",\"|\",\"manufacturerdata\",10,\"7\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false]},\"tempc5\":{\"condition\":[\"manufacturerdata\",14,\"!\",\"ffff\",\"&\",\"manufacturerdata\",10,\"8\",\"|\",\"manufacturerdata\",10,\"9\",\"|\",\"manufacturerdata\",10,\"a\",\"|\",\"manufacturerdata\",10,\"b\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,true,false]},\"tempc6\":{\"condition\":[\"manufacturerdata\",28,\"!\",\"ffff\",\"&\",\"manufacturerdata\",10,\"8\",\"|\",\"manufacturerdata\",10,\"9\",\"|\",\"manufacturerdata\",10,\"a\",\"|\",\"manufacturerdata\",10,\"b\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,2,false]}}}";
 /*R""""(
 {
    "brand":"Govee",
@@ -7,27 +7,27 @@ const char* _H5055_json = "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermo
    "condition":["manufacturerdata", ">=", 41, "index", 12, "06", "&", "manufacturerdata", "index", 26, "06", "&", "manufacturerdata", "index", 40, "0"],
    "properties":{
       "tempc1":{
-        "condition":[["manufacturerdata", 10, "0", "|", "manufacturerdata", 10, "1", "|", "manufacturerdata", 10, "2", "|", "manufacturerdata", 10, "3"], "&", "manufacturerdata", 14, "!", "ffff"],
+        "condition":["manufacturerdata", 14, "!", "ffff", "&", "manufacturerdata", 10, "0", "|", "manufacturerdata", 10, "1", "|", "manufacturerdata", 10, "2", "|", "manufacturerdata", 10, "3"],
         "decoder":["value_from_hex_data", "manufacturerdata", 14, 4, true, false]
       },
       "tempc2":{
-        "condition":[["manufacturerdata", 10, "0", "|", "manufacturerdata", 10, "1", "|", "manufacturerdata", 10, "2", "|", "manufacturerdata", 10, "3"], "&", "manufacturerdata", 28, "!", "ffff"],
+        "condition":["manufacturerdata", 28, "!", "ffff", "&", "manufacturerdata", 10, "0", "|", "manufacturerdata", 10, "1", "|", "manufacturerdata", 10, "2", "|", "manufacturerdata", 10, "3"],
         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true, false]
       },
       "tempc3":{
-        "condition":[["manufacturerdata", 10, "4", "|", "manufacturerdata", 10, "5", "|", "manufacturerdata", 10, "6", "|", "manufacturerdata", 10, "7"], "&", "manufacturerdata", 14, "!", "ffff"],
+        "condition":["manufacturerdata", 14, "!", "ffff", "&", "manufacturerdata", 10, "4", "|", "manufacturerdata", 10, "5", "|", "manufacturerdata", 10, "6", "|", "manufacturerdata", 10, "7"],
         "decoder":["value_from_hex_data", "manufacturerdata", 14, 4, true, false]
       },
       "tempc4":{
-        "condition":[["manufacturerdata", 10, "4", "|", "manufacturerdata", 10, "5", "|", "manufacturerdata", 10, "6", "|", "manufacturerdata", 10, "7"], "&", "manufacturerdata", 28, "!", "ffff"],
+        "condition":["manufacturerdata", 28, "!", "ffff", "&", "manufacturerdata", 10, "4", "|", "manufacturerdata", 10, "5", "|", "manufacturerdata", 10, "6", "|", "manufacturerdata", 10, "7"],
         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true, false]
       },
       "tempc5":{
-        "condition":[["manufacturerdata", 10, "8", "|", "manufacturerdata", 10, "9", "|", "manufacturerdata", 10, "a", "|", "manufacturerdata", 10, "b"], "&", "manufacturerdata", 14, "!", "ffff"],
+        "condition":["manufacturerdata", 14, "!", "ffff", "&", "manufacturerdata", 10, "8", "|", "manufacturerdata", 10, "9", "|", "manufacturerdata", 10, "a", "|", "manufacturerdata", 10, "b"],
         "decoder":["value_from_hex_data", "manufacturerdata", 14, 4, true, false]
       },
       "tempc6":{
-        "condition":[["manufacturerdata", 10, "8", "|", "manufacturerdata", 10, "9", "|", "manufacturerdata", 10, "a", "|", "manufacturerdata", 10, "b"], "&", "manufacturerdata", 28, "!", "ffff"],
+        "condition":["manufacturerdata", 28, "!", "ffff", "&", "manufacturerdata", 10, "8", "|", "manufacturerdata", 10, "9", "|", "manufacturerdata", 10, "a", "|", "manufacturerdata", 10, "b"],
         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true, false]
       },
       "batt":{
