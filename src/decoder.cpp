@@ -207,6 +207,8 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
         } else if (cond_met && *prop_condition[i + 3].as<const char*>() == '&') {
           cond_met = false;
           continue;
+        } else {
+          break;
         }
       }
     }
