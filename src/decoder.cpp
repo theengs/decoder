@@ -39,6 +39,9 @@
 static size_t peakDocSize = 0;
 #endif
 
+#define SVC_DATA "servicedata"
+#define MFG_DATA "manufacturerdata"
+
 typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
                                                    int offset, int data_length,
                                                    bool reverse, bool canBeNegative);
@@ -146,6 +149,74 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
   return -1;
 }
 
+bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
+                                        const char* svc_data,
+                                        const char* mfg_data) {
+  int cond_size = prop_condition.size();
+  bool cond_met = prop_condition.isNull();
+
+  if (!cond_met) {
+    for (int i = 0; i < cond_size; i += 4) {
+      if (prop_condition[i].is<JsonArray>()) {
+        DEBUG_PRINT("found nested array\n");
+        cond_met = checkPropCondition(prop_condition[i], svc_data, mfg_data);
+
+        if (++i < cond_size) {
+          if (!cond_met && *prop_condition[i].as<const char*>() == '|') {
+          } else if (cond_met && *prop_condition[i].as<const char*>() == '&') {
+            cond_met = false;
+          } else {
+            break;
+          }
+          i++;
+        } else {
+          break;
+        }
+      }
+
+      bool inverse = *(const char*)prop_condition[i + 2] == '!';
+      const char* prop_data_src = prop_condition[i];
+      const char* data_src = nullptr;
+
+      if (svc_data && strstr(prop_data_src, SVC_DATA) != nullptr) {
+        data_src = svc_data;
+      } else if (mfg_data && strstr(prop_data_src, MFG_DATA) != nullptr) {
+        data_src = mfg_data;
+      }
+
+      if (data_src) {
+        size_t cond_len = strlen(prop_condition[i + 2 + inverse].as<const char*>());
+        if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
+                     prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
+          cond_met = inverse ? false : true;
+        } else if (inverse) {
+          cond_met = true;
+        }
+      } else {
+        DEBUG_PRINT("ERROR property condition data source invalid\n");
+        return false;
+      }
+
+      if (inverse) {
+        i++;
+      }
+
+      if (cond_size > (i + 3)) {
+        if (!cond_met && *prop_condition[i + 3].as<const char*>() == '|') {
+          continue;
+        } else if (cond_met && *prop_condition[i + 3].as<const char*>() == '&') {
+          cond_met = false;
+          continue;
+        } else {
+          break;
+        }
+      }
+    }
+  }
+
+  return cond_met;
+}
+
 /*
  * @breif Compares the input json values to the known devices and
  * decodes the data if a match is found.
@@ -156,8 +227,8 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #else
   DynamicJsonDocument doc(m_docMax);
 #endif
-  const char* svc_data = jsondata["servicedata"].as<const char*>();
-  const char* mfg_data = jsondata["manufacturerdata"].as<const char*>();
+  const char* svc_data = jsondata[SVC_DATA].as<const char*>();
+  const char* mfg_data = jsondata[MFG_DATA].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
   const char* svc_uuid = jsondata["servicedatauuid"].as<const char*>();
   int success = -1;
@@ -191,7 +262,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       const char* cmp_str;
       const char* cond_str = condition[i].as<const char*>();
       int len_idx;
-      if (svc_data != nullptr && strstr(cond_str, "servicedata") != nullptr) {
+      if (svc_data != nullptr && strstr(cond_str, SVC_DATA) != nullptr) {
         len_idx = data_length_is_valid(strlen(svc_data), m_minSvcDataLen, condition, i);
         if (len_idx >= 0) {
           i += len_idx;
@@ -201,7 +272,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
           match = false;
           break;
         }
-      } else if (mfg_data != nullptr && strstr(cond_str, "manufacturerdata") != nullptr) {
+      } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
         len_idx = data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, i);
         if (len_idx >= 0) {
           i += len_idx;
@@ -294,48 +365,13 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       /* Loop through all the devices properties and extract the values */
       for (JsonPair kv : properties) {
         JsonObject prop = kv.value().as<JsonObject>();
-        JsonArray prop_condition = prop["condition"];
-
-        int cond_size = prop_condition.size();
-        bool cond_met = prop_condition.isNull();
-
-        for (int i = 0; i < cond_size; i += 4) {
-          if (strstr((const char*)prop_condition[i + 2], "!") != nullptr) {
-            if (svc_data &&
-                strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
-                svc_data[prop_condition[i + 1].as<int>()] != *prop_condition[i + 3].as<const char*>()) {
-              cond_met = true;
-            } else if (mfg_data &&
-                      strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
-                      mfg_data[prop_condition[i + 1].as<int>()] != *prop_condition[i + 3].as<const char*>()) {
-              cond_met = true;
-            }
-            i++;
-          } else {
-            if (svc_data &&
-                strstr((const char*)prop_condition[i], "servicedata") != nullptr &&
-                svc_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
-              cond_met = true;
-            } else if (mfg_data &&
-                      strstr((const char*)prop_condition[i], "manufacturerdata") != nullptr &&
-                      mfg_data[prop_condition[i + 1].as<int>()] == *prop_condition[i + 2].as<const char*>()) {
-              cond_met = true;
-            }
-          }
-
-          if (!cond_met && cond_size > (i + 3) && *prop_condition[i + 3].as<const char*>() == '|') {
-            continue;
-          } else if (cond_met && cond_size > (i + 3) && *prop_condition[i + 3].as<const char*>() == '&') {
-            cond_met = false;
-            continue;
-          }
-        }
+        bool cond_met = checkPropCondition(prop["condition"], svc_data, mfg_data);
 
         if (cond_met) {
           JsonArray decoder = prop["decoder"];
           if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], "manufacturerdata")) {
+            if (strstr((const char*)decoder[1], MFG_DATA)) {
               src = mfg_data;
             }
 
@@ -455,13 +491,13 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
           } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
             if (prop.containsKey("is_bool") && !decoder[1].is<std::string>()) {
-              decoder[1] = (bool)decoder[1] ;
+              decoder[1] = (bool)decoder[1];
             }
             jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
             success = i_main;
           } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], "manufacturerdata")) {
+            if (strstr((const char*)decoder[1], MFG_DATA)) {
               src = mfg_data;
             }
 
