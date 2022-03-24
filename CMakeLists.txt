@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.3)
 
-project(decoder VERSION 0.1.0)
+project(decoder VERSION 0.2.2)
 
 add_library(decoder 
             src/decoder.cpp

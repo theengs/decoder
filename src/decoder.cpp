@@ -1,10 +1,10 @@
-/*  
-  TheengsDecoder  - Decode things and devices
+/*
+    TheengsDecoder - Decode things and devices
 
     Copyright: (c)Florian ROBERT
-  
+
     This file is part of TheengsDecoder.
-    
+
     TheengsDecoder is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -47,7 +47,7 @@ typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
                                                    bool reverse, bool canBeNegative);
 
 /*
- * @breif revert the string data 2 by 2 to get the correct endianness
+ * @brief Revert the string data 2 by 2 to get the correct endianness
  */
 void TheengsDecoder::reverse_hex_data(const char* in, char* out, int l) {
   int i = l, j = 0;
@@ -78,7 +78,7 @@ double TheengsDecoder::bf_value_from_hex_string(const char* data_str,
 }
 
 /*
- * @breif Extracts the data value from the data string
+ * @brief Extracts the data value from the data string
  */
 double TheengsDecoder::value_from_hex_string(const char* data_str,
                                              int offset, int data_length,
@@ -218,7 +218,7 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
 }
 
 /*
- * @breif Compares the input json values to the known devices and
+ * @brief Compares the input json values to the known devices and
  * decodes the data if a match is found.
  */
 int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
