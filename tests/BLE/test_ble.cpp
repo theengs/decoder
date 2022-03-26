@@ -61,7 +61,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc2\":65,\"tempf2\":149}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc\":22,\"tempf\":71.6,\"tempc2\":21,\"tempf2\":69.8}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc2\":58,\"tempf2\":136.4}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-6XS\",\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
+    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":20.5,\"tempc\":26.3,\"tempf\":79.34,\"pres\":1027.66,\"accx\":-1,\"accy\":-1.726,\"accz\":0.714,\"volt\":2.899}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":127.5,\"tempc\":127.99,\"tempf\":262.382,\"pres\":1155.35,\"accx\":32.767,\"accy\":32.767,\"accz\":32.767,\"volt\":65.535}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"hum\":0,\"tempc\":-127.99,\"tempf\":-198.382,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":0}",
@@ -70,7 +70,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":-163.835,\"tempf\":-262.903,\"hum\":0,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":1.6,\"tx\":-40,\"mov\":0,\"seq\":0}",
     "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"tempc\":23.9,\"tempf\":75.02,\"dp\":10.8,\"hum\":43.5,\"volt\":2.56}",
     "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
-    "{\"brand\":\"Tenergy\",\"model\":\"SOLIS 6 Probes\",\"model_id\":\"SOLIS_6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68}",
+    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
 
 };
 
@@ -198,12 +198,12 @@ const char* test_mfgdata[][3] = {
     {"Inkbird TH2", "tps", "76fb03150110805908"},
     {"iNode", "test1", "90826300f0cf0000c409a20080"},
     {"iNode", "test2", "9082dd0061b80000c409a00080"},
-    {"IBT-2X", "iBBQ", "0000fc45c30c458ee600e600"},
-    {"IBT-2X", "iBBQ", "0000fc45c30c458e18014001"},
-    {"IBT-2X", "iBBQ", "0000fc45c30c458ef6ff8a02"},
+    {"IBT-2X", "iBBQ", "00000000fc45c30c458ee600e600"},
+    {"IBT-2X", "iBBQ", "00000000fc45c30c458e18014001"},
+    {"IBT-2X", "iBBQ", "00000000fc45c30c458ef6ff8a02"},
     {"IBT-2X", "iBBQ", "00000000fc45c30d38a8dc00d200"},
     {"IBT-2X", "iBBQ", "00000000fc45c30d38a8f6ff4402"},
-    {"IBT-6XS", "iBBQ", "00003403de2745cdd200c800f6ffd200f6fff6ff"},
+    {"IBT-6XS", "iBBQ", "000000003403de2745cdd200c800f6ffd200f6fff6ff"},
     {"RuuviTag RAWv1", "RuuviTag", "990403291A1ECE1EFC18F94202CA0B53"},
     {"RuuviTag RAWv1", "RuuviTag maximum values", "990403FF7F63FFFF7FFF7FFF7FFFFFFF"},
     {"RuuviTag RAWv1", "RuuviTag minimum values", "99040300FF6300008001800180010000"},
@@ -212,7 +212,7 @@ const char* test_mfgdata[][3] = {
     {"RuuviTag RAWv2", "RuuviTag minimum values", "9904058001000000008001800180010000000000CBB8334C884F"},
     {"BM_V23", "V23", "330117560e10177000ef01b3006c0100"},
     {"MS-CDP", "Windows 10 Desktop", "060001092002ac6d90ec0132b3204cd39c7ced3e48436ba15dc6314778"},
-    {"SOLIS_6", "iBBQ", "000000000cb2b71b5b18c800c800f6fff6fff6fff6ff"},
+    {"SOLIS_6", "iBBQ", "000000000cb2b71b5b18c800c800f6ffd200f6fff6ff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -236,7 +236,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::IBT_2X,
   TheengsDecoder::BLE_ID_NUM::IBT_2X,
   TheengsDecoder::BLE_ID_NUM::IBT_2X,
-  TheengsDecoder::BLE_ID_NUM::IBT6XS,
+  TheengsDecoder::BLE_ID_NUM::IBT6XS_SOLIS,
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV1,
@@ -245,7 +245,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::RUUVITAG_RAWV2,
   TheengsDecoder::BLE_ID_NUM::BM_V23,
   TheengsDecoder::BLE_ID_NUM::MS_CDP,
-  TheengsDecoder::BLE_ID_NUM::SOLIS_6,
+  TheengsDecoder::BLE_ID_NUM::IBT6XS_SOLIS,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
