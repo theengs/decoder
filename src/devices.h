@@ -35,7 +35,7 @@
 #include "devices/IBS_TH2_json.h"
 #include "devices/IBT_2X_json.h"
 #include "devices/IBT_4XS_json.h"
-#include "devices/IBT_6XS_json.h"
+#include "devices/IBT_6XS_SOLIS6_json.h"
 #include "devices/JQJCY01YM_json.h"
 #include "devices/LYWSD02_json.h"
 #include "devices/LYWSD03MMC_ATC_json.h"
@@ -58,7 +58,6 @@
 #include "devices/iBeacon_json.h"
 #include "devices/iNode_json.h"
 #include "devices/BM_V23_json.h"
-#include "devices/SOLIS_6_json.h"
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
@@ -75,7 +74,7 @@ const char* _devices[][2] = {
     {_IBS_TH1_json, _IBS_TH1_json_props},
     {_IBS_TH2_json, _IBS_TH2_json_props},
     {_IBT_4XS_json, _IBT_4XS_json_props},
-    {_IBT_6XS_json, _IBT_6XS_json_props},
+    {_IBT_6XS_SOLIS6_json, _IBT_6XS_SOLIS6_json_props},
     {_Miband_json, _Miband_json_props},
     {_XMTZC04HM_json, _XMTZC04HM_json_props},
     {_XMTZC05HM_json, _XMTZC05HM_json_props},
@@ -101,5 +100,4 @@ const char* _devices[][2] = {
     {_BM_V23_json, _BM_V23_json_props},
     {_MS_CDP_json, _MS_CDP_json_props},
     {_GAEN_json, _GAEN_json_props},
-    {_SOLIS_6_json, _SOLIS_6_json_props},
 };

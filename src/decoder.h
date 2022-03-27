@@ -60,7 +60,7 @@ public:
     IBSTH1,
     IBSTH2,
     IBT4XS,
-    IBT6XS,
+    IBT6XS_SOLIS,
     MIBAND,
     XMTZC04HM,
     XMTZC05HM,
@@ -86,7 +86,6 @@ public:
     BM_V23,
     MS_CDP,
     GAEN,
-    SOLIS_6,
     BLE_ID_MAX
   };
 
