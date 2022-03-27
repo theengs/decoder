@@ -47,6 +47,10 @@ const char* expected_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"model_id\":\"IBEACON\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"volt\":2.6}",
     "{\"brand\":\"SensorBlue\",\"model\":\"WS02\",\"model_id\":\"WS02\",\"tempc\":31.3125,\"tempf\":88.3625,\"hum\":70.75,\"volt\":3.160}",
     "{\"brand\":\"SensorBlue\",\"model\":\"WS08\",\"model_id\":\"WS08\",\"tempc\":31.3125,\"tempf\":88.3625,\"hum\":70.75,\"volt\":3.160}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"tempc1\":23,\"tempf1\":73.4,\"tempc2\":115,\"tempf2\":239,\"batt\":70}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"tempc3\":86,\"tempf3\":186.8,\"tempc4\":145,\"tempf4\":293,\"batt\":65}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"tempc5\":92,\"tempf5\":197.6,\"tempc6\":55,\"tempf6\":131,\"batt\":97}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"tempc6\":84,\"tempf6\":183.2,\"batt\":83}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrometer\",\"model_id\":\"H5075\",\"tempc\":26.8,\"tempf\":80.24,\"hum\":52.6,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072\",\"tempc\":27.5,\"tempf\":81.5,\"hum\":53.1,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrometer\",\"model_id\":\"H5102\",\"tempc\":21.9,\"tempf\":71.42,\"hum\":40.6,\"batt\":100}",
@@ -189,6 +193,10 @@ const char* test_mfgdata[][3] = {
     {"iBeacon", "NRF51822", "4c000215fda50693a4e24fb1afcfc6eb07647825000100021a"},
     {"WS02", "ThermoBeacon", "100000001a110000f770580cf5016c0443090000"},
     {"WS08", "ThermoBeacon", "110000001a110000f770580cf5016c0443090000"},
+    {"H5055", "GVH5055", "cf040400461b061700ffff2c01067300ffff2c010000"},
+    {"H5055", "GVH5055", "cf040400417f065600ffff2c01069100ffff2c010"},
+    {"H5055", "GVH5055", "cf04040061bf065c00ffff2c01063700ffff2c010000"},
+    {"H5055", "GVH5055", "cf040400538f06ffffffff2c01065400ffff2c010"},
     {"H5075", "GVH5075_1234", "88ec000418ee6400"},
     {"H5072", "GVH5072_1234", "88ec0004344b6400"},
     {"H5102", "GVH5102_1234", "0100010103590e64"},
@@ -222,6 +230,10 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::IBEACON,
   TheengsDecoder::BLE_ID_NUM::WS02,
   TheengsDecoder::BLE_ID_NUM::WS08,
+  TheengsDecoder::BLE_ID_NUM::H5055,
+  TheengsDecoder::BLE_ID_NUM::H5055,
+  TheengsDecoder::BLE_ID_NUM::H5055,
+  TheengsDecoder::BLE_ID_NUM::H5055,
   TheengsDecoder::BLE_ID_NUM::H5075,
   TheengsDecoder::BLE_ID_NUM::H5072,
   TheengsDecoder::BLE_ID_NUM::H5102,
@@ -391,7 +403,7 @@ int main() {
 
       DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
       if (error) {
-        std::cout << "deserializeJson() failed: " << error << std::endl;
+        std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
         return 1;
       }
 
@@ -406,7 +418,7 @@ int main() {
 
   for (unsigned int i = 0; i < sizeof(test_mfgdata) / sizeof(test_mfgdata[0]); ++i) {
     doc.clear();
-    std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << std::endl;
+    std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
     doc["name"] = test_mfgdata[i][1];
     doc["manufacturerdata"] = test_mfgdata[i][2];
     bleObject = doc.as<JsonObject>();
