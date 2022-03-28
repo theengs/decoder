@@ -94,8 +94,10 @@ private:
   double      value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true);
   double      bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true);
   bool        data_index_is_valid(const char* str, size_t index, size_t len);
-  int         data_length_is_valid(size_t data_len, size_t default_min, JsonArray& condition, int idx);
+  int         data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int idx);
   bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data);
+  bool        checkDeviceMatch(const JsonArray& condition, const char* svc_data, const char* mfg_data,
+                               const char* dev_name, const char* svc_uuid);
   std::string sanitizeJsonKey(const char* key_in);
 
   size_t m_docMax = 7168;
