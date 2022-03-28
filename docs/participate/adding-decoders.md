@@ -67,7 +67,7 @@ This will match if the service data at index 0 is "0804" `OR` "8804".
 This will result in a positive detection if the service data at index `0` == `0x1234` and the service data at index `5` == `0x5678`, otherwise, if the service data at index `30` == `0xABCD`, the result will also be positive.
 
 ::: warning Note
-Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstaces.  
+Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.  
 The above example could be re-written as:  
 `"condition": ["servicedata", "index", 30, "ABCD", "|", "servicedata", "index", 0, "1234", "&" "servicedata", "index", 5, "5678"]`  
 Which has the same result, without nesting.
@@ -102,7 +102,7 @@ If the condition is met the data will be decoded and added to the JsonObject.
 This will result in a positive detection if the service data at index `25` == `4` and the service data at index `26` == `5`, otherwise, if the service data at index `30` == `0xABCD`, the result will also be positive.
 
 ::: warning Note
-Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstaces.  
+Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.  
 The above example could be re-written as:  
 `"condition": ["servicedata", 30, "ABCD", "|", "servicedata", 25, "4", "&" "servicedata", 5, "5"]`  
 Which has the same result, without nesting.
