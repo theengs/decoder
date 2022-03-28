@@ -31,6 +31,7 @@
 #include "devices/H5075_json.h"
 #include "devices/H5102_json.h"
 #include "devices/HHCCJCY01HHCC_json.h"
+#include "devices/HHCCPOT002_json.h"
 #include "devices/IBS_TH1_json.h"
 #include "devices/IBS_TH2_json.h"
 #include "devices/IBT_2X_json.h"
@@ -100,4 +101,5 @@ const char* _devices[][2] = {
     {_BM_V23_json, _BM_V23_json_props},
     {_MS_CDP_json, _MS_CDP_json_props},
     {_GAEN_json, _GAEN_json_props},
+    {_HHCCPOT002_json, _HHCCPOT002_json_props},
 };
