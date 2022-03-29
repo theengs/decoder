@@ -38,6 +38,9 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_ATC\",\"tempc\":32.5,\"tempf\":90.5,\"hum\":62,\"batt\":81,\"volt\":2.939}",
     "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_PVVX\",\"tempc\":21.12,\"tempf\":70.016,\"hum\":50.53,\"batt\":100,\"volt\":3.143}",
     "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"lux\":0}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"moi\":3}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"tempc\":32,\"tempf\":89.6}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"fer\":1}",
 };
 
 const char* expected_mfg[] = {
@@ -75,7 +78,6 @@ const char* expected_mfg[] = {
     "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"tempc\":23.9,\"tempf\":75.02,\"dp\":10.8,\"hum\":43.5,\"volt\":2.56}",
     "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
     "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
-
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -147,6 +149,9 @@ const char* test_servicedata[][2] = {
     {"LYWSD03MMC_ATC", "a4c138d5d49801453e510b7b62"},
     {"LYWSD03MMC_PVVX", "5601cf38c1a44008bd13470c64cc0f"},
     {"Qingping Motion & Light", "0812443660342d580201530f0118090400000000"},
+    {"RoPot", "71205d0183d20c6d8d7cc40d08100103"},
+    {"RoPot", "71205d0183d20c6d8d7cc40d0410024001"},
+    {"RoPot", "71205d0188d20c6d8d7cc40d0910020100"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
@@ -183,6 +188,9 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_ATC,
   TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
   TheengsDecoder::BLE_ID_NUM::CGPR1,
+  TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
+  TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
+  TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
 };
 
 // manufacturer data test input [test name] [device name] [data]

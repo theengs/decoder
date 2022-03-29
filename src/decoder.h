@@ -86,6 +86,7 @@ public:
     BM_V23,
     MS_CDP,
     GAEN,
+    HHCCPOT002,
     BLE_ID_MAX
   };
 
