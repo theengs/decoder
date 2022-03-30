@@ -1,8 +1,8 @@
-# Xiaomi Mi Flora
+# Xiaomi/VegTrug Mi Flora
 
 |Model Id|[HHCCJCY01HHCC](https://github.com/theengs/decoder/blob/development/src/devices/HHCCJCY01HHCC_json.h)|
 |-|-|
-|Brand|Xiaomi|
+|Brand|Xiaomi/VegTrug|
 |Model|MiFlora|
 |Short Description|Moisture, light, temperature and fertility sensor|
 |Communication|BLE broadcast|

@@ -51,7 +51,6 @@
 #include "devices/RuuviTag_RAWv2_json.h"
 #include "devices/SBS1_json.h"
 #include "devices/TPMS_json.h"
-#include "devices/VEGTRUG_json.h"
 #include "devices/WS02_json.h"
 #include "devices/WS08_json.h"
 #include "devices/XMTZC04HM_json.h"
@@ -62,7 +61,6 @@
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
-    {_VEGTRUG_json, _VEGTRUG_json_props},
     {_LYWSD02_json, _LYWSD02_json_props},
     {_LYWSDCGQ_json, _LYWSDCGQ_json_props},
     {_CGP1W_json, _CGP1W_json_props},

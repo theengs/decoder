@@ -7,7 +7,7 @@ const char* _H5072_json = "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",
    "brand":"Govee",
    "model":"Thermo Hygrometer",
    "model_id":"H5072",
-   "condition":["name", "contain", "GVH5072","&"","manufacturerdata", "index", 0, "88ec"],
+   "condition":["name", "contain", "GVH5072", "&", "manufacturerdata", "index", 0, "88ec"],
    "properties":{
       "tempc":{
          "decoder":["value_from_hex_data", "manufacturerdata", 6, 6, false],
