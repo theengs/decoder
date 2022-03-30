@@ -1,23 +1,23 @@
-const char* _HHCCPOT002_json = "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"condition\":[\"servicedata\",\"index\",4,\"5d01\"],\"properties\":{\"tempc\":{\"condition\":[\"servicedata\",25,\"4\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",30,4,true],\"post_proc\":[\"/\",10]},\"moi\":{\"condition\":[\"servicedata\",25,\"8\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",30,2,false]},\"fer\":{\"condition\":[\"servicedata\",25,\"9\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",30,4,true]}}}";
+const char* _HHCCPOT002_json = "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"condition\":[\"svcd\",\"indx\",4,\"5d01\"],\"properties\":{\"tempc\":{\"condition\":[\"svcd\",25,\"4\"],\"decoder\":[\"vfhd\",\"svcd\",30,4,true],\"post_proc\":[\"/\",10]},\"moi\":{\"condition\":[\"svcd\",25,\"8\"],\"decoder\":[\"vfhd\",\"svcd\",30,2,false]},\"fer\":{\"condition\":[\"svcd\",25,\"9\"],\"decoder\":[\"vfhd\",\"svcd\",30,4,true]}}}";
 /*R""""(
 {
    "brand":"Xiaomi",
    "model":"RoPot",
    "model_id":"HHCCPOT002",
-   "condition":["servicedata", "index", 4, "5d01"],
+   "condition":["svcd", "indx", 4, "5d01"],
    "properties":{
       "tempc":{
-         "condition":["servicedata", 25, "4"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
+         "condition":["svcd", 25, "4"],
+         "decoder":["vfhd", "svcd", 30, 4, true],
          "post_proc":["/", 10]
       },
       "moi":{
-         "condition":["servicedata", 25, "8"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 2, false]
+         "condition":["svcd", 25, "8"],
+         "decoder":["vfhd", "svcd", 30, 2, false]
       },
       "fer":{
-         "condition":["servicedata", 25, "9"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 4, true]
+         "condition":["svcd", 25, "9"],
+         "decoder":["vfhd", "svcd", 30, 4, true]
       }
    }
 })"""";*/

@@ -1,17 +1,17 @@
-const char* _Miband_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"condition\":[\"uuid\",\"contain\",\"fee0\"],\"properties\":{\"steps\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",0,4,true,false]},\"act_bpm\":{\"condition\":[\"manufacturerdata\",10,\"!\",\"f\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",10,2,false,false]}}}";
+const char* _Miband_json = "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"condition\":[\"uuid\",\"cont\",\"fee0\"],\"properties\":{\"steps\":{\"decoder\":[\"vfhd\",\"svcd\",0,4,true,false]},\"act_bpm\":{\"condition\":[\"mfrd\",10,\"!\",\"f\"],\"decoder\":[\"vfhd\",\"mfrd\",10,2,false,false]}}}";
 /*R""""(
 {
    "brand":"Xiaomi",
    "model":"Miband",
    "model_id":"MiBand",
-   "condition":["uuid", "contain", "fee0"],
+   "condition":["uuid", "cont", "fee0"],
    "properties":{
       "steps":{
-         "decoder":["value_from_hex_data", "servicedata", 0, 4, true, false]
+         "decoder":["vfhd", "svcd", 0, 4, true, false]
       },
       "act_bpm":{
-         "condition":["manufacturerdata", 10, "!", "f"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 10, 2, false, false]
+         "condition":["mfrd", 10, "!", "f"],
+         "decoder":["vfhd", "mfrd", 10, 2, false, false]
       }
    }
 })"""";*/

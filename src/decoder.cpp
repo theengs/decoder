@@ -39,8 +39,13 @@
 static size_t peakDocSize = 0;
 #endif
 
-#define SVC_DATA "servicedata"
-#define MFG_DATA "manufacturerdata"
+#define STR_TO_U32(s)      *(uint32_t*)s
+#define JSON_STR_TO_U32(s) *(uint32_t*)s.as<const char*>()
+
+#define SVC_DATA_U32 STR_TO_U32("svcd")
+#define MFG_DATA_U32 STR_TO_U32("mfrd")
+#define INDEX_U32    STR_TO_U32("indx")
+#define CONTAIN_U32  STR_TO_U32("cont")
 
 typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
                                                    int offset, int data_length,
@@ -176,9 +181,9 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
     }
 
     const char* cmp_str;
-    const char* cond_str = condition[i].as<const char*>();
+    uint32_t cond_str = JSON_STR_TO_U32(condition[i]);
     int len_idx;
-    if (svc_data != nullptr && strstr(cond_str, SVC_DATA) != nullptr) {
+    if (svc_data != nullptr && cond_str == SVC_DATA_U32) {
       len_idx = data_length_is_valid(strlen(svc_data), m_minSvcDataLen, condition, i);
       if (len_idx >= 0) {
         i += len_idx;
@@ -188,7 +193,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         match = false;
         break;
       }
-    } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
+    } else if (mfg_data != nullptr && cond_str == MFG_DATA_U32) {
       len_idx = data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, i);
       if (len_idx >= 0) {
         i += len_idx;
@@ -198,28 +203,28 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         match = false;
         break;
       }
-    } else if (dev_name != nullptr && strstr(cond_str, "name") != nullptr) {
+    } else if (dev_name != nullptr && cond_str == STR_TO_U32("name")) {
       cmp_str = dev_name;
-    } else if (svc_uuid != nullptr && strstr(cond_str, "uuid") != nullptr) {
+    } else if (svc_uuid != nullptr && cond_str == STR_TO_U32("uuid")) {
       cmp_str = svc_uuid;
     } else {
       break;
     }
 
-    cond_str = condition[i + 1].as<const char*>();
+    cond_str = JSON_STR_TO_U32(condition[i + 1]);
     if (cond_str) {
       if (cmp_str == svc_uuid && !strncmp(cmp_str, "0x", 2)) {
         cmp_str += 2;
       }
 
-      if (strstr(cond_str, "contain") != nullptr) {
+      if (cond_str == CONTAIN_U32) {
         if (strstr(cmp_str, condition[i + 2].as<const char*>()) != nullptr) {
           match = true;
         } else {
           match = false;
         }
         i += 3;
-      } else if (strstr(cond_str, "index") != nullptr) {
+      } else if (cond_str == INDEX_U32) {
         size_t cond_index = condition[i + 2].as<size_t>();
         size_t cond_len = strlen(condition[i + 3].as<const char*>());
 
@@ -250,28 +255,37 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         i += 4 + inverse;
       }
 
-      cond_str = condition[i].as<const char*>();
+      if (condition[i].as<const char*>() != nullptr) {
+        cond_str = JSON_STR_TO_U32(condition[i]);
+      } else {
+        cond_str = NULL;
+      }
     }
 
     size_t cond_size = condition.size();
 
-    if (i < cond_size && cond_str != nullptr) {
-      if (!match && *cond_str == '|') {
+    if (i < cond_size && cond_str) {
+      if (!match && (char)cond_str == '|') {
         i++;
         continue;
-      } else if (match && *cond_str == '&') {
+      } else if (match && (char)cond_str == '&') {
         i++;
         match = false;
         continue;
       } else if (match) { // check for AND case before exit
-        while (i < cond_size && *cond_str != '&') {
+        while (i < cond_size && (char)cond_str != '&') {
           if (!condition[++i].is<const char*>()) {
             continue;
           }
-          cond_str = condition[++i].as<const char*>();
+          if (condition[++i].as<const char*>() != nullptr) {
+            cond_str = JSON_STR_TO_U32(condition[i]);
+          } else {
+            cond_str = NULL;
+            break;
+          }
         }
 
-        if (i < cond_size && cond_str != nullptr) {
+        if (i < cond_size && cond_str) {
           i++;
           match = false;
           continue;
@@ -309,12 +323,12 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
       }
 
       bool inverse = *(const char*)prop_condition[i + 2] == '!';
-      const char* prop_data_src = prop_condition[i];
+      uint32_t prop_data_src = JSON_STR_TO_U32(prop_condition[i]);
       const char* data_src = nullptr;
 
-      if (svc_data && strstr(prop_data_src, SVC_DATA) != nullptr) {
+      if (svc_data && prop_data_src == SVC_DATA_U32) {
         data_src = svc_data;
-      } else if (mfg_data && strstr(prop_data_src, MFG_DATA) != nullptr) {
+      } else if (mfg_data && prop_data_src == MFG_DATA_U32) {
         data_src = mfg_data;
       }
 
@@ -359,8 +373,8 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #else
   DynamicJsonDocument doc(m_docMax);
 #endif
-  const char* svc_data = jsondata[SVC_DATA].as<const char*>();
-  const char* mfg_data = jsondata[MFG_DATA].as<const char*>();
+  const char* svc_data = jsondata["servicedata"].as<const char*>();
+  const char* mfg_data = jsondata["manufacturerdata"].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
   const char* svc_uuid = jsondata["servicedatauuid"].as<const char*>();
   int success = -1;
@@ -400,9 +414,17 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
         if (checkPropCondition(prop["condition"], svc_data, mfg_data)) {
           JsonArray decoder = prop["decoder"];
-          if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
+          decoder_function dec_fun = nullptr;
+
+          if (JSON_STR_TO_U32(decoder[0]) == STR_TO_U32("vfhd")) {
+            dec_fun = &TheengsDecoder::value_from_hex_string;
+          } else if (JSON_STR_TO_U32(decoder[0]) == STR_TO_U32("bfhd")) {
+            dec_fun = &TheengsDecoder::bf_value_from_hex_string;
+          }
+
+          if (dec_fun != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], MFG_DATA)) {
+            if (JSON_STR_TO_U32(decoder[1]) == MFG_DATA_U32) {
               src = mfg_data;
             }
 
@@ -411,12 +433,6 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             static long cal_val = 0;
 
             if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
-              decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
-
-              if (strstr((const char*)decoder[0], "bf") != nullptr) {
-                dec_fun = &TheengsDecoder::bf_value_from_hex_string;
-              }
-
               temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
                                           decoder[3].as<int>(),
                                           decoder[4].as<bool>(),
@@ -528,7 +544,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             success = i_main;
           } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], MFG_DATA)) {
+            if (JSON_STR_TO_U32(decoder[1]) == MFG_DATA_U32) {
               src = mfg_data;
             }
 

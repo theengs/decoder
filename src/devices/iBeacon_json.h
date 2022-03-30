@@ -1,31 +1,31 @@
-const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"model_id\":\"IBEACON\",\"condition\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c00\"],\"properties\":{\"mfid\":{\"decoder\":[\"string_from_hex_data\",\"manufacturerdata\",0,4]},\"uuid\":{\"decoder\":[\"string_from_hex_data\",\"manufacturerdata\",8,32]},\"major\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",40,4,false]},\"minor\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",44,4,false]},\"power\":{\"condition\":[\"manufacturerdata\",48,\"8\",\"|\",\"manufacturerdata\",48,\"9\",\"|\",\"manufacturerdata\",48,\"a\",\"|\",\"manufacturerdata\",48,\"b\",\"|\",\"manufacturerdata\",48,\"c\",\"|\",\"manufacturerdata\",48,\"d\",\"|\",\"manufacturerdata\",48,\"e\",\"|\",\"manufacturerdata\",48,\"f\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",48,2,false]},\"volt\":{\"condition\":[\"manufacturerdata\",48,\"0\",\"|\",\"manufacturerdata\",48,\"1\",\"|\",\"manufacturerdata\",48,\"2\",\"|\",\"manufacturerdata\",48,\"3\",\"|\",\"manufacturerdata\",48,\"4\",\"|\",\"manufacturerdata\",48,\"5\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",48,2,false],\"post_proc\":[\"/\",10]}}}";
+const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"IBEACON\",\"model_id\":\"IBEACON\",\"condition\":[\"mfrd\",\"=\",50,\"indx\",0,\"4c00\"],\"properties\":{\"mfid\":{\"decoder\":[\"string_from_hex_data\",\"mfrd\",0,4]},\"uuid\":{\"decoder\":[\"string_from_hex_data\",\"mfrd\",8,32]},\"major\":{\"decoder\":[\"vfhd\",\"mfrd\",40,4,false]},\"minor\":{\"decoder\":[\"vfhd\",\"mfrd\",44,4,false]},\"power\":{\"condition\":[\"mfrd\",48,\"8\",\"|\",\"mfrd\",48,\"9\",\"|\",\"mfrd\",48,\"a\",\"|\",\"mfrd\",48,\"b\",\"|\",\"mfrd\",48,\"c\",\"|\",\"mfrd\",48,\"d\",\"|\",\"mfrd\",48,\"e\",\"|\",\"mfrd\",48,\"f\"],\"decoder\":[\"vfhd\",\"mfrd\",48,2,false]},\"volt\":{\"condition\":[\"mfrd\",48,\"0\",\"|\",\"mfrd\",48,\"1\",\"|\",\"mfrd\",48,\"2\",\"|\",\"mfrd\",48,\"3\",\"|\",\"mfrd\",48,\"4\",\"|\",\"mfrd\",48,\"5\"],\"decoder\":[\"vfhd\",\"mfrd\",48,2,false],\"post_proc\":[\"/\",10]}}}";
 
 /*R""""(
 {
    "brand":"GENERIC",
    "model":"IBEACON",
    "model_id":"IBEACON",
-   "condition":["manufacturerdata", "=", 50, "index", 0, "4c00"],
+   "condition":["mfrd", "=", 50, "indx", 0, "4c00"],
    "properties":{
       "mfid":{
-         "decoder":["string_from_hex_data", "manufacturerdata", 0, 4]
+         "decoder":["string_from_hex_data", "mfrd", 0, 4]
       },
       "uuid":{
-         "decoder":["string_from_hex_data", "manufacturerdata", 8, 32]
+         "decoder":["string_from_hex_data", "mfrd", 8, 32]
       },
       "major":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 40, 4, false]
+         "decoder":["vfhd", "mfrd", 40, 4, false]
       },
       "minor":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 44, 4, false]
+         "decoder":["vfhd", "mfrd", 44, 4, false]
       },
       "power":{
-         "condition":["manufacturerdata", 48, "8", "|", "manufacturerdata", 48, "9", "|", "manufacturerdata", 48, "a", "|", "manufacturerdata", 48, "b", "|", "manufacturerdata", 48, "c", "|", "manufacturerdata", 48, "d", "|", "manufacturerdata", 48, "e", "|", "manufacturerdata", 48, "f"],
-         "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false]
+         "condition":["mfrd", 48, "8", "|", "mfrd", 48, "9", "|", "mfrd", 48, "a", "|", "mfrd", 48, "b", "|", "mfrd", 48, "c", "|", "mfrd", 48, "d", "|", "mfrd", 48, "e", "|", "mfrd", 48, "f"],
+         "decoder":["vfhd","mfrd", 48, 2, false]
       },
       "volt":{
-         "condition":["manufacturerdata", 48, "0", "|", "manufacturerdata", 48, "1", "|", "manufacturerdata", 48, "2", "|", "manufacturerdata", 48, "3", "|", "manufacturerdata", 48, "4", "|", "manufacturerdata", 48, "5"],
-         "decoder":["value_from_hex_data","manufacturerdata", 48, 2, false],
+         "condition":["mfrd", 48, "0", "|", "mfrd", 48, "1", "|", "mfrd", 48, "2", "|", "mfrd", 48, "3", "|", "mfrd", 48, "4", "|", "mfrd", 48, "5"],
+         "decoder":["vfhd","mfrd", 48, 2, false],
          "post_proc":["/", 10]
       }
    }

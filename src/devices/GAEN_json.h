@@ -1,17 +1,17 @@
-const char* _GAEN_json = "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"condition\":[\"uuid\",\"index\",0,\"fd6f\"],\"properties\":{\"rpi\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",0,32]},\"aem\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",32,8]}}}";
+const char* _GAEN_json = "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"condition\":[\"uuid\",\"indx\",0,\"fd6f\"],\"properties\":{\"rpi\":{\"decoder\":[\"string_from_hex_data\",\"svcd\",0,32]},\"aem\":{\"decoder\":[\"string_from_hex_data\",\"svcd\",32,8]}}}";
 
 /*R""""(
 {
    "brand":"GENERIC",
    "model":"GAEN",
    "model_id":"GAEN",
-   "condition":["uuid", "index", 0, "fd6f"],
+   "condition":["uuid", "indx", 0, "fd6f"],
    "properties":{
       "rpi":{
-         "decoder":["string_from_hex_data", "servicedata", 0, 32]
+         "decoder":["string_from_hex_data", "svcd", 0, 32]
       },
       "aem":{
-         "decoder":["string_from_hex_data", "servicedata", 32, 8]
+         "decoder":["string_from_hex_data", "svcd", 32, 8]
       }
    }
 })"""";*/

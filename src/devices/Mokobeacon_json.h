@@ -1,22 +1,22 @@
-const char* _Mokobeacon_json = "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"condition\":[\"uuid\",\"index\",0,\"ff01\"],\"properties\":{\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",0,2,false]},\"x_axis\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,4,false]},\"y_axis\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,false]},\"z_axis\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,false]}}}";
+const char* _Mokobeacon_json = "{\"brand\":\"Mokosmart\",\"model\":\"Beacon\",\"model_id\":\"Mokobeacon\",\"condition\":[\"uuid\",\"indx\",0,\"ff01\"],\"properties\":{\"batt\":{\"decoder\":[\"vfhd\",\"svcd\",0,2,false]},\"x_axis\":{\"decoder\":[\"vfhd\",\"svcd\",14,4,false]},\"y_axis\":{\"decoder\":[\"vfhd\",\"svcd\",18,4,false]},\"z_axis\":{\"decoder\":[\"vfhd\",\"svcd\",22,4,false]}}}";
 /*R""""(
 {
    "brand":"Mokosmart",
    "model":"Beacon",
    "model_id":"Mokobeacon",
-   "condition":["uuid", "index", 0, "ff01"],
+   "condition":["uuid", "indx", 0, "ff01"],
    "properties":{
       "batt":{
-         "decoder":["value_from_hex_data", "servicedata", 0, 2, false]
+         "decoder":["vfhd", "svcd", 0, 2, false]
       },
       "x_axis":{
-         "decoder":["value_from_hex_data", "servicedata", 14, 4, false]
+         "decoder":["vfhd", "svcd", 14, 4, false]
       },
       "y_axis":{
-         "decoder":["value_from_hex_data", "servicedata", 18, 4, false]
+         "decoder":["vfhd", "svcd", 18, 4, false]
       },
       "z_axis":{
-         "decoder":["value_from_hex_data", "servicedata", 22, 4, false]
+         "decoder":["vfhd", "svcd", 22, 4, false]
       }
    }
 })"""";*/
