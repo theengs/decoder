@@ -5,10 +5,11 @@
 #include "decoder.h"
 
 const char* expected_servicedata[] = {
-    "{\"brand\":\"Xiaomi\",\"model\":\"Miflora\",\"model_id\":\"HHCCJCY01HHCC\",\"lux\":9971}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Miflora\",\"model_id\":\"HHCCJCY01HHCC\",\"moi\":30}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Miflora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Miflora\",\"model_id\":\"HHCCJCY01HHCC\",\"fer\":0}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"lux\":9971}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"moi\":30}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"fer\":0}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\",\"model_id\":\"LYWSD02\",\"tempc\":25.6,\"tempf\":78.08}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\",\"model_id\":\"LYWSD02\",\"hum\":69}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\",\"model_id\":\"LYWSD02\",\"tempc\":26.5,\"tempf\":79.7}",
@@ -39,8 +40,8 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_PVVX\",\"tempc\":21.12,\"tempf\":70.016,\"hum\":50.53,\"batt\":100,\"volt\":3.143}",
     "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"lux\":0}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"moi\":3}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"tempc\":32,\"tempf\":89.6}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"fer\":1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"pres\":true,\"darkness\":29}",
 };
 
 const char* expected_mfg[] = {
@@ -120,6 +121,7 @@ const char* test_servicedata[][2] = {
     {"Mi flora", "712098005763b6658d7cc40d0810011e"},
     {"Mi flora", "712098000163b6658d7cc40d0410024001"},
     {"Mi flora", "712098000863b6658d7cc40d0910020000"},
+    {"VegTrug flora", "712098000163b6658d7cc40d0410024001"},
     {"Cleargrass clock", "70205b04756ab883c8593f090410020001"},
     {"Cleargrass clock", "70205b04dc6ab883c8593f09061002b202"},
     {"Cleargrass clock", "70205b04756ab883c8593f090410020901"},
@@ -150,11 +152,12 @@ const char* test_servicedata[][2] = {
     {"LYWSD03MMC_PVVX", "5601cf38c1a44008bd13470c64cc0f"},
     {"Qingping Motion & Light", "0812443660342d580201530f0118090400000000"},
     {"RoPot", "71205d0183d20c6d8d7cc40d08100103"},
-    {"RoPot", "71205d0183d20c6d8d7cc40d0410024001"},
     {"RoPot", "71205d0188d20c6d8d7cc40d0910020100"},
+    {"MiLamp", "4030dd031d0300010100"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
   TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
   TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
   TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
@@ -190,7 +193,7 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGPR1,
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
-  TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
+  TheengsDecoder::BLE_ID_NUM::MUE4094RT,
 };
 
 // manufacturer data test input [test name] [device name] [data]

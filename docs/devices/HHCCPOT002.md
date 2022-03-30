@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|CR2032|
-|Exchanged data|temperature, moisture, fertility|
+|Exchanged data|moisture, fertility|
 |Encrypted|No|
