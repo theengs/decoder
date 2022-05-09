@@ -28,7 +28,7 @@ const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\"
    }
 })"""";*/
 
-const char* _TPMS_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"pres\":{\"unit\":\"kPa\",\"name\":\"temperature\"},\"count\":{\"unit\":\"int\",\"name\":\"count\"},\"alarm\":{\"unit\":\"status\",\"name\":\"alarm\"}}}";
+const char* _TPMS_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"pres\":{\"unit\":\"kPa\",\"name\":\"pressure\"},\"count\":{\"unit\":\"int\",\"name\":\"count\"},\"alarm\":{\"unit\":\"status\",\"name\":\"alarm\"}}}";
 /*R""""(
 {
    "properties":{
@@ -42,7 +42,7 @@ const char* _TPMS_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name
       },
       "pres":{
          "unit":"kPa",
-         "name":"temperature"
+         "name":"pressure"
       },
       "count":{
          "unit":"int",

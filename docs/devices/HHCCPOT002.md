@@ -7,6 +7,6 @@
 |Short Description|Moisture, temperature and fertility sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
+|Power source|Rechargeable battery, USB|
 |Exchanged data|moisture, fertility|
 |Encrypted|No|
