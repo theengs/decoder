@@ -1,6 +1,6 @@
 # MokoSmart Beacon
 
-|Model Id|[MokoBeacon](https://github.com/theengs/decoder/blob/development/src/devices/MokoBeacon_json.h)|
+|Model Id|[MokoBeacon](https://github.com/theengs/decoder/blob/development/src/devices/Mokobeacon_json.h)|
 |-|-|
 |Brand|MOKOSMART|
 |Model|Beacon|
