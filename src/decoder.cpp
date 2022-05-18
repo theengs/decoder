@@ -181,9 +181,11 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
     if (svc_data != nullptr && strstr(cond_str, SVC_DATA) != nullptr) {
       len_idx = data_length_is_valid(strlen(svc_data), m_minSvcDataLen, condition, i);
       if (len_idx >= 0) {
-        i += len_idx;
+        if (len_idx > 0) {
+          i += len_idx;
+          match = true;
+        }
         cmp_str = svc_data;
-        match = true;
       } else {
         match = false;
         break;
@@ -191,9 +193,11 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
     } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
       len_idx = data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, i);
       if (len_idx >= 0) {
-        i += len_idx;
+        if (len_idx > 0) {
+          i += len_idx;
+          match = true;
+        }
         cmp_str = mfg_data;
-        match = true;
       } else {
         match = false;
         break;
@@ -206,22 +210,22 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
       break;
     }
 
-    cond_str = condition[i + 1].as<const char*>();
-    if (cond_str) {
+    cond_str = condition[++i].as<const char*>();
+    if (cond_str != nullptr && *cond_str != '&' && *cond_str != '|') {
       if (cmp_str == svc_uuid && !strncmp(cmp_str, "0x", 2)) {
         cmp_str += 2;
       }
 
       if (strstr(cond_str, "contain") != nullptr) {
-        if (strstr(cmp_str, condition[i + 2].as<const char*>()) != nullptr) {
+        if (strstr(cmp_str, condition[++i].as<const char*>()) != nullptr) {
           match = true;
         } else {
           match = false;
         }
-        i += 3;
+        i++;
       } else if (strstr(cond_str, "index") != nullptr) {
-        size_t cond_index = condition[i + 2].as<size_t>();
-        size_t cond_len = strlen(condition[i + 3].as<const char*>());
+        size_t cond_index = condition[++i].as<size_t>();
+        size_t cond_len = strlen(condition[++i].as<const char*>());
 
         if (!data_index_is_valid(cmp_str, cond_index, cond_len)) {
           DEBUG_PRINT("Invalid data %s; skipping\n", cmp_str);
@@ -230,30 +234,29 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         }
 
         bool inverse = false;
-        if (*condition[i + 3].as<const char*>() == '!') {
+        if (*condition[i].as<const char*>() == '!') {
           inverse = true;
+          i++;
         }
 
-        DEBUG_PRINT("comparing value: %s to %s at index %u\n",
+        DEBUG_PRINT("comparing value: %s to %s at index %lu\n",
                     &cmp_str[cond_index],
-                    condition[i + 3 + inverse].as<const char*>(),
-                    condition[i + 2].as<size_t>());
+                    condition[i].as<const char*>(),
+                    cond_index);
 
         if (strncmp(&cmp_str[cond_index],
-                    condition[i + 3 + inverse].as<const char*>(),
+                    condition[i].as<const char*>(),
                     cond_len) == 0) {
           match = inverse ? false : true;
         } else {
           match = inverse ? true : false;
         }
 
-        i += 4 + inverse;
+        i++;
       }
 
       cond_str = condition[i].as<const char*>();
     }
-
-    size_t cond_size = condition.size();
 
     if (i < cond_size && cond_str != nullptr) {
       if (!match && *cond_str == '|') {
@@ -268,7 +271,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
           if (!condition[++i].is<const char*>()) {
             continue;
           }
-          cond_str = condition[++i].as<const char*>();
+          cond_str = condition[i].as<const char*>();
         }
 
         if (i < cond_size && cond_str != nullptr) {
@@ -490,7 +493,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               }
             }
 
-            /* If there is any underscores at the beginning of the property name, there is multiple 
+            /* If there is any underscores at the beginning of the property name, there is multiple
                 * properties of this type, we need remove the underscores for creating the key.
                 */
             std::string _key = sanitizeJsonKey(kv.key().c_str());
