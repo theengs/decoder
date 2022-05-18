@@ -6,7 +6,7 @@ const char* _LYWSD02_json = "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\
    "brand":"Xiaomi",
    "model":"Cleargrass clock",
    "model_id":"LYWSD02",
-   "condition":[""servicedata", "index", 2, "205b04"],
+   "condition":["servicedata", "index", 2, "205b04"],
    "properties":{
       "tempc":{
          "condition":["servicedata", 25, "4"],

@@ -6,7 +6,7 @@ const char* _LYWSD03MMC_ATC_json = "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC
    "brand":"Xiaomi",
    "model":"LYWSD03MMC",
    "model_id":"LYWSD03MMC_ATC",
-   "condition":[""servicedata", "index", 0, "a4c138"],
+   "condition":["servicedata", "index", 0, "a4c138"],
    "properties":{
       "tempc":{
          "decoder":["value_from_hex_data", "servicedata", 12, 4, false],
