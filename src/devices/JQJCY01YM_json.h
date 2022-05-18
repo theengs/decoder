@@ -4,7 +4,7 @@ const char* _JQJCY01YM_json = "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde de
    "brand":"Xiaomi",
    "model":"Formaldehyde detector",
    "model_id":"JQJCY01YM",
-   "condition":[""servicedata", "index", 2, "20df02"],
+   "condition":["servicedata", "index", 2, "20df02"],
    "properties":{
       "for":{
          "condition":["servicedata", 23, "0"],
