@@ -72,25 +72,27 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
 // manufacturer data test input [test name] [device name] [data]
 const char* test_mfgdata[][3] = {
     {"Inkbird TH1", "sps", "660a03150110805908"},
-    {"SHOULD FAIL", "fail", "270201508094c014"}
+    {"SHOULD FAIL", "fail", "270201508094c014"},
+    {"SHOULD FAIL", "fail_tpms", "000180eaca10ca8ff46503007c0c00003300"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::IBSTH1,
     TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
+    TheengsDecoder::BLE_ID_NUM::TPMS,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
     {"SHOULD FAIL", "fa11", "servicedata", "123456789ABCDEF"},
-    {"SHOULD FAIL", "0x181d", "servicedata", "a2a22bb2070103003526"}
+    {"SHOULD FAIL", "0x181d", "servicedata", "f2a22bb2070103003526"}
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::MIBAND,
     TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
-    TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
+    TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
 };
 int main() {
   StaticJsonDocument<2048> doc;
@@ -105,6 +107,13 @@ int main() {
     bleObject = doc.as<JsonObject>();
 
     decode_res = decoder.decodeBLEJson(bleObject);
+    if (strcmp(test_servicedata[i][0], "SHOULD FAIL") == 0 &&
+        decode_res != TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL) {
+      std::cout << "Decode result returned model ID: " << bleObject["model_id"] << " UNKNOWN_MODEL expected "
+                << test_servicedata[i][0] << " : " << test_servicedata[i][1] << std::endl;
+      return 1;
+    }
+
     if (decode_res == test_svcdata_id_num[i]) {
       std::cout << "Found : ";
       bleObject.remove("servicedata");
@@ -113,7 +122,8 @@ int main() {
     } else if (strcmp(test_servicedata[i][0], "SHOULD FAIL") == 0) {
       continue;
     } else {
-      std::cout << "FAILED! Error parsing: " << test_servicedata[i][0] << " : " << test_servicedata[i][1] << std::endl;
+      std::cout << "FAILED! Error parsing: " << test_servicedata[i][0]
+                << " : " << test_servicedata[i][1] << std::endl;
       return 1;
     }
   }
@@ -126,6 +136,13 @@ int main() {
     bleObject = doc.as<JsonObject>();
 
     decode_res = decoder.decodeBLEJson(bleObject);
+    if (strcmp(test_mfgdata[i][0], "SHOULD FAIL") == 0 &&
+        decode_res != TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL) {
+      std::cout << "Decode result returned model ID: " << bleObject["model_id"] << " UNKNOWN_MODEL expected "
+                << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : "
+                << test_mfgdata[i][2] << std::endl;
+      return 1;
+    }
     if (decode_res == test_mfgdata_id_num[i]) {
       std::cout << "Found : ";
       bleObject.remove("name");
@@ -135,7 +152,9 @@ int main() {
     } else if (strcmp(test_mfgdata[i][0], "SHOULD FAIL") == 0) {
       continue;
     } else {
-      std::cout << "FAILED! Error parsing: " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
+      std::cout << "FAILED! Error parsing: "
+                << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : "
+                << test_mfgdata[i][2] << std::endl;
       return 1;
     }
   }
@@ -148,6 +167,15 @@ int main() {
     bleObject = doc.as<JsonObject>();
 
     decode_res = decoder.decodeBLEJson(bleObject);
+    if (strcmp(test_uuid[i][0], "SHOULD FAIL") == 0 &&
+        decode_res != TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL) {
+      std::cout << "Decode result returned model ID: " << bleObject["model_id"] << " UNKNOWN_MODEL expected "
+                << test_uuid[i][0] << " : "
+                << test_uuid[i][1] << " : " << test_uuid[i][2] << " : "
+                << test_uuid[i][3] << std::endl;
+      return 1;
+    }
+
     if (decode_res == test_uuid_id_num[i]) {
       std::cout << "Found : ";
       bleObject.remove("servicedatauuid");
@@ -157,7 +185,9 @@ int main() {
     } else if (strcmp(test_uuid[i][0], "SHOULD FAIL") == 0) {
       continue;
     } else {
-      std::cout << "FAILED! Error parsing: " << test_uuid[i][0] << " : " << test_uuid[i][1] << " : " << test_uuid[i][2] << " : " << test_uuid[i][3] << std::endl;
+      std::cout << "FAILED! Error parsing: " << test_uuid[i][0] << " : "
+                << test_uuid[i][1] << " : " << test_uuid[i][2] << " : "
+                << test_uuid[i][3] << std::endl;
       serializeJson(doc, std::cout);
       std::cout << std::endl;
       return 1;
