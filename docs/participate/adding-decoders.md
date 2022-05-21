@@ -18,7 +18,7 @@ R""""(
       "tempc":{
          "condition":["servicedata", 25, "4"],
          "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
-         "post_proc":['/', 10]
+         "post_proc":["/", 10]
       },
       "moi":{
          "condition":["servicedata", 25, "8"],
@@ -58,8 +58,8 @@ Examples:
 
 The third parameter (fifth if data length is specified) can be either the index value or the data value to find. If the second (fourth if data length specified) parameter is `contain`, the next parameter should be the value to look for in the data source. If the second (fourth if data length specified) parameter is `index`, the next parameter should be the location in the data source to look for the value.
 
-`condition` can have multiple conditions chanined together using '|' and '&' between them.  
-For example: `"condition":["servicedata", "index", 0, "0804", '|', "servicedata", "index", 0, "8804"]`  
+`condition` can have multiple conditions chanined together using "|" and "&" between them.  
+For example: `"condition":["servicedata", "index", 0, "0804", "|", "servicedata", "index", 0, "8804"]`  
 This will match if the service data at index 0 is "0804" `OR` "8804".
 
 `condition` can contain JSON arrays that can be processed separately. This allows for nesting of detection tests such as:  
@@ -84,7 +84,7 @@ Properties is a nested JSON object containing one or more JSON objects. In the e
       "tempc":{
          "condition":["servicedata", 25, "4"],
          "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
-         "post_proc":['/', 10]
+         "post_proc":["/", 10]
       },
 ```
 
@@ -138,18 +138,18 @@ The other parameters are:
 - true/false, If the value in the data source should have it's endianness reversed before converting.
 - (optional)true/false, Sets if the resulting value can be a negative number.
 
-`post_proc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the '/' divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations.  
+`post_proc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the "/" divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations.  
 
 Valid operations are:
-- '/' divide
-- '*' multiply
-- '+' add
-- '-' subtract
-- '%' modulo
-- '<' shift left
-- '>' shift right
-- '!' Not (invert), useful for bool types
-- '&' Logical And the values
+- "/" divide
+- "*" multiply
+- "+" add
+- "-" subtract
+- "%" modulo
+- "<" shift left
+- ">" shift right
+- "!" Not (invert), useful for bool types
+- "&" Logical And the values
 
 #### Special property .cal
 .cal is a special property that can extracted from the provided data and used in calculations of other properties following it's definition. For example:
