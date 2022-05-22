@@ -1,9 +1,9 @@
-# SwitchBot S1
+# SwitchBot Bot
 
-|Model Id|[SWITCHBOT-S1](https://github.com/theengs/decoder/blob/development/src/devices/SBS1_json.h)|
+|Model Id|[*1](https://github.com/theengs/decoder/blob/development/src/devices/SBS1_json.h)|
 |-|-|
 |Brand|SwitchBot|
-|Model|SwitchBot S1|
+|Model|Bot|
 |Short Description|Switch Button Pusher|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
