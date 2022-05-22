@@ -323,7 +323,25 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
 
       if (data_src) {
         size_t cond_len = strlen(prop_condition[i + 2 + inverse].as<const char*>());
-        if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
+        if (strstr((const char*)prop_condition[i + 2], "bit") != nullptr) {
+          char ch = *(data_src + prop_condition[i + 1].as<int>());
+          uint8_t data = 0;
+          if (ch >= '0' && ch <= '9')
+            data = ch - '0';
+          else if (ch >= 'a' && ch <= 'f')
+            data = 10 + (ch - 'a');
+          else if (ch >= 'A' && ch <= 'F')
+            data = 10 + (ch - 'F');
+          else
+            return false;
+        
+          uint8_t shift = prop_condition[i + 3].as<uint8_t>();
+          uint8_t val = prop_condition[i + 4].as<uint8_t>();
+          if (((data >> shift) & 0x01) == val) {
+            cond_met = true;
+          }
+          i += 2;
+        } else if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
                      prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
           cond_met = inverse ? false : true;
         } else {
@@ -411,7 +429,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
             /* use a double for all values and cast later if required */
             double temp_val;
-            static long cal_val = 0;
+            static double cal_val = 0;
 
             if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
               decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
@@ -502,7 +520,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                 * instead we store them teporarily to use with the next data properties.
                 */
             if (_key == ".cal") {
-              cal_val = (long)temp_val;
+              cal_val = temp_val;
               continue;
             }
 

@@ -118,6 +118,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"S1\",\"model_id\":\"SWITCHBOT-S1\",\"mode\":\"on/off\",\"state\":\"off\",\"batt\":91}",
     "{\"brand\":\"SwitchBot\",\"model\":\"S1\",\"model_id\":\"SWITCHBOT-S1\",\"mode\":\"on/off\",\"state\":\"on\",\"batt\":76}",
     "{\"brand\":\"SwitchBot\",\"model\":\"S1\",\"model_id\":\"SWITCHBOT-S1\",\"mode\":\"onestate\",\"state\":\"on\",\"batt\":91}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"SWITCHBOT-METER\",\"tempc\":25.8,\"tempf\":78.44,\"hum\":59,\"batt\":58}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"SWITCHBOT-METER\",\"tempc\":-25.3,\"tempf\":-13.54,\"hum\":56,\"batt\":58}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"SWITCHBOT-METER\",\"tempc\":26,\"tempf\":78.8,\"hum\":56,\"batt\":58}",
 };
 
 // Service data test input [test name] [data]
@@ -324,6 +327,9 @@ const char* test_uuid[][4] = {
     {"Switchbot_S1", "0d00", "servicedata", "48d0db"},
     {"Switchbot_S1", "0d00", "servicedata", "4890cc"},
     {"Switchbot_S1", "0d00", "servicedata", "48005b"},
+    {"Switchbot_Meter", "fd3d", "servicedata", "6900ba08993b"},
+    {"Switchbot_Meter", "fd3d", "servicedata", "6900ba031938"},
+    {"Switchbot_Meter", "fd3d", "servicedata", "6900ba009ab8"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -354,6 +360,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::SBS1,
   TheengsDecoder::BLE_ID_NUM::SBS1,
   TheengsDecoder::BLE_ID_NUM::SBS1,
+  TheengsDecoder::BLE_ID_NUM::SBMT,
+  TheengsDecoder::BLE_ID_NUM::SBMT,
+  TheengsDecoder::BLE_ID_NUM::SBMT,
 };
 
 template <typename T>

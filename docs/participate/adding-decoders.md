@@ -95,6 +95,17 @@ Here we have a single property that defines a value that we want to decode. The 
 - "manufacturerdata"
 
 The second parameter is the index of the data source to look for the value. The third parameter is the value to test for.
+
+If a direct binary bit evaluation encoded in a hex digit is desired the third parameter is `"bit"`, the fourth parameter the bit position from 0-3 and the fifth parameter `0` or `1`.
+
+```
+ "properties":{
+      "hum":{
+         "condition":["servicedata", 10, "bit", 3, 0],
+         "decoder":["value_from_hex_data", "servicedata", 10, 2, false, false]
+      },
+```
+
 If the condition is met the data will be decoded and added to the JsonObject.
 
 `condition` can contain JSON arrays that can be processed separately. This allows for nesting of detection tests such as:  
