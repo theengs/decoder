@@ -1,6 +1,6 @@
 # SwitchBot Bot
 
-|Model Id|[*1](https://github.com/theengs/decoder/blob/development/src/devices/SBS1_json.h)|
+|Model Id|[X1](https://github.com/theengs/decoder/blob/development/src/devices/SBS1_json.h)|
 |-|-|
 |Brand|SwitchBot|
 |Model|Bot|
