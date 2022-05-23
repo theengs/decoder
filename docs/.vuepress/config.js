@@ -4,7 +4,6 @@ module.exports = {
     },
     title: 'Theengs decoder',
     description: 'One decoder for many devices, decode easily your BLE devices data and transform these into a readable format',
-    base:"/decoder/",
     head: [
       ['link', { rel: "apple-touch-icon", sizes: "180x180", href: ".apple-touch-icon.png"}],
       ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png"}],
@@ -25,8 +24,8 @@ module.exports = {
       lastUpdated: 'Last Updated',
       editLinks: true,
       nav: [
-        { text: 'Gateway', link: 'https://theengs.github.io/gateway'},
-        { text: 'Decoder', link: 'https://theengs.github.io/decoder'}
+        { text: 'Gateway', link: 'https://gateway.theengs.io', target:'_self', rel:''},
+        { text: 'Decoder', link: 'https://decoder.theengs.io', target:'_self', rel:''}
       ],
       sidebar: [
         ['/','0 - What is it for 🏠'],
@@ -65,6 +64,7 @@ module.exports = {
             'devices/WS02',
             'devices/WS08',
             'devices/HHCCJCY01HHCC',
+            'devices/HHCCPOT002',
             'devices/XMTZC04HM',
             'devices/XMTZC05HM',
             'devices/CGG1',
