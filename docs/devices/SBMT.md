@@ -1,6 +1,6 @@
 # SwitchBot Meter (Plus)
 
-|Model Id|[TH *1 (W230150*)](https://github.com/theengs/decoder/blob/development/src/devices/SBMT_json.h)|
+|Model Id|[THX1(W230150X)](https://github.com/theengs/decoder/blob/development/src/devices/SBMT_json.h)|
 |-|-|
 |Brand|SwitchBot|
 |Model|Meter (Plus)|
