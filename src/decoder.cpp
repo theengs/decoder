@@ -46,6 +46,10 @@ typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
                                                    int offset, int data_length,
                                                    bool reverse, bool canBeNegative);
 
+typedef double (TheengsDecoder::*staticbitdecoder_function)(const char* data_str,
+                                                            const char* source_str, int offset, int bitindex,
+                                                            const char* falseresult, const char* trueresult);
+
 /*
  * @brief Revert the string data 2 by 2 to get the correct endianness
  */
@@ -147,6 +151,16 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
   if (op == "<=" && data_len <= req_len) return 2;
 
   return -1;
+}
+
+uint8_t TheengsDecoder::getBinaryData(char ch) {
+  uint8_t data = 0;
+  if (ch >= '0' && ch <= '9')
+    data = ch - '0';
+  else if (ch >= 'a' && ch <= 'f')
+    data = 10 + (ch - 'a');
+
+  return data;
 }
 
 bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
@@ -325,15 +339,7 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
         size_t cond_len = strlen(prop_condition[i + 2 + inverse].as<const char*>());
         if (strstr((const char*)prop_condition[i + 2], "bit") != nullptr) {
           char ch = *(data_src + prop_condition[i + 1].as<int>());
-          uint8_t data = 0;
-          if (ch >= '0' && ch <= '9')
-            data = ch - '0';
-          else if (ch >= 'a' && ch <= 'f')
-            data = 10 + (ch - 'a');
-          else if (ch >= 'A' && ch <= 'F')
-            data = 10 + (ch - 'F');
-          else
-            return false;
+          uint8_t data = getBinaryData(ch);
         
           uint8_t shift = prop_condition[i + 3].as<uint8_t>();
           uint8_t val = prop_condition[i + 4].as<uint8_t>();
@@ -542,11 +548,27 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             success = i_main;
             DEBUG_PRINT("found value = %s : %.2f\n", _key.c_str(), jsondata[_key].as<double>());
           } else if (strstr((const char*)decoder[0], "static_value") != nullptr) {
-            if (prop.containsKey("is_bool") && !decoder[1].is<std::string>()) {
-              decoder[1] = (bool)decoder[1];
+            if (strstr((const char*)decoder[0], "bit") != nullptr) {
+              JsonArray staticbitdecoder = prop["decoder"];
+              const char* data_src = nullptr;
+
+              if (svc_data && strstr((const char*)staticbitdecoder[1], SVC_DATA) != nullptr) {
+                data_src = svc_data;
+              } else if (mfg_data && strstr((const char*)staticbitdecoder[1], MFG_DATA) != nullptr) {
+                data_src = mfg_data;
+              }
+
+              char ch = *(data_src + staticbitdecoder[2].as<int>());
+              uint8_t data = getBinaryData(ch);
+              uint8_t shift = staticbitdecoder[3].as<uint8_t>();
+              int x = 4 + ((data >> shift) & 0x01);
+
+              jsondata[sanitizeJsonKey(kv.key().c_str())] = staticbitdecoder[x];
+              success = i_main;
+            } else {
+              jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
+              success = i_main;
             }
-            jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
-            success = i_main;
           } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
             const char* src = svc_data;
             if (strstr((const char*)decoder[1], MFG_DATA)) {

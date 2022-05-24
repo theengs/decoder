@@ -139,15 +139,30 @@ The NOT comparison is case sensitive! Therefor any NOT comparisons should be def
 The first parameter is the name of the function to call, The available functions are:
 - "value_from_hex_data"  - converts the hex string value into an `integer` or `double` type.
 - "bf_value_from_hex_data" - converts the (binary fraction) hex string value into a `double` type.  This should be used when the hex data is represented in the format of `XX.XX`. For example: when `0x1a1e` should output 26.30.
-- "static_value" - sets the value to the static value specified if the condition is met.
 - "string_from_hex_data" - converts the hex value to a string type.
+- "static_value" - sets the value to the static value specified if the condition is met.
+- "bit_static_value" - sets the value to either one of two given values, depending on the evaluated binary bit.
 
-The other parameters are:
+The other parameters for the first three functions are:
 - "servicedata" or "manufacturerdata" Extract the value from the specified data.
-- 30, The index of the data source where the value exists.
+- 24, The index of the data source where the value exists.
 - 4, The length of the data in bytes (characters in the string).
 - true/false, If the value in the data source should have it's endianness reversed before converting.
 - (optional)true/false, Sets if the resulting value can be a negative number.
+
+```
+ "properties":{
+      "unit":{
+         "decoder":["bit_static_value", "servicedata", 1, 0, "kg", "lb"]
+      },
+```
+
+The parameters for the "bit_static_value" function are:
+- "servicedata" or "manufacturerdata" Extract the value from the specified data.
+- 1, the index of the data source where the value exists.
+- 0, the bit position from 0-3.
+- The return value for bit state 0.
+- The return value for bit state 1.
 
 `post_proc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the "/" divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations.  
 
