@@ -18,7 +18,7 @@ const char* _SBMT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"
          "post_proc":["+", ".cal", "*", -1]
       },
       "_tempc":{
-          "condition":["servicedata", 8, "bit", 3, 1],
+         "condition":["servicedata", 8, "bit", 3, 1],
          "decoder":["value_from_hex_data", "servicedata", 8, 2, true, false],
          "post_proc":["+", ".cal", "-", 128]
       },
