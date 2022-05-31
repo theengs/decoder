@@ -4,9 +4,9 @@
 |-|-|
 |Brand|BlueMaestro|
 |Model|TempoDisc|
-|Short Description|Temperature, humidity and due point with voltage, IP42|
+|Short Description|Temperature, humidity and dew point with voltage, IP42|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|CR2032|
-|Exchanged data|temperature, humidity, duepoint, voltage|
+|Exchanged data|temperature, humidity, dew point, voltage|
 |Encrypted|No|
