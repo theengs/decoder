@@ -81,7 +81,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":24.3,\"tempf\":75.74,\"hum\":53.49,\"pres\":1000.44,\"accx\":0.004,\"accy\":-0.004,\"accz\":1.036,\"volt\":2.977,\"tx\":4,\"mov\":66,\"seq\":205}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":163.835,\"tempf\":326.903,\"hum\":163.8350,\"pres\":1155.34,\"accx\":32.767,\"accy\":32.767,\"accz\":32.767,\"volt\":3.646,\"tx\":20,\"mov\":254,\"seq\":65534}",
     "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tempc\":-163.835,\"tempf\":-262.903,\"hum\":0,\"pres\":500,\"accx\":-32.767,\"accy\":-32.767,\"accz\":-32.767,\"volt\":1.6,\"tx\":-40,\"mov\":0,\"seq\":0}",
-    "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"tempc\":23.9,\"tempf\":75.02,\"dp\":10.8,\"hum\":43.5,\"volt\":2.56}",
+    "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"tempc\":23.9,\"tempf\":75.02,\"hum\":43.5,\"tempc2_dp\":10.8,\"tempf2_dp\":51.44,\"volt\":2.56}",
     "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
     "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
 };
