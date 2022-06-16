@@ -121,6 +121,10 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":25.8,\"tempf\":78.44,\"hum\":59,\"batt\":58}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":-25.3,\"tempf\":-13.54,\"hum\":56,\"batt\":58}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":26,\"tempf\":78.8,\"hum\":56,\"batt\":58}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95}",
 };
 
 // Service data test input [test name] [data]
@@ -330,6 +334,10 @@ const char* test_uuid[][4] = {
     {"Switchbot_Meter", "fd3d", "servicedata", "6900ba08993b"},
     {"Switchbot_Meter", "fd3d", "servicedata", "6900ba031938"},
     {"Switchbot_Meter", "fd3d", "servicedata", "6900ba009ab8"},
+    {"bParasite", "181a", "servicedata", "10c30c1c6400e6667fffaabbccddeeff"},
+    {"bParasite", "181a", "servicedata", "11c30b8658aca6666b85aabbccddeeff30d4"},
+    {"bParasite", "181a", "servicedata", "20c30c1c0a00e6667fffaabbccddeeff"},
+    {"bParasite", "181a", "servicedata", "21c30b8608dea6666b85aabbccddeeff30d4"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -363,6 +371,10 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::SBMT,
   TheengsDecoder::BLE_ID_NUM::SBMT,
   TheengsDecoder::BLE_ID_NUM::SBMT,
+  TheengsDecoder::BLE_ID_NUM::BPARASITE,
+  TheengsDecoder::BLE_ID_NUM::BPARASITE,
+  TheengsDecoder::BLE_ID_NUM::BPARASITE,
+  TheengsDecoder::BLE_ID_NUM::BPARASITE,
 };
 
 template <typename T>
