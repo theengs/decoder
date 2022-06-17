@@ -87,6 +87,7 @@ public:
     MS_CDP,
     GAEN,
     HHCCPOT002,
+    BPARASITE,
     BLE_ID_MAX
   };
 

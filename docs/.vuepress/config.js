@@ -34,6 +34,7 @@ module.exports = {
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
             'devices/BM_V23',
+            'devices/BPARASITE',
             'devices/CGD1',
             'devices/CGP1W',
             'devices/GAEN',
