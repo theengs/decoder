@@ -67,10 +67,13 @@ This will match if the service data at index 0 is "0804" `OR` "8804".
 This will result in a positive detection if the service data at index `0` == `0x1234` and the service data at index `5` == `0x5678`, otherwise, if the service data at index `30` == `0xabcd`, the result will also be positive.
 
 ::: warning Note
-Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.  
-The above example could be re-written as:  
-`"condition": ["servicedata", "index", 30, "abcd", "|", "servicedata", "index", 0, "1234", "&" "servicedata", "index", 5, "5678"]`  
-Which has the same result, without nesting.
+Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.
+It should only be used if absolutely necessary, as in the above example.
+If all the conditions in an array bracket are chained with "|", as in
+`"condition": [["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef"], "&", "servicedata", "index", 5, "1212"]`
+this could be re-written as
+`"condition": ["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef", "&", "servicedata", "index", 5, "1212"]`  
+making sure the additional AND condition is at the end. This has the same result, without nesting.
 :::
 
 `condition` NOT(!) testing; Anytime a condition test value is preceded by a "!", the inverse of the result will be used to determine the result.  
@@ -113,10 +116,13 @@ If the condition is met the data will be decoded and added to the JsonObject.
 This will result in a positive detection if the service data at index `25` == `4` and the service data at index `26` == `5`, otherwise, if the service data at index `30` == `0xabcd`, the result will also be positive.
 
 ::: warning Note
-Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.  
-The above example could be re-written as:  
-`"condition": ["servicedata", 30, "abcd", "|", "servicedata", 25, "4", "&" "servicedata", 5, "5"]`  
-Which has the same result, without nesting.
+Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.
+It should only be used if absolutely necessary, as in the above example.
+If all the conditions in an array bracket are chained with "|", as in
+`"condition": [["servicedata", 20, "5", "|", "servicedata", 20, "6"], "&", "servicedata", 30, "a"]`
+this could be re-written as
+`"condition": ["servicedata", 20 , "5", "|", "servicedata", 20, "6", "&", "servicedata", 30, "a"]`  
+making sure the additional AND condition is at the end. This has the same result, without nesting.
 :::
 
 Property conditions also allow for a NOT comparison, as in
