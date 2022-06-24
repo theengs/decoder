@@ -232,9 +232,9 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
 
       if (strstr(cond_str, "contain") != nullptr) {
         if (strstr(cmp_str, condition[++i].as<const char*>()) != nullptr) {
-          match = true;
+          match = (strstr(cond_str, "not_") != nullptr) ? false : true;
         } else {
-          match = false;
+          match = (strstr(cond_str, "not_") != nullptr) ? true : false;
         }
         i++;
       } else if (strstr(cond_str, "index") != nullptr) {

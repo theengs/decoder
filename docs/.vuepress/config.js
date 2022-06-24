@@ -35,6 +35,7 @@ module.exports = {
           children: [
             'devices/BM_V23',
             'devices/BPARASITE',
+            'devices/BM2',
             'devices/CGD1',
             'devices/CGP1W',
             'devices/GAEN',

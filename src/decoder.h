@@ -88,6 +88,7 @@ public:
     GAEN,
     HHCCPOT002,
     BPARASITE,
+    BM2,
     BLE_ID_MAX
   };
 
