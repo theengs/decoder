@@ -84,7 +84,6 @@ const char* _devices[][2] = {
     {_TPMS_json, _TPMS_json_props},
     {_LYWSD03MMC_ATC_json, _LYWSD03MMC_ATC_props},
     {_CGPR1_json, _CGPR1_json_props},
-    {_ibeacon_json, _ibeacon_json_props},
     {_WS02_json, _WS02_json_props},
     {_WS08_json, _WS08_json_props},
     {_H5055_json, _H5055_json_props},
@@ -108,4 +107,5 @@ const char* _devices[][2] = {
     {_HHCCPOT002_json, _HHCCPOT002_json_props},
     {_BPARASITE_json, _BPARASITE_json_props},
     {_BM2_json, _BM2_json_props},
+    {_ibeacon_json, _ibeacon_json_props},
 };

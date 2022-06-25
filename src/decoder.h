@@ -66,7 +66,6 @@ public:
     TPMS,
     LYWSD03MMC_ATC,
     CGPR1,
-    IBEACON,
     WS02,
     WS08,
     H5055,
@@ -90,6 +89,7 @@ public:
     HHCCPOT002,
     BPARASITE,
     BM2,
+    IBEACON,
     BLE_ID_MAX
   };
 

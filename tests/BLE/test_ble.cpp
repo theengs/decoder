@@ -540,7 +540,9 @@ int main() {
       serializeJson(doc_exp, std::cout);
       std::cout << std::endl;
     } else {
-      std::cout << "FAILED! Error parsing: " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
+      std::cout << "FAILED! Error parsing: " << test_mfgdata[i][0]
+                << " : " << test_mfgdata[i][1] << " : "
+                << test_mfgdata[i][2] << "decode res: " << decode_res << std::endl;
       return 1;
     }
   }
