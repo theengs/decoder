@@ -31,7 +31,7 @@ const char* _ibeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"iBeacon\",\"mode
    }
 })"""";*/
 
-const char* _ibeacon_json_props = "{\"properties\":{\"mfid\":{\"unit\":\"hex\",\"name\":\"manufacturer id\"},\"uuid\":{\"unit\":\"hex\",\"name\":\"service uuid\"},\"major\":{\"unit\":\"hex\",\"name\":\"major value\"},\"minor\":{\"unit\":\"hex\",\"name\":\"minor value\"},\"power\":{\"unit\":\"int\",\"name\":\"tx power\"},\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"}}}";
+const char* _ibeacon_json_props = "{\"properties\":{\"mfid\":{\"unit\":\"hex\",\"name\":\"manufacturer id\"},\"uuid\":{\"unit\":\"hex\",\"name\":\"service uuid\"},\"major\":{\"unit\":\"hex\",\"name\":\"major value\"},\"minor\":{\"unit\":\"hex\",\"name\":\"minor value\"},\"power\":{\"unit\":\"dBm\",\"name\":\"tx power\"},\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"}}}";
 /*R""""(
 {
    "properties":{
@@ -52,7 +52,7 @@ const char* _ibeacon_json_props = "{\"properties\":{\"mfid\":{\"unit\":\"hex\",\
          "name":"minor value"
       },
       "power":{
-         "unit":"int",
+         "unit":"dBm",
          "name":"tx power"
       },
       "volt":{
