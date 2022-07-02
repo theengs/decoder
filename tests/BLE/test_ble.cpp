@@ -90,7 +90,7 @@ const char* expected_mfg[] = {
 
 const char* expected_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":9101,\"act_bpm\":125}",
-    "{\"brand\":\"RadioLand\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.02,\"accy\":0.01,\"accz\":0.97}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.02,\"accy\":0.01,\"accz\":0.97}",
 };
 
 const char* expected_uuid[] = {
