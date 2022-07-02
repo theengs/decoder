@@ -89,6 +89,7 @@ public:
     HHCCPOT002,
     BPARASITE,
     BM2,
+    RDL52832,
     BLE_ID_MAX
   };
 

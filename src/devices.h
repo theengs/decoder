@@ -47,6 +47,7 @@
 #include "devices/MUE4094RT_json.h"
 #include "devices/Miband_json.h"
 #include "devices/Mokobeacon_json.h"
+#include "devices/RDL52832_json.h"
 #include "devices/RuuviTag_RAWv1_json.h"
 #include "devices/RuuviTag_RAWv2_json.h"
 #include "devices/SBMT_json.h"
@@ -106,4 +107,5 @@ const char* _devices[][2] = {
     {_HHCCPOT002_json, _HHCCPOT002_json_props},
     {_BPARASITE_json, _BPARASITE_json_props},
     {_BM2_json, _BM2_json_props},
+    {_RDL52832_json, _RDL52832_json_props},
 };
