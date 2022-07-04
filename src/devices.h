@@ -57,7 +57,7 @@
 #include "devices/XMTZC04HM_json.h"
 #include "devices/XMTZC05HM_json.h"
 #include "devices/iBeacon_json.h"
-#include "devices/iNode_json.h"
+#include "devices/iNodeEM_json.h"
 #include "devices/BM_V23_json.h"
 #include "devices/BPARASITE_json.h"
 #include "devices/BM2_json.h"
@@ -94,7 +94,7 @@ const char* _devices[][2] = {
     {_MUE4094RT_json, _MUE4094RT_json_props},
     {_Mokobeacon_json, _Mokobeacon_json_props},
     {_MBXPRO_json, _MBXPRO_json_props},
-    {_iNode_json, _iNode_json_props},
+    {_iNodeEM_json, _iNodeEM_json_props},
     {_IBT_2X_json, _IBT_2X_json_props},
     {_RuuviTag_RAWv1_json, _RuuviTag_RAWv1_json_props},
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},

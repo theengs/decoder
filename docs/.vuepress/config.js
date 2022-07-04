@@ -50,7 +50,7 @@ module.exports = {
             'devices/IBT_6XS',
             'devices/IBT_2X',
             'devices/SOLIS_6',
-            'devices/iNode',
+            'devices/iNodeEM',
             'devices/JQJCY01YM',
             'devices/MS_CDP',
             'devices/MokoBeacon',
