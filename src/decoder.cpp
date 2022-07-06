@@ -232,9 +232,9 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
 
       if (strstr(cond_str, "contain") != nullptr) {
         if (strstr(cmp_str, condition[++i].as<const char*>()) != nullptr) {
-          match = (strstr(cond_str, "not_") != nullptr) ? false : true;
+          match = true; // (strstr(cond_str, "not_") != nullptr) ? false : true;
         } else {
-          match = (strstr(cond_str, "not_") != nullptr) ? true : false;
+          match = false; // (strstr(cond_str, "not_") != nullptr) ? true : false;
         }
         i++;
       } else if (strstr(cond_str, "index") != nullptr) {
@@ -340,7 +340,7 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
         if (strstr((const char*)prop_condition[i + 2], "bit") != nullptr) {
           char ch = *(data_src + prop_condition[i + 1].as<int>());
           uint8_t data = getBinaryData(ch);
-        
+
           uint8_t shift = prop_condition[i + 3].as<uint8_t>();
           uint8_t val = prop_condition[i + 4].as<uint8_t>();
           if (((data >> shift) & 0x01) == val) {
