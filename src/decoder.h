@@ -66,7 +66,6 @@ public:
     TPMS,
     LYWSD03MMC_ATC,
     CGPR1,
-    IBEACON,
     WS02,
     WS08,
     H5055,
@@ -77,10 +76,11 @@ public:
     MUE4094RT,
     MOKOBEACON,
     MOKOBEACONXPRO,
-    INODE_EM,
+    INODEEM,
     IBT_2X,
     RUUVITAG_RAWV1,
     RUUVITAG_RAWV2,
+    SBCU,
     SBMT,
     SBS1,
     BM_V23,
@@ -90,6 +90,7 @@ public:
     BPARASITE,
     BM2,
     RDL52832,
+    IBEACON,
     BLE_ID_MAX
   };
 

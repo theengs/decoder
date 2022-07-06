@@ -50,6 +50,7 @@
 #include "devices/RDL52832_json.h"
 #include "devices/RuuviTag_RAWv1_json.h"
 #include "devices/RuuviTag_RAWv2_json.h"
+#include "devices/SBCU_json.h"
 #include "devices/SBMT_json.h"
 #include "devices/SBS1_json.h"
 #include "devices/TPMS_json.h"
@@ -58,7 +59,7 @@
 #include "devices/XMTZC04HM_json.h"
 #include "devices/XMTZC05HM_json.h"
 #include "devices/iBeacon_json.h"
-#include "devices/iNode_json.h"
+#include "devices/iNodeEM_json.h"
 #include "devices/BM_V23_json.h"
 #include "devices/BPARASITE_json.h"
 #include "devices/BM2_json.h"
@@ -84,7 +85,6 @@ const char* _devices[][2] = {
     {_TPMS_json, _TPMS_json_props},
     {_LYWSD03MMC_ATC_json, _LYWSD03MMC_ATC_props},
     {_CGPR1_json, _CGPR1_json_props},
-    {_ibeacon_json, _ibeacon_json_props},
     {_WS02_json, _WS02_json_props},
     {_WS08_json, _WS08_json_props},
     {_H5055_json, _H5055_json_props},
@@ -95,10 +95,11 @@ const char* _devices[][2] = {
     {_MUE4094RT_json, _MUE4094RT_json_props},
     {_Mokobeacon_json, _Mokobeacon_json_props},
     {_MBXPRO_json, _MBXPRO_json_props},
-    {_iNode_json, _iNode_json_props},
+    {_iNodeEM_json, _iNodeEM_json_props},
     {_IBT_2X_json, _IBT_2X_json_props},
     {_RuuviTag_RAWv1_json, _RuuviTag_RAWv1_json_props},
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},
+    {_SBCU_json, _SBCU_json_props},
     {_SBMT_json, _SBMT_json_props},
     {_SBS1_json, _SBS1_json_props},
     {_BM_V23_json, _BM_V23_json_props},
@@ -108,4 +109,5 @@ const char* _devices[][2] = {
     {_BPARASITE_json, _BPARASITE_json_props},
     {_BM2_json, _BM2_json_props},
     {_RDL52832_json, _RDL52832_json_props},
+    {_ibeacon_json, _ibeacon_json_props},
 };

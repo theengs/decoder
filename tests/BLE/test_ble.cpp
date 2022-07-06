@@ -64,10 +64,16 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrometer\",\"model_id\":\"H5102\",\"tempc\":21.9,\"tempf\":71.42,\"hum\":40.6,\"batt\":100}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4XS\",\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4XS\",\"tempc\":26,\"tempf\":78.8,\"tempc3\":60,\"tempf3\":140,\"tempc4\":53,\"tempf4\":127.4}",
-    "{\"brand\":\"Inkbird\",\"model\":\"T Sensor\",\"model_id\":\"IBS-TH2\",\"tempc\":26.62,\"tempf\":79.916,\"batt\":89}",
-    "{\"brand\":\"Inkbird\",\"model\":\"T Sensor\",\"model_id\":\"IBS-TH2\",\"tempc\":-11.62,\"tempf\":11.084,\"batt\":89}",
-    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":2376,\"energy\":21.2928,\"batt\":80}",
-    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"power\":5304,\"energy\":18.8804,\"batt\":80}",
+    "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"model_id\":\"IBS-TH2/P01B\",\"tempc\":26.62,\"tempf\":79.916,\"hum\":53.79,\"batt\":89}",
+    "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"model_id\":\"IBS-TH2/P01B\",\"tempc\":-11.62,\"tempf\":11.084,\"hum\":53.79,\"batt\":89}",
+    "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"model_id\":\"IBS-TH2/P01B\",\"tempc\":26.92,\"tempf\":80.456,\"batt\":0}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"avg\":2.376,\"avgu\":\"kW\",\"sum\":21.2928,\"sumu\":\"kWh\",\"batt\":70}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"avg\":2.376,\"avgu\":\"kW\",\"sum\":21.2928,\"sumu\":\"kWh\",\"batt\":10,\"lowbatt\":true}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"avg\":2.376,\"avgu\":\"kW\",\"sum\":21.2928,\"sumu\":\"kWh\",\"batt\":100}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"avg\":2.376,\"avgu\":\"kW\",\"sum\":21.2928,\"sumu\":\"kWh\",\"batt\":100}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"avg\":5.304,\"avgu\":\"kW\",\"sum\":18.8804,\"sumu\":\"kWh\",\"batt\":50}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"avg\":0.900545785,\"avgu\":\"m³\",\"sum\":8.070345664,\"sumu\":\"m³\",\"batt\":60}",
+    "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"avg\":2.010309278,\"avgu\":\"m³\",\"sum\":7.156003639,\"sumu\":\"m³\",\"batt\":20,\"lowbatt\":true}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc\":28,\"tempf\":82.4,\"tempc2\":32,\"tempf2\":89.6}",
     "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X\",\"tempc2\":65,\"tempf2\":149}",
@@ -124,10 +130,14 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":25.8,\"tempf\":78.44,\"hum\":59,\"batt\":58}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":-25.3,\"tempf\":-13.54,\"hum\":56,\"batt\":58}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":26,\"tempf\":78.8,\"hum\":56,\"batt\":58}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":25,\"tempf\":77,\"hum\":56,\"batt\":84}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tempc\":25,\"tempf\":77,\"hum\":56,\"batt\":84}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"motion\":false,\"position\":25,\"calibrated\":true,\"lightlevel\":7,\"batt\":76}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"motion\":true,\"position\":25,\"calibrated\":false,\"lightlevel\":10,\"batt\":85}",
 };
 
 // Service data test input [test name] [data]
@@ -238,8 +248,14 @@ const char* test_mfgdata[][3] = {
     {"IBT-4XS", "iBBQ", "0000000010082c40abe60401f6ff58021202"},
     {"Inkbird TH2", "tps", "660a03150110805908"},
     {"Inkbird TH2", "tps", "76fb03150110805908"},
-    {"iNode", "test1", "90826300f0cf0000c409a20080"},
-    {"iNode", "test2", "9082dd0061b80000c409a00080"},
+    {"Inkbird P01B", "tps", "840affff00a6060008"},
+    {"iNodeEM", "electricity", "90826300f0cf0000c409820080"},
+    {"iNodeEM", "electricity", "94826300f0cf0000c409260080"},
+    {"iNodeEM", "electricity", "90826300f0cf0000c409b60080"},
+    {"iNodeEM", "electricity", "92826300f0cf0000c409160080"},
+    {"iNodeEM", "electricity", "9082dd0061b80000c4096b0080"},
+    {"iNodeEM", "water", "90826300f0cf0000c419760080"},
+    {"iNodeEM", "water", "9682dd0061b80000c4193b0080"},
     {"IBT-2X", "iBBQ", "00000000fc45c30c458ee600e600"},
     {"IBT-2X", "iBBQ", "00000000fc45c30c458e18014001"},
     {"IBT-2X", "iBBQ", "00000000fc45c30c458ef6ff8a02"},
@@ -278,8 +294,14 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::IBT4XS,
   TheengsDecoder::BLE_ID_NUM::IBSTH2,
   TheengsDecoder::BLE_ID_NUM::IBSTH2,
-  TheengsDecoder::BLE_ID_NUM::INODE_EM,
-  TheengsDecoder::BLE_ID_NUM::INODE_EM,
+  TheengsDecoder::BLE_ID_NUM::IBSTH2,
+  TheengsDecoder::BLE_ID_NUM::INODEEM,
+  TheengsDecoder::BLE_ID_NUM::INODEEM,
+  TheengsDecoder::BLE_ID_NUM::INODEEM,
+  TheengsDecoder::BLE_ID_NUM::INODEEM,
+  TheengsDecoder::BLE_ID_NUM::INODEEM,
+  TheengsDecoder::BLE_ID_NUM::INODEEM,
+  TheengsDecoder::BLE_ID_NUM::INODEEM,
   TheengsDecoder::BLE_ID_NUM::IBT_2X,
   TheengsDecoder::BLE_ID_NUM::IBT_2X,
   TheengsDecoder::BLE_ID_NUM::IBT_2X,
@@ -340,13 +362,17 @@ const char* test_uuid[][4] = {
     {"Switchbot_S1", "0d00", "servicedata", "48d0db"},
     {"Switchbot_S1", "0d00", "servicedata", "4890cc"},
     {"Switchbot_S1", "0d00", "servicedata", "48005b"},
-    {"Switchbot_Meter", "fd3d", "servicedata", "6900ba08993b"},
-    {"Switchbot_Meter", "fd3d", "servicedata", "6900ba031938"},
-    {"Switchbot_Meter", "fd3d", "servicedata", "6900ba009ab8"},
+    {"Switchbot_Meter_Plus", "fd3d", "servicedata", "6900ba08993b"},
+    {"Switchbot_Meter_Plus", "fd3d", "servicedata", "6900ba031938"},
+    {"Switchbot_Meter_Plus", "fd3d", "servicedata", "6900ba009ab8"},
+    {"Switchbot_Meter", "0d00", "servicedata", "540054009938"},
+    {"Switchbot_Meter", "0d00", "servicedata", "5400d40099b8"},
     {"bParasite", "181a", "servicedata", "10c30c1c6400e6667fffaabbccddeeff"},
     {"bParasite", "181a", "servicedata", "11c30b8658aca6666b85aabbccddeeff30d4"},
     {"bParasite", "181a", "servicedata", "20c30c1c0a00e6667fffaabbccddeeff"},
     {"bParasite", "181a", "servicedata", "21c30b8608dea6666b85aabbccddeeff30d4"},
+    {"Switchbot_Curtain", "0d00", "servicedata", "63c04c1970"},
+    {"Switchbot_Curtain", "0d00", "servicedata", "63805599a0"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -380,10 +406,14 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::SBMT,
   TheengsDecoder::BLE_ID_NUM::SBMT,
   TheengsDecoder::BLE_ID_NUM::SBMT,
+  TheengsDecoder::BLE_ID_NUM::SBMT,
+  TheengsDecoder::BLE_ID_NUM::SBMT,
   TheengsDecoder::BLE_ID_NUM::BPARASITE,
   TheengsDecoder::BLE_ID_NUM::BPARASITE,
   TheengsDecoder::BLE_ID_NUM::BPARASITE,
   TheengsDecoder::BLE_ID_NUM::BPARASITE,
+  TheengsDecoder::BLE_ID_NUM::SBCU,
+  TheengsDecoder::BLE_ID_NUM::SBCU,
 };
 
 template <typename T>
@@ -513,7 +543,9 @@ int main() {
       serializeJson(doc_exp, std::cout);
       std::cout << std::endl;
     } else {
-      std::cout << "FAILED! Error parsing: " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
+      std::cout << "FAILED! Error parsing: " << test_mfgdata[i][0]
+                << " : " << test_mfgdata[i][1] << " : "
+                << test_mfgdata[i][2] << "decode res: " << decode_res << std::endl;
       return 1;
     }
   }
