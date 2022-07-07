@@ -50,6 +50,7 @@
 #include "devices/RDL52832_json.h"
 #include "devices/RuuviTag_RAWv1_json.h"
 #include "devices/RuuviTag_RAWv2_json.h"
+#include "devices/SBCS_json.h"
 #include "devices/SBCU_json.h"
 #include "devices/SBMS_json.h"
 #include "devices/SBMT_json.h"
@@ -100,6 +101,7 @@ const char* _devices[][2] = {
     {_IBT_2X_json, _IBT_2X_json_props},
     {_RuuviTag_RAWv1_json, _RuuviTag_RAWv1_json_props},
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},
+    {_SBCS_json, _SBCS_json_props},
     {_SBCU_json, _SBCU_json_props},
     {_SBMS_json, _SBMS_json_props},
     {_SBMT_json, _SBMT_json_props},

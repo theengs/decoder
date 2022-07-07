@@ -80,6 +80,7 @@ public:
     IBT_2X,
     RUUVITAG_RAWV1,
     RUUVITAG_RAWV2,
+    SBCS,
     SBCU,
     SBMS,
     SBMT,

@@ -61,6 +61,7 @@ module.exports = {
             'devices/RDL52832',
             'devices/RuuviTag_RAWv1',
             'devices/RuuviTag_RAWv2',
+            'devices/SBCS',
             'devices/SBCU',
             'devices/SBMS',
             'devices/SBMT',
