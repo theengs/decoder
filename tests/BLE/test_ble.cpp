@@ -5,11 +5,6 @@
 #include "decoder.h"
 
 const char* expected_servicedata[] = {
-    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"lux\":9971}",
-    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"moi\":30}",
-    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
-    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"fer\":0}",
-    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"tempc\":26,\"tempf\":78.8,\"hum\":61.4}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"hum\":61.4}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"batt\":81}",
@@ -138,15 +133,15 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\",\"model_id\":\"LYWSD02\",\"hum\":69}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\",\"model_id\":\"LYWSD02\",\"tempc\":26.5,\"tempf\":79.7}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Cleargrass clock\",\"model_id\":\"LYWSD02\",\"batt\":8}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"lux\":9971}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"moi\":30}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"fer\":0}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tempc\":32,\"tempf\":89.6}",
 };
 
 // Service data test input [test name] [data]
 const char* test_servicedata[][2] = {
-    {"Mi flora", "712098004a63b6658d7cc40d071003f32600"},
-    {"Mi flora", "712098005763b6658d7cc40d0810011e"},
-    {"Mi flora", "712098000163b6658d7cc40d0410024001"},
-    {"Mi flora", "712098000863b6658d7cc40d0910020000"},
-    {"VegTrug flora", "712098000163b6658d7cc40d0410024001"},
     {"Mi jia round sensor", "5020aa0137dfaa33342d580d100404016602"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580610026602"},
     {"Mi jia round sensor", "5020aa0155aabbccddeeff0a100151"},
@@ -183,11 +178,6 @@ const char* test_servicedata[][2] = {
 };
 
 TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
-  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
-  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
-  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
-  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
-  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
@@ -369,6 +359,11 @@ const char* test_uuid[][4] = {
     {"Cleargrass clock", "fe95", "servicedata", "70205b04dc6ab883c8593f09061002b202"},
     {"Cleargrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020901"},
     {"Cleargrass clock", "fe95", "servicedata", "70205b04859638b1002ee7090a100108"},
+    {"Mi flora", "fe95", "servicedata", "712098004a63b6658d7cc40d071003f32600"},
+    {"Mi flora", "fe95", "servicedata", "712098005763b6658d7cc40d0810011e"},
+    {"Mi flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
+    {"Mi flora", "fe95", "servicedata", "712098000863b6658d7cc40d0910020000"},
+    {"VegTrug flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -414,6 +409,11 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::LYWSD02,
   TheengsDecoder::BLE_ID_NUM::LYWSD02,
   TheengsDecoder::BLE_ID_NUM::LYWSD02,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
+  TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
 };
 
 template <typename T>
