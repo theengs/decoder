@@ -363,7 +363,7 @@ const char* test_uuid[][4] = {
     {"Mi flora", "fe95", "servicedata", "712098005763b6658d7cc40d0810011e"},
     {"Mi flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
     {"Mi flora", "fe95", "servicedata", "712098000863b6658d7cc40d0910020000"},
-    {"VegTrug flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
+    {"VegTrug flora", "fe95", "servicedata", "7120bc030163b6658d7cc40d0410024001"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
