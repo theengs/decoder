@@ -8,9 +8,6 @@ const char* test_servicedata[][2] = {
     {"Mi flora", "712098005763b6658d7cc40d0810011e"},
     {"Mi flora", "712098000163b6658d7cc40d0410024001"},
     {"Mi flora", "712098000863b6658d7cc40d0910020000"},
-    {"Cleargrass clock", "70205b04756ab883c8593f090410020001"},
-    {"Cleargrass clock", "70205b04dc6ab883c8593f09061002b202"},
-    {"Cleargrass clock", "70205b04756ab883c8593f090410020901"},
     {"Mi jia round sensor", "5020aa0137dfaa33342d580d100404016602"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580610026602"},
     {"Cleargrass THP sensor", "08094c0140342d5801040801870207024f2702015c"},
@@ -41,9 +38,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
     TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
     TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
-    TheengsDecoder::BLE_ID_NUM::LYWSD02,
-    TheengsDecoder::BLE_ID_NUM::LYWSD02,
-    TheengsDecoder::BLE_ID_NUM::LYWSD02,
     TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
     TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
     TheengsDecoder::BLE_ID_NUM::CGP1W,
@@ -85,12 +79,18 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
+    {"Cleargrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020001"},
+    {"Cleargrass clock", "fe95", "servicedata", "70205b04dc6ab883c8593f09061002b202"},
+    {"Cleargrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020901"},
     {"SHOULD FAIL", "fa11", "servicedata", "123456789ABCDEF"},
     {"SHOULD FAIL", "0x181d", "servicedata", "f2a22bb2070103003526"}
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::MIBAND,
+    TheengsDecoder::BLE_ID_NUM::LYWSD02,
+    TheengsDecoder::BLE_ID_NUM::LYWSD02,
+    TheengsDecoder::BLE_ID_NUM::LYWSD02,
     TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
     TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
 };
