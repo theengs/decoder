@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|2 CR2032|
-|Exchanged data|humidity, temperature|
+|Exchanged data|humidity, temperature, battery|
 |Encrypted|No|
