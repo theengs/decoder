@@ -89,6 +89,7 @@ public:
     HHCCPOT002,
     BPARASITE,
     BM2,
+    RDL52832,
     IBEACON,
     BLE_ID_MAX
   };
@@ -105,7 +106,7 @@ private:
                                const char* dev_name, const char* svc_uuid);
   std::string sanitizeJsonKey(const char* key_in);
 
-  size_t m_docMax = 7168;
+  size_t m_docMax = 12288;
   size_t m_minSvcDataLen = 20;
   size_t m_minMfgDataLen = 16;
 };

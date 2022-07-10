@@ -88,6 +88,9 @@ const char* expected_mfg[] = {
 
 const char* expected_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Miband\",\"model_id\":\"MiBand\",\"steps\":9101,\"act_bpm\":125}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.02,\"accy\":0.01,\"accz\":0.97}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":0.14,\"accy\":0.09,\"accz\":-0.98}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":0.2,\"accy\":-0.96,\"accz\":0.15}",
 };
 
 const char* expected_uuid[] = {
@@ -309,10 +312,16 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
 const char* test_uuid_mfgsvcdata[][4] = {
     {"MiBand", "fee0", "57010202017dffffffffffffffffffffffffff02de7b8490725c2", "8d230000"},
+    {"RDL52832", "0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
+    {"RDL52832", "0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
+    {"RDL52832", "0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_mfgsvcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::MIBAND,
+  TheengsDecoder::BLE_ID_NUM::RDL52832,
+  TheengsDecoder::BLE_ID_NUM::RDL52832,
+  TheengsDecoder::BLE_ID_NUM::RDL52832,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
