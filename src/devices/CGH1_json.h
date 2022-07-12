@@ -17,11 +17,12 @@ const char* _CGH1_json = "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"mo
    }
 })"""";*/
 
-const char* _CGH1_json_props = "{\"properties\":{\"open\":{\"name\":\"door\"}}}";
+const char* _CGH1_json_props = "{\"properties\":{\"open\":{\"unit\":\"status\",\"name\":\"door\"}}}";
 /*R""""(
 {
    "properties":{
       "open":{
+         "unit":"status",
          "name":"door"
       }
    }
