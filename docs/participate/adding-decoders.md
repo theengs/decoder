@@ -42,13 +42,13 @@ Each device must provide a `brand`, `model`, `model_id`, `condition`, and `prope
 - `model_id` = model id number of the device.
 
 ### Condition
-`condition` is a JSON array, which must contain as the first parameter, the data source to test for the condtion. Valid inputs are:
+`condition` is a JSON array, which must contain as the first parameter, the data source to test for the condition. Valid inputs are:
 - "servicedata"
 - "manufacturerdata"
 - "name"
 - "uuid"
 
-The second parameter is variable. If required, further qualification can be made by setting a conditional data length in the case of "servicedata" or "manufacturerdata" as the first condition. This is an operator in the form of `">" , ">=" , "=" , "<" , "<="` followed by the third parameter being a numeric value that specifies the length of the data to accept. If no data length is defined the second paramater must indicate how the data should be tested. Valid inputs are:
+The second parameter is variable. If required, further qualification can be made by setting a conditional data length in the case of "servicedata" or "manufacturerdata" as the first condition. This is an operator in the form of `">" , ">=" , "=" , "<" , "<="` followed by the third parameter being a numeric value that specifies the length of the data to accept. If no data length is defined the second parameter must indicate how the data should be tested. Valid inputs are:
 - "contain" tests if the specified value (see below) exists the data source 
 - "index" tests if the specified value exists at the index location (see below) in the data source
 
@@ -58,7 +58,7 @@ Examples:
 
 The third parameter (fifth if data length is specified) can be either the index value or the data value to find. If the second (fourth if data length specified) parameter is `contain`, the next parameter should be the value to look for in the data source. If the second (fourth if data length specified) parameter is `index`, the next parameter should be the location in the data source to look for the value.
 
-`condition` can have multiple conditions chanined together using "|" and "&" between them.  
+`condition` can have multiple conditions chained together using "|" and "&" between them.  
 For example: `"condition":["servicedata", "index", 0, "0804", "|", "servicedata", "index", 0, "8804"]`  
 This will match if the service data at index 0 is "0804" `OR` "8804".
 
