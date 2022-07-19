@@ -4,7 +4,7 @@
 |-|-|
 |Brand|Xiaomi|
 |Model|Formaldehyde detector|
-|Short Description|Homeywell formaldehyde monitor|
+|Short Description|Honeywell formaldehyde monitor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|2 AA|
