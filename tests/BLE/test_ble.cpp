@@ -85,6 +85,12 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"batt\":100}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"batt\":68}",
+    "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tempc\":34.210289,\"tempf\":93.5785202,\"hum\":100,\"shake\":false,\"shake_count\":82,\"volt\":2.952,\"wake\":true}",
+    "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tempc\":21.97295189,\"tempf\":71.5513134,\"hum\":97.91998291,\"shake\":true,\"shake_count\":8,\"volt\":2.951,\"wake\":true}",
+    "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tempc\":31.79714203,\"tempf\":89.23485565,\"hum\":99.49163818,\"shake\":false,\"shake_count\":51,\"volt\":2.956,\"wake\":true}",
+    "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tempc\":29.57704544,\"tempf\":85.23868179,\"hum\":55.99645996,\"shake\":false,\"shake_count\":74,\"volt\":2.929,\"wake\":true}",
+    "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tempc\":29.57704544,\"tempf\":85.23868179,\"hum\":55.99645996,\"shake\":false,\"shake_count\":74,\"volt\":2.929,\"wake\":false}",
+    "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tempc\":29.57704544,\"tempf\":85.23868179,\"hum\":55.99645996,\"shake\":false,\"shake_count\":74,\"volt\":2.929,\"wake\":false}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -268,6 +274,12 @@ const char* test_mfgdata[][3] = {
     {"SOLIS_6", "iBBQ", "000000000cb2b71b5b18c800c800f6ffd200f6fff6ff"},
     {"BM2", "Battery Monitor", "4c000215655f83caae16a10a702e31f30d58dd82f644000064"},
     {"BM2", "Battery Monitor", "4c000215655f83caae16a10a702e31f30d58dd82f441423144"},
+    {"SmartDry", "Laundry Sensor", "ae0156d708420000c84252006907"},
+    {"SmartDry", "Laundry Sensor", "ae019bc8af4108d7c34208016807"},
+    {"SmartDry", "Laundry Sensor", "ae018c60fe41b8fbc64233006d07"},
+    {"SmartDry", "Laundry Sensor", "ae01ca9dec4160fc5f424a005207"},
+    {"SmartDry", "Laundry Sensor", "ae01ca9dec4160fc5f424a005200"},
+    {"SmartDry", "Laundry Sensor", "ae01ca9dec4160fc5f424a005206"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -315,6 +327,12 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::IBT6XS_SOLIS,
   TheengsDecoder::BLE_ID_NUM::BM2,
   TheengsDecoder::BLE_ID_NUM::BM2,
+  TheengsDecoder::BLE_ID_NUM::SMARTDRY,
+  TheengsDecoder::BLE_ID_NUM::SMARTDRY,
+  TheengsDecoder::BLE_ID_NUM::SMARTDRY,
+  TheengsDecoder::BLE_ID_NUM::SMARTDRY,
+  TheengsDecoder::BLE_ID_NUM::SMARTDRY,
+  TheengsDecoder::BLE_ID_NUM::SMARTDRY,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]

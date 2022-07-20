@@ -85,6 +85,7 @@ public:
     SBMS,
     SBMT,
     SBS1,
+    SMARTDRY,
     BM_V23,
     MS_CDP,
     GAEN,
@@ -98,8 +99,8 @@ public:
 
 private:
   void        reverse_hex_data(const char* in, char* out, int l);
-  double      value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true);
-  double      bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true);
+  double      value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
+  double      bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
   bool        data_index_is_valid(const char* str, size_t index, size_t len);
   int         data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int idx);
   uint8_t     getBinaryData(char ch);
