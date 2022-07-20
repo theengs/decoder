@@ -38,4 +38,4 @@ These functions are useful for passing the data to HomeAssistant or other home a
 
 - `decodeBLE(string)` Returns a string with the decoded data in JSON format or None.
 - `getProperties('model_id string')` Returns the properties (string) of the given model ID or None
-- `getAttribute('model_id string', 'attribute string')` Return the value (string) of named attrubte of the model ID or None.
+- `getAttribute('model_id string', 'attribute string')` Return the value (string) of named attribute of the model ID or None.

@@ -154,7 +154,7 @@ The other parameters for the first three functions are:
 - 24, The index of the data source where the value exists.
 - 4, The length of the data in bytes (characters in the string).
 - true/false, If the value in the data source should have it's endianness reversed before converting.
-- (optional)true/false, Sets if the resulting value can be a negative number.
+- (optional)true/false, Sets if the resulting value can be a negative number. Defaults to true when omitted.
 
 ```
  "properties":{
