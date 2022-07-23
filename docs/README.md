@@ -11,7 +11,7 @@ Theengs decoder library translates these data chains into human readable data le
 
 It's also a simplified way of defining the thing properties and how to decode these.
 
-Theengs Decoder can be used on memory constraint environments like micro controllers (ESP32, ESP8266, Arduino), on PC or on a Unix server.
+Theengs Decoder can be used on memory constraint environments like micro controllers (ESP32, ESP8266, Arduino), on a PC or on a Unix server.
 Unit testing assures that the modification done on the library doesn't affect previous capabilities.
 
 In a few words:
