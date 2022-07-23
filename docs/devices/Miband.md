@@ -7,6 +7,6 @@
 |Short Description|Fitness band with step count and activity heart rate monitoring|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Battery|
-|Exchanged data|steps, activity heart rate|
+|Power source|Rechargeable battery|
+|Exchanged data|steps, activity heart rate (when activated in the Zepp Life settings)|
 |Encrypted|No|
