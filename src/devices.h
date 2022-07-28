@@ -55,6 +55,7 @@
 #include "devices/SBMS_json.h"
 #include "devices/SBMT_json.h"
 #include "devices/SBS1_json.h"
+#include "devices/SmartDry_json.h"
 #include "devices/TPMS_json.h"
 #include "devices/WS02_json.h"
 #include "devices/WS08_json.h"
@@ -106,6 +107,7 @@ const char* _devices[][2] = {
     {_SBMS_json, _SBMS_json_props},
     {_SBMT_json, _SBMT_json_props},
     {_SBS1_json, _SBS1_json_props},
+    {_SmartDry_json, _SmartDry_json_props},
     {_BM_V23_json, _BM_V23_json_props},
     {_MS_CDP_json, _MS_CDP_json_props},
     {_GAEN_json, _GAEN_json_props},

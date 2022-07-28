@@ -44,7 +44,7 @@ static size_t peakDocSize = 0;
 
 typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
                                                    int offset, int data_length,
-                                                   bool reverse, bool canBeNegative);
+                                                   bool reverse, bool canBeNegative, bool isFloat);
 
 typedef double (TheengsDecoder::*staticbitdecoder_function)(const char* data_str,
                                                             const char* source_str, int offset, int bitindex,
@@ -66,10 +66,10 @@ void TheengsDecoder::reverse_hex_data(const char* in, char* out, int l) {
 
 double TheengsDecoder::bf_value_from_hex_string(const char* data_str,
                                                 int offset, int data_length,
-                                                bool reverse, bool canBeNegative) {
+                                                bool reverse, bool canBeNegative, bool isFloat) {
   DEBUG_PRINT("extracting BCF data\n");
 
-  long value = (long)value_from_hex_string(data_str, offset, data_length, reverse, false);
+  long value = (long)value_from_hex_string(data_str, offset, data_length, reverse, false, false);
   double d_value = ((((value >> 8) * 100) + (uint8_t)value)) / 100.0;
 
   if (canBeNegative) {
@@ -86,17 +86,25 @@ double TheengsDecoder::bf_value_from_hex_string(const char* data_str,
  */
 double TheengsDecoder::value_from_hex_string(const char* data_str,
                                              int offset, int data_length,
-                                             bool reverse, bool canBeNegative) {
-  DEBUG_PRINT("offset: %d, len %d, rev %u, neg, %u\n",
-              offset, data_length, reverse, canBeNegative);
+                                             bool reverse, bool canBeNegative, bool isFloat) {
+  DEBUG_PRINT("offset: %d, len %d, rev %u, neg, %u, flo, %u\n",
+              offset, data_length, reverse, canBeNegative, isFloat);
   std::string data(&data_str[offset], data_length);
 
   if (reverse) {
     reverse_hex_data(&data_str[offset], &data[0], data_length);
   }
 
-  double value = strtol(data.c_str(), NULL, 16);
-  DEBUG_PRINT("extracted value from %s = 0x%08lx\n", data.c_str(), (long)value);
+  double value = 0;
+  if (!isFloat) {
+    value = strtol(data.c_str(), NULL, 16);
+    DEBUG_PRINT("extracted value from %s = 0x%08lx\n", data.c_str(), (long)value);
+  } else {
+    long longV = strtol(data.c_str(), NULL, 16);
+    float floatV = *((float *) &longV);
+    DEBUG_PRINT("extracted float value from %s = %f\n", data.c_str(), floatV);
+    value = floatV;
+  }
 
   if (canBeNegative) {
     if (data_length <= 2 && value > SCHAR_MAX) {
@@ -447,7 +455,8 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
                                           decoder[3].as<int>(),
                                           decoder[4].as<bool>(),
-                                          decoder[5].isNull() ? true : decoder[5].as<bool>());
+                                          decoder[5].isNull() ? true : decoder[5].as<bool>(),
+                                          decoder[6].isNull() ? false : decoder[6].as<bool>());
 
             } else {
               break;
