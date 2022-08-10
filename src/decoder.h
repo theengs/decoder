@@ -52,6 +52,7 @@ public:
     CGP1W,
     CGG1_V1,
     CGG1_V2,
+    CGDN1,
     CGD1,
     CGDK2,
     CGH1,
