@@ -58,8 +58,7 @@
 #include "devices/SBS1_json.h"
 #include "devices/SmartDry_json.h"
 #include "devices/TPMS_json.h"
-#include "devices/WS02_json.h"
-#include "devices/WS08_json.h"
+#include "devices/ThermoBeacon_json.h"
 #include "devices/XMTZC04HM_json.h"
 #include "devices/XMTZC05HM_json.h"
 #include "devices/iBeacon_json.h"
@@ -90,8 +89,7 @@ const char* _devices[][2] = {
     {_TPMS_json, _TPMS_json_props},
     {_LYWSD03MMC_ATC_json, _LYWSD03MMC_ATC_props},
     {_CGPR1_json, _CGPR1_json_props},
-    {_WS02_json, _WS02_json_props},
-    {_WS08_json, _WS08_json_props},
+    {_ThermoBeacon_json, _ThermoBeacon_json_props},
     {_H5055_json, _H5055_json_props},
     {_H5075_json, _H5075_json_props},
     {_H5072_json, _H5072_json_props},
