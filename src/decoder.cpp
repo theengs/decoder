@@ -152,13 +152,7 @@ int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
 
   size_t req_len = condition[idx + 2].as<size_t>();
 
-  if (op == ">" && data_len > req_len) return 2;
-  if (op == ">=" && data_len >= req_len) return 2;
-  if (op == "=" && data_len == req_len) return 2;
-  if (op == "<" && data_len < req_len) return 2;
-  if (op == "<=" && data_len <= req_len) return 2;
-
-  return -1;
+  return evaluateDatalength(op, data_len, req_len) ? 2 : -1;
 }
 
 uint8_t TheengsDecoder::getBinaryData(char ch) {
@@ -169,6 +163,16 @@ uint8_t TheengsDecoder::getBinaryData(char ch) {
     data = 10 + (ch - 'a');
 
   return data;
+}
+
+bool TheengsDecoder::evaluateDatalength(std::string op, size_t data_len, size_t req_len) {
+  if (op == "=" && data_len == req_len) return true;
+  if (op == ">=" && data_len >= req_len) return true;
+  if (op == ">" && data_len > req_len) return true;
+  if (op == "<=" && data_len <= req_len) return true;
+  if (op == "<" && data_len < req_len) return true;
+
+  return false;
 }
 
 bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
@@ -333,7 +337,7 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
         }
       }
 
-      bool inverse = *(const char*)prop_condition[i + 2] == '!';
+      bool inverse = 0;
       const char* prop_data_src = prop_condition[i];
       const char* data_src = nullptr;
 
@@ -344,22 +348,32 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
       }
 
       if (data_src) {
-        size_t cond_len = strlen(prop_condition[i + 2 + inverse].as<const char*>());
-        if (strstr((const char*)prop_condition[i + 2], "bit") != nullptr) {
-          char ch = *(data_src + prop_condition[i + 1].as<int>());
-          uint8_t data = getBinaryData(ch);
+        if (prop_condition[i + 1].is<int>()) {
+          inverse = *(const char*)prop_condition[i + 2] == '!';
+          size_t cond_len = strlen(prop_condition[i + 2 + inverse].as<const char*>());
+          if (strstr((const char*)prop_condition[i + 2], "bit") != nullptr) {
+            char ch = *(data_src + prop_condition[i + 1].as<int>());
+            uint8_t data = getBinaryData(ch);
 
-          uint8_t shift = prop_condition[i + 3].as<uint8_t>();
-          uint8_t val = prop_condition[i + 4].as<uint8_t>();
-          if (((data >> shift) & 0x01) == val) {
-            cond_met = true;
+            uint8_t shift = prop_condition[i + 3].as<uint8_t>();
+            uint8_t val = prop_condition[i + 4].as<uint8_t>();
+            if (((data >> shift) & 0x01) == val) {
+              cond_met = true;
+            }
+            i += 2;
+          } else if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
+                      prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
+            cond_met = inverse ? false : true;
+          } else if (strncmp(&data_src[prop_condition[i + 1].as<int>()],
+                      prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
+            cond_met = inverse ? true : false;
           }
-          i += 2;
-        } else if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
-                     prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
-          cond_met = inverse ? false : true;
         } else {
-          cond_met = inverse ? true : false;
+          std::string op = prop_condition[i + 1].as<std::string>();
+          size_t data_len = strlen(data_src);
+          size_t req_len = prop_condition[i + 2].as<size_t>();
+
+          cond_met = evaluateDatalength(op, data_len, req_len);
         }
       } else {
         DEBUG_PRINT("ERROR property condition data source invalid\n");
