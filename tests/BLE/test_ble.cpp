@@ -157,6 +157,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":29,\"tempf\":84.2,\"hum\":33.2,\"pm25\":113,\"pm10\":114,\"co2\":1005}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":24.9,\"tempf\":76.82,\"hum\":43.7,\"pm25\":381,\"pm10\":390,\"co2\":765}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":42.7,\"pm25\":164,\"pm10\":215,\"co2\":711}",
+    "{\"brand\":\"GENERIC\",\"model\":\"Service data\",\"model_id\":\"ServiceData\",\"batt\":33}",
 };
 
 // Service data test input [test name] [data]
@@ -413,6 +414,7 @@ const char* test_uuid[][4] = {
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "080eaabbccddeeff010422014c011204710072001302ed03"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f900b50112047d0186011302fd02"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f600ab011204a400d7001302c702"},
+    {"Service data", "0x180f", "servicedata", "21"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -471,6 +473,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGDN1,
   TheengsDecoder::BLE_ID_NUM::CGDN1,
   TheengsDecoder::BLE_ID_NUM::CGDN1,
+  TheengsDecoder::BLE_ID_NUM::SERVICE_DATA,
 };
 
 template <typename T>

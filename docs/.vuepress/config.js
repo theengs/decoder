@@ -71,6 +71,7 @@ module.exports = {
             'devices/SBMS',
             'devices/SBMT',
             'devices/SBS1',
+            'devices/ServiceData',
             'devices/TPMS',
             'devices/ThermoBeacon',
             'devices/HHCCJCY01HHCC',

@@ -94,6 +94,7 @@ public:
     BM2,
     RDL52832,
     IBEACON,
+    SERVICE_DATA,
     BLE_ID_MAX
   };
 
