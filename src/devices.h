@@ -66,7 +66,7 @@
 #include "devices/BM_V23_json.h"
 #include "devices/BPARASITE_json.h"
 #include "devices/BM2_json.h"
-#include "devices/Battery_json.h"
+#include "devices/ServiceData_json.h"
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
@@ -117,5 +117,5 @@ const char* _devices[][2] = {
     {_BM2_json, _BM2_json_props},
     {_RDL52832_json, _RDL52832_json_props},
     {_ibeacon_json, _ibeacon_json_props},
-    {_Battery_json, _Battery_json_props},
+    {_ServiceData_json, _ServiceData_json_props},
 };
