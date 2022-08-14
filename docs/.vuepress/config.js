@@ -36,6 +36,7 @@ module.exports = {
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
             'devices/Amazfit',
+            'devices/Battery',
             'devices/BM_V23',
             'devices/BPARASITE',
             'devices/BM2',

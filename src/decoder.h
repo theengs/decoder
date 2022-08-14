@@ -94,6 +94,7 @@ public:
     BM2,
     RDL52832,
     IBEACON,
+    BATTERY,
     BLE_ID_MAX
   };
 
