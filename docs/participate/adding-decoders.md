@@ -184,6 +184,18 @@ Valid operations are:
 - "!" Not (invert), useful for bool types
 - "&" Logical And the values
 
+#### Manufacturer ID Compliance
+Whenever a decoder is based on "manufacturerdata" and the first bytes do not comply with the [Bluetooth SIG's company identifier convention](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/), an additional static property `"cidc"` should be added to the decoder, set to false.
+
+```
+"properties":{
+      "cidc":{
+         "decoder":["static_value", false]
+      },
+      …
+   }
+```
+
 #### Special property .cal
 .cal is a special property that can extracted from the provided data and used in calculations of other properties following it's definition. For example:
 ```

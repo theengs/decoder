@@ -1,4 +1,4 @@
-const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4XS\",\"condition\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",\"=\",36,\"index\",0,\"00000000\"],\"properties\":{\"tempc\":{\"condition\":[\"manufacturerdata\",22,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"tempc2\":{\"condition\":[\"manufacturerdata\",26,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"tempc3\":{\"condition\":[\"manufacturerdata\",30,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false],\"post_proc\":[\"/\",10]},\"tempc4\":{\"condition\":[\"manufacturerdata\",34,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true,false],\"post_proc\":[\"/\",10]}}}";
+const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4XS\",\"condition\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",\"=\",36,\"index\",0,\"00000000\"],\"properties\":{\"cidc\":{\"decoder\":[\"static_value\",false]},\"tempc\":{\"condition\":[\"manufacturerdata\",22,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"tempc2\":{\"condition\":[\"manufacturerdata\",26,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"tempc3\":{\"condition\":[\"manufacturerdata\",30,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false],\"post_proc\":[\"/\",10]},\"tempc4\":{\"condition\":[\"manufacturerdata\",34,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true,false],\"post_proc\":[\"/\",10]}}}";
 /*R""""(
 {
    "brand":"Inkbird",
@@ -6,6 +6,9 @@ const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_i
    "model_id":"IBT-4XS",
    "condition":["name", "index", 0, "iBBQ","&","manufacturerdata", "=" ,36 ,"index", 0, "00000000"],
    "properties":{
+      "cidc":{
+         "decoder":["static_value", false]
+      },
       "tempc":{
          "condition":["manufacturerdata", 22, "!", "ff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true, false],
@@ -29,7 +32,7 @@ const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_i
    }
 })"""";*/
 
-const char* _IBT_4XS_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc2\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc3\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc4\":{\"unit\":\"°C\",\"name\":\"temperature\"}}}";
+const char* _IBT_4XS_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc2\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc3\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc4\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"cidc\":{\"unit\":\"status\",\"name\":\"company id compliant\"}}}";
 /*R""""(
 {
    "properties":{
@@ -48,6 +51,10 @@ const char* _IBT_4XS_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",
       "tempc4":{
          "unit":"°C",
          "name":"temperature"
+      },
+      "cidc":{
+         "unit":"status",
+         "name":"company id compliant"
       }
    }
 })"""";*/
