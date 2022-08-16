@@ -426,6 +426,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       jsondata["brand"] = doc["brand"];
       jsondata["model"] = doc["model"];
       jsondata["model_id"] = doc["model_id"];
+      if (doc.containsKey("cidc")) {
+        jsondata["cidc"] = doc["cidc"];
+      }
 
       JsonObject properties = doc["properties"];
 
