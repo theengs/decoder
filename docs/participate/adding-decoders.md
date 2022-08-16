@@ -41,6 +41,17 @@ Each device must provide a `brand`, `model`, `model_id`, `condition`, and `prope
 - `model` = model name of the device.
 - `model_id` = model id number of the device.
 
+#### Manufacturer ID Compliance
+Whenever a decoder is based on "manufacturerdata" and the first bytes do not comply with the [Bluetooth SIG's company identifier convention](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/), an additional device property `"cidc"` should be added to the decoder, set to false.
+
+```
+   "brand":"Govee",
+   "model":"Thermo Hygrometer",
+   "model_id":"H5072",
+   "cidc":false,
+   …
+```
+
 ### Condition
 `condition` is a JSON array, which must contain as the first parameter, the data source to test for the condition. Valid inputs are:
 - "servicedata"
@@ -183,18 +194,6 @@ Valid operations are:
 - ">" shift right
 - "!" Not (invert), useful for bool types
 - "&" Logical And the values
-
-#### Manufacturer ID Compliance
-Whenever a decoder is based on "manufacturerdata" and the first bytes do not comply with the [Bluetooth SIG's company identifier convention](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/), an additional static property `"cidc"` should be added to the decoder, set to false.
-
-```
-"properties":{
-      "cidc":{
-         "decoder":["static_value", false]
-      },
-      …
-   }
-```
 
 #### Special property .cal
 .cal is a special property that can extracted from the provided data and used in calculations of other properties following it's definition. For example:
