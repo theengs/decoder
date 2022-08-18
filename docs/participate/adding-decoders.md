@@ -108,15 +108,24 @@ Here we have a single property that defines a value that we want to decode. The 
 - "servicedata"
 - "manufacturerdata"
 
-The second parameter is the index of the data source to look for the value. The third parameter is the value to test for.
+The second parameter is the index of the data source to look for the value. Then the third parameter is the value to test for.
 
-If a direct binary bit evaluation encoded in a hex digit is desired the third parameter is `"bit"`, the fourth parameter the bit position from 0-3 and the fifth parameter `0` or `1`.
-
+If a direct binary bit evaluation encoded in a hex digit is desired the third parameter is `"bit"`, the fourth parameter the bit position from `3-0` and the fifth parameter the bit state `0` or `1`.
 ```
  "properties":{
       "hum":{
          "condition":["servicedata", 10, "bit", 3, 0],
          "decoder":["value_from_hex_data", "servicedata", 10, 2, false, false]
+      },
+```
+
+The second parameter can also be an operator in the form of `">" , ">=" , "=" , "<" , "<="`, then followed by the third parameter being a numeric value that specifies the length of the data to accept for evaluation of the first parameter.
+
+```
+ "properties":{
+      "tempc":{
+         "condition":["manufacturerdata", "=", 40],
+         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true]
       },
 ```
 
@@ -176,11 +185,11 @@ The other parameters for the first three functions are:
 ```
 
 The parameters for the "bit_static_value" function are:
-- "servicedata" or "manufacturerdata" Extract the value from the specified data.
+- "servicedata" or "manufacturerdata" - extract the value from the specified data.
 - 1, the index of the data source where the value exists.
-- 0, the bit position from 0-3.
-- The return value for bit state 0.
-- The return value for bit state 1.
+- 0, the bit position from `3-0`.
+- The return value for bit state `0`.
+- The return value for bit state `1`.
 
 `post_proc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the "/" divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations.  
 
