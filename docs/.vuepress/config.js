@@ -35,6 +35,7 @@ module.exports = {
           title: '1 - Devices 🌡️',   // required
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
+            'devices/ABTemp',
             'devices/Amazfit',
             'devices/BM_V23',
             'devices/BPARASITE',
