@@ -61,6 +61,7 @@
 #include "devices/ThermoBeacon_json.h"
 #include "devices/XMTZC04HM_json.h"
 #include "devices/XMTZC05HM_json.h"
+#include "devices/ABTemp_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/iNodeEM_json.h"
 #include "devices/BM_V23_json.h"
@@ -116,6 +117,7 @@ const char* _devices[][2] = {
     {_BPARASITE_json, _BPARASITE_json_props},
     {_BM2_json, _BM2_json_props},
     {_RDL52832_json, _RDL52832_json_props},
+    {_ABTemp_json, _ABTemp_json_props},
     {_ibeacon_json, _ibeacon_json_props},
     {_ServiceData_json, _ServiceData_json_props},
 };
