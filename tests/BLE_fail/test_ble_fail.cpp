@@ -14,9 +14,6 @@ const char* test_servicedata[][2] = {
     {"Cleargrass round sensor", "0807743e10342d5801041201720202010d"},
     {"Cleargrass round sensor", "8816YYYYYYYYYYYY0104eb001b01020164"},
     {"Cleargrass round sensor", "8816xxxxxxxxxxxx0104f4003b01020164"},
-    {"Cleargrass alarm clock", "080caffd50342d5801040a017f0202012a"},
-    {"Cleargrass alarm clock", "080caffd50342d5801040d019e0202012a"},
-    {"Cleargrass alarm clock", "080caffd50342d5801040e01910202012a"},
     {"Qingping TH lite", "8810799111342d580104e8008f0302010b"},
     {"Qingping TH lite", "8810799111342d580104e9001d0202010b"},
     {"Qingping Door Open", "0804751060342d580201600f012b0f0100"},
@@ -40,9 +37,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::CGG1_V1,
     TheengsDecoder::BLE_ID_NUM::CGG1_V1,
     TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-    TheengsDecoder::BLE_ID_NUM::CGD1,
-    TheengsDecoder::BLE_ID_NUM::CGD1,
-    TheengsDecoder::BLE_ID_NUM::CGD1,
     TheengsDecoder::BLE_ID_NUM::CGDK2,
     TheengsDecoder::BLE_ID_NUM::CGDK2,
     TheengsDecoder::BLE_ID_NUM::CGH1,
@@ -79,7 +73,7 @@ const char* test_uuid[][4] = {
     {"Mi flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
     {"Mi flora", "fe95", "servicedata", "712098000863b6658d7cc40d0910020000"},
     {"SHOULD FAIL", "fa11", "servicedata", "123456789ABCDEF"},
-    {"SHOULD FAIL", "0x181d", "servicedata", "f2a22bb2070103003526"}
+    {"SHOULD FAIL", "0x181d", "servicedata", "f2a22bb2070103003526"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
