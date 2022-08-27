@@ -38,6 +38,7 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"moi\":3}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"fer\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"pres\":true,\"darkness\":29}",
+    "{\"brand\":\"April Brother\",\"model\":\"N03\",\"model_id\":\"ABN03\",\"tempc\":-2.625,\"tempf\":27.275,\"hum\":63.5,\"lux\":350,\"batt\":100,}",
 };
 
 const char* expected_mfg[] = {
@@ -198,6 +199,7 @@ const char* test_servicedata[][2] = {
     {"RoPot", "71205d0183d20c6d8d7cc40d08100103"},
     {"RoPot", "71205d0188d20c6d8d7cc40d0910020100"},
     {"MiLamp", "4030dd031d0300010100"},
+    {"AprilBrother N03", "ab03aabbccddeeff64ebff7f005e01"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
@@ -234,6 +236,7 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::MUE4094RT,
+  TheengsDecoder::BLE_ID_NUM::ABN03,
 };
 
 // manufacturer data test input [test name] [device name] [data]
