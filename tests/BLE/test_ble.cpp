@@ -18,9 +18,6 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7}",
     "{\"brand\":\"Qingping\",\"model\":\"TH lite\",\"model_id\":\"CGDK2\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":91.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
@@ -162,6 +159,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":24.9,\"tempf\":76.82,\"hum\":43.7,\"pm25\":381,\"pm10\":390,\"co2\":765}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":42.7,\"pm25\":164,\"pm10\":215,\"co2\":711}",
     "{\"brand\":\"GENERIC\",\"model\":\"Service data\",\"model_id\":\"ServiceData\",\"batt\":33}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7}",
 };
 
 // Service data test input [test name] [data]
@@ -179,9 +179,6 @@ const char* test_servicedata[][2] = {
     {"Cleargrass round sensor", "0807743e10342d5801041201720202010d"},
     {"Cleargrass round sensor", "8816YYYYYYYYYYYY0104eb001b01020164"},
     {"Cleargrass round sensor", "8816xxxxxxxxxxxx0104f4003b01020164"},
-    {"Cleargrass alarm clock", "080caffd50342d5801040a017f0202012a"},
-    {"Cleargrass alarm clock", "080caffd50342d5801040d019e0202012a"},
-    {"Cleargrass alarm clock", "080caffd50342d5801040e01910202012a"},
     {"Qingping TH lite", "8810799111342d580104e8008f0302010b"},
     {"Qingping TH lite", "8810799111342d580104e9001d0202010b"},
     {"Qingping TH lite", "0810799111342d580104e9001d0202010b"},
@@ -216,9 +213,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-  TheengsDecoder::BLE_ID_NUM::CGD1,
-  TheengsDecoder::BLE_ID_NUM::CGD1,
-  TheengsDecoder::BLE_ID_NUM::CGD1,
   TheengsDecoder::BLE_ID_NUM::CGDK2,
   TheengsDecoder::BLE_ID_NUM::CGDK2,
   TheengsDecoder::BLE_ID_NUM::CGDK2,
@@ -427,6 +421,9 @@ const char* test_uuid[][4] = {
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f900b50112047d0186011302fd02"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f600ab011204a400d7001302c702"},
     {"Service data", "0x180f", "servicedata", "21"},
+    {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040a017f0202012a"},
+    {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040d019e0202012a"},
+    {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040e01910202012a"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -486,6 +483,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGDN1,
   TheengsDecoder::BLE_ID_NUM::CGDN1,
   TheengsDecoder::BLE_ID_NUM::SERVICE_DATA,
+  TheengsDecoder::BLE_ID_NUM::CGD1,
+  TheengsDecoder::BLE_ID_NUM::CGD1,
+  TheengsDecoder::BLE_ID_NUM::CGD1,
 };
 
 template <typename T>
