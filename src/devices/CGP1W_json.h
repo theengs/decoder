@@ -1,10 +1,10 @@
-const char* _CGP1W_json = "{\"brand\":\"Xiaomi\",\"model\":\"CG_THP\",\"model_id\":\"CGP1W\",\"condition\":[\"servicedata\",\"index\",0,\"0809\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",20,4,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"pres\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",32,4,true,false],\"post_proc\":[\"/\",100]}}}";
+const char* _CGP1W_json = "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"condition\":[\"servicedata\",\"=\",42,\"index\",2,\"09\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",20,4,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"pres\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",32,4,true,false],\"post_proc\":[\"/\",100]}}}";
 /*R""""(
 {
-   "brand":"Xiaomi",
-   "model":"CG_THP",
+   "brand":"Cleargrass",
+   "model":"Weather Station",
    "model_id":"CGP1W",
-   "condition":["servicedata", "index", 0, "0809"],
+   "condition":["servicedata", "=", 42, "index", 2, "09", "&", "uuid", "index", 0, "fdcd"],
    "properties":{
       "tempc":{
          "decoder":["value_from_hex_data", "servicedata", 20, 4, true],
