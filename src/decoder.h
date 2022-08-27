@@ -93,6 +93,7 @@ public:
     BPARASITE,
     BM2,
     RDL52832,
+    ABN03,
     ABTEMP,
     IBEACON,
     SERVICE_DATA,

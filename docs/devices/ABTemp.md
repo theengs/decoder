@@ -1,4 +1,4 @@
-# ABTemp 
+# April Brother ABTemp 
 
 |Model Id|[ABTemp](https://github.com/theengs/decoder/blob/development/src/devices/ABTemp_json.h)|
 |-|-|
