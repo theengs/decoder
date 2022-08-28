@@ -139,20 +139,22 @@ bool TheengsDecoder::data_index_is_valid(const char* str, size_t index, size_t l
   return true;
 }
 
-int TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
-                                         const JsonArray& condition, int idx) {
-  std::string op = condition[idx + 1].as<std::string>();
+bool TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
+                                         const JsonArray& condition, int *idx) {
+  std::string op = condition[*idx + 1].as<std::string>();
   if (!op.empty() && op.length() > 2) {
-    return (data_len >= default_min) ? 0 : -1;
+    return (data_len >= default_min);
   }
 
-  if (!condition[idx + 2].is<size_t>()) {
-    return -1;
+  if (!condition[*idx + 2].is<size_t>()) {
+    *idx = -1;
+    return false;
   }
 
-  size_t req_len = condition[idx + 2].as<size_t>();
+  size_t req_len = condition[*idx + 2].as<size_t>();
 
-  return evaluateDatalength(op, data_len, req_len) ? 2 : -1;
+  *idx += 2;
+  return evaluateDatalength(op, data_len, req_len);
 }
 
 uint8_t TheengsDecoder::getBinaryData(char ch) {
@@ -181,9 +183,9 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
                                       const char* dev_name,
                                       const char* svc_uuid) {
   bool match = false;
-  size_t cond_size = condition.size();
+  int cond_size = condition.size();
 
-  for (size_t i = 0; i < cond_size;) {
+  for (int i = 0; i < cond_size;) {
     if (condition[i].is<JsonArray>()) {
       DEBUG_PRINT("found nested array\n");
       match = checkDeviceMatch(condition[i], svc_data, mfg_data, dev_name, svc_uuid);
@@ -201,32 +203,27 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
       }
     }
 
-    const char* cmp_str;
+    const char* cmp_str = nullptr;
     const char* cond_str = condition[i].as<const char*>();
-    int len_idx;
     if (svc_data != nullptr && strstr(cond_str, SVC_DATA) != nullptr) {
-      len_idx = data_length_is_valid(strlen(svc_data), m_minSvcDataLen, condition, i);
-      if (len_idx >= 0) {
-        if (len_idx > 0) {
-          i += len_idx;
-          match = true;
-        }
+      if (data_length_is_valid(strlen(svc_data), m_minSvcDataLen, condition, &i)) {
         cmp_str = svc_data;
+        match = true;
       } else {
         match = false;
-        break;
+        if (i < 0) {
+          break;
+        }
       }
     } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
-      len_idx = data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, i);
-      if (len_idx >= 0) {
-        if (len_idx > 0) {
-          i += len_idx;
-          match = true;
-        }
+      if (data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, &i)) {
         cmp_str = mfg_data;
+        match = true;
       } else {
         match = false;
-        break;
+        if (i < 0) {
+          break;
+        }
       }
     } else if (dev_name != nullptr && strstr(cond_str, "name") != nullptr) {
       cmp_str = dev_name;
@@ -236,8 +233,22 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
       break;
     }
 
+    if (!match && cmp_str == nullptr) {
+      while (i < cond_size && *cond_str != '|') {
+        if (!condition[++i].is<const char*>()) {
+          continue;
+        }
+        cond_str = condition[i].as<const char*>();
+      }
+
+      if (i < cond_size && cond_str != nullptr) {
+        i++;
+        continue;
+      }
+    }
+
     cond_str = condition[++i].as<const char*>();
-    if (cond_str != nullptr && *cond_str != '&' && *cond_str != '|') {
+    if (cmp_str != nullptr && cond_str != nullptr && *cond_str != '&' && *cond_str != '|') {
       if (cmp_str == svc_uuid && !strncmp(cmp_str, "0x", 2)) {
         cmp_str += 2;
       }
