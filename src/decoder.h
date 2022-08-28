@@ -105,7 +105,7 @@ private:
   double      value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
   double      bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
   bool        data_index_is_valid(const char* str, size_t index, size_t len);
-  int         data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int idx);
+  bool        data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int *idx);
   uint8_t     getBinaryData(char ch);
   bool        evaluateDatalength(std::string op, size_t data_len, size_t req_len);
   bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data);
