@@ -10,17 +10,11 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"batt\":81}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"batt\":62}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"tempc\":27.4,\"tempf\":81.32}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_THP\",\"model_id\":\"CGP1W\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":100.63}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_THP\",\"model_id\":\"CGP1W\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":100.63}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_THP\",\"model_id\":\"CGP1W\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":100.86}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v2\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v2\",\"model_id\":\"CGG1\",\"tempc\":27.2,\"tempf\":80.96,\"hum\":63.8}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
-    "{\"brand\":\"Qingping\",\"model\":\"TH lite\",\"model_id\":\"CGDK2\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":91.1}",
-    "{\"brand\":\"Qingping\",\"model\":\"TH lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
-    "{\"brand\":\"Qingping\",\"model\":\"TH lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
     "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"model_id\":\"CGH1\",\"open\":true}",
     "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"model_id\":\"CGH1\",\"open\":false}",
     "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"model_id\":\"CGH1\",\"open\":true}",
@@ -31,11 +25,12 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"tempc\":19.6,\"tempf\":67.28}",
     "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_ATC\",\"tempc\":32.5,\"tempf\":90.5,\"hum\":62,\"batt\":81,\"volt\":2.939}",
     "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_PVVX\",\"tempc\":21.12,\"tempf\":70.016,\"hum\":50.53,\"batt\":100,\"volt\":3.143}",
-    "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"lux\":0}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"moi\":3}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"fer\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"pres\":true,\"darkness\":29}",
     "{\"brand\":\"April Brother\",\"model\":\"N03\",\"model_id\":\"ABN03\",\"tempc\":-2.625,\"tempf\":27.275,\"hum\":63.5,\"lux\":350,\"batt\":100,}",
+    "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"lux\":0}",
+    "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"pres\":true}",
 };
 
 const char* expected_mfg[] = {
@@ -162,6 +157,12 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9}",
     "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67}",
     "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":100.63}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":100.63}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":100.86}",
+    "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":91.1}",
+    "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
+    "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
 };
 
 // Service data test input [test name] [data]
@@ -171,17 +172,11 @@ const char* test_servicedata[][2] = {
     {"Mi jia round sensor", "5020aa0155aabbccddeeff0a100151"},
     {"Mi jia round sensor", "5020aa01123c0338342d580a10013e"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580410021201"},
-    {"Cleargrass THP sensor", "08094c0140342d5801040801870207024f2702015c"},
-    {"Cleargrass THP sensor", "08094c0140342d5801040f01880207024f2702015c"},
-    {"Cleargrass THP sensor", "08094c0140342d580104fc004a0207026627020120"},
     {"Cleargrass round sensor", "5030470341743e10342d580410021201"},
     {"Cleargrass round sensor", "5030470383743e10342d580d100410017e02"},
     {"Cleargrass round sensor", "0807743e10342d5801041201720202010d"},
     {"Cleargrass round sensor", "8816YYYYYYYYYYYY0104eb001b01020164"},
     {"Cleargrass round sensor", "8816xxxxxxxxxxxx0104f4003b01020164"},
-    {"Qingping TH lite", "8810799111342d580104e8008f0302010b"},
-    {"Qingping TH lite", "8810799111342d580104e9001d0202010b"},
-    {"Qingping TH lite", "0810799111342d580104e9001d0202010b"},
     {"Qingping Door Open", "0804751060342d580201600f012b0f0100"},
     {"Qingping Door Close", "0804751060342d580201600f01420f0101"},
     {"Qingping Door Open Action", "4804751060342d580401000f01cb"},
@@ -192,11 +187,12 @@ const char* test_servicedata[][2] = {
     {"Formaldehyde detector", "5120df023e3a5c01435748041002c400"},
     {"LYWSD03MMC_ATC", "a4c138d5d49801453e510b7b62"},
     {"LYWSD03MMC_PVVX", "5601cf38c1a44008bd13470c64cc0f"},
-    {"Qingping Motion & Light", "0812443660342d580201530f0118090400000000"},
     {"RoPot", "71205d0183d20c6d8d7cc40d08100103"},
     {"RoPot", "71205d0188d20c6d8d7cc40d0910020100"},
     {"MiLamp", "4030dd031d0300010100"},
     {"AprilBrother N03", "ab03aabbccddeeff64ebff7f005e01"},
+    {"Qingping Motion & Light", "0812aabbccddeeff0201530f0118090400000000"},
+    {"Qingping Motion & Light", "4812aabbccddeeff0804010300000f0150"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
@@ -205,17 +201,11 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
-  TheengsDecoder::BLE_ID_NUM::CGP1W,
-  TheengsDecoder::BLE_ID_NUM::CGP1W,
-  TheengsDecoder::BLE_ID_NUM::CGP1W,
   TheengsDecoder::BLE_ID_NUM::CGG1_V2,
   TheengsDecoder::BLE_ID_NUM::CGG1_V2,
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-  TheengsDecoder::BLE_ID_NUM::CGDK2,
-  TheengsDecoder::BLE_ID_NUM::CGDK2,
-  TheengsDecoder::BLE_ID_NUM::CGDK2,
   TheengsDecoder::BLE_ID_NUM::CGH1,
   TheengsDecoder::BLE_ID_NUM::CGH1,
   TheengsDecoder::BLE_ID_NUM::CGH1,
@@ -226,11 +216,12 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_ATC,
   TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
-  TheengsDecoder::BLE_ID_NUM::CGPR1,
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::MUE4094RT,
   TheengsDecoder::BLE_ID_NUM::ABN03,
+  TheengsDecoder::BLE_ID_NUM::CGPR1,
+  TheengsDecoder::BLE_ID_NUM::CGPR1,
 };
 
 // manufacturer data test input [test name] [device name] [data]
@@ -424,6 +415,12 @@ const char* test_uuid[][4] = {
     {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040a017f0202012a"},
     {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040d019e0202012a"},
     {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040e01910202012a"},
+    {"Cleargrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d5801040801870207024f2702015c"},
+    {"Cleargrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d5801040f01880207024f2702015c"},
+    {"Cleargrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d580104fc004a0207026627020120"},
+    {"Qingping TH lite", "0xfdcd", "servicedata", "8810799111342d580104e8008f0302010b"},
+    {"Qingping TH lite", "0xfdcd", "servicedata", "8810799111342d580104e9001d0202010b"},
+    {"Qingping TH lite", "0xfdcd", "servicedata", "0810799111342d580104e9001d0202010b"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -486,6 +483,12 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGD1,
   TheengsDecoder::BLE_ID_NUM::CGD1,
   TheengsDecoder::BLE_ID_NUM::CGD1,
+  TheengsDecoder::BLE_ID_NUM::CGP1W,
+  TheengsDecoder::BLE_ID_NUM::CGP1W,
+  TheengsDecoder::BLE_ID_NUM::CGP1W,
+  TheengsDecoder::BLE_ID_NUM::CGDK2,
+  TheengsDecoder::BLE_ID_NUM::CGDK2,
+  TheengsDecoder::BLE_ID_NUM::CGDK2,
 };
 
 template <typename T>
