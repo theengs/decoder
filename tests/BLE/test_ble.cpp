@@ -15,10 +15,6 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
     "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
-    "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"model_id\":\"CGH1\",\"open\":true}",
-    "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"model_id\":\"CGH1\",\"open\":false}",
-    "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"model_id\":\"CGH1\",\"open\":true}",
-    "{\"brand\":\"Qingping\",\"model\":\"Door sensor\",\"model_id\":\"CGH1\",\"open\":false}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"batt\":94}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"hum\":59.5}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"for\":0.08}",
@@ -29,8 +25,6 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"fer\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"pres\":true,\"darkness\":29}",
     "{\"brand\":\"April Brother\",\"model\":\"N03\",\"model_id\":\"ABN03\",\"tempc\":-2.625,\"tempf\":27.275,\"hum\":63.5,\"lux\":350,\"batt\":100,}",
-    "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"lux\":0}",
-    "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"pres\":true}",
 };
 
 const char* expected_mfg[] = {
@@ -163,6 +157,12 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":91.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
+    "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"lux\":0}",
+    "{\"brand\":\"Qingping\",\"model\":\"Motion & Light\",\"model_id\":\"CGPR1\",\"pres\":true}",
+    "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":true}",
+    "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":false}",
+    "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":true}",
+    "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":false}",
 };
 
 // Service data test input [test name] [data]
@@ -177,10 +177,6 @@ const char* test_servicedata[][2] = {
     {"Cleargrass round sensor", "0807743e10342d5801041201720202010d"},
     {"Cleargrass round sensor", "8816YYYYYYYYYYYY0104eb001b01020164"},
     {"Cleargrass round sensor", "8816xxxxxxxxxxxx0104f4003b01020164"},
-    {"Qingping Door Open", "0804751060342d580201600f012b0f0100"},
-    {"Qingping Door Close", "0804751060342d580201600f01420f0101"},
-    {"Qingping Door Open Action", "4804751060342d580401000f01cb"},
-    {"Qingping Door Close Action", "4804751060342d580401010f01d5"},
     {"Formaldehyde detector", "5020df02383a5c014357480a10015e"},
     {"Formaldehyde detector", "5020df02283a5c014357480610025302"},
     {"Formaldehyde detector", "5020df025b3a5c014357481010020800"},
@@ -191,8 +187,6 @@ const char* test_servicedata[][2] = {
     {"RoPot", "71205d0188d20c6d8d7cc40d0910020100"},
     {"MiLamp", "4030dd031d0300010100"},
     {"AprilBrother N03", "ab03aabbccddeeff64ebff7f005e01"},
-    {"Qingping Motion & Light", "0812aabbccddeeff0201530f0118090400000000"},
-    {"Qingping Motion & Light", "4812aabbccddeeff0804010300000f0150"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
@@ -206,10 +200,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
   TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-  TheengsDecoder::BLE_ID_NUM::CGH1,
-  TheengsDecoder::BLE_ID_NUM::CGH1,
-  TheengsDecoder::BLE_ID_NUM::CGH1,
-  TheengsDecoder::BLE_ID_NUM::CGH1,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
@@ -220,8 +210,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::MUE4094RT,
   TheengsDecoder::BLE_ID_NUM::ABN03,
-  TheengsDecoder::BLE_ID_NUM::CGPR1,
-  TheengsDecoder::BLE_ID_NUM::CGPR1,
 };
 
 // manufacturer data test input [test name] [device name] [data]
@@ -421,6 +409,12 @@ const char* test_uuid[][4] = {
     {"Qingping TH lite", "0xfdcd", "servicedata", "8810799111342d580104e8008f0302010b"},
     {"Qingping TH lite", "0xfdcd", "servicedata", "8810799111342d580104e9001d0202010b"},
     {"Qingping TH lite", "0xfdcd", "servicedata", "0810799111342d580104e9001d0202010b"},
+    {"Qingping Motion & Light", "0xfdcd", "servicedata", "0812aabbccddeeff0201530f0118090400000000"},
+    {"Qingping Motion & Light", "0xfdcd", "servicedata", "4812aabbccddeeff0804010300000f0150"},
+    {"Qingping Door Open", "0xfdcd", "servicedata", "0804751060342d580201600f012b0f0100"},
+    {"Qingping Door Close", "0xfdcd", "servicedata", "0804751060342d580201600f01420f0101"},
+    {"Qingping Door Open Action", "0xfdcd", "servicedata", "4804751060342d580401000f01cb"},
+    {"Qingping Door Close Action", "0xfdcd", "servicedata", "4804751060342d580401010f01d5"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -489,6 +483,12 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGDK2,
   TheengsDecoder::BLE_ID_NUM::CGDK2,
   TheengsDecoder::BLE_ID_NUM::CGDK2,
+  TheengsDecoder::BLE_ID_NUM::CGPR1,
+  TheengsDecoder::BLE_ID_NUM::CGPR1,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::CGH1,
 };
 
 template <typename T>
