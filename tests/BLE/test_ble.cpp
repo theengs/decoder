@@ -10,11 +10,8 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"batt\":81}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"batt\":62}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"tempc\":27.4,\"tempf\":81.32}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v2\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v2\",\"model_id\":\"CGG1\",\"tempc\":27.2,\"tempf\":80.96,\"hum\":63.8}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"CG_round_v1\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
+    "{\"brand\":\"Qingping\",\"model\":\"Round TH v2\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32}",
+    "{\"brand\":\"Qingping\",\"model\":\"Round TH v2\",\"model_id\":\"CGG1\",\"tempc\":27.2,\"tempf\":80.96,\"hum\":63.8}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"batt\":94}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"hum\":59.5}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"for\":0.08}",
@@ -163,6 +160,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":false}",
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":true}",
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":false}",
+    "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
+    "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
+    "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
 };
 
 // Service data test input [test name] [data]
@@ -172,11 +172,8 @@ const char* test_servicedata[][2] = {
     {"Mi jia round sensor", "5020aa0155aabbccddeeff0a100151"},
     {"Mi jia round sensor", "5020aa01123c0338342d580a10013e"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580410021201"},
-    {"Cleargrass round sensor", "5030470341743e10342d580410021201"},
-    {"Cleargrass round sensor", "5030470383743e10342d580d100410017e02"},
-    {"Cleargrass round sensor", "0807743e10342d5801041201720202010d"},
-    {"Cleargrass round sensor", "8816YYYYYYYYYYYY0104eb001b01020164"},
-    {"Cleargrass round sensor", "8816xxxxxxxxxxxx0104f4003b01020164"},
+    {"Qingping round sensor", "5030470341743e10342d580410021201"},
+    {"Qingping round sensor", "5030470383743e10342d580d100410017e02"},
     {"Formaldehyde detector", "5020df02383a5c014357480a10015e"},
     {"Formaldehyde detector", "5020df02283a5c014357480610025302"},
     {"Formaldehyde detector", "5020df025b3a5c014357481010020800"},
@@ -197,9 +194,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
   TheengsDecoder::BLE_ID_NUM::CGG1_V2,
   TheengsDecoder::BLE_ID_NUM::CGG1_V2,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
@@ -415,6 +409,9 @@ const char* test_uuid[][4] = {
     {"Qingping Door Close", "0xfdcd", "servicedata", "0804751060342d580201600f01420f0101"},
     {"Qingping Door Open Action", "0xfdcd", "servicedata", "4804751060342d580401000f01cb"},
     {"Qingping Door Close Action", "0xfdcd", "servicedata", "4804751060342d580401010f01d5"},
+    {"Qingping round sensor", "0xfdcd", "servicedata", "0807743e10342d5801041201720202010d"},
+    {"Qingping round sensor", "0xfdcd", "servicedata", "8816YYYYYYYYYYYY0104eb001b01020164"},
+    {"Qingping round sensor", "0xfdcd", "servicedata", "8816xxxxxxxxxxxx0104f4003b01020164"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -489,6 +486,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGH1,
   TheengsDecoder::BLE_ID_NUM::CGH1,
   TheengsDecoder::BLE_ID_NUM::CGH1,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
 };
 
 template <typename T>
