@@ -38,6 +38,7 @@ module.exports = {
             'devices/ABN03',
             'devices/ABTemp',
             'devices/Amazfit',
+            'devices/Amphiro',
             'devices/BM_V23',
             'devices/BPARASITE',
             'devices/BM2',

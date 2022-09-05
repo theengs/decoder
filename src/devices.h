@@ -63,6 +63,7 @@
 #include "devices/XMTZC05HM_json.h"
 #include "devices/ABN03_json.h"
 #include "devices/ABTemp_json.h"
+#include "devices/Amphiro_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/iNodeEM_json.h"
 #include "devices/BM_V23_json.h"
@@ -120,6 +121,7 @@ const char* _devices[][2] = {
     {_RDL52832_json, _RDL52832_json_props},
     {_ABN03_json, _ABN03_json_props},
     {_ABTemp_json, _ABTemp_json_props},
+    {_AMPHIRO_json, _AMPHIRO_json_props},
     {_ibeacon_json, _ibeacon_json_props},
     {_ServiceData_json, _ServiceData_json_props},
 };

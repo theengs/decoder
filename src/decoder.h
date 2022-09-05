@@ -95,6 +95,7 @@ public:
     RDL52832,
     ABN03,
     ABTEMP,
+    AMPHIRO,
     IBEACON,
     SERVICE_DATA,
     BLE_ID_MAX
