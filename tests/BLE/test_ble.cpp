@@ -79,6 +79,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"cidc\":false,\"tempc\":29.57704544,\"tempf\":85.23868179,\"hum\":55.99645996,\"shake\":false,\"shake_count\":74,\"volt\":2.929,\"wake\":false}",
     "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"cidc\":false,\"tempc\":29.57704544,\"tempf\":85.23868179,\"hum\":55.99645996,\"shake\":false,\"shake_count\":74,\"volt\":2.929,\"wake\":false}",
     "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"mfid\":\"4c00\",\"uuid\":\"b5b182c7eab14988aa99b5c1517008d9\",\"major\":1,\"batt\":100,\"tempc\":26,\"tempf\":78.8,\"txpower\":-59}",
+    "{\"brand\":\"Oras\",\"model\":\"Hydractiva Digital\",\"model_id\":\"ADHS\",\"sessions\":36,\"time\":21,\"litres\":2.6,\"tempc\":41,\"tempf\":105.8,\"energy\":0.12}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -262,6 +263,7 @@ const char* test_mfgdata[][3] = {
     {"SmartDry", "Laundry Sensor", "ae01ca9dec4160fc5f424a005200"},
     {"SmartDry", "Laundry Sensor", "ae01ca9dec4160fc5f424a005206"},
     {"ABTemp", "ABTemp", "4c000215b5b182c7eab14988aa99b5c1517008d90001641ac5"},
+    {"Amphiro", "Digital Hand Shower", "eefa0000240015000015001a0029000c194f000000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -319,6 +321,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::SMARTDRY,
   TheengsDecoder::BLE_ID_NUM::SMARTDRY,
   TheengsDecoder::BLE_ID_NUM::ABTEMP,
+  TheengsDecoder::BLE_ID_NUM::AMPHIRO,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
