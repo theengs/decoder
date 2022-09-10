@@ -84,6 +84,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP357/8\",\"cidc\":false,\"tempc\":37.4,\"tempf\":99.32,\"hum\":74}",
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP357/8\",\"cidc\":false,\"tempc\":24.5,\"tempf\":76.1,\"hum\":50}",
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP357/8\",\"cidc\":false,\"tempc\":24.6,\"tempf\":76.28,\"hum\":51}",
+    "{\"brand\":\"Oria\",\"model\":\"TH Sensor\",\"model_id\":\"T301\",\"cidc\":false,\"tempc\":25.6,\"tempf\":78.08,\"hum\":56,\"batt\":99}",
+    "{\"brand\":\"Oria\",\"model\":\"TH Sensor\",\"model_id\":\"T301\",\"cidc\":false,\"tempc\":25.3,\"tempf\":77.54,\"hum\":56,\"batt\":83}",
+    "{\"brand\":\"Oria\",\"model\":\"TH Sensor\",\"model_id\":\"T301\",\"cidc\":false,\"tempc\":26.2,\"tempf\":79.16,\"hum\":59,\"batt\":68}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -272,6 +275,9 @@ const char* test_mfgdata[][3] = {
     {"ThermoPro", "TP357", "c276014a022c"},
     {"ThermoPro", "TP358", "c2f50032022c"},
     {"ThermoPro", "TP358", "c2f60033022c"},
+    {"Oria", "T301", "55aa0105aabbccddeeff01070a0015e0630001"},
+    {"Oria", "T301", "55aa0105aabbccddeeff010709e215e0530001"},
+    {"Oria", "T301", "55aa0105aabbccddeeff01070a3c170c440001"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -334,6 +340,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::TP357,
   TheengsDecoder::BLE_ID_NUM::TP357,
   TheengsDecoder::BLE_ID_NUM::TP357,
+  TheengsDecoder::BLE_ID_NUM::T301,
+  TheengsDecoder::BLE_ID_NUM::T301,
+  TheengsDecoder::BLE_ID_NUM::T301,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
