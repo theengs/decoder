@@ -97,6 +97,7 @@ public:
     ABTEMP,
     AMPHIRO,
     TP357,
+    T301,
     IBEACON,
     SERVICE_DATA,
     BLE_ID_MAX

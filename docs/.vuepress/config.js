@@ -61,6 +61,7 @@ module.exports = {
             'devices/MS_CDP',
             'devices/MokoBeacon',
             'devices/MBXPRO',
+            'devices/T301',
             'devices/CGDK2',
             'devices/CGH1',
             'devices/CGPR1',
