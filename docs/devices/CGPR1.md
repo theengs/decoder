@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|2 CR2450|
-|Exchanged data|luminance, presence|
+|Exchanged data|luminance, presence, battery|
 |Encrypted|No|
