@@ -26,7 +26,7 @@ const char* expected_servicedata[] = {
 
 const char* expected_mfg[] = {
     "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"model_id\":\"IBS-TH1\",\"cidc\":false,\"tempc\":26.62,\"tempf\":79.916,\"hum\":53.79,\"batt\":89}",
-    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"cidc\":false,\"count\":1,\"pres\":222.708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false}",
+    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false}",
     "{\"brand\":\"GENERIC\",\"model\":\"iBeacon\",\"model_id\":\"IBEACON\",\"mfid\":\"4c00\",\"uuid\":\"426c7565436861726d426561636f6e73\",\"major\":3838,\"minor\":4949,\"txpower\":-59}",
     "{\"brand\":\"GENERIC\",\"model\":\"iBeacon\",\"model_id\":\"IBEACON\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"volt\":2.6}",
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"cidc\":false,\"tempc\":31.3125,\"tempf\":88.3625,\"hum\":70.75,\"volt\":3.160,\"time\":2371}",
@@ -156,9 +156,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9}",
     "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67}",
     "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":100.63}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":100.63}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":100.86}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":1006.3}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":1006.3}",
+    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":1008.6}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":91.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
