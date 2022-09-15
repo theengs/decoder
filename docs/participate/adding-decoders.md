@@ -173,6 +173,7 @@ The other parameters for the first three functions are:
 - "servicedata" or "manufacturerdata" Extract the value from the specified data.
 - 24, The index of the data source where the value exists.
 - 4, The length of the data in bytes (characters in the string).
+and additional boolean parameters applicable to the first two functions:
 - true/false, If the value in the data source should have it's endianness reversed before converting.
 - (optional)true/false, Sets if the resulting value can be a negative number. Defaults to true when omitted.
 - (optional)false/true, Sets if the "value_from_hex_data" decoding result is a `float` instead of an `integer` type. Defaults to false when omitted.
