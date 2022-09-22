@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|CR2477|
-|Exchanged data|temperature, humidity, pressure, acceleration, voltage|
+|Exchanged data|temperature, humidity, pressure, acceleration x/y/z-axis, voltage|
 |Encrypted|No|

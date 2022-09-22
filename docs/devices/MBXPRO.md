@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|2 AAA|
-|Exchanged data|volt, x_axis, y_axis, z_axis, temperature, humidity|
+|Exchanged data|temperature, humidity, acceleration x/y/z-axis, volt|
 |Encrypted|No|
