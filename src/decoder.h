@@ -102,6 +102,7 @@ public:
     ABTEMP,
     AMPHIRO,
     TP35X,
+    MOPEKA,
     T301,
     IBEACON,
     SERVICE_DATA,

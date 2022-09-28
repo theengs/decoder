@@ -511,43 +511,53 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       break;
                   }
                 } else {
-                  switch (*post_proc[i].as<const char*>()) {
-                    case '/':
-                      temp_val /= post_proc[i + 1].as<double>();
-                      break;
-                    case '*':
-                      temp_val *= post_proc[i + 1].as<double>();
-                      break;
-                    case '-':
-                      temp_val -= post_proc[i + 1].as<double>();
-                      break;
-                    case '+':
-                      temp_val += post_proc[i + 1].as<double>();
-                      break;
-                    case '%': {
-                      long val = (long)temp_val;
-                      temp_val = val % post_proc[i + 1].as<long>();
-                      break;
+                  if (strlen(post_proc[i].as<const char*>())== 1) {
+                    switch (*post_proc[i].as<const char*>()) {
+                      case '/':
+                        temp_val /= post_proc[i + 1].as<double>();
+                        break;
+                      case '*':
+                        temp_val *= post_proc[i + 1].as<double>();
+                        break;
+                      case '-':
+                        temp_val -= post_proc[i + 1].as<double>();
+                        break;
+                      case '+':
+                        temp_val += post_proc[i + 1].as<double>();
+                        break;
+                      case '%': {
+                        long val = (long)temp_val;
+                        temp_val = val % post_proc[i + 1].as<long>();
+                        break;
+                      }
+                      case '<': {
+                        long val = (long)temp_val;
+                        temp_val = val << post_proc[i + 1].as<unsigned int>();
+                        break;
+                      }
+                      case '>': {
+                        long val = (long)temp_val;
+                        temp_val = val >> post_proc[i + 1].as<unsigned int>();
+                        break;
+                      }
+                      case '!': {
+                        bool val = (bool)temp_val;
+                        temp_val = !val;
+                        break;
+                      }
+                      case '&': {
+                        long val = (long)temp_val;
+                        temp_val = val & post_proc[i + 1].as<unsigned int>();
+                        break;
+                      }
                     }
-                    case '<': {
-                      long val = (long)temp_val;
-                      temp_val = val << post_proc[i + 1].as<unsigned int>();
-                      break;
+                  } else if (strncmp(post_proc[i].as<const char*>(), "max", 3) == 0) {
+                    if (temp_val > post_proc[i + 1].as<unsigned int>()) {
+                      temp_val = post_proc[i + 1].as<unsigned int>();
                     }
-                    case '>': {
-                      long val = (long)temp_val;
-                      temp_val = val >> post_proc[i + 1].as<unsigned int>();
-                      break;
-                    }
-                    case '!': {
-                      bool val = (bool)temp_val;
-                      temp_val = !val;
-                      break;
-                    }
-                    case '&': {
-                      long val = (long)temp_val;
-                      temp_val = val & post_proc[i + 1].as<unsigned int>();
-                      break;
+                  } else if (strncmp(post_proc[i].as<const char*>(), "min", 3) == 0) {
+                    if (temp_val < post_proc[i + 1].as<unsigned int>()) {
+                      temp_val = post_proc[i + 1].as<unsigned int>();
                     }
                   }
                 }
@@ -580,6 +590,14 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               _key[4] = 'f';
               jsondata[_key] = tc * 1.8 + 32;
               _key[4] = 'c';
+            }
+
+            /* If the property is with suffix _cm, make sure to convert and add length in inches */
+            if (_key.find("_cm", _key.length() - 3, 3) != std::string::npos) {
+              double tc = jsondata[_key];
+              _key.replace(_key.length() - 3, 3, "_in");
+              jsondata[_key] = tc / 2.54;
+              _key.replace(_key.length() - 3, 3, "_cm");
             }
 
             success = i_main;
