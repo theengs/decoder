@@ -2,7 +2,7 @@ from skbuild import setup
 
 setup(
     name="TheengsDecoder",
-    version="0.8.0",
+    version="0.9.0",
     description="A message decoder for the Internet of Things",
     author='Theengs',
     license=" GPL-3.0 License",
