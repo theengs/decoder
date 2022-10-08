@@ -96,7 +96,7 @@ public:
     ABN03,
     ABTEMP,
     AMPHIRO,
-    TP357,
+    TP35X,
     T301,
     IBEACON,
     SERVICE_DATA,

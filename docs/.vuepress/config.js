@@ -78,6 +78,7 @@ module.exports = {
             'devices/ServiceData',
             'devices/TP357',
             'devices/TP358',
+            'devices/TP359',
             'devices/TPMS',
             'devices/ThermoBeacon',
             'devices/HHCCJCY01HHCC',
