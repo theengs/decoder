@@ -26,6 +26,7 @@ const char* expected_servicedata[] = {
 
 const char* expected_mfg[] = {
     "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"model_id\":\"IBS-TH1\",\"cidc\":false,\"tempc\":26.62,\"tempf\":79.916,\"hum\":53.79,\"batt\":89}",
+    "{\"brand\":\"Inkbird\",\"model\":\"TH Sensor\",\"model_id\":\"IBS-TH1\",\"cidc\":false,\"tempc2_ext\":25.44,\"tempf2_ext\":77.792,\"hum\":51.18,\"batt\":48}",
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false}",
     "{\"brand\":\"GENERIC\",\"model\":\"iBeacon\",\"model_id\":\"IBEACON\",\"mfid\":\"4c00\",\"uuid\":\"426c7565436861726d426561636f6e73\",\"major\":3838,\"minor\":4949,\"txpower\":-59}",
     "{\"brand\":\"GENERIC\",\"model\":\"iBeacon\",\"model_id\":\"IBEACON\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"volt\":2.6}",
@@ -223,7 +224,8 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
 
 // manufacturer data test input [test name] [device name] [data]
 const char* test_mfgdata[][3] = {
-    {"Inkbird TH1", "sps", "660a03150110805908"},
+    {"Inkbird TH1", "sps", "660a03150010805908"},
+    {"Inkbird TH1", "sps", "f009fe1301ca893008"},
     {"TPMS", "TPMS1_10CA8F", "000180eaca10ca8ff46503007c0c00003300"},
     {"iBeacon", "BlueCharm_135727", "4c000215426c7565436861726d426561636f6e730efe1355c5"},
     {"iBeacon", "NRF51822", "4c000215fda50693a4e24fb1afcfc6eb07647825000100021a"},
@@ -289,6 +291,7 @@ const char* test_mfgdata[][3] = {
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::IBSTH1,
   TheengsDecoder::BLE_ID_NUM::IBSTH1,
   TheengsDecoder::BLE_ID_NUM::TPMS,
   TheengsDecoder::BLE_ID_NUM::IBEACON,
