@@ -70,6 +70,7 @@
 #include "devices/iNodeEM_json.h"
 #include "devices/BM_V23_json.h"
 #include "devices/BPARASITE_json.h"
+#include "devices/BWBSDOO_json.h"
 #include "devices/BM2_json.h"
 #include "devices/ServiceData_json.h"
 
@@ -121,6 +122,7 @@ const char* _devices[][2] = {
     {_GAEN_json, _GAEN_json_props},
     {_HHCCPOT002_json, _HHCCPOT002_json_props},
     {_BPARASITE_json, _BPARASITE_json_props},
+    {_BWBSDOO_json, _BWBSDOO_json_props},
     {_BM2_json, _BM2_json_props},
     {_RDL52832_json, _RDL52832_json_props},
     {_ABN03_json, _ABN03_json_props},
