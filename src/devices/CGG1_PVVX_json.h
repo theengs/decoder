@@ -5,7 +5,7 @@ const char* _CGG1_PVVX_json = "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\"
 /* R""""(
 {
    "brand":"Qingping",
-   "model":"Round TH v1",
+   "model":"CGG1",
    "model_id":"CGG1_PVVX",
    "condition":["servicedata", "=", 30, "index",6 , "342d58"],
    "properties":{

@@ -4,7 +4,7 @@ const char* _CGG1_ATC_json = "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\",
 /* R""""(
 {
    "brand":"Qingping",
-   "model":"Round TH v1",
+   "model":"CGG1",
    "model_id":"CGG1_ATC",
    "condition":["servicedata", "index", 0, "582d34"],
    "properties":{
