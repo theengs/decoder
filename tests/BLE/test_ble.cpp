@@ -10,8 +10,6 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"batt\":81}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"batt\":62}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"tempc\":27.4,\"tempf\":81.32}",
-    "{\"brand\":\"Qingping\",\"model\":\"Round TH v2\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32}",
-    "{\"brand\":\"Qingping\",\"model\":\"Round TH v2\",\"model_id\":\"CGG1\",\"tempc\":27.2,\"tempf\":80.96,\"hum\":63.8}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"batt\":94}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"hum\":59.5}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"for\":0.08}",
@@ -98,6 +96,21 @@ const char* expected_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
 };
 
+const char* expected_uuid_name_svcdata[] = {
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_ATC1441\",\"tempc\":22.4,\"tempf\":72.32,\"hum\":62,\"batt\":73,\"volt\":2.86}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_ATC1441\",\"tempc\":22.5,\"tempf\":72.5,\"hum\":62,\"batt\":74,\"volt\":2.869}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_PVVX\",\"tempc\":23.51,\"tempf\":74.318,\"hum\":60.58,\"batt\":75,\"volt\":2.877}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_PVVX\",\"tempc\":23.45,\"tempf\":74.21,\"hum\":60.8,\"batt\":74,\"volt\":2.869}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_PVVX\",\"tempc\":21.04,\"tempf\":69.872,\"hum\":48.85,\"batt\":92,\"volt\":3.034}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":23.7,\"tempf\":74.66,\"hum\":60.3}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"batt\":72}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":27.2,\"tempf\":80.96,\"hum\":63.8}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":24.1,\"tempf\":75.38,\"hum\":49.4}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"hum\":49.4}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"batt\":11}",
+};
+
 const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale\",\"model_id\":\"XMTZC01HM/XMTZC04HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":61.75}",
@@ -158,12 +171,12 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":24.9,\"tempf\":76.82,\"hum\":43.7,\"pm25\":381,\"pm10\":390,\"co2\":765}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":42.7,\"pm25\":164,\"pm10\":215,\"co2\":711}",
     "{\"brand\":\"GENERIC\",\"model\":\"Service data\",\"model_id\":\"ServiceData\",\"batt\":33}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":1006.3}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":1006.3}",
-    "{\"brand\":\"Cleargrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":1008.6}",
+    "{\"brand\":\"ClearGrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9}",
+    "{\"brand\":\"ClearGrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67}",
+    "{\"brand\":\"ClearGrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7}",
+    "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":1006.3}",
+    "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":1006.3}",
+    "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":1008.6}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":91.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1}",
@@ -177,9 +190,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":false}",
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":true}",
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"open\":false}",
-    "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
-    "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
-    "{\"brand\":\"Qingping\",\"model\":\"Round TH v1\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
 };
 
 // Service data test input [test name] [data]
@@ -189,8 +202,6 @@ const char* test_servicedata[][2] = {
     {"Mi jia round sensor", "5020aa0155aabbccddeeff0a100151"},
     {"Mi jia round sensor", "5020aa01123c0338342d580a10013e"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580410021201"},
-    {"Qingping round sensor", "5030470341743e10342d580410021201"},
-    {"Qingping round sensor", "5030470383743e10342d580d100410017e02"},
     {"Formaldehyde detector", "5020df02383a5c014357480a10015e"},
     {"Formaldehyde detector", "5020df02283a5c014357480610025302"},
     {"Formaldehyde detector", "5020df025b3a5c014357481010020800"},
@@ -209,8 +220,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
   TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V2,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V2,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
@@ -360,10 +369,10 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
 const char* test_uuid_mfgsvcdata[][4] = {
-    {"MiBand", "fee0", "57010202017dffffffffffffffffffffffffff02de7b8490725c2", "8d230000"},
-    {"RDL52832", "0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
-    {"RDL52832", "0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
-    {"RDL52832", "0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
+    {"MiBand", "0xfee0", "57010202017dffffffffffffffffffffffffff02de7b8490725c2", "8d230000"},
+    {"RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
+    {"RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
+    {"RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_mfgsvcdata_id_num[]{
@@ -371,6 +380,37 @@ TheengsDecoder::BLE_ID_NUM test_uuid_mfgsvcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::RDL52832,
   TheengsDecoder::BLE_ID_NUM::RDL52832,
   TheengsDecoder::BLE_ID_NUM::RDL52832,
+};
+
+// uuid name test input [test name] [uuid] [device name] [service data]
+const char* test_uuid_name_svcdata[][4] = {
+    {"Qingping round sensor ATC441", "0x181a", "CGG_1233DC", "582d341233dc00e03e490b2c2e"},
+    {"Qingping round sensor ATC441", "0x181a", "CGG_1233DC", "582d341233dc00e13e4a0b353b"},
+    {"Qingping round sensor PVVX", "0x181a", "CGG_1233DC", "dc3312342d582f09aa173d0b4b7c05"},
+    {"Qingping round sensor PVVX", "0x181a", "CGG_1233DC", "dc3312342d582909c017350b4a8c05"},
+    {"Qingping round sensor PVVX", "0x181a", "CGG_1233DC", "5a582d34126a38081513da0b5c0304"},
+    {"Qingping round sensor Mi v4", "0xfe95", "Qingping Temp & RH", "5058480b5ddc3312342d580d1004ed005b02"},
+    {"Qingping round sensor Mi v4", "0xfe95", "Qingping Temp & RH", "5058480b70dc3312342d580a100148"},
+    {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "5030470383ffeeddccbbaa0d100410017e02"},
+    {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "50304703c7ffeeddccbbaa0d1004f100ee01"},
+    {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "5030470341ffeeddccbbaa0410021201"},
+    {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "503047036affeeddccbbaa061002ee01"},
+    {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "5030470348ffeeddccbbaa0a10010b"},
+};
+
+TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::CGG1_ATC1441,
+  TheengsDecoder::BLE_ID_NUM::CGG1_ATC1441,
+  TheengsDecoder::BLE_ID_NUM::CGG1_PVVX,
+  TheengsDecoder::BLE_ID_NUM::CGG1_PVVX,
+  TheengsDecoder::BLE_ID_NUM::CGG1_PVVX,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
@@ -416,10 +456,10 @@ const char* test_uuid[][4] = {
     {"bParasite", "181a", "servicedata", "21c30b8608dea6666b85aabbccddeeff30d4"},
     {"Switchbot_Curtain", "0d00", "servicedata", "63c04c1970"},
     {"Switchbot_Curtain", "0d00", "servicedata", "63805599a0"},
-    {"Cleargrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020001"},
-    {"Cleargrass clock", "fe95", "servicedata", "70205b04dc6ab883c8593f09061002b202"},
-    {"Cleargrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020901"},
-    {"Cleargrass clock", "fe95", "servicedata", "70205b04859638b1002ee7090a100108"},
+    {"ClearGrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020001"},
+    {"ClearGrass clock", "fe95", "servicedata", "70205b04dc6ab883c8593f09061002b202"},
+    {"ClearGrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020901"},
+    {"ClearGrass clock", "fe95", "servicedata", "70205b04859638b1002ee7090a100108"},
     {"Mi flora", "fe95", "servicedata", "712098004a63b6658d7cc40d071003f32600"},
     {"Mi flora", "fe95", "servicedata", "712098005763b6658d7cc40d0810011e"},
     {"Mi flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
@@ -434,12 +474,12 @@ const char* test_uuid[][4] = {
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f900b50112047d0186011302fd02"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f600ab011204a400d7001302c702"},
     {"Service data", "0x180f", "servicedata", "21"},
-    {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040a017f0202012a"},
-    {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040d019e0202012a"},
-    {"Cleargrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040e01910202012a"},
-    {"Cleargrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d5801040801870207024f2702015c"},
-    {"Cleargrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d5801040f01880207024f2702015c"},
-    {"Cleargrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d580104fc004a0207026627020120"},
+    {"ClearGrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040a017f0202012a"},
+    {"ClearGrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040d019e0202012a"},
+    {"ClearGrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040e01910202012a"},
+    {"ClearGrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d5801040801870207024f2702015c"},
+    {"ClearGrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d5801040f01880207024f2702015c"},
+    {"ClearGrass Weather Station", "0xfdcd", "servicedata", "08094c0140342d580104fc004a0207026627020120"},
     {"Qingping TH lite", "0xfdcd", "servicedata", "8810799111342d580104e8008f0302010b"},
     {"Qingping TH lite", "0xfdcd", "servicedata", "8810799111342d580104e9001d0202010b"},
     {"Qingping TH lite", "0xfdcd", "servicedata", "0810799111342d580104e9001d0202010b"},
@@ -453,7 +493,7 @@ const char* test_uuid[][4] = {
     {"Qingping Door Close", "0xfdcd", "servicedata", "0804751060342d580201600f01420f0101"},
     {"Qingping Door Open Action", "0xfdcd", "servicedata", "4804751060342d580401000f01cb"},
     {"Qingping Door Close Action", "0xfdcd", "servicedata", "4804751060342d580401010f01d5"},
-    {"Qingping round sensor", "0xfdcd", "servicedata", "0807743e10342d5801041201720202010d"},
+    {"Qingping round sensor", "0xfdcd", "servicedata", "0807ffeeddccbbaa01041201720202010d"},
     {"Qingping round sensor", "0xfdcd", "servicedata", "8816YYYYYYYYYYYY0104eb001b01020164"},
     {"Qingping round sensor", "0xfdcd", "servicedata", "8816xxxxxxxxxxxx0104f4003b01020164"},
 };
@@ -537,9 +577,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGH1,
   TheengsDecoder::BLE_ID_NUM::CGH1,
   TheengsDecoder::BLE_ID_NUM::CGH1,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
-  TheengsDecoder::BLE_ID_NUM::CGG1_V1,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
+  TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
 };
 
 template <typename T>
@@ -672,6 +712,55 @@ int main() {
       std::cout << "FAILED! Error parsing: " << test_mfgdata[i][0]
                 << " : " << test_mfgdata[i][1] << " : "
                 << test_mfgdata[i][2] << "decode res: " << decode_res << std::endl;
+      return 1;
+    }
+  }
+
+  for (unsigned int i = 0; i < sizeof(test_uuid_name_svcdata) / sizeof(test_uuid_name_svcdata[0]); ++i) {
+    doc.clear();
+    std::cout << "trying " << test_uuid_name_svcdata[i][0] << " : " << test_uuid_name_svcdata[i][1] << std::endl;
+    doc["servicedatauuid"] = test_uuid_name_svcdata[i][1];
+    doc["name"] = test_uuid_name_svcdata[i][2];
+    doc["servicedata"] = test_uuid_name_svcdata[i][3];
+    bleObject = doc.as<JsonObject>();
+
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_uuid_name_svcdata_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
+      bleObject.remove("servicedatauuid");
+      bleObject.remove("name");
+      bleObject.remove("servicedata");
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
+
+      StaticJsonDocument<2048> doc_exp;
+      JsonObject expected = doc_exp.to<JsonObject>();
+      deserializeJson(doc_exp, expected_uuid_name_svcdata[i]);
+
+      if (!checkResult(bleObject, expected)) {
+        return 1;
+      }
+
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
+
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      if (error) {
+        std::cout << "deserializeJson() failed: " << error << std::endl;
+        return 1;
+      }
+      std::cout << "Properties: ";
+      serializeJson(doc_exp, std::cout);
+      std::cout << std::endl;
+    } else {
+      std::cout << "FAILED! Error parsing: " << test_uuid_name_svcdata[i][0] << " : " << test_uuid_name_svcdata[i][1] << " : " << test_uuid_name_svcdata[i][2] << " : " << test_uuid_name_svcdata[i][3] << std::endl;
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
       return 1;
     }
   }
