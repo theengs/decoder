@@ -22,6 +22,8 @@
 #include "devices/CGD1_json.h"
 #include "devices/CGDK2_json.h"
 #include "devices/CGG1_json.h"
+#include "devices/CGG1_ATC_json.h"
+#include "devices/CGG1_PVVX_json.h"
 #include "devices/CGDN1_json.h"
 #include "devices/CGH1_json.h"
 #include "devices/CGP1W_json.h"
@@ -80,6 +82,8 @@ const char* _devices[][2] = {
     {_CGP1W_json, _CGP1W_json_props},
     {_CGG1_json_v1, _CGG1_json_props},
     {_CGG1_json_v2, _CGG1_json_props},
+    {_CGG1_ATC_json, _CGG1_json_props},
+    {_CGG1_PVVX_json, _CGG1_json_props},
     {_CGDN1_json, _CGDN1_json_props},
     {_CGD1_json, _CGD1_json_props},
     {_CGDK2_json, _CGDK2_json_props},
