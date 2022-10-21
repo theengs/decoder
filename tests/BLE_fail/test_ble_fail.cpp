@@ -6,8 +6,6 @@
 const char* test_servicedata[][2] = {
     {"Mi jia round sensor", "5020aa0137dfaa33342d580d100404016602"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580610026602"},
-    {"Cleargrass round sensor", "5030470341743e10342d580410021201"},
-    {"Cleargrass round sensor", "5030470383743e10342d580d100410017e02"},
     {"Formaldehyde detector", "5020df02383a5c014357480a10015e"},
     {"Formaldehyde detector", "5020df02283a5c014357480610025302"},
     {"Formaldehyde detector", "5020df025b3a5c014357481010020800"},
@@ -17,8 +15,6 @@ const char* test_servicedata[][2] = {
 TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
     TheengsDecoder::BLE_ID_NUM::LYWSDCGQ,
-    TheengsDecoder::BLE_ID_NUM::CGG1_V2,
-    TheengsDecoder::BLE_ID_NUM::CGG1_V2,
     TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
     TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
     TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
@@ -41,9 +37,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
     {"MiBand", "fee0", "servicedata", "a21e0000"},
-    {"Cleargrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020001"},
-    {"Cleargrass clock", "fe95", "servicedata", "70205b04dc6ab883c8593f09061002b202"},
-    {"Cleargrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020901"},
+    {"ClearGrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020001"},
+    {"ClearGrass clock", "fe95", "servicedata", "70205b04dc6ab883c8593f09061002b202"},
+    {"ClearGrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020901"},
     {"Mi flora", "fe95", "servicedata", "712098004a63b6658d7cc40d071003f32600"},
     {"Mi flora", "fe95", "servicedata", "712098005763b6658d7cc40d0810011e"},
     {"Mi flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},

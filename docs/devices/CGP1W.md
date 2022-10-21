@@ -1,8 +1,8 @@
-# Cleargrass Weather Station CGP1W
+# ClearGrass Weather Station CGP1W
 
 |Model Id|[CGP1W](https://github.com/theengs/decoder/blob/development/src/devices/CGP1W_json.h)|
 |-|-|
-|Brand|Cleargrass|
+|Brand|ClearGrass|
 |Model|Weather Station|
 |Short Description|Rechargeable temperature, humidity and atmospheric pressure sensor|
 |Communication|BLE broadcast|
