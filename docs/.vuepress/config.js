@@ -63,6 +63,7 @@ module.exports = {
             'devices/MokoBeacon',
             'devices/MBXPRO',
             'devices/T301',
+            'devices/BWBSDOO',
             'devices/CGDK2',
             'devices/CGH1',
             'devices/CGPR1',

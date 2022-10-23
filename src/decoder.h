@@ -93,6 +93,7 @@ public:
     GAEN,
     HHCCPOT002,
     BPARASITE,
+    BWBSDOO,
     BM2,
     RDL52832,
     ABN03,
