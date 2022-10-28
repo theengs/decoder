@@ -1,6 +1,6 @@
 #include "common_props.h"
 
-const char* _BM_V23_json = "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"condition\":[\"manufacturerdata\",\"=\",32,\"index\",0,\"3301\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",16,4],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4],\"post_proc\":[\"/\",10]},\"tempc2_dp\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4],\"post_proc\":[\"/\",10]},\"volt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4],\"post_proc\":[\"/\",100]}}}";
+const char* _BM_V23_json = "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\"model_id\":\"BM_V23\",\"condition\":[\"manufacturerdata\",\"=\",32,\"index\",0,\"3301\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",16,4,false],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,false],\"post_proc\":[\"/\",10]},\"tempc2_dp\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,false],\"post_proc\":[\"/\",10]},\"volt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,false],\"post_proc\":[\"/\",100]}}}";
 
 /*R""""(
 {
@@ -10,19 +10,19 @@ const char* _BM_V23_json = "{\"brand\":\"BlueMaestro\",\"model\":\"TempoDisc\",\
    "condition":["manufacturerdata","=",32, "index", 0, "3301"],
    "properties":{
       "tempc":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 16, 4],
+         "decoder":["value_from_hex_data", "manufacturerdata", 16, 4, false],
          "post_proc":["/", 10]
       },
       "hum":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 20, 4],
+         "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, false],
          "post_proc":["/", 10]
       },
       "tempc2_dp":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4],
+         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, false],
          "post_proc":["/", 10]
       },
       "volt":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4],
+         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, false],
          "post_proc":["/", 100]
       }
    }
