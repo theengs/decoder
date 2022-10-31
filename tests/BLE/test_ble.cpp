@@ -14,8 +14,6 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"hum\":59.5}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"for\":0.08}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"tempc\":19.6,\"tempf\":67.28}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_ATC\",\"tempc\":32.5,\"tempf\":90.5,\"hum\":62,\"batt\":81,\"volt\":2.939}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_PVVX\",\"tempc\":21.12,\"tempf\":70.016,\"hum\":50.53,\"batt\":100,\"volt\":3.143}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"moi\":3}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"fer\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"pres\":true,\"darkness\":29}",
@@ -111,6 +109,8 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"hum\":49.4}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"batt\":11}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_ATC\",\"tempc\":32.5,\"tempf\":90.5,\"hum\":62,\"batt\":81,\"volt\":2.939}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_PVVX\",\"tempc\":21.12,\"tempf\":70.016,\"hum\":50.53,\"batt\":100,\"volt\":3.143}",
 };
 
 const char* expected_uuid[] = {
@@ -207,8 +207,6 @@ const char* test_servicedata[][2] = {
     {"Formaldehyde detector", "5020df02283a5c014357480610025302"},
     {"Formaldehyde detector", "5020df025b3a5c014357481010020800"},
     {"Formaldehyde detector", "5120df023e3a5c01435748041002c400"},
-    {"LYWSD03MMC_ATC", "a4c138d5d49801453e510b7b62"},
-    {"LYWSD03MMC_PVVX", "5601cf38c1a44008bd13470c64cc0f"},
     {"RoPot", "71205d0183d20c6d8d7cc40d08100103"},
     {"RoPot", "71205d0188d20c6d8d7cc40d0910020100"},
     {"MiLamp", "4030dd031d0300010100"},
@@ -225,8 +223,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
   TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
-  TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_ATC,
-  TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
   TheengsDecoder::BLE_ID_NUM::MUE4094RT,
@@ -401,6 +397,8 @@ const char* test_uuid_name_svcdata[][4] = {
     {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "5030470341ffeeddccbbaa0410021201"},
     {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "503047036affeeddccbbaa061002ee01"},
     {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "5030470348ffeeddccbbaa0a10010b"},
+    {"LYWSD03MMC_ATC", "0x181a", "ATC_800021", "a4c138d5d49801453e510b7b62"},
+    {"LYWSD03MMC_PVVX", "0x181a", "ATC_800021", "5601cf38c1a44008bd13470c64cc0f"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -416,6 +414,8 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
+  TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_ATC,
+  TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
