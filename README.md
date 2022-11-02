@@ -24,6 +24,6 @@ Projects using the Theengs Decoder library
 * [OpenMQTTGateway](https://github.com/1technophile/OpenMQTTGateway) - A BLE to MQTT bridge running on ESP8266, ESP32 or Arduino boards.
 * [Theengs Gateway](https://github.com/theengs/gateway) - A Python-based BLE to MQTT bridge running on Raspberry Pi, Windows or Linux.
 * [Theengs Explorer](https://github.com/theengs/explorer) - A text user interface to discover BLE devices, showing their raw advertisement alongside the decoded data; running on Linux, Windows or macOS.
-* [Theengs App](https://github.com/theengs/app) - A paid app for Android phones and tablets displaying decoded BLE sensor data and optionally acting as a BLE to MQTT bridge.
+* [Theengs App](https://github.com/theengs/app) - A paid app for Android and iOS/iPadOS phones and tablets displaying decoded BLE sensor data and optionally acting as a BLE to MQTT bridge.
 
 For more information view the [documentation](https://decoder.theengs.io/)
