@@ -24,6 +24,7 @@ module.exports = {
       lastUpdated: 'Last Updated',
       editLinks: true,
       nav: [
+        { text: 'Shop🆕', link: 'https://shop.theengs.io/'},
         { text: 'Home', link: 'https://www.theengs.io', target:'_self', rel:''},
         { text: 'App', link: 'https://app.theengs.io', target:'_self', rel:''},
         { text: 'Gateway', link: 'https://gateway.theengs.io', target:'_self', rel:''},
