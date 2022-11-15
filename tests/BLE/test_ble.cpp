@@ -91,6 +91,12 @@ const char* expected_mfg[] = {
 
 const char* expected_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"steps\":9101,\"act_bpm\":125}",
+};
+
+const char* expected_name_uuid_mfgsvcdata[] = {
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.196133,\"accy\":0.0980665,\"accz\":9.5124505}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":1.372931,\"accy\":0.8825985,\"accz\":-9.610517}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
     "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.196133,\"accy\":0.0980665,\"accz\":9.5124505}",
     "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":1.372931,\"accy\":0.8825985,\"accz\":-9.610517}",
     "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
@@ -371,13 +377,27 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
 const char* test_uuid_mfgsvcdata[][4] = {
     {"MiBand", "0xfee0", "57010202017dffffffffffffffffffffffffff02de7b8490725c2", "8d230000"},
-    {"RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
-    {"RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
-    {"RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_mfgsvcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::MIBAND,
+};
+
+// uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
+const char* test_name_uuid_mfgsvcdata[][5] = {
+    {"RDL52832", "RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
+    {"RDL52832", "RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
+    {"RDL52832", "RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
+    {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
+    {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
+    {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
+
+};
+
+TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::RDL52832,
+  TheengsDecoder::BLE_ID_NUM::RDL52832,
+  TheengsDecoder::BLE_ID_NUM::RDL52832,
   TheengsDecoder::BLE_ID_NUM::RDL52832,
   TheengsDecoder::BLE_ID_NUM::RDL52832,
   TheengsDecoder::BLE_ID_NUM::RDL52832,
@@ -811,6 +831,57 @@ int main() {
       std::cout << std::endl;
     } else {
       std::cout << "FAILED! Error parsing: " << test_uuid_mfgsvcdata[i][0] << " : " << test_uuid_mfgsvcdata[i][1] << " : " << test_uuid_mfgsvcdata[i][2] << " : " << test_uuid_mfgsvcdata[i][3] << std::endl;
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
+      return 1;
+    }
+  }
+
+  for (unsigned int i = 0; i < sizeof(test_name_uuid_mfgsvcdata) / sizeof(test_name_uuid_mfgsvcdata[0]); ++i) {
+    doc.clear();
+    std::cout << "trying " << test_name_uuid_mfgsvcdata[i][0] << " : " << test_name_uuid_mfgsvcdata[i][1] << std::endl;
+    doc["name"] = test_name_uuid_mfgsvcdata[i][1];
+    doc["servicedatauuid"] = test_name_uuid_mfgsvcdata[i][2];
+    doc["manufacturerdata"] = test_name_uuid_mfgsvcdata[i][3];
+    doc["servicedata"] = test_name_uuid_mfgsvcdata[i][4];
+    bleObject = doc.as<JsonObject>();
+
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_name_uuid_mfgsvcdata_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
+      bleObject.remove("name");
+      bleObject.remove("servicedatauuid");
+      bleObject.remove("manufacturerdata");
+      bleObject.remove("servicedata");
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
+
+      StaticJsonDocument<2048> doc_exp;
+      JsonObject expected = doc_exp.to<JsonObject>();
+      deserializeJson(doc_exp, expected_name_uuid_mfgsvcdata[i]);
+
+      if (!checkResult(bleObject, expected)) {
+        return 1;
+      }
+
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
+
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      if (error) {
+        std::cout << "deserializeJson() failed: " << error << std::endl;
+        return 1;
+      }
+      std::cout << "Properties: ";
+      serializeJson(doc_exp, std::cout);
+      std::cout << std::endl;
+    } else {
+      std::cout << "FAILED! Error parsing: " << test_name_uuid_mfgsvcdata[i][0] << " : " << test_name_uuid_mfgsvcdata[i][1] << " : " << test_name_uuid_mfgsvcdata[i][2] << " : " << test_name_uuid_mfgsvcdata[i][3] << std::endl;
       serializeJson(doc, std::cout);
       std::cout << std::endl;
       return 1;
