@@ -40,8 +40,7 @@
 #include "devices/IBT_6XS_SOLIS6_json.h"
 #include "devices/JQJCY01YM_json.h"
 #include "devices/LYWSD02_json.h"
-#include "devices/LYWSD03MMC_ATC_json.h"
-#include "devices/LYWSD03MMC_PVVX_json.h"
+#include "devices/LYWSD03MMC_json.h"
 #include "devices/LYWSDCGQ_json.h"
 #include "devices/MBXPRO_json.h"
 #include "devices/MS_CDP_json.h"
@@ -96,14 +95,14 @@ const char* _devices[][2] = {
     {_XMTZC04HM_json, _XMTZC04HM_json_props},
     {_XMTZC05HM_json, _XMTZC05HM_json_props},
     {_TPMS_json, _TPMS_json_props},
-    {_LYWSD03MMC_ATC_json, _LYWSD03MMC_ATC_props},
+    {_LYWSD03MMC_json_ATC, _LYWSD03MMC_json_props},
+    {_LYWSD03MMC_json_PVVX, _LYWSD03MMC_json_props},
     {_CGPR1_json, _CGPR1_json_props},
     {_ThermoBeacon_json, _ThermoBeacon_json_props},
     {_H5055_json, _H5055_json_props},
     {_H5075_json, _H5075_json_props},
     {_H5072_json, _H5072_json_props},
     {_H5102_json, _H5102_json_props},
-    {_LYWSD03MMC_PVVX_json, _LYWSD03MMC_PVVX_props},
     {_MUE4094RT_json, _MUE4094RT_json_props},
     {_Mokobeacon_json, _Mokobeacon_json_props},
     {_MBXPRO_json, _MBXPRO_json_props},
