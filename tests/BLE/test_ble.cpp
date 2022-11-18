@@ -87,6 +87,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Oria\",\"model\":\"TH Sensor\",\"model_id\":\"T301\",\"cidc\":false,\"tempc\":26.2,\"tempf\":79.16,\"hum\":59,\"batt\":68}",
     "{\"brand\":\"Otio/BeeWi\",\"model\":\"Door & Window Sensor\",\"model_id\":\"BSDOO\",\"cidc\":false,\"contact\":\"closed\",\"batt\":100}",
     "{\"brand\":\"Otio/BeeWi\",\"model\":\"Door & Window Sensor\",\"model_id\":\"BSDOO\",\"cidc\":false,\"contact\":\"open\",\"batt\":100}",
+    "{\"brand\":\"Sensirion\",\"model\":\"TH Sensor\",\"model_id\":\"SHT4X\",\"tempc\":27.47005417,\"tempf\":81.44609751,\"hum\":43.37056535}",
+    "{\"brand\":\"Sensirion\",\"model\":\"TH Sensor\",\"model_id\":\"SHT4X\",\"tempc\":-10,\"tempf\":14,\"hum\":90.00404364}",
+    "{\"brand\":\"Sensirion\",\"model\":\"TH Sensor\",\"model_id\":\"SHT4X\",\"tempc\":-2.50171664,\"tempf\":27.49691005,\"hum\":65.00022889}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -303,6 +306,9 @@ const char* test_mfgdata[][3] = {
     {"Oria", "T301", "55aa0105aabbccddeeff01070a3c170c440001"},
     {"BeeWi", "BSDOO", "0d00080c000664"},
     {"BeeWi", "BSDOO", "0d00080c010664"},
+    {"Sensirion SHT4X", "SHT4X", "d5060006e2e7036a1c65"},
+    {"Sensirion SHT4X", "SHT4X", "d5060006e2e733339dc4"},
+    {"Sensirion SHT4X", "SHT4X", "d5060006e2e72b3e6891"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -372,6 +378,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::T301,
   TheengsDecoder::BLE_ID_NUM::BWBSDOO,
   TheengsDecoder::BLE_ID_NUM::BWBSDOO,
+  TheengsDecoder::BLE_ID_NUM::SHT4X,
+  TheengsDecoder::BLE_ID_NUM::SHT4X,
+  TheengsDecoder::BLE_ID_NUM::SHT4X,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
