@@ -90,6 +90,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Sensirion\",\"model\":\"TH Sensor\",\"model_id\":\"SHT4X\",\"tempc\":27.47005417,\"tempf\":81.44609751,\"hum\":43.37056535}",
     "{\"brand\":\"Sensirion\",\"model\":\"TH Sensor\",\"model_id\":\"SHT4X\",\"tempc\":-10,\"tempf\":14,\"hum\":90.00404364}",
     "{\"brand\":\"Sensirion\",\"model\":\"TH Sensor\",\"model_id\":\"SHT4X\",\"tempc\":-2.50171664,\"tempf\":27.49691005,\"hum\":65.00022889}",
+    "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"tempc\":-10,\"tempf\":14,\"hum\":76.80323491,\"co2\":745}",
+    "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"tempc\":25.63286793,\"tempf\":78.13916228,\"hum\":36.16083009,\"co2\":1035}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -309,6 +311,8 @@ const char* test_mfgdata[][3] = {
     {"Sensirion SHT4X", "SHT4X", "d5060006e2e7036a1c65"},
     {"Sensirion SHT4X", "SHT4X", "d5060006e2e733339dc4"},
     {"Sensirion SHT4X", "SHT4X", "d5060006e2e72b3e6891"},
+    {"Sensirion MyCO2", "SCD4X", "d506000ae2e733339dc4e902"},
+    {"Sensirion MyCO2", "SCD4X", "d506000867355367925c0b040609"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -381,6 +385,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::SHT4X,
   TheengsDecoder::BLE_ID_NUM::SHT4X,
   TheengsDecoder::BLE_ID_NUM::SHT4X,
+  TheengsDecoder::BLE_ID_NUM::SCD4X,
+  TheengsDecoder::BLE_ID_NUM::SCD4X,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
