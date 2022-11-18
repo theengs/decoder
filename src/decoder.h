@@ -87,6 +87,7 @@ public:
     SBMS,
     SBMT,
     SBS1,
+    SHT4X,
     SMARTDRY,
     BM_V23,
     MS_CDP,
