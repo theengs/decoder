@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|Battery 2 AA|
-|Exchanged data|temperature, humidity|
+|Exchanged data|temperature, humidity, battery|
 |Encrypted|No|
