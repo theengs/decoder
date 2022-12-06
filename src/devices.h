@@ -29,6 +29,7 @@
 #include "devices/GAEN_json.h"
 #include "devices/H5055_json.h"
 #include "devices/H5072_json.h"
+#include "devices/H5074_json.h"
 #include "devices/H5102_json.h"
 #include "devices/HHCCJCY01HHCC_json.h"
 #include "devices/HHCCPOT002_json.h"
@@ -102,6 +103,7 @@ const char* _devices[][2] = {
     {_ThermoBeacon_json, _ThermoBeacon_json_props},
     {_H5055_json, _H5055_json_props},
     {_H5072_json, _H5072_json_props},
+    {_H5074_json, _H5074_json_props},
     {_H5102_json, _H5102_json_props},
     {_MUE4094RT_json, _MUE4094RT_json_props},
     {_Mokobeacon_json, _Mokobeacon_json_props},
