@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   gcc:
     name: GCC
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
@@ -39,7 +39,7 @@ jobs:
 
   clang:
     name: Clang
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
@@ -117,7 +117,7 @@ jobs:
         run: ctest --output-on-failure -V -C Debug .
 
   examples:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
