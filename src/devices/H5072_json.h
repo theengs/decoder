@@ -1,18 +1,24 @@
 #include "common_props.h"
 
-const char* _H5072_json = "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072\",\"cidc\":false,\"condition\":[\"name\",\"contain\",\"GVH5072\",\"&\",\"manufacturerdata\",\"index\",0,\"88ec\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,6,false],\"post_proc\":[\"/\",1000,\">\",0,\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,6,false],\"post_proc\":[\"%\",1000,\"/\",10]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",12,2,false]}}}";
+const char* _H5072_json = "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072/75\",\"cidc\":false,\"condition\":[\"name\",\"index\",0,\"GVH5072\",\"|\",\"name\",\"index\",0,\"GVH5075\",\"&\",\"manufacturerdata\",\"=\",16,\"index\",0,\"88ec\"],\"properties\":{\"tempc\":{\"condition\":[\"manufacturerdata\",6,\"bit\",3,0],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,6,false],\"post_proc\":[\"/\",1000,\">\",0,\"/\",10]},\"_tempc\":{\"condition\":[\"manufacturerdata\",6,\"bit\",3,1],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,6,false,false],\"post_proc\":[\"-\",8388608,\"/\",10000,\"*\",-1]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,6,false],\"post_proc\":[\"%\",1000,\"/\",10]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",12,2,false]}}}";
 
 /* R""""(
 {
    "brand":"Govee",
    "model":"Thermo Hygrometer",
-   "model_id":"H5072",
+   "model_id":"H5072/75",
    "cidc":false,
-   "condition":["name", "contain", "GVH5072", "&", "manufacturerdata", "index", 0, "88ec"],
+   "condition":["name", "index", 0, "GVH5072", "|", "name", "index", 0, "GVH5075", "&", "manufacturerdata", "=", 16, "index", 0, "88ec"],
    "properties":{
       "tempc":{
+         "condition":["manufacturerdata", 6, "bit", 3, 0],
          "decoder":["value_from_hex_data", "manufacturerdata", 6, 6, false],
          "post_proc":["/", 1000, ">", 0, "/", 10]
+      },
+      "_tempc":{
+         "condition":["manufacturerdata", 6, "bit", 3, 1],
+         "decoder":["value_from_hex_data", "manufacturerdata", 6, 6, false, false],
+         "post_proc":["-", 8388608, "/", 10000, "*", -1]
       },
       "hum":{
          "decoder":["value_from_hex_data", "manufacturerdata", 6, 6, false],
