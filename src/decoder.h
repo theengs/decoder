@@ -72,7 +72,6 @@ public:
     CGPR1,
     THERMOBEACON,
     H5055,
-    H5075,
     H5072,
     H5102,
     MUE4094RT,
