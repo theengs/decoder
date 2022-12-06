@@ -6,7 +6,7 @@ on:
 jobs:
   gcc:
     name: GCC
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
@@ -55,7 +55,7 @@ jobs:
 
   clang:
     name: Clang
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
