@@ -75,6 +75,7 @@ public:
     H5072,
     H5074,
     H5102,
+    H5106,
     MUE4094RT,
     MOKOBEACON,
     MOKOBEACONXPRO,

@@ -97,8 +97,8 @@ double TheengsDecoder::value_from_hex_string(const char* data_str,
 
   double value = 0;
   if (!isFloat) {
-    value = strtol(data.c_str(), NULL, 16);
-    DEBUG_PRINT("extracted value from %s = 0x%08lx\n", data.c_str(), (long)value);
+    value = strtoll(data.c_str(), NULL, 16);
+    DEBUG_PRINT("extracted value from %s = %lld\n", data.c_str(), (long long)value);
   } else {
     long longV = strtol(data.c_str(), NULL, 16);
     float floatV = *((float *) &longV);
@@ -546,7 +546,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                         break;
                       }
                       case '&': {
-                        long val = (long)temp_val;
+                        long long val = (long long)temp_val;
                         temp_val = val & post_proc[i + 1].as<unsigned int>();
                         break;
                       }
@@ -569,15 +569,15 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                 */
             std::string _key = sanitizeJsonKey(kv.key().c_str());
 
-            /* calculation values extracted from data are not added to the deocded outupt
-                * instead we store them teporarily to use with the next data properties.
+            /* calculation values extracted from data are not added to the decoded output
+                * instead we store them temporarily to use with the next data properties.
                 */
             if (_key == ".cal") {
               cal_val = temp_val;
               continue;
             }
 
-            /* Cast to a differnt value type if specified */
+            /* Cast to a different value type if specified */
             if (prop.containsKey("is_bool")) {
               jsondata[_key] = (bool)temp_val;
             } else {
