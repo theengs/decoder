@@ -98,6 +98,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5074\",\"cidc\":false,\"tempc\":22.44,\"tempf\":72.392,\"hum\":74.59,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5074\",\"cidc\":false,\"tempc\":-13.76,\"tempf\":7.232,\"hum\":60.92,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5074\",\"cidc\":false,\"tempc\":25.87,\"tempf\":78.566,\"hum\":65.55,\"batt\":100}",
+    "{\"brand\":\"Mopeka\",\"model\":\"Pro Check Sensor\",\"model_id\":\"M1017\",\"cidc\":false,\"tempc\":25,\"tempf\":77,\"lvl_cm\":15.4144725,\"lvl_in\":6.068689961,\"sync\":false,\"volt\":2.90625,\"batt\":100,\"quality\":3}",
+    "{\"brand\":\"Mopeka\",\"model\":\"Pro Check Sensor\",\"model_id\":\"M1017\",\"cidc\":false,\"tempc\":25,\"tempf\":77,\"lvl_cm\":62.3919125,\"lvl_in\":24.56374508,\"sync\":false,\"volt\":2.84375,\"batt\":99.03846154,\"quality\":3}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -325,6 +327,8 @@ const char* test_mfgdata[][3] = {
     {"H5074", "Govee_H5074_1234", "88ec00c408231d6402"},
     {"H5074", "Govee_H5074_1234", "88ec00a0facc176402"},
     {"H5074", "Govee_H5074_1234", "88ec001b0a9b196402"},
+    {"Mopeka", "Standard", "5900035d41a4c150a8cc0323"},
+    {"Mopeka", "Standard", "5900035b41a4c650a8cc801b"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -405,6 +409,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::H5074,
   TheengsDecoder::BLE_ID_NUM::H5074,
   TheengsDecoder::BLE_ID_NUM::H5074,
+  TheengsDecoder::BLE_ID_NUM::MOPEKA,
+  TheengsDecoder::BLE_ID_NUM::MOPEKA,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]

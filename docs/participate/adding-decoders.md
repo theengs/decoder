@@ -204,6 +204,8 @@ Valid operations are:
 - ">" shift right
 - "!" Not (invert), useful for bool types
 - "&" Logical And the values
+- "min" the minimum allowed value
+- "max" the maximum allowed value
 
 #### Special property .cal
 .cal is a special property that can extracted from the provided data and used in calculations of other properties following it's definition. For example:
