@@ -552,12 +552,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       }
                     }
                   } else if (strncmp(post_proc[i].as<const char*>(), "max", 3) == 0) {
-                    if (temp_val > post_proc[i + 1].as<unsigned int>()) {
-                      temp_val = post_proc[i + 1].as<unsigned int>();
+                    if (temp_val > post_proc[i + 1].as<double>()) {
+                      temp_val = post_proc[i + 1].as<double>();
                     }
                   } else if (strncmp(post_proc[i].as<const char*>(), "min", 3) == 0) {
-                    if (temp_val < post_proc[i + 1].as<unsigned int>()) {
-                      temp_val = post_proc[i + 1].as<unsigned int>();
+                    if (temp_val < post_proc[i + 1].as<double>()) {
+                      temp_val = post_proc[i + 1].as<double>();
                     }
                   }
                 }
