@@ -28,9 +28,9 @@
 
 #ifdef DEBUG_DECODER
 #  include <stdio.h>
-#  define DEBUG_PRINT printf
+#  define DEBUG_PRINT(...) { printf(__VA_ARGS__); }
 #else
-#  define DEBUG_PRINT
+#  define DEBUG_PRINT(...) {}
 #endif
 
 #ifdef UNIT_TESTING
