@@ -276,7 +276,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
           i++;
         }
 
-        DEBUG_PRINT("comparing value: %s to %s at index %lu\n",
+        DEBUG_PRINT("comparing value: %s to %s at index %zu\n",
                     &cmp_str[cond_index],
                     condition[i].as<const char*>(),
                     cond_index);
