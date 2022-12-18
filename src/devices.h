@@ -67,6 +67,7 @@
 #include "devices/Amphiro_json.h"
 #include "devices/TP35X_json.h"
 #include "devices/Mopeka_json.h"
+#include "devices/T201_json.h"
 #include "devices/T301_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/iNodeEM_json.h"
@@ -134,6 +135,7 @@ const char* _devices[][2] = {
     {_AMPHIRO_json, _AMPHIRO_json_props},
     {_TP35X_json, _TP35X_json_props},
     {_Mopeka_json, _Mopeka_json_props},
+    {_T201_json, _T201_json_props},
     {_T301_json, _T301_json_props},
     {_ibeacon_json, _ibeacon_json_props},
     {_ServiceData_json, _ServiceData_json_props},

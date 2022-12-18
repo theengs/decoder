@@ -103,6 +103,7 @@ public:
     AMPHIRO,
     TP35X,
     MOPEKA,
+    T201,
     T301,
     IBEACON,
     SERVICE_DATA,
