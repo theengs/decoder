@@ -1,6 +1,6 @@
 # Google/Apple Exposure Notification
 
-|Model Id|[MS-CDP](https://github.com/theengs/decoder/blob/development/src/devices/GAEN_json.h)|
+|Model Id|[GAEN](https://github.com/theengs/decoder/blob/development/src/devices/GAEN_json.h)|
 |-|-|
 |Brand|Generic|
 |Model|GAEN|

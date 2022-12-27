@@ -64,6 +64,7 @@ public:
     IBT_2XS,
     IBT4XS,
     IBT6XS_SOLIS,
+    APPLE_CONT,
     MIBAND,
     XMTZC04HM,
     XMTZC05HM,
