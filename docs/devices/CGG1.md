@@ -7,6 +7,6 @@
 |Short Description|Simple temperature and humidity sensor with e-ink display|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Battery CR2430|
+|Power source|CR2430|
 |Exchanged data|temperature, humidity, battery, voltage (depending on which CGG1 firmware is installed)|
 |Encrypted|No|

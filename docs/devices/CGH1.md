@@ -7,6 +7,6 @@
 |Short Description|Door/Window contact sensor with Open-Close status|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Battery CR1632|
+|Power source|CR1632|
 |Exchanged data|open|
 |Encrypted|No|
