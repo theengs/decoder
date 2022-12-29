@@ -193,9 +193,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":42.7,\"pm25\":164,\"pm10\":215,\"co2\":711}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tempc\":20.6,\"tempf\":69.08,\"hum\":55.2,\"pm25\":5,\"pm10\":5,\"co2\":471}",
     "{\"brand\":\"GENERIC\",\"model\":\"Service data\",\"model_id\":\"ServiceData\",\"batt\":33}",
-    "{\"brand\":\"ClearGrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9,\"batt\":42}",
-    "{\"brand\":\"ClearGrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67,\"batt\":42}",
-    "{\"brand\":\"ClearGrass\",\"model\":\"Alarm Clock\",\"model_id\":\"CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7,\"batt\":85}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9,\"batt\":42}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67,\"batt\":42}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7,\"batt\":85}",
     "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":1006.3}",
     "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":1006.3}",
     "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":1008.6}",
@@ -215,6 +215,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100}",
 };
 
 // Service data test input [test name] [data]
@@ -540,7 +541,7 @@ const char* test_uuid[][4] = {
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "080eaabbccddeeff010422014c011204710072001302ed03"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f900b50112047d0186011302fd02"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f600ab011204a400d7001302c702"},
-    {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "88246bbb288ccf040104ce0028021204050005001302d701"},
+    {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "8824aabbccddeeff0104ce0028021204050005001302d701"},
     {"Service data", "0x180f", "servicedata", "21"},
     {"ClearGrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040a017f0202012a"},
     {"ClearGrass alarm clock", "0xfdcd", "servicedata", "080caffd50342d5801040d019e020201aa"},
@@ -564,6 +565,7 @@ const char* test_uuid[][4] = {
     {"Qingping round sensor", "0xfdcd", "servicedata", "0807ffeeddccbbaa01041201720202010d"},
     {"Qingping round sensor", "0xfdcd", "servicedata", "8816YYYYYYYYYYYY0104eb001b01020164"},
     {"Qingping round sensor", "0xfdcd", "servicedata", "8816xxxxxxxxxxxx0104f4003b01020164"},
+    {"Qingping alarm clock", "0xfdcd", "servicedata", "081eaabbccddeeff0104d200fe01020164"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -648,6 +650,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
+  TheengsDecoder::BLE_ID_NUM::CGD1,
 };
 
 template <typename T>
