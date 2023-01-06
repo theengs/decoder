@@ -90,6 +90,7 @@ public:
     SHT4X,
     SCD4X,
     SMARTDRY,
+    BM1IN1,
     BM3IN1,
     BM4IN1,
     MS_CDP,
