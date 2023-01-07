@@ -105,6 +105,10 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5074\",\"cidc\":false,\"tempc\":25.87,\"tempf\":78.566,\"hum\":65.55,\"batt\":100}",
     "{\"brand\":\"Mopeka\",\"model\":\"Pro Check Sensor\",\"model_id\":\"M1017\",\"cidc\":false,\"tempc\":25,\"tempf\":77,\"lvl_cm\":15.4144725,\"lvl_in\":6.068689961,\"sync\":false,\"volt\":2.90625,\"batt\":100,\"quality\":3}",
     "{\"brand\":\"Mopeka\",\"model\":\"Pro Check Sensor\",\"model_id\":\"M1017\",\"cidc\":false,\"tempc\":25,\"tempf\":77,\"lvl_cm\":62.3919125,\"lvl_in\":24.56374508,\"sync\":false,\"volt\":2.84375,\"batt\":99.03846154,\"quality\":3}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"cidc\":false,\"tempc1\":28,\"tempf1\":82.4,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"cidc\":false,\"tempc2\":31,\"tempf2\":87.8,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"cidc\":false,\"tempc4\":30,\"tempf4\":86,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"cidc\":false,\"tempc6\":33,\"tempf6\":91.4,\"batt\":100}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -341,6 +345,10 @@ const char* test_mfgdata[][3] = {
     {"H5074", "Govee_H5074_1234", "88ec001b0a9b196402"},
     {"Mopeka", "Standard", "5900035d41a4c150a8cc0323"},
     {"Mopeka", "Standard", "5900035b41a4c650a8cc801b"},
+    {"H5055", "GVH5055", "59045b006401201c00ffffffff20ffffffffffff0000"},
+    {"H5055", "GVH5055", "59045b00640220ffffffffffff201f00ffffffff0000"},
+    {"H5055", "GVH5055", "59045b00646020ffffffffffff201e00ffffffff0000"},
+    {"H5055", "GVH5055", "59045b0064a020ffffffffffff202100ffffffff0000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -428,6 +436,10 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::H5074,
   TheengsDecoder::BLE_ID_NUM::MOPEKA,
   TheengsDecoder::BLE_ID_NUM::MOPEKA,
+  TheengsDecoder::BLE_ID_NUM::H5055,
+  TheengsDecoder::BLE_ID_NUM::H5055,
+  TheengsDecoder::BLE_ID_NUM::H5055,
+  TheengsDecoder::BLE_ID_NUM::H5055,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
