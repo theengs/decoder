@@ -103,7 +103,7 @@ public:
     ABN03,
     ABTEMP,
     AMPHIRO,
-    TP35X,
+    TPTH,
     MOPEKA,
     T201,
     T301,
