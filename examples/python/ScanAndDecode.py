@@ -38,8 +38,7 @@ def detection_callback(device, advertisement_data):
 
 
 async def main():
-    scanner = BleakScanner()
-    scanner.register_detection_callback(detection_callback)
+    scanner = BleakScanner(detection_callback=detection_callback)
     await scanner.start()
     await asyncio.sleep(5.0)
     await scanner.stop()
