@@ -99,7 +99,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"tempc\":-10,\"tempf\":14,\"hum\":76.80323491,\"co2\":745}",
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"tempc\":25.63286793,\"tempf\":78.13916228,\"hum\":36.16083009,\"co2\":1035}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrometer\",\"model_id\":\"H5101/02/74/77\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"hum\":69.1,\"batt\":100}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrometer\",\"model_id\":\"H5101/02/74/77\",\"cidc\":false,\"tempc\":-7.2295,\"tempf\":18.9869,\"hum\":90.3,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo Hygrometer\",\"model_id\":\"H5101/02/74/77\",\"cidc\":false,\"tempc\":-7.2,\"tempf\":19.04,\"hum\":90.3,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5074\",\"cidc\":false,\"tempc\":22.44,\"tempf\":72.392,\"hum\":74.59,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5074\",\"cidc\":false,\"tempc\":-13.76,\"tempf\":7.232,\"hum\":60.92,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5074\",\"cidc\":false,\"tempc\":25.87,\"tempf\":78.566,\"hum\":65.55,\"batt\":100}",
@@ -109,6 +109,13 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"cidc\":false,\"tempc2\":31,\"tempf2\":87.8,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"cidc\":false,\"tempc4\":30,\"tempf4\":86,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"cidc\":false,\"tempc6\":33,\"tempf6\":91.4,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":24.8,\"tempf\":76.64,\"hum\":70,\"pm25\":1}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":23.3,\"tempf\":73.94,\"hum\":74,\"pm25\":7}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":23.2,\"tempf\":73.76,\"hum\":72,\"pm25\":12}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":0.6,\"tempf\":33.08,\"hum\":94,\"pm25\":3}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":-7.5,\"tempf\":18.5,\"hum\":76,\"pm25\":0}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":-2.7,\"tempf\":27.14,\"hum\":94,\"pm25\":7}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":-9.8,\"tempf\":14.36,\"hum\":64,\"pm25\":1}",
 };
 
 const char* expected_uuid_mfgsvcdata[] = {
@@ -349,6 +356,13 @@ const char* test_mfgdata[][3] = {
     {"H5055", "GVH5055", "59045b00640220ffffffffffff201f00ffffffff0000"},
     {"H5055", "GVH5055", "59045b00646020ffffffffffff201e00ffffffff0000"},
     {"H5055", "GVH5055", "59045b0064a020ffffffffffff202100ffffffff0000"},
+    {"H5106", "GVH5106_1234", "010001010ed2e431"},
+    {"H5106", "GVH5106_1234", "010001010deeaa6f"},
+    {"H5106", "GVH5106_1234", "010001010ddf25cc"},
+    {"H5106", "GVH5106_1234", "010001010069fcd3"},
+    {"H5106", "GVH5106_1234", "01000101848420c0"},
+    {"H5106", "GVH5106_1234", "0100010181aa77cf"},
+    {"H5106", "GVH5106_1234", "0100010185e12c39"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -440,6 +454,13 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::H5055,
   TheengsDecoder::BLE_ID_NUM::H5055,
   TheengsDecoder::BLE_ID_NUM::H5055,
+  TheengsDecoder::BLE_ID_NUM::H5106,
+  TheengsDecoder::BLE_ID_NUM::H5106,
+  TheengsDecoder::BLE_ID_NUM::H5106,
+  TheengsDecoder::BLE_ID_NUM::H5106,
+  TheengsDecoder::BLE_ID_NUM::H5106,
+  TheengsDecoder::BLE_ID_NUM::H5106,
+  TheengsDecoder::BLE_ID_NUM::H5106,
 };
 
 // uuid test input [test name] [uuid] [manufacturer data] [service data]
