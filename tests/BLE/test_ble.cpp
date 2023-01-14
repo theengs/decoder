@@ -146,6 +146,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"batt\":11}",
     "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_ATC\",\"tempc\":32.5,\"tempf\":90.5,\"hum\":62,\"batt\":81,\"volt\":2.939}",
     "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_PVVX\",\"tempc\":21.12,\"tempf\":70.016,\"hum\":50.53,\"batt\":100,\"volt\":3.143}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"LYWSD03MMC\",\"model_id\":\"LYWSD03MMC_PVVX\",\"tempc\":19.23,\"tempf\":66.614,\"hum\":48.36,\"batt\":100,\"volt\":2.959}",
 };
 
 const char* expected_uuid[] = {
@@ -508,6 +509,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"ClearGrass round sensor Mi v4", "0xfe95", "ClearGrass Temp & RH", "5030470348ffeeddccbbaa0a10010b"},
     {"LYWSD03MMC_ATC", "0x181a", "ATC_800021", "a4c138d5d49801453e510b7b62"},
     {"LYWSD03MMC_PVVX", "0x181a", "ATC_800021", "5601cf38c1a44008bd13470c64cc0f"},
+    {"LYWSD03MMC_PVVX", "0x181a", "MHO_SAL", "628f5238c1a48307e4128f0b64b40f"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -524,6 +526,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK_2,
   TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_ATC,
+  TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
   TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
 };
 
