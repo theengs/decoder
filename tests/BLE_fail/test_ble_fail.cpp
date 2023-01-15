@@ -29,7 +29,7 @@ const char* test_mfgdata[][3] = {
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
-    TheengsDecoder::BLE_ID_NUM::IBSTH1,
+    TheengsDecoder::BLE_ID_NUM::IBSTHBP01B,
     TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
     TheengsDecoder::BLE_ID_NUM::TPMS,
 };

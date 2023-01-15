@@ -34,8 +34,7 @@
 #include "devices/H5106_json.h"
 #include "devices/HHCCJCY01HHCC_json.h"
 #include "devices/HHCCPOT002_json.h"
-#include "devices/IBS_TH1_json.h"
-#include "devices/IBS_TH2_json.h"
+#include "devices/IBS_THBP01B_json.h"
 #include "devices/IBT_2X_json.h"
 #include "devices/IBT_4XS_json.h"
 #include "devices/IBT_6XS_SOLIS6_json.h"
@@ -94,8 +93,7 @@ const char* _devices[][2] = {
     {_CGDK2_json, _CGDK2_json_props},
     {_CGH1_json, _CGH1_json_props},
     {_JQJCY01YM_json, _JQJCY01YM_json_props},
-    {_IBS_TH1_json, _IBS_TH1_json_props},
-    {_IBS_TH2_json, _IBS_TH2_json_props},
+    {_IBS_THBP01B_json, _IBS_THBP01B_json_props},
     {_IBT_4XS_json, _IBT_4XS_json_props},
     {_IBT_6XS_SOLIS6_json, _IBT_6XS_SOLIS6_json_props},
     {_Miband_json, _Miband_json_props},
