@@ -60,6 +60,8 @@ public:
     CGH1,
     JQJCY01YM,
     IBSTHBP01B,
+    IBT_2X,
+    IBT_2XS,
     IBT4XS,
     IBT6XS_SOLIS,
     MIBAND,
@@ -79,7 +81,6 @@ public:
     MOKOBEACON,
     MOKOBEACONXPRO,
     INODEEM,
-    IBT_2X,
     RUUVITAG_RAWV1,
     RUUVITAG_RAWV2,
     SBCS,
@@ -122,7 +123,7 @@ private:
   bool        evaluateDatalength(std::string op, size_t data_len, size_t req_len);
   bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data);
   bool        checkDeviceMatch(const JsonArray& condition, const char* svc_data, const char* mfg_data,
-                               const char* dev_name, const char* svc_uuid);
+                               const char* dev_name, const char* svc_uuid, const char* mac_id);
   std::string sanitizeJsonKey(const char* key_in);
 
   size_t m_docMax = 12000;

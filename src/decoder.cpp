@@ -181,14 +181,15 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
                                       const char* svc_data,
                                       const char* mfg_data,
                                       const char* dev_name,
-                                      const char* svc_uuid) {
+                                      const char* svc_uuid,
+                                      const char* mac_id) {
   bool match = false;
   int cond_size = condition.size();
 
   for (int i = 0; i < cond_size;) {
     if (condition[i].is<JsonArray>()) {
       DEBUG_PRINT("found nested array\n");
-      match = checkDeviceMatch(condition[i], svc_data, mfg_data, dev_name, svc_uuid);
+      match = checkDeviceMatch(condition[i], svc_data, mfg_data, dev_name, svc_uuid, mac_id);
 
       if (++i < cond_size) {
         if (!match && *condition[i].as<const char*>() == '|') {
@@ -259,6 +260,49 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         } else {
           match = false; // (strstr(cond_str, "not_") != nullptr) ? true : false;
         }
+        i++;
+      } else if (strstr(cond_str, "mac@index") != nullptr) {
+        size_t cond_index = condition[++i].as<size_t>();
+        size_t cond_len = 12;
+        const char* string_to_compare = nullptr;
+        std::string mac_string = mac_id;
+
+        // remove colons and make lower case
+        for (int x = 0; x < mac_string.length(); x++) {
+          if(mac_string[x] == ':') {
+            mac_string.erase (x,1);
+          }
+          mac_string[x] = tolower(mac_string[x]);
+        }
+
+        string_to_compare = mac_string.c_str();
+
+        if (strstr(cond_str, "revmac@index") != nullptr) {
+          char* reverse_mac_string = (char*) malloc(strlen(string_to_compare) + 1);
+          
+          reverse_hex_data(string_to_compare, reverse_mac_string, 12);
+          string_to_compare = reverse_mac_string;
+        }
+
+        if (!data_index_is_valid(cmp_str, cond_index, cond_len)) {
+          DEBUG_PRINT("Invalid data %s; skipping\n", cmp_str);
+          match = false;
+          break;
+        }
+
+        DEBUG_PRINT("comparing value: %s to %s at index %zu\n",
+                    &cmp_str[cond_index],
+                    string_to_compare,
+                    cond_index);
+        
+        if (strncmp(&cmp_str[cond_index],
+                    string_to_compare,
+                    12) == 0) {
+          match = true;
+        } else {
+          match = false;
+        }
+
         i++;
       } else if (strstr(cond_str, "index") != nullptr) {
         size_t cond_index = condition[++i].as<size_t>();
@@ -423,6 +467,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   const char* mfg_data = jsondata[MFG_DATA].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
   const char* svc_uuid = jsondata["servicedatauuid"].as<const char*>();
+  const char* mac_id = jsondata["id"].as<const char*>();
   int success = -1;
 
   // if there is no data to decode just return
@@ -447,7 +492,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #endif
 
     /* found a match, extract the data */
-    if (checkDeviceMatch(doc["condition"], svc_data, mfg_data, dev_name, svc_uuid)) {
+    if (checkDeviceMatch(doc["condition"], svc_data, mfg_data, dev_name, svc_uuid, mac_id)) {
       jsondata["brand"] = doc["brand"];
       jsondata["model"] = doc["model"];
       jsondata["model_id"] = doc["model_id"];
