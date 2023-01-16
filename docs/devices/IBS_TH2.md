@@ -1,10 +1,10 @@
-# Inkbird TH2/P01B
+# Inkbird TH2
 
-|Model Id|[IBS_TH2/P01B](https://github.com/theengs/decoder/blob/development/src/devices/IBS_TH2_json.h)|
+|Model Id|[IBS-TH2](https://github.com/theengs/decoder/blob/development/src/devices/IBS_THBP01B_json.h)|
 |-|-|
 |Brand|Inkbird|
-|Model|Smart Temperature sensor|
-|Short Description|Waterproof/Pool Temperature and humidity (not for all models) sensor|
+|Model|Thermometer Hygrometer|
+|Short Description|Temperature and humidity (not for all models) sensor (also Plus model with external probe)|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|2 AAA/AA|
