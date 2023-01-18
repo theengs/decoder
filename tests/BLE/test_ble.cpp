@@ -106,10 +106,6 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":-9.8,\"tempf\":14.36,\"hum\":64,\"pm25\":1}",
 };
 
-const char* expected_uuid_mfgsvcdata[] = {
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"steps\":9101,\"act_bpm\":125}",
-};
-
 const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.196133,\"accy\":0.0980665,\"accz\":9.5124505}",
     "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":1.372931,\"accy\":0.8825985,\"accz\":-9.610517}",
@@ -138,7 +134,6 @@ const char* expected_uuid_name_svcdata[] = {
 };
 
 const char* expected_uuid[] = {
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"steps\":7842}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale\",\"model_id\":\"XMTZC01HM/XMTZC04HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":61.75}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale\",\"model_id\":\"XMTZC01HM/XMTZC04HM\",\"weighing_mode\":\"object\",\"unit\":\"kg\",\"weight\":9.55}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi_Smart_Scale\",\"model_id\":\"XMTZC01HM/XMTZC04HM\",\"weighing_mode\":\"person\",\"unit\":\"kg\",\"weight\":61.75}",
@@ -237,6 +232,13 @@ const char* expected_mac_mfg[] = {
     "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"cidc\":false,\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false}",
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"cidc\":false,\"count\":3,\"pres\":2.61137,\"tempc\":17.06,\"tempf\":62.708,\"batt\":83,\"alarm\":false}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"act_bpm\":125}",
+};
+
+const char* expected_mac_mfgsvcdata[] = {
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"steps\":9101,\"act_bpm\":125}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"act_bpm\":132}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"steps\":7852}",
 };
 
 // Service data test input [test name] [data]
@@ -445,15 +447,6 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::H5106,
 };
 
-// uuid test input [test name] [uuid] [manufacturer data] [service data]
-const char* test_uuid_mfgsvcdata[][4] = {
-    {"MiBand", "0xfee0", "57010202017dffffffffffffffffffffffffff02de7b8490725c2", "8d230000"},
-};
-
-TheengsDecoder::BLE_ID_NUM test_uuid_mfgsvcdata_id_num[]{
-  TheengsDecoder::BLE_ID_NUM::MIBAND,
-};
-
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
 const char* test_name_uuid_mfgsvcdata[][5] = {
     {"RDL52832", "RDL52832", "0x0318", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
@@ -513,7 +506,6 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
 
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
-    {"MiBand", "fee0", "servicedata", "a21e0000"},
     {"Mi_Smart_Scale", "0x181d", "servicedata", "223e30e607020e10293a"},
     {"Mi_Smart_Scale", "0x181d", "servicedata", "627607e607020e10293a"},
     {"Mi_Smart_Scale", "0x181d", "servicedata", "a23e30e607020e10293a"},
@@ -598,7 +590,6 @@ const char* test_uuid[][4] = {
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
-  TheengsDecoder::BLE_ID_NUM::MIBAND,
   TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
   TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
   TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
@@ -698,6 +689,7 @@ const char* test_mac_mfgdata[][3] = {
     {"SOLIS_6", "aa:bb:cc:dd:ee:ff", "00000000aabbccddeeffc800c800f6ffd200f6fff6ff"},
     {"TPMS", "80:EA:CA:DD:EE:FF", "000180eacaddeefff46503007c0c00003300"},
     {"TPMS", "82:EA:CA:DD:EE:FF", "000182eacaddeeff11fc0300aa0600005300"},
+    {"MiBand", "AA:BB:CC:DD:EE:FF", "57010202017dffffffffffffffffffffffffff02aabbccddeeff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
@@ -715,6 +707,20 @@ TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::IBT6XS_SOLIS,
   TheengsDecoder::BLE_ID_NUM::TPMS,
   TheengsDecoder::BLE_ID_NUM::TPMS,
+  TheengsDecoder::BLE_ID_NUM::MIBAND,
+};
+
+// MAC test input [test name] [mac] [manufacturer data] [service data]
+const char* test_mac_mfgsvcdata[][4] = {
+    {"MiBand", "AA:BB:CC:DD:EE:FF", "57010202017dffffffffffffffffffffffffff02aabbccddeeff", "8d230000"},
+    {"MiBand", "AA:BB:CC:DD:EE:FF", "570102020184ffffffffffffffffffffffffff02aabbccddeeff", ""},
+    {"MiBand", "AA:BB:CC:DD:EE:FF", "5701020201ffffffffffffffffffffffffffff02aabbccddeeff", "ac1e0000"},
+};
+
+TheengsDecoder::BLE_ID_NUM test_mac_mfgsvcdata_id_num[]{
+  TheengsDecoder::BLE_ID_NUM::MIBAND,
+  TheengsDecoder::BLE_ID_NUM::MIBAND,
+  TheengsDecoder::BLE_ID_NUM::MIBAND,
 };
 
 template <typename T>
@@ -900,18 +906,18 @@ int main() {
     }
   }
 
-  for (unsigned int i = 0; i < sizeof(test_uuid_mfgsvcdata) / sizeof(test_uuid_mfgsvcdata[0]); ++i) {
+  for (unsigned int i = 0; i < sizeof(test_mac_mfgsvcdata) / sizeof(test_mac_mfgsvcdata[0]); ++i) {
     doc.clear();
-    std::cout << "trying " << test_uuid_mfgsvcdata[i][0] << " : " << test_uuid_mfgsvcdata[i][1] << std::endl;
-    doc["servicedatauuid"] = test_uuid_mfgsvcdata[i][1];
-    doc["manufacturerdata"] = test_uuid_mfgsvcdata[i][2];
-    doc["servicedata"] = test_uuid_mfgsvcdata[i][3];
+    std::cout << "trying " << test_mac_mfgsvcdata[i][0] << " : " << test_mac_mfgsvcdata[i][1] << test_mac_mfgsvcdata[i][2] << test_mac_mfgsvcdata[i][3] << std::endl;
+    doc["id"] = test_mac_mfgsvcdata[i][1];
+    doc["manufacturerdata"] = test_mac_mfgsvcdata[i][2];
+    doc["servicedata"] = test_mac_mfgsvcdata[i][3];
     bleObject = doc.as<JsonObject>();
 
     decode_res = decoder.decodeBLEJson(bleObject);
-    if (decode_res == test_uuid_mfgsvcdata_id_num[i]) {
+    if (decode_res == test_mac_mfgsvcdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("servicedatauuid");
+      bleObject.remove("id");
       bleObject.remove("manufacturerdata");
       bleObject.remove("servicedata");
       serializeJson(doc, std::cout);
@@ -919,7 +925,7 @@ int main() {
 
       StaticJsonDocument<2048> doc_exp;
       JsonObject expected = doc_exp.to<JsonObject>();
-      deserializeJson(doc_exp, expected_uuid_mfgsvcdata[i]);
+      deserializeJson(doc_exp, expected_mac_mfgsvcdata[i]);
 
       if (!checkResult(bleObject, expected)) {
         return 1;
@@ -942,7 +948,7 @@ int main() {
       serializeJson(doc_exp, std::cout);
       std::cout << std::endl;
     } else {
-      std::cout << "FAILED! Error parsing: " << test_uuid_mfgsvcdata[i][0] << " : " << test_uuid_mfgsvcdata[i][1] << " : " << test_uuid_mfgsvcdata[i][2] << " : " << test_uuid_mfgsvcdata[i][3] << std::endl;
+      std::cout << "FAILED! Error parsing: " << test_mac_mfgsvcdata[i][0] << " : " << test_mac_mfgsvcdata[i][1] << " : " << test_mac_mfgsvcdata[i][2] << " : " << test_mac_mfgsvcdata[i][3] << std::endl;
       serializeJson(doc, std::cout);
       std::cout << std::endl;
       return 1;
