@@ -62,12 +62,14 @@ Whenever a decoder is based on "manufacturerdata" and the first bytes do not com
 The second parameter is variable. If required, further qualification can be made by setting a conditional data length in the case of "servicedata" or "manufacturerdata" as the first condition. This is an operator in the form of `">" , ">=" , "=" , "<" , "<="` followed by the third parameter being a numeric value that specifies the length of the data to accept. If no data length is defined the second parameter must indicate how the data should be tested. Valid inputs are:
 - "contain" tests if the specified value (see below) exists the data source 
 - "index" tests if the specified value exists at the index location (see below) in the data source
+- "mac@index" tests if the device's MAC address exists at the index location (see below) in the data source
+- "revmac@index" tests if the device's MAC address exists octet-reversed at the index location (see below) in the data source
 
 Examples:
 `"condition":["servicedata", "index", 0, "0804"` -- no data length check
 `"condition":["servicedata", ">=", 40, "index", 0, "0804"` -- data length must be equal to or greater than 40 bytes
 
-The third parameter (fifth if data length is specified) can be either the index value or the data value to find. If the second (fourth if data length specified) parameter is `contain`, the next parameter should be the value to look for in the data source. If the second (fourth if data length specified) parameter is `index`, the next parameter should be the location in the data source to look for the value.
+The third parameter (fifth if data length is specified) can be either the index value or the data value to find. If the second (fourth if data length specified) parameter is `contain`, the next parameter should be the value to look for in the data source. If the second (fourth if data length specified) parameter is `index`, `mac@index` or `revmac@index` the next parameter should be the location in the data source to look for the value.
 
 `condition` can have multiple conditions chained together using "|" and "&" between them.  
 For example: `"condition":["servicedata", "index", 0, "0804", "|", "servicedata", "index", 0, "8804"]`  
@@ -158,7 +160,7 @@ Property conditions also allow for a NOT comparison, as in
 where then the fourth parameter is the value to test for.
 
 ::: warning Note
-The NOT comparison is case sensitive! Therefor any NOT comparisons should be defined in lower case, as this is the format in which devices' "servicedata" and "manufacturerdata" are being reported.
+The NOT comparison is case sensitive! Therefore any NOT comparisons should be defined in lower case, as this is the format in which devices' "servicedata" and "manufacturerdata" are being reported.
 :::
 
 `decoder` is a JSON array that specifies the decoder function and parameters to decode the value.

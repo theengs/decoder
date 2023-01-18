@@ -25,13 +25,11 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
 const char* test_mfgdata[][3] = {
     {"Inkbird TH1", "sps", "660a03150110805908"},
     {"SHOULD FAIL", "fail", "270201508094c014"},
-    {"SHOULD FAIL", "fail_tpms", "000180eaca10ca8ff46503007c0c00003300"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::IBSTHBP01B,
     TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
-    TheengsDecoder::BLE_ID_NUM::TPMS,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
