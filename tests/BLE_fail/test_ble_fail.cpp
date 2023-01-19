@@ -34,7 +34,6 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
 
 // uuid test input [test name] [uuid] [data source] [data]
 const char* test_uuid[][4] = {
-    {"MiBand", "fee0", "servicedata", "a21e0000"},
     {"ClearGrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020001"},
     {"ClearGrass clock", "fe95", "servicedata", "70205b04dc6ab883c8593f09061002b202"},
     {"ClearGrass clock", "fe95", "servicedata", "70205b04756ab883c8593f090410020901"},
@@ -47,7 +46,6 @@ const char* test_uuid[][4] = {
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
-    TheengsDecoder::BLE_ID_NUM::MIBAND,
     TheengsDecoder::BLE_ID_NUM::LYWSD02,
     TheengsDecoder::BLE_ID_NUM::LYWSD02,
     TheengsDecoder::BLE_ID_NUM::LYWSD02,
