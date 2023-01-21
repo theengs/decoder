@@ -110,6 +110,7 @@ public:
     T301,
     IBEACON,
     SERVICE_DATA,
+    JHT_F525,
     BLE_ID_MAX
   };
 
