@@ -215,6 +215,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"motion\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -587,6 +588,7 @@ const char* test_uuid[][4] = {
     {"Qingping round sensor", "0xfdcd", "servicedata", "8816YYYYYYYYYYYY0104eb001b01020164"},
     {"Qingping round sensor", "0xfdcd", "servicedata", "8816xxxxxxxxxxxx0104f4003b01020164"},
     {"Qingping alarm clock", "0xfdcd", "servicedata", "081eaabbccddeeff0104d200fe01020164"},
+    {"Switchbot_Curtain NEW", "fd3d", "servicedata", "63c011641104"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -671,6 +673,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
   TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
   TheengsDecoder::BLE_ID_NUM::CGD1,
+  TheengsDecoder::BLE_ID_NUM::SBCU_NEW,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
