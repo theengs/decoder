@@ -85,6 +85,7 @@ public:
     RUUVITAG_RAWV2,
     SBCS,
     SBCU,
+    SBCU_NEW,
     SBMS,
     SBMT,
     SBS1,
