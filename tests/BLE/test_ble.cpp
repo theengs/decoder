@@ -104,6 +104,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":-7.5,\"tempf\":18.5,\"hum\":76,\"pm25\":0}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":-2.7,\"tempf\":27.14,\"hum\":94,\"pm25\":7}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"cidc\":false,\"tempc\":-9.8,\"tempf\":14.36,\"hum\":64,\"pm25\":1}",
+    "{\"brand\":\"Polar\",\"model\":\"Heart Rate Sensor\",\"model_id\":\"H10\",\"bpm\":70}",
+    "{\"brand\":\"Polar\",\"model\":\"Heart Rate Sensor\",\"model_id\":\"H10\",\"bpm\":104}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -365,6 +367,8 @@ const char* test_mfgdata[][3] = {
     {"H5106", "GVH5106_1234", "01000101848420c0"},
     {"H5106", "GVH5106_1234", "0100010181aa77cf"},
     {"H5106", "GVH5106_1234", "0100010185e12c39"},
+    {"Polar", "Polar H10 75087320", "6b003b164446"},
+    {"Polar", "Polar H10 75087320", "6b002f166b68"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -451,6 +455,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
   TheengsDecoder::BLE_ID_NUM::H5106,
   TheengsDecoder::BLE_ID_NUM::H5106,
   TheengsDecoder::BLE_ID_NUM::H5106,
+  TheengsDecoder::BLE_ID_NUM::PH10,
+  TheengsDecoder::BLE_ID_NUM::PH10,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
