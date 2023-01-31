@@ -106,6 +106,7 @@ public:
     ABN03,
     ABTEMP,
     AMPHIRO,
+    PH10,
     TPTH,
     MOPEKA,
     T201,
