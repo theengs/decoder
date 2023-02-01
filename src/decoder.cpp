@@ -496,9 +496,93 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       jsondata["brand"] = doc["brand"];
       jsondata["model"] = doc["model"];
       jsondata["model_id"] = doc["model_id"];
-      if (doc.containsKey("cidc")) {
-        jsondata["cidc"] = doc["cidc"];
-      }
+      if (doc.containsKey("tag")) {
+        doc.add("type");
+        doc["type"] = NULL;
+
+        std::string tagstring = doc["tag"];
+        int type = strtol(tagstring.substr(0, 2).c_str(), NULL, 16);
+
+        switch (type) {
+          case 1:
+            doc["type"] = "THB"; // Termperature, Humidity, Battery
+            break;
+          case 2:
+            doc["type"] = "THBX"; // Termperature, Humidity, Battery, Extra
+            break;
+          case 3:
+            doc["type"] = "BBQ"; // Multip probe temperatures only
+            break;
+          case 4:
+            doc["type"] = "CTMO"; // Contact and/or Motion sensor
+            break;
+          case 5:
+            doc["type"] = "SCALE"; // weight scale
+            break;
+          case 6:
+            doc["type"] = "BCON"; // iBeacon protocol
+            break;
+          case 7:
+            doc["type"] = "ACEL"; // acceleration
+            break;
+          case 8:
+            doc["type"] = "BATT"; // battery
+            break;
+          case 9:
+            doc["type"] = "PLANT"; // plant sensors
+            break;
+          case 10:
+            doc["type"] = "TIRE"; // tire pressure monitoring system
+            break;
+          case 11:
+            doc["type"] = "BODY"; // health monitoring devices
+            break;
+          case 12:
+            doc["type"] = "ENRG"; // energy monitoring devices
+            break;
+          case 13:
+            doc["type"] = "WCVR"; // window covering 
+            break;
+          case 14:
+            doc["type"] = "ACTR"; // ON/OFF actuators 
+            break;
+          case 15:
+            doc["type"] = "AIR"; // air environmental monitoring devices
+            break;
+          case 255:
+            doc["type"] = "UNIQ"; // unique devices 
+            break;
+        }
+
+        if (!doc["type"].isNull()) {
+          jsondata["type"] = doc["type"];
+        } else {
+          DEBUG_PRINT("ERROR - no valid device type present in model tag property\n");
+        }
+        
+        // Octet Byte[1] bits[7-0] - True/False tags
+        if (tagstring.length() >= 4) { // bits[3-0]
+          uint8_t data = getBinaryData(tagstring[3]);
+
+          if (((data >> 0) & 0x01) == 1) { // CIDC - NOT Company ID Compliant
+            doc.add("cidc");
+            doc["cidc"] = false;
+            jsondata["cidc"] = doc["cidc"];
+          }
+          
+          if (((data >> 1) & 0x01) == 1) { // Active Scanning required
+            doc.add("acts");
+            doc["acts"] = true;
+            jsondata["acts"] = doc["acts"];
+          }
+          
+          if (((data >> 2) & 0x01) == 1) { // Continuous Scanning required
+            doc.add("cont");
+            doc["cont"] = true;
+            jsondata["cont"] = doc["cont"];
+          }
+        }
+      } 
 
       JsonObject properties = doc["properties"];
 
