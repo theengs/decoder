@@ -26,6 +26,10 @@ static PyObject *decode_BLE(PyObject *self, PyObject *args)
       bleObject.remove("servicedata");
       bleObject.remove("manufacturerdata");
       bleObject.remove("servicedatauuid");
+      bleObject.remove("type");
+      bleObject.remove("cidc");
+      bleObject.remove("acts");
+      bleObject.remove("cont");
       serializeJson(bleObject, buf);
       return Py_BuildValue("s", buf.c_str());
     }
