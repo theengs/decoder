@@ -57,6 +57,11 @@ class MyAdvertisedDeviceCallbacks: public NimBLEAdvertisedDeviceCallbacks {
     if (decoder.decodeBLEJson(BLEdata)) {
       BLEdata.remove("manufacturerdata");
       BLEdata.remove("servicedata");
+      BLEdata.remove("servicedatauuid");
+      BLEdata.remove("type");
+      BLEdata.remove("cidc");
+      BLEdata.remove("acts");
+      BLEdata.remove("cont");
       Serial.print("TheengsDecoder found device: ");
       serializeJson(BLEdata, Serial);
       Serial.println("");
