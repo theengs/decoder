@@ -225,6 +225,8 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"motion\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"tempc\":24,\"tempf\":75.2,\"accx\":33,\"accy\":-3,\"accz\":-1006,\"volt\":3.091}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"tempc\":-11,\"tempf\":12.2,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"batt\":100}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":100}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -572,13 +574,13 @@ const char* test_uuid[][4] = {
     {"Mi flora", "fe95", "servicedata", "712098000163b6658d7cc40d0410024001"},
     {"Mi flora", "fe95", "servicedata", "712098000863b6658d7cc40d0910020000"},
     {"VegTrug flora", "fe95", "servicedata", "7120bc030163b6658d7cc40d0410024001"},
-    {"Switchbot_MotionSensor", "0d00", "servicedata", "73b037000045"},
-    {"Switchbot_MotionSensor", "fd3d", "servicedata", "73b037000045"},
-    {"Switchbot_MotionSensor", "fd3d", "servicedata", "7340d50000f2"},
-    {"Switchbot_Contact", "0d00", "servicedata", "64c05c010000000000"},
-    {"Switchbot_Contact", "0d00", "servicedata", "6480d7020000000000"},
-    {"Switchbot_Contact", "0d00", "servicedata", "6440c1050000000000"},
-    {"Switchbot_Contact", "fd3d", "servicedata", "6440c1050000000000"},
+    {"Switchbot_MotionSensor", "0x0d00", "servicedata", "73b037000045"},
+    {"Switchbot_MotionSensor", "0xfd3d", "servicedata", "73b037000045"},
+    {"Switchbot_MotionSensor", "0xfd3d", "servicedata", "7340d50000f2"},
+    {"Switchbot_Contact", "0x0d00", "servicedata", "64c05c010000000000"},
+    {"Switchbot_Contact", "0x0d00", "servicedata", "6480d7020000000000"},
+    {"Switchbot_Contact", "0x0d00", "servicedata", "6440c1050000000000"},
+    {"Switchbot_Contact", "0xfd3d", "servicedata", "6440c1050000000000"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "080eaabbccddeeff010422014c011204710072001302ed03"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f900b50112047d0186011302fd02"},
     {"Qingping Air Monitor Lite", "0xfdcd", "servicedata", "880eaabbccddeeff0104f600ab011204a400d7001302c702"},
@@ -611,6 +613,8 @@ const char* test_uuid[][4] = {
     {"Switchbot_Curtain NEW", "0xfd3d", "servicedata", "63c011641104"},
     {"BlueCharm BC08", "0xfeaa", "servicedata", "21010b0c1318000021fffdfc12"},
     {"BlueCharm BC08", "0xfeaa", "servicedata", "21010b0c0df500ff95fe69fc80"},
+    {"Switchbot_Contact", "0xfd3d", "servicedata", "640064440359ffff42"},
+    {"Switchbot_MotionSensor", "0xfd3d", "servicedata", "73006402f002"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -701,6 +705,8 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
   TheengsDecoder::BLE_ID_NUM::SBCU,
   TheengsDecoder::BLE_ID_NUM::BC08,
   TheengsDecoder::BLE_ID_NUM::BC08,
+  TheengsDecoder::BLE_ID_NUM::SBCS,
+  TheengsDecoder::BLE_ID_NUM::SBMS,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
