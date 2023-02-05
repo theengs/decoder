@@ -95,6 +95,7 @@ public:
     INODEEM,
     RUUVITAG_RAWV1,
     RUUVITAG_RAWV2,
+    SBBT,
     SBCS,
     SBCU,
     SBMS,
