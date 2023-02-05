@@ -25,6 +25,8 @@ def detection_callback(device, advertisement_data):
         data_json['name'] = advertisement_data.local_name
 
     if data_json:
+        data_json["id"] = device.address
+        data_json["rssi"] = device.rssi
         print("data sent to decoder: ", json.dumps(data_json))
         data_json = dble(json.dumps(data_json))
         print("TheengsDecoder found device:", data_json)
