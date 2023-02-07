@@ -189,10 +189,10 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"sensingdistance\":\"middle\",\"lightlevel\":\"dark\",\"batt\":55}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"sensingdistance\":\"middle\",\"lightlevel\":\"dark\",\"batt\":55}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":true,\"led\":true,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":85}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"closed\",\"movement\":true,\"lightlevel\":\"bright\",\"batt\":92}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"open\",\"movement\":false,\"lightlevel\":\"dark\",\"batt\":87}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":true,\"lightlevel\":\"bright\",\"scopetested\":false,\"batt\":65}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":true,\"lightlevel\":\"bright\",\"scopetested\":false,\"batt\":65}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"closed\",\"movement\":true,\"lightlevel\":\"bright\",\"in_ct\":0,\"out_ct\":0,\"push_ct\":0,\"batt\":92}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"open\",\"movement\":false,\"lightlevel\":\"dark\",\"in_ct\":0,\"out_ct\":0,\"push_ct\":0,\"batt\":87}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":true,\"lightlevel\":\"bright\",\"in_ct\":0,\"out_ct\":0,\"push_ct\":0,\"scopetested\":false,\"batt\":65}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":true,\"lightlevel\":\"bright\",\"in_ct\":0,\"out_ct\":0,\"push_ct\":0,\"scopetested\":false,\"batt\":65}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"type\":\"AIR\",\"tempc\":29,\"tempf\":84.2,\"hum\":33.2,\"pm25\":113,\"pm10\":114,\"co2\":1005}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"type\":\"AIR\",\"tempc\":24.9,\"tempf\":76.82,\"hum\":43.7,\"pm25\":381,\"pm10\":390,\"co2\":765}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"type\":\"AIR\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":42.7,\"pm25\":164,\"pm10\":215,\"co2\":711}",
@@ -225,7 +225,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"motion\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"tempc\":24,\"tempf\":75.2,\"accx\":33,\"accy\":-3,\"accz\":-1006,\"volt\":3.091}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"tempc\":-11,\"tempf\":12.2,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"batt\":100}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"in_ct\":1,\"out_ct\":0,\"push_ct\":2,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":100}",
 };
 
