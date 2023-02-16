@@ -101,7 +101,7 @@ double TheengsDecoder::value_from_hex_string(const char* data_str,
     DEBUG_PRINT("extracted value from %s = %lld\n", data.c_str(), (long long)value);
   } else {
     long longV = strtol(data.c_str(), NULL, 16);
-    float floatV = *((float *) &longV);
+    float floatV = *((float*)&longV);
     DEBUG_PRINT("extracted float value from %s = %f\n", data.c_str(), floatV);
     value = floatV;
   }
@@ -140,7 +140,7 @@ bool TheengsDecoder::data_index_is_valid(const char* str, size_t index, size_t l
 }
 
 bool TheengsDecoder::data_length_is_valid(size_t data_len, size_t default_min,
-                                         const JsonArray& condition, int *idx) {
+                                          const JsonArray& condition, int* idx) {
   std::string op = condition[*idx + 1].as<std::string>();
   if (!op.empty() && op.length() > 2) {
     return (data_len >= default_min);
@@ -269,8 +269,8 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
 
         // remove colons and make lower case
         for (int x = 0; x < mac_string.length(); x++) {
-          if(mac_string[x] == ':') {
-            mac_string.erase (x,1);
+          if (mac_string[x] == ':') {
+            mac_string.erase(x, 1);
           }
           mac_string[x] = tolower(mac_string[x]);
         }
@@ -278,8 +278,8 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         string_to_compare = mac_string.c_str();
 
         if (strstr(cond_str, "revmac@index") != nullptr) {
-          char* reverse_mac_string = (char*) malloc(strlen(string_to_compare) + 1);
-          
+          char* reverse_mac_string = (char*)malloc(strlen(string_to_compare) + 1);
+
           reverse_hex_data(string_to_compare, reverse_mac_string, 12);
           string_to_compare = reverse_mac_string;
         }
@@ -294,7 +294,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
                     &cmp_str[cond_index],
                     string_to_compare,
                     cond_index);
-        
+
         if (strncmp(&cmp_str[cond_index],
                     string_to_compare,
                     12) == 0) {
@@ -417,10 +417,10 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
             }
             i += 2;
           } else if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
-                      prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
+                              prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
             cond_met = inverse ? false : true;
           } else if (strncmp(&data_src[prop_condition[i + 1].as<int>()],
-                      prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
+                             prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
             cond_met = inverse ? true : false;
           }
         } else {
@@ -541,16 +541,16 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["type"] = "ENRG"; // energy monitoring devices
             break;
           case 13:
-            doc["type"] = "WCVR"; // window covering 
+            doc["type"] = "WCVR"; // window covering
             break;
           case 14:
-            doc["type"] = "ACTR"; // ON/OFF actuators 
+            doc["type"] = "ACTR"; // ON/OFF actuators
             break;
           case 15:
             doc["type"] = "AIR"; // air environmental monitoring devices
             break;
           case 255:
-            doc["type"] = "UNIQ"; // unique devices 
+            doc["type"] = "UNIQ"; // unique devices
             break;
         }
 
@@ -559,7 +559,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
         } else {
           DEBUG_PRINT("ERROR - no valid device type present in model tag property\n");
         }
-        
+
         // Octet Byte[1] bits[7-0] - True/False tags
         if (tagstring.length() >= 4) { // bits[3-0]
           uint8_t data = getBinaryData(tagstring[3]);
@@ -569,20 +569,20 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["cidc"] = false;
             jsondata["cidc"] = doc["cidc"];
           }
-          
+
           if (((data >> 1) & 0x01) == 1) { // Active Scanning required
             doc.add("acts");
             doc["acts"] = true;
             jsondata["acts"] = doc["acts"];
           }
-          
+
           if (((data >> 2) & 0x01) == 1) { // Continuous Scanning required
             doc.add("cont");
             doc["cont"] = true;
             jsondata["cont"] = doc["cont"];
           }
         }
-      } 
+      }
 
       JsonObject properties = doc["properties"];
 
@@ -640,7 +640,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       break;
                   }
                 } else {
-                  if (strlen(post_proc[i].as<const char*>())== 1) {
+                  if (strlen(post_proc[i].as<const char*>()) == 1) {
                     switch (*post_proc[i].as<const char*>()) {
                       case '/':
                         temp_val /= post_proc[i + 1].as<double>();
