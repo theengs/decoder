@@ -90,6 +90,7 @@ public:
     SBS1,
     SHT4X,
     SCD4X,
+    SKALE,
     SMARTDRY,
     BC08,
     BM1IN1,
