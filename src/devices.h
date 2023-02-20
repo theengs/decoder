@@ -57,6 +57,7 @@
 #include "devices/SBS1_json.h"
 #include "devices/SHT4X_json.h"
 #include "devices/SCD4X_json.h"
+#include "devices/Skale_json.h"
 #include "devices/SmartDry_json.h"
 #include "devices/TPMS_json.h"
 #include "devices/ThermoBeacon_json.h"
@@ -127,6 +128,7 @@ const char* _devices[][2] = {
     {_SBS1_json, _SBS1_json_props},
     {_SHT4X_json, _SHT4X_json_props},
     {_SCD4X_json, _SCD4X_json_props},
+    {_Skale_json, _Skale_json_props},
     {_SmartDry_json, _SmartDry_json_props},
     {_BC08_json, _BC08_json_props},
     {_BM1IN1_json, _BM1IN1_json_props},
