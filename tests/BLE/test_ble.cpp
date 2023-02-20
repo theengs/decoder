@@ -110,6 +110,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Polar\",\"model\":\"Heart Rate Sensor\",\"model_id\":\"H10\",\"type\":\"BODY\",\"bpm\":104}",
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":123.9}",
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":29.6}",
+    "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":-92.8}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -381,6 +382,7 @@ const char* test_mfgdata[][3] = {
     {"Polar", "Polar H10 75087320", "6b002f166b68"},
     {"Atomax", "Skale I/II", "ef81d70400ff"},
     {"Atomax", "Skale I/II", "ef81280100ff"},
+    {"Atomax", "Skale I/II", "ef8160fcffff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -471,6 +473,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::H5106,
     TheengsDecoder::BLE_ID_NUM::PH10,
     TheengsDecoder::BLE_ID_NUM::PH10,
+    TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::SKALE,
 };
