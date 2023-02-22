@@ -3,10 +3,10 @@
 /CMakeFiles
 /decoder.dir
 /x64
-/python/_skbuild
-/python/dist
-/python/TheengsDecoder.egg-info
+/TheengsDecoder.egg-info
 .vscode
 .pio
 .CMakeFiles
 .cmake
+_skbuild
+dist

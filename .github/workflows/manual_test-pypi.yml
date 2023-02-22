@@ -1,0 +1,26 @@
+name: Publish to TestPyPI
+on:
+  workflow_dispatch:
+jobs:
+  build-n-publish:
+    name: Build and publish distribution to TestPyPI
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install pypa/build
+      run: |
+        python3 -m pip install --upgrade pip
+        pip3 install setuptools cmake wheel scikit-build ninja
+    - name: Build a source tarball
+      run: |
+        python3 setup.py sdist
+    - name: Publish distribution 📦 to Test PyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        repository_url: https://test.pypi.org/legacy/
