@@ -115,6 +115,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":29.6}",
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":-92.8}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
+    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"iTAG Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -391,6 +392,7 @@ const char* test_mfgdata[][3] = {
     {"Atomax", "Skale I/II", "ef81280100ff"},
     {"Atomax", "Skale I/II", "ef8160fcffff"},
     {"Apple", "Continuity", "4c0009060304c0a87b1e130c1adefc915b9ef8010401030c"},
+    {"Tracker iTAG", "iTAG", "8afc23eb"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -488,6 +490,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::APPLE_CONT,
+    TheengsDecoder::BLE_ID_NUM::ITAG,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
