@@ -10,3 +10,5 @@
 |Power source|Dependent on device|
 |Exchanged data|device type, salt, device hash|
 |Encrypted|No|
+
+This decoder is not enable by default, to enable it you need to define `DECODE_RANDOM_MAC_DEVICES true` at build time.
