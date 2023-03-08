@@ -2,7 +2,7 @@
 
 Call `decodeBLEJson(JsonObject)` with the input being of the Arduino JSON JsonObject type. If the device is known the JsonObject will have the decoded device data added to it.
 
-### Example
+## Example
 Input JsonObject:
 ```
 {
@@ -21,6 +21,10 @@ JsonObject after decoding:
   "tempf":89.6
 }
 ```
+
+## Identifying advertisements following MS-CDP and GAEN protocols
+The decoder can identify advertisements from MS-CDP and GAEN protocols, these decoders are not enable by default. To add them you have to define the following compiler directive:
+`DECODE_RANDOM_MAC_DEVICES true`
 
 ::: tip
 If you are using ArduinoJson library with your project (like TheengsDecoder) you may have to align the ArduinoJson build options into TheengDecoder with it. To do so, go to [decoder.h](https://github.com/theengs/decoder/blob/development/src/decoder.h) and align the flags with your project. In particular you may have to remove `ARDUINOJSON_USE_LONG_LONG=1`.
