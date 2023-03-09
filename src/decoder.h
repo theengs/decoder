@@ -96,6 +96,8 @@ public:
     BM1IN1,
     BM3IN1,
     BM4IN1,
+    MS_CDP,
+    GAEN,
     HHCCPOT002,
     BPARASITE,
     BWBSDOO,
@@ -112,24 +114,20 @@ public:
     IBEACON,
     SERVICE_DATA,
     JHT_F525,
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    MS_CDP,
-    GAEN,
-#endif
     BLE_ID_MAX
   };
 
 private:
-  void reverse_hex_data(const char* in, char* out, int l);
-  double value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
-  double bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
-  bool data_index_is_valid(const char* str, size_t index, size_t len);
-  bool data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int* idx);
-  uint8_t getBinaryData(char ch);
-  bool evaluateDatalength(std::string op, size_t data_len, size_t req_len);
-  bool checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data);
-  bool checkDeviceMatch(const JsonArray& condition, const char* svc_data, const char* mfg_data,
-                        const char* dev_name, const char* svc_uuid, const char* mac_id);
+  void        reverse_hex_data(const char* in, char* out, int l);
+  double      value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
+  double      bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
+  bool        data_index_is_valid(const char* str, size_t index, size_t len);
+  bool        data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int *idx);
+  uint8_t     getBinaryData(char ch);
+  bool        evaluateDatalength(std::string op, size_t data_len, size_t req_len);
+  bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data);
+  bool        checkDeviceMatch(const JsonArray& condition, const char* svc_data, const char* mfg_data,
+                               const char* dev_name, const char* svc_uuid, const char* mac_id);
   std::string sanitizeJsonKey(const char* key_in);
 
   size_t m_docMax = 12000;

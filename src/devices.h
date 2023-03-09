@@ -19,8 +19,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-//#define DECODE_RANDOM_MAC_DEVICES true // Uncomment if you want the decoder to identify devices with random Mac Address like MS CDP and GAEN
-
 #include "devices/CGD1_json.h"
 #include "devices/CGDK2_json.h"
 #include "devices/CGG1_json.h"
@@ -28,6 +26,7 @@
 #include "devices/CGH1_json.h"
 #include "devices/CGP1W_json.h"
 #include "devices/CGPR1_json.h"
+#include "devices/GAEN_json.h"
 #include "devices/H5055_json.h"
 #include "devices/H5072_json.h"
 #include "devices/H5074_json.h"
@@ -44,6 +43,7 @@
 #include "devices/LYWSD03MMC_json.h"
 #include "devices/LYWSDCGQ_json.h"
 #include "devices/MBXPRO_json.h"
+#include "devices/MS_CDP_json.h"
 #include "devices/MUE4094RT_json.h"
 #include "devices/Miband_json.h"
 #include "devices/Mokobeacon_json.h"
@@ -82,11 +82,6 @@
 #include "devices/BM2_json.h"
 #include "devices/ServiceData_json.h"
 #include "devices/JHT_F525_json.h"
-
-#ifdef DECODE_RANDOM_MAC_DEVICES
-#  include "devices/GAEN_json.h"
-#  include "devices/MS_CDP_json.h"
-#endif
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
@@ -139,6 +134,8 @@ const char* _devices[][2] = {
     {_BM1IN1_json, _BM1IN1_json_props},
     {_BM3IN1_json, _BM3IN1_json_props},
     {_BM4IN1_json, _BM4IN1_json_props},
+    {_MS_CDP_json, _MS_CDP_json_props},
+    {_GAEN_json, _GAEN_json_props},
     {_HHCCPOT002_json, _HHCCPOT002_json_props},
     {_BPARASITE_json, _BPARASITE_json_props},
     {_BWBSDOO_json, _BWBSDOO_json_props},
@@ -155,8 +152,4 @@ const char* _devices[][2] = {
     {_ibeacon_json, _ibeacon_json_props},
     {_ServiceData_json, _ServiceData_json_props},
     {_JHT_F525_json, _JHT_F525_json_props},
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    {_GAEN_json, _GAEN_json_props},
-    {_MS_CDP_json, _MS_CDP_json_props},
-#endif
 };
