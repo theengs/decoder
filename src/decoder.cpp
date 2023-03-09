@@ -549,6 +549,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
           case 15:
             doc["type"] = "AIR"; // air environmental monitoring devices
             break;
+          case 254:
+            doc["type"] = "RMAC"; // random MAC address devices
+            break;
           case 255:
             doc["type"] = "UNIQ"; // unique devices
             break;

@@ -1,11 +1,11 @@
-const char* _GAEN_json = "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"tag\":\"ff\",\"condition\":[\"uuid\",\"index\",0,\"fd6f\"],\"properties\":{\"rpi\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",0,32]},\"aem\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",32,8]}}}";
+const char* _GAEN_json = "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"tag\":\"fe\",\"condition\":[\"uuid\",\"index\",0,\"fd6f\"],\"properties\":{\"rpi\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",0,32]},\"aem\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",32,8]}}}";
 
 /*R""""(
 {
    "brand":"GENERIC",
    "model":"GAEN",
    "model_id":"GAEN",
-   "tag":"ff",
+   "tag":"fe",
    "condition":["uuid", "index", 0, "fd6f"],
    "properties":{
       "rpi":{
