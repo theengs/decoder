@@ -256,9 +256,9 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
 
       if (strstr(cond_str, "contain") != nullptr) {
         if (strstr(cmp_str, condition[++i].as<const char*>()) != nullptr) {
-          match = (strstr(cond_str, "not_") != nullptr) ? false : true;
+          match = true; // (strstr(cond_str, "not_") != nullptr) ? false : true;
         } else {
-          match = (strstr(cond_str, "not_") != nullptr) ? true : false;
+          match = false; // (strstr(cond_str, "not_") != nullptr) ? true : false;
         }
         i++;
       } else if (strstr(cond_str, "mac@index") != nullptr) {
