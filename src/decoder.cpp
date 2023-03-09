@@ -471,7 +471,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   int success = -1;
 
   // if there is no data to decode just return
-  if (svc_data == nullptr && mfg_data == nullptr) {
+  if (svc_data == nullptr && mfg_data == nullptr && dev_name == nullptr) {
     DEBUG_PRINT("Invalid data\n");
     return success;
   }
@@ -548,6 +548,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             break;
           case 15:
             doc["type"] = "AIR"; // air environmental monitoring devices
+            break;
+          case 16:
+            doc["type"] = "TRACK"; // Bluetooth tracker
             break;
           case 254:
             doc["type"] = "RMAC"; // random MAC address devices

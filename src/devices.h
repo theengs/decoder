@@ -72,6 +72,7 @@
 #include "devices/Mopeka_json.h"
 #include "devices/T201_json.h"
 #include "devices/T301_json.h"
+#include "devices/tracker_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/iNodeEM_json.h"
 #include "devices/BC08_json.h"
@@ -151,6 +152,10 @@ const char* _devices[][2] = {
     {_Mopeka_json, _Mopeka_json_props},
     {_T201_json, _T201_json_props},
     {_T301_json, _T301_json_props},
+    {_tracker_json_nut, _tracker_json_props},
+    {_tracker_json_itag, _tracker_json_props},
+    {_tracker_json_tagit, _tracker_json_props},
+    {_tracker_json_tile, _tracker_json_props},
     {_ibeacon_json, _ibeacon_json_props},
     {_ServiceData_json, _ServiceData_json_props},
     {_JHT_F525_json, _JHT_F525_json_props},

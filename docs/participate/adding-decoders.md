@@ -52,8 +52,8 @@ Each device should also have an encoded **tag** property to, at the minimum, def
     </thead>
     <tbody>
         <tr>
-            <td rowspan=19>Byte[0]</td>
-            <td rowspan=19>Device Type > "type":</td>
+            <td rowspan=20>Byte[0]</td>
+            <td rowspan=20>Device Type > "type":</td>
             <td rowspan=1>0 - Reserved</td>
         </tr>
         <tr>
@@ -102,7 +102,10 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan=1>15 - AIR - air environmental monitoring devices</td>
         </tr>
         <tr>
-            <td rowspan=1>16-254 - Reserved</td>
+            <td rowspan=1>16 - TRACK - bluetooth tracker</td>
+        </tr>
+        <tr>
+            <td rowspan=1>17-253 - Reserved</td>
         </tr>
         <tr>
             <td rowspan=1>254 - RMAC - known random MAC address devices</td>
