@@ -61,6 +61,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD3in1\",\"type\":\"THBX\",\"tempc\":-16.3,\"tempf\":2.66,\"hum\":78.3,\"tempc2_dp\":-19.2,\"tempf2_dp\":-2.56,\"batt\":67}",
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD4in1\",\"type\":\"THBX\",\"tempc\":22.3,\"tempf\":72.14,\"hum\":75.9,\"pres\":1013.5,\"batt\":58}",
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD1in1\",\"type\":\"THB\",\"tempc\":25.2,\"tempf\":77.36,\"batt\":100}",
+    "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"type\":\"UNIQ\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"acts\":true,\"batt\":100}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"acts\":true,\"batt\":68}",
     "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":34.210289,\"tempf\":93.5785202,\"hum\":100,\"shake\":82,\"volt\":2.952,\"wake\":true}",
@@ -113,9 +114,6 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":123.9}",
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":29.6}",
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":-92.8}",
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"type\":\"UNIQ\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
-#endif
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -172,6 +170,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"type\":\"ACEL\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":49.4,\"volt\":3.247}",
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"type\":\"ACEL\",\"x_axis\":5.3348176,\"y_axis\":14.49815136,\"z_axis\":-1.50630144,\"volt\":3.065}",
     "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"type\":\"ACEL\",\"x_axis\":0.25105024,\"y_axis\":-0.18828768,\"z_axis\":15.75340256,\"volt\":3.065}",
+    "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"type\":\"UNIQ\",\"rpi\":\"e7c6d34c71e48baf278bd99be74685bc\",\"aem\":\"a78126ab\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"type\":\"ACTR\",\"acts\":true,\"mode\":\"on/off\",\"state\":\"off\",\"batt\":91}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"type\":\"ACTR\",\"acts\":true,\"mode\":\"on/off\",\"state\":\"on\",\"batt\":76}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"type\":\"ACTR\",\"acts\":true,\"mode\":\"onestate\",\"state\":\"on\",\"batt\":91}",
@@ -236,9 +235,6 @@ const char* expected_uuid[] = {
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"tempc\":-11,\"tempf\":12.2,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"in_ct\":1,\"out_ct\":0,\"push_ct\":2,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":100}",
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"type\":\"UNIQ\",\"rpi\":\"e7c6d34c71e48baf278bd99be74685bc\",\"aem\":\"a78126ab\"}",
-#endif
 };
 
 const char* expected_mac_mfg[] = {
@@ -340,6 +336,7 @@ const char* test_mfgdata[][3] = {
     {"BlueMaestro", "TempoDisc 3in1", "330116430e10061eff5d030fff400100"},
     {"BlueMaestro", "TempoDisc 4in1", "33011b3a0e10061e00df02f727970100"},
     {"BlueMaestro", "TempoDisc 1in1", "33010d6402580ad100fc0100"},
+    {"MS-CDP", "Windows 10 Desktop", "060001092002ac6d90ec0132b3204cd39c7ced3e48436ba15dc6314778"},
     {"BM2", "Battery Monitor", "4c000215655f83caae16a10a702e31f30d58dd82f644000064"},
     {"BM2", "Battery Monitor", "4c000215655f83caae16a10a702e31f30d58dd82f441423144"},
     {"SmartDry", "Laundry Sensor", "ae0156d708420000c84252006907"},
@@ -392,9 +389,6 @@ const char* test_mfgdata[][3] = {
     {"Atomax", "Skale I/II", "ef81d70400ff"},
     {"Atomax", "Skale I/II", "ef81280100ff"},
     {"Atomax", "Skale I/II", "ef8160fcffff"},
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    {"MS-CDP", "Windows 10 Desktop", "060001092002ac6d90ec0132b3204cd39c7ced3e48436ba15dc6314778"},
-#endif
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -438,6 +432,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BM3IN1,
     TheengsDecoder::BLE_ID_NUM::BM4IN1,
     TheengsDecoder::BLE_ID_NUM::BM1IN1,
+    TheengsDecoder::BLE_ID_NUM::MS_CDP,
     TheengsDecoder::BLE_ID_NUM::BM2,
     TheengsDecoder::BLE_ID_NUM::BM2,
     TheengsDecoder::BLE_ID_NUM::SMARTDRY,
@@ -490,9 +485,6 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::SKALE,
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    TheengsDecoder::BLE_ID_NUM::MS_CDP,
-#endif
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
@@ -582,6 +574,7 @@ const char* test_uuid[][4] = {
     {"MokoXPro", "feab", "servicedata", "70000a011201ee0caf03def14635998a"},
     {"MokoXPro", "feab", "servicedata", "60000a010007154039c0fa000bf901f40c93fe3487"},
     {"MokoXPro", "feab", "servicedata", "60000a0100070100ff403ec00bf901f40c93fe3487"},
+    {"GAEN", "fd6f", "servicedata", "e7c6d34c71e48baf278bd99be74685bca78126ab"},
     {"Switchbot_S1", "0d00", "servicedata", "48d0db"},
     {"Switchbot_S1", "0d00", "servicedata", "4890cc"},
     {"Switchbot_S1", "0d00", "servicedata", "48005b"},
@@ -646,9 +639,6 @@ const char* test_uuid[][4] = {
     {"BlueCharm BC08", "0xfeaa", "servicedata", "21010b0c0df500ff95fe69fc80"},
     {"Switchbot_Contact", "0xfd3d", "servicedata", "640064440359ffff42"},
     {"Switchbot_MotionSensor", "0xfd3d", "servicedata", "73006402f002"},
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    {"GAEN", "fd6f", "servicedata", "e7c6d34c71e48baf278bd99be74685bca78126ab"},
-#endif
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -676,6 +666,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
     TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
     TheengsDecoder::BLE_ID_NUM::MOKOBEACONXPRO,
+    TheengsDecoder::BLE_ID_NUM::GAEN,
     TheengsDecoder::BLE_ID_NUM::SBS1,
     TheengsDecoder::BLE_ID_NUM::SBS1,
     TheengsDecoder::BLE_ID_NUM::SBS1,
@@ -740,9 +731,6 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BC08,
     TheengsDecoder::BLE_ID_NUM::SBCS,
     TheengsDecoder::BLE_ID_NUM::SBMS,
-#ifdef DECODE_RANDOM_MAC_DEVICES
-    TheengsDecoder::BLE_ID_NUM::GAEN,
-#endif
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
