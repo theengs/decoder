@@ -116,6 +116,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":-92.8}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"iTAG Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -237,6 +238,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"tempc\":-11,\"tempf\":12.2,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"in_ct\":1,\"out_ct\":0,\"push_ct\":2,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":100}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -393,6 +397,7 @@ const char* test_mfgdata[][3] = {
     {"Atomax", "Skale I/II", "ef8160fcffff"},
     {"Apple", "Continuity", "4c0009060304c0a87b1e130c1adefc915b9ef8010401030c"},
     {"Tracker iTAG", "iTAG", "8afc23eb"},
+    {"Tile name", "Tile", "xxxx"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -491,6 +496,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::APPLE_CONT,
     TheengsDecoder::BLE_ID_NUM::ITAG,
+    TheengsDecoder::BLE_ID_NUM::TILEN,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
@@ -501,7 +507,6 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "183a2f33010000020000000100000907"},
     {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
     {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
-
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -645,6 +650,9 @@ const char* test_uuid[][4] = {
     {"BlueCharm BC08", "0xfeaa", "servicedata", "21010b0c0df500ff95fe69fc80"},
     {"Switchbot_Contact", "0xfd3d", "servicedata", "640064440359ffff42"},
     {"Switchbot_MotionSensor", "0xfd3d", "servicedata", "73006402f002"},
+    {"Tile uuid", "0xfeed", "servicedata", "0200c58aaccd312f479e"},
+    {"Tile uuid", "0xfeec", "servicedata", "0200c58aaccd312f479e"},
+    {"Tile uuid", "0xfd84", "servicedata", "0200c58aaccd312f479e"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -737,6 +745,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BC08,
     TheengsDecoder::BLE_ID_NUM::SBCS,
     TheengsDecoder::BLE_ID_NUM::SBMS,
+    TheengsDecoder::BLE_ID_NUM::TILE,
+    TheengsDecoder::BLE_ID_NUM::TILE,
+    TheengsDecoder::BLE_ID_NUM::TILE,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]

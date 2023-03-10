@@ -116,6 +116,7 @@ public:
     ITAG,
     TAGIT,
     TILE,
+    TILEN,
     IBEACON,
     SERVICE_DATA,
     JHT_F525,
