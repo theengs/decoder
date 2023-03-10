@@ -1,11 +1,11 @@
-const char* _APPLE_json = "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"tag\":\"fe\",\"condition\":[\"manufacturerdata\",\">=\",12,\"index\",0,\"4c000\",\"|\",\"manufacturerdata\",\">=\",12,\"index\",0,\"4c001\",\"&\",\"manufacturerdata\",\"<\",50],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Apple device\"]}}}";
+const char* _APPLE_json = "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"tag\":\"fe\",\"condition\":[\"manufacturerdata\",\">=\",10,\"index\",0,\"4c000\",\"|\",\"manufacturerdata\",\">=\",10,\"index\",0,\"4c001\",\"&\",\"manufacturerdata\",\"<\",50],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Apple device\"]}}}";
 /*R""""(
 {
    "brand":"Apple",
    "model":"Apple Continuity",
    "model_id":"APPLE_CONT",
    "tag":"fe",
-   "condition":["manufacturerdata", ">=", 12, "index", 0, "4c000", "|", "manufacturerdata", ">=", 12, "index", 0, "4c001", "&", "manufacturerdata", "<", 50],
+   "condition":["manufacturerdata", ">=", 10, "index", 0, "4c000", "|", "manufacturerdata", ">=", 10, "index", 0, "4c001", "&", "manufacturerdata", "<", 50],
    "properties":{
       "device":{
          "decoder":["static_value", "Apple device"]
