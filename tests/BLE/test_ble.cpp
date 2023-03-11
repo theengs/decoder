@@ -116,8 +116,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":-92.8}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
-    "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
-    "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
 };

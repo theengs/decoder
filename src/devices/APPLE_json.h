@@ -13,12 +13,12 @@ const char* _APPLE_json = "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\
    }
 })"""";*/
 
-const char* _APPLE_json_at = "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"tag\":\"fe\",\"condition\":[\"manufacturerdata\",\"=\",58,\"index\",0,\"4c000\",\"|\",\"manufacturerdata\",\"=\",58,\"index\",0,\"4c001\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Apple device\"]}}}";
+const char* _APPLE_json_at = "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"tag\":\"fe\",\"condition\":[\"manufacturerdata\",\"=\",58,\"index\",0,\"4c000\",\"|\",\"manufacturerdata\",\"=\",58,\"index\",0,\"4c001\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Apple device\"]}}}";
 /*R""""(
 {
    "brand":"Apple",
    "model":"Apple Continuity",
-   "model_id":"APPLE_CONT",
+   "model_id":"APPLE_CONTAT",
    "tag":"fe",
    "condition":["manufacturerdata", "=", 58, "index", 0, "4c000", "|", "manufacturerdata", "=", 58, "index", 0, "4c001"],
    "properties":{
