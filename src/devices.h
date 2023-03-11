@@ -105,6 +105,7 @@ const char* _devices[][2] = {
     {_IBT_4XS_json, _IBT_4XS_json_props},
     {_IBT_6XS_SOLIS6_json, _IBT_6XS_SOLIS6_json_props},
     {_APPLE_json, _APPLE_json_props},
+    {_APPLE_json_at, _APPLE_json_props},
     {_Miband_json, _Miband_json_props},
     {_XMTZC04HM_json, _XMTZC04HM_json_props},
     {_XMTZC05HM_json, _XMTZC05HM_json_props},

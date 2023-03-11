@@ -116,6 +116,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Atomax\",\"model\":\"Skale I/II\",\"model_id\":\"SKALE\",\"type\":\"SCALE\",\"cidc\":false,\"weight\":-92.8}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
 };
@@ -398,6 +400,8 @@ const char* test_mfgdata[][3] = {
     {"Atomax", "Skale I/II", "ef8160fcffff"},
     {"Apple", "Continuity", "4c0009060304c0a87b1e130c1adefc915b9ef8010401030c"},
     {"Apple", "Continuity", "4c00130100"},
+    {"Apple", "Continuity", "4c001219003d9967e0d67bf55617939043e48fd6762144da3e35160300"},
+    {"Apple", "Continuity", "4c000719010e2022f58f00000a7d9fff27234873d4305e0fed1b39e2b8"},
     {"Tracker iTAG", "iTAG", "8afc23eb"},
     {"Tile name", "Tile", "xxxx"},
 };
@@ -498,6 +502,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SKALE,
     TheengsDecoder::BLE_ID_NUM::APPLE_CONT,
     TheengsDecoder::BLE_ID_NUM::APPLE_CONT,
+    TheengsDecoder::BLE_ID_NUM::APPLE_CONTAT,
+    TheengsDecoder::BLE_ID_NUM::APPLE_CONTAT,
     TheengsDecoder::BLE_ID_NUM::ITAG,
     TheengsDecoder::BLE_ID_NUM::TILEN,
 };
