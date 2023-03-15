@@ -25,6 +25,11 @@ module.exports = {
       editLinks: true,
       nav: [
         { text: 'Shop🆕', link: 'https://shop.theengs.io/'},
+        { text: 'Use cases',
+        items: [
+          { text: 'Smart Home', link: 'https://www.theengs.io/usecases/smarthome.html', target:'_self', rel:''},
+          { text: 'Research', link: 'https://www.theengs.io/usecases/research.html', target:'_self', rel:''}
+        ]},
         { text: 'Home', link: 'https://www.theengs.io', target:'_self', rel:''},
         { text: 'App', link: 'https://app.theengs.io', target:'_self', rel:''},
         { text: 'Gateway', link: 'https://gateway.theengs.io', target:'_self', rel:''},
