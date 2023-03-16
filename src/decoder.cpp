@@ -28,9 +28,11 @@
 
 #ifdef DEBUG_DECODER
 #  include <stdio.h>
-#  define DEBUG_PRINT(...) { printf(__VA_ARGS__); }
+#  define DEBUG_PRINT(...) \
+    { printf(__VA_ARGS__); }
 #else
-#  define DEBUG_PRINT(...) {}
+#  define DEBUG_PRINT(...) \
+    {}
 #endif
 
 #ifdef UNIT_TESTING
@@ -492,7 +494,17 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #endif
 
     /* found a match, extract the data */
-    if (checkDeviceMatch(doc["condition"], svc_data, mfg_data, dev_name, svc_uuid, mac_id)) {
+    JsonArray selectedCondition;
+#ifdef NO_MAC_ADDR
+    if (doc.containsKey("conditionnomac")) {
+      selectedCondition = doc["conditionnomac"];
+    } else {
+      selectedCondition = doc["condition"];
+    }
+#else
+    selectedCondition = doc["condition"];
+#endif
+    if (checkDeviceMatch(selectedCondition, svc_data, mfg_data, dev_name, svc_uuid, mac_id)) {
       jsondata["brand"] = doc["brand"];
       jsondata["model"] = doc["model"];
       jsondata["model_id"] = doc["model_id"];

@@ -1,11 +1,11 @@
-const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"tag\":\"1007\",\"condition\":[\"name\",\"index\",0,\"nut\",\"&\",\"manufacturerdata\",\"=\",8,\"&\",\"uuid\",\"index\",0,\"180a\",\"&\",\"servicedata\",\"mac@index\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nut Tracker\"]}}}";
+const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"tag\":\"1007\",\"condition\":[\"name\",\"index\",0,\"nut\",\"&\",\"manufacturerdata\",\"=\",8,\"&\",\"uuid\",\"index\",0,\"180a\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nut Tracker\"]}}}";
 /*R""""(
 {
    "brand":"nut",
    "model":"Smart Tracker",
    "model_id":"NUT",
    "tag":"1007",
-   "condition":["name", "index", 0, "nut", "&", "manufacturerdata", "=", 8, "&", "uuid", "index", 0, "180a", "&", "servicedata", "mac@index", 8],
+   "condition":["name", "index", 0, "nut", "&", "manufacturerdata", "=", 8, "&", "uuid", "index", 0, "180a"],
    "properties":{
       "device":{
          "decoder":["static_value", "nut Tracker"]
@@ -28,14 +28,14 @@ const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\
    }
 })"""";*/
 
-const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Tracker\",\"model_id\":\"TAGIT\",\"tag\":\"1007\",\"condition\":[\"name\",\"index\",0,\"Tag-It\",\"&\",\"manufacturerdata\",\"=\",26,\"&\",\"manufacturerdata\",\"mac@index\",4],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tag-It Tracker\"]}}}";
+const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Tracker\",\"model_id\":\"TAGIT\",\"tag\":\"1007\",\"condition\":[\"name\",\"index\",0,\"Tag-It\",\"&\",\"manufacturerdata\",\"=\",26],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tag-It Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Tag-It",
    "model":"Smart Tracker",
    "model_id":"TAGIT",
    "tag":"1007",
-   "condition":["name", "index", 0, "Tag-It", "&", "manufacturerdata", "=", 26, "&", "manufacturerdata", "mac@index", 4],
+   "condition":["name", "index", 0, "Tag-It", "&", "manufacturerdata", "=", 26],
    "properties":{
       "device":{
          "decoder":["static_value", "Tag-It Tracker"]
