@@ -38,7 +38,6 @@
 #include "devices/IBT_2X_json.h"
 #include "devices/IBT_4XS_json.h"
 #include "devices/IBT_6XS_SOLIS6_json.h"
-#include "devices/APPLE_json.h"
 #include "devices/JQJCY01YM_json.h"
 #include "devices/LYWSD02_json.h"
 #include "devices/LYWSD03MMC_json.h"
@@ -73,7 +72,6 @@
 #include "devices/T201_json.h"
 #include "devices/T301_json.h"
 #include "devices/tracker_json.h"
-#include "devices/iBeacon_json.h"
 #include "devices/iNodeEM_json.h"
 #include "devices/BC08_json.h"
 #include "devices/BM1IN1_json.h"
@@ -82,8 +80,11 @@
 #include "devices/BPARASITE_json.h"
 #include "devices/BWBSDOO_json.h"
 #include "devices/BM2_json.h"
-#include "devices/ServiceData_json.h"
 #include "devices/JHT_F525_json.h"
+#include "devices/iBeacon_json.h"
+#include "devices/APPLE_json.h"
+#include "devices/ServiceData_json.h"
+
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
@@ -106,8 +107,6 @@ const char* _devices[][2] = {
     {_IBT_2X_json_2XS, _IBT_2X_json_props},
     {_IBT_4XS_json, _IBT_4XS_json_props},
     {_IBT_6XS_SOLIS6_json, _IBT_6XS_SOLIS6_json_props},
-    {_APPLE_json, _APPLE_json_props},
-    {_APPLE_json_at, _APPLE_json_props},
     {_Miband_json, _Miband_json_props},
     {_XMTZC04HM_json, _XMTZC04HM_json_props},
     {_XMTZC05HM_json, _XMTZC05HM_json_props},
@@ -160,7 +159,9 @@ const char* _devices[][2] = {
     {_tracker_json_tagit, _tracker_json_props},
     {_tracker_json_tile, _tracker_json_props},
     {_tracker_json_tilename, _tracker_json_props},
-    {_ibeacon_json, _ibeacon_json_props},
-    {_ServiceData_json, _ServiceData_json_props},
     {_JHT_F525_json, _JHT_F525_json_props},
+    {_ibeacon_json, _ibeacon_json_props},
+    {_APPLE_json, _APPLE_json_props},
+    {_APPLE_json_at, _APPLE_json_props},
+    {_ServiceData_json, _ServiceData_json_props},
 };

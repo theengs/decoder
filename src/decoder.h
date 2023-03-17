@@ -66,8 +66,6 @@ public:
     IBT_2XS,
     IBT4XS,
     IBT6XS_SOLIS,
-    APPLE_CONT,
-    APPLE_CONTAT,
     MIBAND,
     XMTZC04HM,
     XMTZC05HM,
@@ -120,9 +118,11 @@ public:
     TAGIT,
     TILE,
     TILEN,
-    IBEACON,
-    SERVICE_DATA,
     JHT_F525,
+    IBEACON,
+    APPLE_CONT,
+    APPLE_CONTAT,
+    SERVICE_DATA,
     BLE_ID_MAX
   };
 
