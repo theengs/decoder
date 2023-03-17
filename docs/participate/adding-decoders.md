@@ -155,6 +155,10 @@ The second parameter is variable. If required, further qualification can be made
 - "mac@index" tests if the device's MAC address exists at the index location (see below) in the data source
 - "revmac@index" tests if the device's MAC address exists octet-reversed at the index location (see below) in the data source
 
+::: warning Note
+For compatibility of a decoder for running successfully on an OS which masks the real MAC addresses of devices by generic uuids, like macOS and iOS, an alternative model condition with the name "conditionnomac" needs to be defined in addition to "condition" if the latter contains "mac@index" or "revmac@index".
+:::
+
 Examples:
 `"condition":["servicedata", "index", 0, "0804"` -- no data length check
 `"condition":["servicedata", ">=", 40, "index", 0, "0804"` -- data length must be equal to or greater than 40 bytes
