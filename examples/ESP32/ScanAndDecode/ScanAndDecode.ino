@@ -62,6 +62,7 @@ class MyAdvertisedDeviceCallbacks: public NimBLEAdvertisedDeviceCallbacks {
       BLEdata.remove("cidc");
       BLEdata.remove("acts");
       BLEdata.remove("cont");
+      BLEdata.remove("track");
       Serial.print("TheengsDecoder found device: ");
       serializeJson(BLEdata, Serial);
       Serial.println("");

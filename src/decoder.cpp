@@ -599,6 +599,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["cont"] = true;
             jsondata["cont"] = doc["cont"];
           }
+
+          if (((data >> 3) & 0x01) == 1) { // Presence tracking conpatible
+            doc.add("track");
+            doc["track"] = true;
+            jsondata["track"] = doc["track"];
+          }
         }
       }
 

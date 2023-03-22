@@ -30,6 +30,7 @@ static PyObject *decode_BLE(PyObject *self, PyObject *args)
       bleObject.remove("cidc");
       bleObject.remove("acts");
       bleObject.remove("cont");
+      BLEdata.remove("track");
       serializeJson(bleObject, buf);
       return Py_BuildValue("s", buf.c_str());
     }
