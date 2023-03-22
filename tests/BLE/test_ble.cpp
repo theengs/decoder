@@ -271,6 +271,7 @@ const char* expected_mac_mfgsvcdata[] = {
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\"}",
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\"}",
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"device\":\"Xiaomi/Amazfit Tracker\"}",
 };
 
 // Service data test input [test name] [data]
@@ -810,9 +811,11 @@ const char* test_mac_mfgsvcdata[][4] = {
     {"MiBand", "AA:BB:CC:DD:EE:FF", "57010202017dffffffffffffffffffffffffff02aabbccddeeff", "8d230000"},
     {"MiBand", "AA:BB:CC:DD:EE:FF", "570102020184ffffffffffffffffffffffffff02aabbccddeeff", ""},
     {"MiBand", "AA:BB:CC:DD:EE:FF", "5701020201ffffffffffffffffffffffffffff02aabbccddeeff", "ac1e0000"},
+    {"MiBand", "AA:BB:CC:DD:EE:FF", "57010202ffffffffffffffffffffffffffffff02aabbccddeeff", ""},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mac_mfgsvcdata_id_num[]{
+    TheengsDecoder::BLE_ID_NUM::MIBAND,
     TheengsDecoder::BLE_ID_NUM::MIBAND,
     TheengsDecoder::BLE_ID_NUM::MIBAND,
     TheengsDecoder::BLE_ID_NUM::MIBAND,
