@@ -51,12 +51,12 @@ const char* expected_mfg[] = {
     "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"type\":\"ENRG\",\"cidc\":false,\"avg\":5.304,\"avgu\":\"kW\",\"sum\":18.8804,\"sumu\":\"kWh\",\"batt\":50}",
     "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"type\":\"ENRG\",\"cidc\":false,\"avg\":0.900545785,\"avgu\":\"m³\",\"sum\":8.070345664,\"sumu\":\"m³\",\"batt\":60}",
     "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"model_id\":\"INEM\",\"type\":\"ENRG\",\"cidc\":false,\"avg\":2.010309278,\"avgu\":\"m³\",\"sum\":7.156003639,\"sumu\":\"m³\",\"batt\":20,\"lowbatt\":true}",
-    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"type\":\"ACEL\",\"hum\":20.5,\"tempc\":26.3,\"tempf\":79.34,\"pres\":1027.66,\"accx\":-0.980665,\"accy\":-1.69262779,\"accz\":0.70019481,\"volt\":2.899}",
-    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"type\":\"ACEL\",\"hum\":127.5,\"tempc\":127.99,\"tempf\":262.382,\"pres\":1155.35,\"accx\":32.13345006,\"accy\":32.13345006,\"accz\":32.13345006,\"volt\":65.535}",
-    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"type\":\"ACEL\",\"hum\":0,\"tempc\":-127.99,\"tempf\":-198.382,\"pres\":500,\"accx\":-32.13345006,\"accy\":-32.13345006,\"accz\":-32.13345006,\"volt\":0}",
-    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"type\":\"ACEL\",\"tempc\":24.3,\"tempf\":75.74,\"hum\":53.49,\"pres\":1000.44,\"accx\":0.00392266,\"accy\":-0.00392266,\"accz\":1.01596894,\"volt\":2.977,\"tx\":4,\"mov\":66,\"seq\":205}",
-    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"type\":\"ACEL\",\"tempc\":163.835,\"tempf\":326.903,\"hum\":163.8350,\"pres\":1155.34,\"accx\":32.13345006,\"accy\":32.13345006,\"accz\":32.13345006,\"volt\":3.646,\"tx\":20,\"mov\":254,\"seq\":65534}",
-    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"type\":\"ACEL\",\"tempc\":-163.835,\"tempf\":-262.903,\"hum\":0,\"pres\":500,\"accx\":-32.13345006,\"accy\":-32.13345006,\"accz\":-32.13345006,\"volt\":1.6,\"tx\":-40,\"mov\":0,\"seq\":0}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"type\":\"ACEL\",\"track\":true,\"hum\":20.5,\"tempc\":26.3,\"tempf\":79.34,\"pres\":1027.66,\"accx\":-0.980665,\"accy\":-1.69262779,\"accz\":0.70019481,\"volt\":2.899}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"type\":\"ACEL\",\"track\":true,\"hum\":127.5,\"tempc\":127.99,\"tempf\":262.382,\"pres\":1155.35,\"accx\":32.13345006,\"accy\":32.13345006,\"accz\":32.13345006,\"volt\":65.535}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv1\",\"type\":\"ACEL\",\"track\":true,\"hum\":0,\"tempc\":-127.99,\"tempf\":-198.382,\"pres\":500,\"accx\":-32.13345006,\"accy\":-32.13345006,\"accz\":-32.13345006,\"volt\":0}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"type\":\"ACEL\",\"track\":true,\"tempc\":24.3,\"tempf\":75.74,\"hum\":53.49,\"pres\":1000.44,\"accx\":0.00392266,\"accy\":-0.00392266,\"accz\":1.01596894,\"volt\":2.977,\"tx\":4,\"mov\":66,\"seq\":205}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"type\":\"ACEL\",\"track\":true,\"tempc\":163.835,\"tempf\":326.903,\"hum\":163.8350,\"pres\":1155.34,\"accx\":32.13345006,\"accy\":32.13345006,\"accz\":32.13345006,\"volt\":3.646,\"tx\":20,\"mov\":254,\"seq\":65534}",
+    "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-163.835,\"tempf\":-262.903,\"hum\":0,\"pres\":500,\"accx\":-32.13345006,\"accy\":-32.13345006,\"accz\":-32.13345006,\"volt\":1.6,\"tx\":-40,\"mov\":0,\"seq\":0}",
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD3in1\",\"type\":\"THBX\",\"tempc\":23.9,\"tempf\":75.02,\"hum\":43.5,\"tempc2_dp\":10.8,\"tempf2_dp\":51.44,\"batt\":86}",
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD3in1\",\"type\":\"THBX\",\"tempc\":-16.3,\"tempf\":2.66,\"hum\":78.3,\"tempc2_dp\":-19.2,\"tempf2_dp\":-2.56,\"batt\":67}",
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD4in1\",\"type\":\"THBX\",\"tempc\":22.3,\"tempf\":72.14,\"hum\":75.9,\"pres\":1013.5,\"batt\":58}",
@@ -119,17 +119,17 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
-    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"iTAG Tracker\"}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
-    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.196133,\"accy\":0.0980665,\"accz\":9.5124505}",
-    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":1.372931,\"accy\":0.8825985,\"accz\":-9.610517}",
-    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
-    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.196133,\"accy\":0.0980665,\"accz\":9.5124505}",
-    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":1.372931,\"accy\":0.8825985,\"accz\":-9.610517}",
-    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.196133,\"accy\":0.0980665,\"accz\":9.5124505}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":1.372931,\"accy\":0.8825985,\"accz\":-9.610517}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":24.2265625,\"tempf\":75.6078125,\"hum\":47.19921875,\"accx\":-0.196133,\"accy\":0.0980665,\"accz\":9.5124505}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":25.296875,\"tempf\":77.534375,\"hum\":58.22265625,\"accx\":1.372931,\"accy\":0.8825985,\"accz\":-9.610517}",
+    "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -244,9 +244,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"tempc\":-11,\"tempf\":12.2,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"in_ct\":1,\"out_ct\":0,\"push_ct\":2,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":100}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -264,14 +264,14 @@ const char* expected_mac_mfg[] = {
     "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false}",
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":3,\"pres\":2.61137,\"tempc\":17.06,\"tempf\":62.708,\"batt\":83,\"alarm\":false}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\"}",
 };
 
 const char* expected_mac_mfgsvcdata[] = {
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"device\":\"Xiaomi/Amazfit Tracker\"}",
 };
 
 // Service data test input [test name] [data]
