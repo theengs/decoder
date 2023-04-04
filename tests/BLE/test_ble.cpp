@@ -250,6 +250,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":11,\"tempf\":51.8,\"moi\":14,\"lux\":79012,\"fer\":91,\"batt\":40}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":0,\"tempf\":32,\"moi\":98,\"lux\":71,\"fer\":0,\"batt\":100}",
+    "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":21,\"tempf\":69.8,\"moi\":96,\"lux\":548,\"fer\":0,\"batt\":100}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -680,6 +681,7 @@ const char* test_uuid[][4] = {
     {"Tile uuid", "0xfd84", "servicedata", "0200c58aaccd312f479e"},
     {"Mi flora pink tuya", "0xfd50", "servicedata", "0e006e0134a428005b"},
     {"Mi flora pink tuya", "0xfd50", "servicedata", "620000000047640000"},
+    {"Mi flora pink tuya", "0xfd50", "servicedata", "6000d2000224640000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -775,6 +777,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::TILE,
     TheengsDecoder::BLE_ID_NUM::TILE,
     TheengsDecoder::BLE_ID_NUM::TILE,
+    TheengsDecoder::BLE_ID_NUM::HHCCJCY10,
     TheengsDecoder::BLE_ID_NUM::HHCCJCY10,
     TheengsDecoder::BLE_ID_NUM::HHCCJCY10,
 };
