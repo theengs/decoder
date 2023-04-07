@@ -22,7 +22,7 @@ const char* _Miband_json = "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Sm
    }
 })"""";*/
 
-const char* _Miband_json_props = "{\"properties\":{\"steps\":{\"unit\":\"int\",\"name\":\"step-count\"},\"act_bpm\":{\"unit\":\"bpm\",\"name\":\"activity heart rate\"},\"device\":{\"unit\":\"string\",\"name\":\"tracker device\"}}}}";
+const char* _Miband_json_props = "{\"properties\":{\"steps\":{\"unit\":\"int\",\"name\":\"step-count\"},\"act_bpm\":{\"unit\":\"bpm\",\"name\":\"activity heart rate\"},\"device\":{\"unit\":\"string\",\"name\":\"tracker device\"}}}";
 /*R""""(
 {
    "properties":{
