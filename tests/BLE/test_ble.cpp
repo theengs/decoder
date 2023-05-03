@@ -243,8 +243,8 @@ const char* expected_uuid[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100}",
     "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525\",\"type\":\"THB\",\"acts\":true,\"tempc\":24.5147998,\"tempf\":76.12663965,\"hum\":36.84286499,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"motion\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
-    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"track\":true,\"tempc\":24,\"tempf\":75.2,\"accx\":33,\"accy\":-3,\"accz\":-1006,\"volt\":3.091}",
-    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08\",\"model_id\":\"BC08\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-11,\"tempf\":12.2,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
+    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":24.28458498,\"tempf\":75.71225296,\"accx\":33,\"accy\":-3,\"accz\":-1006,\"volt\":3.091}",
+    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-11.13043478,\"tempf\":11.96521739,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"movement\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"in_ct\":1,\"out_ct\":0,\"push_ct\":2,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"movement\":false,\"led\":false,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":100}",
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
@@ -253,6 +253,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":11,\"tempf\":51.8,\"moi\":14,\"lux\":79012,\"fer\":91,\"batt\":40}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":0,\"tempf\":32,\"moi\":98,\"lux\":71,\"fer\":0,\"batt\":100}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":21,\"tempf\":69.8,\"moi\":96,\"lux\":548,\"fer\":0,\"batt\":100}",
+    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":22.26086957,\"tempf\":72.06956522,\"accx\":31,\"accy\":31,\"accz\":-859,\"volt\":3.162}",
+    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":30.35573123,\"tempf\":86.64031621,\"accx\":34,\"accy\":-14,\"accz\":977,\"volt\":3.03}",
+    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-14.92490119,\"tempf\":5.135177866,\"accx\":109,\"accy\":-31,\"accz\":1046,\"volt\":3.194}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -688,6 +691,9 @@ const char* test_uuid[][4] = {
     {"Mi flora pink tuya", "0xfd50", "servicedata", "0e006e0134a428005b"},
     {"Mi flora pink tuya", "0xfd50", "servicedata", "620000000047640000"},
     {"Mi flora pink tuya", "0xfd50", "servicedata", "6000d2000224640000"},
+    {"BlueCharm BC04P", "0xfeaa", "servicedata", "21010b0c5a1600001f001ffca5"},
+    {"BlueCharm BC021", "0xfeaa", "servicedata", "21010b0bd61e000022fff203d1"},
+    {"BlueCharm BC021", "0xfeaa", "servicedata", "21010b0c7af140006dffe10416"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -786,6 +792,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::HHCCJCY10,
     TheengsDecoder::BLE_ID_NUM::HHCCJCY10,
     TheengsDecoder::BLE_ID_NUM::HHCCJCY10,
+    TheengsDecoder::BLE_ID_NUM::BC08,
+    TheengsDecoder::BLE_ID_NUM::BC08,
+    TheengsDecoder::BLE_ID_NUM::BC08,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
