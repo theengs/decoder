@@ -134,6 +134,7 @@ const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Radioland\",\"model\":\"RDL52832\",\"model_id\":\"RDL52832\",\"type\":\"ACEL\",\"acts\":true,\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"fda50693a4e24fb1afcfc6eb07647825\",\"major\":1,\"minor\":2,\"txpower\":-40,\"tempc\":26.2734375,\"tempf\":79.2921875,\"hum\":61.203125,\"accx\":1.96133,\"accy\":-9.414384,\"accz\":1.4709975}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":50,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":26.3,\"tempf\":79.34,\"hum\":80,\"batt\":100}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":-15.9,\"tempf\":3.38,\"hum\":42,\"batt\":65}",
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -540,6 +541,7 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
     {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909f9666b959cea8b0305993200", "770064"},
     {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909f9666b959cea940b039a5000", "770064"},
+    {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909c56568818432e30f090f2a00", "770041"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -549,6 +551,7 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::RDL52832,
     TheengsDecoder::BLE_ID_NUM::RDL52832,
     TheengsDecoder::BLE_ID_NUM::RDL52832,
+    TheengsDecoder::BLE_ID_NUM::SBOT,
     TheengsDecoder::BLE_ID_NUM::SBOT,
     TheengsDecoder::BLE_ID_NUM::SBOT,
 };
