@@ -24,12 +24,17 @@ else()
 
     add_library(decoder
                 src/decoder.cpp
+                src/decoder_c.cpp
                 )
+
+    set_target_properties(decoder PROPERTIES
+        PUBLIC_HEADER shared/theengs.h)
 
     target_include_directories(decoder
         PUBLIC
             $<INSTALL_INTERFACE:arduino_json>
             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src/arduino_json/src>
+            ${CMAKE_CURRENT_SOURCE_DIR}/include
             ${CMAKE_CURRENT_SOURCE_DIR}/src
     )
 
