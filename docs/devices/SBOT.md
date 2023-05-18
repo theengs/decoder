@@ -1,6 +1,6 @@
 # SwitchBot Outdoor Meter
 
-|Model Id|[W340001X)](https://github.com/theengs/decoder/blob/development/src/devices/SBOT_json.h)|
+|Model Id|[W340001X](https://github.com/theengs/decoder/blob/development/src/devices/SBOT_json.h)|
 |-|-|
 |Brand|SwitchBot|
 |Model|Outdoor Meter|

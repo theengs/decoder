@@ -125,6 +125,7 @@ public:
     APPLE_CONT,
     APPLE_CONTAT,
     SERVICE_DATA,
+    SBBT_002C,
     BLE_ID_MAX
   };
 
