@@ -52,12 +52,12 @@ Each device should also have an encoded **tag** property to, at the minimum, def
     </thead>
     <tbody>
         <tr>
-            <td rowspan=20>Byte[0]</td>
-            <td rowspan=20>Device Type > "type":</td>
+            <td rowspan=21>Byte[0]</td>
+            <td rowspan=21>Device Type > "type":</td>
             <td rowspan=1>0 - Reserved</td>
         </tr>
         <tr>
-            <td rowspan=1>1 - THB - temperature, humidity, battery<</td>
+            <td rowspan=1>1 - THB - temperature, humidity, battery</td>
         </tr>
         <tr>
             <td rowspan=1>2 - THBX - temperature, humidity, battery, extras</td>
@@ -105,7 +105,10 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan=1>16 - TRACK - bluetooth tracker</td>
         </tr>
         <tr>
-            <td rowspan=1>17-253 - Reserved</td>
+            <td rowspan=1>17 - BTN - button</td>
+        </tr>
+        <tr>
+            <td rowspan=1>18-253 - Reserved</td>
         </tr>
         <tr>
             <td rowspan=1>254 - RMAC - known random MAC address devices</td>

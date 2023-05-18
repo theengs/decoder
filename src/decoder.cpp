@@ -564,6 +564,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
           case 16:
             doc["type"] = "TRACK"; // Bluetooth tracker
             break;
+          case 17:
+            doc["type"] = "BTN"; // Button
+            break;
           case 254:
             doc["type"] = "RMAC"; // random MAC address devices
             break;
