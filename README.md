@@ -1,4 +1,4 @@
-Theengs Decoder project aims to provide an efficient, portable and lightweight library for Internet of Things messages decoding.
+Theengs Decoder project aims to provide an efficient, portable and lightweight library for BLE Internet of Things messages decoding.
 
 ![Iot](https://github.com/theengs/decoder/raw/development//docs/img/Theengs_decoder_iot_chain.jpg)
 
@@ -26,5 +26,6 @@ Projects using the Theengs Decoder library
 * [Theengs Explorer](https://github.com/theengs/explorer) - A text user interface to discover BLE devices, showing their raw advertisement alongside the decoded data; running on Linux, Windows or macOS.
 * [Theengs App](https://github.com/theengs/app) - A paid app for Android and iOS/iPadOS phones and tablets displaying decoded BLE sensor data and optionally acting as a BLE to MQTT bridge.
 * [BresserWeatherSensorTTN](https://github.com/matthias-bs/BresserWeatherSensorTTN) - Bresser 5-in-1/6-in-1/7-in-1 868 MHz Weather Sensor Radio Receiver based on ESP32 and RFM95W/SX1276 - sends data to a LoRaWAN Network.
+* [Platypush](https://github.com/BlackLight/platypush) - A versatile and extensible platform for home and life automation with hundreds of supported integrations.
 
 For more information view the [documentation](https://decoder.theengs.io/)
