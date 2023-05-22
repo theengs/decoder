@@ -33,7 +33,8 @@ module.exports = {
         ]},
         { text: 'App', link: 'https://app.theengs.io', target:'_self', rel:''},
         { text: 'Gateway', link: 'https://gateway.theengs.io', target:'_self', rel:''},
-        { text: 'Decoder', link: 'https://decoder.theengs.io', target:'_self', rel:''}
+        { text: 'Decoder', link: 'https://decoder.theengs.io', target:'_self', rel:''},
+        { text: 'Web Parser', link: 'https://parser.theengs.io', target:'_self', rel:''}
       ],
       sidebar: [
         ['/','0 - What is it for 🏠'],
