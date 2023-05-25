@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|CR2032|
-|Exchanged data|temperature, level, sync status, voltage, battery, reading quality|
+|Exchanged data|temperature, level, sync status, voltage, battery, reading quality, acceleration x/y-axis|
 |Encrypted|No|
