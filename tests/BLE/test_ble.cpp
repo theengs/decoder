@@ -61,7 +61,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD3in1\",\"type\":\"THBX\",\"track\":true,\"tempc\":-16.3,\"tempf\":2.66,\"hum\":78.3,\"tempc2_dp\":-19.2,\"tempf2_dp\":-2.56,\"batt\":67}",
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD4in1\",\"type\":\"THBX\",\"track\":true,\"tempc\":22.3,\"tempf\":72.14,\"hum\":75.9,\"pres\":1013.5,\"batt\":58}",
     "{\"brand\":\"Blue Maestro\",\"model\":\"Tempo Disc\",\"model_id\":\"TD1in1\",\"type\":\"THB\",\"track\":true,\"tempc\":25.2,\"tempf\":77.36,\"batt\":100}",
-    "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"type\":\"RMAC\",\"device\":\"Windows 10 Desktop\",\"salt\":\"ac6d90ec\",\"hash\":\"0132b3204cd39c7ced3e48436ba15dc6\"}",
+    "{\"brand\":\"GENERIC\",\"model\":\"MS-CDP\",\"model_id\":\"MS-CDP\",\"type\":\"RMAC\",\"device\":\"Microsoft advertising beacon\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"acts\":true,\"batt\":100}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"acts\":true,\"batt\":68}",
     "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":34.210289,\"tempf\":93.5785202,\"hum\":100,\"shake\":82,\"volt\":2.952,\"wake\":true}",
