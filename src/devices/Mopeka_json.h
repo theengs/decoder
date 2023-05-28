@@ -7,18 +7,10 @@ const char* _Mopeka_json = "{\"brand\":\"Mopeka\",\"model\":\"Pro Check Sensor\"
    "tag":"ff01",
    "condition":["manufacturerdata", "=", 24, "index", 0, "590003"],
    "properties":{
-      // "tempraw":{
-      //    "decoder":["value_from_hex_data", "manufacturerdata", 8, 2, false, true],
-      //    "post_proc":["&", 127]
-      // },
       "tempc":{
          "decoder":["value_from_hex_data", "manufacturerdata", 8, 2, false, true],
          "post_proc":["&", 127, "-", 40, "min", -40]
       },
-      // "levl":{
-      //    "decoder":["value_from_hex_data", "manufacturerdata", 10, 4, true, false],
-      //    "post_proc":["&", 16383]
-      // },
       ".cal":{
          "decoder":["value_from_hex_data", "manufacturerdata", 8, 2, false, true],
          "post_proc":["&", 127]
@@ -63,18 +55,10 @@ const char* _Mopeka_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\
 /*R""""(
 {
    "properties":{
-      // "tempraw":{
-      //    "unit":"°C",
-      //    "name":"temperature"
-      // },
       "tempc":{
          "unit":"°C",
          "name":"temperature"
       },
-      // "levl":{
-      //    "unit":"int",
-      //    "name":"raw level"
-      // },
       "lvl_cm":{
          "unit":"cm",
          "name":"level in cm"

@@ -89,7 +89,6 @@ R""""(
    "condition":["servicedata", "=", 30, "|", "servicedata", "=", 32, "|", "servicedata", "=", 36, "&", "name", "index", 0, "Qingping Temp & RH", "|", "name", "index", 0, "ClearGrass Temp & RH", "&","uuid", "index", 0, "fe95"],
    "properties":{
       "tempc":{
-         // "condition":["servicedata", "=", 32, "|", "servicedata", "=", 36, "&", "servicedata", 23, "!", "6"], // not working!!
          "condition":["servicedata", ">=", 32, "&", "servicedata", 23, "!", "6"],
          "decoder":["value_from_hex_data", "servicedata", 28, 4, true],
          "post_proc":["/", 10]
