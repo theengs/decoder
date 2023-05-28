@@ -13,6 +13,7 @@
 
 The button press type is encoded as:
 
+* 0 - None (sent every 8 seconds if beacon mode is enabled)
 * 1 - Press
 * 2 - Double press
 * 3 - Triple press
