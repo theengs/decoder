@@ -264,6 +264,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":22.26086957,\"tempf\":72.06956522,\"accx\":31,\"accy\":31,\"accz\":-859,\"volt\":3.162}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":30.35573123,\"tempf\":86.64031621,\"accx\":34,\"accy\":-14,\"accz\":977,\"volt\":3.03}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-14.92490119,\"tempf\":5.135177866,\"accx\":109,\"accy\":-31,\"accz\":1046,\"volt\":3.194}",
+    "{\"brand\":\"KKM\",\"model\":\"Long Range K6P\",\"model_id\":\"K6P\",\"type\":\"THB\",\"tempc\":21.79,\"tempf\":71.222,\"hum\":33.79,\"volt\":3.675}",
+    "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":25.11,\"tempf\":77.198,\"hum\":43.11,\"volt\":3.672,\"accx\":-31,\"accy\":0,\"accz\":1015}",
+    "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":25,\"tempf\":77,\"hum\":43,\"volt\":3.672,\"accx\":-31,\"accy\":0,\"accz\":1015}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -718,6 +721,9 @@ const char* test_uuid[][4] = {
     {"BlueCharm BC04P", "0xfeaa", "servicedata", "21010b0c5a1600001f001ffca5"},
     {"BlueCharm BC021", "0xfeaa", "servicedata", "21010b0bd61e000022fff203d1"},
     {"BlueCharm BC021", "0xfeaa", "servicedata", "21010b0c7af140006dffe10416"},
+    {"KKM K6P", "0xfeaa", "servicedata", "2101070e5b154f2169"},
+    {"KKM K9", "0xfeaa", "servicedata", "21010f0e58186f2a29ffe1000003f7"},
+    {"KKM K9", "0xfeaa", "servicedata", "21010f0e5818642a0dffe1000003f7"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -819,6 +825,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BC08,
     TheengsDecoder::BLE_ID_NUM::BC08,
     TheengsDecoder::BLE_ID_NUM::BC08,
+    TheengsDecoder::BLE_ID_NUM::KKM_K6P,
+    TheengsDecoder::BLE_ID_NUM::KKM_K9,
+    TheengsDecoder::BLE_ID_NUM::KKM_K9,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
