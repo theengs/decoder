@@ -158,10 +158,11 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX\",\"type\":\"THB\",\"tempc\":19.23,\"tempf\":66.614,\"hum\":48.36,\"batt\":100,\"volt\":2.959}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX\",\"type\":\"THB\",\"tempc\":-6.7,\"tempf\":19.94,\"hum\":50.53,\"batt\":100,\"volt\":3.143}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX\",\"type\":\"THB\",\"tempc\":24.28,\"tempf\":75.704,\"hum\":43.65,\"batt\":100,\"volt\":3.125}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"cont\":true,\"packet\":30,\"batt\":100,\"press\":2}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"cont\":true,\"packet\":31,\"batt\":100,\"press\":3}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"cont\":true,\"packet\":32,\"batt\":100,\"press\":4}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":30,\"batt\":100,\"press\":2}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":31,\"batt\":100,\"press\":3}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":32,\"batt\":100,\"press\":4}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":171,\"batt\":100,\"press\":1}",
 };
 
 const char* expected_uuid[] = {
@@ -586,6 +587,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"SBBT-002C double press", "0xfcd2", "SBBT-002C", "40001e01643a02"},
     {"SBBT-002C triple press", "0xfcd2", "SBBT-002C", "40001f01643a03"},
     {"SBBT-002C long press", "0xfcd2", "SBBT-002C", "40002001643a04"},
+    {"SBBT-002C press", "0xfcd2", "SBBT-002C", "4400ab01643a01"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -609,6 +611,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX,
+    TheengsDecoder::BLE_ID_NUM::SBBT_002C,
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
