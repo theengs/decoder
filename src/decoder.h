@@ -70,6 +70,8 @@ public:
     XMTZC04HM,
     XMTZC05HM,
     TPMS,
+    KKM_K6P,
+    KKM_K9,
     LYWSD03MMC_ATC,
     LYWSD03MMC_PVVX,
     CGPR1,
