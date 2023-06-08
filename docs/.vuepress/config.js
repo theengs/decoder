@@ -24,13 +24,14 @@ module.exports = {
       lastUpdated: 'Last Updated',
       editLinks: true,
       nav: [
-        { text: 'Shop🆕', link: 'https://shop.theengs.io/'},
+        { text: 'Shop', link: 'https://shop.theengs.io/'},
         { text: 'Home', link: 'https://www.theengs.io', target:'_self', rel:''},
         { text: 'Use cases',
         items: [
           { text: 'Smart Home', link: 'https://www.theengs.io/usecases/smarthome.html', target:'_self', rel:''},
           { text: 'Research', link: 'https://www.theengs.io/usecases/research.html', target:'_self', rel:''}
         ]},
+        { text: 'Compatible', link: 'https://decoder.theengs.io/devices/devices.html', target:'_self', rel:''},
         { text: 'App', link: 'https://app.theengs.io', target:'_self', rel:''},
         { text: 'Gateway', link: 'https://gateway.theengs.io', target:'_self', rel:''},
         { text: 'Decoder', link: 'https://decoder.theengs.io', target:'_self', rel:''},
@@ -39,15 +40,7 @@ module.exports = {
       sidebar: [
         ['/','0 - What is it for 🏠'],
         {
-          title: '1 - Devices 🌡️',   // required
-          sidebarDepth: 1,    // optional, defaults to 1
-          children: [
-            'devices/devices_by_brand',
-            'devices/devices_by_model'
-          ]
-        },
-        {
-          title: '2 - Use ✈️',   // required
+          title: '1 - Use ✈️',   // required
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
             'use/include',
@@ -56,7 +49,7 @@ module.exports = {
           ]
         },
         {
-          title: '3 - Participate 💻',   // required
+          title: '2 - Participate 💻',   // required
           sidebarDepth: 1,    // optional, defaults to 1
           children: [
             'participate/adding-decoders',
