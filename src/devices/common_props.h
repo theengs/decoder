@@ -16,7 +16,7 @@ const char* _common_TH_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"n
    }
 })"""";*/
 
-const char* _common_BTH_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"}}}";
+const char* _common_BTH_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
 /*
 R""""(
 {
@@ -32,6 +32,10 @@ R""""(
       "batt":{
          "unit":"%",
          "name":"battery"
+      },
+      "mac":{
+         "unit":"string",
+         "name":"MAC address"
       }
    }
 })"""";*/

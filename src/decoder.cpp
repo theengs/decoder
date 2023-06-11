@@ -789,6 +789,30 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
             jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
             success = i_main;
+          } else if (strstr((const char*)decoder[0], "mac_from_hex_data") != nullptr) {
+            const char* src = svc_data;
+            if (strstr((const char*)decoder[1], MFG_DATA)) {
+              src = mfg_data;
+            }
+
+            std::string value(src + decoder[2].as<int>(), 12);
+            const char* mac_string = nullptr;
+            mac_string = value.c_str();
+
+            // reverse MAC
+            if (strstr((const char*)decoder[0], "revmac_from_hex_data") != nullptr) {
+              char* reverse_mac_string = (char*)malloc(strlen(mac_string) + 1);
+              reverse_hex_data(mac_string, reverse_mac_string, 12);
+              value = reverse_mac_string;
+            }
+
+            // add colons
+            for (int x = 2; x <= 14; x += 3) {
+              value.insert(x, 1, ':');
+            }
+
+            jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
+            success = i_main;
           }
         }
       }
