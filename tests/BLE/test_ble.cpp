@@ -138,7 +138,7 @@ const char* expected_name_uuid_mfgsvcdata[] = {
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1,\"mac\":\"bc:02:6e:aa:bb:cc\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1,\"mac\":\"BC:02:6E:AA:BB:CC\"}",
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -203,10 +203,10 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"acts\":true,\"tempc\":26.7,\"tempf\":80.06,\"hum\":56,\"batt\":58}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":56,\"batt\":84}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"acts\":true,\"tempc\":25.2,\"tempf\":77.36,\"hum\":56,\"batt\":84}",
-    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"motion\":false,\"position\":25,\"calibrated\":true,\"lightlevel\":7,\"batt\":76}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"motion\":true,\"position\":25,\"calibrated\":false,\"lightlevel\":10,\"batt\":85}",
     "{\"brand\":\"Xiaomi/Mijia\",\"model\":\"e-ink Clock\",\"model_id\":\"LYWSD02\",\"type\":\"THB\",\"tempc\":25.6,\"tempf\":78.08}",
@@ -230,9 +230,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"type\":\"AIR\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":42.7,\"pm25\":164,\"pm10\":215,\"co2\":711}",
     "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"type\":\"AIR\",\"tempc\":20.6,\"tempf\":69.08,\"hum\":55.2,\"pm25\":5,\"pm10\":5,\"co2\":471}",
     "{\"brand\":\"GENERIC\",\"model\":\"Service data\",\"model_id\":\"ServiceData\",\"type\":\"BATT\",\"batt\":33}",
-    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9,\"batt\":42,\"mac\":\"58:2d:34:50:fd:af\"}",
-    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67,\"batt\":42,\"mac\":\"58:2d:34:50:fd:af\"}",
-    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7,\"batt\":85,\"mac\":\"58:2d:34:50:fd:af\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9,\"batt\":42,\"mac\":\"58:2D:34:50:FD:AF\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67,\"batt\":42,\"mac\":\"58:2D:34:50:FD:AF\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7,\"batt\":85,\"mac\":\"58:2D:34:50:FD:AF\"}",
     "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":1006.3}",
     "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":1006.3}",
     "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":1008.6}",
@@ -252,7 +252,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100}",
-    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100,\"mac\":\"ff:ee:dd:cc:bb:aa\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100,\"mac\":\"FF:EE:DD:CC:BB:AA\"}",
     "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525\",\"type\":\"THB\",\"acts\":true,\"tempc\":24.5147998,\"tempf\":76.12663965,\"hum\":36.84286499,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"motion\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":24,\"tempf\":75.2,\"accx\":33,\"accy\":-3,\"accz\":-1006,\"volt\":3.091}",
@@ -288,29 +288,29 @@ const char* expected_uuid[] = {
 };
 
 const char* expected_mac_mfg[] = {
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4,\"mac\":\"a1:b2:c3:d4:e5:f6\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":28,\"tempf\":82.4,\"tempc2\":32,\"tempf2\":89.6,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":65,\"tempf2\":149,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":21,\"tempf2\":69.8,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":58,\"tempf2\":136.4,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":20.7,\"tempf2\":69.26,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":33.2,\"tempf\":91.76,\"tempc2\":33.5,\"tempf2\":92.3,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":33.5,\"tempf2\":92.3,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc3\":60,\"tempf3\":140,\"tempc4\":53,\"tempf4\":127.4,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false,\"mac\":\"80:ea:ca:dd:ee:ff\"}",
-    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":3,\"pres\":2.61137,\"tempc\":17.06,\"tempf\":62.708,\"batt\":83,\"alarm\":false,\"mac\":\"82:ea:ca:dd:ee:ff\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4,\"mac\":\"A1:B2:C3:D4:E5:F6\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":28,\"tempf\":82.4,\"tempc2\":32,\"tempf2\":89.6,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":65,\"tempf2\":149,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":21,\"tempf2\":69.8,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":58,\"tempf2\":136.4,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":20.7,\"tempf2\":69.26,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":33.2,\"tempf\":91.76,\"tempc2\":33.5,\"tempf2\":92.3,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":33.5,\"tempf2\":92.3,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc3\":60,\"tempf3\":140,\"tempc4\":53,\"tempf4\":127.4,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false,\"mac\":\"80:EA:CA:DD:EE:FF\"}",
+    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":3,\"pres\":2.61137,\"tempc\":17.06,\"tempf\":62.708,\"batt\":83,\"alarm\":false,\"mac\":\"82:EA:CA:DD:EE:FF\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfgsvcdata[] = {
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 // Service data test input [test name] [data]
