@@ -284,29 +284,29 @@ const char* expected_uuid[] = {
 };
 
 const char* expected_mac_mfg[] = {
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":28,\"tempf\":82.4,\"tempc2\":32,\"tempf2\":89.6}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":65,\"tempf2\":149}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":21,\"tempf2\":69.8}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":58,\"tempf2\":136.4}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":20.7,\"tempf2\":69.26}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":33.2,\"tempf\":91.76,\"tempc2\":33.5,\"tempf2\":92.3}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":33.5,\"tempf2\":92.3}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77}",
-    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc3\":60,\"tempf3\":140,\"tempc4\":53,\"tempf4\":127.4}",
-    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
-    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8}",
-    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false}",
-    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":3,\"pres\":2.61137,\"tempc\":17.06,\"tempf\":62.708,\"batt\":83,\"alarm\":false}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":23,\"tempf\":73.4,\"tempc2\":23,\"tempf2\":73.4,\"mac\":\"a1:b2:c3:d4:e5:f6\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":28,\"tempf\":82.4,\"tempc2\":32,\"tempf2\":89.6,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":65,\"tempf2\":149,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":21,\"tempf2\":69.8,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":58,\"tempf2\":136.4,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":22,\"tempf\":71.6,\"tempc2\":20.7,\"tempf2\":69.26,\"mac\":\"ff:ee:dd:cc:bb:aa\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":33.2,\"tempf\":91.76,\"tempc2\":33.5,\"tempf2\":92.3,\"mac\":\"ff:ee:dd:cc:bb:aa\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-2X(S)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc2\":33.5,\"tempf2\":92.3,\"mac\":\"ff:ee:dd:cc:bb:aa\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc2\":26,\"tempf2\":78.8,\"tempc3\":25,\"tempf3\":77,\"tempc4\":25,\"tempf4\":77,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":26,\"tempf\":78.8,\"tempc3\":60,\"tempf3\":140,\"tempc4\":53,\"tempf4\":127.4,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":21,\"tempf\":69.8,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"type\":\"BBQ\",\"cidc\":false,\"tempc\":20,\"tempf\":68,\"tempc2\":20,\"tempf2\":68,\"tempc4\":21,\"tempf4\":69.8,\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false,\"mac\":\"80:ea:ca:dd:ee:ff\"}",
+    "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":3,\"pres\":2.61137,\"tempc\":17.06,\"tempf\":62.708,\"batt\":83,\"alarm\":false,\"mac\":\"82:ea:ca:dd:ee:ff\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
 };
 
 const char* expected_mac_mfgsvcdata[] = {
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"device\":\"Xiaomi/Amazfit Tracker\"}",
-    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
 };
 
 // Service data test input [test name] [data]
