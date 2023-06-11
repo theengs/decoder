@@ -796,14 +796,19 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             }
 
             std::string value(src + decoder[2].as<int>(), 12);
-            const char* mac_string = nullptr;
-            mac_string = value.c_str();
 
             // reverse MAC
             if (strstr((const char*)decoder[0], "revmac_from_hex_data") != nullptr) {
+              const char* mac_string = nullptr;
+              mac_string = value.c_str();
               char* reverse_mac_string = (char*)malloc(strlen(mac_string) + 1);
               reverse_hex_data(mac_string, reverse_mac_string, 12);
               value = reverse_mac_string;
+            }
+
+            // upper case MAC
+            for (int x = 0; x <= 12; x++) {
+              value[x] = toupper(value[x]);
             }
 
             // add colons
