@@ -5,11 +5,11 @@
 #include "decoder.h"
 
 const char* expected_servicedata[] = {
-    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"tempc\":26,\"tempf\":78.8,\"hum\":61.4,\"mac\":\"DF:AA:33:34:2D:58\"}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"hum\":61.4,\"mac\":\"DF:AA:33:34:2D:58\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"tempc\":26,\"tempf\":78.8,\"hum\":61.4,\"mac\":\"58:2D:34:33:AA:DF\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"hum\":61.4,\"mac\":\"58:2D:34:33:AA:DF\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"batt\":81,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"batt\":62,\"mac\":\"3C:03:38:34:2D:58\"}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"tempc\":27.4,\"tempf\":81.32,\"mac\":\"DF:AA:33:34:2D:58\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"batt\":62,\"mac\":\"58:2D:34:38:03:3C\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"tempc\":27.4,\"tempf\":81.32,\"mac\":\"58:2D:34:33:AA:DF\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"type\":\"AIR\",\"batt\":94}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"type\":\"AIR\",\"hum\":59.5}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"type\":\"AIR\",\"for\":0.08}",
@@ -318,7 +318,7 @@ const char* expected_mac_mfgsvcdata[] = {
 const char* test_servicedata[][2] = {
     {"Mi jia round sensor", "5020aa0137dfaa33342d580d100404016602"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580610026602"},
-    {"Mi jia round sensor", "5020aa0155aabbccddeeff0a100151"},
+    {"Mi jia round sensor", "5020aa0155ffeeddccbbaa0a100151"},
     {"Mi jia round sensor", "5020aa01123c0338342d580a10013e"},
     {"Mi jia round sensor", "5020aa018ddfaa33342d580410021201"},
     {"Formaldehyde detector", "5020df02383a5c014357480a10015e"},
