@@ -40,7 +40,7 @@ R""""(
    }
 })"""";*/
 
-const char* _common_BVTH_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"}}}";
+const char* _common_BVTH_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
 /*R""""(
 {
    "properties":{
@@ -59,6 +59,10 @@ const char* _common_BVTH_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\
       "volt":{
          "unit":"V",
          "name":"voltage"
+      },
+      "mac":{
+         "unit":"string",
+         "name":"MAC address"
       }
    }
 })"""";*/
