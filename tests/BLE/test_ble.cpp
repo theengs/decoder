@@ -112,6 +112,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":63.1,\"pm25\":2}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":23,\"tempf\":73.4,\"hum\":62.8,\"batt\":92}",
+    "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"type\":\"BCON\",\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"b5b182c7eab14988aa99b5c1517008d9\",\"major\":1,\"batt\":100,\"tempc\":26,\"tempf\":78.8,\"txpower\":-59}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -439,6 +440,7 @@ const char* test_mfgdata[][3] = {
     {"Tile name", "Tile", "xxxx"},
     {"H5106 extended", "GVH5106_1234", "010001010d915f9a4c000215494e54454c4c495f524f434b535f48575075f2ff0c"},
     {"H5075 extended", "GVH5075_1234", "88ec000384e45c004c000215494e54454c4c495f524f434b535f48575075f2ffc2"},
+    {"ABTemp without service data", "ABTemp", "4c000215b5b182c7eab14988aa99b5c1517008d90001641ac5"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -533,6 +535,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::TILEN,
     TheengsDecoder::BLE_ID_NUM::H5106,
     TheengsDecoder::BLE_ID_NUM::H5072,
+    TheengsDecoder::BLE_ID_NUM::ABTEMP,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
