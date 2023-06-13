@@ -14,8 +14,8 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"type\":\"AIR\",\"hum\":59.5}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"type\":\"AIR\",\"for\":0.08}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"type\":\"AIR\",\"tempc\":19.6,\"tempf\":67.28}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"moi\":3}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"fer\":1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"moi\":3,\"mac\":\"C4:7C:8D:6D:0C:D2\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"fer\":1,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"pres\":true,\"darkness\":29}",
     "{\"brand\":\"April Brother\",\"model\":\"N03\",\"model_id\":\"ABN03\",\"type\":\"THBX\",\"track\":true,\"tempc\":-2.625,\"tempf\":27.275,\"hum\":63.5,\"lux\":350,\"batt\":100,}",
 };
@@ -326,7 +326,7 @@ const char* test_servicedata[][2] = {
     {"Formaldehyde detector", "5020df025b3a5c014357481010020800"},
     {"Formaldehyde detector", "5120df023e3a5c01435748041002c400"},
     {"RoPot", "71205d0183d20c6d8d7cc40d08100103"},
-    {"RoPot", "71205d0188d20c6d8d7cc40d0910020100"},
+    {"RoPot", "71205d0188ffeeddccbbaa0d0910020100"},
     {"MiLamp", "4030dd031d0300010100"},
     {"AprilBrother N03", "ab03aabbccddeeff64ebff7f005e01"},
 };
