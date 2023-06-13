@@ -17,7 +17,7 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"moi\":3,\"mac\":\"C4:7C:8D:6D:0C:D2\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"fer\":1,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"pres\":true,\"darkness\":29}",
-    "{\"brand\":\"April Brother\",\"model\":\"N03\",\"model_id\":\"ABN03\",\"type\":\"THBX\",\"track\":true,\"tempc\":-2.625,\"tempf\":27.275,\"hum\":63.5,\"lux\":350,\"batt\":100,}",
+    "{\"brand\":\"April Brother\",\"model\":\"N03\",\"model_id\":\"ABN03\",\"type\":\"THBX\",\"track\":true,\"tempc\":-2.625,\"tempf\":27.275,\"hum\":63.5,\"lux\":350,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mfg[] = {
