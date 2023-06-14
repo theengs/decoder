@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2 {
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .dataTables_filter {
+        margin-bottom: 20px;
+    }
+
+    .dataTables_length {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        margin: auto;
+        padding: 2rem;
+        background-color: #fff;
+        padding-top: 50px;
+    }
+
+    .dataTable thead .sorting {
+        background-image: url('https://cdn.datatables.net/1.10.25/images/sort_both.png');
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+
+    .dataTables_filter input {
+        width: 300px;
+        height: 30px;
+    }
+
+    .dataTable thead .sorting_asc {
+        background-image: url('https://cdn.datatables.net/1.10.25/images/sort_asc.png');
+    }
+
+    .dataTable thead .sorting_desc {
+        background-image: url('https://cdn.datatables.net/1.10.25/images/sort_desc.png');
+    }
+
+    #devices td:last-child,
+    #devices th:last-child {
+        text-align: center;
+    }
+</style>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -17,61 +72,6 @@
     <meta name="msapplication-TileColor" content="#000000">
 
     <link rel="stylesheet" href="/assets/css/0.styles.e43f3e2e.css">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1,
-        h2 {
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .dataTables_filter {
-            margin-bottom: 20px;
-        }
-
-        .dataTables_length {
-            margin-bottom: 10px;
-        }
-
-        .container {
-            margin: auto;
-            padding: 2rem;
-            background-color: #fff;
-            padding-top: 50px;
-        }
-
-        .dataTable thead .sorting {
-            background-image: url('https://cdn.datatables.net/1.10.25/images/sort_both.png');
-            background-repeat: no-repeat;
-            background-position: center right;
-        }
-
-        .dataTables_filter input {
-            width: 300px;
-            height: 30px;
-        }
-
-        .dataTable thead .sorting_asc {
-            background-image: url('https://cdn.datatables.net/1.10.25/images/sort_asc.png');
-        }
-
-        .dataTable thead .sorting_desc {
-            background-image: url('https://cdn.datatables.net/1.10.25/images/sort_desc.png');
-        }
-
-        #devices td:last-child,
-        #devices th:last-child {
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
