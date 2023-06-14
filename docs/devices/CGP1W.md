@@ -10,3 +10,4 @@
 |Power source|Internal battery/USB|
 |Exchanged data|temperature, humidity, atmospheric pressure|
 |Encrypted|No|
+|Image|![CGP1W](./../img/CGP1W.png)|

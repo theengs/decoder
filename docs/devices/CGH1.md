@@ -10,3 +10,4 @@
 |Power source|CR1632|
 |Exchanged data|open|
 |Encrypted|No|
+|Image|![CGH1](./../img/CGH1.png)|

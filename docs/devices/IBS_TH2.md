@@ -10,3 +10,4 @@
 |Power source|2 AAA/AA|
 |Exchanged data|temperature, humidity, battery|
 |Encrypted|No|
+|Image|![IBS-TH2](./../img/IBS-TH2.png)|

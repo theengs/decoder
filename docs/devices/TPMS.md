@@ -10,3 +10,4 @@
 |Power source|AA|
 |Exchanged data|count, pressure, temperature, battery, alarm|
 |Encrypted|No|
+|Image|![TPMS](./../img/TPMS.png)|

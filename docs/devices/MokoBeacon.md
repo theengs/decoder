@@ -10,3 +10,4 @@
 |Power source|CR2032|
 |Exchanged data|acceleration x/y/z-axis, battery|
 |Encrypted|No|
+|Image|![M2](./../img/M2.png)|

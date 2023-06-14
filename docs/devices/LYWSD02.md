@@ -10,3 +10,4 @@
 |Power source|2 CR2032|
 |Exchanged data|temperature, humidity, battery|
 |Encrypted|No|
+|Image|![LYWSD02MMC](./../img/LYWSD02MMC.png)|

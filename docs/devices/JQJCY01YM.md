@@ -10,3 +10,4 @@
 |Power source|2 AA|
 |Exchanged data|formaldehyde, temperature, humidity, battery|
 |Encrypted|No|
+|Image|![JQJCY01YM](./../img/JQJCY01YM.png)|
