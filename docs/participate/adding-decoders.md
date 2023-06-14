@@ -325,3 +325,21 @@ Valid operations are:
 ```
 Here the calculation value extracted first from the data stream and used by the next property to calculate the data value.
 
+#### Special property "mac"
+The "mac" property contains a device's MAC address if this is contained in the broadcast service- or manufacturerdata, with either forward or reversed octet order.
+
+In such cases the "mac" property should be included in the decoder, so that these devices can have their proper MAC address assigned on iOS or macOS, which usually masks these with generic uuids.
+
+```
+"properties":{
+      "mac":{
+         "decoder":["mac_from_hex_data", "servicedata", 4]
+      }
+
+      … or
+
+      "mac":{
+         "decoder":["revmac_from_hex_data", "servicedata", 4]
+      }
+
+```
