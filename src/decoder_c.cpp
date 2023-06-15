@@ -23,7 +23,9 @@
 #include <string.h>
 
 #include "decoder.h"
-#include "shared/theengs.h"
+#if (SKBUILD)
+#  include "shared/theengs.h"
+#endif
 
 // Utility function local to the bridge's implementation
 TheengsDecoder* AsDecoder(void* decoder) { return reinterpret_cast<TheengsDecoder*>(decoder); }
