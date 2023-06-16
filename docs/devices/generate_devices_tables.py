@@ -66,8 +66,7 @@ table_merge.sort_values(by=['Model_Id'], inplace=True,
                         key=lambda col: col.str.lower())
 
 logger.info('Adding app compatible devices to the table')
-table_merge = table_merge.merge(
-    table_app, how='left', left_on='Model_Id', right_on='Model_Id')
+table_merge = table_merge.merge(table_app, how='left', left_on='Model_Id', right_on='Model_Id')
 
 logger.info(table_merge)
 
