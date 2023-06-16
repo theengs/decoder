@@ -10,3 +10,4 @@
 |Power source|2 AAA|
 |Exchanged data|temperature, humidity, acceleration x/y/z-axis, volt|
 |Encrypted|No|
+|Image|![H4](./../img/H4.png)|

@@ -10,3 +10,4 @@
 |Power source|CR2430|
 |Exchanged data|temperature, humidity|
 |Encrypted|No|
+|Image|![CGDK2](./../img/CGDK2.png)|

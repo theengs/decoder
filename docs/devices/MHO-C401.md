@@ -10,3 +10,4 @@
 |Power source|CR2032|
 |Exchanged data|temperature, humidity, battery, volt|
 |Encrypted|No|
+|Image|![MHO-C401](./../img/MHO-C401.png)|

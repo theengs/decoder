@@ -10,3 +10,4 @@
 |Power source|2 CR2450|
 |Exchanged data|luminance, presence, battery|
 |Encrypted|No|
+|Image|![CGPR1](./../img/CGPR1.png)|

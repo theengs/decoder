@@ -10,3 +10,4 @@
 |Power source|1 AAA|
 |Exchanged data|temperature, humidity, battery|
 |Encrypted|No|
+|Image|![LYWSDCGQ](./../img/LYWSDCGQ.png)|

@@ -10,3 +10,4 @@
 |Power source|2 AAA|
 |Exchanged data|temperature, humidity, battery|
 |Encrypted|No|
+|Image|![THX1](./../img/THX1.png)|

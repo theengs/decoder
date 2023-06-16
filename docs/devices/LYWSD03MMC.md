@@ -1,5 +1,5 @@
 # Xiaomi LYWSD03MMC ATC or PVVX firmware
-![LYWSD03MMC](./../img/LYWSD03MMC.png)
+
 
 |Model Id|[LYWSD03MMC/MJWSD05MMC_ATC/PVVX](https://github.com/theengs/decoder/blob/development/src/devices/LYWSD03MMC_json.h)|
 |-|-|
@@ -11,3 +11,4 @@
 |Power source|CR2032|
 |Exchanged data|temperature, humidity, battery, volt|
 |Encrypted|No|
+|Image|![LYWSD03MMC](./../img/LYWSD03MMC.png)|

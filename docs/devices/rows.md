@@ -2,6 +2,7 @@
 
 |Model Id|
 |-|
+|Image|
 |Brand|
 |Model|
 |Short Description|
