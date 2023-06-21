@@ -582,7 +582,8 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
         }
 
         // Octet Byte[1] bits[7-0] - True/False tags
-        if (tagstring.length() >= 4) { // bits[3-0]
+        if (tagstring.length() >= 4) { 
+          // bits[3-0]
           uint8_t data = getBinaryData(tagstring[3]);
 
           if (((data >> 0) & 0x01) == 1) { // CIDC - NOT Company ID Compliant
@@ -607,6 +608,14 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc.add("track");
             doc["track"] = true;
             jsondata["track"] = doc["track"];
+          }
+          // bits[7-4]
+          data = getBinaryData(tagstring[2]);
+
+          if (((data >> 0) & 0x01) == 1) { // Encrypted device data
+            doc.add("encr");
+            doc["encr"] = true;
+            jsondata["encr"] = doc["encr"];
           }
         }
       }
