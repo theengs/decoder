@@ -119,7 +119,10 @@ Each device should also have an encoded **tag** property to, at the minimum, def
 		<tr>
             <td rowspan=8>Byte[1]</td>
             <td rowspan=8>Additional properties</td>
-            <td rowspan=1>Bits[7-4] - Reserved</td>
+            <td rowspan=1>Bits[7-5] - Reserved</td>
+        </tr>
+        <tr>
+            <td rowspan=1>Bit[4] Encrypted device data > "encr":</td>
         </tr>
         <tr>
             <td rowspan=1>Bit[3] Device compatible with presence tracking > "track":</td>
