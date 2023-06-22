@@ -129,6 +129,7 @@ const char* expected_name_uuid_mfgsvcdata[] = {
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1,\"mac\":\"BC:02:6E:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT-002C-ENC\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\",\"mac\":\"BC:02:6E:AA:BB:CC\"}",
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -157,6 +158,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":31,\"batt\":100,\"press\":3}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":32,\"batt\":100,\"press\":4}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":171,\"batt\":100,\"press\":1}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT-002C-ENC\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\"}",
 };
 
 const char* expected_uuid[] = {
@@ -566,10 +568,12 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
 // uuid test input [test name] [mac] [device name] [uuid] [manufacturer data] [service data]
 const char* test_name_mac_uuid_mfgsvcdata[][6] = {
     {"SBBT-002C", "BC:02:6E:AA:BB:CC", "SBBT-002C", "0xfcd2", "a90b0109000b01000accbbaa6e02bc", "40001d01643a01"},
+    {"SBBT-002C encrypted", "BC:02:6E:AA:BB:CC", "SBBT-002C", "0xfcd2", "a90b0109000b01000accbbaa6e02bc", "4562511158bd25b8f093645b573115"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_mac_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
+    TheengsDecoder::BLE_ID_NUM::SBBT_002C_ENC,
 };
 
 // uuid name test input [test name] [uuid] [device name] [service data]
@@ -599,6 +603,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"SBBT-002C triple press", "0xfcd2", "SBBT-002C", "40001f01643a03"},
     {"SBBT-002C long press", "0xfcd2", "SBBT-002C", "40002001643a04"},
     {"SBBT-002C press", "0xfcd2", "SBBT-002C", "4400ab01643a01"},
+    {"SBBT-002C encrypted", "0xfcd2", "SBBT-002C", "4562511158bd25b8f093645b573115"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -627,6 +632,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
+    TheengsDecoder::BLE_ID_NUM::SBBT_002C_ENC,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
