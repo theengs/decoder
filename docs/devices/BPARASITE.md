@@ -10,3 +10,4 @@
 |Power source|CR2032|
 |Exchanged data|moisture, temperature, humidity, luminance (v1.1.0+), voltage|
 |Encrypted|No|
+|Image|![BPARASITE](./../img/BP.png)|

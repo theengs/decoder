@@ -10,3 +10,4 @@
 |Power source|Rechargeable battery, USB|
 |Exchanged data|temperature, temperature2, temperature3, temperature4|
 |Encrypted|No|
+|Image|![IBT_4X](./../img/IBT_4X.png)|

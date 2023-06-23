@@ -10,3 +10,4 @@
 |Power source|2 AAA|
 |Exchanged data|movement, light level, sensing distance, led, scope tested, battery|
 |Encrypted|No|
+|Image|![W110150X](./../img/W110150X.png)|

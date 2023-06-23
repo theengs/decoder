@@ -10,3 +10,4 @@
 |Power source|CR2032|
 |Exchanged data|temperature, moisture, fertility, luminance|
 |Encrypted|No|
+|Image|![HHCCJCY01HHCC](./../img/HHCCJCY01HHCC.png)|

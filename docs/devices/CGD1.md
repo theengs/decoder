@@ -10,3 +10,4 @@
 |Power source|2 AA|
 |Exchanged data|temperature, humidity, battery|
 |Encrypted|No|
+|Image|![CGD1](./../img/CGD1.png)|
