@@ -10,3 +10,4 @@
 |Power source|CR2032|
 |Exchanged data|temperature, level, sync status, voltage, battery, reading quality, acceleration x/y-axis|
 |Encrypted|No|
+|Image|![M1017](./../img/M1017.png)|

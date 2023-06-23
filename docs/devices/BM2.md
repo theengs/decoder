@@ -10,3 +10,4 @@
 |Power source|12V|
 |Exchanged data|battery|
 |Encrypted|No|
+|Image|![BM2](./../img/BM2.png)|
