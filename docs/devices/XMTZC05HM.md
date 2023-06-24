@@ -10,3 +10,4 @@
 |Power source|4 AAA|
 |Exchanged data|weighing_mode, unit, weight, impedance|
 |Encrypted|No|
+|Image|![XMTZC05HM](./../img/XMTZC05HM.png)|

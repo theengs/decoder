@@ -10,3 +10,4 @@
 |Power source|2 AAA (Rechargeable battery, USB)|
 |Exchanged data|temperature, temperature2|
 |Encrypted|No|
+|Image|![IBT_2X(S)](./../img/IBT_2X.png)|
