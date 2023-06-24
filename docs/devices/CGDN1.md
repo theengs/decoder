@@ -10,3 +10,4 @@
 |Power source|Rechargeable battery, USB-C|
 |Exchanged data|temperature, humidity, PM2.5, PM10, carbon dioxide|
 |Encrypted|No - BLE broadcast only working after being paired with a companion app|
+|Image|![CGDN1](./../img/CGDN1.png)|

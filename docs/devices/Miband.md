@@ -10,3 +10,4 @@
 |Power source|Rechargeable battery|
 |Exchanged data|steps, activity heart rate (when activated in the Zepp Life settings)|
 |Encrypted|No|
+|Image|![MiBand](./../img/MiBand.png)|
