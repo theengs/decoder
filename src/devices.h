@@ -89,7 +89,7 @@
 #include "devices/APPLE_json.h"
 #include "devices/ServiceData_json.h"
 #include "devices/SBBT_002C_json.h"
-#include "devices/SBBT_002C_encrypted_json.h"
+#include "devices/SBBT_002C_ENCR_json.h"
 
 
 const char* _devices[][2] = {
@@ -175,5 +175,5 @@ const char* _devices[][2] = {
     {_APPLE_json_at, _APPLE_json_props},
     {_ServiceData_json, _ServiceData_json_props},
     {_SBBT_002C_json, _SBBT_002C_json_props},
-    {_SBBT_002C_encrypted_json, _SBBT_002C_encrypted_json_props},
+    {_SBBT_002C_ENCR_json, _SBBT_002C_ENCR_json_props},
 };
