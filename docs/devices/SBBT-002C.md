@@ -9,7 +9,7 @@
 |Frequency|2.4Ghz|
 |Power source|CR2032|
 |Exchanged data|button press type, battery, packet ID|
-|Encrypted|No|
+|Encrypted|Yes/No - Optional|
 
 The button press type is encoded as:
 
