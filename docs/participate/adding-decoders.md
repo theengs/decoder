@@ -346,3 +346,29 @@ In such cases the "mac" property should be included in the decoder, so that thes
       }
 
 ```
+
+# Checking and fixing your changes
+You can use a script to check whether your raw JSON strings correspond to the escaped string value in the line before. Run the script as:
+
+```
+python scripts/check_decoder.py src/devices/NAMEOFDEVICE.h
+```
+
+You can also install [pre-commit](https://pre-commit.com) to run this check every time you commit a file change:
+
+```
+pip install pre-commit
+pre-commit install
+```
+
+The last command should be run in the root directory of the decoder repository.
+
+If you're using [Visual Studio Code](https://code.visualstudio.com), you can install the [pre-commit extension](https://marketplace.visualstudio.com/items?itemName=elagil.pre-commit-helper). After this, when you have a decoder file open, just open the command palette with Ctrl+Shift+P and choose **pre-commit run (current file)** to check and fix its JSON strings.
+
+Tip: if you just declare a JSON string with an empty string, such as:
+
+```c
+const char* _SBBT_002C_json = "";
+```
+
+Then the script automatically copies the following raw string in the comment to fill the empty string in the previous line, with all double quotes escaped correctly.
