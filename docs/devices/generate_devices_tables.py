@@ -67,7 +67,7 @@ table_merge.sort_values(by=['Model_Id'], inplace=True,
 
 logger.info('Adding app compatible devices to the table')
 table_merge = table_merge.merge(table_app, how='left', left_on='Model_Id', right_on='Model_Id')
-
+table_merge.index += 1
 logger.info(table_merge)
 
 logger.info('Adding links to the file from the model Id and image links')
