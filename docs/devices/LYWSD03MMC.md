@@ -1,7 +1,7 @@
 # Xiaomi LYWSD03MMC ATC or PVVX firmware
 
 
-|Model Id|[LYWSD03MMC/MJWSD05MMC_ATC/PVVX](https://github.com/theengs/decoder/blob/development/src/devices/LYWSD03MMC_json.h)|
+|Model Id|[LYWSD03MMC_ATC/PVVX](https://github.com/theengs/decoder/blob/development/src/devices/LYWSD03MMC_json.h)|
 |-|-|
 |Brand|Xiaomi|
 |Model|Compact Temperature sensor|
