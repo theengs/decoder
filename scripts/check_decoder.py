@@ -44,7 +44,12 @@ if __name__ == "__main__":
     with open(filename, "r") as file:
         content = file.read()
 
-    new_decoder_source = fix_json_strings(content)
+    try:
+        new_decoder_source = fix_json_strings(content)
+    except json.decoder.JSONDecodeError as error:
+        print(f"Invalid JSON at: {error.doc[:error.pos]}")
+        print(f"Error message: {error.msg}")
+        sys.exit(1)
 
     # Write the result back to the file
     if new_decoder_source != content:
