@@ -3,6 +3,12 @@ name: PR_Build
 on: [push, pull_request]
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+    - uses: pre-commit/action@v3.0.0
   gcc:
     name: GCC
     runs-on: ubuntu-20.04

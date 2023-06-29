@@ -1,0 +1,8 @@
+repos:
+- repo: local
+  hooks:
+  - id: check-decoders
+    name: check-decoders
+    entry: python scripts/check_decoder.py
+    language: python
+    files: ^src\/devices\/.+.h$
