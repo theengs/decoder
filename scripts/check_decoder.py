@@ -66,7 +66,7 @@ if __name__ == "__main__":
     has_error = False
 
     for filename in sys.argv[1:]:
-        with Path.open(filename) as file:
+        with Path(filename).open() as file:
             content = file.read()
 
         try:
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
             # Write the result back to the file
             if new_decoder_source != content:
-                with Path.open(filename, "w") as file:
+                with Path(filename).open("w") as file:
                     file.write(new_decoder_source)
                 print(f"Fixing JSON string in decoder {filename}...")
                 has_error = True
