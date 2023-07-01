@@ -813,6 +813,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               char* reverse_mac_string = (char*)malloc(strlen(mac_string) + 1);
               reverse_hex_data(mac_string, reverse_mac_string, 12);
               value = reverse_mac_string;
+              free(reverse_mac_string);
             }
 
             // upper case MAC
