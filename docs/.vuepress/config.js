@@ -2,7 +2,7 @@ module.exports = {
     markdown: {
       lineNumbers: true
     },
-    title: 'Theengs decoder',
+    title: 'Theengs Decoder',
     description: 'One decoder for many devices, decode easily your BLE devices data and transform these into a readable format',
     head: [
       ['link', { rel: "apple-touch-icon", sizes: "180x180", href: ".apple-touch-icon.png"}],

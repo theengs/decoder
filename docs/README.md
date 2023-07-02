@@ -5,11 +5,13 @@ Theengs Decoder project aims to provide an efficient, portable and lightweight l
 Sensors and devices use chains of data to communicate to gateways, computers, servers. Enabling them to have lightweight and fast communication.
 On the other hand we have a huge diversity of communication methods, resulting in the sensors or devices being closed to one ecosystem or a few.
 
-Theengs decoder library translates these data chains into human readable data leveraging the well known data interchange format JSON. This format can easily be integrated into different systems or software.
+Theengs Decoder library translates these data chains into human readable data leveraging the well known data interchange format JSON. This format can easily be integrated into different systems or software.
 
 ![Overview](./img/Theengs_decoder.jpg)
 
 It's also a simplified way of defining the thing properties and how to decode these.
+
+Theengs Decoder supports the decoding of [more than 80 Bluetooth devices](https://decoder.theengs.io/devices/devices.html).
 
 Theengs Decoder can be used on memory constraint environments like micro controllers (ESP32, ESP8266, Arduino), on a PC or on a Unix server.
 Unit testing assures that the modification done on the library doesn't affect previous capabilities.
