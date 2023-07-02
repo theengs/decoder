@@ -1,6 +1,6 @@
 # Adding decoders
 
-Adding your device protocol to Theengs decoder enable to increase interoperability and to create new use cases with your device. You will find below some guidance to do that. 
+Adding your device protocol to Theengs Decoder enables to increase interoperability and to create new use cases with your device. Below you will find some guidance to do that. 
 
 You can do a pull request directly to the [Repository](https://github.com/theengs/decoder).
 
