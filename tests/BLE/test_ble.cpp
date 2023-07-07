@@ -159,6 +159,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":32,\"batt\":100,\"press\":4}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":171,\"batt\":100,\"press\":1}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_ENCR\",\"type\":\"THB\",\"encr\":true,\"cipher\":\"ef56583dd420\",\"ctr\":\"23\",\"mic\":\"50fe8e4d\"}",
 };
 
 const char* expected_uuid[] = {
@@ -604,6 +605,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"SBBT-002C long press", "0xfcd2", "SBBT-002C", "40002001643a04"},
     {"SBBT-002C press", "0xfcd2", "SBBT-002C", "4400ab01643a01"},
     {"SBBT-002C encrypted", "0xfcd2", "SBBT-002C", "4562511158bd25b8f093645b573115"},
+    {"LYWSD03MMC_PVVX_ENCT", "0x181a", "ATC_9C58AB", "23ef56583dd42050fe8e4d"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -633,6 +635,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
     TheengsDecoder::BLE_ID_NUM::SBBT_002C,
     TheengsDecoder::BLE_ID_NUM::SBBT_002C_ENCR,
+    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_ENCR,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]

@@ -10,5 +10,5 @@
 |Frequency|2.4Ghz|
 |Power source|CR2032|
 |Exchanged data|temperature, humidity, battery, volt|
-|Encrypted|No|
+|Encrypted|Yes/No - Optional|
 |Image|![LYWSD03MMC](./../img/LYWSD03MMC.png)|

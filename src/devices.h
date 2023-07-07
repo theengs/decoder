@@ -42,6 +42,7 @@
 #include "devices/JQJCY01YM_json.h"
 #include "devices/LYWSD02_json.h"
 #include "devices/LYWSD03MMC_json.h"
+#include "devices/LYWSD03MMC_ENCR_json.h"
 #include "devices/LYWSDCGQ_json.h"
 #include "devices/MBXPRO_json.h"
 #include "devices/MS_CDP_json.h"
@@ -121,6 +122,7 @@ const char* _devices[][2] = {
     {_KKM_K9_json, _KKM_K9_json_props},
     {_LYWSD03MMC_json_ATC, _LYWSD03MMC_json_props},
     {_LYWSD03MMC_json_PVVX, _LYWSD03MMC_json_props},
+    {_LYWSD03MMC_ENCR_json_PVVX, _LYWSD03MMC_ENCR_json_props},
     {_CGPR1_json, _CGPR1_json_props},
     {_ThermoBeacon_json, _ThermoBeacon_json_props},
     {_H5055_json, _H5055_json_props},
