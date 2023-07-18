@@ -112,6 +112,7 @@ public:
     BM2,
     RDL52832,
     ABN03,
+    ABN07,
     ABTEMP,
     AMPHIRO,
     PH10,

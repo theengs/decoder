@@ -69,6 +69,7 @@
 #include "devices/XMTZC04HM_json.h"
 #include "devices/XMTZC05HM_json.h"
 #include "devices/ABN03_json.h"
+#include "devices/ABN07_json.h"
 #include "devices/ABTemp_json.h"
 #include "devices/Amphiro_json.h"
 #include "devices/PH10_json.h"
@@ -160,6 +161,7 @@ const char* _devices[][2] = {
     {_BM2_json, _BM2_json_props},
     {_RDL52832_json, _RDL52832_json_props},
     {_ABN03_json, _ABN03_json_props},
+    {_ABN07_json, _ABN07_json_props},
     {_ABTemp_json, _ABTemp_json_props},
     {_AMPHIRO_json, _AMPHIRO_json_props},
     {_PH10_json, _PH10_json_props},
