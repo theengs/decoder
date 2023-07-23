@@ -26,13 +26,17 @@ const char* _XMTZC04HM_json = "{\"brand\":\"Xiaomi\",\"model\":\"Mi Smart Scale\
    }
 })"""";*/
 
-const char* _XMTZC04HM_json_props = "{\"properties\":{\"weighing_mode\":{\"unit\":\"string\",\"name\":\"weighing_mode\"},\"weight\":{\"unit\":\"kg\",\"name\":\"weight\"}}}";
+const char* _XMTZC04HM_json_props = "{\"properties\":{\"weighing_mode\":{\"unit\":\"string\",\"name\":\"weighing_mode\"},\"unit\":{\"unit\":\"string\",\"name\":\"unit\"},\"weight\":{\"unit\":\"kg\",\"name\":\"weight\"}}}";
 /*R""""(
 {
    "properties":{
       "weighing_mode":{
          "unit":"string",
          "name":"weighing_mode"
+      },
+      "unit":{
+         "unit":"string",
+         "name":"unit"
       },
       "weight":{
          "unit":"kg",

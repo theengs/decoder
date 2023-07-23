@@ -30,13 +30,17 @@ const char* _XMTZC05HM_json = "{\"brand\":\"Xiaomi\",\"model\":\"Mi Body Composi
    }
 })"""";*/
 
-const char* _XMTZC05HM_json_props = "{\"properties\":{\"weighing_mode\":{\"unit\":\"string\",\"name\":\"weighing_mode\"},\"weight\":{\"unit\":\"kg\",\"name\":\"weight\"},\"impedance\":{\"unit\":\"Ω\",\"name\":\"impedance\"}}}";
+const char* _XMTZC05HM_json_props = "{\"properties\":{\"weighing_mode\":{\"unit\":\"string\",\"name\":\"weighing_mode\"},\"unit\":{\"unit\":\"string\",\"name\":\"unit\"},\"weight\":{\"unit\":\"kg\",\"name\":\"weight\"},\"impedance\":{\"unit\":\"Ω\",\"name\":\"impedance\"}}}";
 /*R""""(
 {
    "properties":{
       "weighing_mode":{
          "unit":"string",
          "name":"weighing_mode"
+      },
+      "unit":{
+         "unit":"string",
+         "name":"unit"
       },
       "weight":{
          "unit":"kg",
