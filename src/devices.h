@@ -92,6 +92,8 @@
 #include "devices/ServiceData_json.h"
 #include "devices/SBBT_002C_json.h"
 #include "devices/SBBT_002C_ENCR_json.h"
+#include "devices/SBDW_002C_json.h"
+#include "devices/SBDW_002C_ENCR_json.h"
 
 
 const char* _devices[][2] = {
@@ -181,4 +183,6 @@ const char* _devices[][2] = {
     {_ServiceData_json, _ServiceData_json_props},
     {_SBBT_002C_json, _SBBT_002C_json_props},
     {_SBBT_002C_ENCR_json, _SBBT_002C_ENCR_json_props},
+    {_SBDW_002C_json, _SBDW_002C_json_props},
+    {_SBDW_002C_ENCR_json, _SBDW_002C_ENCR_json_props},
 };

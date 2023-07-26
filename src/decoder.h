@@ -132,6 +132,8 @@ public:
     SERVICE_DATA,
     SBBT_002C,
     SBBT_002C_ENCR,
+    SBDW_002C,
+    SBDW_002C_ENCR,
     BLE_ID_MAX
   };
 
