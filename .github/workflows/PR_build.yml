@@ -141,15 +141,16 @@ jobs:
   python:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         submodules: recursive
+        fetch-depth: 0  # deep clone for setuptools-scm
     - name: Set up Python
       uses: actions/setup-python@v2
     - name: Install make tools
       run: |
-        pip install scikit-build
-        sudo apt-get install cmake
+        python3 -m pip install --upgrade pip
+        pip3 install setuptools setuptools_scm cmake wheel scikit-build ninja
     - name: get lastest release tag
       id: last_release
       uses: InsonusK/get-latest-release@v1.0.1
@@ -159,5 +160,4 @@ jobs:
     - name: Install python decoder
       run: |
         cd python
-        sed -i "s/version_tag/${{steps.last_release.outputs.tag_name}}/g" setup.py
         pip install .
