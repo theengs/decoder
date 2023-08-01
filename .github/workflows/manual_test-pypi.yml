@@ -6,18 +6,20 @@ jobs:
     name: Build and publish distribution to TestPyPI
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         submodules: recursive
+        fetch-depth: 0  # deep clone for setuptools-scm
     - uses: actions/setup-python@v2
       with:
         python-version: '3.x'
     - name: Install pypa/build
       run: |
         python3 -m pip install --upgrade pip
-        pip3 install setuptools cmake wheel scikit-build ninja
+        pip3 install setuptools setuptools_scm cmake wheel scikit-build ninja
     - name: Build a source tarball
       run: |
+        cd python
         python3 setup.py sdist
     - name: Publish distribution 📦 to Test PyPI
       uses: pypa/gh-action-pypi-publish@master
