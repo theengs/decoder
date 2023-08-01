@@ -3,8 +3,6 @@ on:
   workflow_dispatch:
   release:
     types: [published]
-permissions:
-  id-token: write
 jobs:
   build-n-publish:
     name: Build and publish distributions to PyPI
@@ -27,3 +25,4 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         password: ${{ secrets.PYPI_API_TOKEN }}
+        packages-dir: python/dist/
