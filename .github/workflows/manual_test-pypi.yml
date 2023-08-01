@@ -1,8 +1,6 @@
 name: Publish to TestPyPI
 on:
   workflow_dispatch:
-permissions:
-  id-token: write
 jobs:
   build-n-publish:
     name: Build and publish distribution to TestPyPI
@@ -28,3 +26,4 @@ jobs:
       with:
         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
         repository-url: https://test.pypi.org/legacy/
+        packages-dir: python/dist/
