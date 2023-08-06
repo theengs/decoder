@@ -105,5 +105,7 @@ output_dir = '../.vuepress/dist/devices/'
 os.makedirs(output_dir, exist_ok=True)
 with open(os.path.join(output_dir, 'devices.html'), 'w', encoding='utf-8') as f:
     f.write(output_html)
+with open(os.path.join(output_dir, 'devices_by_brand.html'), 'w', encoding='utf-8') as f:
+    f.write(output_html)
 
 logger.info('Done')
