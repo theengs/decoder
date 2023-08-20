@@ -26,4 +26,4 @@ const char* _T201_json = "{\"brand\":\"Oria\",\"model\":\"TH Sensor\",\"model_id
    }
 })"""";*/
 
-const char* _T201_json_props = _common_BTH_props;
+const char* _T201_json_props = _common_BTHM_props;

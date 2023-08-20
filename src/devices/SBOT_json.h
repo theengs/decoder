@@ -37,4 +37,4 @@ const char* _SBOT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\
    }
 })"""";*/
 
-const char* _SBOT_json_props = _common_BTH_props;
+const char* _SBOT_json_props = _common_BTHM_props;

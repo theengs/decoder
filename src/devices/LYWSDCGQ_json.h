@@ -34,4 +34,4 @@ const char* _LYWSDCGQ_json = "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\
    }
 })"""";*/
 
-const char* _LYWSDCGQ_json_props = _common_BTH_props;
+const char* _LYWSDCGQ_json_props = _common_BTHM_props;
