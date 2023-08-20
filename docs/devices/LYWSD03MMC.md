@@ -9,6 +9,6 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|CR2032|
-|Exchanged data|temperature, humidity, battery, volt|
+|Exchanged data|temperature, humidity, battery, voltage (depending on which LYWSD03MMC firmware is installed)|
 |Encrypted|Yes/No - Optional|
 |Image|![LYWSD03MMC](./../img/LYWSD03MMC.png)|

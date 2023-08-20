@@ -8,6 +8,6 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power source|CR2430|
-|Exchanged data|temperature, humidity|
+|Exchanged data|temperature, humidity, battery, voltage (depending on which CGDK2 firmware is installed)|
 |Encrypted|No|
 |Image|![CGDK2](./../img/CGDK2.png)|
