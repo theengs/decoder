@@ -28,4 +28,4 @@ const char* _CGD1_json = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm C
    }
 })"""";*/
 
-const char* _CGD1_json_props = _common_BTH_props;
+const char* _CGD1_json_props = _common_BTHM_props;

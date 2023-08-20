@@ -29,4 +29,4 @@ const char* _LYWSD02_json = "{\"brand\":\"Xiaomi/Mijia\",\"model\":\"e-ink Clock
    }
 })"""";*/
 
-const char* _LYWSD02_json_props = _common_BTH_props;
+const char* _LYWSD02_json_props = _common_BTHM_props;
