@@ -621,7 +621,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"SBBT-002C encrypted", "0xfcd2", "SBBT-002C", "4562511158bd25b8f093645b573115"},
     {"LYWSD03MMC_PVVX_ENCR", "0x181a", "ATC_9C58AB", "23ef56583dd42050fe8e4d"},
     {"LYWSD03MMC_PVVX_DECR", "0x181a", "ATC_89DF88", "9c0902116404"},
-    {"ABN07", "0xfcd2", "asensor_7F7F", "4001640293090386120010"},
+    {"ABN07", "0xfcd2", "asensor_7F7F", "4000100164029309038612"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
