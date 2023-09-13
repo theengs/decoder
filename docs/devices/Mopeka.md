@@ -1,9 +1,9 @@
-# Mopeka/Lippert Pro Check/BottleCheck Sensor
+# Mopeka/Lippert Pro Check (Universal)/BottleCheck Sensor
 
 |Model Id|[M1017](https://github.com/theengs/decoder/blob/development/src/devices/Mopeka_json.h)|
 |-|-|
 |Brand|Mopeka/Lippert|
-|Model|Pro Check/BottleCheck Sensor|
+|Model|Pro Check (Universal)/BottleCheck Sensor|
 |Short Description|Ultrasonic LPG Tank level sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
