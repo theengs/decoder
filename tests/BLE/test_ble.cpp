@@ -114,6 +114,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":23,\"tempf\":73.4,\"hum\":62.8,\"batt\":92}",
     "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"type\":\"BCON\",\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"b5b182c7eab14988aa99b5c1517008d9\",\"major\":1,\"batt\":100,\"tempc\":26,\"tempf\":78.8,\"txpower\":-59}",
     "{\"brand\":\"Mopeka/Lippert\",\"model\":\"Pro Check (Universal)/BottleCheck Sensor\",\"model_id\":\"M1017\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":19,\"tempf\":66.2,\"lvl_cm\":0,\"lvl_in\":0,\"sync\":false,\"volt\":2.90625,\"batt\":100,\"quality\":0,\"accx\":16,\"accy\":-101}",
+    "{\"brand\":\"Mopeka/Lippert\",\"model\":\"Pro Check (Universal)/BottleCheck Sensor\",\"model_id\":\"M1017\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":25,\"tempf\":77,\"lvl_cm\":0,\"lvl_in\":0,\"sync\":false,\"volt\":3,\"batt\":100,\"quality\":0,\"accx\":44,\"accy\":-128}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -451,6 +452,7 @@ const char* test_mfgdata[][3] = {
     {"H5075 extended", "GVH5075_1234", "88ec000384e45c004c000215494e54454c4c495f524f434b535f48575075f2ffc2"},
     {"ABTemp without service data", "ABTemp", "4c000215b5b182c7eab14988aa99b5c1517008d90001641ac5"},
     {"Mopeka", "Standard", "5900065d3b00001b4443109b"},
+    {"Mopeka", "Standard", "59000c60410000a73e762c80"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -546,6 +548,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::H5106,
     TheengsDecoder::BLE_ID_NUM::H5072,
     TheengsDecoder::BLE_ID_NUM::ABTEMP,
+    TheengsDecoder::BLE_ID_NUM::MOPEKA,
     TheengsDecoder::BLE_ID_NUM::MOPEKA,
 };
 
