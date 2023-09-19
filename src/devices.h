@@ -94,7 +94,7 @@
 #include "devices/SBBT_002C_ENCR_json.h"
 #include "devices/SBDW_002C_json.h"
 #include "devices/SBDW_002C_ENCR_json.h"
-
+#include "devices/LHT75N_json.h"
 
 const char* _devices[][2] = {
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
@@ -185,4 +185,5 @@ const char* _devices[][2] = {
     {_SBBT_002C_ENCR_json, _SBBT_002C_ENCR_json_props},
     {_SBDW_002C_json, _SBDW_002C_json_props},
     {_SBDW_002C_ENCR_json, _SBDW_002C_ENCR_json_props},
+    {_LHT75N_json, _LHT75N_json_props},
 };

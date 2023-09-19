@@ -134,25 +134,28 @@ public:
     SBBT_002C_ENCR,
     SBDW_002C,
     SBDW_002C_ENCR,
-    BLE_ID_MAX
+    LHT75N,
+    ID_MAX,
   };
 
 private:
   void        reverse_hex_data(const char* in, char* out, int l);
   double      value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
+  double      value_from_base64_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
   double      bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
   bool        data_index_is_valid(const char* str, size_t index, size_t len);
   bool        data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int *idx);
   uint8_t     getBinaryData(char ch);
   bool        evaluateDatalength(std::string op, size_t data_len, size_t req_len);
-  bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data);
+  bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data, const char* pld_data);
   bool        checkDeviceMatch(const JsonArray& condition, const char* svc_data, const char* mfg_data,
-                               const char* dev_name, const char* svc_uuid, const char* mac_id);
+                               const char* dev_name, const char* svc_uuid, const char* pld_data, const char* mac_id);
   std::string sanitizeJsonKey(const char* key_in);
 
   size_t m_docMax = 12000;
   size_t m_minSvcDataLen = 20;
   size_t m_minMfgDataLen = 16;
+  size_t m_minPldDataLen = 4;
 };
 
 #endif

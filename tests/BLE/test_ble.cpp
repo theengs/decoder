@@ -4,6 +4,10 @@
 
 #include "decoder.h"
 
+const char* expected_payload[] = {
+    "{\"brand\":\"Dragino\",\"model\":\"LHT75N\",\"model_id\":\"LHT75N\",\"type\":\"THB\",\"tempc\":27.41,\"tempf\":81.338}",
+};
+
 const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"tempc\":26,\"tempf\":78.8,\"hum\":61.4,\"mac\":\"58:2D:34:33:AA:DF\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"hum\":61.4,\"mac\":\"58:2D:34:33:AA:DF\"}",
@@ -323,6 +327,14 @@ const char* expected_mac_mfgsvcdata[] = {
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"type\":\"BCON\",\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"b5b182c7eab14988aa99b5c1517008d9\",\"major\":1,\"batt\":100,\"tempc\":26,\"tempf\":78.8,\"txpower\":-59,\"mac\":\"D5:FE:15:49:AC:7D\"}",
+};
+
+const char* test_payloaddata[][2] {
+  { "LHT75N", "y/YKtQHFAX//f/8=" }
+};
+
+TheengsDecoder::BLE_ID_NUM test_payload_id_num[] {
+  TheengsDecoder::BLE_ID_NUM::LHT75N
 };
 
 // Service data test input [test name] [data]
@@ -1014,7 +1026,7 @@ bool checkResult(JsonObject result, JsonObject expected) {
 
 int main() {
   StaticJsonDocument<2048> doc;
-  JsonObject bleObject;
+  JsonObject testObject;
   TheengsDecoder decoder;
   int decode_res = -1;
 
@@ -1022,12 +1034,12 @@ int main() {
     doc.clear();
     std::cout << "trying " << test_servicedata[i][0] << " : " << test_servicedata[i][1] << std::endl;
     doc["servicedata"] = test_servicedata[i][1];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_svcdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("servicedata");
+      testObject.remove("servicedata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1035,7 +1047,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_servicedata[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1047,7 +1059,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
         return 1;
@@ -1067,13 +1079,13 @@ int main() {
     std::cout << "trying " << test_mfgdata[i][0] << " : " << test_mfgdata[i][1] << " : " << test_mfgdata[i][2] << std::endl;
     doc["name"] = test_mfgdata[i][1];
     doc["manufacturerdata"] = test_mfgdata[i][2];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_mfgdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("name");
-      bleObject.remove("manufacturerdata");
+      testObject.remove("name");
+      testObject.remove("manufacturerdata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1081,7 +1093,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_mfg[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1093,7 +1105,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
         return 1;
@@ -1116,14 +1128,14 @@ int main() {
     doc["servicedatauuid"] = test_uuid_name_svcdata[i][1];
     doc["name"] = test_uuid_name_svcdata[i][2];
     doc["servicedata"] = test_uuid_name_svcdata[i][3];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_uuid_name_svcdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("servicedatauuid");
-      bleObject.remove("name");
-      bleObject.remove("servicedata");
+      testObject.remove("servicedatauuid");
+      testObject.remove("name");
+      testObject.remove("servicedata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1131,7 +1143,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_uuid_name_svcdata[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1143,7 +1155,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
         return 1;
@@ -1165,14 +1177,14 @@ int main() {
     doc["id"] = test_mac_mfgsvcdata[i][1];
     doc["manufacturerdata"] = test_mac_mfgsvcdata[i][2];
     doc["servicedata"] = test_mac_mfgsvcdata[i][3];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_mac_mfgsvcdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("id");
-      bleObject.remove("manufacturerdata");
-      bleObject.remove("servicedata");
+      testObject.remove("id");
+      testObject.remove("manufacturerdata");
+      testObject.remove("servicedata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1180,7 +1192,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_mac_mfgsvcdata[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1192,7 +1204,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
         return 1;
@@ -1215,15 +1227,15 @@ int main() {
     doc["servicedatauuid"] = test_name_uuid_mfgsvcdata[i][2];
     doc["manufacturerdata"] = test_name_uuid_mfgsvcdata[i][3];
     doc["servicedata"] = test_name_uuid_mfgsvcdata[i][4];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_name_uuid_mfgsvcdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("name");
-      bleObject.remove("servicedatauuid");
-      bleObject.remove("manufacturerdata");
-      bleObject.remove("servicedata");
+      testObject.remove("name");
+      testObject.remove("servicedatauuid");
+      testObject.remove("manufacturerdata");
+      testObject.remove("servicedata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1231,7 +1243,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_name_uuid_mfgsvcdata[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1243,7 +1255,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
         return 1;
@@ -1267,16 +1279,16 @@ int main() {
     doc["servicedatauuid"] = test_name_mac_uuid_mfgsvcdata[i][3];
     doc["manufacturerdata"] = test_name_mac_uuid_mfgsvcdata[i][4];
     doc["servicedata"] = test_name_mac_uuid_mfgsvcdata[i][5];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_name_mac_uuid_mfgsvcdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("name");
-      bleObject.remove("id");
-      bleObject.remove("servicedatauuid");
-      bleObject.remove("manufacturerdata");
-      bleObject.remove("servicedata");
+      testObject.remove("name");
+      testObject.remove("id");
+      testObject.remove("servicedatauuid");
+      testObject.remove("manufacturerdata");
+      testObject.remove("servicedata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1284,7 +1296,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_name_mac_uuid_mfgsvcdata[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1296,7 +1308,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
         return 1;
@@ -1317,13 +1329,13 @@ int main() {
     std::cout << "trying " << test_uuid[i][0] << " : " << test_uuid[i][1] << std::endl;
     doc[test_uuid[i][2]] = test_uuid[i][3];
     doc["servicedatauuid"] = test_uuid[i][1];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_uuid_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("servicedatauuid");
-      bleObject.remove(test_uuid[i][2]);
+      testObject.remove("servicedatauuid");
+      testObject.remove(test_uuid[i][2]);
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1331,7 +1343,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_uuid[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1343,7 +1355,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
         return 1;
@@ -1364,13 +1376,13 @@ int main() {
     std::cout << "trying " << test_mac_mfgdata[i][0] << " : " << test_mac_mfgdata[i][1] << " : " << test_mac_mfgdata[i][2] << std::endl;
     doc["id"] = test_mac_mfgdata[i][1];
     doc["manufacturerdata"] = test_mac_mfgdata[i][2];
-    bleObject = doc.as<JsonObject>();
+    testObject = doc.as<JsonObject>();
 
-    decode_res = decoder.decodeBLEJson(bleObject);
+    decode_res = decoder.decodeBLEJson(testObject);
     if (decode_res == test_mac_mfgdata_id_num[i]) {
       std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("id");
-      bleObject.remove("manufacturerdata");
+      testObject.remove("id");
+      testObject.remove("manufacturerdata");
       serializeJson(doc, std::cout);
       std::cout << std::endl;
 
@@ -1378,7 +1390,7 @@ int main() {
       JsonObject expected = doc_exp.to<JsonObject>();
       deserializeJson(doc_exp, expected_mac_mfg[i]);
 
-      if (!checkResult(bleObject, expected)) {
+      if (!checkResult(testObject, expected)) {
         return 1;
       }
 
@@ -1390,7 +1402,7 @@ int main() {
       }
       std::cout << "model: " << model << ",  brand: " << brand << std::endl;
 
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
       if (error) {
         std::cout << "deserializeJson() failed: " << error << std::endl;
         return 1;
@@ -1403,6 +1415,53 @@ int main() {
       std::cout << "FAILED! Error parsing: " << test_mac_mfgdata[i][0]
                 << " : " << test_mac_mfgdata[i][1] << " : "
                 << test_mac_mfgdata[i][2] << "decode res: " << decode_res << std::endl;
+      return 1;
+    }
+  }
+
+  for (unsigned int i = 0; i < sizeof(test_payloaddata) / sizeof(test_payloaddata[0]); ++i) {
+    doc.clear();
+    std::cout << "trying " << test_payloaddata[i][0] << " : " << test_payloaddata[i][1] << std::endl;
+    doc["name"] = test_payloaddata[i][0];
+    doc["payload"] = test_payloaddata[i][1];
+    testObject = doc.as<JsonObject>();
+
+    decode_res = decoder.decodeBLEJson(testObject);
+    if (decode_res == test_payload_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
+      testObject.remove("name");
+      testObject.remove("payload");
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
+
+      StaticJsonDocument<2048> doc_exp;
+      JsonObject expected = doc_exp.to<JsonObject>();
+      deserializeJson(doc_exp, expected_payload[i]);
+
+      if (!checkResult(testObject, expected)) {
+        return 1;
+      }
+
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
+
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(testObject["model_id"].as<const char*>()));
+      if (error) {
+        std::cout << "deserializeJson() failed: " << error << std::endl;
+        return 1;
+      }
+
+      std::cout << "Properties: ";
+      serializeJson(doc_exp, std::cout);
+      std::cout << std::endl;
+    } else {
+      std::cout << "FAILED! Error parsing: " << test_payloaddata[i][0]
+                << " : " << test_payloaddata[i][1] << "decode res: " << decode_res << std::endl;
       return 1;
     }
   }

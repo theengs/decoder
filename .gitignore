@@ -10,3 +10,13 @@
 .cmake
 _skbuild
 dist
+*.vcxproj
+*.filters
+*.sln
+*.tlog
+*.dir*
+*CMakeFiles*
+*.cmake
+*Debug*
+*.tcl
+*.txt

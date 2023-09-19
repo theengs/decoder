@@ -21,8 +21,13 @@
 
 #include "decoder.h"
 
+#include <stdio.h>
+
 #include <climits>
+#include <iostream>
+#include <sstream>
 #include <string>
+#include <vector>
 
 #include "devices.h"
 
@@ -41,8 +46,9 @@
 static size_t peakDocSize = 0;
 #endif
 
-#define SVC_DATA "servicedata"
-#define MFG_DATA "manufacturerdata"
+#define SVC_DATA     "servicedata"
+#define MFG_DATA     "manufacturerdata"
+#define PAYLOAD_DATA "payload"
 
 typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
                                                    int offset, int data_length,
@@ -83,8 +89,55 @@ double TheengsDecoder::bf_value_from_hex_string(const char* data_str,
   return d_value;
 }
 
+std::string base64_chars =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    "abcdefghijklmnopqrstuvwxyz"
+    "0123456789+/";
+
 /*
- * @brief Extracts the data value from the data string
+ * @brief Convert base64 string to bytes
+ */
+std::string base64_to_bytes(const std::string& base64_str) {
+  std::string output;
+  std::vector<int> T(256, -1);
+  for (int i = 0; i < 64; i++) T[base64_chars[i]] = i;
+
+  int val = 0, valb = -8;
+  for (char c : base64_str) {
+    if (T[c] == -1) break;
+    val = (val << 6) + T[c];
+    valb += 6;
+    if (valb >= 0) {
+      output.push_back(char((val >> valb) & 0xFF));
+      valb -= 8;
+    }
+  }
+  return output;
+}
+
+/*
+ * @brief Convert bytes to hex
+ */
+std::string bytes_to_hex(const std::string& bytes) {
+  std::ostringstream oss;
+  for (char c : bytes) {
+    oss << std::hex << ((c & 0xF0) >> 4);
+    oss << std::hex << (c & 0x0F);
+  }
+  return oss.str();
+}
+
+/*
+ * @brief Extracts the data value from the base64 data string
+ */
+double TheengsDecoder::value_from_base64_string(const char* data_str, int offset, int data_length,
+                                                bool reverse, bool canBeNegative, bool isFloat) {
+  std::string bytes = base64_to_bytes(data_str);
+  std::string hexStr = bytes_to_hex(bytes);
+  return value_from_hex_string(hexStr.c_str(), offset, data_length, reverse, canBeNegative, isFloat);
+}
+/*
+ * @brief Extracts the data value from the hex data string
  */
 double TheengsDecoder::value_from_hex_string(const char* data_str,
                                              int offset, int data_length,
@@ -184,14 +237,14 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
                                       const char* mfg_data,
                                       const char* dev_name,
                                       const char* svc_uuid,
+                                      const char* pld_data,
                                       const char* mac_id) {
   bool match = false;
   int cond_size = condition.size();
-
   for (int i = 0; i < cond_size;) {
     if (condition[i].is<JsonArray>()) {
       DEBUG_PRINT("found nested array\n");
-      match = checkDeviceMatch(condition[i], svc_data, mfg_data, dev_name, svc_uuid, mac_id);
+      match = checkDeviceMatch(condition[i], svc_data, mfg_data, dev_name, svc_uuid, pld_data, mac_id);
 
       if (++i < cond_size) {
         if (!match && *condition[i].as<const char*>() == '|') {
@@ -221,6 +274,16 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
     } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
       if (data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, &i)) {
         cmp_str = mfg_data;
+        match = true;
+      } else {
+        match = false;
+        if (i < 0) {
+          break;
+        }
+      }
+    } else if (pld_data != nullptr && strstr(cond_str, PAYLOAD_DATA) != nullptr) {
+      if (data_length_is_valid(strlen(pld_data), m_minPldDataLen, condition, &i)) {
+        cmp_str = pld_data;
         match = true;
       } else {
         match = false;
@@ -371,7 +434,8 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
 
 bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
                                         const char* svc_data,
-                                        const char* mfg_data) {
+                                        const char* mfg_data,
+                                        const char* pld_data) {
   int cond_size = prop_condition.size();
   bool cond_met = prop_condition.isNull();
 
@@ -379,7 +443,7 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
     for (int i = 0; i < cond_size; i += 4) {
       if (prop_condition[i].is<JsonArray>()) {
         DEBUG_PRINT("found nested array\n");
-        cond_met = checkPropCondition(prop_condition[i], svc_data, mfg_data);
+        cond_met = checkPropCondition(prop_condition[i], svc_data, mfg_data, pld_data);
 
         if (++i < cond_size) {
           if (!cond_met && *prop_condition[i].as<const char*>() == '|') {
@@ -402,6 +466,8 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
         data_src = svc_data;
       } else if (mfg_data && strstr(prop_data_src, MFG_DATA) != nullptr) {
         data_src = mfg_data;
+      } else if (pld_data && strstr(prop_data_src, PAYLOAD_DATA) != nullptr) {
+        data_src = pld_data;
       }
 
       if (data_src) {
@@ -467,13 +533,14 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #endif
   const char* svc_data = jsondata[SVC_DATA].as<const char*>();
   const char* mfg_data = jsondata[MFG_DATA].as<const char*>();
+  const char* pld_data = jsondata[PAYLOAD_DATA].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
   const char* svc_uuid = jsondata["servicedatauuid"].as<const char*>();
   const char* mac_id = jsondata["id"].as<const char*>();
   int success = -1;
 
   // if there is no data to decode just return
-  if (svc_data == nullptr && mfg_data == nullptr && dev_name == nullptr) {
+  if (svc_data == nullptr && mfg_data == nullptr && dev_name == nullptr && pld_data == nullptr) {
     DEBUG_PRINT("Invalid data\n");
     return success;
   }
@@ -504,7 +571,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 #else
     selectedCondition = doc["condition"];
 #endif
-    if (checkDeviceMatch(selectedCondition, svc_data, mfg_data, dev_name, svc_uuid, mac_id)) {
+    if (checkDeviceMatch(selectedCondition, svc_data, mfg_data, dev_name, svc_uuid, pld_data, mac_id)) {
       jsondata["brand"] = doc["brand"];
       jsondata["model"] = doc["model"];
       jsondata["model_id"] = doc["model_id"];
@@ -582,7 +649,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
         }
 
         // Octet Byte[1] bits[7-0] - True/False tags
-        if (tagstring.length() >= 4) { 
+        if (tagstring.length() >= 4) {
           // bits[3-0]
           uint8_t data = getBinaryData(tagstring[3]);
 
@@ -626,12 +693,16 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       for (JsonPair kv : properties) {
         JsonObject prop = kv.value().as<JsonObject>();
 
-        if (checkPropCondition(prop["condition"], svc_data, mfg_data)) {
+        if (checkPropCondition(prop["condition"], svc_data, mfg_data, pld_data)) {
           JsonArray decoder = prop["decoder"];
-          if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
+          if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr ||
+              strstr((const char*)decoder[0], "value_from_base64_data") != nullptr) {
             const char* src = svc_data;
             if (strstr((const char*)decoder[1], MFG_DATA)) {
               src = mfg_data;
+            }
+            if (strstr((const char*)decoder[1], PAYLOAD_DATA)) {
+              src = pld_data;
             }
 
             /* use a double for all values and cast later if required */
@@ -639,18 +710,24 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             static double cal_val = 0;
 
             if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
-              decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
-
-              if (strstr((const char*)decoder[0], "bf") != nullptr) {
-                dec_fun = &TheengsDecoder::bf_value_from_hex_string;
+              if (strstr((const char*)decoder[0], "value_from_base64_data") != nullptr) {
+                decoder_function dec_fun = &TheengsDecoder::value_from_base64_string;
+                temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
+                                            decoder[3].as<int>(),
+                                            decoder[4].as<bool>(),
+                                            decoder[5].isNull() ? true : decoder[5].as<bool>(),
+                                            decoder[6].isNull() ? false : decoder[6].as<bool>());
+              } else {
+                decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
+                if (strstr((const char*)decoder[0], "bf") != nullptr) {
+                  dec_fun = &TheengsDecoder::bf_value_from_hex_string;
+                }
+                temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
+                                            decoder[3].as<int>(),
+                                            decoder[4].as<bool>(),
+                                            decoder[5].isNull() ? true : decoder[5].as<bool>(),
+                                            decoder[6].isNull() ? false : decoder[6].as<bool>());
               }
-
-              temp_val = (this->*dec_fun)(src, decoder[2].as<int>(),
-                                          decoder[3].as<int>(),
-                                          decoder[4].as<bool>(),
-                                          decoder[5].isNull() ? true : decoder[5].as<bool>(),
-                                          decoder[6].isNull() ? false : decoder[6].as<bool>());
-
             } else {
               break;
             }
@@ -868,7 +945,7 @@ int TheengsDecoder::getTheengModel(JsonDocument& doc, const char* model_id) {
 }
 
 std::string TheengsDecoder::getTheengProperties(int mod_index) {
-  return (mod_index < 0 || mod_index >= BLE_ID_NUM::BLE_ID_MAX) ? "" : _devices[mod_index][1];
+  return (mod_index < 0 || mod_index >= BLE_ID_NUM::ID_MAX) ? "" : _devices[mod_index][1];
 }
 
 std::string TheengsDecoder::getTheengProperties(const char* model_id) {
@@ -878,7 +955,7 @@ std::string TheengsDecoder::getTheengProperties(const char* model_id) {
   DynamicJsonDocument doc(m_docMax);
 #endif
   int mod_index = getTheengModel(doc, model_id);
-  return (mod_index < 0 || mod_index >= BLE_ID_NUM::BLE_ID_MAX) ? "" : _devices[mod_index][1];
+  return (mod_index < 0 || mod_index >= BLE_ID_NUM::ID_MAX) ? "" : _devices[mod_index][1];
 }
 
 std::string TheengsDecoder::getTheengAttribute(int model_id, const char* attribute) {
@@ -888,7 +965,7 @@ std::string TheengsDecoder::getTheengAttribute(int model_id, const char* attribu
   DynamicJsonDocument doc(m_docMax);
 #endif
   std::string ret_attr = "";
-  if (model_id >= 0 && model_id < BLE_ID_NUM::BLE_ID_MAX) {
+  if (model_id >= 0 && model_id < BLE_ID_NUM::ID_MAX) {
     DeserializationError error = deserializeJson(doc, _devices[model_id][0]);
     if (error) {
       DEBUG_PRINT("deserializeJson() failed: %s\n", error.c_str());
