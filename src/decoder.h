@@ -134,7 +134,9 @@ public:
     SBBT_002C_ENCR,
     SBDW_002C,
     SBDW_002C_ENCR,
+#ifndef REMOVE_LORAWAN
     LHT75N,
+#endif
     ID_MAX,
   };
 

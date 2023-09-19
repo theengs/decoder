@@ -185,5 +185,7 @@ const char* _devices[][2] = {
     {_SBBT_002C_ENCR_json, _SBBT_002C_ENCR_json_props},
     {_SBDW_002C_json, _SBDW_002C_json_props},
     {_SBDW_002C_ENCR_json, _SBDW_002C_ENCR_json_props},
+#ifndef REMOVE_LORAWAN
     {_LHT75N_json, _LHT75N_json_props},
+#endif
 };

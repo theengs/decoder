@@ -270,6 +270,7 @@ The NOT comparison is case sensitive! Therefore any NOT comparisons should be de
 The first parameter is the name of the function to call, The available functions are:
 - "value_from_hex_data"  - converts the hex string value into an `integer` or `double` type.
 - "bf_value_from_hex_data" - converts the (binary fraction) hex string value into a `double` type.  This should be used when the hex data is represented in the format of `XX.XX`. For example: when `0x1a1e` should output 26.30.
+- "value_from_base64_data" - converts the base64 string value into an `integer` or `double` type.
 - "string_from_hex_data" - converts the hex value to a string type.
 - "static_value" - sets the value to the static value specified if the condition is met.
 - "bit_static_value" - sets the value to either one of two given values, depending on the evaluated binary bit.

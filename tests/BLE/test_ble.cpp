@@ -4,9 +4,19 @@
 
 #include "decoder.h"
 
+#ifndef REMOVE_LORAWAN
 const char* expected_payload[] = {
     "{\"brand\":\"Dragino\",\"model\":\"LHT75N\",\"model_id\":\"LHT75N\",\"type\":\"THB\",\"tempc\":27.41,\"tempf\":81.338}",
 };
+
+const char* test_payloaddata[][2] {
+  { "LHT75N", "y/YKtQHFAX//f/8=" }
+};
+
+TheengsDecoder::BLE_ID_NUM test_payload_id_num[] {
+  TheengsDecoder::BLE_ID_NUM::LHT75N
+};
+#endif
 
 const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Mi Jia round\",\"model_id\":\"LYWSDCGQ\",\"type\":\"THB\",\"tempc\":26,\"tempf\":78.8,\"hum\":61.4,\"mac\":\"58:2D:34:33:AA:DF\"}",
@@ -327,14 +337,6 @@ const char* expected_mac_mfgsvcdata[] = {
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":7852,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"type\":\"BCON\",\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"b5b182c7eab14988aa99b5c1517008d9\",\"major\":1,\"batt\":100,\"tempc\":26,\"tempf\":78.8,\"txpower\":-59,\"mac\":\"D5:FE:15:49:AC:7D\"}",
-};
-
-const char* test_payloaddata[][2] {
-  { "LHT75N", "y/YKtQHFAX//f/8=" }
-};
-
-TheengsDecoder::BLE_ID_NUM test_payload_id_num[] {
-  TheengsDecoder::BLE_ID_NUM::LHT75N
 };
 
 // Service data test input [test name] [data]
@@ -1418,7 +1420,7 @@ int main() {
       return 1;
     }
   }
-
+#ifndef REMOVE_LORAWAN
   for (unsigned int i = 0; i < sizeof(test_payloaddata) / sizeof(test_payloaddata[0]); ++i) {
     doc.clear();
     std::cout << "trying " << test_payloaddata[i][0] << " : " << test_payloaddata[i][1] << std::endl;
@@ -1465,6 +1467,7 @@ int main() {
       return 1;
     }
   }
+#endif
 
   if (decoder.testDocMax() < 0) {
     return 1;
