@@ -8,6 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
     - uses: pre-commit/action@v3.0.0
   gcc:
     name: GCC
@@ -128,6 +130,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Set up Python
       uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
     - name: Install PlatformIO
       run: |
         python -m pip install --upgrade pip
@@ -147,6 +151,8 @@ jobs:
         fetch-depth: 0  # deep clone for setuptools-scm
     - name: Set up Python
       uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
     - name: Install make tools
       run: |
         python3 -m pip install --upgrade pip
