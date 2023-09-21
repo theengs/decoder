@@ -20,7 +20,6 @@ except SKBuildError:
 
 setup(
     name="TheengsDecoder",
-    version="version_tag",
     long_description=long_description,
     long_description_content_type="text/markdown",
     description="A message decoder for the Internet of Things",
