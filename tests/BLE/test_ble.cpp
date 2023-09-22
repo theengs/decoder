@@ -116,6 +116,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Mopeka/Lippert\",\"model\":\"Pro Check (Universal)/BottleCheck Sensor\",\"model_id\":\"M1017\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":19,\"tempf\":66.2,\"lvl_cm\":0,\"lvl_in\":0,\"sync\":false,\"volt\":2.90625,\"batt\":100,\"quality\":0,\"accx\":16,\"accy\":-101}",
     "{\"brand\":\"Mopeka/Lippert\",\"model\":\"Pro Check (Universal)/BottleCheck Sensor\",\"model_id\":\"M1017\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":25,\"tempf\":77,\"lvl_cm\":0,\"lvl_in\":0,\"sync\":false,\"volt\":3,\"batt\":100,\"quality\":0,\"accx\":44,\"accy\":-128}",
     "{\"brand\":\"Mopeka/Lippert\",\"model\":\"Pro Check (Universal)/BottleCheck Sensor\",\"model_id\":\"M1017\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":21,\"tempf\":69.8,\"lvl_cm\":86.60031125,\"lvl_in\":34.09461073,\"sync\":false,\"volt\":3,\"batt\":100,\"quality\":3,\"accx\":-18,\"accy\":31}",
+    "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"acts\":true,\"batt\":87}",
+    "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"acts\":true,\"batt\":73}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -455,6 +457,8 @@ const char* test_mfgdata[][3] = {
     {"Mopeka", "Standard", "5900065d3b00001b4443109b"},
     {"Mopeka", "Standard", "59000c60410000a73e762c80"},
     {"Mopeka", "Standard", "59000c603de1c8f2eb44ee1f"},
+    {"BM2", "ZX-1689", "4c000215655f83caae16a10a702e31f30d58dd82f441423157"},
+    {"BM2", "Li Battery Monitor", "4c000215655f83caae16a10a702e31f30d58dd82f441423149"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -553,6 +557,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::MOPEKA,
     TheengsDecoder::BLE_ID_NUM::MOPEKA,
     TheengsDecoder::BLE_ID_NUM::MOPEKA,
+    TheengsDecoder::BLE_ID_NUM::BM2,
+    TheengsDecoder::BLE_ID_NUM::BM2,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
