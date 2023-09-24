@@ -7,6 +7,6 @@
 |Short Description|Moisture, temperature and fertility sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Rechargeable battery, USB|
-|Exchanged data|moisture, fertility|
+|Power Source|Rechargeable battery, USB|
+|Exchanged Data|moisture, fertility|
 |Encrypted|No|

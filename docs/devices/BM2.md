@@ -7,7 +7,8 @@
 |Short Description|Battery capacity|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|12V|
-|Exchanged data|battery|
+|Power Source|12V|
+|Exchanged Data|battery|
 |Encrypted|No|
+|Presence Tracker|&#9989;|
 |Image|![BM2](./../img/BM2.png)|

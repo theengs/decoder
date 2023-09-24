@@ -7,7 +7,7 @@
 |Short Description|Door/Window contact sensor with Open-Close status|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR1632|
-|Exchanged data|open|
+|Power Source|CR1632|
+|Exchanged Data|open|
 |Encrypted|No|
 |Image|![CGH1](./../img/CGH1.png)|

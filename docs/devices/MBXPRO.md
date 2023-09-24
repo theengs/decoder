@@ -7,7 +7,8 @@
 |Short Description|IP66 Waterproof temperature and humidity sensor with accelerometer|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 AAA|
-|Exchanged data|temperature, humidity, acceleration x/y/z-axis, volt|
+|Power Source|2 AAA|
+|Exchanged Data|temperature, humidity, acceleration x/y/z-axis, volt|
 |Encrypted|No|
+|Presence Tracker|&#9989;|
 |Image|![H4](./../img/H4.png)|

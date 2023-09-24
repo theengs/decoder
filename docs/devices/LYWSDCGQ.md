@@ -7,7 +7,7 @@
 |Short Description|Round Temperature and humidity sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|1 AAA|
-|Exchanged data|temperature, humidity, battery|
+|Power Source|1 AAA|
+|Exchanged Data|temperature, humidity, battery|
 |Encrypted|No|
 |Image|![LYWSDCGQ](./../img/LYWSDCGQ.png)|

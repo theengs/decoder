@@ -7,7 +7,7 @@
 |Short Description|Moisture, light, temperature and fertility sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|temperature, moisture, fertility, luminance|
+|Power Source|CR2032|
+|Exchanged Data|temperature, moisture, fertility, luminance|
 |Encrypted|No|
 |Image|![HHCCJCY01HHCC](./../img/HHCCJCY01HHCC.png)|

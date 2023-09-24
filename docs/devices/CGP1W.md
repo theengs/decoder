@@ -7,7 +7,7 @@
 |Short Description|Rechargeable temperature, humidity and atmospheric pressure sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Internal battery/USB|
-|Exchanged data|temperature, humidity, atmospheric pressure|
+|Power Source|Internal battery/USB|
+|Exchanged Data|temperature, humidity, atmospheric pressure|
 |Encrypted|No|
 |Image|![CGP1W](./../img/CGP1W.png)|

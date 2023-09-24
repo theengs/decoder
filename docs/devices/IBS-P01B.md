@@ -7,6 +7,6 @@
 |Short Description|Pool temperature sensor IPX7|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 AA|
-|Exchanged data|temperature, battery|
+|Power Source|2 AA|
+|Exchanged Data|temperature, battery|
 |Encrypted|No|

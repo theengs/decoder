@@ -7,6 +7,7 @@
 |Short Description|Pallet Tracking Beacon|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|ER14505|
-|Exchanged data|temperature, humidity, voltage, acceleration x/y/z-axis (optional - without recognised as K6P)|
+|Power Source|ER14505|
+|Exchanged Data|temperature, humidity, voltage, acceleration x/y/z-axis (optional - without recognised as K6P)|
 |Encrypted|No|
+|Presence Tracker|&#9989;|

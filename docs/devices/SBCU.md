@@ -7,6 +7,6 @@
 |Short Description|Curtain motor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Rechargeable battery|
-|Exchanged data|motion state, position, light level, battery, calibration state|
+|Power Source|Rechargeable battery|
+|Exchanged Data|motion state, position, light level, battery, calibration state|
 |Encrypted|No|

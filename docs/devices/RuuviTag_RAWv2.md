@@ -7,6 +7,7 @@
 |Short Description| Open source environmental sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2477|
-|Exchanged data|temperature, humidity, pressure, acceleration x/y/z-axis, voltage, TX power, movement counter, measurement sequence number|
+|Power Source|CR2477|
+|Exchanged Data|temperature, humidity, pressure, acceleration x/y/z-axis, voltage, TX power, movement counter, measurement sequence number|
 |Encrypted|No|
+|Presence Tracker|&#9989;|

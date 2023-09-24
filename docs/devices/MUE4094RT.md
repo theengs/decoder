@@ -7,6 +7,6 @@
 |Short Description|Motion sensor and ambient light|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|AA|
-|Exchanged data|darkness, presence|
+|Power Source|AA|
+|Exchanged Data|darkness, presence|
 |Encrypted|No|

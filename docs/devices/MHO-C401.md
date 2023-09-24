@@ -7,7 +7,7 @@
 |Short Description|Temperature and humidity sensor compact and cost effective with ATC or PVVX firmware|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|temperature, humidity, battery, volt|
+|Power Source|CR2032|
+|Exchanged Data|temperature, humidity, battery, volt|
 |Encrypted|No|
 |Image|![MHO-C401](./../img/MHO-C401.png)|

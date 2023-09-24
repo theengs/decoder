@@ -7,7 +7,7 @@
 |Short Description|Motion and ambient light sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 CR2450|
-|Exchanged data|luminance, presence, battery|
+|Power Source|2 CR2450|
+|Exchanged Data|luminance, presence, battery|
 |Encrypted|No|
 |Image|![CGPR1](./../img/CGPR1.png)|

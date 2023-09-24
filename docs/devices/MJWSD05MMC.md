@@ -7,6 +7,6 @@
 |Short Description|Temperature and humidity sensor also showing date and time with ATC or PVVX firmware|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2450|
-|Exchanged data|temperature, humidity, battery, volt|
+|Power Source|CR2450|
+|Exchanged Data|temperature, humidity, battery, volt|
 |Encrypted|No|

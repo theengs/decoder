@@ -7,6 +7,7 @@
 |Short Description|Blue temperature, humidity and dew point sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|temperature, humidity, dew point, battery|
+|Power Source|CR2032|
+|Exchanged Data|temperature, humidity, dew point, battery|
 |Encrypted|No|
+|Presence Tracker|&#9989;|

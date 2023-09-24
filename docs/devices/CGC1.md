@@ -7,6 +7,6 @@
 |Short Description|Pink or beige alarm and timer clock with temperature and humidity sensors (device needs to be provisioned through the Qingping+ app)|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2430|
-|Exchanged data|temperature, humidity, battery|
+|Power Source|CR2430|
+|Exchanged Data|temperature, humidity, battery|
 |Encrypted|No|

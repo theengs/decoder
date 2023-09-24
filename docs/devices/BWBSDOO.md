@@ -7,6 +7,6 @@
 |Short Description|Contact sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|contact, battery|
+|Power Source|CR2032|
+|Exchanged Data|contact, battery|
 |Encrypted|No|

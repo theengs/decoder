@@ -7,7 +7,7 @@
 |Short Description|First (MIBCS) and second (MIBFS) version of the Mi Body Composition Scale|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|4 AAA|
-|Exchanged data|weighing_mode, unit, weight, impedance|
+|Power Source|4 AAA|
+|Exchanged Data|weighing_mode, unit, weight, impedance|
 |Encrypted|No|
 |Image|![XMTZC05HM](./../img/XMTZC05HM.png)|

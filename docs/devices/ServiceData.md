@@ -7,6 +7,6 @@
 |Short Description|Various devices broadcasting service data for Bluetooth SIG service UUIDs|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|various|
-|Exchanged data|battery|
+|Power Source|various|
+|Exchanged Data|battery|
 |Encrypted|No|

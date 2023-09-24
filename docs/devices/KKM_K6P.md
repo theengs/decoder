@@ -7,6 +7,6 @@
 |Short Description|Long Range Sensor Beacon|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|ER14505|
-|Exchanged data|temperature, humidity, voltage|
+|Power Source|ER14505|
+|Exchanged Data|temperature, humidity, voltage|
 |Encrypted|No|

@@ -7,6 +7,6 @@
 |Short Description|Switch Button Pusher|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|1 CR2|
-|Exchanged data|mode, state, battery|
+|Power Source|1 CR2|
+|Exchanged Data|mode, state, battery|
 |Encrypted|No|
