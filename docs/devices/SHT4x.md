@@ -7,6 +7,6 @@
 |Short Description|Temperature and humidity sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|temperature, humidity|
+|Power Source|CR2032|
+|Exchanged Data|temperature, humidity|
 |Encrypted|No|

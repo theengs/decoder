@@ -7,7 +7,7 @@
 |Short Description|Honeywell formaldehyde monitor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 AA|
-|Exchanged data|formaldehyde, temperature, humidity, battery|
+|Power Source|2 AA|
+|Exchanged Data|formaldehyde, temperature, humidity, battery|
 |Encrypted|No|
 |Image|![JQJCY01YM](./../img/JQJCY01YM.png)|

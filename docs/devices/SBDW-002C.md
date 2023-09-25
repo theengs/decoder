@@ -7,6 +7,6 @@
 |Short Description|Door/window contact sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|contact, rotation, battery, packet ID|
+|Power Source|CR2032|
+|Exchanged Data|contact, rotation, battery, packet ID|
 |Encrypted|Yes/No - Optional|

@@ -7,6 +7,6 @@
 |Short Description|BBQ Temperature sensor with 6 probes|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 AA|
-|Exchanged data|temperature, temperature2, temperature3, temperature4, temperature5, temperature6|
+|Power Source|2 AA|
+|Exchanged Data|temperature, temperature2, temperature3, temperature4, temperature5, temperature6|
 |Encrypted|No|

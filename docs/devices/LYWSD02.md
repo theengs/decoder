@@ -7,7 +7,7 @@
 |Short Description|Rectangular clock with e-ink display and temperature/humidity measurement|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 CR2032|
-|Exchanged data|temperature, humidity, battery|
+|Power Source|2 CR2032|
+|Exchanged Data|temperature, humidity, battery|
 |Encrypted|No|
 |Image|![LYWSD02MMC](./../img/LYWSD02MMC.png)|

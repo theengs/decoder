@@ -7,7 +7,7 @@
 |Short Description|TPMS that can replace the valve cap|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|AA|
-|Exchanged data|count, pressure, temperature, battery, alarm|
+|Power Source|AA|
+|Exchanged Data|count, pressure, temperature, battery, alarm|
 |Encrypted|No|
 |Image|![TPMS](./../img/TPMS.png)|

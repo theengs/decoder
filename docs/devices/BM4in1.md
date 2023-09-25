@@ -7,6 +7,7 @@
 |Short Description|Purple temperature, humidity, dew point and pressure sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|temperature, humidity, pressure, battery|
+|Power Source|CR2032|
+|Exchanged Data|temperature, humidity, pressure, battery|
 |Encrypted|No|
+|Presence Tracker|&#9989;|

@@ -86,7 +86,7 @@ for ind in table_merge.index:
 
 logger.info('Dropping unnecessary columns')
 table_merge.drop(columns=['Communication', 'Frequency',
-                 'Encrypted', 'Filename', 'Power source'], inplace=True)
+                 'Encrypted', 'Filename', 'Power Source'], inplace=True)
 
 logger.info('Converting table to HTML')
 html_table = table_merge.to_html(table_id='devices', escape=False, border=0)

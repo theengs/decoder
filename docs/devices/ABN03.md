@@ -7,6 +7,7 @@
 |Short Description|Temperature, humidity and light sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2450|
-|Exchanged data|temperature, humidity, luminance, battery|
+|Power Source|CR2450|
+|Exchanged Data|temperature, humidity, luminance, battery|
 |Encrypted|No|
+|Presence Tracker|&#9989;|

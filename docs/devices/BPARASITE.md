@@ -7,7 +7,7 @@
 |Short Description|Open hardware and open source soil moisture and ambient temperature/humidity/light sensor https://github.com/rbaron/b-parasite|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|moisture, temperature, humidity, luminance (v1.1.0+), voltage|
+|Power Source|CR2032|
+|Exchanged Data|moisture, temperature, humidity, luminance (v1.1.0+), voltage|
 |Encrypted|No|
 |Image|![BPARASITE](./../img/BP.png)|

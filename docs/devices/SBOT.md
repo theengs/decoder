@@ -7,6 +7,6 @@
 |Short Description|Indoor/Outdoor Thermometer and Hygrometer|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 AAA|
-|Exchanged data|temperature, humidity, battery|
+|Power Source|2 AAA|
+|Exchanged Data|temperature, humidity, battery|
 |Encrypted|No|

@@ -7,6 +7,7 @@
 |Short Description|Red temperature sensor, also available as IP67 waterproof|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032 (IP67 model non-changeable)|
-|Exchanged data|temperature, battery|
+|Power Source|CR2032 (IP67 model non-changeable)|
+|Exchanged Data|temperature, battery|
 |Encrypted|No|
+|Presence Tracker|&#9989;|

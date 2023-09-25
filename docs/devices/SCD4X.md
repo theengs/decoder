@@ -7,6 +7,6 @@
 |Short Description|Temperature, humidity and CO₂ sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|USB|
-|Exchanged data|temperature, humidity, carbon dioxide|
+|Power Source|USB|
+|Exchanged Data|temperature, humidity, carbon dioxide|
 |Encrypted|No|

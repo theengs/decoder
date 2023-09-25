@@ -7,6 +7,6 @@
 |Short Description|Sensors for electricity or water meters|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032/14250/CR2|
-|Exchanged data|Current average and aggregate kW(h)/m³, battery|
+|Power Source|CR2032/14250/CR2|
+|Exchanged Data|Current average and aggregate kW(h)/m³, battery|
 |Encrypted|No|

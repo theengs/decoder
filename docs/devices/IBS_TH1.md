@@ -7,7 +7,7 @@
 |Short Description|Temperature and humidity sensor (also mini and Plus models) with external probe (not mini)|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|1 AAA|
-|Exchanged data|temperature, humidity, battery|
+|Power Source|1 AAA|
+|Exchanged Data|temperature, humidity, battery|
 |Encrypted|No|
 |Image|![IBS-TH1](./../img/IBS-TH1.png)|

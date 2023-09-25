@@ -7,6 +7,6 @@
 |Short Description|Bluetooth kitchen scale|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|USB/4 AAA|
-|Exchanged data|weight|
+|Power Source|USB/4 AAA|
+|Exchanged Data|weight|
 |Encrypted|No|

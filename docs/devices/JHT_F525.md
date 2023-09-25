@@ -7,6 +7,6 @@
 |Short Description|Temperature and humidity sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2477|
-|Exchanged data|temperature, humidity, battery|
+|Power Source|CR2477|
+|Exchanged Data|temperature, humidity, battery|
 |Encrypted|No|

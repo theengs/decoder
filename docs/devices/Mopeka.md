@@ -7,7 +7,7 @@
 |Short Description|Ultrasonic LPG Tank level sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2032|
-|Exchanged data|temperature, level, sync status, voltage, battery, reading quality, acceleration x/y-axis|
+|Power Source|CR2032|
+|Exchanged Data|temperature, level, sync status, voltage, battery, reading quality, acceleration x/y-axis|
 |Encrypted|No|
 |Image|![M1017](./../img/M1017.png)|

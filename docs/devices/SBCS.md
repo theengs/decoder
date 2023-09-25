@@ -7,6 +7,6 @@
 |Short Description|Contact sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|2 AAA|
-|Exchanged data|contact, movement, light level, scope tested, in count, out count, push count, battery|
+|Power Source|2 AAA|
+|Exchanged Data|contact, movement, light level, scope tested, in count, out count, push count, battery|
 |Encrypted|No|

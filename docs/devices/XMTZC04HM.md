@@ -7,6 +7,6 @@
 |Short Description|First (MI_SCALE) and second (MI SCALE2) version of the Mi Smart Scale|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|4 AA/3 AAA|
-|Exchanged data|weighing_mode, unit, weight|
+|Power Source|4 AA/3 AAA|
+|Exchanged Data|weighing_mode, unit, weight|
 |Encrypted|No|

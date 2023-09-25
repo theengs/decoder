@@ -7,6 +7,6 @@
 |Short Description|Digital hand shower giving real-time feedback and statistics|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Powered by the water flow|
-|Exchanged data|session, duration, volume, temperature, energy|
+|Power Source|Powered by the water flow|
+|Exchanged Data|session, duration, volume, temperature, energy|
 |Encrypted|No|

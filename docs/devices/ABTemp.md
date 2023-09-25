@@ -7,6 +7,7 @@
 |Short Description|iBeacon with temperature sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2450|
-|Exchanged data|mfid, uuid, major, battery, temperature, txpower @ 1 m|
+|Power Source|CR2450|
+|Exchanged Data|mfid, uuid, major, battery, temperature, txpower @ 1 m|
 |Encrypted|No|
+|Presence Tracker|&#9989;|

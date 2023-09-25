@@ -7,7 +7,7 @@
 |Short Description|Simple temperature and humidity sensor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|CR2430|
-|Exchanged data|temperature, humidity, battery, voltage (depending on which CGDK2 firmware is installed)|
+|Power Source|CR2430|
+|Exchanged Data|temperature, humidity, battery, voltage (depending on which CGDK2 firmware is installed)|
 |Encrypted|No|
 |Image|![CGDK2](./../img/CGDK2.png)|
