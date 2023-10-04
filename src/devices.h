@@ -48,6 +48,10 @@
 #include "devices/MS_CDP_json.h"
 #include "devices/MUE4094RT_json.h"
 #include "devices/Miband_json.h"
+#include "devices/XMTZC04HMKG_json.h"
+#include "devices/XMTZC04HMLB_json.h"
+#include "devices/XMTZC05HMKG_json.h"
+#include "devices/XMTZC05HMLB_json.h"
 #include "devices/Mokobeacon_json.h"
 #include "devices/RDL52832_json.h"
 #include "devices/RuuviTag_RAWv1_json.h"
@@ -66,8 +70,6 @@
 #include "devices/KKM_K6P_json.h"
 #include "devices/KKM_K9_json.h"
 #include "devices/ThermoBeacon_json.h"
-#include "devices/XMTZC04HM_json.h"
-#include "devices/XMTZC05HM_json.h"
 #include "devices/ABN03_json.h"
 #include "devices/ABN07_json.h"
 #include "devices/ABTemp_json.h"
@@ -118,8 +120,10 @@ const char* _devices[][2] = {
     {_IBT_4XS_json, _IBT_4XS_json_props},
     {_IBT_6XS_SOLIS6_json, _IBT_6XS_SOLIS6_json_props},
     {_Miband_json, _Miband_json_props},
-    {_XMTZC04HM_json, _XMTZC04HM_json_props},
-    {_XMTZC05HM_json, _XMTZC05HM_json_props},
+    {_XMTZC04HMKG_json, _XMTZC04HMKG_json_props},
+    {_XMTZC04HMLB_json, _XMTZC04HMLB_json_props},
+    {_XMTZC05HMKG_json, _XMTZC05HMKG_json_props},
+    {_XMTZC05HMLB_json, _XMTZC05HMLB_json_props},
     {_TPMS_json, _TPMS_json_props},
     {_KKM_K6P_json, _KKM_K6P_json_props},
     {_KKM_K9_json, _KKM_K9_json_props},

@@ -54,7 +54,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
     TheengsDecoder::BLE_ID_NUM::HHCCJCY01HHCC,
     TheengsDecoder::BLE_ID_NUM::UNKNOWN_MODEL,
-    TheengsDecoder::BLE_ID_NUM::XMTZC04HM,
+    TheengsDecoder::BLE_ID_NUM::XMTZC04HMKG,
 };
 int main() {
   StaticJsonDocument<2048> doc;
