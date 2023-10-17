@@ -1,4 +1,4 @@
-# BM2 Battery monitoring
+# BM2 Battery Monitor
 
 |Model Id|[BM2](https://github.com/theengs/decoder/blob/development/src/devices/BM2_json.h)|
 |-|-|
