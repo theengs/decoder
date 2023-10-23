@@ -138,6 +138,9 @@ const char* expected_name_mac_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window\",\"model_id\":\"SBDW-002C\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":93,\"batt\":100,\"lux\":87,\"contact\":\"open\",\"rot\":40.6,\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window\",\"model_id\":\"SBDW-002C\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":86,\"batt\":100,\"lux\":673,\"contact\":\"closed\",\"rot\":0,\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window encrypted\",\"model_id\":\"SBDW_002C_ENCR\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"38efaf00d122b4979064e971a7\",\"ctr\":\"ed16c164\",\"mic\":\"4dc481fd\",\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":2,\"batt\":100,\"lux\":132,\"motion\":true,\"mac\":\"60:EF:AB:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":5,\"batt\":100,\"lux\":36,\"motion\":false,\"mac\":\"60:EF:AB:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion encrypted\",\"model_id\":\"SBMO_003Z_ENCR\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"cc08edf25d61cc0f42b6\",\"ctr\":\"00112233\",\"mic\":\"18cd3624\",\"mac\":\"60:EF:AB:AA:BB:CC\"}",
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -593,6 +596,9 @@ const char* test_name_mac_uuid_mfgsvcdata[][6] = {
     {"SBDW-002C", "3C:2E:F5:AA:BB:CC", "SBDW-002C", "0xfcd2", "a90b0101000b02000accbbaaf52e3c", "44005d016405fc21002d013f9601"},
     {"SBDW-002C", "3C:2E:F5:AA:BB:CC", "SBDW-002C", "0xfcd2", "a90b0101000b02000accbbaaf52e3c", "440056016405e406012d003f0000"},
     {"SBDW-002C encrypted", "3C:2E:F5:AA:BB:CC", "SBDW-002C", "0xfcd2", "a90b0101000b02000accbbaaf52e3c", "4538efaf00d122b4979064e971a7ed16c1644dc481fd"},
+    {"SBMO-003Z", "60:EF:AB:AA:BB:CC", "SBMO-003Z", "0xfcd2", "a90b0101000b05000accbbaaabef60", "4400020164059033002101"},
+    {"SBMO-003Z", "60:EF:AB:AA:BB:CC", "SBMO-003Z", "0xfcd2", "a90b0101000b05000accbbaaabef60", "440005016405100e002100"},
+    {"SBMO-003Z encrypted", "60:EF:AB:AA:BB:CC", "SBMO-003Z", "0xfcd2", "a90b0101000b05000accbbaaabef60", "45cc08edf25d61cc0f42b60011223318cd3624"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_mac_uuid_mfgsvcdata_id_num[]{
@@ -601,6 +607,9 @@ TheengsDecoder::BLE_ID_NUM test_name_mac_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBDW_002C,
     TheengsDecoder::BLE_ID_NUM::SBDW_002C,
     TheengsDecoder::BLE_ID_NUM::SBDW_002C_ENCR,
+    TheengsDecoder::BLE_ID_NUM::SBMO_003Z,
+    TheengsDecoder::BLE_ID_NUM::SBMO_003Z,
+    TheengsDecoder::BLE_ID_NUM::SBMO_003Z_ENCR,
 };
 
 // uuid name test input [test name] [uuid] [device name] [service data]
