@@ -136,6 +136,8 @@ public:
     SBBT_002C_ENCR,
     SBDW_002C,
     SBDW_002C_ENCR,
+    SBMO_003Z,
+    SBMO_003Z_ENCR,
     BLE_ID_MAX
   };
 
