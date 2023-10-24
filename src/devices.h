@@ -75,6 +75,7 @@
 #include "devices/ABN07_json.h"
 #include "devices/ABTemp_json.h"
 #include "devices/Amphiro_json.h"
+#include "devices/OralB_json.h"
 #include "devices/PH10_json.h"
 #include "devices/TPTH_json.h"
 #include "devices/Mopeka_json.h"
@@ -174,6 +175,7 @@ const char* _devices[][2] = {
     {_ABN07_json, _ABN07_json_props},
     {_ABTemp_json, _ABTemp_json_props},
     {_AMPHIRO_json, _AMPHIRO_json_props},
+    {_OralB_json, _OralB_json_props},
     {_PH10_json, _PH10_json_props},
     {_TPTH_json, _TPTH_json_props},
     {_Mopeka_json, _Mopeka_json_props},
