@@ -582,7 +582,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
         }
 
         // Octet Byte[1] bits[7-0] - True/False tags
-        if (tagstring.length() >= 4) { 
+        if (tagstring.length() >= 4) {
           // bits[3-0]
           uint8_t data = getBinaryData(tagstring[3]);
 
@@ -609,12 +609,15 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["track"] = true;
             jsondata["track"] = doc["track"];
           }
-          // bits[7-4]
-          data = getBinaryData(tagstring[2]);
+        }
 
-          if (((data >> 0) & 0x01) == 1) { // Encrypted device data
+        // Octet Byte[2] - Encryption Model
+        if (tagstring.length() >= 6) {
+          int encrmode = strtol(tagstring.substr(4, 2).c_str(), NULL, 16);
+          DEBUG_PRINT("encrmode: %d\n", encrmode);
+          if (encrmode > 0) {
             doc.add("encr");
-            doc["encr"] = true;
+            doc["encr"] = encrmode;
             jsondata["encr"] = doc["encr"];
           }
         }

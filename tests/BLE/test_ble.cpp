@@ -136,13 +136,13 @@ const char* expected_name_uuid_mfgsvcdata[] = {
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1,\"mac\":\"BC:02:6E:AA:BB:CC\"}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\",\"mac\":\"BC:02:6E:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\",\"mac\":\"BC:02:6E:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window\",\"model_id\":\"SBDW-002C\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":93,\"batt\":100,\"lux\":87,\"contact\":\"open\",\"rot\":40.6,\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window\",\"model_id\":\"SBDW-002C\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":86,\"batt\":100,\"lux\":673,\"contact\":\"closed\",\"rot\":0,\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window encrypted\",\"model_id\":\"SBDW_002C_ENCR\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"38efaf00d122b4979064e971a7\",\"ctr\":\"ed16c164\",\"mic\":\"4dc481fd\",\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window encrypted\",\"model_id\":\"SBDW_002C_ENCR\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"38efaf00d122b4979064e971a7\",\"ctr\":\"ed16c164\",\"mic\":\"4dc481fd\",\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":2,\"batt\":100,\"lux\":132,\"motion\":true,\"mac\":\"60:EF:AB:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":5,\"batt\":100,\"lux\":36,\"motion\":false,\"mac\":\"60:EF:AB:AA:BB:CC\"}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion encrypted\",\"model_id\":\"SBMO_003Z_ENCR\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"cc08edf25d61cc0f42b6\",\"ctr\":\"00112233\",\"mic\":\"18cd3624\",\"mac\":\"60:EF:AB:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion encrypted\",\"model_id\":\"SBMO_003Z_ENCR\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"cc08edf25d61cc0f42b6\",\"ctr\":\"00112233\",\"mic\":\"18cd3624\",\"mac\":\"60:EF:AB:AA:BB:CC\"}",
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -171,8 +171,8 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":31,\"batt\":100,\"press\":3}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":32,\"batt\":100,\"press\":4}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":171,\"batt\":100,\"press\":1}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":true,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\"}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_ENCR\",\"type\":\"THB\",\"encr\":true,\"cipher\":\"ef56583dd420\",\"ctr\":\"23\",\"mic\":\"50fe8e4d\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_ENCR\",\"type\":\"THB\",\"encr\":1,\"cipher\":\"ef56583dd420\",\"ctr\":\"23\",\"mic\":\"50fe8e4d\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_DECR\",\"type\":\"THB\",\"tempc\":24.60,\"tempf\":76.28,\"hum\":43.54,\"batt\":100}",
     "{\"brand\":\"April Brother\",\"model\":\"N07\",\"model_id\":\"ABN07\",\"type\":\"THB\",\"acts\":true,\"track\":true,\"batt\":100,\"tempc\":24.51,\"tempf\":76.118,\"hum\":47.42,\"packet\":16}",
 };
