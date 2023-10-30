@@ -57,6 +57,13 @@ Some things that will increase the chance that your pull request is accepted:
         personal information I submit with it, including my sign-off) is
         maintained indefinitely and may be redistributed consistent with
         this project or the open source license(s) involved.
+
+    (e) I understand and agree that the project maintainers have the
+        right to re-license my contribution under any other license,
+        with or without notice to me. By contributing, I waive
+        any claim against the project maintainers relating to the
+        re-licensing of my contribution under a different license, 
+        including any claim for royalties or other compensation.
 ```
 
 This Developer Certificate Of Origin (DCO) was adopted on September 24, 2021.
