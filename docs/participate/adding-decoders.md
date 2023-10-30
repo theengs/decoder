@@ -317,6 +317,19 @@ Valid operations are:
 - "min" the minimum allowed value
 - "max" the maximum allowed value
 
+`lookup` This specifies a lookup table for any decoded "string_from_hex_data" string. If the string is defined in the table its related string will be assigned to the property. If no matching hex string is present the property is defined as not decoded. 
+
+```
+ "state":{
+    "decoder":["string_from_hex_data", "manufacturerdata", 10, 2],
+    "lookup":["01", "initialising", 
+              "02", "idle", 
+              "03", "running", 
+              "04", "charging", 
+              "73", "sleeping"]
+ },
+```
+
 #### Special property .cal
 .cal is a special property that can extracted from the provided data and used in calculations of other properties following it's definition. For example:
 ```

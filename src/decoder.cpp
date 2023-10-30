@@ -799,8 +799,22 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             }
 
             std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
-            jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
-            success = i_main;
+
+            /* Lookup table */
+            if (prop.containsKey("lookup")) {
+              JsonArray lookup = prop["lookup"];
+              for (unsigned int i = 0; i < lookup.size(); i += 2) {
+                if (lookup[i].as<std::string>() == value) {
+                  value = lookup[i + 1].as<std::string>();
+                  jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
+                  success = i_main;
+                  break;
+                }
+              }
+            } else {
+              jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
+              success = i_main;
+            }
           } else if (strstr((const char*)decoder[0], "mac_from_hex_data") != nullptr) {
             const char* src = svc_data;
             if (strstr((const char*)decoder[1], MFG_DATA)) {
