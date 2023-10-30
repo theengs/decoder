@@ -121,6 +121,16 @@ const char* expected_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"track\":true,\"batt\":73,\"device\":\"BM2 Tracker\"}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":26,\"tempf\":78.8,\"hum\":51,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":20.3,\"tempf\":68.54,\"hum\":57.2,\"batt\":65}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"idle\",\"mode\":\"off\",\"pressure\":54,\"time\":0}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"running\",\"mode\":\"daily clean\",\"sector\":\"sector 3\",\"pressure\":50,\"time\":63}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"initialising\",\"mode\":\"sensitive\",\"sector\":\"sector 1\",\"pressure\":58,\"time\":0}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"charging\",\"mode\":\"massage\",\"sector\":\"sector 3\",\"pressure\":50,\"time\":74}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"sleeping\",\"mode\":\"deep clean\",\"sector\":\"sector 3\",\"pressure\":50,\"time\":74}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"running\",\"mode\":\"tongue cleaning\",\"sector\":\"sector 3\",\"pressure\":50,\"time\":74}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"running\",\"mode\":\"turbo\",\"sector\":\"sector 3\",\"pressure\":50,\"time\":74}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"running\",\"sector\":\"sector 3\",\"pressure\":50,\"time\":74}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"idle\",\"mode\":\"daily clean\",\"sector\":\"sector 1\",\"pressure\":32,\"time\":0}",
+    "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"OralB_BT\",\"type\":\"BODY\",\"state\":\"sleeping\",\"mode\":\"turbo\",\"sector\":\"sector 8\",\"pressure\":32,\"time\":135}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -468,6 +478,16 @@ const char* test_mfgdata[][3] = {
     {"BM2", "Li Battery Monitor", "4c000215655f83caae16a10a702e31f30d58dd82f441423149"},
     {"H5104", "GVH5104_1234", "0100010103f99e64"},
     {"H5179", "Govee_H5179_1234", "0188ec000101ee07581641"},
+    {"Oral-B", "Oral-B", "dc0004710502360000000f0004"},
+    {"Oral-B", "Oral-B", "dc000471050332010301030a04"},
+    {"Oral-B", "Oral-B", "dc00047105013a000002010004"},
+    {"Oral-B", "Oral-B", "dc000471050432010e03032e04"},
+    {"Oral-B", "Oral-B", "dc000471057332010e05032e04"},
+    {"Oral-B", "Oral-B", "dc000471050332010e06032e04"},
+    {"Oral-B", "Oral-B", "dc000471050332010e07032e04"},
+    {"Oral-B", "Oral-B", "dc000471050332010e08032e04"},
+    {"Oral-B", "Oral-B", "dc000202060220000001010004"},
+    {"Oral-B", "Oral-B", "dc000202067320020f07080004"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -571,6 +591,16 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BM2,
     TheengsDecoder::BLE_ID_NUM::H5102,
     TheengsDecoder::BLE_ID_NUM::H5179,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
+    TheengsDecoder::BLE_ID_NUM::OralB_BT,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
