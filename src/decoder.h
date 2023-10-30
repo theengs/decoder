@@ -118,7 +118,7 @@ public:
     ABN07,
     ABTEMP,
     AMPHIRO,
-    OralB_BT,
+    ORALB_BT,
     PH10,
     TPTH,
     MOPEKA,
