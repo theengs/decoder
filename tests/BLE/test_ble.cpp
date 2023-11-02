@@ -133,6 +133,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"sleeping\",\"mode\":\"turbo\",\"sector\":\"sector 8\",\"pressure\":32,\"duration\":135}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM6 Battery Monitor\",\"model_id\":\"BM6\",\"type\":\"BATT\",\"track\":true,\"batt\":77,\"device\":\"BM6 Tracker\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM6 Battery Monitor\",\"model_id\":\"BM6\",\"type\":\"BATT\",\"track\":true,\"batt\":78,\"device\":\"BM6 Tracker\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\"model_id\":\"APPLEWATCH\",\"type\":\"BODY\",\"track\":true,\"state\":\"locked\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\"model_id\":\"APPLEWATCH\",\"type\":\"BODY\",\"track\":true,\"state\":\"unlocked\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -508,6 +510,8 @@ const char* test_mfgdata[][3] = {
     {"Braun", "Oral-B", "dc000202067320020f07080004"},
     {"BM6", "Battery Monitor", "4c0002153ba29cd9a42c894856badaf2606ef777114d0000cd"},
     {"BM6", "Battery Monitor", "4c0002153ba29cd9a42c894856badaf2606ef777114e0000cd"},
+    {"Apple", "Watch", "4c0010050b182068dd"},
+    {"Apple", "Watch", "4c0010050b982068dd"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -623,6 +627,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::ORALB_BT,
     TheengsDecoder::BLE_ID_NUM::BM6,
     TheengsDecoder::BLE_ID_NUM::BM6,
+    TheengsDecoder::BLE_ID_NUM::APPLEWATCH,
+    TheengsDecoder::BLE_ID_NUM::APPLEWATCH,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
