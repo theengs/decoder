@@ -90,6 +90,7 @@
 #include "devices/BPARASITE_json.h"
 #include "devices/BWBSDOO_json.h"
 #include "devices/BM2_json.h"
+#include "devices/BM6_json.h"
 #include "devices/JHT_F525_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/APPLE_json.h"
@@ -170,6 +171,7 @@ const char* _devices[][2] = {
     {_BPARASITE_json, _BPARASITE_json_props},
     {_BWBSDOO_json, _BWBSDOO_json_props},
     {_BM2_json, _BM2_json_props},
+    {_BM6_json, _BM6_json_props},
     {_RDL52832_json, _RDL52832_json_props},
     {_ABN03_json, _ABN03_json_props},
     {_ABN07_json, _ABN07_json_props},

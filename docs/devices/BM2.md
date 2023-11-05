@@ -7,7 +7,7 @@
 |Short Description|Battery capacity|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power Source|12V|
+|Power Source|8V-16V or 6V-20V (depending on model)|
 |Exchanged Data|battery|
 |Encrypted|No|
 |Presence Tracker|&#9989;|

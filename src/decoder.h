@@ -113,6 +113,7 @@ public:
     BPARASITE,
     BWBSDOO,
     BM2,
+    BM6,
     RDL52832,
     ABN03,
     ABN07,

@@ -131,6 +131,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"running\",\"sector\":\"sector 3\",\"pressure\":50,\"time\":74}",
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"idle\",\"mode\":\"daily clean\",\"sector\":\"sector 1\",\"pressure\":32,\"time\":0}",
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"sleeping\",\"mode\":\"turbo\",\"sector\":\"sector 8\",\"pressure\":32,\"time\":135}",
+    "{\"brand\":\"GENERIC\",\"model\":\"BM6 Battery Monitor\",\"model_id\":\"BM6\",\"type\":\"BATT\",\"track\":true,\"batt\":77,\"device\":\"BM6 Tracker\"}",
+    "{\"brand\":\"GENERIC\",\"model\":\"BM6 Battery Monitor\",\"model_id\":\"BM6\",\"type\":\"BATT\",\"track\":true,\"batt\":78,\"device\":\"BM6 Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -488,6 +490,8 @@ const char* test_mfgdata[][3] = {
     {"Braun", "Oral-B", "dc000471050332010e08032e04"},
     {"Braun", "Oral-B", "dc000202060220000001010004"},
     {"Braun", "Oral-B", "dc000202067320020f07080004"},
+    {"BM6", "Battery Monitor", "4c0002153ba29cd9a42c894856badaf2606ef777114d0000cd"},
+    {"BM6", "Battery Monitor", "4c0002153ba29cd9a42c894856badaf2606ef777114e0000cd"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -601,6 +605,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::ORALB_BT,
     TheengsDecoder::BLE_ID_NUM::ORALB_BT,
     TheengsDecoder::BLE_ID_NUM::ORALB_BT,
+    TheengsDecoder::BLE_ID_NUM::BM6,
+    TheengsDecoder::BLE_ID_NUM::BM6,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
