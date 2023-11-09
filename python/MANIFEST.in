@@ -1,0 +1,8 @@
+include CMakeLists.txt
+include README.md
+include TheengsDecoder/__init__.py
+include TheengsDecoder/_decoder.cpp
+include pyproject.toml
+include setup.py
+recursive-include src *
+exclude MANIFEST.in

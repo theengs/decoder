@@ -28,4 +28,5 @@ setup(
     packages=['TheengsDecoder'],
     use_scm_version={"root": "..", "version_scheme": "no-guess-dev"},
     setup_requires=setup_requires,
+    include_package_data=True,
 )
