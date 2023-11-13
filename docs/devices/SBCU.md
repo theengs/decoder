@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|Rechargeable battery|
-|Exchanged Data|motion state, position, light level, battery, calibration state|
+|Exchanged Data|moving, position, light level, battery, calibration state|
 |Encrypted|No|

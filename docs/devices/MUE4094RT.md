@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|AA|
-|Exchanged Data|darkness, presence|
+|Exchanged Data|darkness, motion|
 |Encrypted|No|

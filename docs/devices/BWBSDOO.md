@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|CR2032|
-|Exchanged Data|contact, battery|
+|Exchanged Data|open, battery|
 |Encrypted|No|
