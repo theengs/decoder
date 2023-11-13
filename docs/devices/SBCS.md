@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|2 AAA|
-|Exchanged Data|contact, movement, light level, scope tested, in count, out count, push count, battery|
+|Exchanged Data|contact, motion, light level, scope tested, in count, out count, push count, battery|
 |Encrypted|No|

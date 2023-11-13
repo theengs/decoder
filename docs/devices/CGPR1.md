@@ -8,6 +8,6 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|2 CR2450|
-|Exchanged Data|luminance, presence, battery|
+|Exchanged Data|luminance, motion, battery|
 |Encrypted|No|
 |Image|![CGPR1](./../img/CGPR1.png)|

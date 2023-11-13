@@ -1,4 +1,4 @@
-const char* _BWBSDOO_json = "{\"brand\":\"Otio/BeeWi\",\"model\":\"Door & Window Sensor\",\"model_id\":\"BSDOO\",\"tag\":\"0405\",\"condition\":[\"manufacturerdata\",\"=\",14,\"index\",4,\"080c\"],\"properties\":{\"contact\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",9,0,\"closed\",\"open\"]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",12,2,false,false]}}}";
+const char* _BWBSDOO_json = "{\"brand\":\"Otio/BeeWi\",\"model\":\"Door & Window Sensor\",\"model_id\":\"BSDOO\",\"tag\":\"0405\",\"condition\":[\"manufacturerdata\",\"=\",14,\"index\",4,\"080c\"],\"properties\":{\"open\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",9,0,false,true]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",12,2,false,false]}}}";
 /*R""""(
 {
    "brand":"Otio/BeeWi",
@@ -7,8 +7,8 @@ const char* _BWBSDOO_json = "{\"brand\":\"Otio/BeeWi\",\"model\":\"Door & Window
    "tag":"0405",
    "condition":["manufacturerdata", "=", 14, "index", 4, "080c"],
    "properties":{
-      "contact":{
-         "decoder":["bit_static_value", "manufacturerdata", 9, 0, "closed", "open"]
+      "open":{
+         "decoder":["bit_static_value", "manufacturerdata", 9, 0, false, true]
       },
       "batt":{
          "decoder":["value_from_hex_data", "manufacturerdata", 12, 2, false, false]
@@ -16,13 +16,13 @@ const char* _BWBSDOO_json = "{\"brand\":\"Otio/BeeWi\",\"model\":\"Door & Window
    }
 })"""";*/
 
-const char* _BWBSDOO_json_props = "{\"properties\":{\"contact\":{\"unit\":\"string\",\"name\":\"contact\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"}}}";
+const char* _BWBSDOO_json_props = "{\"properties\":{\"open\":{\"unit\":\"status\",\"name\":\"door\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"}}}";
 /*R""""(
 {
    "properties":{
-      "contact":{
-         "unit":"string",
-         "name":"contact"
+      "open":{
+         "unit":"status",
+         "name":"door"
       },
       "batt":{
          "unit":"%",

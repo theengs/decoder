@@ -8,6 +8,6 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|2 AAA|
-|Exchanged Data|movement, light level, sensing distance, led, scope tested, battery|
+|Exchanged Data|motion, light level, sensing distance, led, scope tested, battery|
 |Encrypted|No|
 |Image|![W110150X](./../img/W110150X.png)|
