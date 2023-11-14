@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|Rechargeable battery|
-|Exchanged Data|state, mode, sector, pressure, time|
+|Exchanged Data|state, mode, sector, pressure, duration|
 |Encrypted|No|
