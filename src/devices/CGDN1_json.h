@@ -27,7 +27,7 @@ const char* _CGDN1_json = "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\
    }
 })"""";*/
 
-const char* _CGDN1_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"pm25\":{\"unit\":\"μg/m³\",\"name\":\"pm25\"},\"pm10\":{\"unit\":\"μg/m³\",\"name\":\"pm10\"},\"co2\":{\"unit\":\"ppm\",\"name\":\"carbon dioxide\"}}}";
+const char* _CGDN1_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"pm25\":{\"unit\":\"μg/m³\",\"name\":\"pm25\"},\"pm10\":{\"unit\":\"μg/m³\",\"name\":\"pm10\"},\"co2\":{\"unit\":\"ppm\",\"name\":\"carbon_dioxide\"}}}";
 /*R""""(
 {
    "properties":{
@@ -49,7 +49,7 @@ const char* _CGDN1_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"
       },
       "co2":{
          "unit":"ppm",
-         "name":"carbon dioxide"
+         "name":"carbon_dioxide"
       }
    }
 })"""";*/

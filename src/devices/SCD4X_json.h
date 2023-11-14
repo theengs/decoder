@@ -22,7 +22,7 @@ const char* _SCD4X_json = "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Ga
    }
 })"""";*/
 
-const char* _SCD4X_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"co2\":{\"unit\":\"ppm\",\"name\":\"carbon dioxide\"}}}";
+const char* _SCD4X_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"co2\":{\"unit\":\"ppm\",\"name\":\"carbon_dioxide\"}}}";
 
 /* R""""(
 {
@@ -37,7 +37,7 @@ const char* _SCD4X_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"
       },
       "co2":{
          "unit":"ppm",
-         "name":"carbon dioxide"
+         "name":"carbon_dioxide"
       }
    }
 })"""";*/
