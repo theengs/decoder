@@ -50,7 +50,7 @@ const char* _OralB_json = "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"m
    }
 })"""";*/
 
-const char* _OralB_json_props = "{\"properties\":{\"state\":{\"unit\":\"string\",\"name\":\"state\"},\"mode\":{\"unit\":\"string\",\"name\":\"mode\"},\"sector\":{\"unit\":\"string\",\"name\":\"sector\"},\"pressure\":{\"unit\":\"int\",\"name\":\"pressure\"},\"time\":{\"unit\":\"int\",\"name\":\"time\"}}}";
+const char* _OralB_json_props = "{\"properties\":{\"state\":{\"unit\":\"string\",\"name\":\"state\"},\"mode\":{\"unit\":\"string\",\"name\":\"mode\"},\"sector\":{\"unit\":\"string\",\"name\":\"sector\"},\"pressure\":{\"unit\":\"int\",\"name\":\"Pressure\"},\"time\":{\"unit\":\"int\",\"name\":\"time\"}}}";
 /*R""""(
 {
    "properties":{
@@ -68,7 +68,7 @@ const char* _OralB_json_props = "{\"properties\":{\"state\":{\"unit\":\"string\"
       },
       "pressure":{
          "unit":"int",
-         "name":"pressure"
+         "name":"Pressure"
       },
       "time":{
          "unit":"int",
