@@ -32,7 +32,7 @@ const char* _H5106_json = "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Mo
    }
 })"""";*/
 
-const char* _H5106_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"pm25\":{\"unit\":\"μg/m³\",\"name\":\"PM2.5\"}}}";
+const char* _H5106_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"pm25\":{\"unit\":\"μg/m³\",\"name\":\"pm25\"}}}";
 /*R""""(
 {
    "properties":{
@@ -46,7 +46,7 @@ const char* _H5106_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"
       },
       "pm25":{
          "unit":"μg/m³",
-         "name":"PM2.5"
+         "name":"pm25"
       }
    }
 })"""";*/
