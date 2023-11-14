@@ -37,34 +37,34 @@ const char* _H5055_json = "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermo
    }
 })"""";*/
 
-const char* _H5055_json_props = "{\"properties\":{\"tempc1\":{\"unit\":\"°C\",\"name\":\"tempc1\"},\"tempc2\":{\"unit\":\"°C\",\"name\":\"tempc2\"},\"tempc3\":{\"unit\":\"°C\",\"name\":\"tempc3\"},\"tempc4\":{\"unit\":\"°C\",\"name\":\"tempc4\"},\"tempc5\":{\"unit\":\"°C\",\"name\":\"tempc5\"},\"tempc6\":{\"unit\":\"°C\",\"name\":\"tempc6\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"}}}";
+const char* _H5055_json_props = "{\"properties\":{\"tempc1\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc2\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc3\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc4\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc5\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"tempc6\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"}}}";
 /*R""""(
 {
    "properties":{
       
       "tempc1":{
          "unit":"°C",
-         "name":"tempc1"
+         "name":"temperature"
       },
       "tempc2":{
          "unit":"°C",
-         "name":"tempc2"
+         "name":"temperature"
       },
       "tempc3":{
          "unit":"°C",
-         "name":"tempc3"
+         "name":"temperature"
       },
       "tempc4":{
          "unit":"°C",
-         "name":"tempc4"
+         "name":"temperature"
       },
       "tempc5":{
          "unit":"°C",
-         "name":"tempc5"
+         "name":"temperature"
       },
       "tempc6":{
          "unit":"°C",
-         "name":"tempc6"
+         "name":"temperature"
       },
       "batt":{
          "unit":"%",
