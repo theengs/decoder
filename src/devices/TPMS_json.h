@@ -32,7 +32,7 @@ const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\"
    }
 })"""";*/
 
-const char* _TPMS_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"pres\":{\"unit\":\"bar\",\"name\":\"pressure\"},\"count\":{\"unit\":\"int\",\"name\":\"count\"},\"alarm\":{\"unit\":\"status\",\"name\":\"alarm\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
+const char* _TPMS_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"pres\":{\"unit\":\"bar\",\"name\":\"pressure\"},\"count\":{\"unit\":\"int\",\"name\":\"count\"},\"alarm\":{\"unit\":\"status\",\"name\":\"problem\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
 /*R""""(
 {
    "properties":{
@@ -54,7 +54,7 @@ const char* _TPMS_json_props = "{\"properties\":{\"batt\":{\"unit\":\"%\",\"name
       },
       "alarm":{
          "unit":"status",
-         "name":"alarm"
+         "name":"problem"
       },
       "mac":{
          "unit":"string",

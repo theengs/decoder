@@ -27,7 +27,7 @@ const char* _AMPHIRO_json = "{\"brand\":\"Oras\",\"model\":\"Hydractiva Digital\
    }
 })"""";*/
 
-const char* _AMPHIRO_json_props = "{\"properties\":{\"session\":{\"unit\":\"int\",\"name\":\"session\"},\"seconds\":{\"unit\":\"s\",\"name\":\"duration\"},\"litres\":{\"unit\":\"L\",\"name\":\"volume\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"energy\":{\"unit\":\"kWh\",\"name\":\"energy\"}}}";
+const char* _AMPHIRO_json_props = "{\"properties\":{\"session\":{\"unit\":\"int\",\"name\":\"session\"},\"seconds\":{\"unit\":\"s\",\"name\":\"duration\"},\"litres\":{\"unit\":\"L\",\"name\":\"water\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"energy\":{\"unit\":\"kWh\",\"name\":\"energy\"}}}";
 /*R""""(
 {
    "properties":{
@@ -41,7 +41,7 @@ const char* _AMPHIRO_json_props = "{\"properties\":{\"session\":{\"unit\":\"int\
       },
       "litres":{
          "unit":"L",
-         "name":"volume"
+         "name":"water"
       },
       "tempc": {
          "unit": "°C",
