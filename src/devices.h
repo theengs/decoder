@@ -184,6 +184,7 @@ const char* _devices[][2] = {
     {_T201_json, _T201_json_props},
     {_T301_json, _T301_json_props},
     {_tracker_json_nut, _tracker_json_props},
+    {_tracker_json_nutale, _tracker_json_props},
     {_tracker_json_itag, _tracker_json_props},
     {_tracker_json_tagit, _tracker_json_props},
     {_tracker_json_tile, _tracker_json_props},
