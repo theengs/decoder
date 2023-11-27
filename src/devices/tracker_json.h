@@ -13,6 +13,21 @@ const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",
    }
 })"""";*/
 
+const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"tag\":\"100f\",\"condition\":[\"name\",\"index\",0,\"nutale\",\"&\",\"servicedata\",\"=\",24,\"&\",\"uuid\",\"index\",0,\"0900\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nutale Tracker\"]}}}";
+/*R""""(
+{
+   "brand":"nut",
+   "model":"Smart Tracker",
+   "model_id":"NUTALE",
+   "tag":"100f",
+   "condition":["name", "index", 0, "nutale", "&", "servicedata", "=", 24, "&", "uuid", "index", 0, "0900"],
+   "properties":{
+      "device":{
+         "decoder":["static_value", "nutale Tracker"]
+      }
+   }
+})"""";*/
+
 const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"tag\":\"100f\",\"condition\":[\"name\",\"index\",0,\"iTAG\",\"&\",\"manufacturerdata\",\"=\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"iTAG Tracker\"]}}}";
 /*R""""(
 {

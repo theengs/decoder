@@ -126,6 +126,7 @@ public:
     T201,
     T301,
     NUT,
+    NUTALE,
     ITAG,
     TAGIT,
     TILE,

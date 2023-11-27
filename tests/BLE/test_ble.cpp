@@ -188,6 +188,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_ENCR\",\"type\":\"THB\",\"encr\":1,\"cipher\":\"ef56583dd420\",\"ctr\":\"23\",\"mic\":\"50fe8e4d\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_DECR\",\"type\":\"THB\",\"tempc\":24.60,\"tempf\":76.28,\"hum\":43.54,\"batt\":100}",
     "{\"brand\":\"April Brother\",\"model\":\"N07\",\"model_id\":\"ABN07\",\"type\":\"THB\",\"acts\":true,\"track\":true,\"batt\":100,\"tempc\":24.51,\"tempf\":76.118,\"hum\":47.42,\"packet\":16}",
+    "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"nutale Tracker\"}",
 };
 
 const char* expected_uuid[] = {
@@ -688,6 +689,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"LYWSD03MMC_PVVX_ENCR", "0x181a", "ATC_9C58AB", "23ef56583dd42050fe8e4d"},
     {"LYWSD03MMC_PVVX_DECR", "0x181a", "ATC_89DF88", "9c0902116404"},
     {"ABN07", "0xfcd2", "asensor_7F7F", "4000100164029309038612"},
+    {"Nutale", "0x0900", "nutale", "aabbccddeeff160100010100"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -720,6 +722,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_ENCR,
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_DECR,
     TheengsDecoder::BLE_ID_NUM::ABN07,
+    TheengsDecoder::BLE_ID_NUM::NUTALE,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
@@ -839,7 +842,6 @@ const char* test_uuid[][4] = {
     {"KKM K9", "0xfeaa", "servicedata", "21010f0e07ff8e224ffffcffec03eb"},
     {"KKM K9", "0xfeaa", "servicedata", "21010f0e58f4362bd8000ffff103f7"},
     {"KKM K9", "0xfeaa", "servicedata", "21010f0e5bf51b4addffc200000416"},
-
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
