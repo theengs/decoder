@@ -145,6 +145,10 @@ const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":50,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":26.3,\"tempf\":79.34,\"hum\":80,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":-15.9,\"tempf\":3.38,\"hum\":42,\"batt\":65,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"type\":\"THB\",\"tempc\":21.79,\"tempf\":71.222,\"volt\":3.09}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE RHT\",\"model_id\":\"SE_RHT\",\"type\":\"THB\",\"hum\":47,\"volt\":3.097}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP PROBE\",\"model_id\":\"SE_TPROBE\",\"type\":\"THB\",\"tempc\":20.6,\"tempf\":69.08,\"volt\":3.044}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"cont\":true,\"open\":false,\"volt\":3.079}",
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
@@ -189,6 +193,15 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_DECR\",\"type\":\"THB\",\"tempc\":24.60,\"tempf\":76.28,\"hum\":43.54,\"batt\":100}",
     "{\"brand\":\"April Brother\",\"model\":\"N07\",\"model_id\":\"ABN07\",\"type\":\"THB\",\"acts\":true,\"track\":true,\"batt\":100,\"tempc\":24.51,\"tempf\":76.118,\"hum\":47.42,\"packet\":16}",
     "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"nutale Tracker\"}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"type\":\"THB\",\"tempc\":2.75,\"tempf\":36.95}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"type\":\"THB\",\"tempc\":-9.18,\"tempf\":15.476}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE RHT\",\"model_id\":\"SE_RHT\",\"type\":\"THB\",\"hum\":70}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE RHT\",\"model_id\":\"SE_RHT\",\"type\":\"THB\",\"tempc\":-19.96,\"tempf\":-3.928}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"type\":\"THB\",\"tempc\":21.6,\"tempf\":70.88}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE RHT\",\"model_id\":\"SE_RHT\",\"type\":\"THB\",\"tempc\":5.22,\"tempf\":41.396}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP PROBE\",\"model_id\":\"SE_TPROBE\",\"type\":\"THB\",\"tempc\":20.7,\"tempf\":69.26}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":true,\"cont\":true}",
+    "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
 };
 
 const char* expected_uuid[] = {
@@ -621,6 +634,10 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909aabbccddeeff8b0305993200", "770064"},
     {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909aabbccddeeff940b039a5000", "770064"},
     {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909aabbccddeeffe30f090f2a00", "770041"},
+    {"SE TEMP volt","P T EN 888444","0x2a6e","5707f2120c","8308"},
+    {"SE RHT volt","P RHT 88888B","0x2a6f","5707f2190c","2f"},
+    {"SE TEMP PROBE","P TPROBE 000000","0x2a6e","5707f2e40b","0c08"},
+    {"SE MAG","P MAG CCCCCC","0x2a06","5707f2070c","3b00"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -633,6 +650,10 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBOT,
     TheengsDecoder::BLE_ID_NUM::SBOT,
     TheengsDecoder::BLE_ID_NUM::SBOT,
+    TheengsDecoder::BLE_ID_NUM::SE_TEMP,
+    TheengsDecoder::BLE_ID_NUM::SE_RHT,
+    TheengsDecoder::BLE_ID_NUM::SE_TPROBE,
+    TheengsDecoder::BLE_ID_NUM::SE_MAG,
 };
 
 // uuid test input [test name] [mac] [device name] [uuid] [manufacturer data] [service data]
@@ -690,6 +711,15 @@ const char* test_uuid_name_svcdata[][4] = {
     {"LYWSD03MMC_PVVX_DECR", "0x181a", "ATC_89DF88", "9c0902116404"},
     {"ABN07", "0xfcd2", "asensor_7F7F", "4000100164029309038612"},
     {"Nutale", "0x0900", "nutale", "aabbccddeeff160100010100"},
+    {"SE TEMP", "0x2a6e", "C T 999999", "1301"}, 
+    {"SE TEMP negative","0x2a6e","C T 88888E","6afc"}, 
+    {"SE RHT hum","0x2a6f","P RHT 99999A","46"},
+    {"SE RHT temp neg","0x2a6e","P RHT 33399T","34f8"},
+    {"SE TEMP temp positive","0x2a6e","P T EN 888444","7008"},
+    {"SE RHT temp pos","0x2a6e","P RHT 99999Z","0a02"},
+    {"SE TEMP PROBE temp","0x2a6e","P TPROBE 111999","1608"},
+    {"SE MAG Open","0x2a06","P MAG CCCCCC","2400"},
+    {"SE MAG Closed","0x2a06","P MAG CCCCCC","2900"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -723,6 +753,15 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_DECR,
     TheengsDecoder::BLE_ID_NUM::ABN07,
     TheengsDecoder::BLE_ID_NUM::NUTALE,
+    TheengsDecoder::BLE_ID_NUM::SE_TEMP,
+    TheengsDecoder::BLE_ID_NUM::SE_TEMP,
+    TheengsDecoder::BLE_ID_NUM::SE_RHT,
+    TheengsDecoder::BLE_ID_NUM::SE_RHT,
+    TheengsDecoder::BLE_ID_NUM::SE_TEMP,
+    TheengsDecoder::BLE_ID_NUM::SE_RHT,
+    TheengsDecoder::BLE_ID_NUM::SE_TPROBE,
+    TheengsDecoder::BLE_ID_NUM::SE_MAG,
+    TheengsDecoder::BLE_ID_NUM::SE_MAG,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
