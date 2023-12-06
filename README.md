@@ -11,7 +11,7 @@ Theengs Decoder library translates these data chains into human readable data le
 
 It's also a simplified way of defining the thing properties and how to decode these.
 
-Theengs Decoder supports the decoding of [more than 80 Bluetooth devices](https://decoder.theengs.io/devices/devices.html).
+Theengs Decoder supports the decoding of [more than 90 Bluetooth devices](https://decoder.theengs.io/devices/devices.html).
 
 Theengs Decoder can be used on memory constraint environments like micro controllers (ESP32, ESP8266, Arduino), on a PC or on a Unix server.
 Unit testing assures that the modification done on the library doesn't affect previous capabilities.
