@@ -321,6 +321,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-11.79,\"tempf\":10.778,\"hum\":43.84,\"volt\":3.672,\"accx\":15,\"accy\":-15,\"accz\":1015}",
     "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-10.9,\"tempf\":12.38,\"hum\":74.86,\"volt\":3.675,\"accx\":-62,\"accy\":0,\"accz\":1046}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"type\":\"ACTR\",\"acts\":true,\"mode\":\"onestate\",\"state\":\"on\",\"batt\":71}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Barometer Pro\",\"model_id\":\"CGP23W\",\"type\":\"THBX\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":47.6,\"pres\":1007.4,\"batt\":94,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -883,6 +884,7 @@ const char* test_uuid[][4] = {
     {"KKM K9", "0xfeaa", "servicedata", "21010f0e58f4362bd8000ffff103f7"},
     {"KKM K9", "0xfeaa", "servicedata", "21010f0e5bf51b4addffc200000416"},
     {"Switchbot_S1", "0xfd3d", "servicedata", "48004700"},
+    {"ClearGrass Barometer Pro", "0xfdcd", "servicedata", "8818ffeeddccbbaa0104e800dc0102015e07025a27"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1002,6 +1004,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::KKM_K9,
     TheengsDecoder::BLE_ID_NUM::KKM_K9,
     TheengsDecoder::BLE_ID_NUM::SBS1,
+    TheengsDecoder::BLE_ID_NUM::CGP23W,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
