@@ -25,6 +25,7 @@
 #include "devices/CGDN1_json.h"
 #include "devices/CGH1_json.h"
 #include "devices/CGP1W_json.h"
+#include "devices/CGP23W_json.h"
 #include "devices/CGPR1_json.h"
 #include "devices/GAEN_json.h"
 #include "devices/H5055_json.h"
@@ -112,6 +113,7 @@ const char* _devices[][2] = {
     {_LYWSD02_json, _LYWSD02_json_props},
     {_LYWSDCGQ_json, _LYWSDCGQ_json_props},
     {_CGP1W_json, _CGP1W_json_props},
+    {_CGP23W_json, _CGP23W_json_props},
     {_CGG1_json_STOCK, _CGG1_json_props},
     {_CGG1_json_ATC1441, _CGG1_json_props},
     {_CGG1_json_PVVX, _CGG1_json_props},
