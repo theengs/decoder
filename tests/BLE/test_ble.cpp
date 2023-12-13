@@ -268,9 +268,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":26.6,\"tempf\":79.88,\"hum\":63.9,\"batt\":42,\"mac\":\"58:2D:34:50:FD:AF\"}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":26.9,\"tempf\":80.42,\"hum\":67,\"batt\":42,\"mac\":\"58:2D:34:50:FD:AF\"}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":27,\"tempf\":80.6,\"hum\":65.7,\"batt\":85,\"mac\":\"58:2D:34:50:FD:AF\"}",
-    "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":1006.3,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":1006.3,\"mac\":\"58:2D:34:40:01:4C\"}",
-    "{\"brand\":\"ClearGrass\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":1008.6,\"mac\":\"58:2D:34:40:01:4C\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":26.4,\"tempf\":79.52,\"hum\":64.7,\"pres\":1006.3,\"batt\":92,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":27.1,\"tempf\":80.78,\"hum\":64.8,\"pres\":1006.3,\"batt\":92,\"mac\":\"58:2D:34:40:01:4C\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"type\":\"THBX\",\"tempc\":25.2,\"tempf\":77.36,\"hum\":58.6,\"pres\":1008.6,\"batt\":32,\"mac\":\"58:2D:34:40:01:4C\"}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"type\":\"THB\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":91.1,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"type\":\"THB\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1,\"mac\":\"58:2D:34:11:91:79\"}",
     "{\"brand\":\"Qingping\",\"model\":\"TH Lite\",\"model_id\":\"CGDK2\",\"type\":\"THB\",\"tempc\":23.3,\"tempf\":73.94,\"hum\":54.1,\"mac\":\"58:2D:34:11:91:79\"}",
@@ -320,7 +320,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-0.45,\"tempf\":31.19,\"hum\":34.3,\"volt\":3.591,\"accx\":-4,\"accy\":-20,\"accz\":1003}",
     "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-11.79,\"tempf\":10.778,\"hum\":43.84,\"volt\":3.672,\"accx\":15,\"accy\":-15,\"accz\":1015}",
     "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-10.9,\"tempf\":12.38,\"hum\":74.86,\"volt\":3.675,\"accx\":-62,\"accy\":0,\"accz\":1046}",
-  "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"type\":\"ACTR\",\"acts\":true,\"mode\":\"onestate\",\"state\":\"on\",\"batt\":71}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"type\":\"ACTR\",\"acts\":true,\"mode\":\"onestate\",\"state\":\"on\",\"batt\":71}",
 };
 
 const char* expected_mac_mfg[] = {
