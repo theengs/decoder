@@ -133,6 +133,7 @@ public:
     TILE,
     TILEN,
     JHT_F525,
+    APPLEWATCH,
     IBEACON,
     APPLE_CONT,
     APPLE_CONTAT,
