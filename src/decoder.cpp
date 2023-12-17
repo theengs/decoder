@@ -609,6 +609,15 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["track"] = true;
             jsondata["track"] = doc["track"];
           }
+          
+          // bits[7-4]
+          data = getBinaryData(tagstring[2]);
+
+          if (((data >> 0) & 0x01) == 1) { // PRMAC - Potential RMAC device - if not defined with Identity MAC and IRK in Theengs Gateway
+            doc.add("prmac");
+            doc["prmac"] = true;
+            jsondata["prmac"] = doc["prmac"];
+          }
         }
 
         // Octet Byte[2] - Encryption Model
