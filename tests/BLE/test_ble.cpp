@@ -137,6 +137,12 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\"model_id\":\"APPLEWATCH\",\"type\":\"BODY\",\"track\":true,\"prmac\":true,\"state\":\"unlocked\"}",
     "{\"brand\":\"Aranet\",\"model\":\"Aranet4 CO₂ Monitor\",\"model_id\":\"ARANET4\",\"type\":\"AIR\",\"tempc\":26,\"tempf\":78.8,\"hum\":19,\"pres\":804,\"co2\":879,\"batt\":98}",
     "{\"brand\":\"Aranet\",\"model\":\"Aranet4 CO₂ Monitor\",\"model_id\":\"ARANET4\",\"type\":\"AIR\",\"tempc\":26.3,\"tempf\":79.34,\"hum\":17,\"pres\":803.2,\"co2\":844,\"batt\":98}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"state\":\"locked\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"state\":\"locked\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"state\":\"unlocked recent authenticated interaction\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"state\":\"locked\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"state\":\"locked\"}",
+    "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"state\":\"unlocked recent authenticated interaction\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -520,6 +526,12 @@ const char* test_mfgdata[][3] = {
     {"Apple", "Watch", "4c0010050b982068dd"},
     {"Aranet", "Aranet4", "0207210e0401000c0f016f030802681f1362012c018c00b9"},
     {"Aranet", "Aranet4", "0207210e0401000c0f014c030e02601f1162012c01b10036"},
+    {"Apple", "iPhone", "4c0010061a1e16ec7f61"},
+    {"Apple", "iPhone", "4c0010065a1e02711c95"},
+    {"Apple", "iPhone", "4c0010065b1e02711c91"},
+    {"Apple", "iPad", "4c0010020304"},
+    {"Apple", "iPad", "4c0010020704"},
+    {"Apple", "iPad", "4c0010050b1c93fbf5"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -639,6 +651,12 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::APPLEWATCH,
     TheengsDecoder::BLE_ID_NUM::ARANET4,
     TheengsDecoder::BLE_ID_NUM::ARANET4,
+    TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
+    TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
+    TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
+    TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
+    TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
+    TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
