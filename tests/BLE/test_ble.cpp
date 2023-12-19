@@ -135,6 +135,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"BM6 Battery Monitor\",\"model_id\":\"BM6\",\"type\":\"BATT\",\"track\":true,\"batt\":78,\"device\":\"BM6 Tracker\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\"model_id\":\"APPLEWATCH\",\"type\":\"BODY\",\"track\":true,\"prmac\":true,\"state\":\"locked\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\"model_id\":\"APPLEWATCH\",\"type\":\"BODY\",\"track\":true,\"prmac\":true,\"state\":\"unlocked\"}",
+    "{\"brand\":\"Aranet\",\"model\":\"Aranet4 CO₂ Monitor\",\"model_id\":\"ARANET4\",\"type\":\"AIR\",\"tempc\":26,\"tempf\":78.8,\"hum\":19,\"pres\":804,\"co2\":879,\"batt\":98}",
+    "{\"brand\":\"Aranet\",\"model\":\"Aranet4 CO₂ Monitor\",\"model_id\":\"ARANET4\",\"type\":\"AIR\",\"tempc\":26.3,\"tempf\":79.34,\"hum\":17,\"pres\":803.2,\"co2\":844,\"batt\":98}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -512,6 +514,8 @@ const char* test_mfgdata[][3] = {
     {"BM6", "Battery Monitor", "4c0002153ba29cd9a42c894856badaf2606ef777114e0000cd"},
     {"Apple", "Watch", "4c0010050b182068dd"},
     {"Apple", "Watch", "4c0010050b982068dd"},
+    {"Aranet", "Aranet4", "0207210e0401000c0f016f030802681f1362012c018c00b9"},
+    {"Aranet", "Aranet4", "0207210e0401000c0f014c030e02601f1162012c01b10036"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -629,6 +633,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BM6,
     TheengsDecoder::BLE_ID_NUM::APPLEWATCH,
     TheengsDecoder::BLE_ID_NUM::APPLEWATCH,
+    TheengsDecoder::BLE_ID_NUM::ARANET4,
+    TheengsDecoder::BLE_ID_NUM::ARANET4,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

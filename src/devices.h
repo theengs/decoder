@@ -84,6 +84,7 @@
 #include "devices/T301_json.h"
 #include "devices/tracker_json.h"
 #include "devices/iNodeEM_json.h"
+#include "devices/ARANET4_json.h"
 #include "devices/BC08_json.h"
 #include "devices/BM1IN1_json.h"
 #include "devices/BM3IN1_json.h"
@@ -168,6 +169,7 @@ const char* _devices[][2] = {
     {_SCD4X_json, _SCD4X_json_props},
     {_Skale_json, _Skale_json_props},
     {_SmartDry_json, _SmartDry_json_props},
+    {_ARANET4_json, _ARANET4_json_props},
     {_BC08_json, _BC08_json_props},
     {_BM1IN1_json, _BM1IN1_json_props},
     {_BM3IN1_json, _BM3IN1_json_props},

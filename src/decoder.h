@@ -104,6 +104,7 @@ public:
     SCD4X,
     SKALE,
     SMARTDRY,
+    ARANET4,
     BC08,
     BM1IN1,
     BM3IN1,
