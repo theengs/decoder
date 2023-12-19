@@ -246,8 +246,8 @@ const char* expected_uuid[] = {
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":25.6,\"tempf\":78.08,\"hum\":90.00076295,\"moi\":49.99923705,\"volt\":3.1,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"type\":\"PLANT\",\"cont\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":65.00038148,\"moi\":42.00045777,\"lux\":12500,\"volt\":2.95,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":25,\"calibrated\":true,\"lightlevel\":7,\"batt\":76}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":true,\"position\":25,\"calibrated\":false,\"lightlevel\":10,\"batt\":85}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":25,\"calibrated\":true,\"lightlevel\":7,\"batt\":76}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":true,\"position\":25,\"calibrated\":false,\"lightlevel\":10,\"batt\":85}",
     "{\"brand\":\"Xiaomi/Mijia\",\"model\":\"e-ink Clock\",\"model_id\":\"LYWSD02\",\"type\":\"THB\",\"tempc\":25.6,\"tempf\":78.08,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi/Mijia\",\"model\":\"e-ink Clock\",\"model_id\":\"LYWSD02\",\"type\":\"THB\",\"hum\":69,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi/Mijia\",\"model\":\"e-ink Clock\",\"model_id\":\"LYWSD02\",\"type\":\"THB\",\"tempc\":26.5,\"tempf\":79.7,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
@@ -293,7 +293,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100,\"mac\":\"XX:XX:XX:XX:XX:XX\"}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100,\"mac\":\"FF:EE:DD:CC:BB:AA\"}",
     "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525\",\"type\":\"THB\",\"acts\":true,\"tempc\":24.5147998,\"tempf\":76.12663965,\"hum\":36.84286499,\"batt\":100}",
-    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":24,\"tempf\":75.2,\"accx\":33,\"accy\":-3,\"accz\":-1006,\"volt\":3.091}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-10.75,\"tempf\":12.65,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"motion\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"in_ct\":1,\"out_ct\":0,\"push_ct\":2,\"batt\":100}",
@@ -326,6 +326,10 @@ const char* expected_uuid[] = {
     "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-10.9,\"tempf\":12.38,\"hum\":74.86,\"volt\":3.675,\"accx\":-62,\"accy\":0,\"accz\":1046}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"type\":\"ACTR\",\"acts\":true,\"mode\":\"onestate\",\"state\":\"on\",\"batt\":71}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Barometer Pro\",\"model_id\":\"CGP23W\",\"type\":\"THBX\",\"tempc\":23.2,\"tempf\":73.76,\"hum\":47.6,\"pres\":1007.4,\"batt\":94,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":79}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":0,\"calibrated\":false,\"lightlevel\":1,\"batt\":77}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":true,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":87}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":57,\"calibrated\":true,\"lightlevel\":1,\"batt\":79}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -864,7 +868,7 @@ const char* test_uuid[][4] = {
     {"Qingping round sensor", "0xfdcd", "servicedata", "8816xxxxxxxxxxxx0104f4003b01020164"},
     {"Qingping alarm clock", "0xfdcd", "servicedata", "081eaabbccddeeff0104d200fe01020164"},
     {"Jaalee", "0xf525", "manufacturerdata", "4c000215ebefd08370a247c89837e7b5634df52567f857becb64"},
-    {"Switchbot_Curtain NEW", "0xfd3d", "servicedata", "63c011641104"},
+    {"Switchbot_Curtain 2", "0xfd3d", "servicedata", "63c011641104"},
     {"BlueCharm BC08", "0xfeaa", "servicedata", "21010b0c1318000021fffdfc12"},
     {"BlueCharm BC08", "0xfeaa", "servicedata", "21010b0c0df540ff95fe69fc80"},
     {"Switchbot_Contact", "0xfd3d", "servicedata", "640064440359ffff42"},
@@ -897,6 +901,10 @@ const char* test_uuid[][4] = {
     {"KKM K9", "0xfeaa", "servicedata", "21010f0e5bf51b4addffc200000416"},
     {"Switchbot_S1", "0xfd3d", "servicedata", "48004700"},
     {"ClearGrass Barometer Pro", "0xfdcd", "servicedata", "8818ffeeddccbbaa0104e800dc0102015e07025a27"},
+    {"Switchbot_Curtain 3", "0xfd3d", "servicedata", "7bc04f641204"},
+    {"Switchbot_Curtain 3", "0xfd3d", "servicedata", "7b804d001204"},
+    {"Switchbot_Curtain 3", "0xfd3d", "servicedata", "7b4057e41106"},
+    {"Switchbot_Curtain 3", "0xfd3d", "servicedata", "7bc04f391204"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1017,6 +1025,10 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::KKM_K9,
     TheengsDecoder::BLE_ID_NUM::SBS1,
     TheengsDecoder::BLE_ID_NUM::CGP23W,
+    TheengsDecoder::BLE_ID_NUM::SBCU,
+    TheengsDecoder::BLE_ID_NUM::SBCU,
+    TheengsDecoder::BLE_ID_NUM::SBCU,
+    TheengsDecoder::BLE_ID_NUM::SBCU,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
