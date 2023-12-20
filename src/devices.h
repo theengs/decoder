@@ -95,6 +95,7 @@
 #include "devices/BM6_json.h"
 #include "devices/JHT_F525_json.h"
 #include "devices/APPLEWATCH_json.h"
+#include "devices/APPLEDEVICE_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/APPLE_json.h"
 #include "devices/ServiceData_json.h"
@@ -200,6 +201,7 @@ const char* _devices[][2] = {
     {_tracker_json_tilename, _tracker_json_props},
     {_JHT_F525_json, _JHT_F525_json_props},
     {_APPLEWATCH_json, _APPLEWATCH_json_props},
+    {_APPLEDEVICE_json, _APPLEDEVICE_json_props},
     {_ibeacon_json, _ibeacon_json_props},
     {_APPLE_json, _APPLE_json_props},
     {_APPLE_json_at, _APPLE_json_props},

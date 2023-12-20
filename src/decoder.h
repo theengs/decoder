@@ -135,6 +135,7 @@ public:
     TILEN,
     JHT_F525,
     APPLEWATCH,
+    APPLEDEVICE,
     IBEACON,
     APPLE_CONT,
     APPLE_CONTAT,
