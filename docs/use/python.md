@@ -18,7 +18,7 @@ sudo apt-get install cmake
 Then clone the repository and install the latest development version:
 
 ```
-git clone https://github.com/theengs/decoder.git
+git clone --recursive https://github.com/theengs/decoder.git
 cd decoder/python
 cp -r ../src .
 pip install .
