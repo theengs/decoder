@@ -1,10 +1,10 @@
-# Apple Watch
+# Apple iPhone/iPad
 
-|Model Id|[APPLEWATCH](https://github.com/theengs/decoder/blob/development/src/devices/APPLEWATCH_json.h)|
+|Model Id|[APPLEDEVICE](https://github.com/theengs/decoder/blob/development/src/devices/APPLEDEVICE_json.h)|
 |-|-|
 |Brand|Apple|
-|Model|Apple Watch|
-|Short Description|Various Apple Watch models|
+|Model|Apple iPhone/iPad|
+|Short Description|Various Apple iPhone/iPad models|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|Rechargeable battery|
