@@ -1,4 +1,4 @@
-const char* _APPLEWATCH_json = "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\"model_id\":\"APPLEWATCH\",\"tag\":\"0b18\",\"condition\":[\"manufacturerdata\",\"index\",10,\"98\",\"|\",\"manufacturerdata\",\"index\",10,\"18\",\"&\",\"manufacturerdata\",\"=\",18,\"index\",0,\"4c001005\"],\"properties\":{\"state\":{\"decoder\":[\"string_from_hex_data\",\"manufacturerdata\",10,2],\"lookup\":[\"98\",\"unlocked\",\"18\",\"locked\"]}}}";
+const char* _APPLEWATCH_json = "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\"model_id\":\"APPLEWATCH\",\"tag\":\"0b18\",\"condition\":[\"manufacturerdata\",\"index\",10,\"98\",\"|\",\"manufacturerdata\",\"index\",10,\"18\",\"&\",\"manufacturerdata\",\"=\",18,\"index\",0,\"4c001005\"],\"properties\":{\"unlocked\":{\"condition\":[\"manufacturerdata\",10,\"98\"],\"decoder\":[\"static_value\",true]},\"_unlocked\":{\"condition\":[\"manufacturerdata\",10,\"18\"],\"decoder\":[\"static_value\",false]}}}";
 /*R""""(
 {
    "brand":"Apple",
@@ -7,21 +7,24 @@ const char* _APPLEWATCH_json = "{\"brand\":\"Apple\",\"model\":\"Apple Watch\",\
    "tag":"0b18",
    "condition":["manufacturerdata", "index", 10, "98", "|", "manufacturerdata", "index", 10, "18", "&", "manufacturerdata", "=", 18, "index", 0, "4c001005"],
    "properties":{
-      "state":{
-        "decoder":["string_from_hex_data", "manufacturerdata", 10, 2],
-         "lookup":["98", "unlocked", 
-                   "18", "locked"]
+      "unlocked":{
+         "condition":["manufacturerdata", 10, "98"],
+         "decoder":["static_value", true]
+      },
+      "_unlocked":{
+         "condition":["manufacturerdata", 10, "18"],
+         "decoder":["static_value", false]
       }
    }
 })"""";*/
 
-const char* _APPLEWATCH_json_props = "{\"properties\":{\"state\":{\"unit\":\"string\",\"name\":\"state\"}}}";
+const char* _APPLEWATCH_json_props = "{\"properties\":{\"unlocked\":{\"unit\":\"status\",\"name\":\"lock\"}}}";
 /*R""""(
 {
    "properties":{
-      "state":{
-         "unit":"string",
-         "name":"state"
+      "unlocked":{
+         "unit":"status",
+         "name":"lock"
       }
    }
 })"""";*/
