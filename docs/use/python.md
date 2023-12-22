@@ -4,6 +4,12 @@
 
 Install the latest stable version from PyPI:
 
+Make sure to have the latest pip
+```
+pip install --upgrade pip
+```
+then
+
 ```
 pip install TheengsDecoder
 ```
@@ -13,6 +19,11 @@ Building this module requires scikit-build and cmake. If not already installed y
 ```
 pip install scikit-build
 sudo apt-get install cmake
+```
+
+Make sure to have the latest pip
+```
+pip install --upgrade pip
 ```
 
 Then clone the repository and install the latest development version:
