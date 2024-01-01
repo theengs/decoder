@@ -143,6 +143,10 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"unlocked\":false}",
     "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"unlocked\":false}",
     "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"unlocked\":true}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":50,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":26.3,\"tempf\":79.34,\"hum\":80,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":-15.9,\"tempf\":3.38,\"hum\":42,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"acts\":true,\"tempc\":20,\"tempf\":68,\"hum\":68,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -532,6 +536,10 @@ const char* test_mfgdata[][3] = {
     {"Apple", "iPad", "4c0010020304"},
     {"Apple", "iPad", "4c0010020704"},
     {"Apple", "iPad", "4c0010050b1c93fbf5"},
+    {"SwitchBot Outdoor Meter MFGDATA only", "Outdoor Meter", "6909aabbccddeeff8b0305993200"},
+    {"SwitchBot Outdoor Meter MFGDATA only", "Outdoor Meter", "6909aabbccddeeff940b039a5000"},
+    {"SwitchBot Outdoor Meter MFGDATA only", "Outdoor Meter", "6909aabbccddeeffe30f090f2a00"},
+    {"SwitchBot Outdoor Meter MFGDATA only", "Outdoor Meter", "6909aabbccddeeff020300944400"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -657,6 +665,10 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
     TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
     TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
+    TheengsDecoder::BLE_ID_NUM::SBOT,
+    TheengsDecoder::BLE_ID_NUM::SBOT,
+    TheengsDecoder::BLE_ID_NUM::SBOT,
+    TheengsDecoder::BLE_ID_NUM::SBOT,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
