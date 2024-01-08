@@ -3,6 +3,7 @@ const commonConfig = require('./public/commonConfig');
 module.exports = {
   ...commonConfig,
   themeConfig: {
+    repo: 'theengs/decoder',
     ...commonConfig.themeConfig,
     sidebar: [
       ['/','0 - What is it for 🏠'],
