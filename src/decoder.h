@@ -133,6 +133,8 @@ public:
     TAGIT,
     TILE,
     TILEN,
+    TheengsIB01,
+    TheengsIB02,
     JAALEE,
     APPLEWATCH,
     APPLEDEVICE,

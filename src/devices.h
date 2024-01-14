@@ -199,6 +199,8 @@ const char* _devices[][2] = {
     {_tracker_json_tagit, _tracker_json_props},
     {_tracker_json_tile, _tracker_json_props},
     {_tracker_json_tilename, _tracker_json_props},
+    {_tracker_json_theengs01, _tracker_json_props},
+    {_tracker_json_theengs02, _tracker_json_props},
     {_JAALEE_json, _JAALEE_json_props},
     {_APPLEWATCH_json, _APPLEWATCH_json_props},
     {_APPLEDEVICE_json, _APPLEDEVICE_json_props},
