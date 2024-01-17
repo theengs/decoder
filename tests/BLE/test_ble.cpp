@@ -16,7 +16,6 @@ const char* expected_servicedata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"Formaldehyde detector\",\"model_id\":\"JQJCY01YM\",\"type\":\"AIR\",\"tempc\":19.6,\"tempf\":67.28,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"moi\":3,\"mac\":\"C4:7C:8D:6D:0C:D2\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"type\":\"PLANT\",\"fer\":1,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"motion\":true,\"darkness\":29}",
     "{\"brand\":\"April Brother\",\"model\":\"N03\",\"model_id\":\"ABN03\",\"type\":\"THBX\",\"track\":true,\"tempc\":-2.625,\"tempf\":27.275,\"hum\":63.5,\"lux\":350,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
@@ -337,6 +336,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":0,\"calibrated\":false,\"lightlevel\":1,\"batt\":77}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":true,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":87}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":57,\"calibrated\":true,\"lightlevel\":1,\"batt\":79}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"motion\":true,\"darkness\":29}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"motion\":true,\"darkness\":2}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -389,7 +391,6 @@ const char* test_servicedata[][2] = {
     {"Formaldehyde detector", "5120df023effeeddccbbaa041002c400"},
     {"RoPot", "71205d0183d20c6d8d7cc40d08100103"},
     {"RoPot", "71205d0188ffeeddccbbaa0d0910020100"},
-    {"MiLamp", "4030dd031d0300010100"},
     {"AprilBrother N03", "ab03aabbccddeeff64ebff7f005e01"},
 };
 
@@ -405,7 +406,6 @@ TheengsDecoder::BLE_ID_NUM test_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::JQJCY01YM,
     TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
     TheengsDecoder::BLE_ID_NUM::HHCCPOT002,
-    TheengsDecoder::BLE_ID_NUM::MUE4094RT,
     TheengsDecoder::BLE_ID_NUM::ABN03,
 };
 
@@ -925,6 +925,9 @@ const char* test_uuid[][4] = {
     {"Switchbot_Curtain 3", "0xfd3d", "servicedata", "7b804d001204"},
     {"Switchbot_Curtain 3", "0xfd3d", "servicedata", "7b4057e41106"},
     {"Switchbot_Curtain 3", "0xfd3d", "servicedata", "7bc04f391204"},
+    {"MiLamp", "0xfe95",  "servicedata", "4030dd031d0300010100"},
+    {"MiLamp", "0xfe95",  "servicedata", "4030dd030203000101"},
+    {"MiLamp", "0xfe95",  "servicedata", "3030dd0301ffeeddccbbaa0d"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1050,6 +1053,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBCU,
     TheengsDecoder::BLE_ID_NUM::SBCU,
     TheengsDecoder::BLE_ID_NUM::SBCU,
+    TheengsDecoder::BLE_ID_NUM::MUE4094RT,
+    TheengsDecoder::BLE_ID_NUM::MUE4094RT,
+    TheengsDecoder::BLE_ID_NUM::MUE4094RT,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
