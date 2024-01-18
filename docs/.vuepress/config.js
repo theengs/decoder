@@ -2,6 +2,7 @@ const commonConfig = require('./public/commonConfig');
 
 module.exports = {
   ...commonConfig,
+  title: 'Theengs Decoder: BLE message decoder',
   themeConfig: {
     repo: 'theengs/decoder',
     ...commonConfig.themeConfig,
