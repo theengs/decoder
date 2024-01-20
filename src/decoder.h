@@ -150,6 +150,7 @@ public:
     GTAG,
     BOSCHNYON,
     JAALEE,
+    APPLEAIRPODS,
     APPLEWATCH,
     APPLEDEVICE,
     IBEACON,

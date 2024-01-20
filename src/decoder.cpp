@@ -572,6 +572,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
           case 17:
             doc["type"] = "BTN"; // Button
             break;
+          case 18:
+            doc["type"] = "AUDIO"; // Button
+            break;
           case 254:
             doc["type"] = "RMAC"; // random MAC address devices
             break;

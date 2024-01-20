@@ -102,6 +102,7 @@
 #include "devices/BM6_json.h"
 #include "devices/TILT_json.h"
 #include "devices/JAALEE_json.h"
+#include "devices/APPLEAIRPODS_json.h"
 #include "devices/APPLEWATCH_json.h"
 #include "devices/APPLEDEVICE_json.h"
 #include "devices/iBeacon_json.h"
@@ -227,6 +228,7 @@ const char* _devices[][2] = {
     {_tracker_json_GTAG, _tracker_json_props},
     {_tracker_json_NYON, _tracker_json_props},
     {_JAALEE_json, _JAALEE_json_props},
+    {_APPLEAIRPODS_json, _APPLEAIRPODS_json_props},
     {_APPLEWATCH_json, _APPLEWATCH_json_props},
     {_APPLEDEVICE_json, _APPLEDEVICE_json_props},
     {_ibeacon_json, _ibeacon_json_props},
