@@ -10,4 +10,4 @@
 |Power Source|CR2032|
 |Exchanged Data|temperature, humidity, pressure, battery|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|

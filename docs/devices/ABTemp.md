@@ -10,4 +10,4 @@
 |Power Source|CR2450|
 |Exchanged Data|mfid, uuid, major, battery, temperature, txpower @ 1 m|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|

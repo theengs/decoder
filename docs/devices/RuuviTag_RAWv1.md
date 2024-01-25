@@ -10,4 +10,4 @@
 |Power Source|CR2477|
 |Exchanged Data|temperature, humidity, pressure, acceleration x/y/z-axis, voltage|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|

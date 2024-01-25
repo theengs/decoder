@@ -10,5 +10,5 @@
 |Power Source|8V-16V or 6V-20V (depending on model)|
 |Exchanged Data|battery|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|
 |Image|![BM2](./../img/BM2.png)|

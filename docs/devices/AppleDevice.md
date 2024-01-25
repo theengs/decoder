@@ -10,7 +10,7 @@
 |Power Source|Rechargeable battery|
 |Exchanged Data|unlocked|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|
 
 Currently only usefully working with the [Theengs Gateway](https://gateway.theengs.io/use/use.html#details-options) **Identity Address** and **IRK** functionality, to be able to decrypt the randomly changing Bluetooth MAC address to the static identity MAC address.
 

@@ -604,7 +604,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             jsondata["cont"] = doc["cont"];
           }
 
-          if (((data >> 3) & 0x01) == 1) { // Presence tracking conpatible
+          if (((data >> 3) & 0x01) == 1) { // Discoverable as Device Tracker
             doc.add("track");
             doc["track"] = true;
             jsondata["track"] = doc["track"];

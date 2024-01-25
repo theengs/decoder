@@ -10,5 +10,5 @@
 |Power Source|CR2032|
 |Exchanged Data|acceleration x/y/z-axis, battery|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|
 |Image|![M2](./../img/M2.png)|
