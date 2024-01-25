@@ -133,7 +133,7 @@ public:
     TAGIT,
     TILE,
     TILEN,
-    JHT_F525,
+    JAALEE,
     APPLEWATCH,
     APPLEDEVICE,
     IBEACON,

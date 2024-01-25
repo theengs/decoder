@@ -297,8 +297,8 @@ const char* expected_uuid[] = {
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100,\"mac\":\"YY:YY:YY:YY:YY:YY\"}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100,\"mac\":\"XX:XX:XX:XX:XX:XX\"}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100,\"mac\":\"FF:EE:DD:CC:BB:AA\"}",
-    "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525\",\"type\":\"THB\",\"acts\":true,\"tempc\":26.07347219,\"tempf\":78.93224994,\"hum\":34.27481498,\"batt\":100}",
-    "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525\",\"type\":\"THB\",\"acts\":true,\"tempc\":34.38353552,\"tempf\":93.89036393,\"hum\":34.80582895,\"batt\":100}",
+    "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525/F51C\",\"type\":\"THB\",\"acts\":true,\"tempc\":26.07347219,\"tempf\":78.93224994,\"hum\":34.27481498,\"batt\":100}",
+    "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525/F51C\",\"type\":\"THB\",\"acts\":true,\"tempc\":34.38353552,\"tempf\":93.89036393,\"hum\":34.80582895,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"type\":\"WCVR\",\"acts\":true,\"moving\":false,\"position\":100,\"calibrated\":true,\"lightlevel\":1,\"batt\":17}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":24,\"tempf\":75.2,\"accx\":33,\"accy\":-3,\"accz\":-1006,\"volt\":3.091}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-10.75,\"tempf\":12.65,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
@@ -339,6 +339,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"motion\":true,\"darkness\":29}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"motion\":true,\"darkness\":2}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525/F51C\",\"type\":\"THB\",\"acts\":true,\"tempc\":24.39116503,\"tempf\":75.90409705,\"hum\":23.86816205,\"batt\":100}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -928,6 +929,7 @@ const char* test_uuid[][4] = {
     {"MiLamp", "0xfe95",  "servicedata", "4030dd031d0300010100"},
     {"MiLamp", "0xfe95",  "servicedata", "4030dd030203000101"},
     {"MiLamp", "0xfe95",  "servicedata", "3030dd0301ffeeddccbbaa0d"},
+    {"Jaalee", "0xf51c", "manufacturerdata", "4c000215ebefd08370a247c89837e7b5634df52565823d1acc64"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1014,8 +1016,8 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
     TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
     TheengsDecoder::BLE_ID_NUM::CGD1,
-    TheengsDecoder::BLE_ID_NUM::JHT_F525,
-    TheengsDecoder::BLE_ID_NUM::JHT_F525,
+    TheengsDecoder::BLE_ID_NUM::JAALEE,
+    TheengsDecoder::BLE_ID_NUM::JAALEE,
     TheengsDecoder::BLE_ID_NUM::SBCU,
     TheengsDecoder::BLE_ID_NUM::BC08,
     TheengsDecoder::BLE_ID_NUM::BC08,
@@ -1056,6 +1058,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::MUE4094RT,
     TheengsDecoder::BLE_ID_NUM::MUE4094RT,
     TheengsDecoder::BLE_ID_NUM::MUE4094RT,
+    TheengsDecoder::BLE_ID_NUM::JAALEE,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
