@@ -6,7 +6,7 @@ You can do a pull request directly to the [Repository](https://github.com/theeng
 
 # Adding device decoding
 
-Device decode specifications are located in a json file, example [HHCCJCY01HHCC_json.h](../../src/devices/HHCCJCY01HHCC_json.h). The format is:
+Device decode specifications are located in a json file, example [HHCCJCY01HHCC_json.h](https://github.com/theengs/decoder/blob/development/src/devices/HHCCJCY01HHCC_json.h). The format is:
 
 ```
 R""""(
