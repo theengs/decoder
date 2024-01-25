@@ -1,6 +1,6 @@
 # Jaalee TH sensor F525/F51C
 
-|Model Id|[JAALEE](https://github.com/theengs/decoder/blob/development/src/devices/JAALEE_json.h)|
+|Model Id|[F525/F51C](https://github.com/theengs/decoder/blob/development/src/devices/JAALEE_json.h)|
 |-|-|
 |Brand|Jaalee|
 |Model|TH sensor|
