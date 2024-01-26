@@ -727,6 +727,11 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                         temp_val = val & post_proc[i + 1].as<unsigned int>();
                         break;
                       }
+                      case '^': {
+                        long long val = (long long)temp_val;
+                        temp_val = val ^ post_proc[i + 1].as<unsigned int>();
+                        break;
+                      }
                     }
                   } else if (strncmp(post_proc[i].as<const char*>(), "max", 3) == 0) {
                     if (temp_val > post_proc[i + 1].as<double>()) {
