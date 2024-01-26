@@ -317,7 +317,8 @@ Valid operations are:
 - "<" shift left
 - ">" shift right
 - "!" Not (invert), useful for bool types
-- "&" Logical And the values
+- "&" Logical AND the values
+- "^" Logical XOR the values
 - "min" the minimum allowed value
 - "max" the maximum allowed value
 
