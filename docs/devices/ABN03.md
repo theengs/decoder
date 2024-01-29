@@ -10,4 +10,4 @@
 |Power Source|CR2450|
 |Exchanged Data|temperature, humidity, luminance, battery|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|

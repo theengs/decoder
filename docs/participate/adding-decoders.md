@@ -126,7 +126,7 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan=1>Bit[4] Potential RMAC device - if not defined with Identity MAC and IRK in Theengs Gateway > "prmac":</td>
         </tr>
         <tr>
-            <td rowspan=1>Bit[3] Device compatible with presence tracking > "track":</td>
+            <td rowspan=1>Bit[3] Device discoverable as a device tracker > "track":</td>
         </tr>
         <tr>
             <td rowspan=1>Bit[2] Requires continuous scanning > "cont":</td>

@@ -10,4 +10,4 @@
 |Power Source|6V-20V|
 |Exchanged Data|battery|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|

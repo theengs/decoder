@@ -11,5 +11,5 @@
 |Power Source|
 |Exchanged Data|
 |Encrypted|
-|Presence Tracker|
+|Device Tracker|
 |Filename|

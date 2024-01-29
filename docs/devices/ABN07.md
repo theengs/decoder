@@ -10,6 +10,6 @@
 |Power Source|CR2450|
 |Exchanged Data|temperature, humidity, battery, packet ID|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|
 
 Theengs Decoder supports firmware 4.0.1 and higher on the device.

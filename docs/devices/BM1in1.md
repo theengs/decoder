@@ -10,4 +10,4 @@
 |Power Source|CR2032 (IP67 model non-changeable)|
 |Exchanged Data|temperature, battery|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|

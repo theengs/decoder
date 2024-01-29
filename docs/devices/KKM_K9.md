@@ -10,4 +10,4 @@
 |Power Source|ER14505|
 |Exchanged Data|temperature, humidity, voltage, acceleration x/y/z-axis (optional - without recognised as K6P)|
 |Encrypted|No|
-|Presence Tracker|&#9989;|
+|Device Tracker|&#9989;|
