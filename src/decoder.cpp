@@ -228,6 +228,8 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
           break;
         }
       }
+    } else if (mfg_data == nullptr && strstr(cond_str, "no-mfgdata") != nullptr) {
+      match = true;
     } else if (dev_name != nullptr && strstr(cond_str, "name") != nullptr) {
       cmp_str = dev_name;
     } else if (svc_uuid != nullptr && strstr(cond_str, "uuid") != nullptr) {
@@ -609,7 +611,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["track"] = true;
             jsondata["track"] = doc["track"];
           }
-          
+
           // bits[7-4]
           data = getBinaryData(tagstring[2]);
 

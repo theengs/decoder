@@ -205,6 +205,8 @@ making sure the additional AND condition is at the end. This has the same result
 Example: `"condition": ["servicedata", "index", 30, "!", "abcd", "&", "servicedata", "index", 0, "1234"]  
 If the value of the service data at index 30 is not 0xabcd and the data at index 0 is 0x1234, the result is a positive detection.
 
+`condition` "no-mfgdata"; This single argument condition allows to test for the non-existence of manufacturerdata in the received advertising data. 
+
 ### Properties
 Properties is a nested JSON object containing one or more JSON objects. In the example above it looks like:
 ```
