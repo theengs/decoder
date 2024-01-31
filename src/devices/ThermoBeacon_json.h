@@ -50,7 +50,7 @@ const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeaco
    }
 })"""";*/
 
-const char* _ThermoBeacon_json_props = "{\"properties\":{\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"time\":{\"unit\":\"int\",\"name\":\"timestamp\"},\"tempc_max\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"time_max\":{\"unit\":\"int\",\"name\":\"timestamp\"},\"tempc_min\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"time_min\":{\"unit\":\"int\",\"name\":\"timestamp\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
+const char* _ThermoBeacon_json_props = "{\"properties\":{\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"},\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"time\":{\"unit\":\"int\",\"name\":\"time_stamp\"},\"tempc_max\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"time_max\":{\"unit\":\"int\",\"name\":\"time_stamp\"},\"tempc_min\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"time_min\":{\"unit\":\"int\",\"name\":\"time_stamp\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
 /*R""""(
 {
    "properties":{
@@ -68,7 +68,7 @@ const char* _ThermoBeacon_json_props = "{\"properties\":{\"volt\":{\"unit\":\"V\
       },
       "time":{
          "unit":"int",
-         "name":"timestamp"
+         "name":"time_stamp"
       },
       "tempc_max":{
          "unit":"°C",
@@ -76,7 +76,7 @@ const char* _ThermoBeacon_json_props = "{\"properties\":{\"volt\":{\"unit\":\"V\
       },
       "time_max":{
          "unit":"int",
-         "name":"timestamp"
+         "name":"time_stamp"
       },
       "tempc_min":{
          "unit":"°C",
@@ -84,7 +84,7 @@ const char* _ThermoBeacon_json_props = "{\"properties\":{\"volt\":{\"unit\":\"V\
       },
       "time_min":{
          "unit":"int",
-         "name":"timestamp"
+         "name":"time_stamp"
       },
       "mac":{
          "unit":"string",
