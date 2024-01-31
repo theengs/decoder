@@ -58,14 +58,14 @@ const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Track
    }
 })"""";*/
 
-const char* _tracker_json_tile = "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"tag\":\"100f\",\"condition\":[\"uuid\",\"index\",0,\"feed\",\"|\",\"uuid\",\"index\",0,\"feec\",\"|\",\"uuid\",\"index\",0,\"fd84\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tile Tracker\"]}}}";
+const char* _tracker_json_tile = "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"tag\":\"100f\",\"condition\":[\"uuid\",\"index\",0,\"feed\",\"|\",\"uuid\",\"index\",0,\"feec\",\"|\",\"uuid\",\"index\",0,\"fd84\",\"&\",\"no-mfgdata\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tile Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Tile",
    "model":"Smart Tracker",
    "model_id":"TILE",
    "tag":"100f",
-   "condition":["uuid", "index", 0, "feed", "|", "uuid", "index", 0, "feec", "|", "uuid", "index", 0, "fd84"],
+   "condition":["uuid", "index", 0, "feed", "|", "uuid", "index", 0, "feec", "|", "uuid", "index", 0, "fd84", "&", "no-mfgdata"],
    "properties":{
       "device":{
          "decoder":["static_value", "Tile Tracker"]
