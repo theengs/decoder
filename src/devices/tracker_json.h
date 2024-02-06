@@ -88,6 +88,36 @@ const char* _tracker_json_tilename = "{\"brand\":\"Tile\",\"model\":\"Smart Trac
    }
 })"""";*/
 
+const char* _tracker_json_theengs01 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB01\",\"tag\":\"1009\",\"condition\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e31\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
+/*R""""(
+{
+   "brand":"Theengs",
+   "model":"iBeacon Tracker",
+   "model_id":"TheengsIB01",
+   "tag":"1009",
+   "condition":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e31"],
+   "properties":{
+      "device":{
+         "decoder":["static_value", "Theengs iBeacon Tracker"]
+      }
+   }
+})"""";*/
+
+const char* _tracker_json_theengs02 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"tag\":\"1019\",\"condition\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e32\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
+/*R""""(
+{
+   "brand":"Theengs",
+   "model":"iBeacon Tracker",
+   "model_id":"TheengsIB02",
+   "tag":"1019",
+   "condition":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e32"],
+   "properties":{
+      "device":{
+         "decoder":["static_value", "Theengs iBeacon Tracker"]
+      }
+   }
+})"""";*/
+
 const char* _tracker_json_props = "{\"properties\":{\"device\":{\"unit\":\"string\",\"name\":\"tracker device\"}}}";
 /*R""""(
 {
