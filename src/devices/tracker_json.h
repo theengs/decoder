@@ -118,6 +118,21 @@ const char* _tracker_json_theengs02 = "{\"brand\":\"Theengs\",\"model\":\"iBeaco
    }
 })"""";*/
 
+const char* _tracker_json_TICWATCHGTH = "{\"brand\":\"Mobvoi\",\"model\":\"TicWatch GTH (Pro)\",\"model_id\":\"TICWATCHGTH\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"TicWatch GTH\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"TicWatch GTH (Pro) Tracker\"]}}}";
+/*R""""(
+{
+   "brand":"Mobvoi",
+   "model":"TicWatch GTH (Pro)",
+   "model_id":"TICWATCHGTH",
+   "tag":"100b",
+   "condition":["name", "index", 0, "TicWatch GTH"],
+   "properties":{
+      "device":{
+         "decoder":["static_value", "TicWatch GTH (Pro) Tracker"]
+      }
+   }
+})"""";*/
+
 const char* _tracker_json_props = "{\"properties\":{\"device\":{\"unit\":\"string\",\"name\":\"tracker device\"}}}";
 /*R""""(
 {
