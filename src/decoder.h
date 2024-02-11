@@ -135,6 +135,7 @@ public:
     TILEN,
     TheengsIB01,
     TheengsIB02,
+    TICWATCHGTH,
     JAALEE,
     APPLEWATCH,
     APPLEDEVICE,

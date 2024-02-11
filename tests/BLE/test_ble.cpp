@@ -144,6 +144,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple\",\"model\":\"Apple iPhone/iPad\",\"model_id\":\"APPLEDEVICE\",\"type\":\"TRACK\",\"track\":true,\"prmac\":true,\"unlocked\":true}",
     "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB01\",\"type\":\"TRACK\",\"cidc\":false,\"track\":true,\"device\":\"Theengs iBeacon Tracker\"}",
     "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"type\":\"TRACK\",\"cidc\":false,\"track\":true,\"prmac\":true,\"device\":\"Theengs iBeacon Tracker\"}",
+    "{\"brand\":\"Mobvoi\",\"model\":\"TicWatch GTH (Pro)\",\"model_id\":\"TICWATCHGTH\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"TicWatch GTH (Pro) Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -538,6 +539,7 @@ const char* test_mfgdata[][3] = {
     {"Apple", "iPad", "4c0010050b1c93fbf5"},
     {"Theengs", "iBeacon Tracker", "4c000215546865656e67732d69426561636f6e31f644000064"},
     {"Theengs", "iBeacon Tracker", "4c000215546865656e67732d69426561636f6e32f644000064"},
+    {"Mobvoi", "TicWatch GTH Pro", "0000aabbccddeeff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -665,6 +667,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::APPLEDEVICE,
     TheengsDecoder::BLE_ID_NUM::TheengsIB01,
     TheengsDecoder::BLE_ID_NUM::TheengsIB02,
+    TheengsDecoder::BLE_ID_NUM::TICWATCHGTH,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
