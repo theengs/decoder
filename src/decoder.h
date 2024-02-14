@@ -123,6 +123,7 @@ public:
     AMPHIRO,
     ORALB_BT,
     PH10,
+    XOSSX2,
     TPTH,
     MOPEKA,
     T201,

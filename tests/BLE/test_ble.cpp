@@ -145,6 +145,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB01\",\"type\":\"TRACK\",\"cidc\":false,\"track\":true,\"device\":\"Theengs iBeacon Tracker\"}",
     "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"type\":\"TRACK\",\"cidc\":false,\"track\":true,\"prmac\":true,\"device\":\"Theengs iBeacon Tracker\"}",
     "{\"brand\":\"Mobvoi\",\"model\":\"TicWatch GTH (Pro)\",\"model_id\":\"TICWATCHGTH\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"TicWatch GTH (Pro) Tracker\"}",
+    "{\"brand\":\"XOSS\",\"model\":\"X2 Heart Rate Sensor\",\"model_id\":\"XOSSX2\",\"type\":\"BODY\",\"cidc\":false,\"bpm\":63,\"batt\":97}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -540,6 +541,7 @@ const char* test_mfgdata[][3] = {
     {"Theengs", "iBeacon Tracker", "4c000215546865656e67732d69426561636f6e31f644000064"},
     {"Theengs", "iBeacon Tracker", "4c000215546865656e67732d69426561636f6e32f644000064"},
     {"Mobvoi", "TicWatch GTH Pro", "0000aabbccddeeff"},
+    {"XOSS", "X2", "04ff0161063f"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -668,6 +670,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::TheengsIB01,
     TheengsDecoder::BLE_ID_NUM::TheengsIB02,
     TheengsDecoder::BLE_ID_NUM::TICWATCHGTH,
+    TheengsDecoder::BLE_ID_NUM::XOSSX2,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
