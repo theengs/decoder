@@ -165,7 +165,7 @@ const char* expected_name_uuid_mfgsvcdata[] = {
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1,\"mac\":\"BC:02:6E:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"button\":1,\"mac\":\"BC:02:6E:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\",\"mac\":\"BC:02:6E:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window\",\"model_id\":\"SBDW-002C\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":93,\"batt\":100,\"lux\":87,\"open\":true,\"rot\":40.6,\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window\",\"model_id\":\"SBDW-002C\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":86,\"batt\":100,\"lux\":673,\"open\":false,\"rot\":0,\"mac\":\"3C:2E:F5:AA:BB:CC\"}",
@@ -196,11 +196,11 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX\",\"type\":\"THB\",\"tempc\":19.23,\"tempf\":66.614,\"hum\":48.36,\"batt\":100,\"volt\":2.959,\"mac\":\"A4:C1:38:52:8F:62\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX\",\"type\":\"THB\",\"tempc\":-6.7,\"tempf\":19.94,\"hum\":50.53,\"batt\":100,\"volt\":3.143,\"mac\":\"A4:C1:38:CF:01:56\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX\",\"type\":\"THB\",\"tempc\":24.28,\"tempf\":75.704,\"hum\":43.65,\"batt\":100,\"volt\":3.125,\"mac\":\"A4:C1:38:DF:DE:2F\"}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"press\":1}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":30,\"batt\":100,\"press\":2}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":31,\"batt\":100,\"press\":3}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":32,\"batt\":100,\"press\":4}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":171,\"batt\":100,\"press\":1}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":29,\"batt\":100,\"button\":1}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":30,\"batt\":100,\"button\":2}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":31,\"batt\":100,\"button\":3}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":32,\"batt\":100,\"button\":9}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":171,\"batt\":100,\"button\":1}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"62511158bd25\",\"ctr\":\"b8f09364\",\"mic\":\"5b573115\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_ENCR\",\"type\":\"THB\",\"encr\":1,\"cipher\":\"ef56583dd420\",\"ctr\":\"23\",\"mic\":\"50fe8e4d\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_DECR\",\"type\":\"THB\",\"tempc\":24.60,\"tempf\":76.28,\"hum\":43.54,\"batt\":100}",
@@ -344,11 +344,11 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"motion\":true,\"darkness\":2}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525/F51C\",\"type\":\"THB\",\"acts\":true,\"tempc\":24.39116503,\"tempf\":75.90409705,\"hum\":23.86816205,\"batt\":100}",
-    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"short click\",\"color\":\"Lagoon\",\"batt\":99}",
-    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"double click\",\"color\":\"Lagoon\",\"batt\":99}",
-    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"long press\",\"color\":\"Lagoon\",\"batt\":96}",
-    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"button release\",\"color\":\"Lagoon\",\"batt\":98}",
-    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"triple click\",\"color\":\"CozyGrey\",\"batt\":89}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":1,\"color\":\"Lagoon\",\"batt\":99}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":2,\"color\":\"Lagoon\",\"batt\":99}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":9,\"color\":\"Lagoon\",\"batt\":96}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":10,\"color\":\"Lagoon\",\"batt\":98}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":3,\"color\":\"CozyGrey\",\"batt\":89}",
 };
 
 const char* expected_mac_mfg[] = {
