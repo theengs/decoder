@@ -49,6 +49,7 @@
 #include "devices/MBXPRO_json.h"
 #include "devices/MS_CDP_json.h"
 #include "devices/MUE4094RT_json.h"
+#include "devices/NODONNIU_json.h"
 #include "devices/Miband_json.h"
 #include "devices/XMTZC04HMKG_json.h"
 #include "devices/XMTZC04HMLB_json.h"
@@ -156,6 +157,7 @@ const char* _devices[][2] = {
     {_H5179_json, _H5179_json_props},
     {_HHCCJCY10_json, _HHCCJCY10_json_props},
     {_MUE4094RT_json, _MUE4094RT_json_props},
+    {_NODONNIU_json, _NODONNIU_json_props},
     {_Mokobeacon_json, _Mokobeacon_json_props},
     {_MBXPRO_json, _MBXPRO_json_props},
     {_iNodeEM_json, _iNodeEM_json_props},

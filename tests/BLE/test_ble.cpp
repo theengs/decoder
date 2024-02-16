@@ -344,6 +344,11 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"motion\":true,\"darkness\":2}",
     "{\"brand\":\"Xiaomi\",\"model\":\"MiLamp\",\"model_id\":\"MUE4094RT\",\"type\":\"CTMO\",\"cont\":true,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525/F51C\",\"type\":\"THB\",\"acts\":true,\"tempc\":24.39116503,\"tempf\":75.90409705,\"hum\":23.86816205,\"batt\":100}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"short click\",\"color\":\"Lagoon\",\"batt\":99}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"double click\",\"color\":\"Lagoon\",\"batt\":99}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"long press\",\"color\":\"Lagoon\",\"batt\":96}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"button release\",\"color\":\"Lagoon\",\"batt\":98}",
+    "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":\"triple click\",\"color\":\"CozyGrey\",\"batt\":89}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -942,6 +947,11 @@ const char* test_uuid[][4] = {
     {"MiLamp", "0xfe95",  "servicedata", "4030dd030203000101"},
     {"MiLamp", "0xfe95",  "servicedata", "3030dd0301ffeeddccbbaa0d"},
     {"Jaalee", "0xf51c", "manufacturerdata", "4c000215ebefd08370a247c89837e7b5634df52565823d1acc64"},
+    {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a521520006635ab801"},
+    {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a52152000663ee4b02"},
+    {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a52152000660259003"},
+    {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a521520006622b8104"},
+    {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a521520004595eb905"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1071,6 +1081,11 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::MUE4094RT,
     TheengsDecoder::BLE_ID_NUM::MUE4094RT,
     TheengsDecoder::BLE_ID_NUM::JAALEE,
+    TheengsDecoder::BLE_ID_NUM::NODONNIU,
+    TheengsDecoder::BLE_ID_NUM::NODONNIU,
+    TheengsDecoder::BLE_ID_NUM::NODONNIU,
+    TheengsDecoder::BLE_ID_NUM::NODONNIU,
+    TheengsDecoder::BLE_ID_NUM::NODONNIU,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]

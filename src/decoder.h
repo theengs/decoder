@@ -89,6 +89,7 @@ public:
     H5179,
     HHCCJCY10,
     MUE4094RT,
+    NODONNIU,
     MOKOBEACON,
     MOKOBEACONXPRO,
     INODEEM,
