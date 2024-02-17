@@ -821,8 +821,14 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               JsonArray lookup = prop["lookup"];
               for (unsigned int i = 0; i < lookup.size(); i += 2) {
                 if (lookup[i].as<std::string>() == value) {
-                  value = lookup[i + 1].as<std::string>();
-                  jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
+                  if (lookup[i + 1].as<std::string>() != lookup[i + 1]) {
+                    int valueint = lookup[i + 1].as<int>();
+                    jsondata[sanitizeJsonKey(kv.key().c_str())] = valueint;
+                  } else {
+                    value = lookup[i + 1].as<std::string>();
+                    jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
+                  }
+
                   success = i_main;
                   break;
                 }
