@@ -146,6 +146,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"type\":\"TRACK\",\"cidc\":false,\"track\":true,\"prmac\":true,\"device\":\"Theengs iBeacon Tracker\"}",
     "{\"brand\":\"Mobvoi\",\"model\":\"TicWatch GTH (Pro)\",\"model_id\":\"TICWATCHGTH\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"TicWatch GTH (Pro) Tracker\"}",
     "{\"brand\":\"XOSS\",\"model\":\"X2 Heart Rate Sensor\",\"model_id\":\"XOSSX2\",\"type\":\"BODY\",\"cidc\":false,\"bpm\":63,\"batt\":97}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":22.9,\"tempf\":73.22,\"hum\":47,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":23,\"tempf\":73.4,\"hum\":50,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":22.8,\"tempf\":73.04,\"hum\":91,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -547,6 +550,9 @@ const char* test_mfgdata[][3] = {
     {"Theengs", "iBeacon Tracker", "4c000215546865656e67732d69426561636f6e32f644000064"},
     {"Mobvoi", "TicWatch GTH Pro", "0000aabbccddeeff"},
     {"XOSS", "X2", "04ff0161063f"},
+    {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff4a0109962f"},
+    {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff4801009732"},
+    {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff3e0908965b"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -676,6 +682,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::TheengsIB02,
     TheengsDecoder::BLE_ID_NUM::TICWATCHGTH,
     TheengsDecoder::BLE_ID_NUM::XOSSX2,
+    TheengsDecoder::BLE_ID_NUM::SBMT_M,
+    TheengsDecoder::BLE_ID_NUM::SBMT_M,
+    TheengsDecoder::BLE_ID_NUM::SBMT_M,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
