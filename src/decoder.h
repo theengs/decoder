@@ -99,6 +99,7 @@ public:
     SBCU,
     SBMS,
     SBMT,
+    SBMT_M,
     SBOT,
     SBS1,
     SHT4X,
