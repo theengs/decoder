@@ -8,7 +8,9 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|Rechargeable battery|
-|Exchanged Data|steps, activity heart rate (when activated in the Zepp Life settings)|
+|Exchanged Data|steps (*), activity heart rate (when activated in the Zepp Life settings)|
 |Encrypted|No|
 |Device Tracker|&#9989;|
 |Image|![MiBand](./../img/MiBand.png)|
+
+(*) Starting with Mi Band 7 the steps don't seem to be freely broadcast any longer so that only the activity heart rate is available.
