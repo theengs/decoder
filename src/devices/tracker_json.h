@@ -133,6 +133,21 @@ const char* _tracker_json_TICWATCHGTH = "{\"brand\":\"Mobvoi\",\"model\":\"TicWa
    }
 })"""";*/
 
+const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"tag\":\"1008\",\"condition\":[\"manufacturerdata\",\"=\",24,\"index\",0,\"800102151234\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Gigaset G-Tag Tracker\"]}}}";
+/*R""""(
+{
+   "brand":"Gigaset",
+   "model":"G-Tag",
+   "model_id":"GTAG",
+   "tag":"1008",
+   "condition":["manufacturerdata", "=", 24, "index", 0, "800102151234"],
+   "properties":{
+      "device":{
+         "decoder":["static_value", "Gigaset G-Tag Tracker"]
+      }
+   }
+})"""";*/
+
 const char* _tracker_json_props = "{\"properties\":{\"device\":{\"unit\":\"string\",\"name\":\"tracker device\"}}}";
 /*R""""(
 {

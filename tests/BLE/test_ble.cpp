@@ -149,6 +149,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":22.9,\"tempf\":73.22,\"hum\":47,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":23,\"tempf\":73.4,\"hum\":50,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":22.8,\"tempf\":73.04,\"hum\":91,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"type\":\"TRACK\",\"track\":true,\"device\":\"Gigaset G-Tag Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -553,6 +554,7 @@ const char* test_mfgdata[][3] = {
     {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff4a0109962f"},
     {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff4801009732"},
     {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff3e0908965b"},
+    {"Gigaset G-Tag", "", "80010215123480c390ffbbc5"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -685,6 +687,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBMT_M,
     TheengsDecoder::BLE_ID_NUM::SBMT_M,
     TheengsDecoder::BLE_ID_NUM::SBMT_M,
+    TheengsDecoder::BLE_ID_NUM::GTAG,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

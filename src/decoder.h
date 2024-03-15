@@ -139,6 +139,7 @@ public:
     TheengsIB01,
     TheengsIB02,
     TICWATCHGTH,
+    GTAG,
     JAALEE,
     APPLEWATCH,
     APPLEDEVICE,
