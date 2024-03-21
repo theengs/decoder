@@ -31,7 +31,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":26.8,\"tempf\":80.24,\"hum\":52.6,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":-7.3481,\"tempf\":18.77342,\"hum\":48.1,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":27.5,\"tempf\":81.5,\"hum\":53.1,\"batt\":100}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":21.9,\"tempf\":71.42,\"hum\":40.6,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":21.9,\"tempf\":71.42,\"hum\":40.6,\"batt\":100}",
     "{\"brand\":\"Inkbird\",\"model\":\"T(H) Sensor\",\"model_id\":\"IBS-TH1/TH2/P01B/ITH-12S\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":26.62,\"tempf\":79.916,\"extprobe\":false,\"hum\":82.17,\"batt\":89}",
     "{\"brand\":\"Inkbird\",\"model\":\"T(H) Sensor\",\"model_id\":\"IBS-TH1/TH2/P01B/ITH-12S\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-11.62,\"tempf\":11.084,\"extprobe\":false,\"batt\":89}",
     "{\"brand\":\"Inkbird\",\"model\":\"T(H) Sensor\",\"model_id\":\"IBS-TH1/TH2/P01B/ITH-12S\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":2.27,\"tempf\":36.086,\"extprobe\":false,\"hum\":19.79,\"batt\":100}",
@@ -80,8 +80,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"type\":\"AIR\",\"tempc\":-10,\"tempf\":14,\"hum\":76.80323491,\"co2\":745}",
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"type\":\"AIR\",\"tempc\":25.63286793,\"tempf\":78.13916228,\"hum\":36.16083009,\"co2\":1035}",
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"type\":\"AIR\",\"tempc\":28.14831769,\"tempf\":82.66697185,\"hum\":38.09872587,\"co2\":1434}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22,\"tempf\":71.6,\"hum\":69.1,\"batt\":100}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-7.2,\"tempf\":19.04,\"hum\":29.5,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22,\"tempf\":71.6,\"hum\":69.1,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-7.2,\"tempf\":19.04,\"hum\":29.5,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":22.44,\"tempf\":72.392,\"hum\":74.59,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":-13.76,\"tempf\":7.232,\"hum\":60.92,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":25.87,\"tempf\":78.566,\"hum\":65.55,\"batt\":100}",
@@ -118,7 +118,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Mopeka/Lippert\",\"model\":\"Pro Check (Universal)/BottleCheck Sensor\",\"model_id\":\"M1017\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":21,\"tempf\":69.8,\"lvl_cm\":86.60031125,\"lvl_in\":34.09461073,\"sync\":false,\"volt\":3,\"batt\":100,\"quality\":3,\"accx\":-18,\"accy\":31}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"track\":true,\"batt\":87,\"device\":\"BM2 Tracker\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"track\":true,\"batt\":73,\"device\":\"BM2 Tracker\"}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":26,\"tempf\":78.8,\"hum\":51,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":26,\"tempf\":78.8,\"hum\":51,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":20.3,\"tempf\":68.54,\"hum\":57.2,\"batt\":65}",
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"idle\",\"mode\":\"off\",\"pressure\":54,\"time\":0}",
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"running\",\"mode\":\"daily clean\",\"sector\":3,\"pressure\":50,\"duration\":63}",
@@ -150,6 +150,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":23,\"tempf\":73.4,\"hum\":50,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":22.8,\"tempf\":73.04,\"hum\":91,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"type\":\"TRACK\",\"track\":true,\"device\":\"Gigaset G-Tag Tracker\"}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":44.6,\"batt\":100}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -555,6 +556,7 @@ const char* test_mfgdata[][3] = {
     {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff4801009732"},
     {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff3e0908965b"},
     {"Gigaset G-Tag", "", "80010215123480c390ffbbc5"},
+    {"H5105", "GVH5105_1234", "0100010103787664"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -688,6 +690,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBMT_M,
     TheengsDecoder::BLE_ID_NUM::SBMT_M,
     TheengsDecoder::BLE_ID_NUM::GTAG,
+    TheengsDecoder::BLE_ID_NUM::H5102,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
