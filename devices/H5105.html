@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Govee H5105 | Theengs Decoder: BLE message decoder</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="apple-touch-icon" sizes="180x180" href=".apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="Theengs: the open-source interoperability platform that bridges hundreds of sensors into one interface. Compatible with major IoT and home automation solutions like AWS, OpenHAB, Home Assistant, and Jeedom. It supports MQTT protocol, enabling efficient integration and automation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/favicon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.e43f3e2e.css" as="style"><link rel="preload" href="/assets/js/app.14435146.js" as="script"><link rel="preload" href="/assets/js/2.484d3e4b.js" as="script"><link rel="preload" href="/assets/js/63.60c223b3.js" as="script"><link rel="prefetch" href="/assets/js/10.9599f487.js"><link rel="prefetch" href="/assets/js/100.ce7961dc.js"><link rel="prefetch" href="/assets/js/101.3d6bdf94.js"><link rel="prefetch" href="/assets/js/102.af5a742c.js"><link rel="prefetch" href="/assets/js/103.4cb044ce.js"><link rel="prefetch" href="/assets/js/104.90f30f19.js"><link rel="prefetch" href="/assets/js/105.e9f7c6fc.js"><link rel="prefetch" href="/assets/js/106.eb375884.js"><link rel="prefetch" href="/assets/js/107.bb357e8b.js"><link rel="prefetch" href="/assets/js/108.2ad41370.js"><link rel="prefetch" href="/assets/js/109.9825fce5.js"><link rel="prefetch" href="/assets/js/11.ca4090c3.js"><link rel="prefetch" href="/assets/js/110.66afe60c.js"><link rel="prefetch" href="/assets/js/111.d0323429.js"><link rel="prefetch" href="/assets/js/112.db42848f.js"><link rel="prefetch" href="/assets/js/113.b7e6f761.js"><link rel="prefetch" href="/assets/js/114.f82d5c9b.js"><link rel="prefetch" href="/assets/js/115.03b7cbfe.js"><link rel="prefetch" href="/assets/js/116.33bc55f9.js"><link rel="prefetch" href="/assets/js/12.0cba03b6.js"><link rel="prefetch" href="/assets/js/13.7180f037.js"><link rel="prefetch" href="/assets/js/14.98fdd00f.js"><link rel="prefetch" href="/assets/js/15.43d9895e.js"><link rel="prefetch" href="/assets/js/16.bb8af908.js"><link rel="prefetch" href="/assets/js/17.fe677de8.js"><link rel="prefetch" href="/assets/js/18.b719775f.js"><link rel="prefetch" href="/assets/js/19.38b2c194.js"><link rel="prefetch" href="/assets/js/20.afebfa9c.js"><link rel="prefetch" href="/assets/js/21.dd6d53e9.js"><link rel="prefetch" href="/assets/js/22.d0face03.js"><link rel="prefetch" href="/assets/js/23.3bf05556.js"><link rel="prefetch" href="/assets/js/24.53567b95.js"><link rel="prefetch" href="/assets/js/25.bc9c8825.js"><link rel="prefetch" href="/assets/js/26.339b41ca.js"><link rel="prefetch" href="/assets/js/27.508ce71d.js"><link rel="prefetch" href="/assets/js/28.cda4e526.js"><link rel="prefetch" href="/assets/js/29.ff38cc8e.js"><link rel="prefetch" href="/assets/js/3.bde14868.js"><link rel="prefetch" href="/assets/js/30.fdb96972.js"><link rel="prefetch" href="/assets/js/31.5aecaa1b.js"><link rel="prefetch" href="/assets/js/32.e8c04ff5.js"><link rel="prefetch" href="/assets/js/33.39e416dc.js"><link rel="prefetch" href="/assets/js/34.ec41d732.js"><link rel="prefetch" href="/assets/js/35.3e479a4e.js"><link rel="prefetch" href="/assets/js/36.a9e21fc2.js"><link rel="prefetch" href="/assets/js/37.0f268481.js"><link rel="prefetch" href="/assets/js/38.1f48aac4.js"><link rel="prefetch" href="/assets/js/39.031a88c0.js"><link rel="prefetch" href="/assets/js/4.f110d252.js"><link rel="prefetch" href="/assets/js/40.5cb2d0a7.js"><link rel="prefetch" href="/assets/js/41.feca2e6b.js"><link rel="prefetch" href="/assets/js/42.54c723b5.js"><link rel="prefetch" href="/assets/js/43.6eb4d5e5.js"><link rel="prefetch" href="/assets/js/44.9821d563.js"><link rel="prefetch" href="/assets/js/45.97754c06.js"><link rel="prefetch" href="/assets/js/46.eefccefe.js"><link rel="prefetch" href="/assets/js/47.aa775bda.js"><link rel="prefetch" href="/assets/js/48.476fd02d.js"><link rel="prefetch" href="/assets/js/49.4e499b69.js"><link rel="prefetch" href="/assets/js/5.c56839bf.js"><link rel="prefetch" href="/assets/js/50.82575be8.js"><link rel="prefetch" href="/assets/js/51.b877c98a.js"><link rel="prefetch" href="/assets/js/52.ce4b07ae.js"><link rel="prefetch" href="/assets/js/53.0421766c.js"><link rel="prefetch" href="/assets/js/54.1ec69787.js"><link rel="prefetch" href="/assets/js/55.4f9ed63f.js"><link rel="prefetch" href="/assets/js/56.5d9045c7.js"><link rel="prefetch" href="/assets/js/57.10b60402.js"><link rel="prefetch" href="/assets/js/58.3d24cc55.js"><link rel="prefetch" href="/assets/js/59.ad821971.js"><link rel="prefetch" href="/assets/js/6.9f698869.js"><link rel="prefetch" href="/assets/js/60.6d35a6b5.js"><link rel="prefetch" href="/assets/js/61.8b43456d.js"><link rel="prefetch" href="/assets/js/62.00a160a9.js"><link rel="prefetch" href="/assets/js/64.912b0c8f.js"><link rel="prefetch" href="/assets/js/65.520058a6.js"><link rel="prefetch" href="/assets/js/66.b5ec4a90.js"><link rel="prefetch" href="/assets/js/67.02c47bab.js"><link rel="prefetch" href="/assets/js/68.c76beaef.js"><link rel="prefetch" href="/assets/js/69.ee901612.js"><link rel="prefetch" href="/assets/js/7.a04ca7f1.js"><link rel="prefetch" href="/assets/js/70.a596606c.js"><link rel="prefetch" href="/assets/js/71.7d6084de.js"><link rel="prefetch" href="/assets/js/72.c50209be.js"><link rel="prefetch" href="/assets/js/73.6c97b117.js"><link rel="prefetch" href="/assets/js/74.30b338ce.js"><link rel="prefetch" href="/assets/js/75.e70b7bfb.js"><link rel="prefetch" href="/assets/js/76.df9cba00.js"><link rel="prefetch" href="/assets/js/77.cf26d3c5.js"><link rel="prefetch" href="/assets/js/78.4e6424d5.js"><link rel="prefetch" href="/assets/js/79.37f05c70.js"><link rel="prefetch" href="/assets/js/8.82c1d730.js"><link rel="prefetch" href="/assets/js/80.42da26fc.js"><link rel="prefetch" href="/assets/js/81.eda57587.js"><link rel="prefetch" href="/assets/js/82.810ab6d1.js"><link rel="prefetch" href="/assets/js/83.a8c2827c.js"><link rel="prefetch" href="/assets/js/84.875e1ddb.js"><link rel="prefetch" href="/assets/js/85.343c7286.js"><link rel="prefetch" href="/assets/js/86.e9de45aa.js"><link rel="prefetch" href="/assets/js/87.a36a1a6e.js"><link rel="prefetch" href="/assets/js/88.65ed1cbb.js"><link rel="prefetch" href="/assets/js/89.bcc5a527.js"><link rel="prefetch" href="/assets/js/9.fc12dcfc.js"><link rel="prefetch" href="/assets/js/90.64d069fa.js"><link rel="prefetch" href="/assets/js/91.7d3fa96d.js"><link rel="prefetch" href="/assets/js/92.b7a885ac.js"><link rel="prefetch" href="/assets/js/93.bbe41e59.js"><link rel="prefetch" href="/assets/js/94.cfabc928.js"><link rel="prefetch" href="/assets/js/95.6b4be764.js"><link rel="prefetch" href="/assets/js/96.2da93ba3.js"><link rel="prefetch" href="/assets/js/97.f9a3608b.js"><link rel="prefetch" href="/assets/js/98.75da8784.js"><link rel="prefetch" href="/assets/js/99.6c6c735b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e43f3e2e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Theengs Decoder: BLE message decoder</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.theengs.io" target="_self" class="nav-link external">
+  Home
+  <!----></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Use cases" class="dropdown-title"><span class="title">Use cases</span> <span class="arrow down"></span></button> <button type="button" aria-label="Use cases" class="mobile-dropdown-title"><span class="title">Use cases</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.theengs.io/usecases/smarthome.html" target="_self" class="nav-link external">
+  Smart Home
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://www.theengs.io/usecases/iot.html" target="_self" class="nav-link external">
+  IoT
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://www.theengs.io/usecases/research.html" target="_self" class="nav-link external">
+  Research
+  <!----></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Solutions" class="dropdown-title"><span class="title">Solutions</span> <span class="arrow down"></span></button> <button type="button" aria-label="Solutions" class="mobile-dropdown-title"><span class="title">Solutions</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Hardware
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://shop.theengs.io/products/theengs-plug-smart-plug-ble-gateway-and-energy-consumption" target="_self" class="nav-link external">
+  Theengs Plug
+  <!----></a></li><li class="dropdown-subitem"><a href="https://shop.theengs.io/products/theengs-bridge-esp32-ble-mqtt-gateway-with-ethernet-and-external-antenna" target="_self" class="nav-link external">
+  Theengs Bridge
+  <!----></a></li></ul></li><li class="dropdown-item"><h4>
+          Software
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://app.theengs.io" target="_self" class="nav-link external">
+  Mobile App
+  <!----></a></li><li class="dropdown-subitem"><a href="https://docs.openmqttgateway.com" target="_self" class="nav-link external">
+  OpenMQTTGateway
+  <!----></a></li><li class="dropdown-subitem"><a href="https://gateway.theengs.io" target="_self" class="nav-link external">
+  Gateway
+  <!----></a></li></ul></li><li class="dropdown-item"><h4>
+          Core
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://decoder.theengs.io" target="_self" class="nav-link external">
+  Decoder
+  <!----></a></li><li class="dropdown-subitem"><a href="https://parser.theengs.io" target="_self" class="nav-link external">
+  Web Parser
+  <!----></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://decoder.theengs.io/devices/devices.html" target="_self" class="nav-link external">
+  Compatible devices
+  <!----></a></div><div class="nav-item"><a href="https://community.openmqttgateway.com" target="_self" class="nav-link external">
+  Community
+  <!----></a></div><div class="nav-item"><a href="https://shop.theengs.io/" target="_self" class="nav-link external">
+  Shop
+  <!----></a></div><div class="nav-item"><a href="https://github.com/sponsors/theengs" target="_self" class="nav-link external">
+  Sponsor 🤍
+  <!----></a></div> <a href="https://github.com/theengs/decoder" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.theengs.io" target="_self" class="nav-link external">
+  Home
+  <!----></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Use cases" class="dropdown-title"><span class="title">Use cases</span> <span class="arrow down"></span></button> <button type="button" aria-label="Use cases" class="mobile-dropdown-title"><span class="title">Use cases</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.theengs.io/usecases/smarthome.html" target="_self" class="nav-link external">
+  Smart Home
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://www.theengs.io/usecases/iot.html" target="_self" class="nav-link external">
+  IoT
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://www.theengs.io/usecases/research.html" target="_self" class="nav-link external">
+  Research
+  <!----></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Solutions" class="dropdown-title"><span class="title">Solutions</span> <span class="arrow down"></span></button> <button type="button" aria-label="Solutions" class="mobile-dropdown-title"><span class="title">Solutions</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Hardware
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://shop.theengs.io/products/theengs-plug-smart-plug-ble-gateway-and-energy-consumption" target="_self" class="nav-link external">
+  Theengs Plug
+  <!----></a></li><li class="dropdown-subitem"><a href="https://shop.theengs.io/products/theengs-bridge-esp32-ble-mqtt-gateway-with-ethernet-and-external-antenna" target="_self" class="nav-link external">
+  Theengs Bridge
+  <!----></a></li></ul></li><li class="dropdown-item"><h4>
+          Software
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://app.theengs.io" target="_self" class="nav-link external">
+  Mobile App
+  <!----></a></li><li class="dropdown-subitem"><a href="https://docs.openmqttgateway.com" target="_self" class="nav-link external">
+  OpenMQTTGateway
+  <!----></a></li><li class="dropdown-subitem"><a href="https://gateway.theengs.io" target="_self" class="nav-link external">
+  Gateway
+  <!----></a></li></ul></li><li class="dropdown-item"><h4>
+          Core
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://decoder.theengs.io" target="_self" class="nav-link external">
+  Decoder
+  <!----></a></li><li class="dropdown-subitem"><a href="https://parser.theengs.io" target="_self" class="nav-link external">
+  Web Parser
+  <!----></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://decoder.theengs.io/devices/devices.html" target="_self" class="nav-link external">
+  Compatible devices
+  <!----></a></div><div class="nav-item"><a href="https://community.openmqttgateway.com" target="_self" class="nav-link external">
+  Community
+  <!----></a></div><div class="nav-item"><a href="https://shop.theengs.io/" target="_self" class="nav-link external">
+  Shop
+  <!----></a></div><div class="nav-item"><a href="https://github.com/sponsors/theengs" target="_self" class="nav-link external">
+  Sponsor 🤍
+  <!----></a></div> <a href="https://github.com/theengs/decoder" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">0 - What is it for 🏠</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>1 - Use ✈️</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2 - Participate 💻</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="govee-h5105"><a href="#govee-h5105" class="header-anchor">#</a> Govee H5105</h1> <table><thead><tr><th>Model Id</th> <th><a href="https://github.com/theengs/decoder/blob/development/src/devices/H5102_json.h" target="_blank" rel="noopener noreferrer">H5105<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></th></tr></thead> <tbody><tr><td>Brand</td> <td>Govee</td></tr> <tr><td>Model</td> <td>Smart Thermo Hygrometer</td></tr> <tr><td>Short Description</td> <td>Indoor Digital Humidity and Temperature monitor with LCD display</td></tr> <tr><td>Communication</td> <td>BLE broadcast</td></tr> <tr><td>Frequency</td> <td>2.4Ghz</td></tr> <tr><td>Power Source</td> <td>CR2450</td></tr> <tr><td>Exchanged Data</td> <td>temperature, humidity, battery</td></tr> <tr><td>Encrypted</td> <td>No</td></tr></tbody></table></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/theengs/decoder/edit/development/docs/devices/H5105.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/21/2024, 8:44:17 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.14435146.js" defer></script><script src="/assets/js/2.484d3e4b.js" defer></script><script src="/assets/js/63.60c223b3.js" defer></script>
+  </body>
+</html>
