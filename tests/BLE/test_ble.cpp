@@ -354,6 +354,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":9,\"color\":\"Lagoon\",\"batt\":96}",
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":10,\"color\":\"Lagoon\",\"batt\":98}",
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":3,\"color\":\"CozyGrey\",\"batt\":89}",
+    "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP108\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -967,6 +968,7 @@ const char* test_uuid[][4] = {
     {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a52152000660259003"},
     {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a521520006622b8104"},
     {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a521520004595eb905"},
+    {"Feasycom BP108", "0xfff0", "servicedata", "27021992aabbccddeeff64"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1101,6 +1103,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::NODONNIU,
     TheengsDecoder::BLE_ID_NUM::NODONNIU,
     TheengsDecoder::BLE_ID_NUM::NODONNIU,
+    TheengsDecoder::BLE_ID_NUM::FEASY,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
