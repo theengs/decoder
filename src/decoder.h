@@ -112,6 +112,7 @@ public:
     BM3IN1,
     BM4IN1,
     MS_CDP,
+    FEASY,
     GAEN,
     HHCCPOT002,
     BPARASITE,
