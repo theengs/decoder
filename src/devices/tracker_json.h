@@ -28,14 +28,14 @@ const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker
    }
 })"""";*/
 
-const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"tag\":\"100f\",\"condition\":[\"name\",\"index\",0,\"iTAG\",\"&\",\"manufacturerdata\",\"=\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"iTAG Tracker\"]}}}";
+const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"tag\":\"100f\",\"condition\":[\"name\",\"index\",0,\"iTAG\",\"&\",\"manufacturerdata\",\">=\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"iTAG Tracker\"]}}}";
 /*R""""(
 {
    "brand":"iTAG",
    "model":"Smart Tracker",
    "model_id":"ITAG",
    "tag":"100f",
-   "condition":["name", "index", 0, "iTAG", "&", "manufacturerdata", "=", 8],
+   "condition":["name", "index", 0, "iTAG", "&", "manufacturerdata", ">=", 8],
    "properties":{
       "device":{
          "decoder":["static_value", "iTAG Tracker"]
