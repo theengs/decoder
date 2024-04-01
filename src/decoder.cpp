@@ -743,7 +743,15 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                     if (temp_val < post_proc[i + 1].as<double>()) {
                       temp_val = post_proc[i + 1].as<double>();
                     }
-                  }
+                  } else if (strncmp(post_proc[i].as<const char*>(), "±", 1) == 0) {
+                    if (temp_val < 0) {
+                      temp_val += post_proc[i + 1].as<double>();
+                    } else {
+                      temp_val -= post_proc[i + 1].as<double>();
+                    }
+                  } else if (strncmp(post_proc[i].as<const char*>(), "abs", 3) == 0) {
+                      temp_val = abs(temp_val);
+                  } 
                 }
               }
             }

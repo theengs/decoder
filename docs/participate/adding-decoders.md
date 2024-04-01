@@ -315,6 +315,7 @@ Valid operations are:
 - "*" multiply
 - "+" add
 - "-" subtract
+- "±" signed conditional add or subtract
 - "%" modulo
 - "<" shift left
 - ">" shift right
@@ -323,6 +324,7 @@ Valid operations are:
 - "^" Logical XOR the values
 - "min" the minimum allowed value
 - "max" the maximum allowed value
+- "abs" absolute value
 
 `lookup` This specifies a lookup table for any decoded "string_from_hex_data" string. If the string is defined in the table its related string will be assigned to the property. If no matching hex string is present the property is defined as not decoded. 
 
