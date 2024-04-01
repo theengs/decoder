@@ -651,6 +651,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             /* use a double for all values and cast later if required */
             double temp_val;
             static double cal_val = 0;
+            std::string proc_str = "";
 
             if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
               decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
@@ -751,7 +752,15 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                     }
                   } else if (strncmp(post_proc[i].as<const char*>(), "abs", 3) == 0) {
                       temp_val = abs(temp_val);
-                  } 
+                  } else if (strncmp(post_proc[i].as<const char*>(), "SBBT-dir", 8) == 0) { // "SBBT" decoder specific post_proc
+                    if (temp_val < 0) {
+                      proc_str = "down";
+                    } else if (temp_val > 0) {
+                      proc_str = "up";
+                    } else {
+                      proc_str = "—";
+                    }
+                  }
                 }
               }
             }
@@ -774,6 +783,11 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               jsondata[_key] = (bool)temp_val;
             } else {
               jsondata[_key] = temp_val;
+            }
+
+            /* _key as string if proc_str != "" */
+            if (proc_str != "") {
+              jsondata[_key] = proc_str;
             }
 
             /* If the property is temp in C, make sure to convert and add temp in F */

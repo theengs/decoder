@@ -169,6 +169,14 @@ const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE RHT\",\"model_id\":\"SE_RHT\",\"type\":\"THB\",\"hum\":47,\"volt\":3.097}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP PROBE\",\"model_id\":\"SE_TPROBE\",\"type\":\"THB\",\"tempc\":20.6,\"tempf\":69.08,\"volt\":3.044}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"cont\":true,\"open\":false,\"volt\":3.079}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":30,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":60,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":0,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":72,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":100,\"direction\":\"—\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":54,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":0,\"direction\":\"down\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":54,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":46,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":54,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":54,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":54,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":80,\"direction\":\"down\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":96,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":80,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":96,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
@@ -715,6 +723,14 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"SE RHT volt","P RHT 88888B","0x2a6f","5707f2190c","2f"},
     {"SE TEMP PROBE","P TPROBE 000000","0x2a6e","5707f2e40b","0c08"},
     {"SE MAG","P MAG CCCCCC","0x2a06","5707f2070c","3b00"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff0d275514", "78003c"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd5256414", "780048"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd8253214", "780036"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffcf270014", "780036"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffe0254d14", "780036"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd3274914", "780036"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd3272814", "780060"},
+    {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd3273c14", "780060"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -731,6 +747,14 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SE_RHT,
     TheengsDecoder::BLE_ID_NUM::SE_TPROBE,
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
 };
 
 // uuid test input [test name] [mac] [device name] [uuid] [manufacturer data] [service data]
