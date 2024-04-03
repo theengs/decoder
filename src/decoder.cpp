@@ -102,8 +102,11 @@ double TheengsDecoder::value_from_hex_string(const char* data_str,
     value = strtoll(data.c_str(), NULL, 16);
     DEBUG_PRINT("extracted value from %s = %lld\n", data.c_str(), (long long)value);
   } else {
-    long longV = strtol(data.c_str(), NULL, 16);
-    float floatV = *((float*)&longV);
+    union {
+      long longV;
+      float floatV;
+    };
+    longV = strtol(data.c_str(), NULL, 16);
     DEBUG_PRINT("extracted float value from %s = %f\n", data.c_str(), floatV);
     value = floatV;
   }
