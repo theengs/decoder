@@ -754,7 +754,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       temp_val -= post_proc[i + 1].as<double>();
                     }
                   } else if (strncmp(post_proc[i].as<const char*>(), "abs", 3) == 0) {
-                      temp_val = abs(temp_val);
+                    temp_val = abs(temp_val);
                   } else if (strncmp(post_proc[i].as<const char*>(), "SBBT-dir", 8) == 0) { // "SBBT" decoder specific post_proc
                     if (temp_val < 0) {
                       proc_str = "down";
