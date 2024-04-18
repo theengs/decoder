@@ -178,6 +178,9 @@ const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":54,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":54,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":80,\"direction\":\"down\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":96,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":80,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":96,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":40,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":70,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":50,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
@@ -734,6 +737,9 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd3274914", "780036"},
     {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd3272814", "780060"},
     {"Switchbot_BlindTilt", "WoBlindTilt", "0xfd3d", "6909aabbccddeeffd3273c14", "780060"},
+    {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff4427504184", "780064"},
+    {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff2427412184", "780064"},
+    {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff39274b4184", "780064"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -751,6 +757,9 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SE_TPROBE,
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
     TheengsDecoder::BLE_ID_NUM::SE_TEMP,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::SBBT,
     TheengsDecoder::BLE_ID_NUM::SBBT,
     TheengsDecoder::BLE_ID_NUM::SBBT,
     TheengsDecoder::BLE_ID_NUM::SBBT,
