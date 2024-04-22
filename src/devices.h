@@ -178,6 +178,8 @@ const char* _devices[][2] = {
     {_SBMT_json, _SBMT_json_props},
     {_SBMT_json_M, _SBMT_json_props},
     {_SBOT_json, _SBOT_json_props},
+    {_SBOT_json_M, _SBOT_json_props},
+    {_SBOT_json_S, _SBOT_json_props},
     {_SBS1_json, _SBS1_json_props},
     {_SHT4X_json, _SHT4X_json_props},
     {_SCD4X_json, _SCD4X_json_props},
