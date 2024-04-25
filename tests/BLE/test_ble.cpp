@@ -154,6 +154,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"Tilt\",\"model\":\"Brewing Hydro- Thermometer\",\"model_id\":\"TILT\",\"type\":\"THBX\",\"cidc\":false,\"color\":\"red\",\"tempf\":68,\"tempc\":20,\"gravity\":1.016,\"txpower\":-59}",
+    "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"type\":\"BATT\",\"cidc\":false,\"serial\":\"2111007935\",\"batt\":100}",
+    "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"type\":\"BATT\",\"cidc\":false,\"serial\":\"TheengsABC\",\"batt\":72}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -577,6 +579,8 @@ const char* test_mfgdata[][3] = {
     {"Tracker iTAG sesardelaisla", "iTAG", "0501aabbccddeeff6602010300"},
     {"Tracker iTAG sesardelaisla", "iTAG", "0501ffeeddccbbaa3fa2e2ee00"},
     {"Tilt Hydrothermometer", "Tilt", "4c000215a495bb10c5b14b44b5121370f02d74de004403f8c5"},
+    {"Oras", "Smart Faucet", "3101006400323131313030373933350020202020"},
+    {"Oras", "Smart Faucet", "3101004800546865656e67734142430020202020"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -714,6 +718,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::ITAG,
     TheengsDecoder::BLE_ID_NUM::ITAG,
     TheengsDecoder::BLE_ID_NUM::TILT,
+    TheengsDecoder::BLE_ID_NUM::ORAS,
+    TheengsDecoder::BLE_ID_NUM::ORAS,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
