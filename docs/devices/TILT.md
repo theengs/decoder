@@ -8,5 +8,5 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|CR123A|
-|Exchanged Data|color, temperature, specific gravity|
+|Exchanged Data|color, temperature, specific gravity, txpower @ 1 m|
 |Encrypted|No|

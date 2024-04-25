@@ -153,7 +153,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":44.6,\"batt\":100}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
-    "{\"brand\":\"Tilt\",\"model\":\"Brewing Hydro- Thermometer\",\"model_id\":\"TILT\",\"type\":\"THBX\",\"cidc\":false,\"color\":\"red\",\"tempf\":68,\"tempc\":20,\"gravity\":1.016}",
+    "{\"brand\":\"Tilt\",\"model\":\"Brewing Hydro- Thermometer\",\"model_id\":\"TILT\",\"type\":\"THBX\",\"cidc\":false,\"color\":\"red\",\"tempf\":68,\"tempc\":20,\"gravity\":1.016,\"txpower\":-59}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
