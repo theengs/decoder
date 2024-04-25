@@ -900,6 +900,27 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
             jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
             success = i_main;
+          } else if (strstr((const char*)decoder[0], "ascii_from_hex_data") != nullptr) {
+            const char* src = svc_data;
+            if (strstr((const char*)decoder[1], MFG_DATA)) {
+              src = mfg_data;
+            }
+
+            std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
+            std::string ascii = "";
+
+            for (size_t i = 0; i < value.length(); i += 2) {
+              std::string part = value.substr(i, 2);
+              char ch = stoul(part, nullptr, 16);
+
+              ascii += ch;
+            }
+
+            if (ascii != "") {
+              jsondata[sanitizeJsonKey(kv.key().c_str())] = ascii;
+            }
+
+            success = i_main;
           }
         }
       }
