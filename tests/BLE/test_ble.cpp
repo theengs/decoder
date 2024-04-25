@@ -153,6 +153,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":44.6,\"batt\":100}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
+    "{\"brand\":\"Tilt\",\"model\":\"Brewing Hydro- Thermometer\",\"model_id\":\"TILT\",\"type\":\"THBX\",\"cidc\":false,\"color\":\"red\",\"tempf\":68,\"tempc\":20,\"gravity\":1.016}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -573,8 +574,9 @@ const char* test_mfgdata[][3] = {
     {"SwitchBot Meter ManData", "WoSensorTHP", "6909aabbccddeeff3e0908965b"},
     {"Gigaset G-Tag", "", "80010215123480c390ffbbc5"},
     {"H5105", "GVH5105_1234", "0100010103787664"},
-    {"Tracker iTAG sesardelaisla ", "iTAG", "0501aabbccddeeff6602010300"},
-    {"Tracker iTAG sesardelaisla ", "iTAG", "0501ffeeddccbbaa3fa2e2ee00"},
+    {"Tracker iTAG sesardelaisla", "iTAG", "0501aabbccddeeff6602010300"},
+    {"Tracker iTAG sesardelaisla", "iTAG", "0501ffeeddccbbaa3fa2e2ee00"},
+    {"Tilt Hydrothermometer", "Tilt", "4c000215a495bb10c5b14b44b5121370f02d74de004403f8c5"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -711,6 +713,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::H5102,
     TheengsDecoder::BLE_ID_NUM::ITAG,
     TheengsDecoder::BLE_ID_NUM::ITAG,
+    TheengsDecoder::BLE_ID_NUM::TILT,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

@@ -120,6 +120,7 @@ public:
     BWBSDOO,
     BM2,
     BM6,
+    TILT,
     RDL52832,
     ABN03,
     ABN07,

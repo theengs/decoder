@@ -801,6 +801,14 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               _key[4] = 'c';
             }
 
+            /* If the property is tempf in F, make sure to convert and add temp in C */
+            if (_key.find("tempf", 0, 5) != std::string::npos) {
+              double tc = jsondata[_key];
+              _key[4] = 'c';
+              jsondata[_key] = (tc - 32) * 5 / 9;
+              _key[4] = 'f';
+            }
+
             /* If the property is with suffix _cm, make sure to convert and add length in inches */
             if (_key.find("_cm", _key.length() - 3, 3) != std::string::npos) {
               double tc = jsondata[_key];

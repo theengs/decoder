@@ -97,6 +97,7 @@
 #include "devices/BWBSDOO_json.h"
 #include "devices/BM2_json.h"
 #include "devices/BM6_json.h"
+#include "devices/TILT_json.h"
 #include "devices/JAALEE_json.h"
 #include "devices/APPLEWATCH_json.h"
 #include "devices/APPLEDEVICE_json.h"
@@ -190,6 +191,7 @@ const char* _devices[][2] = {
     {_BWBSDOO_json, _BWBSDOO_json_props},
     {_BM2_json, _BM2_json_props},
     {_BM6_json, _BM6_json_props},
+    {_TILT_json, _TILT_json_props},
     {_RDL52832_json, _RDL52832_json_props},
     {_ABN03_json, _ABN03_json_props},
     {_ABN07_json, _ABN07_json_props},
