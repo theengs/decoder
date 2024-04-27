@@ -81,6 +81,7 @@
 #include "devices/Amphiro_json.h"
 #include "devices/OralB_json.h"
 #include "devices/Oras_json.h"
+#include "devices/OTOD_json.h"
 #include "devices/PH10_json.h"
 #include "devices/XOSSX2_json.h"
 #include "devices/TPTH_json.h"
@@ -200,6 +201,7 @@ const char* _devices[][2] = {
     {_AMPHIRO_json, _AMPHIRO_json_props},
     {_OralB_json, _OralB_json_props},
     {_Oras_json, _Oras_json_props},
+    {_OTOD_json, _OTOD_json_props},
     {_PH10_json, _PH10_json_props},
     {_XOSSX2_json, _XOSSX2_json_props},
     {_TPTH_json, _TPTH_json_props},
