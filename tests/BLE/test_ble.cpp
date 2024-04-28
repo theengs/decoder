@@ -156,6 +156,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Tilt\",\"model\":\"Brewing Hydro- Thermometer\",\"model_id\":\"TILT\",\"type\":\"THBX\",\"cidc\":false,\"color\":\"red\",\"tempf\":68,\"tempc\":20,\"gravity\":1.016,\"txpower\":-59}",
     "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"type\":\"BATT\",\"cidc\":false,\"serial\":\"2111007935\",\"batt\":100}",
     "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"type\":\"BATT\",\"cidc\":false,\"serial\":\"TheengsABC\",\"batt\":72}",
+    "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"level\":100,\"status\":0}",
+    "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"level\":98.35,\"status\":0}",
+    "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"serial\":56001608,\"modeltype\":67367466}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -581,6 +584,9 @@ const char* test_mfgdata[][3] = {
     {"Tilt Hydrothermometer", "Tilt", "4c000215a495bb10c5b14b44b5121370f02d74de004403f8c5"},
     {"Oras", "Smart Faucet", "3101006400323131313030373933350020202020"},
     {"Oras", "Smart Faucet", "3101004800546865656e67734142430020202020"},
+    {"Otodata RC1010", "", "b1034f544f54454c45020010270000366e0f000000"},
+    {"Otodata RC1010", "", "b1034f544f54454c4502006b260000366e0f000000"},
+    {"Otodata RC1010", "", "b1034f544f3332383148845603132111010400022af20304"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -720,6 +726,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::TILT,
     TheengsDecoder::BLE_ID_NUM::ORAS,
     TheengsDecoder::BLE_ID_NUM::ORAS,
+    TheengsDecoder::BLE_ID_NUM::OTOD,
+    TheengsDecoder::BLE_ID_NUM::OTOD,
+    TheengsDecoder::BLE_ID_NUM::OTOD,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

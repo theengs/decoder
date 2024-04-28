@@ -128,6 +128,7 @@ public:
     AMPHIRO,
     ORALB_BT,
     ORAS,
+    OTOD,
     PH10,
     XOSSX2,
     TPTH,
