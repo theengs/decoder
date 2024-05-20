@@ -7,6 +7,6 @@
 |Short Description|Venetian blind tilting actor|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
-|Power source|Solar panel|
-|Exchanged data|open, direction, motion, calibrated, light level, battery|
+|Power Source|Solar panel|
+|Exchanged Data|open, direction, motion, calibrated, light level, battery|
 |Encrypted|No|
