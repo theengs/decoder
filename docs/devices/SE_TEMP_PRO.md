@@ -1,6 +1,6 @@
 # Sensor Easy Thermometer Pro
 
-|Model Id|[SE_TEMP](https://github.com/theengs/decoder/blob/development/src/devices/SE_TEMP_json.h)|
+|Model Id|[SE_TEMP_PRO](https://github.com/theengs/decoder/blob/development/src/devices/SE_TEMP_json.h)|
 |-|-|
 |Brand|Sensor Easy|
 |Model|Sensor Easy Temperature Pro|

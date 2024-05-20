@@ -1,6 +1,6 @@
 # ClearGrass/Qingping Barometer Pro CGP23W
 
-|Model Id|[CGP1W](https://github.com/theengs/decoder/blob/development/src/devices/CGP1W_json.h)|
+|Model Id|[CGP23W](https://github.com/theengs/decoder/blob/development/src/devices/CGP23W_json.h)|
 |-|-|
 |Brand|ClearGrass/Qingping|
 |Model|Barometer Pro|
