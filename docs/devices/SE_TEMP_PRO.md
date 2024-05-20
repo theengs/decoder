@@ -1,9 +1,9 @@
-# Sensor Easy Thermometer Pro
+# Sensor Easy Thermometer (Pro)
 
 |Model Id|[SE_TEMP_PRO](https://github.com/theengs/decoder/blob/development/src/devices/SE_TEMP_json.h)|
 |-|-|
 |Brand|Sensor Easy|
-|Model|Sensor Easy Temperature Pro|
+|Model|Sensor Easy Temperature (Pro)|
 |Short Description|Indoor/Outdoor Thermometer|
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
