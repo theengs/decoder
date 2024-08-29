@@ -201,6 +201,12 @@ const char* expected_name_mac_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":2,\"batt\":100,\"lux\":132,\"motion\":true,\"mac\":\"60:EF:AB:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":5,\"batt\":100,\"lux\":36,\"motion\":false,\"mac\":\"60:EF:AB:AA:BB:CC\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion encrypted\",\"model_id\":\"SBMO_003Z_ENCR\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"cc08edf25d61cc0f42b6\",\"ctr\":\"00112233\",\"mic\":\"18cd3624\",\"mac\":\"60:EF:AB:AA:BB:CC\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":78,\"batt\":100,\"hum\":63,\"tempc\":22.3,\"tempf\":72.14,\"mac\":\"AA:BB:BB:DD:EE:FF\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":78,\"batt\":100,\"hum\":63,\"button\":1,\"tempc\":22.3,\"tempf\":72.14,\"mac\":\"AA:BB:BB:DD:EE:FF\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":174,\"batt\":100,\"hum\":56,\"tempc\":25,\"tempf\":77,\"mac\":\"AA:BB:AA:BB:AA:BB\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":174,\"batt\":100,\"hum\":56,\"button\":2,\"tempc\":25,\"tempf\":77,\"mac\":\"AA:BB:AA:BB:AA:BB\"}",
+
+
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -807,6 +813,10 @@ const char* test_name_mac_uuid_mfgsvcdata[][6] = {
     {"SBMO-003Z", "60:EF:AB:AA:BB:CC", "SBMO-003Z", "0xfcd2", "a90b0101000b05000accbbaaabef60", "4400020164059033002101"},
     {"SBMO-003Z", "60:EF:AB:AA:BB:CC", "SBMO-003Z", "0xfcd2", "a90b0101000b05000accbbaaabef60", "440005016405100e002100"},
     {"SBMO-003Z encrypted", "60:EF:AB:AA:BB:CC", "SBMO-003Z", "0xfcd2", "a90b0101000b05000accbbaaabef60", "45cc08edf25d61cc0f42b60011223318cd3624"},
+    {"SBHT-003C", "AA:BB:CC:DD:EE:FF", "SBHT-003C", "0xfcd2", "a90b0111000b03000affeeddbbbbaa", "44004e01642e3f45df00"},
+    {"SBHT-003C", "AA:BB:CC:DD:EE:FF", "SBHT-003C", "0xfcd2", "a90b0111000b03000affeeddbbbbaa", "44004e01642e3f3a0145df00"},
+    {"SBHT-003C", "AA:BB:AA:BB:AA:BB", "SBHT-003C", "0xfcd2", "a90b0111000b03000abbaabbaabbaa", "4400ae01642e3845fa00"},
+    {"SBHT-003C", "AA:BB:AA:BB:AA:BB", "SBHT-003C", "0xfcd2", "a90b0111000b03000abbaabbaabbaa", "4400ae01642e383afe45fa00"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_mac_uuid_mfgsvcdata_id_num[]{
@@ -818,6 +828,10 @@ TheengsDecoder::BLE_ID_NUM test_name_mac_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBMO_003Z,
     TheengsDecoder::BLE_ID_NUM::SBMO_003Z,
     TheengsDecoder::BLE_ID_NUM::SBMO_003Z_ENCR,
+    TheengsDecoder::BLE_ID_NUM::SBHT_003C,
+    TheengsDecoder::BLE_ID_NUM::SBHT_003C,
+    TheengsDecoder::BLE_ID_NUM::SBHT_003C,
+    TheengsDecoder::BLE_ID_NUM::SBHT_003C,
 };
 
 // uuid name test input [test name] [uuid] [device name] [service data]

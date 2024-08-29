@@ -116,6 +116,7 @@
 #include "devices/SBDW_002C_ENCR_json.h"
 #include "devices/SBMO_003Z_json.h"
 #include "devices/SBMO_003Z_ENCR_json.h"
+#include "devices/SBHT_003C_json.h"
 
 
 const char* _devices[][2] = {
@@ -236,4 +237,5 @@ const char* _devices[][2] = {
     {_SBDW_002C_ENCR_json, _SBDW_002C_ENCR_json_props},
     {_SBMO_003Z_json, _SBMO_003Z_json_props},
     {_SBMO_003Z_ENCR_json, _SBMO_003Z_ENCR_json_props},
+    {_SBHT_003C_json, _SBHT_003C_json_props},
 };
