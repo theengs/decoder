@@ -18,3 +18,4 @@ The button press type is encoded as:
 * 2 - Double click
 * 3 - Triple click
 * 9 - Long press
+* 11 - Button hold

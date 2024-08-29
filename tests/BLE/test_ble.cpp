@@ -204,7 +204,7 @@ const char* expected_name_mac_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":78,\"batt\":100,\"hum\":63,\"tempc\":22.3,\"tempf\":72.14,\"mac\":\"AA:BB:BB:DD:EE:FF\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":78,\"batt\":100,\"hum\":63,\"button\":1,\"tempc\":22.3,\"tempf\":72.14,\"mac\":\"AA:BB:BB:DD:EE:FF\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":174,\"batt\":100,\"hum\":56,\"tempc\":25,\"tempf\":77,\"mac\":\"AA:BB:AA:BB:AA:BB\"}",
-    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":174,\"batt\":100,\"hum\":56,\"button\":2,\"tempc\":25,\"tempf\":77,\"mac\":\"AA:BB:AA:BB:AA:BB\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T\",\"model_id\":\"SBHT-003C\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":174,\"batt\":100,\"hum\":56,\"button\":11,\"tempc\":25,\"tempf\":77,\"mac\":\"AA:BB:AA:BB:AA:BB\"}",
 
 
 };

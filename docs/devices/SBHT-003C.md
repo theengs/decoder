@@ -14,4 +14,4 @@
 The button press type is encoded as:
 
 * 1 - Single short click
-* 2 - Button hold
+* 11 - Button hold
