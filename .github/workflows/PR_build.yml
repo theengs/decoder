@@ -84,12 +84,12 @@ jobs:
   xcode:
     name: XCode
     needs: clang
-    runs-on: macos-11
+    runs-on: macos-12
     strategy:
       fail-fast: false
       matrix:
         include:
-          - xcode: "13.2.1"
+          - xcode: "14.2"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
