@@ -108,8 +108,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
     "{\"brand\":\"Apple\",\"model\":\"Apple Continuity\",\"model_id\":\"APPLE_CONTAT\",\"type\":\"RMAC\",\"device\":\"Apple device\"}",
-    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Air Quality Monitor\",\"model_id\":\"H5106\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":63.1,\"pm25\":2}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":23,\"tempf\":73.4,\"hum\":62.8,\"batt\":92}",
     "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"type\":\"BCON\",\"track\":true,\"mfid\":\"4c00\",\"uuid\":\"b5b182c7eab14988aa99b5c1517008d9\",\"major\":1,\"batt\":100,\"tempc\":26,\"tempf\":78.8,\"txpower\":-59}",
@@ -151,14 +151,15 @@ const char* expected_mfg[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":22.8,\"tempf\":73.04,\"hum\":91,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"type\":\"TRACK\",\"track\":true,\"device\":\"Gigaset G-Tag Tracker\"}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":44.6,\"batt\":100}",
-    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
-    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
+    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
+    "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"Tilt\",\"model\":\"Brewing Hydro- Thermometer\",\"model_id\":\"TILT\",\"type\":\"THBX\",\"cidc\":false,\"color\":\"red\",\"tempf\":68,\"tempc\":20,\"gravity\":1.016,\"txpower\":-59}",
     "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"type\":\"BATT\",\"cidc\":false,\"serial\":\"2111007935\",\"batt\":100}",
     "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"type\":\"BATT\",\"cidc\":false,\"serial\":\"TheengsABC\",\"batt\":72}",
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"level\":100,\"status\":0}",
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"level\":98.35,\"status\":0}",
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"serial\":56001608,\"modeltype\":67367466}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -187,6 +188,7 @@ const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":40,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":70,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"open\":50,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"nut Tracker\"}",
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
@@ -230,7 +232,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_ENCR\",\"type\":\"THB\",\"encr\":1,\"cipher\":\"ef56583dd420\",\"ctr\":\"23\",\"mic\":\"50fe8e4d\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_DECR\",\"type\":\"THB\",\"tempc\":24.60,\"tempf\":76.28,\"hum\":43.54,\"batt\":100}",
     "{\"brand\":\"April Brother\",\"model\":\"N07\",\"model_id\":\"ABN07\",\"type\":\"THB\",\"acts\":true,\"track\":true,\"batt\":100,\"tempc\":24.51,\"tempf\":76.118,\"hum\":47.42,\"packet\":16}",
-    "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"nutale Tracker\"}",
+    "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"nutale Tracker\"}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"type\":\"THB\",\"tempc\":2.75,\"tempf\":36.95}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"type\":\"THB\",\"tempc\":-9.18,\"tempf\":15.476}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE RHT\",\"model_id\":\"SE_RHT\",\"type\":\"THB\",\"hum\":70}",
@@ -333,9 +335,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":-10.75,\"tempf\":12.65,\"accx\":-107,\"accy\":-407,\"accz\":-896,\"volt\":3.085}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"contact\":\"timeout not closed\",\"motion\":false,\"lightlevel\":\"dark\",\"scopetested\":false,\"in_ct\":1,\"out_ct\":0,\"push_ct\":2,\"batt\":100}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Motion Sensor\",\"model_id\":\"W110150X\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"motion\":false,\"led\":false,\"scopetested\":false,\"sensingdistance\":\"long\",\"lightlevel\":\"bright\",\"batt\":100}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
-    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"cont\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":11,\"tempf\":51.8,\"moi\":14,\"lux\":79012,\"fer\":91,\"batt\":40}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":0,\"tempf\":32,\"moi\":98,\"lux\":71,\"fer\":0,\"batt\":100}",
     "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"type\":\"PLANT\",\"tempc\":21,\"tempf\":69.8,\"moi\":96,\"lux\":548,\"fer\":0,\"batt\":100}",
@@ -587,6 +589,7 @@ const char* test_mfgdata[][3] = {
     {"Otodata RC1010", "", "b1034f544f54454c45020010270000366e0f000000"},
     {"Otodata RC1010", "", "b1034f544f54454c4502006b260000366e0f000000"},
     {"Otodata RC1010", "", "b1034f544f3332383148845603132111010400022af20304"},
+    {"Tile Name", "Tile", ""},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -729,6 +732,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::OTOD,
     TheengsDecoder::BLE_ID_NUM::OTOD,
     TheengsDecoder::BLE_ID_NUM::OTOD,
+    TheengsDecoder::BLE_ID_NUM::TILEN,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
@@ -758,6 +762,7 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff4427504184", "780064"},
     {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff2427412184", "780064"},
     {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff39274b4184", "780064"},
+    {"Nut","nut","0x180a","12345678",""},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -786,6 +791,7 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBBT,
     TheengsDecoder::BLE_ID_NUM::SBBT,
     TheengsDecoder::BLE_ID_NUM::SBBT,
+    TheengsDecoder::BLE_ID_NUM::NUT,
 };
 
 // uuid test input [test name] [mac] [device name] [uuid] [manufacturer data] [service data]
