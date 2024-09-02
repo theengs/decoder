@@ -148,14 +148,14 @@ const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"m
    }
 })"""";*/
 
-const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"tag\":\"1008\",\"condition\":[\"manufacturerdata\",\"=\",14,\"index\",0,\"a602\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Bosch Nyon Tracker\"]}}}";
+const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"tag\":\"100a\",\"condition\":[\"name\",\"index\",0,\"Nyon\",\"&\",\"manufacturerdata\",\"=\",14,\"index\",0,\"a602\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Bosch Nyon Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Bosch",
    "model":"Nyon",
    "model_id":"BOSCHNYON",
-   "tag":"1008",
-   "condition":["manufacturerdata", "=", 14, "index", 0, "a602"],
+   "tag":"100a",
+   "condition":["name", "index", 0, "Nyon", "&", "manufacturerdata", "=", 14, "index", 0, "a602"],
    "properties":{
       "device":{
          "decoder":["static_value", "Bosch Nyon Tracker"]
