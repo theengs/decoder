@@ -160,6 +160,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"level\":98.35,\"status\":0}",
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"serial\":56001608,\"modeltype\":67367466}",
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
+    "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"type\":\"TRACK\",\"track\":true,\"device\":\"Bosch Nyon Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -590,6 +591,7 @@ const char* test_mfgdata[][3] = {
     {"Otodata RC1010", "", "b1034f544f54454c4502006b260000366e0f000000"},
     {"Otodata RC1010", "", "b1034f544f3332383148845603132111010400022af20304"},
     {"Tile Name", "Tile", ""},
+    {"Bosch Nyon", "Nyon-XXX", "a60210eb002500"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -733,6 +735,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::OTOD,
     TheengsDecoder::BLE_ID_NUM::OTOD,
     TheengsDecoder::BLE_ID_NUM::TILEN,
+    TheengsDecoder::BLE_ID_NUM::BOSCHNYON,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

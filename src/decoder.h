@@ -145,6 +145,7 @@ public:
     TheengsIB02,
     TICWATCHGTH,
     GTAG,
+    BOSCHNYON,
     JAALEE,
     APPLEWATCH,
     APPLEDEVICE,
