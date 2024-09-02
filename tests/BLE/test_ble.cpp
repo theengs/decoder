@@ -160,7 +160,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"level\":98.35,\"status\":0}",
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"serial\":56001608,\"modeltype\":67367466}",
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
-    "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"type\":\"TRACK\",\"track\":true,\"device\":\"Bosch Nyon Tracker\"}",
+    "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"type\":\"TRACK\",\"acts\":true,\"track\":true,\"device\":\"Bosch Nyon Tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
