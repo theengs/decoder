@@ -164,6 +164,7 @@ public:
     SBMO_003Z,
     SBMO_003Z_ENCR,
     SBHT_003C,
+    SBHT_003C_ENCR,
     BLE_ID_MAX
   };
 
