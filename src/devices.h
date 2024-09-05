@@ -38,6 +38,7 @@
 #include "devices/HHCCJCY10_json.h"
 #include "devices/HHCCJCY01HHCC_json.h"
 #include "devices/HHCCPOT002_json.h"
+#include "devices/HOBOMX2001_json.h"
 #include "devices/IBS_THBP01B_json.h"
 #include "devices/IBT_2X_json.h"
 #include "devices/IBT_4XS_json.h"
@@ -191,6 +192,7 @@ const char* _devices[][2] = {
     {_FEASY_json, _FEASY_json_props},
     {_GAEN_json, _GAEN_json_props},
     {_HHCCPOT002_json, _HHCCPOT002_json_props},
+    {_HOBOMX2001_json, _HOBOMX2001_json_props},
     {_BPARASITE_json, _BPARASITE_json_props},
     {_BWBSDOO_json, _BWBSDOO_json_props},
     {_BM2_json, _BM2_json_props},

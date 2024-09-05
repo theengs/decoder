@@ -116,6 +116,7 @@ public:
     FEASY,
     GAEN,
     HHCCPOT002,
+    HOBOMX2001,
     BPARASITE,
     BWBSDOO,
     BM2,

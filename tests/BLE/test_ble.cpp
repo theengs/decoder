@@ -161,6 +161,12 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"type\":\"UNIQ\",\"serial\":56001608,\"modeltype\":67367466}",
     "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"Tile Tracker\"}",
     "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"type\":\"TRACK\",\"acts\":true,\"track\":true,\"device\":\"Bosch Nyon Tracker\"}",
+    "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":9.913735837,\"lvl_in\":3.903045605}",
+    "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":29.39415574,\"lvl_in\":11.57250226}",
+    "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":11.21081784,\"lvl_in\":4.413707812}",
+    "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":6.646526605,\"lvl_in\":2.616742758}",
+    "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":8.46760273,\"lvl_in\":3.333701862}",
+    "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":9.514185786,\"lvl_in\":3.745742436}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -599,6 +605,12 @@ const char* test_mfgdata[][3] = {
     {"Otodata RC1010", "", "b1034f544f3332383148845603132111010400022af20304"},
     {"Tile Name", "Tile", ""},
     {"Bosch Nyon", "Nyon-XXX", "a60210eb002500"},
+    {"Hobo Water Level", "", "c5000740d54f01062402000008005231029e8708cb3d"},
+    {"Hobo Water Level", "", "c5000740d54f01062402000008001229029d827f963e"},
+    {"Hobo Water Level", "", "c500073fd54f0106240200000800125302a0f998e53d"},
+    {"Hobo Water Level", "", "c500073fd54f01062402000008005235019ff11e883d"},
+    {"Hobo Water Level", "", "c500073fd54f0106240000000800529501a0a06aad3d"},
+    {"Hobo Water Level", "", "c500073fd54f010624000000080092a901a0bcd9c23d"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -743,6 +755,12 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::OTOD,
     TheengsDecoder::BLE_ID_NUM::TILEN,
     TheengsDecoder::BLE_ID_NUM::BOSCHNYON,
+    TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
+    TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
+    TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
+    TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
+    TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
+    TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
