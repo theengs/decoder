@@ -167,6 +167,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":6.646526605,\"lvl_in\":2.616742758}",
     "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":8.46760273,\"lvl_in\":3.333701862}",
     "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":9.514185786,\"lvl_in\":3.745742436}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"tempc\":25.5,\"tempf\":77.9,\"hum\":50,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -256,6 +257,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP PROBE\",\"model_id\":\"SE_TPROBE\",\"type\":\"THB\",\"tempc\":20.7,\"tempf\":69.26}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":true,\"cont\":true}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
 };
 
 const char* expected_uuid[] = {
@@ -611,6 +613,7 @@ const char* test_mfgdata[][3] = {
     {"Hobo Water Level", "", "c500073fd54f01062402000008005235019ff11e883d"},
     {"Hobo Water Level", "", "c500073fd54f0106240000000800529501a0a06aad3d"},
     {"Hobo Water Level", "", "c500073fd54f010624000000080092a901a0bcd9c23d"},
+    {"SwitchBot Outdoor Meter Manufacturerdata", "WoIOSensorTH", "6909aabbccddeeff8b0305993200"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -761,6 +764,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
     TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
     TheengsDecoder::BLE_ID_NUM::HOBOMX2001,
+    TheengsDecoder::BLE_ID_NUM::SBOT_M,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
@@ -900,6 +904,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"SE TEMP PROBE temp","0x2a6e","P TPROBE 111999","1608"},
     {"SE MAG Open","0x2a06","P MAG CCCCCC","2400"},
     {"SE MAG Closed","0x2a06","P MAG CCCCCC","2900"},
+    {"SwitchBot Outdoor Meter Servicdata", "0xfd3d", "WoIOSensorTH", "770041"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -942,6 +947,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SE_TPROBE,
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
+    TheengsDecoder::BLE_ID_NUM::SBOT_S,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
