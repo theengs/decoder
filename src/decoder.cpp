@@ -623,6 +623,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["prmac"] = true;
             jsondata["prmac"] = doc["prmac"];
           }
+
+          if (((data >> 1) & 0x01) == 1) { // CTRL - Controllable device/actuator
+            doc.add("ctrl");
+            doc["ctrl"] = true;
+            jsondata["ctrl"] = doc["ctrl"];
+          }
         }
 
         // Octet Byte[2] - Encryption Model

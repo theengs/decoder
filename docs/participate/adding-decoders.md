@@ -118,10 +118,14 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan=1>255 - UNIQ - unique devices</td>
         </tr>
 		<tr>
-            <td rowspan=6>Byte[1]</td>
-            <td rowspan=6>Additional properties</td>
-            <td rowspan=1>Bits[7-5] - Reserved</td>
+            <td rowspan=8>Byte[1]</td>
+            <td rowspan=8>Additional properties</td>
+            <td rowspan=1>Bits[7-6] - Reserved</td>
         </tr>
+        <tr>
+            <td rowspan=1>Bit[5] Devices/actuators which are controllable > "ctrl":</td>
+        </tr>
+        <tr>
         <tr>
             <td rowspan=1>Bit[4] Potential RMAC device - if not defined with Identity MAC and IRK in Theengs Gateway > "prmac":</td>
         </tr>

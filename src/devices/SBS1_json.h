@@ -1,10 +1,10 @@
-const char* _SBS1_json = "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"tag\":\"0e02\",\"condition\":[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\",\"&\",\"servicedata\",\">=\",6,\"index\",0,\"48\"],\"properties\":{\"mode\":{\"decoder\":[\"bit_static_value\",\"servicedata\",2,3,\"onestate\",\"on/off\"]},\"state\":{\"decoder\":[\"bit_static_value\",\"servicedata\",2,2,\"on\",\"off\"]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
+const char* _SBS1_json = "{\"brand\":\"SwitchBot\",\"model\":\"Bot\",\"model_id\":\"X1\",\"tag\":\"0e22\",\"condition\":[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\",\"&\",\"servicedata\",\">=\",6,\"index\",0,\"48\"],\"properties\":{\"mode\":{\"decoder\":[\"bit_static_value\",\"servicedata\",2,3,\"onestate\",\"on/off\"]},\"state\":{\"decoder\":[\"bit_static_value\",\"servicedata\",2,2,\"on\",\"off\"]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
    "model":"Bot",
    "model_id":"X1",
-   "tag":"0e02",
+   "tag":"0e22",
    "condition":["uuid", "index", 0, "0d00", "|", "uuid", "index", 0, "fd3d", "&", "servicedata", ">=", 6, "index", 0, "48"],
    "properties":{
       "mode":{
