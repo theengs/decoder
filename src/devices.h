@@ -113,6 +113,10 @@
 #include "devices/SE_MAG_json.h"
 #include "devices/SBBT_002C_json.h"
 #include "devices/SBBT_002C_ENCR_json.h"
+#include "devices/SBBT_004CUS_json.h"
+#include "devices/SBBT_004CUS_ENCR_json.h"
+#include "devices/SBBT_004CEU_json.h"
+#include "devices/SBBT_004CEU_ENCR_json.h"
 #include "devices/SBDW_002C_json.h"
 #include "devices/SBDW_002C_ENCR_json.h"
 #include "devices/SBMO_003Z_json.h"
@@ -238,6 +242,10 @@ const char* _devices[][2] = {
     {_SE_MAG_json, _SE_MAG_json_props},
     {_SBBT_002C_json, _SBBT_002C_json_props},
     {_SBBT_002C_ENCR_json, _SBBT_002C_ENCR_json_props},
+    {_SBBT_004CUS_json, _SBBT_004CUS_json_props},
+    {_SBBT_004CUS_ENCR_json, _SBBT_004CUS_ENCR_json_props},
+    {_SBBT_004CEU_json, _SBBT_004CEU_json_props},
+    {_SBBT_004CEU_ENCR_json, _SBBT_004CEU_ENCR_json_props},
     {_SBDW_002C_json, _SBDW_002C_json_props},
     {_SBDW_002C_ENCR_json, _SBDW_002C_ENCR_json_props},
     {_SBMO_003Z_json, _SBMO_003Z_json_props},
