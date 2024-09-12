@@ -56,6 +56,7 @@ const char* _SBBT_004CUS_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU RC 
                    "fe", 11]
       },
       "mac":{
+         "condition":["manufacturerdata", "=", "30"],
          "decoder":["revmac_from_hex_data", "manufacturerdata", 18]
       }
    }
