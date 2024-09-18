@@ -11,6 +11,8 @@
 |Exchanged Data|button press type of each button, battery, packet ID|
 |Encrypted|Yes/No - Optional|
 
+Currently only unencrypted devices are supported.
+
 The button press type for each button is encoded as:
 
 * 0 - None (other Button was pressed or sent every 8 seconds if beacon mode is enabled)
