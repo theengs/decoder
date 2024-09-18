@@ -882,7 +882,7 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
 const char* test_name_mac_uuid_mfgsvcdata[][6] = {
     {"SBBT-002C", "BC:02:6E:AA:BB:CC", "SBBT-002C", "0xfcd2", "a90b0109000b01000accbbaa6e02bc", "40001d01643a01"},
     {"SBBT-002C encrypted", "BC:02:6E:AA:BB:CC", "SBBT-002C", "0xfcd2", "a90b0109000b01000accbbaa6e02bc", "4562511158bd25b8f093645b573115"},
-    {"SBBT-004CEU/US", "38:39:8F:71:EE:FF", "SBBT-EU", "0xfcd2", "a90b0101000b07000ad277718f3938", "44001d01643a013a003a003a00"},
+    {"SBBT-004CEU/US", "38:39:8F:71:EE:FF", "SBBT-EU", "0xfcd2", "a90b0101000b07000affee718f3938", "44001d01643a013a003a003a00"},
     {"SBDW-002C", "3C:2E:F5:AA:BB:CC", "SBDW-002C", "0xfcd2", "a90b0101000b02000accbbaaf52e3c", "44005d016405fc21002d013f9601"},
     {"SBDW-002C", "3C:2E:F5:AA:BB:CC", "SBDW-002C", "0xfcd2", "a90b0101000b02000accbbaaf52e3c", "440056016405e406012d003f0000"},
     {"SBDW-002C encrypted", "3C:2E:F5:AA:BB:CC", "SBDW-002C", "0xfcd2", "a90b0101000b02000accbbaaf52e3c", "4538efaf00d122b4979064e971a7ed16c1644dc481fd"},
