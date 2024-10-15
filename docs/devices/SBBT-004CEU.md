@@ -1,6 +1,6 @@
 # ShellyBLU Wall Switcht4
 
-|Model Id|[SBBT-004CEU](https://github.com/theengs/decoder/blob/development/src/devices/SBBT_004CEU_json.h)|
+|Model Id|[SBBT-004CEU](https://github.com/theengs/decoder/blob/development/src/devices/SBBT_004CEU_US_json.h)|
 |-|-|
 |Brand|Shelly|
 |Model|ShellyBLU Wall Switch4|
@@ -9,9 +9,7 @@
 |Frequency|2.4Ghz|
 |Power Source|CR2032|
 |Exchanged Data|button press type of each button, battery, packet ID|
-|Encrypted|Yes/No - Optional|
-
-Currently only unencrypted devices are supported.
+|Encrypted|No - Currently only unencrypted devices are supported|
 
 The button press type for each button is encoded as:
 
