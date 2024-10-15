@@ -162,6 +162,7 @@ public:
     SE_MAG,
     SBBT_002C,
     SBBT_002C_ENCR,
+    SBBT_004CEU_US,
     SBDW_002C,
     SBDW_002C_ENCR,
     SBMO_003Z,
