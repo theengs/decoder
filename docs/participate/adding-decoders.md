@@ -141,7 +141,7 @@ Each device should also have an encoded **tag** property to, at the minimum, def
         <tr>
             <td rowspan=1>Bit[0] Is NOT Company ID compliant > "cidc":</td>
         </tr>
-<tr>
+        <tr>
             <td rowspan=2>Byte[2]</td>
             <td rowspan=2>Encryption Model > "encr":</td>
             <td rowspan=1>1 - LYWSD03MMC PVVX</td>

@@ -828,7 +828,7 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "194c3a39000001040000000901000908"},
     {"RDL52832", "RDL52832", "0x1803", "4c000215fda50693a4e24fb1afcfc6eb0764782500010002d8", "1a463d34000002000100090600000105"},
     {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909aabbccddeeff8b0305993200", "770064"},
-    {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909aabbccddeeff940b039a5000", "770064"},
+    {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909aabbccddeeff940b039a5000", "7700e4"},
     {"SwitchBot Outdoor Meter", "Outdoor Meter", "0xfd3d", "6909aabbccddeeffe30f090f2a00", "770041"},
     {"SE TEMP volt","P T EN 888444","0x2a6e","5707f2120c","8308"},
     {"SE RHT volt","P RHT 88888B","0x2a6f","5707f2190c","2f"},
