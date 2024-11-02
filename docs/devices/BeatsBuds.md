@@ -19,4 +19,3 @@ Instructions on how to get the [Identity Address and IRK for an Apple Watch, iPh
 \* battery levels are only reported in 10% steps by the BLE broadcasts.
 
 Some model versions, colors and statuses are not decoded correctly yet, due to the various models, colors and generations. In such a case please report your device's MQTT message with the [PUBLISH_ADVDATA option](https://gateway.theengs.io/use/use.html#details-options) set to **true**.
-
