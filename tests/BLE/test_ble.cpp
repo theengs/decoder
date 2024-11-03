@@ -181,6 +181,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":80,\"batt_l\":90,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
     "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
     "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":90,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Teltonika\",\"model\":\"FMT100\",\"model_id\":\"FMT100\",\"type\":\"TRACK\",\"acts\":true,\"track\":true,\"device\":\"FMT100 2G vehicle tracker\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -692,6 +693,7 @@ const char* test_mfgdata[][3] = {
     {"Apple", "AirPods", "4c00071901142003898f100008cc74d502b12d6d72e0f4f6eabf826972"},
     {"Apple", "AirPods", "4c00071901142023aa8f1100085925754da1d6ab3f80c398447e652875"},
     {"Apple", "AirPods", "4c0007190114200b9a8f110004fa242ea8abb9e8f5e57cefb13a3077eb"},
+    {"Teltonika", "FMT100_3498163_LE", ""},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -856,6 +858,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
+    TheengsDecoder::BLE_ID_NUM::FMT100,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

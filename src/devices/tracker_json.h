@@ -163,6 +163,21 @@ const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"mode
    }
 })"""";*/
 
+const char* _tracker_json_FMT100 = "{\"brand\":\"Teltonika\",\"model\":\"FMT100\",\"model_id\":\"FMT100\",\"tag\":\"100a\",\"condition\":[\"name\",\"index\",0,\"FMT100_\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"FMT100 2G vehicle tracker\"]}}}";
+/*R""""(
+{
+   "brand":"Teltonika",
+   "model":"FMT100",
+   "model_id":"FMT100",
+   "tag":"100a",
+   "condition":["name", "index", 0, "FMT100_"],
+   "properties":{
+      "device":{
+         "decoder":["static_value", "FMT100 2G vehicle tracker"]
+      }
+   }
+})"""";*/
+
 const char* _tracker_json_props = "{\"properties\":{\"device\":{\"unit\":\"string\",\"name\":\"tracker device\"}}}";
 /*R""""(
 {

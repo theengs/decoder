@@ -149,6 +149,7 @@ public:
     TICWATCHGTH,
     GTAG,
     BOSCHNYON,
+    FMT100,
     JAALEE,
     APPLEAIRPODS,
     APPLEWATCH,
