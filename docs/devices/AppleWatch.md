@@ -14,4 +14,4 @@
 
 Currently only usefully working with the [Theengs Gateway](https://gateway.theengs.io/use/use.html#details-options) **Identity Address** and **IRK** functionality, to be able to decrypt the randomly changing Bluetooth MAC address to the static identity MAC address.
 
-Instructions on how to get the [Identity Address and IRK for an Apple Watch, iPhone or iPad](https://gateway.theengs.io/use/use.html#getting-identity-resolving-key-irk-for-apple-watch-iphone-and-ipad)
+Instructions on how to get the [Identity Address and IRK for an Apple Watch, iPhone or iPad](https://gateway.theengs.io/use/use.html#getting-identity-resolving-key-irk-for-apple-watch-iphone-ipad-and-airpods)
