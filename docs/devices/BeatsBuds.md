@@ -1,6 +1,6 @@
 # Beats Solo/Studio Buds
 
-|Model Id|[APPLEAIRPODS](https://github.com/theengs/decoder/blob/development/src/devices/APPLEAIRPODS_json.h)|
+|Model Id|[BEATSBUDS](https://github.com/theengs/decoder/blob/development/src/devices/APPLEAIRPODS_json.h)|
 |-|-|
 |Brand|Beats|
 |Model|Solo/Studio Buds|
