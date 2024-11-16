@@ -34,6 +34,7 @@
 #include "devices/H5074_json.h"
 #include "devices/H5102_json.h"
 #include "devices/H5106_json.h"
+#include "devices/H5108_json.h"
 #include "devices/H5179_json.h"
 #include "devices/HHCCJCY10_json.h"
 #include "devices/HHCCJCY01HHCC_json.h"
@@ -164,6 +165,7 @@ const char* _devices[][2] = {
     {_H5074_json, _H5074_json_props},
     {_H5102_json, _H5102_json_props},
     {_H5106_json, _H5106_json_props},
+    {_H5108_json, _H5108_json_props},
     {_H5179_json, _H5179_json_props},
     {_HHCCJCY10_json, _HHCCJCY10_json_props},
     {_MUE4094RT_json, _MUE4094RT_json_props},

@@ -183,6 +183,11 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
     "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":90,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
     "{\"brand\":\"Teltonika\",\"model\":\"FMT100\",\"model_id\":\"FMT100\",\"type\":\"TRACK\",\"acts\":true,\"track\":true,\"device\":\"FMT100 2G vehicle tracker\"}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Probe Thermometer\",\"model_id\":\"H5108\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":23.4,\"tempf\":74.12,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Probe Thermometer\",\"model_id\":\"H5108\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":2.2,\"tempf\":35.96,\"batt\":97}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Probe Thermometer\",\"model_id\":\"H5108\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":1.7,\"tempf\":35.06,\"batt\":67}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Probe Thermometer\",\"model_id\":\"H5108\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-3.6,\"tempf\":25.52,\"batt\":35}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Probe Thermometer\",\"model_id\":\"H5108\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-8.4,\"tempf\":16.88,\"batt\":4}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -696,6 +701,11 @@ const char* test_mfgdata[][3] = {
     {"Apple", "AirPods", "4c00071901142023aa8f1100085925754da1d6ab3f80c398447e652875"},
     {"Apple", "AirPods", "4c0007190114200b9a8f110004fa242ea8abb9e8f5e57cefb13a3077eb"},
     {"Teltonika", "FMT100_3498163_LE", ""},
+    {"H5108", "GV51082A7E", "01000101039468640000"},
+    {"H5108", "GV51082A7E", "01000101005848610000"},
+    {"H5108", "GV51082A7E", "010001010044c0430000"},
+    {"H5108", "GV51082A7E", "01000101808ef8230000"},
+    {"H5108", "GV51082A7E", "01000101814a78040000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -862,6 +872,11 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::FMT100,
+    TheengsDecoder::BLE_ID_NUM::H5108,
+    TheengsDecoder::BLE_ID_NUM::H5108,
+    TheengsDecoder::BLE_ID_NUM::H5108,
+    TheengsDecoder::BLE_ID_NUM::H5108,
+    TheengsDecoder::BLE_ID_NUM::H5108,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
