@@ -72,7 +72,7 @@ const char* _APPLEAIRPODS_json = "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods
    }
 })"""";*/
 
-const char* _APPLEAIRPODS_json_props = "{\"properties\":{\"version\":{\"unit\":\"string\",\"name\":\"model version\"},\"color\":{\"unit\":\"string\",\"name\":\"color\"},\"status\":{\"unit\":\"string\",\"name\":\"status\"},\"batt_r\":{\"unit\":\"%\",\"name\":\"batt\"},\"batt_l\":{\"unit\":\"%\",\"name\":\"batt\"},\"batt_case\":{\"unit\":\"%\",\"name\":\"batt\"},\"charging_r\":{\"unit\":\"status\",\"name\":\"battery_charging\"},\"charging_l\":{\"unit\":\"status\",\"name\":\"battery_charging\"},\"charging_case\":{\"unit\":\"status\",\"name\":\"battery_charging\"}}}";
+const char* _APPLEAIRPODS_json_props = "{\"properties\":{\"version\":{\"unit\":\"string\",\"name\":\"model version\"},\"color\":{\"unit\":\"string\",\"name\":\"color\"},\"status\":{\"unit\":\"string\",\"name\":\"status\"},\"batt_r\":{\"unit\":\"%\",\"name\":\"battery\"},\"batt_l\":{\"unit\":\"%\",\"name\":\"battery\"},\"batt_case\":{\"unit\":\"%\",\"name\":\"battery\"},\"charging_r\":{\"unit\":\"status\",\"name\":\"battery_charging\"},\"charging_l\":{\"unit\":\"status\",\"name\":\"battery_charging\"},\"charging_case\":{\"unit\":\"status\",\"name\":\"battery_charging\"}}}";
 /*R""""(
 {
    "properties":{
@@ -90,15 +90,15 @@ const char* _APPLEAIRPODS_json_props = "{\"properties\":{\"version\":{\"unit\":\
       },
       "batt_r":{
          "unit":"%",
-         "name":"batt"
+         "name":"battery"
       },
       "batt_l":{
          "unit":"%",
-         "name":"batt"
+         "name":"battery"
       },
       "batt_case":{
          "unit":"%",
-         "name":"batt"
+         "name":"battery"
       },
       "charging_r":{
          "unit":"status",
