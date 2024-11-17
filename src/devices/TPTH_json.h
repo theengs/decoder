@@ -1,6 +1,6 @@
 #include "common_props.h"
 
-const char* _TPTH_json = "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"tag\":\"0103\",\"condition\":[\"name\",\"index\",0,\"TP357\",\"|\",\"name\",\"index\",0,\"TP358\",\"|\",\"name\",\"index\",0,\"TP359\",\"|\",\"name\",\"index\",0,\"TP393\",\"&\",\"manufacturerdata\",\">=\",12,\"index\",0,\"c2\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",2,4,true,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,2,false,false]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",9,1,false,false],\"post_proc\":[\"*\",50,\"max\",100]}}}";
+const char* _TPTH_json = "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"tag\":\"0103\",\"condition\":[\"name\",\"index\",0,\"TP357\",\"|\",\"name\",\"index\",0,\"TP358\",\"|\",\"name\",\"index\",0,\"TP359\",\"|\",\"name\",\"index\",0,\"TP393\",\"&\",\"manufacturerdata\",\">=\",12,\"index\",0,\"c2\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",2,4,true,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,2,false,false]},\"batt_low\":{\"condition\":[\"manufacturerdata\",9,\"bit\",0,1,\"|\",\"manufacturerdata\",9,\"bit\",1,1],\"decoder\":[\"static_value\",false]},\"_batt_low\":{\"condition\":[\"manufacturerdata\",9,\"bit\",0,0,\"&\",\"manufacturerdata\",9,\"bit\",1,0],\"decoder\":[\"static_value\",true]}}}";
 /*R""""(
 {
    "brand":"ThermoPro",
@@ -16,11 +16,33 @@ const char* _TPTH_json = "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"mod
       "hum":{
          "decoder":["value_from_hex_data", "manufacturerdata", 6, 2, false, false]
       },
-      "batt":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 9, 1, false, false],
-         "post_proc":["*", 50, "max", 100]
+      "batt_low":{
+         "condition":["manufacturerdata", 9, "bit", 0, 1, "|", "manufacturerdata", 9, "bit", 1, 1],
+         "decoder":["static_value", false]
+      },
+      "_batt_low":{
+         "condition":["manufacturerdata", 9, "bit", 0, 0, "&", "manufacturerdata", 9, "bit", 1, 0],
+         "decoder":["static_value", true]
       }
    }
 })"""";*/
 
-const char* _TPTH_json_props = _common_BTH_props;
+const char* _TPTH_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"batt_low\":{\"unit\":\"status\",\"name\":\"battery\"}}}";
+/*
+R""""(
+{
+   "properties":{
+      "tempc":{
+         "unit":"°C",
+         "name":"temperature"
+      },
+      "hum":{
+         "unit":"%",
+         "name":"humidity"
+      },
+      "batt_low":{
+         "unit":"status",
+         "name":"battery"
+      }
+   }
+})"""";*/
