@@ -31,7 +31,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":26.8,\"tempf\":80.24,\"hum\":52.6,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":-7.3481,\"tempf\":18.77342,\"hum\":48.1,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5072/75\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":27.5,\"tempf\":81.5,\"hum\":53.1,\"batt\":100}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":21.9,\"tempf\":71.42,\"hum\":40.6,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":21.9,\"tempf\":71.42,\"hum\":40.6,\"batt\":100}",
     "{\"brand\":\"Inkbird\",\"model\":\"T(H) Sensor\",\"model_id\":\"IBS-TH1/TH2/P01B/ITH-12S\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":26.62,\"tempf\":79.916,\"hum\":82.17,\"batt\":89}",
     "{\"brand\":\"Inkbird\",\"model\":\"T(H) Sensor\",\"model_id\":\"IBS-TH1/TH2/P01B/ITH-12S\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-11.62,\"tempf\":11.084,\"batt\":89}",
     "{\"brand\":\"Inkbird\",\"model\":\"T(H) Sensor\",\"model_id\":\"IBS-TH1/TH2/P01B/ITH-12S\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":2.27,\"tempf\":36.086,\"hum\":19.79,\"batt\":100}",
@@ -81,8 +81,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"type\":\"AIR\",\"tempc\":-10,\"tempf\":14,\"hum\":76.80323491,\"co2\":745}",
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"type\":\"AIR\",\"tempc\":25.63286793,\"tempf\":78.13916228,\"hum\":36.16083009,\"co2\":1035}",
     "{\"brand\":\"Sensirion\",\"model\":\"MyCO₂/CO₂ Gadget\",\"model_id\":\"SCD4X\",\"type\":\"AIR\",\"tempc\":28.14831769,\"tempf\":82.66697185,\"hum\":38.09872587,\"co2\":1434}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22,\"tempf\":71.6,\"hum\":69.1,\"batt\":100}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-7.2,\"tempf\":19.04,\"hum\":29.5,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22,\"tempf\":71.6,\"hum\":69.1,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-7.2,\"tempf\":19.04,\"hum\":29.5,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":22.44,\"tempf\":72.392,\"hum\":74.59,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":-13.76,\"tempf\":7.232,\"hum\":60.92,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"type\":\"THB\",\"acts\":true,\"cidc\":false,\"tempc\":25.87,\"tempf\":78.566,\"hum\":65.55,\"batt\":100}",
@@ -118,7 +118,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Mopeka/Lippert\",\"model\":\"Pro Check (Universal)/BottleCheck Sensor\",\"model_id\":\"M1017\",\"type\":\"UNIQ\",\"cidc\":false,\"tempc\":21,\"tempf\":69.8,\"lvl_cm\":86.60031125,\"lvl_in\":34.09461073,\"sync\":false,\"volt\":3,\"batt\":100,\"quality\":3,\"accx\":-18,\"accy\":31}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"track\":true,\"batt\":87,\"device\":\"BM2 Tracker\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"BM2 Battery Monitor\",\"model_id\":\"BM2\",\"type\":\"BATT\",\"track\":true,\"batt\":73,\"device\":\"BM2 Tracker\"}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":26,\"tempf\":78.8,\"hum\":51,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":26,\"tempf\":78.8,\"hum\":51,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":20.3,\"tempf\":68.54,\"hum\":57.2,\"batt\":65}",
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"idle\",\"mode\":\"off\",\"pressure\":54,\"time\":0}",
     "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"type\":\"BODY\",\"state\":\"running\",\"mode\":\"daily clean\",\"sector\":3,\"pressure\":50,\"duration\":63}",
@@ -150,7 +150,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":23,\"tempf\":73.4,\"hum\":50,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"type\":\"THB\",\"tempc\":22.8,\"tempf\":73.04,\"hum\":91,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"type\":\"TRACK\",\"track\":true,\"device\":\"Gigaset G-Tag Tracker\"}",
-    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":44.6,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"hum\":44.6,\"batt\":100}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"iTAG Tracker\"}",
     "{\"brand\":\"Tilt\",\"model\":\"Brewing Hydro- Thermometer\",\"model_id\":\"TILT\",\"type\":\"THBX\",\"cidc\":false,\"color\":\"red\",\"tempf\":68,\"tempc\":20,\"gravity\":1.016,\"txpower\":-59}",
@@ -183,6 +183,11 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
     "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":90,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
     "{\"brand\":\"Teltonika\",\"model\":\"FMT100\",\"model_id\":\"FMT100\",\"type\":\"TRACK\",\"acts\":true,\"track\":true,\"device\":\"FMT100 2G vehicle tracker\"}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":23.4,\"tempf\":74.12,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":2.2,\"tempf\":35.96,\"batt\":97}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":1.7,\"tempf\":35.06,\"batt\":67}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-3.6,\"tempf\":25.52,\"batt\":35}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-8.4,\"tempf\":16.88,\"batt\":4}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -699,6 +704,11 @@ const char* test_mfgdata[][3] = {
     {"Apple", "AirPods", "4c00071901142023aa8f1100085925754da1d6ab3f80c398447e652875"},
     {"Apple", "AirPods", "4c0007190114200b9a8f110004fa242ea8abb9e8f5e57cefb13a3077eb"},
     {"Teltonika", "FMT100_3498163_LE", ""},
+    {"H5108", "GV51082A7E", "01000101039468640000"},
+    {"H5108", "GV51082A7E", "01000101005848610000"},
+    {"H5108", "GV51082A7E", "010001010044c0430000"},
+    {"H5108", "GV51082A7E", "01000101808ef8230000"},
+    {"H5108", "GV51082A7E", "01000101814a78040000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -865,6 +875,11 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::FMT100,
+    TheengsDecoder::BLE_ID_NUM::H5102,
+    TheengsDecoder::BLE_ID_NUM::H5102,
+    TheengsDecoder::BLE_ID_NUM::H5102,
+    TheengsDecoder::BLE_ID_NUM::H5102,
+    TheengsDecoder::BLE_ID_NUM::H5102,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
