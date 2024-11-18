@@ -230,8 +230,20 @@ Here we have a single property that defines a value that we want to decode. The 
 `condition` is a JSON array. The first parameter defines the data source of the condition to test and must be one of:
 - "servicedata"
 - "manufacturerdata"
+- "name"
 
-The second parameter is the index of the data source to look for the value. Then the third parameter is the value to test for.
+The second parameter is the index of the data source to look for the value. For a `"name"` comparison the second parameter is either `"contain"` or `"not_contain"`.
+
+Then the third parameter is the value to test for, or in case of the `"name"` comparison the string to compare the device name to.
+
+```
+ "properties":{
+      "hum":{
+         "condition":["name", "not_contain", "GV5108"],
+         "decoder":["value_from_hex_data", "manufacturerdata", 8, 6, false, false],
+         "post_proc":["&", 8388607, "%", 1000, "/", 10]
+      },
+```
 
 If a direct binary bit evaluation encoded in a hex digit is desired the third parameter is `"bit"`, the fourth parameter the bit position from `3-0` and the fifth parameter the bit state `0` or `1`.
 ```

@@ -376,7 +376,8 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
 
 bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
                                         const char* svc_data,
-                                        const char* mfg_data) {
+                                        const char* mfg_data,
+                                        const char* dev_name) {
   int cond_size = prop_condition.size();
   bool cond_met = prop_condition.isNull();
 
@@ -384,7 +385,7 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
     for (int i = 0; i < cond_size; i += 4) {
       if (prop_condition[i].is<JsonArray>()) {
         DEBUG_PRINT("found nested array\n");
-        cond_met = checkPropCondition(prop_condition[i], svc_data, mfg_data);
+        cond_met = checkPropCondition(prop_condition[i], svc_data, mfg_data, dev_name);
 
         if (++i < cond_size) {
           if (!cond_met && *prop_condition[i].as<const char*>() == '|') {
@@ -437,6 +438,15 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
 
           cond_met = evaluateDatalength(op, data_len, req_len);
         }
+      } else if (dev_name != nullptr && strstr(prop_condition[i].as<const char*>(), "name") != nullptr) {
+        if (strstr(prop_condition[i+1].as<const char*>(), "contain") != nullptr) {
+          if (strstr(dev_name, prop_condition[i+2].as<const char*>()) != nullptr) {
+            cond_met = (strstr(prop_condition[i+1].as<const char*>(), "not_") != nullptr) ? false : true;
+          } else {
+            cond_met = (strstr(prop_condition[i+1].as<const char*>(), "not_") != nullptr) ? true : false;
+          }
+        }
+        
       } else {
         DEBUG_PRINT("ERROR property condition data source invalid\n");
         return false;
@@ -652,7 +662,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       for (JsonPair kv : properties) {
         JsonObject prop = kv.value().as<JsonObject>();
 
-        if (checkPropCondition(prop["condition"], svc_data, mfg_data)) {
+        if (checkPropCondition(prop["condition"], svc_data, mfg_data, dev_name)) {
           JsonArray decoder = prop["decoder"];
           if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
             const char* src = svc_data;

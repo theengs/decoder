@@ -182,7 +182,7 @@ private:
   bool        data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int *idx);
   uint8_t     getBinaryData(char ch);
   bool        evaluateDatalength(std::string op, size_t data_len, size_t req_len);
-  bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data);
+  bool        checkPropCondition(const JsonArray& prop, const char* svc_data, const char* mfg_data, const char* dev_name);
   bool        checkDeviceMatch(const JsonArray& condition, const char* svc_data, const char* mfg_data,
                                const char* dev_name, const char* svc_uuid, const char* mac_id);
   std::string sanitizeJsonKey(const char* key_in);
