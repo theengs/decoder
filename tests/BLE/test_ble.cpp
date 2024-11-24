@@ -231,6 +231,7 @@ const char* expected_name_mac_uuid_mfgsvcdata[] = {
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T encrypted\",\"model_id\":\"SBHT-003C_ENCR\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"e1a236ace4b4086167\",\"ctr\":\"4bfbd366\",\"mic\":\"8c080c2e\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T encrypted\",\"model_id\":\"SBHT-003C_ENCR\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"c85de27369ce3f84750015\",\"ctr\":\"aae9d466\",\"mic\":\"b801349b\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU H&T encrypted\",\"model_id\":\"SBHT-003C_ENCR\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"3a25e3518e72c92f6dfef8\",\"ctr\":\"e9e9d466\",\"mic\":\"96b53b8a\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window\",\"model_id\":\"SBDW-002C\",\"type\":\"CTMO\",\"acts\":true,\"cont\":true,\"packet\":16,\"batt\":100,\"lux\":22,\"open\":false,\"rot\":0,\"mac\":\"3C:2E:F5:DD:EE:FF\"}",
 };
 
 const char* expected_uuid_name_svcdata[] = {
@@ -941,6 +942,7 @@ const char* test_name_mac_uuid_mfgsvcdata[][6] = {
     {"SBHT-003C encrypted", "AA:BB:CC:DD:EE:FF", "SBHT-003C", "0xfcd2", "a90b0111000b03000affeeddccbbaa", "45e1a236ace4b40861674bfbd3668c080c2e"},
     {"SBHT-003C encrypted", "AA:BB:CC:DD:EE:FF", "SBHT-003C", "0xfcd2", "a90b0111000b03000affeeddccbbaa", "45c85de27369ce3f84750015aae9d466b801349b"},
     {"SBHT-003C encrypted", "AA:BB:CC:DD:EE:FF", "SBHT-003C", "0xfcd2", "a90b0111000b03000affeeddccbbaa", "453a25e3518e72c92f6dfef8e9e9d46696b53b8a"},
+    {"SBDW-2C8781", "3C:2E:F5:DD:EE:FF", "SBDW-2C8781", "0xfcd2", "a90b0101000b02000affeeddf52e3c", "4400100164059808002d003f0000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_mac_uuid_mfgsvcdata_id_num[]{
@@ -960,6 +962,7 @@ TheengsDecoder::BLE_ID_NUM test_name_mac_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBHT_003C_ENCR,
     TheengsDecoder::BLE_ID_NUM::SBHT_003C_ENCR,
     TheengsDecoder::BLE_ID_NUM::SBHT_003C_ENCR,
+    TheengsDecoder::BLE_ID_NUM::SBDW_002C,
 };
 
 // uuid name test input [test name] [uuid] [device name] [service data]
