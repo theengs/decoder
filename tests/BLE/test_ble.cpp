@@ -212,6 +212,7 @@ const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"ctrl\":true,\"open\":70,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"type\":\"WCVR\",\"acts\":true,\"ctrl\":true,\"open\":50,\"direction\":\"up\",\"motion\":false,\"calibrated\":true,\"lightlevel\":2,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"nut Tracker\"}",
+    "{\"brand\":\"SwitchBot\",\"model\":\"Meter Pro (CO2)\",\"model_id\":\"W490001X\",\"type\":\"AIR\",\"acts\":true,\"tempc\":22.8,\"tempf\":73.04,\"hum\":40,\"co2\":893,\"batt\":100,\"mac\":\"B0:E9:FE:DD:EE:FF\"}",
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
@@ -893,6 +894,7 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff2427412184", "780064"},
     {"Switchbot_BlindTilt NEW", "WoBlindTilt", "0xfd3d", "6909aabbccddeeff39274b4184", "780064"},
     {"Nut","nut","0x180a","12345678",""},
+    {"SwitchBot Meter Pro (CO2)", "Outdoor Meter", "0xfd3d", "6909b0e9feddeeff0ce40896280004037d00", "350064"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -922,6 +924,7 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SBBT,
     TheengsDecoder::BLE_ID_NUM::SBBT,
     TheengsDecoder::BLE_ID_NUM::NUT,
+    TheengsDecoder::BLE_ID_NUM::SBMP,
 };
 
 // uuid test input [test name] [mac] [device name] [uuid] [manufacturer data] [service data]

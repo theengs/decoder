@@ -101,6 +101,7 @@ public:
     SBMS,
     SBMT,
     SBMT_M,
+    SBMP,
     SBOT,
     SBOT_M,
     SBOT_S,

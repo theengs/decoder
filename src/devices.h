@@ -66,6 +66,7 @@
 #include "devices/SBCU_json.h"
 #include "devices/SBMS_json.h"
 #include "devices/SBMT_json.h"
+#include "devices/SBMP_json.h"
 #include "devices/SBOT_json.h"
 #include "devices/SBS1_json.h"
 #include "devices/SHT4X_json.h"
@@ -179,6 +180,7 @@ const char* _devices[][2] = {
     {_SBMS_json, _SBMS_json_props},
     {_SBMT_json, _SBMT_json_props},
     {_SBMT_json_M, _SBMT_json_props},
+    {_SBMP_json, _SBMP_json_props},
     {_SBOT_json, _SBOT_json_props},
     {_SBOT_json_M, _SBOT_json_props},
     {_SBOT_json_S, _SBOT_json_props},
