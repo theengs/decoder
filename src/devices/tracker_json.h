@@ -1,11 +1,11 @@
-const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"nut\",\"&\",\"manufacturerdata\",\"=\",8,\"&\",\"uuid\",\"index\",0,\"180a\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nut Tracker\"]}}}";
+const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"nut\",\"&\",\"uuid\",\"index\",0,\"180a\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nut Tracker\"]}}}";
 /*R""""(
 {
    "brand":"nut",
    "model":"Smart Tracker",
    "model_id":"NUT",
    "tag":"100b",
-   "condition":["name", "index", 0, "nut", "&", "manufacturerdata", "=", 8, "&", "uuid", "index", 0, "180a"],
+   "condition":["name", "index", 0, "nut", "&", "uuid", "index", 0, "180a"],
    "properties":{
       "device":{
          "decoder":["static_value", "nut Tracker"]
