@@ -19,7 +19,7 @@ except SKBuildError:
     setup_requires.append("cmake")
 
 setup(
-    name="TheengsDecoder",
+    name="theengsdecoder",
     long_description=long_description,
     long_description_content_type="text/markdown",
     description="A message decoder for the Internet of Things",
