@@ -58,6 +58,7 @@
 #include "devices/XMTZC05HMKG_json.h"
 #include "devices/XMTZC05HMLB_json.h"
 #include "devices/Mokobeacon_json.h"
+#include "devices/Mikrotik_json.h"
 #include "devices/RDL52832_json.h"
 #include "devices/RuuviTag_RAWv1_json.h"
 #include "devices/RuuviTag_RAWv2_json.h"
@@ -171,6 +172,7 @@ const char* _devices[][2] = {
     {_NODONNIU_json, _NODONNIU_json_props},
     {_Mokobeacon_json, _Mokobeacon_json_props},
     {_MBXPRO_json, _MBXPRO_json_props},
+    {_Mikrotik_json, _Mikrotik_json_props},
     {_iNodeEM_json, _iNodeEM_json_props},
     {_RuuviTag_RAWv1_json, _RuuviTag_RAWv1_json_props},
     {_RuuviTag_RAWv2_json, _RuuviTag_RAWv2_json_props},
