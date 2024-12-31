@@ -65,7 +65,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":21.4,\"tempf\":70.52,\"hum\":67,\"batt_low\":false}",
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":24.5,\"tempf\":76.1,\"hum\":50,\"batt_low\":false",
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":24.6,\"tempf\":76.28,\"hum\":51,\"batt_low\":false}",
-    "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":53,\"batt_low\":false}",
+    "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":53,\"batt_low\":true}",
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":53,\"batt_low\":true}",
     "{\"brand\":\"ThermoPro\",\"model\":\"TH Sensor\",\"model_id\":\"TP35X/393\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":21.2,\"tempf\":70.16,\"hum\":55,\"batt_low\":false}",
     "{\"brand\":\"Oria\",\"model\":\"TH Sensor\",\"model_id\":\"T301\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":25.6,\"tempf\":78.08,\"hum\":56,\"batt\":99,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
