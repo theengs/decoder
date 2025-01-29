@@ -473,6 +473,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":3,\"color\":\"CozyGrey\",\"batt\":89}",
     "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP108\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP103B\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":21.25,\"tempf\":70.25,\"accx\":4,\"accy\":-12,\"accz\":-4,\"volt\":3.05}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -1322,6 +1323,7 @@ const char* test_uuid[][4] = {
     {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a521520004595eb905"},
     {"Feasycom BP108", "0xfff0", "servicedata", "27021992aabbccddeeff64"},
     {"Feasycom BPXXX", "0xfff0", "servicedata", "29021992aabbccddeeff64"},
+    {"BlueCharm BC04P", "0xfeaa", "servicedata", "21000b0bea15400004fff4fffc"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1458,6 +1460,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::NODONNIU,
     TheengsDecoder::BLE_ID_NUM::FEASY,
     TheengsDecoder::BLE_ID_NUM::FEASY,
+    TheengsDecoder::BLE_ID_NUM::BC08,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
