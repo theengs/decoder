@@ -189,7 +189,7 @@ private:
                                const char* dev_name, const char* svc_uuid, const char* mac_id);
   std::string sanitizeJsonKey(const char* key_in);
 
-  size_t m_docMax = 12000;
+  size_t m_docMax = 12200;
   size_t m_minSvcDataLen = 20;
   size_t m_minMfgDataLen = 16;
 };
