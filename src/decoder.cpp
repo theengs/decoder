@@ -585,6 +585,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
           case 18:
             doc["type"] = "AUDIO"; // Button
             break;
+          case 19:
+            doc["type"] = "WIND"; // Button
+            break;
           case 254:
             doc["type"] = "RMAC"; // random MAC address devices
             break;
@@ -936,8 +939,14 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               ascii += ch;
             }
 
+            // DEBUG_PRINT("PROP: %s\n", prop.as<JsonObject>();
+
             if (ascii != "") {
-              jsondata[sanitizeJsonKey(kv.key().c_str())] = ascii;
+              if (prop.containsKey("is_double")) {
+                jsondata[sanitizeJsonKey(kv.key().c_str())] = std::stod(ascii);
+              } else {
+                jsondata[sanitizeJsonKey(kv.key().c_str())] = ascii;
+              }
             }
 
             success = i_main;

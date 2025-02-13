@@ -160,6 +160,7 @@ public:
     APPLE_CONT,
     APPLE_CONTAT,
     SERVICE_DATA,
+    UT363BT,
     SE_RHT,
     SE_TEMP,
     SE_TPROBE,

@@ -191,6 +191,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-8.4,\"tempf\":16.88,\"batt\":4}",
     "{\"brand\":\"MikroTik\",\"model\":\"TG-BT5-IN/-OUT\",\"model_id\":\"TG-BT5\",\"type\":\"ACEL\",\"track\":true,\"tempc\":28.625,\"tempf\":83.525,\"accx\":0,\"accy\":0,\"accz\":0.0078125,\"flag_reed\":false,\"flag_tilt\":false,\"flag_fall\":false,\"flag_impact_x\":true,\"flag_impact_y\":true,\"flag_impact_z\":false,\"uptime\":5703825,\"batt\":95}",
     "{\"brand\":\"MikroTik\",\"model\":\"TG-BT5-IN/-OUT\",\"model_id\":\"TG-BT5\",\"type\":\"ACEL\",\"track\":true,\"tempc\":25.62890625,\"tempf\":78.13203125,\"accx\":-0.00390625,\"accy\":-0.0078125,\"accz\":0,\"flag_reed\":true,\"flag_tilt\":false,\"flag_fall\":false,\"flag_impact_x\":true,\"flag_impact_y\":false,\"flag_impact_z\":true,\"uptime\":744,\"batt\":100}",
+    "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":6.58}",
+    "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":4.3}",
+    "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":1.52}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -718,6 +721,9 @@ const char* test_mfgdata[][3] = {
     {"H5108", "GV51082A7E", "01000101814a78040000"},
     {"Mikrotik", "TG-BT5-IN/-OUT", "4f090100cea6000000000200a01c91085700185f"},
     {"Mikrotik", "TG-BT5-IN/-OUT", "4f0901009e11fffffeff0000a119e802000029e4"},
+    {"UNI-T", "UT363 BT", "aabb1005372020362e35384d2f533430800475"},
+    {"UNI-T", "UT363 BT", "aabb1005372020342e33304d2f533430800476"},
+    {"UNI-T", "UT363 BT", "aabb1005372020312e35324d2f533430800472"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -892,6 +898,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::H5102,
     TheengsDecoder::BLE_ID_NUM::TGBT5,
     TheengsDecoder::BLE_ID_NUM::TGBT5,
+    TheengsDecoder::BLE_ID_NUM::UT363BT,
+    TheengsDecoder::BLE_ID_NUM::UT363BT,
+    TheengsDecoder::BLE_ID_NUM::UT363BT,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
