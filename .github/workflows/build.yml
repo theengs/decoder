@@ -14,7 +14,7 @@ jobs:
     - uses: pre-commit/action@v3.0.0
   gcc:
     name: GCC
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -63,7 +63,7 @@ jobs:
 
   clang:
     name: Clang
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
