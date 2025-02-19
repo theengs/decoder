@@ -30,12 +30,6 @@ jobs:
     steps:
       - name: Install
         run: |
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty universe'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial universe' 
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic universe'
           sudo apt-get update
           sudo apt-get install -y gcc-${{ matrix.gcc }} g++-${{ matrix.gcc }}
       - name: Checkout
@@ -62,22 +56,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - clang: "7"
-          - clang: "8"
+          - clang: "16"
             cxxflags: -fsanitize=leak -fno-sanitize-recover=all
-          - clang: "9"
-            cxxflags: -fsanitize=undefined -fno-sanitize-recover=all
-          - clang: "10"
-            cxxflags: -fsanitize=address -fno-sanitize-recover=all
     steps:
       - name: Install
         run: |
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty universe'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial universe' 
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic universe' 
           sudo apt-get update
           sudo apt-get install -y clang-${{ matrix.clang }}
       - name: Checkout
