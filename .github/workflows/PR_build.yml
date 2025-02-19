@@ -46,7 +46,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - clang: "10"
+          - clang: "16"
+            cxxflags: -fsanitize=leak -fno-sanitize-recover=all
     steps:
       - name: Install
         run: |
