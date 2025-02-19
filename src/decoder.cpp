@@ -29,10 +29,13 @@
 #ifdef DEBUG_DECODER
 #  include <stdio.h>
 #  define DEBUG_PRINT(...) \
-    { printf(__VA_ARGS__); }
+    {                      \
+      printf(__VA_ARGS__); \
+    }
 #else
 #  define DEBUG_PRINT(...) \
-    {}
+    {                      \
+    }
 #endif
 
 #ifdef UNIT_TESTING
@@ -63,7 +66,7 @@ void TheengsDecoder::reverse_hex_data(const char* in, char* out, int l) {
     i -= 2;
     j += 2;
   }
-  out[l] = '\0';
+  out[j] = '\0';
 }
 
 double TheengsDecoder::bf_value_from_hex_string(const char* data_str,
@@ -285,9 +288,9 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         string_to_compare = mac_string.c_str();
 
         if (strstr(cond_str, "revmac@index") != nullptr) {
-          char* reverse_mac_string = (char*)malloc(strlen(string_to_compare) + 1);
-
+          char reverse_mac_string[13]; // 12 bytes + null terminator
           reverse_hex_data(string_to_compare, reverse_mac_string, 12);
+          reverse_mac_string[12] = '\0'; // Ensure null termination
           string_to_compare = reverse_mac_string;
         }
 
@@ -302,9 +305,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
                     string_to_compare,
                     cond_index);
 
-        if (strncmp(&cmp_str[cond_index],
-                    string_to_compare,
-                    12) == 0) {
+        if (strncmp(&cmp_str[cond_index], string_to_compare, 12) == 0) {
           match = true;
         } else {
           match = false;
@@ -439,14 +440,14 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
           cond_met = evaluateDatalength(op, data_len, req_len);
         }
       } else if (dev_name != nullptr && strstr(prop_condition[i].as<const char*>(), "name") != nullptr) {
-        if (strstr(prop_condition[i+1].as<const char*>(), "contain") != nullptr) {
-          if (strstr(dev_name, prop_condition[i+2].as<const char*>()) != nullptr) {
-            cond_met = (strstr(prop_condition[i+1].as<const char*>(), "not_") != nullptr) ? false : true;
+        if (strstr(prop_condition[i + 1].as<const char*>(), "contain") != nullptr) {
+          if (strstr(dev_name, prop_condition[i + 2].as<const char*>()) != nullptr) {
+            cond_met = (strstr(prop_condition[i + 1].as<const char*>(), "not_") != nullptr) ? false : true;
           } else {
-            cond_met = (strstr(prop_condition[i+1].as<const char*>(), "not_") != nullptr) ? true : false;
+            cond_met = (strstr(prop_condition[i + 1].as<const char*>(), "not_") != nullptr) ? true : false;
           }
         }
-        
+
       } else {
         DEBUG_PRINT("ERROR property condition data source invalid\n");
         return false;
