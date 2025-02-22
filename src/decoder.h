@@ -174,6 +174,7 @@ public:
     SBMO_003Z_ENCR,
     SBHT_003C,
     SBHT_003C_ENCR,
+    VCH6003,
     BLE_ID_MAX
   };
 

@@ -508,6 +508,12 @@ const char* expected_mac_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":27,\"tempf_max\":80.6,\"time_max\":175,\"tempc_min\":24.1875,\"tempf_min\":75.5375,\"time_min\":217757,\"mac\":\"DC:23:00:00:0A:AE\"}",
 };
 
+const char* expected_mac_name_mfg[] = {
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"tempc\":6.5,\"tempf\":43.7,\"hum\":37,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"tempc\":-13,\"tempf\":8.6,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+};
+
 const char* expected_mac_mfgsvcdata[] = {
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"steps\":9101,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":132,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
@@ -1532,6 +1538,19 @@ TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
 };
 
+// MAC name manufacturer data test input [test name] [mac] [device name] [data]
+const char* test_mac_name_mfgdata[][4] = {
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "XL0801", "010900f614aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "XL0801", "0109004125aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "XL0801", "0109ff7e14aabbccddeeff"},
+};
+
+TheengsDecoder::BLE_ID_NUM test_mac_name_mfgdata_id_num[]{
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
+};
+
 // MAC test input [test name] [mac] [manufacturer data] [service data]
 const char* test_mac_mfgsvcdata[][4] = {
     {"MiBand", "AA:BB:CC:DD:EE:FF", "57010202017dffffffffffffffffffffffffff02aabbccddeeff", "8d230000"},
@@ -1978,6 +1997,57 @@ int main() {
       std::cout << "FAILED! Error parsing: " << test_mac_mfgdata[i][0]
                 << " : " << test_mac_mfgdata[i][1] << " : "
                 << test_mac_mfgdata[i][2] << "decode res: " << decode_res << std::endl;
+      return 1;
+    }
+  }
+
+  for (unsigned int i = 0; i < sizeof(test_mac_name_mfgdata) / sizeof(test_mac_name_mfgdata[0]); ++i) {
+    doc.clear();
+    std::cout << "trying " << test_mac_name_mfgdata[i][0] << " : " << test_mac_name_mfgdata[i][1] << " : " << test_mac_name_mfgdata[i][2] << " : " << test_mac_name_mfgdata[i][3] << std::endl;
+    doc["id"] = test_mac_name_mfgdata[i][1];
+    doc["name"] = test_mac_name_mfgdata[i][2];
+    doc["manufacturerdata"] = test_mac_name_mfgdata[i][3];
+    bleObject = doc.as<JsonObject>();
+
+    decode_res = decoder.decodeBLEJson(bleObject);
+    if (decode_res == test_mac_name_mfgdata_id_num[i]) {
+      std::cout << "Found : " << decode_res << " ";
+      bleObject.remove("id");
+      bleObject.remove("name");
+      bleObject.remove("manufacturerdata");
+      serializeJson(doc, std::cout);
+      std::cout << std::endl;
+
+      StaticJsonDocument<2048> doc_exp;
+      JsonObject expected = doc_exp.to<JsonObject>();
+      deserializeJson(doc_exp, expected_mac_name_mfg[i]);
+
+      if (!checkResult(bleObject, expected)) {
+        return 1;
+      }
+
+      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
+      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
+      if (brand == "" || model == "") {
+        std::cout << "Error reading attributes" << std::endl;
+        return 1;
+      }
+      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
+
+      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
+      if (error) {
+        std::cout << "deserializeJson() failed: " << error << std::endl;
+        return 1;
+      }
+
+      std::cout << "Properties: ";
+      serializeJson(doc_exp, std::cout);
+      std::cout << std::endl;
+    } else {
+      std::cout << "FAILED! Error parsing: " << test_mac_name_mfgdata[i][0]
+                << " : " << test_mac_name_mfgdata[i][1] << " : "
+                << " : " << test_mac_name_mfgdata[i][2] << " : "
+                << test_mac_name_mfgdata[i][3] << "decode res: " << decode_res << std::endl;
       return 1;
     }
   }
