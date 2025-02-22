@@ -506,12 +506,9 @@ const char* expected_mac_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":27.25,\"tempf_max\":81.05,\"time_max\":3188218,\"tempc_min\":18.375,\"tempf_min\":65.075,\"time_min\":6778822,\"mac\":\"8E:BB:00:00:07:10\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":29.6875,\"tempf_max\":85.4375,\"time_max\":106359,\"tempc_min\":24.125,\"tempf_min\":75.425,\"time_min\":54044,\"mac\":\"63:06:00:00:0D:FE\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":27,\"tempf_max\":80.6,\"time_max\":175,\"tempc_min\":24.1875,\"tempf_min\":75.5375,\"time_min\":217757,\"mac\":\"DC:23:00:00:0A:AE\"}",
-};
-
-const char* expected_mac_name_mfg[] = {
-    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"tempc\":24.6,\"tempf\":76.28,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"tempc\":6.5,\"tempf\":43.7,\"hum\":37,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"tempc\":-13,\"tempf\":8.6,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":24.6,\"tempf\":76.28,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":6.5,\"tempf\":43.7,\"hum\":37,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":-13,\"tempf\":8.6,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfgsvcdata[] = {
@@ -1508,6 +1505,9 @@ const char* test_mac_mfgdata[][3] = {
     {"WS02/WS08", "8E:BB:00:00:07:10", "1500000010070000bb8eb401faa530002601c66f6700"},
     {"WS02/WS08", "63:06:00:00:0D:FE", "10000000fe0d00000663db01779f010082011cd30000"},
     {"WS02/WS08", "DC:23:00:00:0A:AE", "11000000ae0a000023dcb001af00000083019d520300"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "010900f614aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "0109004125aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "0109ff7e14aabbccddeeff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
@@ -1536,16 +1536,6 @@ TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
-};
-
-// MAC name manufacturer data test input [test name] [mac] [device name] [data]
-const char* test_mac_name_mfgdata[][4] = {
-    {"VCH6003", "AA:BB:CC:DD:EE:FF", "XL0801", "010900f614aabbccddeeff"},
-    {"VCH6003", "AA:BB:CC:DD:EE:FF", "XL0801", "0109004125aabbccddeeff"},
-    {"VCH6003", "AA:BB:CC:DD:EE:FF", "XL0801", "0109ff7e14aabbccddeeff"},
-};
-
-TheengsDecoder::BLE_ID_NUM test_mac_name_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VCH6003,
     TheengsDecoder::BLE_ID_NUM::VCH6003,
     TheengsDecoder::BLE_ID_NUM::VCH6003,
@@ -1997,57 +1987,6 @@ int main() {
       std::cout << "FAILED! Error parsing: " << test_mac_mfgdata[i][0]
                 << " : " << test_mac_mfgdata[i][1] << " : "
                 << test_mac_mfgdata[i][2] << "decode res: " << decode_res << std::endl;
-      return 1;
-    }
-  }
-
-  for (unsigned int i = 0; i < sizeof(test_mac_name_mfgdata) / sizeof(test_mac_name_mfgdata[0]); ++i) {
-    doc.clear();
-    std::cout << "trying " << test_mac_name_mfgdata[i][0] << " : " << test_mac_name_mfgdata[i][1] << " : " << test_mac_name_mfgdata[i][2] << " : " << test_mac_name_mfgdata[i][3] << std::endl;
-    doc["id"] = test_mac_name_mfgdata[i][1];
-    doc["name"] = test_mac_name_mfgdata[i][2];
-    doc["manufacturerdata"] = test_mac_name_mfgdata[i][3];
-    bleObject = doc.as<JsonObject>();
-
-    decode_res = decoder.decodeBLEJson(bleObject);
-    if (decode_res == test_mac_name_mfgdata_id_num[i]) {
-      std::cout << "Found : " << decode_res << " ";
-      bleObject.remove("id");
-      bleObject.remove("name");
-      bleObject.remove("manufacturerdata");
-      serializeJson(doc, std::cout);
-      std::cout << std::endl;
-
-      StaticJsonDocument<2048> doc_exp;
-      JsonObject expected = doc_exp.to<JsonObject>();
-      deserializeJson(doc_exp, expected_mac_name_mfg[i]);
-
-      if (!checkResult(bleObject, expected)) {
-        return 1;
-      }
-
-      std::string brand = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "brand");
-      std::string model = decoder.getTheengAttribute(expected["model_id"].as<const char*>(), "model");
-      if (brand == "" || model == "") {
-        std::cout << "Error reading attributes" << std::endl;
-        return 1;
-      }
-      std::cout << "model: " << model << ",  brand: " << brand << std::endl;
-
-      DeserializationError error = deserializeJson(doc_exp, decoder.getTheengProperties(bleObject["model_id"].as<const char*>()));
-      if (error) {
-        std::cout << "deserializeJson() failed: " << error << std::endl;
-        return 1;
-      }
-
-      std::cout << "Properties: ";
-      serializeJson(doc_exp, std::cout);
-      std::cout << std::endl;
-    } else {
-      std::cout << "FAILED! Error parsing: " << test_mac_name_mfgdata[i][0]
-                << " : " << test_mac_name_mfgdata[i][1] << " : "
-                << " : " << test_mac_name_mfgdata[i][2] << " : "
-                << test_mac_name_mfgdata[i][3] << "decode res: " << decode_res << std::endl;
       return 1;
     }
   }
