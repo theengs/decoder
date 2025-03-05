@@ -6,14 +6,14 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: actions/setup-python@v4
       with:
         python-version: '3.11'
     - uses: pre-commit/action@v3.0.0
   gcc:
     name: GCC
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -22,16 +22,10 @@ jobs:
     steps:
       - name: Install
         run: |
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty universe'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial universe'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic universe'
           sudo apt-get update
           sudo apt-get install -y gcc-${{ matrix.gcc }} g++-${{ matrix.gcc }}
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Configure
@@ -47,25 +41,20 @@ jobs:
 
   clang:
     name: Clang
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         include:
-          - clang: "10"
+          - clang: "16"
+            cxxflags: -fsanitize=leak -fno-sanitize-recover=all
     steps:
       - name: Install
         run: |
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ trusty universe'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ xenial universe'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic main'
-          sudo add-apt-repository -yn 'deb http://archive.ubuntu.com/ubuntu/ bionic universe'
           sudo apt-get update
           sudo apt-get install -y clang-${{ matrix.clang }}
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Configure
@@ -92,7 +81,7 @@ jobs:
           - xcode: "16.1"
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Select XCode version
@@ -114,7 +103,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Configure
@@ -125,9 +114,9 @@ jobs:
         run: ctest --output-on-failure -V -C Debug .
 
   examples:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
@@ -143,9 +132,9 @@ jobs:
         find . -name platformio.ini -type f | sed 's,/platformio.ini$,,' | xargs --verbose -n 1 pio run --jobs 2 --project-dir
 
   python:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
         fetch-depth: 0  # deep clone for setuptools-scm

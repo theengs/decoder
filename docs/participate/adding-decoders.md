@@ -53,8 +53,8 @@ Each device should also have an encoded **tag** property to, at the minimum, def
     </thead>
     <tbody>
         <tr>
-            <td rowspan=22>Byte[0]</td>
-            <td rowspan=22>Device Type > "type":</td>
+            <td rowspan=23>Byte[0]</td>
+            <td rowspan=23>Device Type > "type":</td>
             <td rowspan=1>0 - Reserved</td>
         </tr>
         <tr>
@@ -112,7 +112,10 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan=1>18 - AUDIO - audio devices</td>
         </tr>
         <tr>
-            <td rowspan=1>19-253 - Reserved</td>
+            <td rowspan=1>19 - WIND - wind speed anemometers</td>
+        </tr>
+        <tr>
+            <td rowspan=1>20-253 - Reserved</td>
         </tr>
         <tr>
             <td rowspan=1>254 - RMAC - known random MAC address devices</td>

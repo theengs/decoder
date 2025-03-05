@@ -168,20 +168,21 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":8.46760273,\"lvl_in\":3.333701862}",
     "{\"brand\":\"Onset\",\"model\":\"Hobo Water Level Sensor\",\"model_id\":\"HOBOMX2001\",\"type\":\"UNIQ\",\"lvl_cm\":9.514185786,\"lvl_in\":3.745742436}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"tempc\":25.5,\"tempf\":77.9,\"hum\":50,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 1st gen.\",\"color\":\"white\",\"status\":\"thus far unknown - please report your status\",\"batt_r\":100,\"batt_l\":50,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 1st gen.\",\"color\":\"white\",\"status\":\"thus far unknown - please report your status\",\"batt_r\":100,\"batt_l\":90,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"out of case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":30,\"charging_r\":true,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":30,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"out of case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":30,\"charging_r\":true,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"out of case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"out of case\",\"batt_r\":90,\"batt_l\":90,\"batt_case\":70,\"charging_r\":false,\"charging_l\":true,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"out of case\",\"batt_r\":100,\"batt_l\":90,\"batt_case\":70,\"charging_r\":true,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in case\",\"batt_r\":100,\"batt_l\":90,\"batt_case\":70,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in case\",\"batt_r\":90,\"batt_l\":90,\"batt_case\":70,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in case\",\"batt_r\":90,\"batt_l\":90,\"batt_case\":60,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":80,\"batt_l\":90,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
-    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2nd gen.\",\"color\":\"white\",\"status\":\"in ears\",\"batt_r\":90,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 1st gen.\",\"color\":\"white\",\"status\":\"R in case - L in ear\",\"batt_r\":100,\"batt_l\":50,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 1st gen.\",\"color\":\"white\",\"status\":\"L in case - R in ear\",\"batt_r\":90,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"L in case - R out of case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":30,\"charging_r\":false,\"charging_l\":true,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"both in case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":30,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"R in case - L out of case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":30,\"charging_r\":true,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"both out of case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"L in case - R out of case\",\"batt_r\":90,\"batt_l\":90,\"batt_case\":70,\"charging_r\":false,\"charging_l\":true,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"R in case - L out of case\",\"batt_r\":100,\"batt_l\":90,\"batt_case\":70,\"charging_r\":true,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"both in case\",\"batt_r\":100,\"batt_l\":90,\"batt_case\":70,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"both in case\",\"batt_r\":90,\"batt_l\":90,\"batt_case\":70,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"both in case\",\"batt_r\":90,\"batt_l\":90,\"batt_case\":60,\"charging_r\":true,\"charging_l\":true,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"R in ear - L out of case\",\"batt_r\":90,\"batt_l\":80,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"L in ear - R out of case\",\"batt_r\":100,\"batt_l\":100,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Pro 2 Lightning\",\"color\":\"white\",\"status\":\"both in ears\",\"batt_r\":100,\"batt_l\":90,\"batt_case\":100,\"charging_r\":false,\"charging_l\":false,\"charging_case\":false}",
+    "{\"brand\":\"Apple/Beats\",\"model\":\"AirPods (Pro)/Solo|Studio Buds\",\"model_id\":\"APPLEAIRPODS\",\"type\":\"AUDIO\",\"track\":true,\"prmac\":true,\"version\":\"AirPods Max Lightning\",\"color\":\"green\",\"status\":\"on ears\",\"batt_r\":90,\"charging_r\":false}",
     "{\"brand\":\"Teltonika\",\"model\":\"FMT100\",\"model_id\":\"FMT100\",\"type\":\"TRACK\",\"acts\":true,\"track\":true,\"device\":\"FMT100 2G vehicle tracker\"}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":23.4,\"tempf\":74.12,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":2.2,\"tempf\":35.96,\"batt\":97}",
@@ -190,6 +191,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart Thermo-Hygrometer\",\"model_id\":\"H5100/01/02/04/05/08/74/77\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":-8.4,\"tempf\":16.88,\"batt\":4}",
     "{\"brand\":\"MikroTik\",\"model\":\"TG-BT5-IN/-OUT\",\"model_id\":\"TG-BT5\",\"type\":\"ACEL\",\"track\":true,\"tempc\":28.625,\"tempf\":83.525,\"accx\":0,\"accy\":0,\"accz\":0.0078125,\"flag_reed\":false,\"flag_tilt\":false,\"flag_fall\":false,\"flag_impact_x\":true,\"flag_impact_y\":true,\"flag_impact_z\":false,\"uptime\":5703825,\"batt\":95}",
     "{\"brand\":\"MikroTik\",\"model\":\"TG-BT5-IN/-OUT\",\"model_id\":\"TG-BT5\",\"type\":\"ACEL\",\"track\":true,\"tempc\":25.62890625,\"tempf\":78.13203125,\"accx\":-0.00390625,\"accy\":-0.0078125,\"accz\":0,\"flag_reed\":true,\"flag_tilt\":false,\"flag_fall\":false,\"flag_impact_x\":true,\"flag_impact_y\":false,\"flag_impact_z\":true,\"uptime\":744,\"batt\":100}",
+    "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":6.58}",
+    "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":4.3}",
+    "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":1.52}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -473,6 +477,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":3,\"color\":\"CozyGrey\",\"batt\":89}",
     "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP108\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP103B\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":21.25,\"tempf\":70.25,\"accx\":4,\"accy\":-12,\"accz\":-4,\"volt\":3.05}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -501,6 +506,9 @@ const char* expected_mac_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":27.25,\"tempf_max\":81.05,\"time_max\":3188218,\"tempc_min\":18.375,\"tempf_min\":65.075,\"time_min\":6778822,\"mac\":\"8E:BB:00:00:07:10\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":29.6875,\"tempf_max\":85.4375,\"time_max\":106359,\"tempc_min\":24.125,\"tempf_min\":75.425,\"time_min\":54044,\"mac\":\"63:06:00:00:0D:FE\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":27,\"tempf_max\":80.6,\"time_max\":175,\"tempc_min\":24.1875,\"tempf_min\":75.5375,\"time_min\":217757,\"mac\":\"DC:23:00:00:0A:AE\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":24.6,\"tempf\":76.28,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":6.5,\"tempf\":43.7,\"hum\":37,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":-13,\"tempf\":8.6,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfgsvcdata[] = {
@@ -707,6 +715,7 @@ const char* test_mfgdata[][3] = {
     {"Apple", "AirPods", "4c00071901142003898f100008cc74d502b12d6d72e0f4f6eabf826972"},
     {"Apple", "AirPods", "4c00071901142023aa8f1100085925754da1d6ab3f80c398447e652875"},
     {"Apple", "AirPods", "4c0007190114200b9a8f110004fa242ea8abb9e8f5e57cefb13a3077eb"},
+    {"Apple", "AirPods Max", "4c000719010a202b9a8f111104fa242ea8abb9e8f5e57cefb13a3077eb"},
     {"Teltonika", "FMT100_3498163_LE", ""},
     {"H5108", "GV51082A7E", "01000101039468640000"},
     {"H5108", "GV51082A7E", "01000101005848610000"},
@@ -715,6 +724,9 @@ const char* test_mfgdata[][3] = {
     {"H5108", "GV51082A7E", "01000101814a78040000"},
     {"Mikrotik", "TG-BT5-IN/-OUT", "4f090100cea6000000000200a01c91085700185f"},
     {"Mikrotik", "TG-BT5-IN/-OUT", "4f0901009e11fffffeff0000a119e802000029e4"},
+    {"UNI-T", "UT363 BT", "aabb1005372020362e35384d2f533430800475"},
+    {"UNI-T", "UT363 BT", "aabb1005372020342e33304d2f533430800476"},
+    {"UNI-T", "UT363 BT", "aabb1005372020312e35324d2f533430800472"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -880,6 +892,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
+    TheengsDecoder::BLE_ID_NUM::APPLEAIRPODS,
     TheengsDecoder::BLE_ID_NUM::FMT100,
     TheengsDecoder::BLE_ID_NUM::H5102,
     TheengsDecoder::BLE_ID_NUM::H5102,
@@ -888,6 +901,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::H5102,
     TheengsDecoder::BLE_ID_NUM::TGBT5,
     TheengsDecoder::BLE_ID_NUM::TGBT5,
+    TheengsDecoder::BLE_ID_NUM::UT363BT,
+    TheengsDecoder::BLE_ID_NUM::UT363BT,
+    TheengsDecoder::BLE_ID_NUM::UT363BT,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
@@ -1322,6 +1338,7 @@ const char* test_uuid[][4] = {
     {"NodOn NIU", "0x0000", "servicedata", "02599c37d90287a521520004595eb905"},
     {"Feasycom BP108", "0xfff0", "servicedata", "27021992aabbccddeeff64"},
     {"Feasycom BPXXX", "0xfff0", "servicedata", "29021992aabbccddeeff64"},
+    {"BlueCharm BC04P", "0xfeaa", "servicedata", "21000b0bea15400004fff4fffc"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1458,6 +1475,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::NODONNIU,
     TheengsDecoder::BLE_ID_NUM::FEASY,
     TheengsDecoder::BLE_ID_NUM::FEASY,
+    TheengsDecoder::BLE_ID_NUM::BC08,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
@@ -1487,6 +1505,9 @@ const char* test_mac_mfgdata[][3] = {
     {"WS02/WS08", "8E:BB:00:00:07:10", "1500000010070000bb8eb401faa530002601c66f6700"},
     {"WS02/WS08", "63:06:00:00:0D:FE", "10000000fe0d00000663db01779f010082011cd30000"},
     {"WS02/WS08", "DC:23:00:00:0A:AE", "11000000ae0a000023dcb001af00000083019d520300"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "010900f614aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "0109004125aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "0109ff7e14aabbccddeeff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
@@ -1515,6 +1536,9 @@ TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
 };
 
 // MAC test input [test name] [mac] [manufacturer data] [service data]

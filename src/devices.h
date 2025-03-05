@@ -111,6 +111,7 @@
 #include "devices/iBeacon_json.h"
 #include "devices/APPLE_json.h"
 #include "devices/ServiceData_json.h"
+#include "devices/UT363BT_json.h"
 #include "devices/SE_RHT_json.h"
 #include "devices/SE_TEMP_json.h"
 #include "devices/SE_TPROBE_json.h"
@@ -124,6 +125,7 @@
 #include "devices/SBMO_003Z_ENCR_json.h"
 #include "devices/SBHT_003C_json.h"
 #include "devices/SBHT_003C_ENCR_json.h"
+#include "devices/VCH6003_json.h"
 
 
 const char* _devices[][2] = {
@@ -242,6 +244,7 @@ const char* _devices[][2] = {
     {_APPLE_json, _APPLE_json_props},
     {_APPLE_json_at, _APPLE_json_props},
     {_ServiceData_json, _ServiceData_json_props},
+    {_UT363BT_json, _UT363BT_json_props},
     {_SE_RHT_json, _SE_RHT_json_props},
     {_SE_TEMP_json, _SE_TEMP_json_props},
     {_SE_TPROBE_json, _SE_TPROBE_json_props},
@@ -255,4 +258,5 @@ const char* _devices[][2] = {
     {_SBMO_003Z_ENCR_json, _SBMO_003Z_ENCR_json_props},
     {_SBHT_003C_json, _SBHT_003C_json_props},
     {_SBHT_003C_ENCR_json, _SBHT_003C_ENCR_json_props},
+    {_VCH6003_json, _VCH6003_json_props},
 };
