@@ -4,8 +4,8 @@ const char* _holyiot_json = "{\"brand\":\"Holyiot\",\"model\":\"iBeacon\",\"mode
    "brand":"Holyiot",
    "model":"iBeacon",
    "model_id":"IBEACON",
-   "tag":"06",
-   "condition":["manufacturerdata", "=", 50, "index", 0, "4c000215"],
+   "tag":"1009",
+   "condition":["manufacturerdata", "=", 50, "index", 0, "4c000215", "&", "servicedata", "=", 26, "index", 0, "41", "&", "uuid", "index", 0, "5242"],
    "properties":{
       "mfid":{
          "decoder":["string_from_hex_data", "manufacturerdata", 0, 8]
