@@ -225,6 +225,7 @@ const char* expected_name_uuid_mfgsvcdata[] = {
     "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"nut Tracker\"}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Meter Pro (CO2)\",\"model_id\":\"W490001X\",\"type\":\"AIR\",\"acts\":true,\"tempc\":22.8,\"tempf\":73.04,\"hum\":40,\"co2\":893,\"batt\":100,\"mac\":\"B0:E9:FE:DD:EE:FF\"}",
     "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"type\":\"TRACK\",\"cidc\":false,\"acts\":true,\"track\":true,\"device\":\"nut Tracker\"}",
+    "{\"brand\":\"HolyIoT\",\"model\":\"Beacon\",\"model_id\":\"HOLYIOT\",\"type\":\"TRACK\",\"cidc\":false,\"track\":true,\"batt\":100,\"device\":\"HolyIoT Beacon Tracker\"}",
 };
 
 const char* expected_name_mac_uuid_mfgsvcdata[] = {
@@ -937,6 +938,7 @@ const char* test_name_uuid_mfgsvcdata[][5] = {
     {"Nut","nut","0x180a","12345678",""},
     {"SwitchBot Meter Pro (CO2)", "Outdoor Meter", "0xfd3d", "6909b0e9feddeeff0ce40896280004037d00", "350064"},
     {"Nut","nut","0x180a","","aabbccddeeff"},
+    {"Holyiot", "Holy-IOT", "0x5242", "4c000215cde0598cbc284b89b3786039a1da9efc271b000ec9", "4164aabbccddeeff0405040000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
@@ -968,6 +970,7 @@ TheengsDecoder::BLE_ID_NUM test_name_uuid_mfgsvcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::NUT,
     TheengsDecoder::BLE_ID_NUM::SBMP,
     TheengsDecoder::BLE_ID_NUM::NUT,
+    TheengsDecoder::BLE_ID_NUM::HOLYIOT,
 };
 
 // uuid test input [test name] [mac] [device name] [uuid] [manufacturer data] [service data]
