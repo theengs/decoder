@@ -175,6 +175,8 @@ public:
     SBHT_003C,
     SBHT_003C_ENCR,
     VCH6003,
+    SENSORPUSH_HT_W,
+    SENSORPUSH_HTP_XW,
     BLE_ID_MAX
   };
 
