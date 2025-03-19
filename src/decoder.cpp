@@ -732,18 +732,18 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                         temp_val += post_proc[i + 1].as<double>();
                         break;
                       case '%': {
-                        long val = (long)temp_val;
-                        temp_val = val % post_proc[i + 1].as<long>();
+                        long long val = (long long)temp_val;
+                        temp_val = (double)(val % post_proc[i + 1].as<long long>());
                         break;
                       }
                       case '<': {
-                        long val = (long)temp_val;
-                        temp_val = val << post_proc[i + 1].as<unsigned int>();
+                        long long val = (long long)temp_val;
+                        temp_val = (double)(val << post_proc[i + 1].as<unsigned int>());
                         break;
                       }
                       case '>': {
-                        long val = (long)temp_val;
-                        temp_val = val >> post_proc[i + 1].as<unsigned int>();
+                        long long val = (long long)temp_val;
+                        temp_val = (double)(val >> post_proc[i + 1].as<unsigned int>());
                         break;
                       }
                       case '!': {
@@ -753,12 +753,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       }
                       case '&': {
                         long long val = (long long)temp_val;
-                        temp_val = val & post_proc[i + 1].as<unsigned int>();
+                        temp_val = (double)(val & post_proc[i + 1].as<unsigned int>());
                         break;
                       }
                       case '^': {
                         long long val = (long long)temp_val;
-                        temp_val = val ^ post_proc[i + 1].as<unsigned int>();
+                        temp_val = (double)(val ^ post_proc[i + 1].as<unsigned int>());
                         break;
                       }
                     }
@@ -778,7 +778,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                     }
                   } else if (strncmp(post_proc[i].as<const char*>(), "abs", 3) == 0) {
                     long long val = (long long)temp_val;
-                    temp_val = abs(val);
+                    temp_val = (double)abs(val);
                   } else if (strncmp(post_proc[i].as<const char*>(), "SBBT-dir", 8) == 0) { // "SBBT" decoder specific post_proc
                     if (temp_val < 0) {
                       proc_str = "down";
