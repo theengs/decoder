@@ -160,6 +160,8 @@ public:
     IBEACON,
     APPLE_CONT,
     APPLE_CONTAT,
+    SPHTP,
+    SPHT,
     SERVICE_DATA,
     UT363BT,
     SE_RHT,

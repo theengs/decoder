@@ -110,6 +110,8 @@
 #include "devices/HOLYIOT_json.h"
 #include "devices/iBeacon_json.h"
 #include "devices/APPLE_json.h"
+#include "devices/SensorP_HTP_json.h"
+#include "devices/SensorP_HT_json.h"
 #include "devices/ServiceData_json.h"
 #include "devices/UT363BT_json.h"
 #include "devices/SE_RHT_json.h"
@@ -243,6 +245,8 @@ const char* _devices[][2] = {
     {_ibeacon_json, _ibeacon_json_props},
     {_APPLE_json, _APPLE_json_props},
     {_APPLE_json_at, _APPLE_json_props},
+    {_SensorPush_HTP_json, _SensorPush_HTP_json_props},
+    {_SensorPush_HT_json, _SensorPush_HT_json_props},
     {_ServiceData_json, _ServiceData_json_props},
     {_UT363BT_json, _UT363BT_json_props},
     {_SE_RHT_json, _SE_RHT_json_props},

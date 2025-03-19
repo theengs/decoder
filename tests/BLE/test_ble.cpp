@@ -196,6 +196,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":6.58}",
     "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":4.3}",
     "{\"brand\":\"UNI-T\",\"model\":\"UT363 BT Anemometer\",\"model_id\":\"UT363BT\",\"type\":\"WIND\",\"cidc\":false,\"windspeed\":1.52}",
+    "{\"brand\":\"SensorPush\",\"model\":\"HTP.xw\",\"model_id\":\"SPHTP\",\"type\":\"THBX\",\"cidc\":false,\"track\":true,\"tempc\":22.6625,\"tempf\":72.7925,\"hum\":46.0683703,\"pres\":989.6546067}",
+    "{\"brand\":\"SensorPush\",\"model\":\"HTP.xw\",\"model_id\":\"SPHTP\",\"type\":\"THBX\",\"cidc\":false,\"track\":true,\"tempc\":21.165,\"tempf\":70.097,\"hum\":39.0133495,\"pres\":999.6239012}",
+    "{\"brand\":\"SensorPush\",\"model\":\"HT.w\",\"model_id\":\"SPHT\",\"type\":\"THB\",\"cidc\":false,\"track\":true,\"tempc\":27.69,\"tempf\":81.842,\"hum\":36.53352559}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -733,6 +736,9 @@ const char* test_mfgdata[][3] = {
     {"UNI-T", "UT363 BT", "aabb1005372020362e35384d2f533430800475"},
     {"UNI-T", "UT363 BT", "aabb1005372020342e33304d2f533430800476"},
     {"UNI-T", "UT363 BT", "aabb1005372020312e35324d2f533430800472"},
+    {"SensorPush", "", "0089e456bea6b4"},
+    {"SensorPush", "", "0011ef464343b7"},
+    {"SensorPush", "", "04E9187D39"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -912,6 +918,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::UT363BT,
     TheengsDecoder::BLE_ID_NUM::UT363BT,
     TheengsDecoder::BLE_ID_NUM::UT363BT,
+    TheengsDecoder::BLE_ID_NUM::SPHTP,
+    TheengsDecoder::BLE_ID_NUM::SPHTP,
+    TheengsDecoder::BLE_ID_NUM::SPHT,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
