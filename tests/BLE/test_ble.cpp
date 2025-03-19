@@ -199,6 +199,10 @@ const char* expected_mfg[] = {
     "{\"brand\":\"SensorPush\",\"model\":\"HTP.xw\",\"model_id\":\"SPHTP\",\"type\":\"THBX\",\"cidc\":false,\"track\":true,\"tempc\":22.6625,\"tempf\":72.7925,\"hum\":46.0683703,\"pres\":989.6546067}",
     "{\"brand\":\"SensorPush\",\"model\":\"HTP.xw\",\"model_id\":\"SPHTP\",\"type\":\"THBX\",\"cidc\":false,\"track\":true,\"tempc\":21.165,\"tempf\":70.097,\"hum\":39.0133495,\"pres\":999.6239012}",
     "{\"brand\":\"SensorPush\",\"model\":\"HT.w\",\"model_id\":\"SPHT\",\"type\":\"THB\",\"cidc\":false,\"track\":true,\"tempc\":27.69,\"tempf\":81.842,\"hum\":36.53352559}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"type\":\"BBQ\",\"cidc\":false,\"tempc1\":20,\"tempf1\":68,\"tempc2\":22,\"tempf2\":71.6,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"type\":\"BBQ\",\"cidc\":false,\"tempc5\":21,\"tempf5\":69.8,\"tempc6\":21,\"tempf6\":69.8,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"type\":\"BBQ\",\"cidc\":false,\"tempc3\":23,\"tempf3\":73.4,\"tempc4\":21,\"tempf4\":69.8,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"type\":\"BBQ\",\"cidc\":false,\"tempc1\":26,\"tempf1\":78.8,\"tempc2\":22,\"tempf2\":71.6,\"batt\":100}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -739,6 +743,10 @@ const char* test_mfgdata[][3] = {
     {"SensorPush", "", "0089e456bea6b4"},
     {"SensorPush", "", "0011ef464343b7"},
     {"SensorPush", "", "04E9187D39"},
+    {"H5055", "GVH5055", "d596c100643f201400ffff3100221600ffff3f000000"},
+    {"H5055", "GVH5055", "d596c100648f221500ffff3f00221500ffff3f000000"},
+    {"H5055", "GVH5055", "d596c1006441221700ffff3f00221500ffff3f000000"},
+    {"H5055", "GVH5055", "d596c1006401201a00ffff3100221600ffff3f000000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -921,6 +929,10 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SPHTP,
     TheengsDecoder::BLE_ID_NUM::SPHTP,
     TheengsDecoder::BLE_ID_NUM::SPHT,
+    TheengsDecoder::BLE_ID_NUM::H5055,
+    TheengsDecoder::BLE_ID_NUM::H5055,
+    TheengsDecoder::BLE_ID_NUM::H5055,
+    TheengsDecoder::BLE_ID_NUM::H5055,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
