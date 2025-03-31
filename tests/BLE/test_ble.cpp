@@ -351,6 +351,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":true,\"cont\":true}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
+    "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
 };
 
 const char* expected_uuid[] = {
@@ -1137,6 +1138,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"SE MAG Open","0x2a06","P MAG CCCCCC","2400"},
     {"SE MAG Closed","0x2a06","P MAG CCCCCC","2900"},
     {"SwitchBot Outdoor Meter Servicdata", "0xfd3d", "WoIOSensorTH", "770041"},
+    {"THB1 PVVX", "0xfcd2", "THB1-3F9E5D", "4000ef014a02020703b8170cbc0a"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -1232,6 +1234,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
     TheengsDecoder::BLE_ID_NUM::SBOT_S,
+    TheengsDecoder::BLE_ID_NUM::THB1,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]

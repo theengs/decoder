@@ -140,6 +140,7 @@ public:
     MOPEKA,
     T201,
     T301,
+    THB1,
     NUT,
     NUTALE,
     ITAG,
