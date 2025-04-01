@@ -13,7 +13,7 @@ setup_requires = ["setuptools_scm"]
 # Add CMake as a build requirement if cmake is not installed
 # or is too low a version
 try:
-    if version.parse(get_cmake_version()) < version.parse("3.4"):
+    if version.parse(get_cmake_version()) < version.parse("3.10"):
         setup_requires.append("cmake")
 except SKBuildError:
     setup_requires.append("cmake")
