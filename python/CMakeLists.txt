@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 3.5)
 
 project(decoder VERSION 1.8.5)
 find_package(PythonExtensions REQUIRED)
