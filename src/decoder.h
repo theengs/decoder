@@ -196,8 +196,8 @@ private:
   std::string sanitizeJsonKey(const char* key_in);
 
   size_t m_docMax = 12200;
-  size_t m_minSvcDataLen = 20;
-  size_t m_minMfgDataLen = 16;
+  size_t m_minSvcDataLen = 4;
+  size_t m_minMfgDataLen = 10;
 };
 
 #endif
