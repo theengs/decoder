@@ -165,6 +165,8 @@ public:
     SPHT,
     SERVICE_DATA,
     UT363BT,
+    VICTSBP_ENCR,
+    VICTSBP,
     SE_RHT,
     SE_TEMP,
     SE_TPROBE,

@@ -53,8 +53,8 @@ Each device should also have an encoded **tag** property to, at the minimum, def
     </thead>
     <tbody>
         <tr>
-            <td rowspan=23>Byte[0]</td>
-            <td rowspan=23>Device Type > "type":</td>
+            <td rowspan=24>Byte[0]</td>
+            <td rowspan=24>Device Type > "type":</td>
             <td rowspan=1>0 - Reserved</td>
         </tr>
         <tr>
@@ -115,7 +115,10 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan=1>19 - WIND - wind speed anemometers</td>
         </tr>
         <tr>
-            <td rowspan=1>20-253 - Reserved</td>
+            <td rowspan=1>20 - ENRG - energy producing, monitoring and storing devices</td>
+        </tr>
+        <tr>
+            <td rowspan=1>20-253 - Reserved for future use</td>
         </tr>
         <tr>
             <td rowspan=1>254 - RMAC - known random MAC address devices</td>
@@ -148,12 +151,15 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan=1>Bit[0] Is NOT Company ID compliant > "cidc":</td>
         </tr>
         <tr>
-            <td rowspan=2>Byte[2]</td>
-            <td rowspan=2>Encryption Model > "encr":</td>
+            <td rowspan=3>Byte[2]</td>
+            <td rowspan=3>Encryption Model > "encr":</td>
             <td rowspan=1>1 - LYWSD03MMC PVVX</td>
         </tr>
         <tr>
             <td rowspan=1>2 - BTHome v2</td>
+        </tr>
+        <tr>
+            <td rowspan=1>3 - Victron Energy</td>
         </tr>
     </tbody>
 </table>
