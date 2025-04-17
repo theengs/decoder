@@ -167,6 +167,8 @@ public:
     UT363BT,
     VICTSBP_ENCR,
     VICTSBP,
+    VICTORIONXS_ENCR,
+    VICTORIONXS,
     SE_RHT,
     SE_TEMP,
     SE_TPROBE,

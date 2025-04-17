@@ -210,6 +210,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"active\",\"output_state\":\"on\",\"volt_in\":12.64,\"volt_out\":12.64,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.74,\"volt_out\":0.12,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.79,\"volt_out\":0.11,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Orion XS encrypted\",\"model_id\":\"VICTORIONXS_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"79c9ab28f6e6be3a02d5842a6a0e\",\"ctr\":\"5f1f\",\"mic\":\"40\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Orion XS\",\"model_id\":\"VICTORIONXS\",\"type\":\"ENRG\",\"device_state\":\"off\",\"volt_out\":12.7,\"current_out\":0,\"volt_in\":0.1,\"current_in\":0,\"error_code\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -762,6 +764,8 @@ const char* test_mfgdata[][3] = {
     {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffdaf9010000000000f004f00400000000"},
     {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffda00000000000000fa040c0004000000"},
     {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffda00000000000000ff040b0004000000"},
+    {"Victron Orion XS ENC", "", "e1021000f0a30f5f1f4079c9ab28f6e6be3a02d5842a6a0e"},
+    {"Victron Orion XS", "",     "e1021100f0a30fffff400000f60400000a00000081000000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -955,6 +959,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VICTSBP,
     TheengsDecoder::BLE_ID_NUM::VICTSBP,
     TheengsDecoder::BLE_ID_NUM::VICTSBP,
+    TheengsDecoder::BLE_ID_NUM::VICTORIONXS_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTORIONXS,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
