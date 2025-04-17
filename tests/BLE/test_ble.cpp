@@ -204,12 +204,12 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"type\":\"BBQ\",\"cidc\":false,\"tempc3\":23,\"tempf3\":73.4,\"tempc4\":21,\"tempf4\":69.8,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Bluetooth BBQ Thermometer\",\"model_id\":\"H5055\",\"type\":\"BBQ\",\"cidc\":false,\"tempc1\":26,\"tempf1\":78.8,\"tempc2\":22,\"tempf2\":71.6,\"batt\":100}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect encrypted\",\"model_id\":\"VICTSBP_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"f581a6631c3ddfccaa081fad4da6f4\",\"ctr\":\"a82c\",\"mic\":\"da\"}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.8,\"volt_out\":0.1,\"off_reason\":\"REMOTE_INPUT\"}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"active\",\"output_state\":\"on\",\"volt_in\":13.07,\"volt_out\":13.07,\"off_reason\":\"NO_REASON\"}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.76,\"volt_out\":0.11,\"off_reason\":\"REMOTE_INPUT\"}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"active\",\"output_state\":\"on\",\"volt_in\":12.64,\"volt_out\":12.64,\"off_reason\":\"NO_REASON\"}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.74,\"volt_out\":0.12,\"off_reason\":\"SWITCHED_OFF_REGISTER\"}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.79,\"volt_out\":0.11,\"off_reason\":\"SWITCHED_OFF_REGISTER\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.8,\"volt_out\":0.1,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"active\",\"output_state\":\"on\",\"volt_in\":13.07,\"volt_out\":13.07,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.76,\"volt_out\":0.11,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"active\",\"output_state\":\"on\",\"volt_in\":12.64,\"volt_out\":12.64,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.74,\"volt_out\":0.12,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.79,\"volt_out\":0.11,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
