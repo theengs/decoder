@@ -10,3 +10,4 @@
 |Power Source|From connected battery|
 |Exchanged Data|device state, output state, voltage in, voltage out, error code, alarm reason, warning reason|
 |Encrypted|Yes|
+|Device Tracker|&#9989;|
