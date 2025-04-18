@@ -231,6 +231,12 @@ const char* expected_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"BR TPMS\",\"model_id\":\"TPMSBR\",\"type\":\"TIRE\",\"cidc\":false,\"acts\":true,\"tempc\":16,\"tempf\":60.8,\"pres\":1.917241379,\"volt\":3}",
     "{\"brand\":\"GENERIC\",\"model\":\"BR TPMS\",\"model_id\":\"TPMSBR\",\"type\":\"TIRE\",\"cidc\":false,\"acts\":true,\"tempc\":15,\"tempf\":59,\"pres\":1.917241379,\"volt\":3}",
     "{\"brand\":\"GENERIC\",\"model\":\"BR TPMS\",\"model_id\":\"TPMSBR\",\"type\":\"TIRE\",\"cidc\":false,\"acts\":true,\"tempc\":20,\"tempf\":68,\"pres\":1.351724138,\"volt\":3}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Battery Monitor/Smart Battery Sense/Smart Shunt encrypted\",\"model_id\":\"VICTSBSBMSS_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"378a5d06e864839e6311898e6911f7\",\"ctr\":\"0e02\",\"mic\":\"a6\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Battery Monitor/Smart Battery Sense/Smart Shunt encrypted\",\"model_id\":\"VICTSBSBMSS_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"caf5109829476880bc658f4afe79fd\",\"ctr\":\"7c00\",\"mic\":\"a6\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Battery Monitor/Smart Battery Sense/Smart Shunt encrypted\",\"model_id\":\"VICTSBSBMSS_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"ef9c2669e3b2e28f109d7cc484eef9\",\"ctr\":\"b3b8\",\"mic\":\"f5\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart Battery Sense\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"volt\":12.99,\"tempc\":17.5,\"tempf\":63.5,\"alarm_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart Battery Sense\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"volt\":14.01,\"tempc\":17.5,\"tempf\":63.5,\"alarm_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Smart Battery Sense\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"volt\":12.22,\"tempc\":22.5,\"tempf\":72.5,\"alarm_reason\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -812,6 +818,12 @@ const char* test_mfgdata[][3] = {
     {"YPMS BR", "BR_1234", "401e1001a79692"},
     {"YPMS BR", "BR_1234", "401e0f01a70ffa"},
     {"YPMS BR", "BR_1234", "281e1401558536"},
+    {"Victron Battery Monitor/Smart Sense/SmartShunt ENCR", "", "e102100238c0020e02a6378a5d06e864839e6311898e6911f7"},
+    {"Victron Battery Monitor/Smart Sense/SmartShunt ENCR", "", "e102100238c0027c00a6caf5109829476880bc658f4afe79fd"},
+    {"Victron Battery Monitor/Smart Sense/SmartShunt ENCR", "", "e102100289a302b3b8f5ef9c2669e3b2e28f109d7cc484eef9"},
+    {"Victron Smart Battery Sense", "",                         "e1021180a5a302ffff7bffff130500008971feff7fffffffff"},
+    {"Victron Smart Battery Sense", "",                         "e1021180a5a302ffff7bffff790500008971feff7fffffffff"},
+    {"Victron Smart Battery Sense", "",                         "e1021100a4a302ffff7cffffc60400007d73feff7fffffffff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1026,6 +1038,12 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::TPMSBR,
     TheengsDecoder::BLE_ID_NUM::TPMSBR,
     TheengsDecoder::BLE_ID_NUM::TPMSBR,
+    TheengsDecoder::BLE_ID_NUM::VICTSBSBMSS_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTSBSBMSS_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTSBSBMSS_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTSBS,
+    TheengsDecoder::BLE_ID_NUM::VICTSBS,
+    TheengsDecoder::BLE_ID_NUM::VICTSBS,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
