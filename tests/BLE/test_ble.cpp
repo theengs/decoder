@@ -212,6 +212,11 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"type\":\"ENRG\",\"track\":true,\"device_state\":\"off\",\"output_state\":\"off\",\"volt_in\":12.79,\"volt_out\":0.11,\"error_code\":0,\"alarm_reason\":0,\"warning_reason\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Orion XS encrypted\",\"model_id\":\"VICTORIONXS_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"79c9ab28f6e6be3a02d5842a6a0e\",\"ctr\":\"5f1f\",\"mic\":\"40\"}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Orion XS\",\"model_id\":\"VICTORIONXS\",\"type\":\"ENRG\",\"track\":true,\"device_state\":\"off\",\"volt_out\":12.7,\"current_out\":0,\"volt_in\":0.1,\"current_in\":0,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger encrypted\",\"model_id\":\"VICTBSC_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"131cccaa386a0168502ced882e\",\"ctr\":\"3408\",\"mic\":\"00\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"storage\",\"volt_batt_1\":13.5,\"current_batt_1\":0.5,\"tempc\":21,\"tempf\":69.8,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.2,\"current_batt_1\":0.5,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"bulk\",\"volt_batt_1\":14.07,\"current_batt_1\":0.5,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.19,\"current_batt_1\":0.5,\"error_code\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -757,15 +762,20 @@ const char* test_mfgdata[][3] = {
     {"H5055", "GVH5055", "d596c100648f221500ffff3f00221500ffff3f000000"},
     {"H5055", "GVH5055", "d596c1006441221700ffff3f00221500ffff3f000000"},
     {"H5055", "GVH5055", "d596c1006401201a00ffff3100221600ffff3f000000"},
-    {"Victron Smart Battery Protect ENC", "", "e1021000b0a309a82cdaf581a6631c3ddfccaa081fad4da6f4"},
-    {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffda0000000000000000050a0008000000"},
-    {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffdaf90100000000001b051b0500000000"},
-    {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffda00000000000000fc040b0008000000"},
-    {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffdaf9010000000000f004f00400000000"},
-    {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffda00000000000000fa040c0004000000"},
-    {"Victron Smart Battery Protect", "",     "e1021100b0a309ffffda00000000000000ff040b0004000000"},
-    {"Victron Orion XS ENC", "", "e1021000f0a30f5f1f4079c9ab28f6e6be3a02d5842a6a0e"},
-    {"Victron Orion XS", "",     "e1021100f0a30fffff400000f60400000a00000081000000"},
+    {"Victron Smart Battery Protect ENCR", "", "e1021000b0a309a82cdaf581a6631c3ddfccaa081fad4da6f4"},
+    {"Victron Smart Battery Protect", "",      "e1021100b0a309ffffda0000000000000000050a0008000000"},
+    {"Victron Smart Battery Protect", "",      "e1021100b0a309ffffdaf90100000000001b051b0500000000"},
+    {"Victron Smart Battery Protect", "",      "e1021100b0a309ffffda00000000000000fc040b0008000000"},
+    {"Victron Smart Battery Protect", "",      "e1021100b0a309ffffdaf9010000000000f004f00400000000"},
+    {"Victron Smart Battery Protect", "",      "e1021100b0a309ffffda00000000000000fa040c0004000000"},
+    {"Victron Smart Battery Protect", "",      "e1021100b0a309ffffda00000000000000ff040b0004000000"},
+    {"Victron Orion XS ENCR", "", "e1021000f0a30f5f1f4079c9ab28f6e6be3a02d5842a6a0e"},
+    {"Victron Orion XS", "",      "e1021100f0a30fffff400000f60400000a00000081000000"},
+    {"Victron Orion Blue Smart Charger ENCR", "", "e10210002ca308340800131cccaa386a0168502ced882e"},
+    {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff00060046a500ffffffffffffbdff"},
+    {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0004008c0500ffffffffffffffff"},
+    {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0003007fc512ffffffffffffffff"},
+    {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0004008b6500ffffffffffffffff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -961,6 +971,11 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VICTSBP,
     TheengsDecoder::BLE_ID_NUM::VICTORIONXS_ENCR,
     TheengsDecoder::BLE_ID_NUM::VICTORIONXS,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
