@@ -1,6 +1,6 @@
 # Victron Energy Smart BatteryProtect
 
-|Model Id|[VICTSBP](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_DCDC_json.h)|
+|Model Id|[VICTSBP](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_SBP_json.h)|
 |-|-|
 |Brand|Victron Energy|
 |Model|Smart BatteryProtect|
