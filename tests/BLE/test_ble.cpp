@@ -213,10 +213,13 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Orion XS encrypted\",\"model_id\":\"VICTORIONXS_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"79c9ab28f6e6be3a02d5842a6a0e\",\"ctr\":\"5f1f\",\"mic\":\"40\"}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Orion XS\",\"model_id\":\"VICTORIONXS\",\"type\":\"ENRG\",\"track\":true,\"device_state\":\"off\",\"volt_out\":12.7,\"current_out\":0,\"volt_in\":0.1,\"current_in\":0,\"error_code\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger encrypted\",\"model_id\":\"VICTBSC_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"131cccaa386a0168502ced882e\",\"ctr\":\"3408\",\"mic\":\"00\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.01,\"current_batt_1\":10,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"bulk\",\"volt_batt_1\":13.07,\"current_batt_1\":3,\"error_code\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"storage\",\"volt_batt_1\":13.5,\"current_batt_1\":0.5,\"tempc\":21,\"tempf\":69.8,\"error_code\":0}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.2,\"current_batt_1\":0.5,\"error_code\":0}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"bulk\",\"volt_batt_1\":14.07,\"current_batt_1\":0.5,\"error_code\":0}",
-    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.19,\"current_batt_1\":0.5,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.2,\"current_batt_1\":0,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"bulk\",\"volt_batt_1\":14.07,\"current_batt_1\":15,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.19,\"current_batt_1\":0.3,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"power supply\",\"volt_batt_1\":14.57,\"current_batt_1\":0,\"error_code\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -772,10 +775,13 @@ const char* test_mfgdata[][3] = {
     {"Victron Orion XS ENCR", "", "e1021000f0a30f5f1f4079c9ab28f6e6be3a02d5842a6a0e"},
     {"Victron Orion XS", "",      "e1021100f0a30fffff400000f60400000a00000081000000"},
     {"Victron Orion Blue Smart Charger ENCR", "", "e10210002ca308340800131cccaa386a0168502ced882e"},
+    {"Victron Orion Blue Smart Charger", "",      "e102110038a308ffffcc040079850cffffffffffffffff"},
+    {"Victron Orion Blue Smart Charger", "",      "e102110038a308ffffcc03001bc503ffffffffffffffff"},
     {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff00060046a500ffffffffffffbdff"},
     {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0004008c0500ffffffffffffffff"},
     {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0003007fc512ffffffffffffffff"},
     {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0004008b6500ffffffffffffffff"},
+    {"Victron Orion Blue Smart Charger", "",      "e102110038a308ffffcc0b00b10500ffffffffffffffff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -972,6 +978,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VICTORIONXS_ENCR,
     TheengsDecoder::BLE_ID_NUM::VICTORIONXS,
     TheengsDecoder::BLE_ID_NUM::VICTBSC_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC,
+    TheengsDecoder::BLE_ID_NUM::VICTBSC,
     TheengsDecoder::BLE_ID_NUM::VICTBSC,
     TheengsDecoder::BLE_ID_NUM::VICTBSC,
     TheengsDecoder::BLE_ID_NUM::VICTBSC,
