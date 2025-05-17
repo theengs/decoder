@@ -1,3 +1,25 @@
 [build-system]
-requires = ["setuptools", "wheel", "scikit-build", "cmake", "ninja"]
+requires = [
+    # packaging engine
+    "setuptools >= 61",
+    "wheel",
+    # C/C++ build glue
+    "scikit-build >= 0.17",          # or scikit-build-core >= 0.11.2
+    "cmake >= 3.18",
+    "ninja",
+    "pybind11 >= 2.9.0",
+    # version extraction
+    "setuptools_scm[toml] >= 8",
+]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+root = ".."
+relative_to = "python/pyproject.toml"
+version_scheme = "post-release"
+local_scheme   = "no-local-version"
+
+[tool.setuptools]
+packages = ["TheengsDecoder"]
+package-dir = { "" = "." }
+include-package-data = true
