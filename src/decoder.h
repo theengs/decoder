@@ -117,6 +117,7 @@ public:
     BM3IN1,
     BM4IN1,
     MS_CDP,
+    ECOFLOW_ADV,
     FEASY,
     GAEN,
     HHCCPOT002,

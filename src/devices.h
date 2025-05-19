@@ -27,6 +27,7 @@
 #include "devices/CGP1W_json.h"
 #include "devices/CGP23W_json.h"
 #include "devices/CGPR1_json.h"
+#include "devices/ECOFLOW_ADV_json.h"
 #include "devices/FEASY_json.h"
 #include "devices/GAEN_json.h"
 #include "devices/H5055_json.h"
@@ -209,6 +210,7 @@ const char* _devices[][2] = {
     {_BM3IN1_json, _BM3IN1_json_props},
     {_BM4IN1_json, _BM4IN1_json_props},
     {_MS_CDP_json, _MS_CDP_json_props},
+    {_ECOFLOW_ADV_json, _ECOFLOW_ADV_json_props},
     {_FEASY_json, _FEASY_json_props},
     {_GAEN_json, _GAEN_json_props},
     {_HHCCPOT002_json, _HHCCPOT002_json_props},

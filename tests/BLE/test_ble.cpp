@@ -220,6 +220,8 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"bulk\",\"volt_batt_1\":14.07,\"current_batt_1\":15,\"error_code\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"absorption\",\"volt_batt_1\":14.19,\"current_batt_1\":0.3,\"error_code\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"power supply\",\"volt_batt_1\":14.57,\"current_batt_1\":0,\"error_code\":0}",
+    "{\"brand\":\"EcoFlow\",\"model\":\"Power Station\",\"model_id\":\"ECOFLOW_ADV\",\"type\":\"ENRG\",\"cidc\":false,\"track\":true,\"version\":\"RIVER 2 Max\",\"batt\":88}",
+    "{\"brand\":\"EcoFlow\",\"model\":\"Power Station\",\"model_id\":\"ECOFLOW_ADV\",\"type\":\"ENRG\",\"cidc\":false,\"track\":true,\"version\":\"DELTA 2\",\"batt\":75}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -782,6 +784,8 @@ const char* test_mfgdata[][3] = {
     {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0003007fc512ffffffffffffffff"},
     {"Victron Orion Blue Smart Charger", "",      "e10211002ca308ffff0004008b6500ffffffffffffffff"},
     {"Victron Orion Blue Smart Charger", "",      "e102110038a308ffffcc0b00b10500ffffffffffffffff"},
+    {"EcoFlow RIVER 2 Max", "", "b5b513523631314142433158595A313233343558000100003e08"},
+    {"EcoFlow RIVER 2 Max", "", "b5b513523333314142433158595A31323334354b000100003e08"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -985,6 +989,8 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VICTBSC,
     TheengsDecoder::BLE_ID_NUM::VICTBSC,
     TheengsDecoder::BLE_ID_NUM::VICTBSC,
+    TheengsDecoder::BLE_ID_NUM::ECOFLOW_ADV,
+    TheengsDecoder::BLE_ID_NUM::ECOFLOW_ADV,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
