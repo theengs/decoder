@@ -19,11 +19,13 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         pip3 install setuptools setuptools_scm cmake wheel scikit-build ninja
-    - name: Build a source tarball
+    - name: Build distributions
       run: |
         cd python
         cp -r ../src .
+        python3 setup.py bdist_wheel
         python3 setup.py sdist
+        cd ..
     - name: Publish distribution 📦 to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:

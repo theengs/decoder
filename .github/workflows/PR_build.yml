@@ -142,16 +142,21 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-    - name: Install make tools
+    - name: Install build tools # Step name updated for clarity
       run: |
         python3 -m pip install --upgrade pip
         pip3 install setuptools setuptools_scm cmake wheel scikit-build ninja
-    - name: Install python decoder
+    - name: Build TheengsDecoder wheel # Step name and command updated
       run: |
         cd python
         cp -r ../src .
-        python3 setup.py sdist
-    - uses: actions/upload-artifact@v4
+        python3 setup.py bdist_wheel # Changed sdist to bdist_wheel
+        cd .. # Added cd back to root
+    - name: Install TheengsDecoder wheel # New step
+      run: pip3 install python/dist/*.whl # Installs the built wheel
+    - name: Test TheengsDecoder import # New step
+      run: python3 -c "from TheengsDecoder import decodeBLE; print('Successfully imported decodeBLE from PR_build.yml')" # Tests the import
+    - uses: actions/upload-artifact@v4 # Existing step, will now upload the .whl file(s)
       with:
         name: python-package
         path: python/dist/*
