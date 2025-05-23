@@ -1,18 +1,40 @@
 # Theengs Decoder
 
-## dependencies
-Building this module it requires scikit-build and cmake, if not already installed you will need to open a terminal and execute:
-```
-pip install scikit-build
-apt-get install cmake
-```
+## Installation
 
-## installation
+* Create a virtual environment
+`python3 -m venv theengs-venv`
 
-From a terminal cd to this folder and execute:
-```
-python setup.py install --user
-```
+* Activate the virtual environment
+`source theengs-venv/bin/activate`
+
+* Install and upgrade pip
+`python3 -m pip install --upgrade pip`
+
+* Install dependencies
+`pip3 install setuptools setuptools_scm cmake==3.25.0 wheel scikit-build ninja`
+
+* Clone Theengs Decoder
+`git clone --recursive https://github.com/Theengs/decoder.git`
+
+* cd to python folder inside the repository
+`cd decoder/python`
+
+* Copy sources inside the build repository
+`cp -r ../src .`
+
+* Build wheel
+`python3 setup.py bdist_wheel`
+
+* Install
+`cd ..`
+`pip3 install python/dist/*.whl`
+
+* Verify installation
+`python3 -c "from TheengsDecoder import decodeBLE; print('Successfully imported decodeBLE from PR_build.yml')"`
+
+You should see:
+`Successfully imported decodeBLE from PR_build.yml`
 
 ## using
 
