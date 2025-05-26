@@ -23,7 +23,6 @@ jobs:
       run: |
         cd python
         cp -r ../src .
-        python3 setup.py bdist_wheel
         python3 setup.py sdist
         cd ..
     - name: Publish distribution 📦 to PyPI
