@@ -50,6 +50,7 @@ public:
     LYWSD02,
     LYWSDCGQ,
     CGP1W,
+    CGP22C,
     CGP23W,
     CGG1_STOCK,
     CGG1_ATC1441,

@@ -508,6 +508,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP108\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP103B\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":21.25,\"tempf\":70.25,\"accx\":4,\"accy\":-12,\"accz\":-4,\"volt\":3.05}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Thermo-Hygrometer CO2 Detector\",\"model_id\":\"CGP22C\",\"type\":\"AIR\",\"tempc\":25.5,\"tempf\":77.9,\"hum\":43.1,\"co2\":583,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -1430,6 +1431,7 @@ const char* test_uuid[][4] = {
     {"Feasycom BP108", "0xfff0", "servicedata", "27021992aabbccddeeff64"},
     {"Feasycom BPXXX", "0xfff0", "servicedata", "29021992aabbccddeeff64"},
     {"BlueCharm BC04P", "0xfeaa", "servicedata", "21000b0bea15400004fff4fffc"},
+    {"ClearGrass CO2 Detector", "0xfdcd", "servicedata", "0a5dffeeddccbbaa0104ff00af0102016413024702"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1567,6 +1569,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::FEASY,
     TheengsDecoder::BLE_ID_NUM::FEASY,
     TheengsDecoder::BLE_ID_NUM::BC08,
+    TheengsDecoder::BLE_ID_NUM::CGP22C,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
