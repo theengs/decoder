@@ -505,8 +505,8 @@ const char* expected_uuid[] = {
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":9,\"color\":\"Lagoon\",\"batt\":96}",
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":10,\"color\":\"Lagoon\",\"batt\":98}",
     "{\"brand\":\"NodOn\",\"model\":\"NIU smart button\",\"model_id\":\"NODONNIU\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"track\":true,\"button\":3,\"color\":\"CozyGrey\",\"batt\":89}",
-    "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP108\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP103B\",\"batt\":100,\"plugged-in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP108\",\"batt\":100,\"plugged_in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP103B\",\"batt\":100,\"plugged_in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":21.25,\"tempf\":70.25,\"accx\":4,\"accy\":-12,\"accz\":-4,\"volt\":3.05}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Thermo-Hygrometer CO2 Detector\",\"model_id\":\"CGP22C\",\"type\":\"AIR\",\"tempc\":25.5,\"tempf\":77.9,\"hum\":43.1,\"co2\":583,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
