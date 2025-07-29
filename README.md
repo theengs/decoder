@@ -29,5 +29,6 @@ Projects using the Theengs Decoder library
 * [Theengs App](https://github.com/theengs/app) - A paid app for Android and iOS/iPadOS phones and tablets displaying decoded BLE sensor data and optionally acting as a BLE to MQTT bridge.
 * [BresserWeatherSensorLW](https://github.com/matthias-bs/BresserWeatherSensorLW) - Bresser 868 MHz Weather Sensor Radio Receiver based on ESP32/RP2040 and SX1262/SX1276 — sends data to a LoRaWAN Network.
 * [Platypush](https://github.com/BlackLight/platypush) - A versatile and extensible platform for home and life automation with hundreds of supported integrations.
+* [FritzGate](https://github.com/elebree/fritzgate) - Bind thermostats connected to a FRITZ!Box to third-party Bluetooth thermometers.
 
 For more information view the [documentation](https://decoder.theengs.io/)
