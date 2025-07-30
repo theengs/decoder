@@ -59,7 +59,7 @@ const char* _LYWSD03MMC_json_PVVX = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor
    }
 })"""";*/
 
-const char* _LYWSD03MMC_json_PVVX_DECR = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_DECR\",\"tag\":\"0102\",\"condition\":[\"servicedata\",\"=\",12,\"&\",\"uuid\",\"index\",0,\"181a\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",0,4,true,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,4,true,false],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,2,false,false]}}}";
+const char* _LYWSD03MMC_json_PVVX_DECR = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_DECR\",\"tag\":\"01\",\"condition\":[\"servicedata\",\"=\",12,\"&\",\"uuid\",\"index\",0,\"181a\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",0,4,true,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,4,true,false],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,2,false,false]}}}";
 /* R""""(
 {
    "brand":"Xiaomi",
@@ -112,7 +112,7 @@ const char* _LYWSD03MMC_json_PVVX_BTHOME_1 = "{\"brand\":\"Xiaomi\",\"model\":\"
    }
 })"""";*/
 
-const char* _LYWSD03MMC_json_PVVX_BTHOME_2 = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2\",\"tag\":\"01\",\"condition\":[\"servicedata\",\"=\",20,\"index\",0,\"40\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"ATC\"],\"properties\":{\"packet\":{\"condition\":[\"servicedata\",2,\"00\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false]},\"volt\":{\"condition\":[\"servicedata\",6,\"0c\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,true,false],\"post_proc\":[\"/\",1000]},\"power\":{\"condition\":[\"servicedata\",12,\"10\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,2,false,false]},\"opening\":{\"condition\":[\"servicedata\",16,\"11\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,2,false,false]}}}";
+const char* _LYWSD03MMC_json_PVVX_BTHOME_2 = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2\",\"tag\":\"0102\",\"condition\":[\"servicedata\",\"=\",20,\"index\",0,\"40\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"ATC\"],\"properties\":{\"packet\":{\"condition\":[\"servicedata\",2,\"00\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false]},\"volt\":{\"condition\":[\"servicedata\",6,\"0c\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,true,false],\"post_proc\":[\"/\",1000]},\"power\":{\"condition\":[\"servicedata\",12,\"10\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,2,false,false]},\"opening\":{\"condition\":[\"servicedata\",16,\"11\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,2,false,false]}}}";
 /* R""""(
 {
    "brand":"Xiaomi",
