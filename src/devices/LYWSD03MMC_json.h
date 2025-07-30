@@ -65,7 +65,7 @@ const char* _LYWSD03MMC_json_PVVX_DECR = "{\"brand\":\"Xiaomi\",\"model\":\"TH S
    "brand":"Xiaomi",
    "model":"TH Sensor",
    "model_id":"LYWSD03MMC/MJWSD05MMC_PVVX_DECR",
-   "tag":"0102",
+   "tag":"01",
    "condition":["servicedata", "=", 12, "&", "uuid", "index", 0, "181a"],
    "properties":{
       "tempc":{
