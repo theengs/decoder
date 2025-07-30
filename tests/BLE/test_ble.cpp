@@ -371,7 +371,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
     "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1\",\"type\":\"THB\",\"packet\":132,\"batt\":100,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1\",\"type\":\"THB\",\"packet\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2\",\"type\":\"THB\",\"packet\":129,\"volt\":3.034,\"power\":1,\"opening\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"d19a92d016e70700\",\"ctr\":\"a80c0000\"\"mic\":\"7e2ed06b\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"426c816642734c\",\"ctr\":\"a20c0000\"\"mic\":\"66feb71b\"}",
