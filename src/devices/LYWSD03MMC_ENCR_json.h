@@ -19,6 +19,48 @@ const char* _LYWSD03MMC_ENCR_json_PVVX = "{\"brand\":\"Xiaomi\",\"model\":\"TH S
    }
 })"""";*/
 
+const char* _LYWSD03MMC_ENCR_json_PVVX_BTHOME_1 = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1_ENCR\",\"tag\":\"010202\",\"condition\":[\"servicedata\",\"=\",34,\"index\",0,\"41\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"ATC\"],\"properties\":{\"cipher\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",2,16]},\"ctr\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",18,8]},\"mic\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",26,8]}}}";
+/*R""""(
+{
+   "brand":"Xiaomi",
+   "model":"TH Sensor",
+   "model_id":"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1_ENCR",
+   "tag":"010202",
+   "condition":["servicedata", "=", 34, "index", 0, "41", "&", "uuid", "index", 0, "fcd2", "&", "name", "index", 0, "ATC"],
+   "properties":{
+      "cipher":{
+         "decoder":["string_from_hex_data", "servicedata", 2, 16]
+      },
+      "ctr":{
+         "decoder":["string_from_hex_data", "servicedata", 18, 8]
+      },
+      "mic":{
+         "decoder":["string_from_hex_data", "servicedata", 26, 8]
+      }
+   }
+})"""";*/
+
+const char* _LYWSD03MMC_ENCR_json_PVVX_BTHOME_2 = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2_ENCR\",\"tag\":\"010202\",\"condition\":[\"servicedata\",\"=\",32,\"index\",0,\"41\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"ATC\"],\"properties\":{\"cipher\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",2,14]},\"ctr\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",16,8]},\"mic\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",24,8]}}}";
+/*R""""(
+{
+   "brand":"Xiaomi",
+   "model":"TH Sensor",
+   "model_id":"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2_ENCR",
+   "tag":"010202",
+   "condition":["servicedata", "=", 32, "index", 0, "41", "&", "uuid", "index", 0, "fcd2", "&", "name", "index", 0, "ATC"],
+   "properties":{
+      "cipher":{
+         "decoder":["string_from_hex_data", "servicedata", 2, 14]
+      },
+      "ctr":{
+         "decoder":["string_from_hex_data", "servicedata", 16, 8]
+      },
+      "mic":{
+         "decoder":["string_from_hex_data", "servicedata", 24, 8]
+      }
+   }
+})"""";*/
+
 const char* _LYWSD03MMC_ENCR_json_props = "{\"properties\":{\"cipher\":{\"unit\":\"hex\",\"name\":\"ciphertext\"},\"ctr\":{\"unit\":\"hex\",\"name\":\"counter\"},\"mic\":{\"unit\":\"hex\",\"name\":\"message integrity check\"}}}";
 /*R""""(
 {

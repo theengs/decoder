@@ -371,6 +371,10 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
     "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1\",\"type\":\"THB\",\"acts\":true,\"packet\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2\",\"type\":\"THB\",\"acts\":true,\"packet\":129,\"volt\":3.034,\"power\":1,\"opening\":1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"d19a92d016e70700\",\"ctr\":\"a80c0000\",\"mic\":\"7e2ed06b\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"426c816642734c\",\"ctr\":\"a20c0000\",\"mic\":\"66feb71b\"}",
 };
 
 const char* expected_uuid[] = {
@@ -1197,6 +1201,10 @@ const char* test_uuid_name_svcdata[][4] = {
     {"SE MAG Closed","0x2a06","P MAG CCCCCC","2900"},
     {"SwitchBot Outdoor Meter Servicdata", "0xfd3d", "WoIOSensorTH", "770041"},
     {"THB1 PVVX", "0xfcd2", "THB1-3F9E5D", "4000ef014a02020703b8170cbc0a"},
+    {"LYWSD03MMC_PVVX_BTHOME_1", "0xfcd2", "ATC_112233", "4000840164021f0803141c"},
+    {"LYWSD03MMC_PVVX_BTHOME_2", "0xfcd2", "ATC_112233", "4000810cda0b10011101"},
+    {"LYWSD03MMC_PVVX_BTHOME_1_ENCR", "0xfcd2", "ATC_112233", "41d19a92d016e70700a80c00007e2ed06b"},  // AES Key 00112233445566778899001122334455
+    {"LYWSD03MMC_PVVX_BTHOME_2_ENCR", "0xfcd2", "ATC_112233", "41426c816642734ca20c000066feb71b"},  // AES Key 00112233445566778899001122334455
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -1293,6 +1301,10 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
     TheengsDecoder::BLE_ID_NUM::SBOT_S,
     TheengsDecoder::BLE_ID_NUM::THB1,
+    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_1,
+    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_2,
+    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_1_ENCR,
+    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_2_ENCR,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
