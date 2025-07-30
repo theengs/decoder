@@ -173,6 +173,8 @@ const char* _devices[][2] = {
     {_LYWSD03MMC_json_ATC, _LYWSD03MMC_json_props},
     {_LYWSD03MMC_json_PVVX, _LYWSD03MMC_json_props},
     {_LYWSD03MMC_json_PVVX_DECR, _LYWSD03MMC_json_props},
+    {_LYWSD03MMC_json_PVVX_BTHOME_1, _LYWSD03MMC_BTHOME_1_json_props},
+    {_LYWSD03MMC_json_PVVX_BTHOME_2, _LYWSD03MMC_BTHOME_2_json_props},
     {_LYWSD03MMC_ENCR_json_PVVX, _LYWSD03MMC_ENCR_json_props},
     {_CGPR1_json, _CGPR1_json_props},
     {_ThermoBeacon_json, _ThermoBeacon_json_props},
