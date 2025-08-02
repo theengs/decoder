@@ -371,10 +371,10 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
     "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1\",\"type\":\"THB\",\"acts\":true,\"packet\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2\",\"type\":\"THB\",\"acts\":true,\"packet\":129,\"volt\":3.034,\"power\":1,\"opening\":1}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_1_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"d19a92d016e70700\",\"ctr\":\"a80c0000\",\"mic\":\"7e2ed06b\"}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_2_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"426c816642734c\",\"ctr\":\"a20c0000\",\"mic\":\"66feb71b\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet\":129,\"volt\":3.034,\"power\":1,\"opening\":1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"be07860de133b342\",\"ctr\":\"23020000\",\"mic\":\"50dea27d\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"613c80e969f052\",\"ctr\":\"a9000000\",\"mic\":\"77b39384\"}",
 };
 
 const char* expected_uuid[] = {
@@ -1203,8 +1203,8 @@ const char* test_uuid_name_svcdata[][4] = {
     {"THB1 PVVX", "0xfcd2", "THB1-3F9E5D", "4000ef014a02020703b8170cbc0a"},
     {"LYWSD03MMC_PVVX_BTHOME_1", "0xfcd2", "ATC_112233", "4000840164021f0803141c"},
     {"LYWSD03MMC_PVVX_BTHOME_2", "0xfcd2", "ATC_112233", "4000810cda0b10011101"},
-    {"LYWSD03MMC_PVVX_BTHOME_1_ENCR", "0xfcd2", "ATC_112233", "41d19a92d016e70700a80c00007e2ed06b"},  // AES Key 00112233445566778899001122334455
-    {"LYWSD03MMC_PVVX_BTHOME_2_ENCR", "0xfcd2", "ATC_112233", "41426c816642734ca20c000066feb71b"},  // AES Key 00112233445566778899001122334455
+    {"LYWSD03MMC_PVVX_BTHOME_1_ENCR", "0xfcd2", "ATC_77B4FC", "41be07860de133b3422302000050dea27d"},  // MAC Address A4:C1:38:77:B4:FC - AES Key 00112233445566778899001122334455
+    {"LYWSD03MMC_PVVX_BTHOME_2_ENCR", "0xfcd2", "ATC_77B4FC", "41613c80e969f052a900000077b39384"},  // MAC Address A4:C1:38:77:B4:FC - AES Key 00112233445566778899001122334455
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
