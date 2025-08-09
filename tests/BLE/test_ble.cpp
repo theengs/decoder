@@ -371,10 +371,10 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
     "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"packet\":129,\"volt\":3.034,\"power\":1,\"opening\":1}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"be07860de133b342\",\"ctr\":\"23020000\",\"mic\":\"50dea27d\"}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"cont\":true,\"encr\":2,\"cipher\":\"613c80e969f052\",\"ctr\":\"a9000000\",\"mic\":\"77b39384\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"cont\":true,\"packet\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"cont\":true,\"packet\":129,\"volt\":3.034,\"power\":1,\"opening\":1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"cont\":true,\"encr\":2,\"cipher\":\"be07860de133b342\",\"ctr\":\"23020000\",\"mic\":\"50dea27d\"}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"cont\":true,\"encr\":2,\"cipher\":\"613c80e969f052\",\"ctr\":\"a9000000\",\"mic\":\"77b39384\"}",
 };
 
 const char* expected_uuid[] = {
