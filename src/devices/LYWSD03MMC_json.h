@@ -112,7 +112,7 @@ const char* _LYWSD03MMC_json_PVVX_BTHOME_1 = "{\"brand\":\"Xiaomi\",\"model\":\"
    }
 })"""";*/
 
-const char* _LYWSD03MMC_json_PVVX_BTHOME_2 = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"tag\":\"0104\",\"condition\":[\"servicedata\",\"=\",20,\"index\",0,\"40\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"ATC\"],\"properties\":{\"packet\":{\"condition\":[\"servicedata\",2,\"00\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false]},\"volt\":{\"condition\":[\"servicedata\",6,\"0c\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,true,false],\"post_proc\":[\"/\",1000]},\"power\":{\"condition\":[\"servicedata\",12,\"10\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,2,false,false]},\"opening\":{\"condition\":[\"servicedata\",16,\"11\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,2,false,false]}}}";
+const char* _LYWSD03MMC_json_PVVX_BTHOME_2 = "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"tag\":\"0104\",\"condition\":[\"servicedata\",\"=\",20,\"index\",0,\"40\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"ATC\"],\"properties\":{\"packet\":{\"condition\":[\"servicedata\",2,\"00\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false]},\"volt\":{\"condition\":[\"servicedata\",6,\"0c\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,true,false],\"post_proc\":[\"/\",1000]},\"power\":{\"condition\":[\"servicedata\",12,\"10\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,2,false,false]},\"open\":{\"condition\":[\"servicedata\",16,\"11\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,2,false,false]}}}";
 /* R""""(
 {
    "brand":"Xiaomi",
@@ -134,7 +134,7 @@ const char* _LYWSD03MMC_json_PVVX_BTHOME_2 = "{\"brand\":\"Xiaomi\",\"model\":\"
          "condition":["servicedata", 12, "10"],
          "decoder":["value_from_hex_data", "servicedata", 14, 2, false, false]
       },
-      "opening":{
+      "open":{
          "condition":["servicedata", 16, "11"],
          "decoder":["value_from_hex_data", "servicedata", 18, 2, false, false]
       }
@@ -166,7 +166,7 @@ const char* _LYWSD03MMC_BTHOME_1_json_props = "{\"properties\":{\"packet\":{\"un
    }
 })"""";*/
 
-const char* _LYWSD03MMC_BTHOME_2_json_props = "{\"properties\":{\"packet\":{\"unit\":\"int\",\"name\":\"packet id\"},\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"},\"power\":{\"unit\":\"int\",\"name\":\"power\"},\"opening\":{\"unit\":\"int\",\"name\":\"opening\"}}}";
+const char* _LYWSD03MMC_BTHOME_2_json_props = "{\"properties\":{\"packet\":{\"unit\":\"int\",\"name\":\"packet id\"},\"volt\":{\"unit\":\"V\",\"name\":\"voltage\"},\"power\":{\"unit\":\"int\",\"name\":\"power\"},\"open\":{\"unit\":\"int\",\"name\":\"open\"}}}";
 /*R""""(
 {
    "properties":{
@@ -182,9 +182,9 @@ const char* _LYWSD03MMC_BTHOME_2_json_props = "{\"properties\":{\"packet\":{\"un
          "unit": "int",
          "name": "power"
       },
-      "opening": {
+      "open": {
          "unit": "int",
-         "name": "opening"
+         "name": "open"
       }
    }
 })"""";*/
