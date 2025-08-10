@@ -371,8 +371,8 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
     "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
-    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet\":129,\"volt\":3.034,\"power\":1,\"opening\":1}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet_1\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
+    "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet_2\":129,\"volt\":3.034,\"power\":1,\"open\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"be07860de133b342\",\"ctr\":\"23020000\",\"mic\":\"50dea27d\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"613c80e969f052\",\"ctr\":\"a9000000\",\"mic\":\"77b39384\"}",
 };
@@ -1301,8 +1301,8 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::SE_MAG,
     TheengsDecoder::BLE_ID_NUM::SBOT_S,
     TheengsDecoder::BLE_ID_NUM::THB1,
-    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_1,
-    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_2,
+    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME,
+    TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME,
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_1_ENCR,
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_2_ENCR,
 };
