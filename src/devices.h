@@ -41,6 +41,7 @@
 #include "devices/HHCCJCY01HHCC_json.h"
 #include "devices/HHCCPOT002_json.h"
 #include "devices/HOBOMX2001_json.h"
+#include "devices/IBS_P02B_json.h"
 #include "devices/IBS_THBP01B_json.h"
 #include "devices/IBT_2X_json.h"
 #include "devices/IBT_4XS_json.h"
@@ -157,6 +158,7 @@ const char* _devices[][2] = {
     {_CGDK2_json_ATC1441, _CGDK2_json_props},
     {_CGH1_json, _CGH1_json_props},
     {_JQJCY01YM_json, _JQJCY01YM_json_props},
+    {_IBS_P02B_json, _IBS_P02B_json_props},
     {_IBS_THBP01B_json, _IBS_THBP01B_json_props},
     {_IBT_2X_json_2X, _IBT_2X_json_props},
     {_IBT_2X_json_2XS, _IBT_2X_json_props},

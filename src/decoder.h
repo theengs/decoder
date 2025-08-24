@@ -63,6 +63,7 @@ public:
     CGDK2_ATC1441,
     CGH1,
     JQJCY01YM,
+    IBS_P02B,
     IBSTHBP01B,
     IBT_2X,
     IBT_2XS,
