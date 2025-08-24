@@ -8,7 +8,7 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|2 AAA|
-|Exchanged Data|temperature, battery, lowBat|
+|Exchanged Data|temperature, battery, lowBat, displayUnit|
 |Encrypted|No|
 
 Note: the device will not broadcast BLE data when connected to the Inkbird app.
