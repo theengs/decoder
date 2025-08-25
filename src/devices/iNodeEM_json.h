@@ -39,7 +39,7 @@ const char* _iNodeEM_json = "{\"brand\":\"iNode\",\"model\":\"Energy Meter\",\"m
    }
 })"""";*/
 
-const char* _iNodeEM_json_props = "{\"properties\":{\"avg\":{\"unit\":\"kW/m³\",\"name\":\"average\"},\"avgu\":{\"unit\":\"string\",\"name\":\"average unit\"},\"sum\":{\"unit\":\"kWh/m³\",\"name\":\"sum\"},\"sumu\":{\"unit\":\"string\",\"name\":\"sum unit\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"lowbatt\":{\"unit\":\"status\",\"name\":\"low battery\"}}}";
+const char* _iNodeEM_json_props = "{\"properties\":{\"avg\":{\"unit\":\"kW/m³\",\"name\":\"average\"},\"avgu\":{\"unit\":\"string\",\"name\":\"average unit\"},\"sum\":{\"unit\":\"kWh/m³\",\"name\":\"sum\"},\"sumu\":{\"unit\":\"string\",\"name\":\"sum unit\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"lowbatt\":{\"unit\":\"status\",\"name\":\"battery\"}}}";
 /*R""""(
 {
    "properties":{
@@ -65,7 +65,7 @@ const char* _iNodeEM_json_props = "{\"properties\":{\"avg\":{\"unit\":\"kW/m³\"
       },
       "lowbatt":{
          "unit":"status",
-         "name":"low battery"
+         "name":"battery"
       }
    }
 })"""";*/
