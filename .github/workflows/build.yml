@@ -125,5 +125,3 @@ jobs:
         run: cmake --build .
       - name: Test
         run: ctest --output-on-failure -V -C Debug .
-
-  
