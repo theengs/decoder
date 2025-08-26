@@ -222,9 +222,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger\",\"model_id\":\"VICTBSC\",\"type\":\"ENRG\",\"device_state\":\"power supply\",\"volt_batt_1\":14.57,\"current_batt_1\":0,\"error_code\":0}",
     "{\"brand\":\"EcoFlow\",\"model\":\"Power Station\",\"model_id\":\"ECOFLOW_ADV\",\"type\":\"ENRG\",\"cidc\":false,\"track\":true,\"version\":\"RIVER 2 Max\",\"batt\":88}",
     "{\"brand\":\"EcoFlow\",\"model\":\"Power Station\",\"model_id\":\"ECOFLOW_ADV\",\"type\":\"ENRG\",\"cidc\":false,\"track\":true,\"version\":\"DELTA 2\",\"batt\":75}",
-    "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.1,\"tempf\":71.78,\"batt\":100,\"lowbatt\":false,\"displayunit\":\"°C\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":24.3,\"tempf\":75.74,\"batt\":50,\"lowbatt\":false,\"displayunit\":\"°F\"}",
-    "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"batt\":2,\"lowbatt\":true,\"displayunit\":\"°C\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.1,\"tempf\":71.78,\"batt\":100,\"lowbatt\":false,\"displayunit\":\"°C\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":24.3,\"tempf\":75.74,\"batt\":50,\"lowbatt\":false,\"displayunit\":\"°F\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"batt\":2,\"lowbatt\":true,\"displayunit\":\"°C\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -794,9 +794,9 @@ const char* test_mfgdata[][3] = {
     {"Victron Orion Blue Smart Charger", "",      "e102110038a308ffffcc0b00b10500ffffffffffffffff"},
     {"EcoFlow RIVER 2 Max", "", "b5b513523631314142433158595A313233343558000100003e08"},
     {"EcoFlow RIVER 2 Max", "", "b5b513523333314142433158595A31323334354b000100003e08"},
-    {"Inkbird IBS-P02B", "IBS-P02B", "49250327059ddd0000006400800000000000"},
-    {"Inkbird IBS-P02B", "IBS-P02B", "49250327059df30000003201800000000000"},
-    {"Inkbird IBS-P02B", "IBS-P02B", "49250327059de30000000200801000000000"},
+    {"Inkbird IBS-P02B", "IBS-P02B", "aabbccddeeffdd0000006400800000000000"},
+    {"Inkbird IBS-P02B", "IBS-P02B", "aabbccddeefff30000003201800000000000"},
+    {"Inkbird IBS-P02B", "IBS-P02B", "aabbccddeeffe30000000200801000000000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
