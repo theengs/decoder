@@ -92,6 +92,7 @@ public:
     H5102,
     H5106,
     H5179,
+    H5179_N,
     HHCCJCY10,
     MUE4094RT,
     NODONNIU,

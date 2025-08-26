@@ -225,6 +225,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.1,\"tempf\":71.78,\"batt\":100,\"lowbatt\":false,\"displayunit\":\"°C\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":24.3,\"tempf\":75.74,\"batt\":50,\"lowbatt\":false,\"displayunit\":\"°F\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.7,\"tempf\":72.86,\"batt\":2,\"lowbatt\":true,\"displayunit\":\"°C\",\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179_N\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":43,\"batt\":100}", 
+    "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179_N\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":28.5,\"tempf\":83.3,\"hum\":6.8,\"batt\":100}",
+    "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179_N\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.9,\"tempf\":73.22,\"hum\":56.4,\"batt\":100}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -797,6 +800,9 @@ const char* test_mfgdata[][3] = {
     {"Inkbird IBS-P02B", "IBS-P02B", "aabbccddeeffdd0000006400800000000000"},
     {"Inkbird IBS-P02B", "IBS-P02B", "aabbccddeefff30000003201800000000000"},
     {"Inkbird IBS-P02B", "IBS-P02B", "aabbccddeeffe30000000200801000000000"},
+    {"H5179", "GV5179_1763", "0100010103e5c664"},
+    {"H5179", "GV5179_1763", "0100010104598c64"},
+    {"H5179", "GV5179_1763", "010001010380bc64"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1005,6 +1011,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::IBS_P02B,
     TheengsDecoder::BLE_ID_NUM::IBS_P02B,
     TheengsDecoder::BLE_ID_NUM::IBS_P02B,
+    TheengsDecoder::BLE_ID_NUM::H5179_N,
+    TheengsDecoder::BLE_ID_NUM::H5179_N,
+    TheengsDecoder::BLE_ID_NUM::H5179_N,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

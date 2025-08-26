@@ -187,6 +187,7 @@ const char* _devices[][2] = {
     {_H5102_json, _H5102_json_props},
     {_H5106_json, _H5106_json_props},
     {_H5179_json, _H5179_json_props},
+    {_H5179_json_N, _H5179_json_props},
     {_HHCCJCY10_json, _HHCCJCY10_json_props},
     {_MUE4094RT_json, _MUE4094RT_json_props},
     {_NODONNIU_json, _NODONNIU_json_props},
