@@ -23,7 +23,7 @@ const char* _IBS_P02B_json = "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermomete
   }
 })"""";*/
 
-const char* _IBS_P02B_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"lowbatt\":{\"unit\":\"status\",\"name\":\"lowbatt\"},\"displayunit\":{\"unit\":\"string\",\"name\":\"displayUnit\"}}}";
+const char* _IBS_P02B_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"lowbatt\":{\"unit\":\"status\",\"name\":\"battery\"},\"displayunit\":{\"unit\":\"string\",\"name\":\"displayUnit\"}}}";
 /*R""""(
 {
    "properties":{
@@ -37,7 +37,7 @@ const char* _IBS_P02B_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\"
       },
       "lowbatt":{
          "unit":"status",
-         "name":"lowbatt"
+         "name":"battery"
       },
       "displayunit":{
          "unit":"string",
