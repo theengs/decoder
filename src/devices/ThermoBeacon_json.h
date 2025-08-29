@@ -1,47 +1,47 @@
-const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"tag\":\"0101\",\"condition\":[\"manufacturerdata\",\"index\",0,\"1000\",\"|\",\"manufacturerdata\",\"index\",0,\"1100\",\"|\",\"manufacturerdata\",\"index\",0,\"1500\",\"|\",\"manufacturerdata\",\"index\",0,\"1800\",\"|\",\"manufacturerdata\",\"index\",0,\"1b00\",\"&\",\"manufacturerdata\",\">=\",40],\"properties\":{\"tempc\":{\"condition\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true],\"post_proc\":[\"/\",16]},\"hum\":{\"condition\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true],\"post_proc\":[\"/\",16]},\"volt\":{\"condition\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true],\"post_proc\":[\"/\",1000]},\"time\":{\"condition\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,8,true,false]},\"tempc_max\":{\"condition\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true],\"post_proc\":[\"/\",16]},\"time_max\":{\"condition\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,8,true,false]},\"tempc_min\":{\"condition\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true],\"post_proc\":[\"/\",16]},\"time_min\":{\"condition\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",36,8,true,false]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"manufacturerdata\",8]}}}";
+const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"tag\":\"0101\",\"cond\":[\"manufacturerdata\",\"index\",0,\"1000\",\"|\",\"manufacturerdata\",\"index\",0,\"1100\",\"|\",\"manufacturerdata\",\"index\",0,\"1500\",\"|\",\"manufacturerdata\",\"index\",0,\"1800\",\"|\",\"manufacturerdata\",\"index\",0,\"1b00\",\"&\",\"manufacturerdata\",\">=\",40],\"properties\":{\"tempc\":{\"cond\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true],\"post_proc\":[\"/\",16]},\"hum\":{\"cond\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true],\"post_proc\":[\"/\",16]},\"volt\":{\"cond\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true],\"post_proc\":[\"/\",1000]},\"time\":{\"cond\":[\"manufacturerdata\",\"=\",40],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,8,true,false]},\"tempc_max\":{\"cond\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true],\"post_proc\":[\"/\",16]},\"time_max\":{\"cond\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,8,true,false]},\"tempc_min\":{\"cond\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true],\"post_proc\":[\"/\",16]},\"time_min\":{\"cond\":[\"manufacturerdata\",\"=\",44],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",36,8,true,false]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"manufacturerdata\",8]}}}";
 /*R""""(
 {
    "brand":"GENERIC",
    "model":"ThermoBeacon",
    "model_id":"WS02/WS08",
    "tag":"0101",
-   "condition":["manufacturerdata", "index", 0, "1000", "|", "manufacturerdata", "index", 0, "1100", "|", "manufacturerdata", "index", 0, "1500", "|", "manufacturerdata", "index", 0, "1800", "|", "manufacturerdata", "index", 0, "1b00", "&", "manufacturerdata", ">=", 40],
+   "cond":["manufacturerdata", "index", 0, "1000", "|", "manufacturerdata", "index", 0, "1100", "|", "manufacturerdata", "index", 0, "1500", "|", "manufacturerdata", "index", 0, "1800", "|", "manufacturerdata", "index", 0, "1b00", "&", "manufacturerdata", ">=", 40],
    "properties":{
       "tempc":{
-         "condition":["manufacturerdata", "=", 40],
+         "cond":["manufacturerdata", "=", 40],
          "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true],
          "post_proc":["/", 16]
       },
       "hum":{
-         "condition":["manufacturerdata", "=", 40],
+         "cond":["manufacturerdata", "=", 40],
          "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true],
          "post_proc":["/", 16]
       },
       "volt":{
-         "condition":["manufacturerdata", "=", 40],
+         "cond":["manufacturerdata", "=", 40],
          "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true],
          "post_proc":["/", 1000]
       },
       "time":{
-         "condition":["manufacturerdata", "=", 40],
+         "cond":["manufacturerdata", "=", 40],
          "decoder":["value_from_hex_data", "manufacturerdata", 32, 8, true, false]
       },
       "tempc_max":{
-         "condition":["manufacturerdata", "=", 44],
+         "cond":["manufacturerdata", "=", 44],
          "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true],
          "post_proc":["/", 16]
       },
       "time_max":{
-         "condition":["manufacturerdata", "=", 44],
+         "cond":["manufacturerdata", "=", 44],
          "decoder":["value_from_hex_data", "manufacturerdata", 24, 8, true, false]
       },
       "tempc_min":{
-         "condition":["manufacturerdata", "=", 44],
+         "cond":["manufacturerdata", "=", 44],
          "decoder":["value_from_hex_data", "manufacturerdata", 32, 4, true],
          "post_proc":["/", 16]
       },
       "time_min":{
-         "condition":["manufacturerdata", "=", 44],
+         "cond":["manufacturerdata", "=", 44],
          "decoder":["value_from_hex_data", "manufacturerdata", 36, 8, true, false]
       },
       "mac":{

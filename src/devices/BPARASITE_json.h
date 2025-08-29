@@ -1,4 +1,4 @@
-const char* _BPARASITE_json = "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tag\":\"0904\",\"condition\":[\"servicedata\",\">=\",32,\"index\",0,\"1\",\"|\",\"servicedata\",\">=\",32,\"index\",0,\"2\",\"&\",\"uuid\",\"index\",0,\"181a\"],\"properties\":{\"tempc\":{\"condition\":[\"servicedata\",0,\"1\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,false,true],\"post_proc\":[\"/\",1000]},\"_tempc\":{\"condition\":[\"servicedata\",0,\"2\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,false,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",12,4,false,false],\"post_proc\":[\"/\",655.35]},\"moi\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",16,4,false,false],\"post_proc\":[\"/\",655.35]},\"lux\":{\"condition\":[\"servicedata\",1,\"bit\",0,1],\"decoder\":[\"value_from_hex_data\",\"servicedata\",32,4,false,false]},\"volt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,4,false,false],\"post_proc\":[\"/\",1000]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"servicedata\",20]}}}";
+const char* _BPARASITE_json = "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv1.0-1.2\",\"tag\":\"0904\",\"cond\":[\"servicedata\",\">=\",32,\"index\",0,\"1\",\"|\",\"servicedata\",\">=\",32,\"index\",0,\"2\",\"&\",\"uuid\",\"index\",0,\"181a\"],\"properties\":{\"tempc\":{\"cond\":[\"servicedata\",0,\"1\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,false,true],\"post_proc\":[\"/\",1000]},\"_tempc\":{\"cond\":[\"servicedata\",0,\"2\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,4,false,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",12,4,false,false],\"post_proc\":[\"/\",655.35]},\"moi\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",16,4,false,false],\"post_proc\":[\"/\",655.35]},\"lux\":{\"cond\":[\"servicedata\",1,\"bit\",0,1],\"decoder\":[\"value_from_hex_data\",\"servicedata\",32,4,false,false]},\"volt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,4,false,false],\"post_proc\":[\"/\",1000]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"servicedata\",20]}}}";
 
 /* R""""(
 {
@@ -6,15 +6,15 @@ const char* _BPARASITE_json = "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"
    "model":"b-parasite",
    "model_id":"BPv1.0-1.2",
    "tag":"0904",
-   "condition":["servicedata", ">=", 32, "index", 0, "1", "|", "servicedata", ">=", 32, "index", 0, "2", "&", "uuid", "index", 0, "181a"],
+   "cond":["servicedata", ">=", 32, "index", 0, "1", "|", "servicedata", ">=", 32, "index", 0, "2", "&", "uuid", "index", 0, "181a"],
    "properties":{
       "tempc":{
-         "condition":["servicedata", 0, "1"],
+         "cond":["servicedata", 0, "1"],
          "decoder":["value_from_hex_data", "servicedata", 8, 4, false, true],
          "post_proc":["/", 1000]
       },
       "_tempc":{
-         "condition":["servicedata", 0, "2"],
+         "cond":["servicedata", 0, "2"],
          "decoder":["value_from_hex_data", "servicedata", 8, 4, false, true],
          "post_proc":["/", 100]
       },
@@ -27,7 +27,7 @@ const char* _BPARASITE_json = "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"
          "post_proc":["/", 655.35]
       },
       "lux":{
-         "condition":["servicedata", 1, "bit", 0, 1],
+         "cond":["servicedata", 1, "bit", 0, 1],
          "decoder":["value_from_hex_data", "servicedata", 32, 4, false, false]
       },
       "volt":{

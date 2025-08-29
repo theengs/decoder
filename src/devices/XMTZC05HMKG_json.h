@@ -1,11 +1,11 @@
-const char* _XMTZC05HMKG_json = "{\"brand\":\"Xiaomi\",\"model\":\"Mi Body Composition Scale\",\"model_id\":\"XMTZC02HM/XMTZC05HM\",\"tag\":\"05\",\"condition\":[\"servicedata\",\"index\",1,\"22\",\"|\",\"servicedata\",\"index\",1,\"2a\",\"|\",\"servicedata\",\"index\",1,\"62\",\"|\",\"servicedata\",\"index\",1,\"6a\",\"&\",\"servicedata\",\"=\",26,\"&\",\"uuid\",\"contain\",\"181b\"],\"properties\":{\"weighing_mode\":{\"decoder\":[\"bit_static_value\",\"servicedata\",1,2,\"person\",\"object\"]},\"unit\":{\"decoder\":[\"static_value\",\"kg\"]},\"weight\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",200]},\"impedance\":{\"condition\":[\"servicedata\",3,\"6\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,true,false]}}}";
+const char* _XMTZC05HMKG_json = "{\"brand\":\"Xiaomi\",\"model\":\"Mi Body Composition Scale\",\"model_id\":\"XMTZC02HM/XMTZC05HM\",\"tag\":\"05\",\"cond\":[\"servicedata\",\"index\",1,\"22\",\"|\",\"servicedata\",\"index\",1,\"2a\",\"|\",\"servicedata\",\"index\",1,\"62\",\"|\",\"servicedata\",\"index\",1,\"6a\",\"&\",\"servicedata\",\"=\",26,\"&\",\"uuid\",\"contain\",\"181b\"],\"properties\":{\"weighing_mode\":{\"decoder\":[\"bit_static_value\",\"servicedata\",1,2,\"person\",\"object\"]},\"unit\":{\"decoder\":[\"static_value\",\"kg\"]},\"weight\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,true,false],\"post_proc\":[\"/\",200]},\"impedance\":{\"cond\":[\"servicedata\",3,\"6\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,true,false]}}}";
 /*R""""(
 {
    "brand":"Xiaomi",
    "model":"Mi Body Composition Scale",
    "model_id":"XMTZC02HM/XMTZC05HM",
    "tag":"05",
-   "condition":["servicedata", "index", 1, "22", "|", "servicedata", "index", 1, "2a", "|", "servicedata", "index", 1, "62", "|", "servicedata", "index", 1, "6a", "&", "servicedata", "=", 26, "&", "uuid", "contain", "181b"],
+   "cond":["servicedata", "index", 1, "22", "|", "servicedata", "index", 1, "2a", "|", "servicedata", "index", 1, "62", "|", "servicedata", "index", 1, "6a", "&", "servicedata", "=", 26, "&", "uuid", "contain", "181b"],
    "properties":{
       "weighing_mode":{
          "decoder":["bit_static_value", "servicedata", 1, 2, "person", "object"]
@@ -18,7 +18,7 @@ const char* _XMTZC05HMKG_json = "{\"brand\":\"Xiaomi\",\"model\":\"Mi Body Compo
          "post_proc":["/", 200]
       },
       "impedance":{
-         "condition":["servicedata", 3, "6"],
+         "cond":["servicedata", 3, "6"],
          "decoder":["value_from_hex_data", "servicedata", 18, 4, true, false]
       }
    }

@@ -14,23 +14,23 @@ R""""(
    "brand":"Xiaomi",
    "model":"miflora",
    "model_id":"HHCCJCY01HHCC",
-   "condition":["servicedata", "contain", "209800"],
+   "cond":["servicedata", "contain", "209800"],
    "properties":{
       "tempc":{
-         "condition":["servicedata", 25, "4"],
+         "cond":["servicedata", 25, "4"],
          "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
          "post_proc":["/", 10]
       },
       "moi":{
-         "condition":["servicedata", 25, "8"],
+         "cond":["servicedata", 25, "8"],
          "decoder":["value_from_hex_data", "servicedata", 30, 2, false]
       },
       "lux":{
-         "condition":["servicedata", 25, "7"],
+         "cond":["servicedata", 25, "7"],
          "decoder":["value_from_hex_data", "servicedata", 30, 6, true]
       },
       "fer":{
-         "condition":["servicedata", 25, "9"],
+         "cond":["servicedata", 25, "9"],
          "decoder":["value_from_hex_data", "servicedata", 30, 4, true]
       }
    }
@@ -190,35 +190,35 @@ The second parameter is variable. If required, further qualification can be made
 - "revmac@index" tests if the device's MAC address exists octet-reversed at the index location (see below) in the data source
 
 ::: warning Note
-For compatibility of a decoder for running successfully on an OS which masks the real MAC addresses of devices by generic uuids, like macOS and iOS, an alternative model condition with the name "conditionnomac" needs to be defined in addition to "condition" if the latter contains "mac@index" or "revmac@index".
+For compatibility of a decoder for running successfully on an OS which masks the real MAC addresses of devices by generic uuids, like macOS and iOS, an alternative model condition with the name "conditionnomac" needs to be defined in addition to "cond" if the latter contains "mac@index" or "revmac@index".
 :::
 
 Examples:
-`"condition":["servicedata", "index", 0, "0804"` -- no data length check
-`"condition":["servicedata", ">=", 40, "index", 0, "0804"` -- data length must be equal to or greater than 40 bytes
+`"cond":["servicedata", "index", 0, "0804"` -- no data length check
+`"cond":["servicedata", ">=", 40, "index", 0, "0804"` -- data length must be equal to or greater than 40 bytes
 
 The third parameter (fifth if data length is specified) can be either the index value or the data value to find. If the second (fourth if data length specified) parameter is `contain`, the next parameter should be the value to look for in the data source. If the second (fourth if data length specified) parameter is `index`, `mac@index` or `revmac@index` the next parameter should be the location in the data source to look for the value.
 
 `condition` can have multiple conditions chained together using "|" and "&" between them.  
-For example: `"condition":["servicedata", "index", 0, "0804", "|", "servicedata", "index", 0, "8804"]`  
+For example: `"cond":["servicedata", "index", 0, "0804", "|", "servicedata", "index", 0, "8804"]`  
 This will match if the service data at index 0 is "0804" `OR` "8804".
 
 `condition` can contain JSON arrays that can be processed separately. This allows for nesting of detection tests such as:  
-`"condition": [["servicedata", "index", 0, "1234", "&" "servicedata", "index", 5, "5678"], "|", "servicedata", "index", 30, "abcd"]`  
+`"cond": [["servicedata", "index", 0, "1234", "&" "servicedata", "index", 5, "5678"], "|", "servicedata", "index", 30, "abcd"]`  
 This will result in a positive detection if the service data at index `0` == `0x1234` and the service data at index `5` == `0x5678`, otherwise, if the service data at index `30` == `0xabcd`, the result will also be positive.
 
 ::: warning Note
 Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.
 It should only be used if absolutely necessary, as in the above example.
 If all the conditions in an array bracket are chained with "|", as in
-`"condition": [["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef"], "&", "servicedata", "index", 5, "1212"]`
+`"cond": [["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef"], "&", "servicedata", "index", 5, "1212"]`
 this could be re-written as
-`"condition": ["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef", "&", "servicedata", "index", 5, "1212"]`  
+`"cond": ["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef", "&", "servicedata", "index", 5, "1212"]`  
 making sure the additional AND condition is at the end. This has the same result, without nesting.
 :::
 
 `condition` NOT(!) testing; Anytime a condition test value is preceded by a "!", the inverse of the result will be used to determine the result.  
-Example: `"condition": ["servicedata", "index", 30, "!", "abcd", "&", "servicedata", "index", 0, "1234"]  
+Example: `"cond": ["servicedata", "index", 30, "!", "abcd", "&", "servicedata", "index", 0, "1234"]  
 If the value of the service data at index 30 is not 0xabcd and the data at index 0 is 0x1234, the result is a positive detection.
 
 `condition` "no-mfgdata"; This single argument condition allows to test for the non-existence of manufacturerdata in the received advertising data. 
@@ -228,7 +228,7 @@ Properties is a nested JSON object containing one or more JSON objects. In the e
 ```
  "properties":{
       "tempc":{
-         "condition":["servicedata", 25, "4"],
+         "cond":["servicedata", 25, "4"],
          "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
          "post_proc":["/", 10]
       },
@@ -248,7 +248,7 @@ Then the third parameter is the value to test for, or in case of the `"name"` co
 ```
  "properties":{
       "hum":{
-         "condition":["name", "not_contain", "GV5108"],
+         "cond":["name", "not_contain", "GV5108"],
          "decoder":["value_from_hex_data", "manufacturerdata", 8, 6, false, false],
          "post_proc":["&", 8388607, "%", 1000, "/", 10]
       },
@@ -258,7 +258,7 @@ If a direct binary bit evaluation encoded in a hex digit is desired the third pa
 ```
  "properties":{
       "hum":{
-         "condition":["servicedata", 10, "bit", 3, 0],
+         "cond":["servicedata", 10, "bit", 3, 0],
          "decoder":["value_from_hex_data", "servicedata", 10, 2, false, false]
       },
 ```
@@ -268,7 +268,7 @@ The second parameter can also be an operator in the form of `">" , ">=" , "=" , 
 ```
  "properties":{
       "tempc":{
-         "condition":["manufacturerdata", "=", 40],
+         "cond":["manufacturerdata", "=", 40],
          "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true]
       },
 ```
@@ -276,16 +276,16 @@ The second parameter can also be an operator in the form of `">" , ">=" , "=" , 
 If the condition is met the data will be decoded and added to the JsonObject.
 
 `condition` can contain JSON arrays that can be processed separately. This allows for nesting of detection tests such as:  
-`"condition": [["servicedata", 25, "4", "&" "servicedata", 26, "5"], "|", "servicedata", 30, "abcd"]`  
+`"cond": [["servicedata", 25, "4", "&" "servicedata", 26, "5"], "|", "servicedata", 30, "abcd"]`  
 This will result in a positive detection if the service data at index `25` == `4` and the service data at index `26` == `5`, otherwise, if the service data at index `30` == `0xabcd`, the result will also be positive.
 
 ::: warning Note
 Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.
 It should only be used if absolutely necessary, as in the above example.
 If all the conditions in an array bracket are chained with "|", as in
-`"condition": [["servicedata", 20, "5", "|", "servicedata", 20, "6"], "&", "servicedata", 30, "a"]`
+`"cond": [["servicedata", 20, "5", "|", "servicedata", 20, "6"], "&", "servicedata", 30, "a"]`
 this could be re-written as
-`"condition": ["servicedata", 20 , "5", "|", "servicedata", 20, "6", "&", "servicedata", 30, "a"]`  
+`"cond": ["servicedata", 20 , "5", "|", "servicedata", 20, "6", "&", "servicedata", 30, "a"]`  
 making sure the additional AND condition is at the end. This has the same result, without nesting.
 :::
 
@@ -293,7 +293,7 @@ Property conditions also allow for a NOT comparison, as in
 ```
  "properties":{
       "tempc":{
-         "condition":["manufacturerdata", 24, "!", "ffff"],
+         "cond":["manufacturerdata", 24, "!", "ffff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true, false],
          "post_proc":["/", 10]
       },

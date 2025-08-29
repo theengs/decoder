@@ -515,10 +515,10 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
     if (doc.containsKey("conditionnomac")) {
       selectedCondition = doc["conditionnomac"];
     } else {
-      selectedCondition = doc["condition"];
+      selectedCondition = doc["cond"];
     }
 #else
-    selectedCondition = doc["condition"];
+    selectedCondition = doc["cond"];
 #endif
     if (checkDeviceMatch(selectedCondition, svc_data, mfg_data, dev_name, svc_uuid, mac_id)) {
       jsondata["brand"] = doc["brand"];
@@ -669,7 +669,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
       for (JsonPair kv : properties) {
         JsonObject prop = kv.value().as<JsonObject>();
 
-        if (checkPropCondition(prop["condition"], svc_data, mfg_data, dev_name)) {
+        if (checkPropCondition(prop["cond"], svc_data, mfg_data, dev_name)) {
           JsonArray decoder = prop["decoder"];
           if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
             const char* src = svc_data;

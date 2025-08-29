@@ -1,40 +1,40 @@
-const char* _IBT_6XS_SOLIS6_json = "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"tag\":\"0301\",\"condition\":[\"manufacturerdata\",\"=\",44,\"index\",0,\"00000000\",\"&\",\"manufacturerdata\",\"mac@index\",8],\"conditionnomac\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",\"=\",44,\"index\",0,\"00000000\"],\"properties\":{\"tempc\":{\"condition\":[\"manufacturerdata\",22,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"tempc2\":{\"condition\":[\"manufacturerdata\",26,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"tempc3\":{\"condition\":[\"manufacturerdata\",30,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false],\"post_proc\":[\"/\",10]},\"tempc4\":{\"condition\":[\"manufacturerdata\",34,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true,false],\"post_proc\":[\"/\",10]},\"tempc5\":{\"condition\":[\"manufacturerdata\",38,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",36,4,true,false],\"post_proc\":[\"/\",10]},\"tempc6\":{\"condition\":[\"manufacturerdata\",42,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",40,4,true,false],\"post_proc\":[\"/\",10]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",8]}}}";
+const char* _IBT_6XS_SOLIS6_json = "{\"brand\":\"Inkbird/Tenergy\",\"model\":\"iBBQ/SOLIS6\",\"model_id\":\"IBT-6XS/SOLIS-6\",\"tag\":\"0301\",\"cond\":[\"manufacturerdata\",\"=\",44,\"index\",0,\"00000000\",\"&\",\"manufacturerdata\",\"mac@index\",8],\"conditionnomac\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",\"=\",44,\"index\",0,\"00000000\"],\"properties\":{\"tempc\":{\"cond\":[\"manufacturerdata\",22,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"tempc2\":{\"cond\":[\"manufacturerdata\",26,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"tempc3\":{\"cond\":[\"manufacturerdata\",30,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false],\"post_proc\":[\"/\",10]},\"tempc4\":{\"cond\":[\"manufacturerdata\",34,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true,false],\"post_proc\":[\"/\",10]},\"tempc5\":{\"cond\":[\"manufacturerdata\",38,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",36,4,true,false],\"post_proc\":[\"/\",10]},\"tempc6\":{\"cond\":[\"manufacturerdata\",42,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",40,4,true,false],\"post_proc\":[\"/\",10]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",8]}}}";
 /*R""""(
 {
    "brand":"Inkbird/Tenergy",
    "model":"iBBQ/SOLIS6",
    "model_id":"IBT-6XS/SOLIS-6",
    "tag":"0301",
-   "condition":["manufacturerdata", "=", 44, "index", 0, "00000000", "&", "manufacturerdata", "mac@index", 8],
+   "cond":["manufacturerdata", "=", 44, "index", 0, "00000000", "&", "manufacturerdata", "mac@index", 8],
    "conditionnomac":["name", "index", 0, "iBBQ", "&", "manufacturerdata", "=", 44, "index", 0, "00000000"],
    "properties":{
       "tempc":{
-         "condition":["manufacturerdata", 22, "!", "ff"],
+         "cond":["manufacturerdata", 22, "!", "ff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc2":{
-         "condition":["manufacturerdata", 26, "!", "ff"],
+         "cond":["manufacturerdata", 26, "!", "ff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc3":{
-         "condition":["manufacturerdata", 30, "!", "ff"],
+         "cond":["manufacturerdata", 30, "!", "ff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc4":{
-         "condition":["manufacturerdata", 34, "!", "ff"],
+         "cond":["manufacturerdata", 34, "!", "ff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 32, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc5":{
-         "condition":["manufacturerdata", 38, "!", "ff"],
+         "cond":["manufacturerdata", 38, "!", "ff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 36, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc6":{
-         "condition":["manufacturerdata", 42, "!", "ff"],
+         "cond":["manufacturerdata", 42, "!", "ff"],
          "decoder":["value_from_hex_data", "manufacturerdata", 40, 4, true, false],
          "post_proc":["/", 10]
       },

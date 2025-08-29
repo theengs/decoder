@@ -1,11 +1,11 @@
-const char* _SBDW_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window encrypted\",\"model_id\":\"SBDW_002C_ENCR\",\"tag\":\"040602\",\"condition\":[\"servicedata\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBDW-\"],\"properties\":{\"cipher\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",2,26]},\"ctr\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",28,8]},\"mic\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",36,8]},\"mac\":{\"condition\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmac_from_hex_data\",\"manufacturerdata\",18]}}}";
+const char* _SBDW_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window encrypted\",\"model_id\":\"SBDW_002C_ENCR\",\"tag\":\"040602\",\"cond\":[\"servicedata\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBDW-\"],\"properties\":{\"cipher\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",2,26]},\"ctr\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",28,8]},\"mic\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",36,8]},\"mac\":{\"cond\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmac_from_hex_data\",\"manufacturerdata\",18]}}}";
 /*R""""(
 {
    "brand":"Shelly",
    "model":"ShellyBLU Door/Window encrypted",
    "model_id":"SBDW_002C_ENCR",
    "tag":"040602",
-   "condition":["servicedata", "index", 0, "45", "&", "uuid", "index", 0, "fcd2", "&", "name", "index", 0, "SBDW-"],
+   "cond":["servicedata", "index", 0, "45", "&", "uuid", "index", 0, "fcd2", "&", "name", "index", 0, "SBDW-"],
    "properties":{
       "cipher":{
          "decoder":["string_from_hex_data", "servicedata", 2, 26]
@@ -17,7 +17,7 @@ const char* _SBDW_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU 
          "decoder":["string_from_hex_data", "servicedata", 36, 8]
       },
       "mac":{
-         "condition":["manufacturerdata", "=", 30],
+         "cond":["manufacturerdata", "=", 30],
          "decoder":["revmac_from_hex_data", "manufacturerdata", 18]
       }
    }

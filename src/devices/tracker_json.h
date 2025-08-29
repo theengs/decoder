@@ -1,11 +1,11 @@
-const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"nut\",\"&\",\"uuid\",\"index\",0,\"180a\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nut Tracker\"]}}}";
+const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUT\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"nut\",\"&\",\"uuid\",\"index\",0,\"180a\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nut Tracker\"]}}}";
 /*R""""(
 {
    "brand":"nut",
    "model":"Smart Tracker",
    "model_id":"NUT",
    "tag":"100b",
-   "condition":["name", "index", 0, "nut", "&", "uuid", "index", 0, "180a"],
+   "cond":["name", "index", 0, "nut", "&", "uuid", "index", 0, "180a"],
    "properties":{
       "device":{
          "decoder":["static_value", "nut Tracker"]
@@ -13,14 +13,14 @@ const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",
    }
 })"""";*/
 
-const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"nutale\",\"&\",\"servicedata\",\"=\",24,\"&\",\"uuid\",\"index\",0,\"0900\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nutale Tracker\"]}}}";
+const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"nutale\",\"&\",\"servicedata\",\"=\",24,\"&\",\"uuid\",\"index\",0,\"0900\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nutale Tracker\"]}}}";
 /*R""""(
 {
    "brand":"nut",
    "model":"Smart Tracker",
    "model_id":"NUTALE",
    "tag":"100b",
-   "condition":["name", "index", 0, "nutale", "&", "servicedata", "=", 24, "&", "uuid", "index", 0, "0900"],
+   "cond":["name", "index", 0, "nutale", "&", "servicedata", "=", 24, "&", "uuid", "index", 0, "0900"],
    "properties":{
       "device":{
          "decoder":["static_value", "nutale Tracker"]
@@ -28,14 +28,14 @@ const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker
    }
 })"""";*/
 
-const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"iTAG\",\"&\",\"manufacturerdata\",\">=\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"iTAG Tracker\"]}}}";
+const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"iTAG\",\"&\",\"manufacturerdata\",\">=\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"iTAG Tracker\"]}}}";
 /*R""""(
 {
    "brand":"iTAG",
    "model":"Smart Tracker",
    "model_id":"ITAG",
    "tag":"100b",
-   "condition":["name", "index", 0, "iTAG", "&", "manufacturerdata", ">=", 8],
+   "cond":["name", "index", 0, "iTAG", "&", "manufacturerdata", ">=", 8],
    "properties":{
       "device":{
          "decoder":["static_value", "iTAG Tracker"]
@@ -43,14 +43,14 @@ const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\
    }
 })"""";*/
 
-const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Tracker\",\"model_id\":\"TAGIT\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"Tag-It\",\"&\",\"manufacturerdata\",\"=\",26],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tag-It Tracker\"]}}}";
+const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Tracker\",\"model_id\":\"TAGIT\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"Tag-It\",\"&\",\"manufacturerdata\",\"=\",26],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tag-It Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Tag-It",
    "model":"Smart Tracker",
    "model_id":"TAGIT",
    "tag":"100b",
-   "condition":["name", "index", 0, "Tag-It", "&", "manufacturerdata", "=", 26],
+   "cond":["name", "index", 0, "Tag-It", "&", "manufacturerdata", "=", 26],
    "properties":{
       "device":{
          "decoder":["static_value", "Tag-It Tracker"]
@@ -58,14 +58,14 @@ const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Track
    }
 })"""";*/
 
-const char* _tracker_json_tile = "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"tag\":\"100b\",\"condition\":[\"uuid\",\"index\",0,\"feed\",\"|\",\"uuid\",\"index\",0,\"feec\",\"|\",\"uuid\",\"index\",0,\"fd84\",\"&\",\"no-mfgdata\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tile Tracker\"]}}}";
+const char* _tracker_json_tile = "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"tag\":\"100b\",\"cond\":[\"uuid\",\"index\",0,\"feed\",\"|\",\"uuid\",\"index\",0,\"feec\",\"|\",\"uuid\",\"index\",0,\"fd84\",\"&\",\"no-mfgdata\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tile Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Tile",
    "model":"Smart Tracker",
    "model_id":"TILE",
    "tag":"100b",
-   "condition":["uuid", "index", 0, "feed", "|", "uuid", "index", 0, "feec", "|", "uuid", "index", 0, "fd84", "&", "no-mfgdata"],
+   "cond":["uuid", "index", 0, "feed", "|", "uuid", "index", 0, "feec", "|", "uuid", "index", 0, "fd84", "&", "no-mfgdata"],
    "properties":{
       "device":{
          "decoder":["static_value", "Tile Tracker"]
@@ -73,14 +73,14 @@ const char* _tracker_json_tile = "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\
    }
 })"""";*/
 
-const char* _tracker_json_tilename = "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"Tile\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tile Tracker\"]}}}";
+const char* _tracker_json_tilename = "{\"brand\":\"Tile\",\"model\":\"Smart Tracker\",\"model_id\":\"TILE\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"Tile\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tile Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Tile",
    "model":"Smart Tracker",
    "model_id":"TILE",
    "tag":"100b",
-   "condition":["name", "index", 0, "Tile"],
+   "cond":["name", "index", 0, "Tile"],
    "properties":{
       "device":{
          "decoder":["static_value", "Tile Tracker"]
@@ -88,14 +88,14 @@ const char* _tracker_json_tilename = "{\"brand\":\"Tile\",\"model\":\"Smart Trac
    }
 })"""";*/
 
-const char* _tracker_json_theengs01 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB01\",\"tag\":\"1009\",\"condition\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e31\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
+const char* _tracker_json_theengs01 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB01\",\"tag\":\"1009\",\"cond\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e31\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Theengs",
    "model":"iBeacon Tracker",
    "model_id":"TheengsIB01",
    "tag":"1009",
-   "condition":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e31"],
+   "cond":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e31"],
    "properties":{
       "device":{
          "decoder":["static_value", "Theengs iBeacon Tracker"]
@@ -103,14 +103,14 @@ const char* _tracker_json_theengs01 = "{\"brand\":\"Theengs\",\"model\":\"iBeaco
    }
 })"""";*/
 
-const char* _tracker_json_theengs02 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"tag\":\"1019\",\"condition\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e32\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
+const char* _tracker_json_theengs02 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"tag\":\"1019\",\"cond\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e32\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Theengs",
    "model":"iBeacon Tracker",
    "model_id":"TheengsIB02",
    "tag":"1019",
-   "condition":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e32"],
+   "cond":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e32"],
    "properties":{
       "device":{
          "decoder":["static_value", "Theengs iBeacon Tracker"]
@@ -118,14 +118,14 @@ const char* _tracker_json_theengs02 = "{\"brand\":\"Theengs\",\"model\":\"iBeaco
    }
 })"""";*/
 
-const char* _tracker_json_TICWATCHGTH = "{\"brand\":\"Mobvoi\",\"model\":\"TicWatch GTH (Pro)\",\"model_id\":\"TICWATCHGTH\",\"tag\":\"100b\",\"condition\":[\"name\",\"index\",0,\"TicWatch GTH\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"TicWatch GTH (Pro) Tracker\"]}}}";
+const char* _tracker_json_TICWATCHGTH = "{\"brand\":\"Mobvoi\",\"model\":\"TicWatch GTH (Pro)\",\"model_id\":\"TICWATCHGTH\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"TicWatch GTH\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"TicWatch GTH (Pro) Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Mobvoi",
    "model":"TicWatch GTH (Pro)",
    "model_id":"TICWATCHGTH",
    "tag":"100b",
-   "condition":["name", "index", 0, "TicWatch GTH"],
+   "cond":["name", "index", 0, "TicWatch GTH"],
    "properties":{
       "device":{
          "decoder":["static_value", "TicWatch GTH (Pro) Tracker"]
@@ -133,14 +133,14 @@ const char* _tracker_json_TICWATCHGTH = "{\"brand\":\"Mobvoi\",\"model\":\"TicWa
    }
 })"""";*/
 
-const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"tag\":\"1008\",\"condition\":[\"manufacturerdata\",\"=\",24,\"index\",0,\"800102151234\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Gigaset G-Tag Tracker\"]}}}";
+const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"tag\":\"1008\",\"cond\":[\"manufacturerdata\",\"=\",24,\"index\",0,\"800102151234\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Gigaset G-Tag Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Gigaset",
    "model":"G-Tag",
    "model_id":"GTAG",
    "tag":"1008",
-   "condition":["manufacturerdata", "=", 24, "index", 0, "800102151234"],
+   "cond":["manufacturerdata", "=", 24, "index", 0, "800102151234"],
    "properties":{
       "device":{
          "decoder":["static_value", "Gigaset G-Tag Tracker"]
@@ -148,14 +148,14 @@ const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"m
    }
 })"""";*/
 
-const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"tag\":\"100a\",\"condition\":[\"name\",\"index\",0,\"Nyon\",\"&\",\"manufacturerdata\",\"=\",14,\"index\",0,\"a602\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Bosch Nyon Tracker\"]}}}";
+const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"tag\":\"100a\",\"cond\":[\"name\",\"index\",0,\"Nyon\",\"&\",\"manufacturerdata\",\"=\",14,\"index\",0,\"a602\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Bosch Nyon Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Bosch",
    "model":"Nyon",
    "model_id":"BOSCHNYON",
    "tag":"100a",
-   "condition":["name", "index", 0, "Nyon", "&", "manufacturerdata", "=", 14, "index", 0, "a602"],
+   "cond":["name", "index", 0, "Nyon", "&", "manufacturerdata", "=", 14, "index", 0, "a602"],
    "properties":{
       "device":{
          "decoder":["static_value", "Bosch Nyon Tracker"]
@@ -163,14 +163,14 @@ const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"mode
    }
 })"""";*/
 
-const char* _tracker_json_FMT100 = "{\"brand\":\"Teltonika\",\"model\":\"FMT100\",\"model_id\":\"FMT100\",\"tag\":\"100a\",\"condition\":[\"name\",\"index\",0,\"FMT100_\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"FMT100 2G vehicle tracker\"]}}}";
+const char* _tracker_json_FMT100 = "{\"brand\":\"Teltonika\",\"model\":\"FMT100\",\"model_id\":\"FMT100\",\"tag\":\"100a\",\"cond\":[\"name\",\"index\",0,\"FMT100_\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"FMT100 2G vehicle tracker\"]}}}";
 /*R""""(
 {
    "brand":"Teltonika",
    "model":"FMT100",
    "model_id":"FMT100",
    "tag":"100a",
-   "condition":["name", "index", 0, "FMT100_"],
+   "cond":["name", "index", 0, "FMT100_"],
    "properties":{
       "device":{
          "decoder":["static_value", "FMT100 2G vehicle tracker"]
