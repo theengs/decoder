@@ -392,13 +392,13 @@ In such cases the "mac" property should be included in the decoder, so that thes
 ```
 "properties":{
       "mac":{
-         "decoder":["mac_from_hex_data", "servicedata", 4]
+         "decoder":["mfhd", "servicedata", 4]
       }
 
       … or
 
       "mac":{
-         "decoder":["revmac_from_hex_data", "servicedata", 4]
+         "decoder":["revmfhd", "servicedata", 4]
       }
 
 ```

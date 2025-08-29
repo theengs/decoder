@@ -34,7 +34,7 @@ const char* _SBMT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"
    }
 })"""";*/
 
-const char* _SBMT_json_M = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tag\":\"0100\",\"cond\":[\"name\",\"index\",0,\"WoSensorTH\",\"&\",\"manufacturerdata\",\"=\",26],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",21,1,false,false],\"post_proc\":[\"/\",10]},\"tempc\":{\"cond\":[\"manufacturerdata\",22,\"bit\",3,0],\"decoder\":[\"vfhd\",\"manufacturerdata\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"*\",-1]},\"_tempc\":{\"cond\":[\"manufacturerdata\",22,\"bit\",3,1],\"decoder\":[\"vfhd\",\"manufacturerdata\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"-\",128]},\"hum\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",24,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",4]}}}";
+const char* _SBMT_json_M = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tag\":\"0100\",\"cond\":[\"name\",\"index\",0,\"WoSensorTH\",\"&\",\"manufacturerdata\",\"=\",26],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",21,1,false,false],\"post_proc\":[\"/\",10]},\"tempc\":{\"cond\":[\"manufacturerdata\",22,\"bit\",3,0],\"decoder\":[\"vfhd\",\"manufacturerdata\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"*\",-1]},\"_tempc\":{\"cond\":[\"manufacturerdata\",22,\"bit\",3,1],\"decoder\":[\"vfhd\",\"manufacturerdata\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"-\",128]},\"hum\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",24,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mfhd\",\"manufacturerdata\",4]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
@@ -62,7 +62,7 @@ const char* _SBMT_json_M = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",
          "post_proc":["&", 127]
       },
       "mac":{
-         "decoder":["mac_from_hex_data", "manufacturerdata", 4]
+         "decoder":["mfhd", "manufacturerdata", 4]
       }
    }
 })"""";*/

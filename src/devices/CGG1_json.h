@@ -1,6 +1,6 @@
 #include "common_props.h"
 
-const char* _CGG1_json_STOCK = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tag\":\"01\",\"cond\":[\"servicedata\",\"=\",34,\"index\",2,\"07\",\"|\",\"servicedata\",\"=\",34,\"index\",2,\"16\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",24,4,true],\"post_proc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",32,2,false]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"servicedata\",4]}}}";
+const char* _CGG1_json_STOCK = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tag\":\"01\",\"cond\":[\"servicedata\",\"=\",34,\"index\",2,\"07\",\"|\",\"servicedata\",\"=\",34,\"index\",2,\"16\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",24,4,true],\"post_proc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",32,2,false]},\"mac\":{\"decoder\":[\"revmfhd\",\"servicedata\",4]}}}";
 /* R""""(
 {
    "brand":"ClearGrass/Qingping",
@@ -21,13 +21,13 @@ const char* _CGG1_json_STOCK = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"R
          "decoder":["vfhd", "servicedata", 32, 2, false]
       },
       "mac":{
-         "decoder":["revmac_from_hex_data", "servicedata", 4]
+         "decoder":["revmfhd", "servicedata", 4]
       }
    }
 })"""";*/
 
 // ATC1441
-const char* _CGG1_json_ATC1441 = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_ATC1441\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",26,\"&\",\"uuid\",\"index\",0,\"181a\",\"&\",\"name\",\"index\",0,\"CGG\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",12,4,false],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",16,2,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",18,2,false]},\"volt\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,false],\"post_proc\":[\"/\",1000]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"servicedata\",0]}}}";
+const char* _CGG1_json_ATC1441 = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_ATC1441\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",26,\"&\",\"uuid\",\"index\",0,\"181a\",\"&\",\"name\",\"index\",0,\"CGG\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",12,4,false],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",16,2,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",18,2,false]},\"volt\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,false],\"post_proc\":[\"/\",1000]},\"mac\":{\"decoder\":[\"mfhd\",\"servicedata\",0]}}}";
 /* R""""(
 {
    "brand":"ClearGrass/Qingping",
@@ -51,13 +51,13 @@ const char* _CGG1_json_ATC1441 = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\
          "post_proc":["/", 1000]
       },
       "mac":{
-         "decoder":["mac_from_hex_data", "servicedata", 0]
+         "decoder":["mfhd", "servicedata", 0]
       }
    }
 })"""";*/
 
 // PVVX
-const char* _CGG1_json_PVVX = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_PVVX\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",30,\"&\",\"uuid\",\"index\",0,\"181a\",\"&\",\"name\",\"index\",0,\"CGG\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",12,4,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",16,4,true],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",24,2,false]},\"volt\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,true],\"post_proc\":[\"/\",1000]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"servicedata\",0]}}}";
+const char* _CGG1_json_PVVX = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1_PVVX\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",30,\"&\",\"uuid\",\"index\",0,\"181a\",\"&\",\"name\",\"index\",0,\"CGG\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",12,4,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",16,4,true],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",24,2,false]},\"volt\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,true],\"post_proc\":[\"/\",1000]},\"mac\":{\"decoder\":[\"revmfhd\",\"servicedata\",0]}}}";
 /* R""""(
 {
    "brand":"ClearGrass/Qingping",
@@ -82,12 +82,12 @@ const char* _CGG1_json_PVVX = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Ro
          "post_proc":["/", 1000]
       },
       "mac":{
-         "decoder":["revmac_from_hex_data", "servicedata", 0]
+         "decoder":["revmfhd", "servicedata", 0]
       }
    }
 })"""";*/
 
-const char* _CGG1_json_STOCK_2 = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",30,\"|\",\"servicedata\",\"=\",32,\"|\",\"servicedata\",\"=\",36,\"&\",\"name\",\"index\",0,\"Qingping Temp & RH\",\"|\",\"name\",\"index\",0,\"ClearGrass Temp & RH\",\"&\",\"uuid\",\"index\",0,\"fe95\"],\"properties\":{\"tempc\":{\"cond\":[\"servicedata\",\">=\",32,\"&\",\"servicedata\",23,\"!\",\"6\"],\"decoder\":[\"vfhd\",\"servicedata\",28,4,true],\"post_proc\":[\"/\",10]},\"hum\":{\"cond\":[\"servicedata\",\"=\",36,\"&\",\"servicedata\",23,\"!\",\"6\"],\"decoder\":[\"vfhd\",\"servicedata\",32,4,true],\"post_proc\":[\"/\",10]},\"_hum\":{\"cond\":[\"servicedata\",\"=\",32,\"&\",\"servicedata\",23,\"6\"],\"decoder\":[\"vfhd\",\"servicedata\",28,4,true],\"post_proc\":[\"/\",10]},\"batt\":{\"cond\":[\"servicedata\",\"=\",30],\"decoder\":[\"vfhd\",\"servicedata\",28,2,false]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"servicedata\",10]}}}";
+const char* _CGG1_json_STOCK_2 = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",30,\"|\",\"servicedata\",\"=\",32,\"|\",\"servicedata\",\"=\",36,\"&\",\"name\",\"index\",0,\"Qingping Temp & RH\",\"|\",\"name\",\"index\",0,\"ClearGrass Temp & RH\",\"&\",\"uuid\",\"index\",0,\"fe95\"],\"properties\":{\"tempc\":{\"cond\":[\"servicedata\",\">=\",32,\"&\",\"servicedata\",23,\"!\",\"6\"],\"decoder\":[\"vfhd\",\"servicedata\",28,4,true],\"post_proc\":[\"/\",10]},\"hum\":{\"cond\":[\"servicedata\",\"=\",36,\"&\",\"servicedata\",23,\"!\",\"6\"],\"decoder\":[\"vfhd\",\"servicedata\",32,4,true],\"post_proc\":[\"/\",10]},\"_hum\":{\"cond\":[\"servicedata\",\"=\",32,\"&\",\"servicedata\",23,\"6\"],\"decoder\":[\"vfhd\",\"servicedata\",28,4,true],\"post_proc\":[\"/\",10]},\"batt\":{\"cond\":[\"servicedata\",\"=\",30],\"decoder\":[\"vfhd\",\"servicedata\",28,2,false]},\"mac\":{\"decoder\":[\"revmfhd\",\"servicedata\",10]}}}";
 /*
 R""""(
 {
@@ -117,7 +117,7 @@ R""""(
          "decoder":["vfhd", "servicedata", 28, 2, false]      
       },
       "mac":{
-         "decoder":["revmac_from_hex_data", "servicedata", 10]
+         "decoder":["revmfhd", "servicedata", 10]
       }
    }
 })"""";*/

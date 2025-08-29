@@ -1,4 +1,4 @@
-const char* _SBBT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"tag\":\"0d22\",\"cond\":[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\",\"&\",\"servicedata\",\"=\",6,\"index\",0,\"78\",\"&\",\"manufacturerdata\",\">=\",24,\"index\",0,\"6909\"],\"properties\":{\"open\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"±\",100,\"abs\"]},\"direction\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"SBBT-dir\"]},\"motion\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",20,3,false,true]},\"calibrated\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",19,0,false,true]},\"lightlevel\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",18,1,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",4]}}}";
+const char* _SBBT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"tag\":\"0d22\",\"cond\":[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\",\"&\",\"servicedata\",\"=\",6,\"index\",0,\"78\",\"&\",\"manufacturerdata\",\">=\",24,\"index\",0,\"6909\"],\"properties\":{\"open\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"±\",100,\"abs\"]},\"direction\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"SBBT-dir\"]},\"motion\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",20,3,false,true]},\"calibrated\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",19,0,false,true]},\"lightlevel\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",18,1,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mfhd\",\"manufacturerdata\",4]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
@@ -29,7 +29,7 @@ const char* _SBBT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"mo
          "post_proc":["&", 127]
       },
       "mac":{
-         "decoder":["mac_from_hex_data", "manufacturerdata", 4]
+         "decoder":["mfhd", "manufacturerdata", 4]
       }
    }
 })"""";*/

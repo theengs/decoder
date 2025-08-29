@@ -1,4 +1,4 @@
-const char* _CGP22C_json = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Thermo-Hygrometer CO2 Detector\",\"model_id\":\"CGP22C\",\"tag\":\"0f\",\"cond\":[\"servicedata\",\"=\",42,\"index\",2,\"5d\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,true,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"co2\":{\"decoder\":[\"vfhd\",\"servicedata\",38,4,true,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",32,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"servicedata\",4]}}}";
+const char* _CGP22C_json = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Thermo-Hygrometer CO2 Detector\",\"model_id\":\"CGP22C\",\"tag\":\"0f\",\"cond\":[\"servicedata\",\"=\",42,\"index\",2,\"5d\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,true,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"co2\":{\"decoder\":[\"vfhd\",\"servicedata\",38,4,true,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",32,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"revmfhd\",\"servicedata\",4]}}}";
 /*R""""(
 {
    "brand":"ClearGrass/Qingping",
@@ -23,7 +23,7 @@ const char* _CGP22C_json = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Therm
          "post_proc":["&", 127]
       },
       "mac":{
-         "decoder":["revmac_from_hex_data", "servicedata", 4]
+         "decoder":["revmfhd", "servicedata", 4]
       }
    }
 })"""";*/

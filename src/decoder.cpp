@@ -897,7 +897,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               jsondata[sanitizeJsonKey(kv.key().c_str())] = value;
               success = i_main;
             }
-          } else if (strstr((const char*)decoder[0], "mac_from_hex_data") != nullptr) {
+          } else if (strstr((const char*)decoder[0], "mfhd") != nullptr) {
             const char* src = svc_data;
             if (strstr((const char*)decoder[1], MFG_DATA)) {
               src = mfg_data;
@@ -906,7 +906,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             std::string value(src + decoder[2].as<int>(), 12);
 
             // reverse MAC
-            if (strstr((const char*)decoder[0], "revmac_from_hex_data") != nullptr) {
+            if (strstr((const char*)decoder[0], "revmfhd") != nullptr) {
               const char* mac_string = nullptr;
               mac_string = value.c_str();
               char* reverse_mac_string = (char*)malloc(strlen(mac_string) + 1);

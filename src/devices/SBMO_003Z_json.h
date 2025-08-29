@@ -1,4 +1,4 @@
-const char* _SBMO_003Z_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"tag\":\"0406\",\"cond\":[\"servicedata\",\"=\",22,\"index\",0,\"44\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBMO-\"],\"properties\":{\"packet\":{\"cond\":[\"servicedata\",2,\"00\"],\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false]},\"batt\":{\"cond\":[\"servicedata\",6,\"01\"],\"decoder\":[\"vfhd\",\"servicedata\",8,2,false,false]},\"lux\":{\"cond\":[\"servicedata\",10,\"05\"],\"decoder\":[\"vfhd\",\"servicedata\",12,6,true,false],\"post_proc\":[\"/\",100]},\"motion\":{\"cond\":[\"servicedata\",18,\"21\"],\"decoder\":[\"bit_static_value\",\"servicedata\",21,0,false,true]},\"mac\":{\"cond\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmac_from_hex_data\",\"manufacturerdata\",18]}}}";
+const char* _SBMO_003Z_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion\",\"model_id\":\"SBMO-003Z\",\"tag\":\"0406\",\"cond\":[\"servicedata\",\"=\",22,\"index\",0,\"44\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBMO-\"],\"properties\":{\"packet\":{\"cond\":[\"servicedata\",2,\"00\"],\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false]},\"batt\":{\"cond\":[\"servicedata\",6,\"01\"],\"decoder\":[\"vfhd\",\"servicedata\",8,2,false,false]},\"lux\":{\"cond\":[\"servicedata\",10,\"05\"],\"decoder\":[\"vfhd\",\"servicedata\",12,6,true,false],\"post_proc\":[\"/\",100]},\"motion\":{\"cond\":[\"servicedata\",18,\"21\"],\"decoder\":[\"bit_static_value\",\"servicedata\",21,0,false,true]},\"mac\":{\"cond\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmfhd\",\"manufacturerdata\",18]}}}";
 /*R""""(
 {
    "brand":"Shelly",
@@ -26,7 +26,7 @@ const char* _SBMO_003Z_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motio
       },
       "mac":{
          "cond":["manufacturerdata", "=", 30],
-         "decoder":["revmac_from_hex_data", "manufacturerdata", 18]
+         "decoder":["revmfhd", "manufacturerdata", 18]
       }
    }
 })"""";*/
