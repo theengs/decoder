@@ -1,4 +1,4 @@
-const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"tag\":\"0a01\",\"cond\":[\"mfd\",\"=\",36,\"ind\",0,\"000\",\"&\",\"mfd\",\"mac@index\",4],\"conditionnomac\":[\"mfd\",\"=\",36,\"&\",\"name\",\"ind\",0,\"TPMS\"],\"properties\":{\"count\":{\"decoder\":[\"vfhd\",\"mfd\",5,1,false],\"post_proc\":[\"+\",1]},\"pres\":{\"decoder\":[\"vfhd\",\"mfd\",16,8,true],\"post_proc\":[\"/\",100000]},\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",24,8,true],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",32,2,true]},\"alarm\":{\"decoder\":[\"bit_static_value\",\"mfd\",35,0,false,true]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",4]}}}";
+const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"tag\":\"0a01\",\"cond\":[\"mfd\",\"=\",36,\"ind\",0,\"000\",\"&\",\"mfd\",\"mac@index\",4],\"conditionnomac\":[\"mfd\",\"=\",36,\"&\",\"name\",\"ind\",0,\"TPMS\"],\"properties\":{\"count\":{\"decoder\":[\"vfhd\",\"mfd\",5,1,false],\"pprc\":[\"+\",1]},\"pres\":{\"decoder\":[\"vfhd\",\"mfd\",16,8,true],\"pprc\":[\"/\",100000]},\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",24,8,true],\"pprc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",32,2,true]},\"alarm\":{\"decoder\":[\"bit_static_value\",\"mfd\",35,0,false,true]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",4]}}}";
 /*R""""(
 {
    "brand":"GENERIC",
@@ -10,15 +10,15 @@ const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\"
    "properties":{
       "count":{
          "decoder":["vfhd", "mfd", 5, 1, false],
-         "post_proc":["+", 1]
+         "pprc":["+", 1]
       },
       "pres":{
          "decoder":["vfhd", "mfd", 16, 8, true],
-         "post_proc":["/", 100000]
+         "pprc":["/", 100000]
       },
       "tempc":{
          "decoder":["vfhd", "mfd", 24, 8, true],
-         "post_proc":["/", 100]
+         "pprc":["/", 100]
       },
       "batt":{
          "decoder":["vfhd", "mfd", 32, 2, true]

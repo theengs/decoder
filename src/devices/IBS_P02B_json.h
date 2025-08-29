@@ -1,4 +1,4 @@
-const char* _IBS_P02B_json = "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"tag\":\"0103\",\"cond\":[\"name\",\"ind\",0,\"IBS-P02B\",\"&\",\"mfd\",\"=\",36],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",12,2,true,false],\"post_proc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",20,2]},\"lowbatt\":{\"decoder\":[\"bit_static_value\",\"mfd\",26,0,false,true]},\"displayunit\":{\"decoder\":[\"bit_static_value\",\"mfd\",23,0,\"°C\",\"°F\"]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",0]}}}";
+const char* _IBS_P02B_json = "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"tag\":\"0103\",\"cond\":[\"name\",\"ind\",0,\"IBS-P02B\",\"&\",\"mfd\",\"=\",36],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",12,2,true,false],\"pprc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",20,2]},\"lowbatt\":{\"decoder\":[\"bit_static_value\",\"mfd\",26,0,false,true]},\"displayunit\":{\"decoder\":[\"bit_static_value\",\"mfd\",23,0,\"°C\",\"°F\"]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",0]}}}";
 /*R""""(
 {
   "brand":"Inkbird",
@@ -9,7 +9,7 @@ const char* _IBS_P02B_json = "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermomete
   "properties":{
     "tempc":{
       "decoder":["vfhd","mfd", 12, 2, true, false],
-      "post_proc":["/",10]
+      "pprc":["/",10]
     },
    "batt":{
       "decoder":["vfhd", "mfd", 20, 2]

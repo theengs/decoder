@@ -1,4 +1,4 @@
-const char* _OTOD_json = "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"tag\":\"ff\",\"cond\":[\"mfd\",\"=\",42,\"ind\",0,\"b103\",\"|\",\"mfd\",\"=\",48,\"ind\",0,\"b103\"],\"properties\":{\"level\":{\"cond\":[\"mfd\",\"=\",42],\"decoder\":[\"vfhd\",\"mfd\",22,4,true,false],\"post_proc\":[\"/\",100]},\"status\":{\"cond\":[\"mfd\",\"=\",42],\"decoder\":[\"vfhd\",\"mfd\",26,4,true,false]},\"serial\":{\"cond\":[\"mfd\",\"=\",48],\"decoder\":[\"vfhd\",\"mfd\",18,8,true,false],\"post_proc\":[\"abs\"]},\"modeltype\":{\"cond\":[\"mfd\",\"=\",48],\"decoder\":[\"vfhd\",\"mfd\",40,8,true,false],\"post_proc\":[\"abs\"]}}}";
+const char* _OTOD_json = "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible Monitor\",\"model_id\":\"RC1010\",\"tag\":\"ff\",\"cond\":[\"mfd\",\"=\",42,\"ind\",0,\"b103\",\"|\",\"mfd\",\"=\",48,\"ind\",0,\"b103\"],\"properties\":{\"level\":{\"cond\":[\"mfd\",\"=\",42],\"decoder\":[\"vfhd\",\"mfd\",22,4,true,false],\"pprc\":[\"/\",100]},\"status\":{\"cond\":[\"mfd\",\"=\",42],\"decoder\":[\"vfhd\",\"mfd\",26,4,true,false]},\"serial\":{\"cond\":[\"mfd\",\"=\",48],\"decoder\":[\"vfhd\",\"mfd\",18,8,true,false],\"pprc\":[\"abs\"]},\"modeltype\":{\"cond\":[\"mfd\",\"=\",48],\"decoder\":[\"vfhd\",\"mfd\",40,8,true,false],\"pprc\":[\"abs\"]}}}";
 /*R""""(
 {
    "brand":"Otodata",
@@ -10,7 +10,7 @@ const char* _OTOD_json = "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible 
       "level":{
         "cond":["mfd", "=", 42],
         "decoder":["vfhd", "mfd", 22, 4, true, false],
-        "post_proc":["/", 100]
+        "pprc":["/", 100]
       },
       "status":{
         "cond":["mfd", "=", 42],
@@ -19,12 +19,12 @@ const char* _OTOD_json = "{\"brand\":\"Otodata\",\"model\":\"Rotarex-compatible 
       "serial":{
         "cond":["mfd", "=", 48],
         "decoder":["vfhd", "mfd", 18, 8, true, false],
-        "post_proc":["abs"]
+        "pprc":["abs"]
       },
       "modeltype":{
         "cond":["mfd", "=", 48],
         "decoder":["vfhd", "mfd", 40, 8, true, false],
-        "post_proc":["abs"]
+        "pprc":["abs"]
       }
    }
 })"""";*/

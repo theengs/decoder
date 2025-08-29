@@ -1,4 +1,4 @@
-const char* _XOSSX2_json = "{\"brand\":\"XOSS\",\"model\":\"X2 Heart Rate Sensor\",\"model_id\":\"XOSSX2\",\"tag\":\"0b01\",\"cond\":[\"mfd\",\"=\",12,\"ind\",0,\"04ff\"],\"properties\":{\"bpm\":{\"decoder\":[\"vfhd\",\"mfd\",10,2,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",6,2,false,false],\"post_proc\":[\"&\",127]}}}";
+const char* _XOSSX2_json = "{\"brand\":\"XOSS\",\"model\":\"X2 Heart Rate Sensor\",\"model_id\":\"XOSSX2\",\"tag\":\"0b01\",\"cond\":[\"mfd\",\"=\",12,\"ind\",0,\"04ff\"],\"properties\":{\"bpm\":{\"decoder\":[\"vfhd\",\"mfd\",10,2,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",6,2,false,false],\"pprc\":[\"&\",127]}}}";
 /*R""""(
 {
    "brand":"XOSS",
@@ -12,7 +12,7 @@ const char* _XOSSX2_json = "{\"brand\":\"XOSS\",\"model\":\"X2 Heart Rate Sensor
       },
       "batt":{
          "decoder":["vfhd", "mfd", 6, 2, false, false],
-         "post_proc":["&", 127]
+         "pprc":["&", 127]
       }
    }
 })"""";*/

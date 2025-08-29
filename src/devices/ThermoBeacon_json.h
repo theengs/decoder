@@ -1,4 +1,4 @@
-const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"tag\":\"0101\",\"cond\":[\"mfd\",\"ind\",0,\"1000\",\"|\",\"mfd\",\"ind\",0,\"1100\",\"|\",\"mfd\",\"ind\",0,\"1500\",\"|\",\"mfd\",\"ind\",0,\"1800\",\"|\",\"mfd\",\"ind\",0,\"1b00\",\"&\",\"mfd\",\">=\",40],\"properties\":{\"tempc\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",24,4,true],\"post_proc\":[\"/\",16]},\"hum\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",28,4,true],\"post_proc\":[\"/\",16]},\"volt\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",20,4,true],\"post_proc\":[\"/\",1000]},\"time\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",32,8,true,false]},\"tempc_max\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",20,4,true],\"post_proc\":[\"/\",16]},\"time_max\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",24,8,true,false]},\"tempc_min\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",32,4,true],\"post_proc\":[\"/\",16]},\"time_min\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",36,8,true,false]},\"mac\":{\"decoder\":[\"revmfhd\",\"mfd\",8]}}}";
+const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"tag\":\"0101\",\"cond\":[\"mfd\",\"ind\",0,\"1000\",\"|\",\"mfd\",\"ind\",0,\"1100\",\"|\",\"mfd\",\"ind\",0,\"1500\",\"|\",\"mfd\",\"ind\",0,\"1800\",\"|\",\"mfd\",\"ind\",0,\"1b00\",\"&\",\"mfd\",\">=\",40],\"properties\":{\"tempc\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",24,4,true],\"pprc\":[\"/\",16]},\"hum\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",28,4,true],\"pprc\":[\"/\",16]},\"volt\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",20,4,true],\"pprc\":[\"/\",1000]},\"time\":{\"cond\":[\"mfd\",\"=\",40],\"decoder\":[\"vfhd\",\"mfd\",32,8,true,false]},\"tempc_max\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",20,4,true],\"pprc\":[\"/\",16]},\"time_max\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",24,8,true,false]},\"tempc_min\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",32,4,true],\"pprc\":[\"/\",16]},\"time_min\":{\"cond\":[\"mfd\",\"=\",44],\"decoder\":[\"vfhd\",\"mfd\",36,8,true,false]},\"mac\":{\"decoder\":[\"revmfhd\",\"mfd\",8]}}}";
 /*R""""(
 {
    "brand":"GENERIC",
@@ -10,17 +10,17 @@ const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeaco
       "tempc":{
          "cond":["mfd", "=", 40],
          "decoder":["vfhd", "mfd", 24, 4, true],
-         "post_proc":["/", 16]
+         "pprc":["/", 16]
       },
       "hum":{
          "cond":["mfd", "=", 40],
          "decoder":["vfhd", "mfd", 28, 4, true],
-         "post_proc":["/", 16]
+         "pprc":["/", 16]
       },
       "volt":{
          "cond":["mfd", "=", 40],
          "decoder":["vfhd", "mfd", 20, 4, true],
-         "post_proc":["/", 1000]
+         "pprc":["/", 1000]
       },
       "time":{
          "cond":["mfd", "=", 40],
@@ -29,7 +29,7 @@ const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeaco
       "tempc_max":{
          "cond":["mfd", "=", 44],
          "decoder":["vfhd", "mfd", 20, 4, true],
-         "post_proc":["/", 16]
+         "pprc":["/", 16]
       },
       "time_max":{
          "cond":["mfd", "=", 44],
@@ -38,7 +38,7 @@ const char* _ThermoBeacon_json = "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeaco
       "tempc_min":{
          "cond":["mfd", "=", 44],
          "decoder":["vfhd", "mfd", 32, 4, true],
-         "post_proc":["/", 16]
+         "pprc":["/", 16]
       },
       "time_min":{
          "cond":["mfd", "=", 44],

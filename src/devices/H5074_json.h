@@ -1,6 +1,6 @@
 #include "common_props.h"
 
-const char* _H5074_json = "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"tag\":\"0103\",\"cond\":[\"name\",\"ind\",0,\"Govee_H5074\",\"&\",\"mfd\",\">=\",18,\"ind\",0,\"88ec\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",6,4,true,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"mfd\",10,4,true,false],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",14,2,false,false]}}}";
+const char* _H5074_json = "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"tag\":\"0103\",\"cond\":[\"name\",\"ind\",0,\"Govee_H5074\",\"&\",\"mfd\",\">=\",18,\"ind\",0,\"88ec\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",6,4,true,true],\"pprc\":[\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"mfd\",10,4,true,false],\"pprc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",14,2,false,false]}}}";
 /* R""""(
 {
    "brand":"Govee",
@@ -11,11 +11,11 @@ const char* _H5074_json = "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",
    "properties":{
       "tempc":{
          "decoder":["vfhd", "mfd", 6, 4, true, true],
-         "post_proc":["/", 100]
+         "pprc":["/", 100]
       },
       "hum":{
          "decoder":["vfhd", "mfd", 10, 4, true, false],
-         "post_proc":["/", 100]
+         "pprc":["/", 100]
       },
       "batt":{
          "decoder":["vfhd", "mfd", 14, 2, false, false]

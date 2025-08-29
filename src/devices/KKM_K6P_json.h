@@ -1,4 +1,4 @@
-const char* _KKM_K6P_json = "{\"brand\":\"KKM\",\"model\":\"Long Range K6P\",\"model_id\":\"K6P\",\"tag\":\"01\",\"cond\":[\"svd\",\"=\",18,\"ind\",0,\"210107\",\"&\",\"uuid\",\"ind\",0,\"feaa\"],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"svd\",12,2,false,false],\"post_proc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"tempc\":{\"decoder\":[\"vfhd\",\"svd\",10,2,false,true],\"post_proc\":[\"+\",\".cal\"]},\"_.cal\":{\"decoder\":[\"vfhd\",\"svd\",16,2,false,false],\"post_proc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"svd\",14,2,false,false],\"post_proc\":[\"+\",\".cal\"]},\"volt\":{\"decoder\":[\"vfhd\",\"svd\",6,4,false,false],\"post_proc\":[\"/\",1000]}}}";
+const char* _KKM_K6P_json = "{\"brand\":\"KKM\",\"model\":\"Long Range K6P\",\"model_id\":\"K6P\",\"tag\":\"01\",\"cond\":[\"svd\",\"=\",18,\"ind\",0,\"210107\",\"&\",\"uuid\",\"ind\",0,\"feaa\"],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"svd\",12,2,false,false],\"pprc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"tempc\":{\"decoder\":[\"vfhd\",\"svd\",10,2,false,true],\"pprc\":[\"+\",\".cal\"]},\"_.cal\":{\"decoder\":[\"vfhd\",\"svd\",16,2,false,false],\"pprc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"svd\",14,2,false,false],\"pprc\":[\"+\",\".cal\"]},\"volt\":{\"decoder\":[\"vfhd\",\"svd\",6,4,false,false],\"pprc\":[\"/\",1000]}}}";
 /*R""""(
 {
    "brand":"KKM",
@@ -9,23 +9,23 @@ const char* _KKM_K6P_json = "{\"brand\":\"KKM\",\"model\":\"Long Range K6P\",\"m
    "properties":{
       ".cal":{
          "decoder":["vfhd", "svd", 12, 2, false, false],
-         "post_proc":["/", 256, "*", 100, ">", 0, "/", 100]
+         "pprc":["/", 256, "*", 100, ">", 0, "/", 100]
       },
       "tempc":{
          "decoder":["vfhd", "svd", 10, 2, false, true],
-         "post_proc":["+", ".cal"]
+         "pprc":["+", ".cal"]
       },
       "_.cal":{
          "decoder":["vfhd", "svd", 16, 2, false, false],
-         "post_proc":["/", 256, "*", 100, ">", 0, "/", 100]
+         "pprc":["/", 256, "*", 100, ">", 0, "/", 100]
       },
       "hum":{
          "decoder":["vfhd", "svd", 14, 2, false, false],
-         "post_proc":["+", ".cal"]
+         "pprc":["+", ".cal"]
       },
       "volt":{
          "decoder":["vfhd", "svd", 6, 4, false, false],
-         "post_proc":["/", 1000]
+         "pprc":["/", 1000]
       }
    }
 })"""";*/

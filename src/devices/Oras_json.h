@@ -1,4 +1,4 @@
-const char* _Oras_json = "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"tag\":\"0801\",\"cond\":[\"mfd\",\"=\",40,\"ind\",0,\"3101\"],\"properties\":{\"serial\":{\"decoder\":[\"ascii_from_hex_data\",\"mfd\",10,20]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",6,2,false,false],\"post_proc\":[\"&\",127]}}}";
+const char* _Oras_json = "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model_id\":\"ORAS\",\"tag\":\"0801\",\"cond\":[\"mfd\",\"=\",40,\"ind\",0,\"3101\"],\"properties\":{\"serial\":{\"decoder\":[\"ascii_from_hex_data\",\"mfd\",10,20]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",6,2,false,false],\"pprc\":[\"&\",127]}}}";
 /*R""""(
 {
    "brand":"Oras",
@@ -12,7 +12,7 @@ const char* _Oras_json = "{\"brand\":\"Oras\",\"model\":\"Smart faucet\",\"model
       },
       "batt":{
          "decoder":["vfhd", "mfd", 6, 2, false, false],
-         "post_proc":["&", 127]
+         "pprc":["&", 127]
       }
    }
 })"""";*/

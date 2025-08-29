@@ -1,4 +1,4 @@
-const char* _BC08_json = "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"tag\":\"0708\",\"cond\":[\"uuid\",\"ind\",0,\"feaa\",\"&\",\"svd\",\"=\",26,\"ind\",0,\"21010b\",\"|\",\"svd\",\"=\",26,\"ind\",0,\"21000b\"],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"svd\",12,2,false,false],\"post_proc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"tempc\":{\"decoder\":[\"vfhd\",\"svd\",10,2,false,true],\"post_proc\":[\"+\",\".cal\"]},\"accx\":{\"decoder\":[\"vfhd\",\"svd\",14,4,false,true]},\"accy\":{\"decoder\":[\"vfhd\",\"svd\",18,4,false,true]},\"accz\":{\"decoder\":[\"vfhd\",\"svd\",22,4,false,true]},\"volt\":{\"decoder\":[\"vfhd\",\"svd\",6,4,false,false],\"post_proc\":[\"/\",1000]}}}";
+const char* _BC08_json = "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"tag\":\"0708\",\"cond\":[\"uuid\",\"ind\",0,\"feaa\",\"&\",\"svd\",\"=\",26,\"ind\",0,\"21010b\",\"|\",\"svd\",\"=\",26,\"ind\",0,\"21000b\"],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"svd\",12,2,false,false],\"pprc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"tempc\":{\"decoder\":[\"vfhd\",\"svd\",10,2,false,true],\"pprc\":[\"+\",\".cal\"]},\"accx\":{\"decoder\":[\"vfhd\",\"svd\",14,4,false,true]},\"accy\":{\"decoder\":[\"vfhd\",\"svd\",18,4,false,true]},\"accz\":{\"decoder\":[\"vfhd\",\"svd\",22,4,false,true]},\"volt\":{\"decoder\":[\"vfhd\",\"svd\",6,4,false,false],\"pprc\":[\"/\",1000]}}}";
 /*R""""(
 {
    "brand":"BlueCharm",
@@ -9,11 +9,11 @@ const char* _BC08_json = "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021
    "properties":{
       ".cal":{
          "decoder":["vfhd", "svd", 12, 2, false, false],
-         "post_proc":["/", 256, "*", 100, ">", 0, "/", 100]
+         "pprc":["/", 256, "*", 100, ">", 0, "/", 100]
       },
       "tempc":{
          "decoder":["vfhd", "svd", 10, 2, false, true],
-         "post_proc":["+", ".cal"]
+         "pprc":["+", ".cal"]
       },
       "accx":{
          "decoder":["vfhd", "svd", 14, 4, false, true]
@@ -26,7 +26,7 @@ const char* _BC08_json = "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021
       },
       "volt":{
          "decoder":["vfhd", "svd", 6, 4, false, false],
-          "post_proc":["/", 1000]
+          "pprc":["/", 1000]
       }
    }
 })"""";*/

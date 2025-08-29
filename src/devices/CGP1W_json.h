@@ -1,4 +1,4 @@
-const char* _CGP1W_json = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tag\":\"02\",\"cond\":[\"svd\",\"=\",42,\"ind\",2,\"09\",\"&\",\"uuid\",\"ind\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"svd\",20,4,true],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"svd\",24,4,true,false],\"post_proc\":[\"/\",10]},\"pres\":{\"decoder\":[\"vfhd\",\"svd\",32,4,true,false],\"post_proc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"svd\",40,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"revmfhd\",\"svd\",4]}}}";
+const char* _CGP1W_json = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Weather Station\",\"model_id\":\"CGP1W\",\"tag\":\"02\",\"cond\":[\"svd\",\"=\",42,\"ind\",2,\"09\",\"&\",\"uuid\",\"ind\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"svd\",20,4,true],\"pprc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"svd\",24,4,true,false],\"pprc\":[\"/\",10]},\"pres\":{\"decoder\":[\"vfhd\",\"svd\",32,4,true,false],\"pprc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"svd\",40,2,false,false],\"pprc\":[\"&\",127]},\"mac\":{\"decoder\":[\"revmfhd\",\"svd\",4]}}}";
 /*R""""(
 {
    "brand":"ClearGrass/Qingping",
@@ -9,19 +9,19 @@ const char* _CGP1W_json = "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Weathe
    "properties":{
       "tempc":{
          "decoder":["vfhd", "svd", 20, 4, true],
-         "post_proc":["/", 10]
+         "pprc":["/", 10]
       },
       "hum":{
          "decoder":["vfhd", "svd", 24, 4, true, false],
-         "post_proc":["/", 10]
+         "pprc":["/", 10]
       },
       "pres":{
          "decoder":["vfhd", "svd", 32, 4, true, false],
-         "post_proc":["/", 10]
+         "pprc":["/", 10]
       },
       "batt":{
          "decoder":["vfhd", "svd", 40, 2, false, false],
-         "post_proc":["&", 127]
+         "pprc":["&", 127]
       },
       "mac":{
          "decoder":["revmfhd", "svd", 4]

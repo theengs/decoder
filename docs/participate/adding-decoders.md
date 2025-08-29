@@ -19,7 +19,7 @@ R""""(
       "tempc":{
          "cond":["svd", 25, "4"],
          "decoder":["vfhd", "svd", 30, 4, true],
-         "post_proc":["/", 10]
+         "pprc":["/", 10]
       },
       "moi":{
          "cond":["svd", 25, "8"],
@@ -230,11 +230,11 @@ Properties is a nested JSON object containing one or more JSON objects. In the e
       "tempc":{
          "cond":["svd", 25, "4"],
          "decoder":["vfhd", "svd", 30, 4, true],
-         "post_proc":["/", 10]
+         "pprc":["/", 10]
       },
 ```
 
-Here we have a single property that defines a value that we want to decode. The key "tempc" will be used as the key in the JsonObject provided when `decodeBLEJson(JsonObject)` is called. "tempc" in this example is another JSON object that has an (optional, explained below) `condition`, `decoder`, and `post_proc`.
+Here we have a single property that defines a value that we want to decode. The key "tempc" will be used as the key in the JsonObject provided when `decodeBLEJson(JsonObject)` is called. "tempc" in this example is another JSON object that has an (optional, explained below) `condition`, `decoder`, and `pprc`.
 
 `condition` is a JSON array. The first parameter defines the data source of the condition to test and must be one of:
 - "svd"
@@ -250,7 +250,7 @@ Then the third parameter is the value to test for, or in case of the `"name"` co
       "hum":{
          "cond":["name", "not_contain", "GV5108"],
          "decoder":["vfhd", "mfd", 8, 6, false, false],
-         "post_proc":["&", 8388607, "%", 1000, "/", 10]
+         "pprc":["&", 8388607, "%", 1000, "/", 10]
       },
 ```
 
@@ -295,7 +295,7 @@ Property conditions also allow for a NOT comparison, as in
       "tempc":{
          "cond":["mfd", 24, "!", "ffff"],
          "decoder":["vfhd", "mfd", 24, 4, true, false],
-         "post_proc":["/", 10]
+         "pprc":["/", 10]
       },
 ```
 
@@ -337,7 +337,7 @@ The parameters for the "bit_static_value" function are:
 - The return value for bit state `0`.
 - The return value for bit state `1`.
 
-`post_proc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the "/" divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations.  
+`pprc` This specifies any post processing of the resulting decoded value. This is a JSON array that should be written in the order that the operation order is desired. In the simple example the first parameter is the "/" divide operation and the second parameter (10) is the value to divide the result by. Multiple operations can be chained together in this array to perform more complex calculations.  
 
 Valid operations are:
 - "/" divide
@@ -374,11 +374,11 @@ Valid operations are:
 "properties":{
       ".cal":{
          "decoder":["vfhd", "mfd", 16, 4, true],
-         "post_proc":["&", 16383]
+         "pprc":["&", 16383]
       },
       "power":{
          "decoder":["vfhd", "mfd", 4, 4, true],
-         "post_proc":["/", ".cal", "*", 60000]
+         "pprc":["/", ".cal", "*", 60000]
       }
    }
 ```

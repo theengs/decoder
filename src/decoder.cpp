@@ -702,12 +702,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             }
 
             /* Do any required post processing of the value */
-            if (prop.containsKey("post_proc")) {
-              JsonArray post_proc = prop["post_proc"];
-              for (unsigned int i = 0; i < post_proc.size(); i += 2) {
-                if (cal_val && post_proc[i + 1].as<const char*>() != NULL &&
-                    strncmp(post_proc[i + 1].as<const char*>(), ".cal", 4) == 0) {
-                  switch (*post_proc[i].as<const char*>()) {
+            if (prop.containsKey("pprc")) {
+              JsonArray pprc = prop["pprc"];
+              for (unsigned int i = 0; i < pprc.size(); i += 2) {
+                if (cal_val && pprc[i + 1].as<const char*>() != NULL &&
+                    strncmp(pprc[i + 1].as<const char*>(), ".cal", 4) == 0) {
+                  switch (*pprc[i].as<const char*>()) {
                     case '/':
                       temp_val /= cal_val;
                       break;
@@ -722,33 +722,33 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       break;
                   }
                 } else {
-                  if (strlen(post_proc[i].as<const char*>()) == 1) {
-                    switch (*post_proc[i].as<const char*>()) {
+                  if (strlen(pprc[i].as<const char*>()) == 1) {
+                    switch (*pprc[i].as<const char*>()) {
                       case '/':
-                        temp_val /= post_proc[i + 1].as<double>();
+                        temp_val /= pprc[i + 1].as<double>();
                         break;
                       case '*':
-                        temp_val *= post_proc[i + 1].as<double>();
+                        temp_val *= pprc[i + 1].as<double>();
                         break;
                       case '-':
-                        temp_val -= post_proc[i + 1].as<double>();
+                        temp_val -= pprc[i + 1].as<double>();
                         break;
                       case '+':
-                        temp_val += post_proc[i + 1].as<double>();
+                        temp_val += pprc[i + 1].as<double>();
                         break;
                       case '%': {
                         long long val = (long long)temp_val;
-                        temp_val = (double)(val % post_proc[i + 1].as<long long>());
+                        temp_val = (double)(val % pprc[i + 1].as<long long>());
                         break;
                       }
                       case '<': {
                         long long val = (long long)temp_val;
-                        temp_val = (double)(val << post_proc[i + 1].as<unsigned int>());
+                        temp_val = (double)(val << pprc[i + 1].as<unsigned int>());
                         break;
                       }
                       case '>': {
                         long long val = (long long)temp_val;
-                        temp_val = (double)(val >> post_proc[i + 1].as<unsigned int>());
+                        temp_val = (double)(val >> pprc[i + 1].as<unsigned int>());
                         break;
                       }
                       case '!': {
@@ -758,33 +758,33 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       }
                       case '&': {
                         long long val = (long long)temp_val;
-                        temp_val = (double)(val & post_proc[i + 1].as<unsigned int>());
+                        temp_val = (double)(val & pprc[i + 1].as<unsigned int>());
                         break;
                       }
                       case '^': {
                         long long val = (long long)temp_val;
-                        temp_val = (double)(val ^ post_proc[i + 1].as<unsigned int>());
+                        temp_val = (double)(val ^ pprc[i + 1].as<unsigned int>());
                         break;
                       }
                     }
-                  } else if (strncmp(post_proc[i].as<const char*>(), "max", 3) == 0) {
-                    if (temp_val > post_proc[i + 1].as<double>()) {
-                      temp_val = post_proc[i + 1].as<double>();
+                  } else if (strncmp(pprc[i].as<const char*>(), "max", 3) == 0) {
+                    if (temp_val > pprc[i + 1].as<double>()) {
+                      temp_val = pprc[i + 1].as<double>();
                     }
-                  } else if (strncmp(post_proc[i].as<const char*>(), "min", 3) == 0) {
-                    if (temp_val < post_proc[i + 1].as<double>()) {
-                      temp_val = post_proc[i + 1].as<double>();
+                  } else if (strncmp(pprc[i].as<const char*>(), "min", 3) == 0) {
+                    if (temp_val < pprc[i + 1].as<double>()) {
+                      temp_val = pprc[i + 1].as<double>();
                     }
-                  } else if (strncmp(post_proc[i].as<const char*>(), "±", 1) == 0) {
+                  } else if (strncmp(pprc[i].as<const char*>(), "±", 1) == 0) {
                     if (temp_val < 0) {
-                      temp_val += post_proc[i + 1].as<double>();
+                      temp_val += pprc[i + 1].as<double>();
                     } else {
-                      temp_val -= post_proc[i + 1].as<double>();
+                      temp_val -= pprc[i + 1].as<double>();
                     }
-                  } else if (strncmp(post_proc[i].as<const char*>(), "abs", 3) == 0) {
+                  } else if (strncmp(pprc[i].as<const char*>(), "abs", 3) == 0) {
                     long long val = (long long)temp_val;
                     temp_val = (double)abs(val);
-                  } else if (strncmp(post_proc[i].as<const char*>(), "SBBT-dir", 8) == 0) { // "SBBT" decoder specific post_proc
+                  } else if (strncmp(pprc[i].as<const char*>(), "SBBT-dir", 8) == 0) { // "SBBT" decoder specific pprc
                     if (temp_val < 0) {
                       proc_str = "down";
                     } else if (temp_val > 0) {
