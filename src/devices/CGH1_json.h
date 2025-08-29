@@ -1,22 +1,22 @@
-const char* _CGH1_json = "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"tag\":\"0404\",\"cond\":[\"servicedata\",\"=\",34,\"index\",2,\"04\",\"|\",\"servicedata\",\"=\",28,\"index\",2,\"04\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"open\":{\"cond\":[\"servicedata\",\"=\",28],\"decoder\":[\"bit_static_value\",\"servicedata\",21,0,true,false]},\"_open\":{\"cond\":[\"servicedata\",\"=\",34],\"decoder\":[\"bit_static_value\",\"servicedata\",33,0,true,false]},\"mac\":{\"decoder\":[\"revmfhd\",\"servicedata\",4]}}}";
+const char* _CGH1_json = "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"tag\":\"0404\",\"cond\":[\"svd\",\"=\",34,\"index\",2,\"04\",\"|\",\"svd\",\"=\",28,\"index\",2,\"04\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"open\":{\"cond\":[\"svd\",\"=\",28],\"decoder\":[\"bit_static_value\",\"svd\",21,0,true,false]},\"_open\":{\"cond\":[\"svd\",\"=\",34],\"decoder\":[\"bit_static_value\",\"svd\",33,0,true,false]},\"mac\":{\"decoder\":[\"revmfhd\",\"svd\",4]}}}";
 /*R""""(
 {
    "brand":"Qingping",
    "model":"Contact Sensor",
    "model_id":"CGH1",
    "tag":"0404",
-   "cond":["servicedata", "=", 34, "index", 2, "04", "|", "servicedata", "=", 28, "index", 2, "04", "&", "uuid", "index", 0, "fdcd"],
+   "cond":["svd", "=", 34, "index", 2, "04", "|", "svd", "=", 28, "index", 2, "04", "&", "uuid", "index", 0, "fdcd"],
    "properties":{
       "open":{
-         "cond":["servicedata", "=", 28],
-         "decoder":["bit_static_value", "servicedata", 21, 0, true, false]
+         "cond":["svd", "=", 28],
+         "decoder":["bit_static_value", "svd", 21, 0, true, false]
       },
       "_open":{
-         "cond":["servicedata", "=", 34],
-         "decoder":["bit_static_value", "servicedata", 33, 0, true, false]
+         "cond":["svd", "=", 34],
+         "decoder":["bit_static_value", "svd", 33, 0, true, false]
       },
       "mac":{
-         "decoder":["revmfhd", "servicedata", 4]
+         "decoder":["revmfhd", "svd", 4]
       }
    }
 })"""";*/

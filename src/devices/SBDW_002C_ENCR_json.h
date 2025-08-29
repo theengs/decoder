@@ -1,20 +1,20 @@
-const char* _SBDW_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window encrypted\",\"model_id\":\"SBDW_002C_ENCR\",\"tag\":\"040602\",\"cond\":[\"servicedata\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBDW-\"],\"properties\":{\"cipher\":{\"decoder\":[\"sfhd\",\"servicedata\",2,26]},\"ctr\":{\"decoder\":[\"sfhd\",\"servicedata\",28,8]},\"mic\":{\"decoder\":[\"sfhd\",\"servicedata\",36,8]},\"mac\":{\"cond\":[\"mfd\",\"=\",30],\"decoder\":[\"revmfhd\",\"mfd\",18]}}}";
+const char* _SBDW_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/Window encrypted\",\"model_id\":\"SBDW_002C_ENCR\",\"tag\":\"040602\",\"cond\":[\"svd\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBDW-\"],\"properties\":{\"cipher\":{\"decoder\":[\"sfhd\",\"svd\",2,26]},\"ctr\":{\"decoder\":[\"sfhd\",\"svd\",28,8]},\"mic\":{\"decoder\":[\"sfhd\",\"svd\",36,8]},\"mac\":{\"cond\":[\"mfd\",\"=\",30],\"decoder\":[\"revmfhd\",\"mfd\",18]}}}";
 /*R""""(
 {
    "brand":"Shelly",
    "model":"ShellyBLU Door/Window encrypted",
    "model_id":"SBDW_002C_ENCR",
    "tag":"040602",
-   "cond":["servicedata", "index", 0, "45", "&", "uuid", "index", 0, "fcd2", "&", "name", "index", 0, "SBDW-"],
+   "cond":["svd", "index", 0, "45", "&", "uuid", "index", 0, "fcd2", "&", "name", "index", 0, "SBDW-"],
    "properties":{
       "cipher":{
-         "decoder":["sfhd", "servicedata", 2, 26]
+         "decoder":["sfhd", "svd", 2, 26]
       },
       "ctr":{
-         "decoder":["sfhd", "servicedata", 28, 8]
+         "decoder":["sfhd", "svd", 28, 8]
       },
       "mic":{
-         "decoder":["sfhd", "servicedata", 36, 8]
+         "decoder":["sfhd", "svd", 36, 8]
       },
       "mac":{
          "cond":["mfd", "=", 30],

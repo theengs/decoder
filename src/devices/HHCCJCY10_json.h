@@ -1,27 +1,27 @@
-const char* _HHCCJCY10_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"tag\":\"09\",\"cond\":[\"servicedata\",\"=\",18,\"&\",\"uuid\",\"index\",0,\"fd50\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",2,4,false,true],\"post_proc\":[\"/\",10]},\"moi\":{\"decoder\":[\"vfhd\",\"servicedata\",0,2,false,false]},\"lux\":{\"decoder\":[\"vfhd\",\"servicedata\",6,6,false,false]},\"fer\":{\"decoder\":[\"vfhd\",\"servicedata\",14,4,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",12,2,false,false]}}}";
+const char* _HHCCJCY10_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"tag\":\"09\",\"cond\":[\"svd\",\"=\",18,\"&\",\"uuid\",\"index\",0,\"fd50\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"svd\",2,4,false,true],\"post_proc\":[\"/\",10]},\"moi\":{\"decoder\":[\"vfhd\",\"svd\",0,2,false,false]},\"lux\":{\"decoder\":[\"vfhd\",\"svd\",6,6,false,false]},\"fer\":{\"decoder\":[\"vfhd\",\"svd\",14,4,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"svd\",12,2,false,false]}}}";
 /*R""""(
 {
    "brand":"Xiaomi/VegTrug",
    "model":"MiFlora",
    "model_id":"HHCCJCY10",
    "tag":"09",
-   "cond":["servicedata", "=", 18, "&", "uuid", "index", 0, "fd50"],
+   "cond":["svd", "=", 18, "&", "uuid", "index", 0, "fd50"],
    "properties":{
       "tempc":{
-         "decoder":["vfhd", "servicedata", 2, 4, false, true],
+         "decoder":["vfhd", "svd", 2, 4, false, true],
          "post_proc":["/", 10]
       },
       "moi":{
-         "decoder":["vfhd", "servicedata", 0, 2, false, false]
+         "decoder":["vfhd", "svd", 0, 2, false, false]
       },
       "lux":{
-         "decoder":["vfhd", "servicedata", 6, 6, false, false]
+         "decoder":["vfhd", "svd", 6, 6, false, false]
       },
       "fer":{
-         "decoder":["vfhd", "servicedata", 14, 4, false, false]
+         "decoder":["vfhd", "svd", 14, 4, false, false]
       },
       "batt":{
-         "decoder":["vfhd", "servicedata", 12, 2, false, false]
+         "decoder":["vfhd", "svd", 12, 2, false, false]
       }
    }
 })"""";*/

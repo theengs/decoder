@@ -1,22 +1,22 @@
-const char* _HHCCPOT002_json = "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"tag\":\"09\",\"cond\":[\"servicedata\",\"index\",2,\"205d01\"],\"properties\":{\"moi\":{\"cond\":[\"servicedata\",25,\"8\"],\"decoder\":[\"vfhd\",\"servicedata\",30,2,false]},\"fer\":{\"cond\":[\"servicedata\",25,\"9\"],\"decoder\":[\"vfhd\",\"servicedata\",30,4,true]},\"mac\":{\"decoder\":[\"revmfhd\",\"servicedata\",10]}}}";
+const char* _HHCCPOT002_json = "{\"brand\":\"Xiaomi\",\"model\":\"RoPot\",\"model_id\":\"HHCCPOT002\",\"tag\":\"09\",\"cond\":[\"svd\",\"index\",2,\"205d01\"],\"properties\":{\"moi\":{\"cond\":[\"svd\",25,\"8\"],\"decoder\":[\"vfhd\",\"svd\",30,2,false]},\"fer\":{\"cond\":[\"svd\",25,\"9\"],\"decoder\":[\"vfhd\",\"svd\",30,4,true]},\"mac\":{\"decoder\":[\"revmfhd\",\"svd\",10]}}}";
 /*R""""(
 {
    "brand":"Xiaomi",
    "model":"RoPot",
    "model_id":"HHCCPOT002",
    "tag":"09",
-   "cond":["servicedata", "index", 2, "205d01"],
+   "cond":["svd", "index", 2, "205d01"],
    "properties":{
       "moi":{
-         "cond":["servicedata", 25, "8"],
-         "decoder":["vfhd", "servicedata", 30, 2, false]
+         "cond":["svd", 25, "8"],
+         "decoder":["vfhd", "svd", 30, 2, false]
       },
       "fer":{
-         "cond":["servicedata", 25, "9"],
-         "decoder":["vfhd", "servicedata", 30, 4, true]
+         "cond":["svd", 25, "9"],
+         "decoder":["vfhd", "svd", 30, 4, true]
       },
       "mac":{
-         "decoder":["revmfhd", "servicedata", 10]
+         "decoder":["revmfhd", "svd", 10]
       }
    }
 })"""";*/

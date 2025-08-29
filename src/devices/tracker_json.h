@@ -13,14 +13,14 @@ const char* _tracker_json_nut = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",
    }
 })"""";*/
 
-const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"nutale\",\"&\",\"servicedata\",\"=\",24,\"&\",\"uuid\",\"index\",0,\"0900\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nutale Tracker\"]}}}";
+const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker\",\"model_id\":\"NUTALE\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"nutale\",\"&\",\"svd\",\"=\",24,\"&\",\"uuid\",\"index\",0,\"0900\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"nutale Tracker\"]}}}";
 /*R""""(
 {
    "brand":"nut",
    "model":"Smart Tracker",
    "model_id":"NUTALE",
    "tag":"100b",
-   "cond":["name", "index", 0, "nutale", "&", "servicedata", "=", 24, "&", "uuid", "index", 0, "0900"],
+   "cond":["name", "index", 0, "nutale", "&", "svd", "=", 24, "&", "uuid", "index", 0, "0900"],
    "properties":{
       "device":{
          "decoder":["static_value", "nutale Tracker"]

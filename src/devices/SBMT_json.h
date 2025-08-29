@@ -1,34 +1,34 @@
 #include "common_props.h"
 
-const char* _SBMT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",12,\"index\",0,\"54\",\"|\",\"servicedata\",\"=\",12,\"index\",0,\"69\",\"&\",[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\"]],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"servicedata\",7,1,false,false],\"post_proc\":[\"/\",10]},\"tempc\":{\"cond\":[\"servicedata\",8,\"bit\",3,0],\"decoder\":[\"vfhd\",\"servicedata\",8,2,true,false],\"post_proc\":[\"+\",\".cal\",\"*\",-1]},\"_tempc\":{\"cond\":[\"servicedata\",8,\"bit\",3,1],\"decoder\":[\"vfhd\",\"servicedata\",8,2,true,false],\"post_proc\":[\"+\",\".cal\",\"-\",128]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",10,2,false,false],\"post_proc\":[\"&\",127]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
+const char* _SBMT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tag\":\"0102\",\"cond\":[\"svd\",\"=\",12,\"index\",0,\"54\",\"|\",\"svd\",\"=\",12,\"index\",0,\"69\",\"&\",[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\"]],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"svd\",7,1,false,false],\"post_proc\":[\"/\",10]},\"tempc\":{\"cond\":[\"svd\",8,\"bit\",3,0],\"decoder\":[\"vfhd\",\"svd\",8,2,true,false],\"post_proc\":[\"+\",\".cal\",\"*\",-1]},\"_tempc\":{\"cond\":[\"svd\",8,\"bit\",3,1],\"decoder\":[\"vfhd\",\"svd\",8,2,true,false],\"post_proc\":[\"+\",\".cal\",\"-\",128]},\"hum\":{\"decoder\":[\"vfhd\",\"svd\",10,2,false,false],\"post_proc\":[\"&\",127]},\"batt\":{\"decoder\":[\"vfhd\",\"svd\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
    "model":"Meter (Plus)",
    "model_id":"THX1/W230150X",
    "tag":"0102",
-   "cond":["servicedata", "=", 12, "index", 0, "54", "|", "servicedata", "=", 12, "index", 0, "69", "&", ["uuid", "index", 0, "0d00", "|", "uuid", "index", 0, "fd3d"]],
+   "cond":["svd", "=", 12, "index", 0, "54", "|", "svd", "=", 12, "index", 0, "69", "&", ["uuid", "index", 0, "0d00", "|", "uuid", "index", 0, "fd3d"]],
    "properties":{
       ".cal":{
-         "decoder":["vfhd", "servicedata", 7, 1, false, false],
+         "decoder":["vfhd", "svd", 7, 1, false, false],
          "post_proc":["/", 10]
       },
       "tempc":{
-         "cond":["servicedata", 8, "bit", 3, 0],
-         "decoder":["vfhd", "servicedata", 8, 2, true, false],
+         "cond":["svd", 8, "bit", 3, 0],
+         "decoder":["vfhd", "svd", 8, 2, true, false],
          "post_proc":["+", ".cal", "*", -1]
       },
       "_tempc":{
-         "cond":["servicedata", 8, "bit", 3, 1],
-         "decoder":["vfhd", "servicedata", 8, 2, true, false],
+         "cond":["svd", 8, "bit", 3, 1],
+         "decoder":["vfhd", "svd", 8, 2, true, false],
          "post_proc":["+", ".cal", "-", 128]
       },
       "hum":{ 
-         "decoder":["vfhd", "servicedata", 10, 2, false, false],
+         "decoder":["vfhd", "svd", 10, 2, false, false],
          "post_proc":["&", 127]
       },
       "batt":{
-         "decoder":["vfhd", "servicedata", 4, 2, false, false],
+         "decoder":["vfhd", "svd", 4, 2, false, false],
          "post_proc":["&", 127]
       }
    }

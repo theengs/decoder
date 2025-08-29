@@ -1,11 +1,11 @@
-const char* _SBBT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"tag\":\"0d22\",\"cond\":[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\",\"&\",\"servicedata\",\"=\",6,\"index\",0,\"78\",\"&\",\"mfd\",\">=\",24,\"index\",0,\"6909\"],\"properties\":{\"open\":{\"decoder\":[\"vfhd\",\"mfd\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"±\",100,\"abs\"]},\"direction\":{\"decoder\":[\"vfhd\",\"mfd\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"SBBT-dir\"]},\"motion\":{\"decoder\":[\"bit_static_value\",\"mfd\",20,3,false,true]},\"calibrated\":{\"decoder\":[\"bit_static_value\",\"mfd\",19,0,false,true]},\"lightlevel\":{\"decoder\":[\"vfhd\",\"mfd\",18,1,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",4]}}}";
+const char* _SBBT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"model_id\":\"W270160X\",\"tag\":\"0d22\",\"cond\":[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\",\"&\",\"svd\",\"=\",6,\"index\",0,\"78\",\"&\",\"mfd\",\">=\",24,\"index\",0,\"6909\"],\"properties\":{\"open\":{\"decoder\":[\"vfhd\",\"mfd\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"±\",100,\"abs\"]},\"direction\":{\"decoder\":[\"vfhd\",\"mfd\",20,2,false,false],\"post_proc\":[\"&\",127,\"-\",50,\"*\",2,\"SBBT-dir\"]},\"motion\":{\"decoder\":[\"bit_static_value\",\"mfd\",20,3,false,true]},\"calibrated\":{\"decoder\":[\"bit_static_value\",\"mfd\",19,0,false,true]},\"lightlevel\":{\"decoder\":[\"vfhd\",\"mfd\",18,1,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"svd\",4,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",4]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
    "model":"Blind Tilt",
    "model_id":"W270160X",
    "tag":"0d22",
-   "cond":["uuid", "index", 0, "0d00", "|", "uuid", "index", 0, "fd3d", "&", "servicedata", "=", 6, "index", 0, "78", "&", "mfd", ">=", 24, "index", 0, "6909"],
+   "cond":["uuid", "index", 0, "0d00", "|", "uuid", "index", 0, "fd3d", "&", "svd", "=", 6, "index", 0, "78", "&", "mfd", ">=", 24, "index", 0, "6909"],
    "properties":{
       "open":{
          "decoder":["vfhd", "mfd", 20, 2, false, false],
@@ -25,7 +25,7 @@ const char* _SBBT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Blind Tilt\",\"mo
          "decoder":["vfhd", "mfd", 18, 1, false, false]
       },
       "batt":{
-         "decoder":["vfhd", "servicedata", 4, 2, false, false],
+         "decoder":["vfhd", "svd", 4, 2, false, false],
          "post_proc":["&", 127]
       },
       "mac":{

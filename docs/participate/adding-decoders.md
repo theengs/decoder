@@ -14,24 +14,24 @@ R""""(
    "brand":"Xiaomi",
    "model":"miflora",
    "model_id":"HHCCJCY01HHCC",
-   "cond":["servicedata", "contain", "209800"],
+   "cond":["svd", "contain", "209800"],
    "properties":{
       "tempc":{
-         "cond":["servicedata", 25, "4"],
-         "decoder":["vfhd", "servicedata", 30, 4, true],
+         "cond":["svd", 25, "4"],
+         "decoder":["vfhd", "svd", 30, 4, true],
          "post_proc":["/", 10]
       },
       "moi":{
-         "cond":["servicedata", 25, "8"],
-         "decoder":["vfhd", "servicedata", 30, 2, false]
+         "cond":["svd", 25, "8"],
+         "decoder":["vfhd", "svd", 30, 2, false]
       },
       "lux":{
-         "cond":["servicedata", 25, "7"],
-         "decoder":["vfhd", "servicedata", 30, 6, true]
+         "cond":["svd", 25, "7"],
+         "decoder":["vfhd", "svd", 30, 6, true]
       },
       "fer":{
-         "cond":["servicedata", 25, "9"],
-         "decoder":["vfhd", "servicedata", 30, 4, true]
+         "cond":["svd", 25, "9"],
+         "decoder":["vfhd", "svd", 30, 4, true]
       }
    }
 })"""",
@@ -178,12 +178,12 @@ will have `… "type":"CTMO","cidc":false,"cont":true …` in the published mess
 
 ### Condition
 `condition` is a JSON array, which must contain as the first parameter, the data source to test for the condition. Valid inputs are:
-- "servicedata"
+- "svd"
 - "mfd"
 - "name"
 - "uuid"
 
-The second parameter is variable. If required, further qualification can be made by setting a conditional data length in the case of "servicedata" or "mfd" as the first condition. This is an operator in the form of `">" , ">=" , "=" , "<" , "<="` followed by the third parameter being a numeric value that specifies the length of the data to accept. If no data length is defined the second parameter must indicate how the data should be tested. Valid inputs are:
+The second parameter is variable. If required, further qualification can be made by setting a conditional data length in the case of "svd" or "mfd" as the first condition. This is an operator in the form of `">" , ">=" , "=" , "<" , "<="` followed by the third parameter being a numeric value that specifies the length of the data to accept. If no data length is defined the second parameter must indicate how the data should be tested. Valid inputs are:
 - "contain" tests if the specified value (see below) exists the data source 
 - "index" tests if the specified value exists at the index location (see below) in the data source
 - "mac@index" tests if the device's MAC address exists at the index location (see below) in the data source
@@ -194,31 +194,31 @@ For compatibility of a decoder for running successfully on an OS which masks the
 :::
 
 Examples:
-`"cond":["servicedata", "index", 0, "0804"` -- no data length check
-`"cond":["servicedata", ">=", 40, "index", 0, "0804"` -- data length must be equal to or greater than 40 bytes
+`"cond":["svd", "index", 0, "0804"` -- no data length check
+`"cond":["svd", ">=", 40, "index", 0, "0804"` -- data length must be equal to or greater than 40 bytes
 
 The third parameter (fifth if data length is specified) can be either the index value or the data value to find. If the second (fourth if data length specified) parameter is `contain`, the next parameter should be the value to look for in the data source. If the second (fourth if data length specified) parameter is `index`, `mac@index` or `revmac@index` the next parameter should be the location in the data source to look for the value.
 
 `condition` can have multiple conditions chained together using "|" and "&" between them.  
-For example: `"cond":["servicedata", "index", 0, "0804", "|", "servicedata", "index", 0, "8804"]`  
+For example: `"cond":["svd", "index", 0, "0804", "|", "svd", "index", 0, "8804"]`  
 This will match if the service data at index 0 is "0804" `OR` "8804".
 
 `condition` can contain JSON arrays that can be processed separately. This allows for nesting of detection tests such as:  
-`"cond": [["servicedata", "index", 0, "1234", "&" "servicedata", "index", 5, "5678"], "|", "servicedata", "index", 30, "abcd"]`  
+`"cond": [["svd", "index", 0, "1234", "&" "svd", "index", 5, "5678"], "|", "svd", "index", 30, "abcd"]`  
 This will result in a positive detection if the service data at index `0` == `0x1234` and the service data at index `5` == `0x5678`, otherwise, if the service data at index `30` == `0xabcd`, the result will also be positive.
 
 ::: warning Note
 Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.
 It should only be used if absolutely necessary, as in the above example.
 If all the conditions in an array bracket are chained with "|", as in
-`"cond": [["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef"], "&", "servicedata", "index", 5, "1212"]`
+`"cond": [["svd", "index", 0, "abcd", "|", "svd", "index", 0, "efef"], "&", "svd", "index", 5, "1212"]`
 this could be re-written as
-`"cond": ["servicedata", "index", 0, "abcd", "|", "servicedata", "index", 0, "efef", "&", "servicedata", "index", 5, "1212"]`  
+`"cond": ["svd", "index", 0, "abcd", "|", "svd", "index", 0, "efef", "&", "svd", "index", 5, "1212"]`  
 making sure the additional AND condition is at the end. This has the same result, without nesting.
 :::
 
 `condition` NOT(!) testing; Anytime a condition test value is preceded by a "!", the inverse of the result will be used to determine the result.  
-Example: `"cond": ["servicedata", "index", 30, "!", "abcd", "&", "servicedata", "index", 0, "1234"]  
+Example: `"cond": ["svd", "index", 30, "!", "abcd", "&", "svd", "index", 0, "1234"]  
 If the value of the service data at index 30 is not 0xabcd and the data at index 0 is 0x1234, the result is a positive detection.
 
 `condition` "no-mfgdata"; This single argument condition allows to test for the non-existence of manufacturerdata in the received advertising data. 
@@ -228,8 +228,8 @@ Properties is a nested JSON object containing one or more JSON objects. In the e
 ```
  "properties":{
       "tempc":{
-         "cond":["servicedata", 25, "4"],
-         "decoder":["vfhd", "servicedata", 30, 4, true],
+         "cond":["svd", 25, "4"],
+         "decoder":["vfhd", "svd", 30, 4, true],
          "post_proc":["/", 10]
       },
 ```
@@ -237,8 +237,8 @@ Properties is a nested JSON object containing one or more JSON objects. In the e
 Here we have a single property that defines a value that we want to decode. The key "tempc" will be used as the key in the JsonObject provided when `decodeBLEJson(JsonObject)` is called. "tempc" in this example is another JSON object that has an (optional, explained below) `condition`, `decoder`, and `post_proc`.
 
 `condition` is a JSON array. The first parameter defines the data source of the condition to test and must be one of:
-- "servicedata"
-- "manufacturerdata"
+- "svd"
+- "mfd"
 - "name"
 
 The second parameter is the index of the data source to look for the value. For a `"name"` comparison the second parameter is either `"contain"` or `"not_contain"`.
@@ -258,8 +258,8 @@ If a direct binary bit evaluation encoded in a hex digit is desired the third pa
 ```
  "properties":{
       "hum":{
-         "cond":["servicedata", 10, "bit", 3, 0],
-         "decoder":["vfhd", "servicedata", 10, 2, false, false]
+         "cond":["svd", 10, "bit", 3, 0],
+         "decoder":["vfhd", "svd", 10, 2, false, false]
       },
 ```
 
@@ -276,16 +276,16 @@ The second parameter can also be an operator in the form of `">" , ">=" , "=" , 
 If the condition is met the data will be decoded and added to the JsonObject.
 
 `condition` can contain JSON arrays that can be processed separately. This allows for nesting of detection tests such as:  
-`"cond": [["servicedata", 25, "4", "&" "servicedata", 26, "5"], "|", "servicedata", 30, "abcd"]`  
+`"cond": [["svd", 25, "4", "&" "svd", 26, "5"], "|", "svd", 30, "abcd"]`  
 This will result in a positive detection if the service data at index `25` == `4` and the service data at index `26` == `5`, otherwise, if the service data at index `30` == `0xabcd`, the result will also be positive.
 
 ::: warning Note
 Nesting is discouraged from use wherever possible as the recursive nature may cause stack overflowing in some circumstances.
 It should only be used if absolutely necessary, as in the above example.
 If all the conditions in an array bracket are chained with "|", as in
-`"cond": [["servicedata", 20, "5", "|", "servicedata", 20, "6"], "&", "servicedata", 30, "a"]`
+`"cond": [["svd", 20, "5", "|", "svd", 20, "6"], "&", "svd", 30, "a"]`
 this could be re-written as
-`"cond": ["servicedata", 20 , "5", "|", "servicedata", 20, "6", "&", "servicedata", 30, "a"]`  
+`"cond": ["svd", 20 , "5", "|", "svd", 20, "6", "&", "svd", 30, "a"]`  
 making sure the additional AND condition is at the end. This has the same result, without nesting.
 :::
 
@@ -302,7 +302,7 @@ Property conditions also allow for a NOT comparison, as in
 where then the fourth parameter is the value to test for.
 
 ::: warning Note
-The NOT comparison is case sensitive! Therefore any NOT comparisons should be defined in lower case, as this is the format in which devices' "servicedata" and "manufacturerdata" are being reported.
+The NOT comparison is case sensitive! Therefore any NOT comparisons should be defined in lower case, as this is the format in which devices' "svd" and "manufacturerdata" are being reported.
 :::
 
 `decoder` is a JSON array that specifies the decoder function and parameters to decode the value.
@@ -315,7 +315,7 @@ The first parameter is the name of the function to call, The available functions
 - "bit_static_value" - sets the value to either one of two given values, depending on the evaluated binary bit.
 
 The other parameters for the first three functions are:
-- "servicedata" or "manufacturerdata" Extract the value from the specified data.
+- "svd" or "manufacturerdata" Extract the value from the specified data.
 - 24, The index of the data source where the value exists.
 - 4, The length of the data in bytes (characters in the string).
 and additional boolean parameters applicable to the first two functions:
@@ -326,12 +326,12 @@ and additional boolean parameters applicable to the first two functions:
 ```
  "properties":{
       "unit":{
-         "decoder":["bit_static_value", "servicedata", 1, 0, "kg", "lb"]
+         "decoder":["bit_static_value", "svd", 1, 0, "kg", "lb"]
       },
 ```
 
 The parameters for the "bit_static_value" function are:
-- "servicedata" or "manufacturerdata" - extract the value from the specified data.
+- "svd" or "manufacturerdata" - extract the value from the specified data.
 - 1, the index of the data source where the value exists.
 - 0, the bit position from `3-0`.
 - The return value for bit state `0`.
@@ -392,13 +392,13 @@ In such cases the "mac" property should be included in the decoder, so that thes
 ```
 "properties":{
       "mac":{
-         "decoder":["mfhd", "servicedata", 4]
+         "decoder":["mfhd", "svd", 4]
       }
 
       … or
 
       "mac":{
-         "decoder":["revmfhd", "servicedata", 4]
+         "decoder":["revmfhd", "svd", 4]
       }
 
 ```
