@@ -1,4 +1,4 @@
-const char* _SE_TEMP_json = "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"tag\":\"01\",\"cond\":[\"servicedata\",\"=\",4,\"&\",\"uuid\",\"index\",0,\"2a6e\",\"&\",\"name\",\"index\",1,\" T \"],\"properties\":{\"tempc\":{\"cond\":[\"servicedata\",0,\"!\",\"ff7f\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",0,4,true,true],\"post_proc\":[\"/\",100]},\"volt\":{\"cond\":[\"manufacturerdata\",\"=\",10,\"index\",4,\"f2\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,4,true,false],\"post_proc\":[\"/\",1000]}}}";
+const char* _SE_TEMP_json = "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"model_id\":\"SE_TEMP\",\"tag\":\"01\",\"cond\":[\"servicedata\",\"=\",4,\"&\",\"uuid\",\"index\",0,\"2a6e\",\"&\",\"name\",\"index\",1,\" T \"],\"properties\":{\"tempc\":{\"cond\":[\"servicedata\",0,\"!\",\"ff7f\"],\"decoder\":[\"vfhd\",\"servicedata\",0,4,true,true],\"post_proc\":[\"/\",100]},\"volt\":{\"cond\":[\"manufacturerdata\",\"=\",10,\"index\",4,\"f2\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",6,4,true,false],\"post_proc\":[\"/\",1000]}}}";
 
 /*R""""(
 {
@@ -10,12 +10,12 @@ const char* _SE_TEMP_json = "{\"brand\":\"Sensor Easy\",\"model\":\"SE TEMP\",\"
    "properties":{
       "tempc":{
          "cond":["servicedata",0 ,"!","ff7f"],
-         "decoder":["value_from_hex_data", "servicedata", 0, 4, true, true],
+         "decoder":["vfhd", "servicedata", 0, 4, true, true],
          "post_proc":["/", 100]
       },
       "volt":{
          "cond":["manufacturerdata", "=", 10,"index", 4, "f2"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 6, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 6, 4, true, false],
          "post_proc":["/", 1000]
       }
    }

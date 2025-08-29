@@ -1,4 +1,4 @@
-const char* _KKM_K9_json = "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"tag\":\"0708\",\"cond\":[\"servicedata\",\"=\",30,\"index\",0,\"21010f\",\"&\",\"uuid\",\"index\",0,\"feaa\"],\"properties\":{\".cal\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",12,2,false,false],\"post_proc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",10,2,false,true],\"post_proc\":[\"+\",\".cal\"]},\"_.cal\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",16,2,false,false],\"post_proc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,2,false,false],\"post_proc\":[\"+\",\".cal\"]},\"volt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",6,4,false,false],\"post_proc\":[\"/\",1000]},\"accx\":{\"cond\":[\"servicedata\",0,\"21010f\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,false,true]},\"accy\":{\"cond\":[\"servicedata\",0,\"21010f\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",22,4,false,true]},\"accz\":{\"cond\":[\"servicedata\",0,\"21010f\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",26,4,false,true]}}}";
+const char* _KKM_K9_json = "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model_id\":\"K9\",\"tag\":\"0708\",\"cond\":[\"servicedata\",\"=\",30,\"index\",0,\"21010f\",\"&\",\"uuid\",\"index\",0,\"feaa\"],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"servicedata\",12,2,false,false],\"post_proc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",10,2,false,true],\"post_proc\":[\"+\",\".cal\"]},\"_.cal\":{\"decoder\":[\"vfhd\",\"servicedata\",16,2,false,false],\"post_proc\":[\"/\",256,\"*\",100,\">\",0,\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",14,2,false,false],\"post_proc\":[\"+\",\".cal\"]},\"volt\":{\"decoder\":[\"vfhd\",\"servicedata\",6,4,false,false],\"post_proc\":[\"/\",1000]},\"accx\":{\"cond\":[\"servicedata\",0,\"21010f\"],\"decoder\":[\"vfhd\",\"servicedata\",18,4,false,true]},\"accy\":{\"cond\":[\"servicedata\",0,\"21010f\"],\"decoder\":[\"vfhd\",\"servicedata\",22,4,false,true]},\"accz\":{\"cond\":[\"servicedata\",0,\"21010f\"],\"decoder\":[\"vfhd\",\"servicedata\",26,4,false,true]}}}";
 /*R""""(
 {
    "brand":"KKM",
@@ -8,36 +8,36 @@ const char* _KKM_K9_json = "{\"brand\":\"KKM\",\"model\":\"Tracking K9\",\"model
    "cond":["servicedata", "=", 30, "index", 0, "21010f", "&", "uuid", "index", 0, "feaa"],
    "properties":{
       ".cal":{
-         "decoder":["value_from_hex_data", "servicedata", 12, 2, false, false],
+         "decoder":["vfhd", "servicedata", 12, 2, false, false],
          "post_proc":["/", 256, "*", 100, ">", 0, "/", 100]
       },
       "tempc":{
-         "decoder":["value_from_hex_data", "servicedata", 10, 2, false, true],
+         "decoder":["vfhd", "servicedata", 10, 2, false, true],
          "post_proc":["+", ".cal"]
       },
       "_.cal":{
-         "decoder":["value_from_hex_data", "servicedata", 16, 2, false, false],
+         "decoder":["vfhd", "servicedata", 16, 2, false, false],
          "post_proc":["/", 256, "*", 100, ">", 0, "/", 100]
       },
       "hum":{
-         "decoder":["value_from_hex_data", "servicedata", 14, 2, false, false],
+         "decoder":["vfhd", "servicedata", 14, 2, false, false],
          "post_proc":["+", ".cal"]
       },
       "volt":{
-         "decoder":["value_from_hex_data", "servicedata", 6, 4, false, false],
+         "decoder":["vfhd", "servicedata", 6, 4, false, false],
          "post_proc":["/", 1000]
       },
       "accx":{
          "cond":["servicedata", 0, "21010f"],
-         "decoder":["value_from_hex_data", "servicedata", 18, 4, false, true]
+         "decoder":["vfhd", "servicedata", 18, 4, false, true]
       },
       "accy":{
          "cond":["servicedata", 0, "21010f"],
-         "decoder":["value_from_hex_data", "servicedata", 22, 4, false, true]
+         "decoder":["vfhd", "servicedata", 22, 4, false, true]
       },
       "accz":{
          "cond":["servicedata", 0, "21010f"],
-         "decoder":["value_from_hex_data", "servicedata", 26, 4, false, true]
+         "decoder":["vfhd", "servicedata", 26, 4, false, true]
       }
    }
 })"""";*/

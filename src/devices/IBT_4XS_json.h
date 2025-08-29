@@ -1,4 +1,4 @@
-const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"tag\":\"0301\",\"cond\":[\"manufacturerdata\",\"=\",36,\"index\",0,\"00000000\",\"&\",\"manufacturerdata\",\"mac@index\",8],\"conditionnomac\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",\"=\",36,\"index\",0,\"00000000\"],\"properties\":{\"tempc\":{\"cond\":[\"manufacturerdata\",22,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"tempc2\":{\"cond\":[\"manufacturerdata\",26,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"tempc3\":{\"cond\":[\"manufacturerdata\",30,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",28,4,true,false],\"post_proc\":[\"/\",10]},\"tempc4\":{\"cond\":[\"manufacturerdata\",34,\"!\",\"ff\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,4,true,false],\"post_proc\":[\"/\",10]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",8]}}}";
+const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_id\":\"IBT-4X(S/C)\",\"tag\":\"0301\",\"cond\":[\"manufacturerdata\",\"=\",36,\"index\",0,\"00000000\",\"&\",\"manufacturerdata\",\"mac@index\",8],\"conditionnomac\":[\"name\",\"index\",0,\"iBBQ\",\"&\",\"manufacturerdata\",\"=\",36,\"index\",0,\"00000000\"],\"properties\":{\"tempc\":{\"cond\":[\"manufacturerdata\",22,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"tempc2\":{\"cond\":[\"manufacturerdata\",26,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"tempc3\":{\"cond\":[\"manufacturerdata\",30,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",28,4,true,false],\"post_proc\":[\"/\",10]},\"tempc4\":{\"cond\":[\"manufacturerdata\",34,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",32,4,true,false],\"post_proc\":[\"/\",10]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",8]}}}";
 /*R""""(
 {
    "brand":"Inkbird",
@@ -10,22 +10,22 @@ const char* _IBT_4XS_json = "{\"brand\":\"Inkbird\",\"model\":\"iBBQ\",\"model_i
    "properties":{
       "tempc":{
          "cond":["manufacturerdata", 22, "!", "ff"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 20, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 20, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc2":{
          "cond":["manufacturerdata", 26, "!", "ff"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 24, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc3":{
          "cond":["manufacturerdata", 30, "!", "ff"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 28, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 28, 4, true, false],
          "post_proc":["/", 10]
       },
       "tempc4":{
          "cond":["manufacturerdata", 34, "!", "ff"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 32, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 32, 4, true, false],
          "post_proc":["/", 10]
       },
       "mac":{

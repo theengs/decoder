@@ -671,7 +671,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
         if (checkPropCondition(prop["cond"], svc_data, mfg_data, dev_name)) {
           JsonArray decoder = prop["decoder"];
-          if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
+          if (strstr((const char*)decoder[0], "vfhd") != nullptr) {
             const char* src = svc_data;
             if (strstr((const char*)decoder[1], MFG_DATA)) {
               src = mfg_data;

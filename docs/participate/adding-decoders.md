@@ -18,20 +18,20 @@ R""""(
    "properties":{
       "tempc":{
          "cond":["servicedata", 25, "4"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
+         "decoder":["vfhd", "servicedata", 30, 4, true],
          "post_proc":["/", 10]
       },
       "moi":{
          "cond":["servicedata", 25, "8"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 2, false]
+         "decoder":["vfhd", "servicedata", 30, 2, false]
       },
       "lux":{
          "cond":["servicedata", 25, "7"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 6, true]
+         "decoder":["vfhd", "servicedata", 30, 6, true]
       },
       "fer":{
          "cond":["servicedata", 25, "9"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 4, true]
+         "decoder":["vfhd", "servicedata", 30, 4, true]
       }
    }
 })"""",
@@ -229,7 +229,7 @@ Properties is a nested JSON object containing one or more JSON objects. In the e
  "properties":{
       "tempc":{
          "cond":["servicedata", 25, "4"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
+         "decoder":["vfhd", "servicedata", 30, 4, true],
          "post_proc":["/", 10]
       },
 ```
@@ -249,7 +249,7 @@ Then the third parameter is the value to test for, or in case of the `"name"` co
  "properties":{
       "hum":{
          "cond":["name", "not_contain", "GV5108"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 8, 6, false, false],
+         "decoder":["vfhd", "manufacturerdata", 8, 6, false, false],
          "post_proc":["&", 8388607, "%", 1000, "/", 10]
       },
 ```
@@ -259,7 +259,7 @@ If a direct binary bit evaluation encoded in a hex digit is desired the third pa
  "properties":{
       "hum":{
          "cond":["servicedata", 10, "bit", 3, 0],
-         "decoder":["value_from_hex_data", "servicedata", 10, 2, false, false]
+         "decoder":["vfhd", "servicedata", 10, 2, false, false]
       },
 ```
 
@@ -269,7 +269,7 @@ The second parameter can also be an operator in the form of `">" , ">=" , "=" , 
  "properties":{
       "tempc":{
          "cond":["manufacturerdata", "=", 40],
-         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true]
+         "decoder":["vfhd", "manufacturerdata", 24, 4, true]
       },
 ```
 
@@ -294,7 +294,7 @@ Property conditions also allow for a NOT comparison, as in
  "properties":{
       "tempc":{
          "cond":["manufacturerdata", 24, "!", "ffff"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 24, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 24, 4, true, false],
          "post_proc":["/", 10]
       },
 ```
@@ -307,7 +307,7 @@ The NOT comparison is case sensitive! Therefore any NOT comparisons should be de
 
 `decoder` is a JSON array that specifies the decoder function and parameters to decode the value.
 The first parameter is the name of the function to call, The available functions are:
-- "value_from_hex_data"  - converts the hex string value into an `integer` or `double` type.
+- "vfhd"  - converts the hex string value into an `integer` or `double` type.
 - "bf_value_from_hex_data" - converts the (binary fraction) hex string value into a `double` type.  This should be used when the hex data is represented in the format of `XX.XX`. For example: when `0x1a1e` should output 26.30.
 - "string_from_hex_data" - converts the hex value to a string type.
 - "ascii_from_hex_data" - converts the hex value to ASCII text.
@@ -321,7 +321,7 @@ The other parameters for the first three functions are:
 and additional boolean parameters applicable to the first two functions:
 - true/false, If the value in the data source should have its endianness reversed before converting.
 - (optional)true/false, Sets if the resulting value can be a negative number. Defaults to true when omitted.
-- (optional)false/true, Sets if the "value_from_hex_data" decoding result is a `float` instead of an `integer` type. Defaults to false when omitted.
+- (optional)false/true, Sets if the "vfhd" decoding result is a `float` instead of an `integer` type. Defaults to false when omitted.
 
 ```
  "properties":{
@@ -373,11 +373,11 @@ Valid operations are:
 ```
 "properties":{
       ".cal":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 16, 4, true],
+         "decoder":["vfhd", "manufacturerdata", 16, 4, true],
          "post_proc":["&", 16383]
       },
       "power":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 4, 4, true],
+         "decoder":["vfhd", "manufacturerdata", 4, 4, true],
          "post_proc":["/", ".cal", "*", 60000]
       }
    }

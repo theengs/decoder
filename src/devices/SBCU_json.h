@@ -1,4 +1,4 @@
-const char* _SBCU_json = "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"tag\":\"0d22\",\"cond\":[\"servicedata\",\"=\",10,\"index\",0,\"63\",\"|\",\"servicedata\",\"=\",12,\"index\",0,\"63\",\"|\",\"servicedata\",\"=\",12,\"index\",0,\"7b\",\"&\",[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\"]],\"properties\":{\"moving\":{\"decoder\":[\"bit_static_value\",\"servicedata\",6,3,false,true]},\"position\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",6,2,false,false],\"post_proc\":[\"&\",127]},\"calibrated\":{\"decoder\":[\"bit_static_value\",\"servicedata\",2,2,false,true]},\"lightlevel\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,1,false,false]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
+const char* _SBCU_json = "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\"model_id\":\"W070160X\",\"tag\":\"0d22\",\"cond\":[\"servicedata\",\"=\",10,\"index\",0,\"63\",\"|\",\"servicedata\",\"=\",12,\"index\",0,\"63\",\"|\",\"servicedata\",\"=\",12,\"index\",0,\"7b\",\"&\",[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\"]],\"properties\":{\"moving\":{\"decoder\":[\"bit_static_value\",\"servicedata\",6,3,false,true]},\"position\":{\"decoder\":[\"vfhd\",\"servicedata\",6,2,false,false],\"post_proc\":[\"&\",127]},\"calibrated\":{\"decoder\":[\"bit_static_value\",\"servicedata\",2,2,false,true]},\"lightlevel\":{\"decoder\":[\"vfhd\",\"servicedata\",8,1,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
@@ -11,17 +11,17 @@ const char* _SBCU_json = "{\"brand\":\"SwitchBot\",\"model\":\"Curtain (2/3)\",\
          "decoder":["bit_static_value", "servicedata", 6, 3, false, true]
       },
       "position":{
-         "decoder":["value_from_hex_data", "servicedata", 6, 2, false, false],
+         "decoder":["vfhd", "servicedata", 6, 2, false, false],
          "post_proc":["&", 127]
       },
       "calibrated":{
          "decoder":["bit_static_value", "servicedata", 2, 2, false, true]
       },
       "lightlevel":{
-         "decoder":["value_from_hex_data", "servicedata", 8, 1, false, false]
+         "decoder":["vfhd", "servicedata", 8, 1, false, false]
       },
       "batt":{
-         "decoder":["value_from_hex_data", "servicedata", 4, 2, false, false],
+         "decoder":["vfhd", "servicedata", 4, 2, false, false],
          "post_proc":["&", 127]
       }
    }

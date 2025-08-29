@@ -1,4 +1,4 @@
-const char* _CGDN1_json = "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tag\":\"0f\",\"cond\":[\"servicedata\",\"=\",48,\"index\",2,\"0e\",\"|\",\"servicedata\",\"=\",48,\"index\",2,\"24\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"pm25\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",32,4,true,false]},\"pm10\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",36,4,true,false]},\"co2\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",44,4,true,false]}}}";
+const char* _CGDN1_json = "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\",\"model_id\":\"CGDN1\",\"tag\":\"0f\",\"cond\":[\"servicedata\",\"=\",48,\"index\",2,\"0e\",\"|\",\"servicedata\",\"=\",48,\"index\",2,\"24\",\"&\",\"uuid\",\"index\",0,\"fdcd\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",20,4,true,false],\"post_proc\":[\"/\",10]},\"hum\":{\"decoder\":[\"vfhd\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",10]},\"pm25\":{\"decoder\":[\"vfhd\",\"servicedata\",32,4,true,false]},\"pm10\":{\"decoder\":[\"vfhd\",\"servicedata\",36,4,true,false]},\"co2\":{\"decoder\":[\"vfhd\",\"servicedata\",44,4,true,false]}}}";
 /*R""""(
 {
    "brand":"Qingping",
@@ -8,21 +8,21 @@ const char* _CGDN1_json = "{\"brand\":\"Qingping\",\"model\":\"Air Monitor Lite\
    "cond":["servicedata", "=", 48, "index", 2, "0e", "|", "servicedata", "=", 48, "index", 2, "24", "&", "uuid", "index", 0, "fdcd"],
    "properties":{
       "tempc":{
-         "decoder":["value_from_hex_data", "servicedata", 20, 4, true, false],
+         "decoder":["vfhd", "servicedata", 20, 4, true, false],
          "post_proc":["/", 10]
       },
       "hum":{
-         "decoder":["value_from_hex_data", "servicedata", 24, 4, true, false],
+         "decoder":["vfhd", "servicedata", 24, 4, true, false],
          "post_proc":["/", 10]
       },
       "pm25":{
-         "decoder":["value_from_hex_data", "servicedata", 32, 4, true, false]
+         "decoder":["vfhd", "servicedata", 32, 4, true, false]
       },
       "pm10":{
-         "decoder":["value_from_hex_data", "servicedata", 36, 4, true, false]
+         "decoder":["vfhd", "servicedata", 36, 4, true, false]
       },
       "co2":{
-         "decoder":["value_from_hex_data", "servicedata", 44, 4, true, false]
+         "decoder":["vfhd", "servicedata", 44, 4, true, false]
       }
    }
 })"""";*/

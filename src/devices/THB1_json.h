@@ -1,4 +1,4 @@
-const char* _THB1_json = "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",28,\"index\",0,\"40\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"THB1\"],\"properties\":{\"packet\":{\"cond\":[\"servicedata\",2,\"00\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",4,2,false,false]},\"tempc\":{\"cond\":[\"servicedata\",10,\"02\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",12,4,true,true],\"post_proc\":[\"/\",100]},\"hum\":{\"cond\":[\"servicedata\",16,\"03\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",18,4,true,false],\"post_proc\":[\"/\",100]},\"batt\":{\"cond\":[\"servicedata\",6,\"01\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",8,2,false,false]},\"volt\":{\"cond\":[\"servicedata\",22,\"0c\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",1000]}}}";
+const char* _THB1_json = "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"tag\":\"0102\",\"cond\":[\"servicedata\",\"=\",28,\"index\",0,\"40\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"THB1\"],\"properties\":{\"packet\":{\"cond\":[\"servicedata\",2,\"00\"],\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false]},\"tempc\":{\"cond\":[\"servicedata\",10,\"02\"],\"decoder\":[\"vfhd\",\"servicedata\",12,4,true,true],\"post_proc\":[\"/\",100]},\"hum\":{\"cond\":[\"servicedata\",16,\"03\"],\"decoder\":[\"vfhd\",\"servicedata\",18,4,true,false],\"post_proc\":[\"/\",100]},\"batt\":{\"cond\":[\"servicedata\",6,\"01\"],\"decoder\":[\"vfhd\",\"servicedata\",8,2,false,false]},\"volt\":{\"cond\":[\"servicedata\",22,\"0c\"],\"decoder\":[\"vfhd\",\"servicedata\",24,4,true,false],\"post_proc\":[\"/\",1000]}}}";
 /* R""""(
 {
    "brand":"Tuya",
@@ -9,25 +9,25 @@ const char* _THB1_json = "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer
    "properties":{
       "packet":{
          "cond":["servicedata", 2, "00"],
-         "decoder":["value_from_hex_data", "servicedata", 4, 2, false, false]
+         "decoder":["vfhd", "servicedata", 4, 2, false, false]
       },
       "tempc":{
          "cond":["servicedata", 10, "02"],
-         "decoder":["value_from_hex_data", "servicedata", 12, 4, true, true],
+         "decoder":["vfhd", "servicedata", 12, 4, true, true],
          "post_proc":["/", 100]
       },
       "hum":{
          "cond":["servicedata", 16, "03"],
-         "decoder":["value_from_hex_data", "servicedata", 18, 4, true, false],
+         "decoder":["vfhd", "servicedata", 18, 4, true, false],
          "post_proc":["/", 100]
       },
       "batt":{
          "cond":["servicedata", 6, "01"],
-         "decoder":["value_from_hex_data", "servicedata", 8, 2, false, false]
+         "decoder":["vfhd", "servicedata", 8, 2, false, false]
       },
       "volt":{
          "cond":["servicedata", 22, "0c"],
-         "decoder":["value_from_hex_data", "servicedata", 24, 4, true, false],
+         "decoder":["vfhd", "servicedata", 24, 4, true, false],
          "post_proc":["/", 1000]
       }
    }

@@ -1,6 +1,6 @@
 #include "common_props.h"
 
-const char* _H5074_json = "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"tag\":\"0103\",\"cond\":[\"name\",\"index\",0,\"Govee_H5074\",\"&\",\"manufacturerdata\",\">=\",18,\"index\",0,\"88ec\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,4,true,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",10,4,true,false],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,2,false,false]}}}";
+const char* _H5074_json = "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5074\",\"tag\":\"0103\",\"cond\":[\"name\",\"index\",0,\"Govee_H5074\",\"&\",\"manufacturerdata\",\">=\",18,\"index\",0,\"88ec\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",6,4,true,true],\"post_proc\":[\"/\",100]},\"hum\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",10,4,true,false],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",14,2,false,false]}}}";
 /* R""""(
 {
    "brand":"Govee",
@@ -10,15 +10,15 @@ const char* _H5074_json = "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",
    "cond":["name", "index", 0, "Govee_H5074", "&", "manufacturerdata", ">=", 18, "index", 0, "88ec"],
    "properties":{
       "tempc":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 6, 4, true, true],
+         "decoder":["vfhd", "manufacturerdata", 6, 4, true, true],
          "post_proc":["/", 100]
       },
       "hum":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 10, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 10, 4, true, false],
          "post_proc":["/", 100]
       },
       "batt":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 14, 2, false, false]
+         "decoder":["vfhd", "manufacturerdata", 14, 2, false, false]
       }
    }
 })"""";*/

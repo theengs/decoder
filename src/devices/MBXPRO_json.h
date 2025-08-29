@@ -1,4 +1,4 @@
-const char* _MBXPRO_json = "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tag\":\"0708\",\"cond\":[\"uuid\",\"index\",0,\"feab\"],\"properties\":{\"volt\":{\"cond\":[\"servicedata\",0,\"40\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",6,4,false],\"post_proc\":[\"/\",1000]},\"x_axis\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",12,4,false],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"y_axis\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",16,4,false],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"z_axis\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",20,4,false],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"_volt\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",24,4,false],\"post_proc\":[\"/\",1000]},\"tempc\":{\"cond\":[\"servicedata\",0,\"70\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",6,4,false],\"post_proc\":[\"/\",10]},\"hum\":{\"cond\":[\"servicedata\",0,\"70\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",10,4,false,false],\"post_proc\":[\"/\",10]},\"__volt\":{\"cond\":[\"servicedata\",0,\"70\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,4,false],\"post_proc\":[\"/\",1000]}}}";
+const char* _MBXPRO_json = "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\"model_id\":\"MBXPRO\",\"tag\":\"0708\",\"cond\":[\"uuid\",\"index\",0,\"feab\"],\"properties\":{\"volt\":{\"cond\":[\"servicedata\",0,\"40\"],\"decoder\":[\"vfhd\",\"servicedata\",6,4,false],\"post_proc\":[\"/\",1000]},\"x_axis\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"vfhd\",\"servicedata\",12,4,false],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"y_axis\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"vfhd\",\"servicedata\",16,4,false],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"z_axis\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"vfhd\",\"servicedata\",20,4,false],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"_volt\":{\"cond\":[\"servicedata\",0,\"60\"],\"decoder\":[\"vfhd\",\"servicedata\",24,4,false],\"post_proc\":[\"/\",1000]},\"tempc\":{\"cond\":[\"servicedata\",0,\"70\"],\"decoder\":[\"vfhd\",\"servicedata\",6,4,false],\"post_proc\":[\"/\",10]},\"hum\":{\"cond\":[\"servicedata\",0,\"70\"],\"decoder\":[\"vfhd\",\"servicedata\",10,4,false,false],\"post_proc\":[\"/\",10]},\"__volt\":{\"cond\":[\"servicedata\",0,\"70\"],\"decoder\":[\"vfhd\",\"servicedata\",14,4,false],\"post_proc\":[\"/\",1000]}}}";
 /*R""""(
 {
    "brand":"Mokosmart",
@@ -9,42 +9,42 @@ const char* _MBXPRO_json = "{\"brand\":\"Mokosmart\",\"model\":\"BeaconX Pro\",\
    "properties":{
       "volt":{
          "cond":["servicedata", 0, "40"],
-         "decoder":["value_from_hex_data", "servicedata", 6, 4, false],
+         "decoder":["vfhd", "servicedata", 6, 4, false],
          "post_proc":["/", 1000]
       },
       "x_axis":{
          "cond":["servicedata", 0, "60"],
-         "decoder":["value_from_hex_data", "servicedata", 12, 4, false],
+         "decoder":["vfhd", "servicedata", 12, 4, false],
          "post_proc":["/", 10000, "*", 9.80665]
       },
       "y_axis":{
          "cond":["servicedata", 0, "60"],
-         "decoder":["value_from_hex_data", "servicedata", 16, 4, false],
+         "decoder":["vfhd", "servicedata", 16, 4, false],
          "post_proc":["/", 10000, "*", 9.80665]
       },
       "z_axis":{
          "cond":["servicedata", 0, "60"],
-         "decoder":["value_from_hex_data", "servicedata", 20, 4, false],
+         "decoder":["vfhd", "servicedata", 20, 4, false],
          "post_proc":["/", 10000, "*", 9.80665]
       },
       "_volt":{
          "cond":["servicedata", 0, "60"],
-         "decoder":["value_from_hex_data", "servicedata", 24, 4, false],
+         "decoder":["vfhd", "servicedata", 24, 4, false],
          "post_proc":["/", 1000]
       },
       "tempc":{
          "cond":["servicedata", 0, "70"],
-         "decoder":["value_from_hex_data", "servicedata", 6, 4, false],
+         "decoder":["vfhd", "servicedata", 6, 4, false],
          "post_proc":["/", 10]
       },
       "hum":{
          "cond":["servicedata", 0, "70"],
-         "decoder":["value_from_hex_data", "servicedata", 10, 4, false, false],
+         "decoder":["vfhd", "servicedata", 10, 4, false, false],
          "post_proc":["/", 10]
       },
       "__volt":{
          "cond":["servicedata", 0, "70"],
-         "decoder":["value_from_hex_data", "servicedata", 14, 4, false],
+         "decoder":["vfhd", "servicedata", 14, 4, false],
          "post_proc":["/", 1000]
       }
    }

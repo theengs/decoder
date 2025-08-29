@@ -1,4 +1,4 @@
-const char* _SE_MAG_json = "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"tag\":\"0404\",\"cond\":[\"servicedata\",\"=\",4,\"&\",\"uuid\",\"index\",0,\"2a06\",\"&\",\"name\",\"index\",1,\" MAG\"],\"properties\":{\"open\":{\"decoder\":[\"bit_static_value\",\"servicedata\",1,0,true,false]},\"volt\":{\"cond\":[\"manufacturerdata\",\"=\",10,\"index\",4,\"f2\"],\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",6,4,true,false],\"post_proc\":[\"/\",1000]}}}";
+const char* _SE_MAG_json = "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"tag\":\"0404\",\"cond\":[\"servicedata\",\"=\",4,\"&\",\"uuid\",\"index\",0,\"2a06\",\"&\",\"name\",\"index\",1,\" MAG\"],\"properties\":{\"open\":{\"decoder\":[\"bit_static_value\",\"servicedata\",1,0,true,false]},\"volt\":{\"cond\":[\"manufacturerdata\",\"=\",10,\"index\",4,\"f2\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",6,4,true,false],\"post_proc\":[\"/\",1000]}}}";
 
 /*
 R""""(
@@ -14,7 +14,7 @@ R""""(
       },
       "volt":{
          "cond":["manufacturerdata", "=", 10,"index", 4, "f2"],
-         "decoder":["value_from_hex_data", "manufacturerdata", 6, 4, true, false],
+         "decoder":["vfhd", "manufacturerdata", 6, 4, true, false],
          "post_proc":["/", 1000]
       }
    }

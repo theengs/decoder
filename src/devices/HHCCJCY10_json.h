@@ -1,4 +1,4 @@
-const char* _HHCCJCY10_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"tag\":\"09\",\"cond\":[\"servicedata\",\"=\",18,\"&\",\"uuid\",\"index\",0,\"fd50\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",2,4,false,true],\"post_proc\":[\"/\",10]},\"moi\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",0,2,false,false]},\"lux\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",6,6,false,false]},\"fer\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",14,4,false,false]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",12,2,false,false]}}}";
+const char* _HHCCJCY10_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY10\",\"tag\":\"09\",\"cond\":[\"servicedata\",\"=\",18,\"&\",\"uuid\",\"index\",0,\"fd50\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"servicedata\",2,4,false,true],\"post_proc\":[\"/\",10]},\"moi\":{\"decoder\":[\"vfhd\",\"servicedata\",0,2,false,false]},\"lux\":{\"decoder\":[\"vfhd\",\"servicedata\",6,6,false,false]},\"fer\":{\"decoder\":[\"vfhd\",\"servicedata\",14,4,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",12,2,false,false]}}}";
 /*R""""(
 {
    "brand":"Xiaomi/VegTrug",
@@ -8,20 +8,20 @@ const char* _HHCCJCY10_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora
    "cond":["servicedata", "=", 18, "&", "uuid", "index", 0, "fd50"],
    "properties":{
       "tempc":{
-         "decoder":["value_from_hex_data", "servicedata", 2, 4, false, true],
+         "decoder":["vfhd", "servicedata", 2, 4, false, true],
          "post_proc":["/", 10]
       },
       "moi":{
-         "decoder":["value_from_hex_data", "servicedata", 0, 2, false, false]
+         "decoder":["vfhd", "servicedata", 0, 2, false, false]
       },
       "lux":{
-         "decoder":["value_from_hex_data", "servicedata", 6, 6, false, false]
+         "decoder":["vfhd", "servicedata", 6, 6, false, false]
       },
       "fer":{
-         "decoder":["value_from_hex_data", "servicedata", 14, 4, false, false]
+         "decoder":["vfhd", "servicedata", 14, 4, false, false]
       },
       "batt":{
-         "decoder":["value_from_hex_data", "servicedata", 12, 2, false, false]
+         "decoder":["vfhd", "servicedata", 12, 2, false, false]
       }
    }
 })"""";*/

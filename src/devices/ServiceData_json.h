@@ -1,4 +1,4 @@
-const char* _ServiceData_json = "{\"brand\":\"GENERIC\",\"model\":\"Service data\",\"model_id\":\"ServiceData\",\"tag\":\"08\",\"cond\":[\"uuid\",\"index\",0,\"180f\"],\"properties\":{\"batt\":{\"decoder\":[\"value_from_hex_data\",\"servicedata\",0,2,false,false]}}}";
+const char* _ServiceData_json = "{\"brand\":\"GENERIC\",\"model\":\"Service data\",\"model_id\":\"ServiceData\",\"tag\":\"08\",\"cond\":[\"uuid\",\"index\",0,\"180f\"],\"properties\":{\"batt\":{\"decoder\":[\"vfhd\",\"servicedata\",0,2,false,false]}}}";
 /*R""""(
 {
    "brand":"GENERIC",
@@ -8,7 +8,7 @@ const char* _ServiceData_json = "{\"brand\":\"GENERIC\",\"model\":\"Service data
    "cond":["uuid", "index", 0, "180f"],
    "properties":{
       "batt":{
-         "decoder":["value_from_hex_data", "servicedata", 0, 2, false, false]
+         "decoder":["vfhd", "servicedata", 0, 2, false, false]
       }
    }
 })"""";*/

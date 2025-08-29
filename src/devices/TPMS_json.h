@@ -1,4 +1,4 @@
-const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"tag\":\"0a01\",\"cond\":[\"manufacturerdata\",\"=\",36,\"index\",0,\"000\",\"&\",\"manufacturerdata\",\"mac@index\",4],\"conditionnomac\":[\"manufacturerdata\",\"=\",36,\"&\",\"name\",\"index\",0,\"TPMS\"],\"properties\":{\"count\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",5,1,false],\"post_proc\":[\"+\",1]},\"pres\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",16,8,true],\"post_proc\":[\"/\",100000]},\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",24,8,true],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",32,2,true]},\"alarm\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",35,0,false,true]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",4]}}}";
+const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"tag\":\"0a01\",\"cond\":[\"manufacturerdata\",\"=\",36,\"index\",0,\"000\",\"&\",\"manufacturerdata\",\"mac@index\",4],\"conditionnomac\":[\"manufacturerdata\",\"=\",36,\"&\",\"name\",\"index\",0,\"TPMS\"],\"properties\":{\"count\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",5,1,false],\"post_proc\":[\"+\",1]},\"pres\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",16,8,true],\"post_proc\":[\"/\",100000]},\"tempc\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",24,8,true],\"post_proc\":[\"/\",100]},\"batt\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",32,2,true]},\"alarm\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",35,0,false,true]},\"mac\":{\"decoder\":[\"mac_from_hex_data\",\"manufacturerdata\",4]}}}";
 /*R""""(
 {
    "brand":"GENERIC",
@@ -9,19 +9,19 @@ const char* _TPMS_json = "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\"
    "conditionnomac":["manufacturerdata", "=", 36, "&", "name", "index", 0, "TPMS"],
    "properties":{
       "count":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 5, 1, false],
+         "decoder":["vfhd", "manufacturerdata", 5, 1, false],
          "post_proc":["+", 1]
       },
       "pres":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 16, 8, true],
+         "decoder":["vfhd", "manufacturerdata", 16, 8, true],
          "post_proc":["/", 100000]
       },
       "tempc":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 24, 8, true],
+         "decoder":["vfhd", "manufacturerdata", 24, 8, true],
          "post_proc":["/", 100]
       },
       "batt":{
-         "decoder":["value_from_hex_data", "manufacturerdata", 32, 2, true]
+         "decoder":["vfhd", "manufacturerdata", 32, 2, true]
       },
       "alarm":{
          "decoder":["bit_static_value", "manufacturerdata", 35, 0, false, true]

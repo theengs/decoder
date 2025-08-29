@@ -1,4 +1,4 @@
-const char* _HHCCJCY01HHCC_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tag\":\"09\",\"cond\":[\"servicedata\",\"index\",4,\"9800\",\"|\",\"servicedata\",\"index\",4,\"bc03\",\"&\",\"uuid\",\"index\",0,\"fe95\",\"&\",\"servicedata\",\">=\",32],\"properties\":{\"tempc\":{\"cond\":[\"servicedata\",24,\"0410\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",30,4,true],\"post_proc\":[\"/\",10]},\"moi\":{\"cond\":[\"servicedata\",24,\"0810\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",30,2,false]},\"lux\":{\"cond\":[\"servicedata\",24,\"0710\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",30,6,true]},\"fer\":{\"cond\":[\"servicedata\",24,\"0910\"],\"decoder\":[\"value_from_hex_data\",\"servicedata\",30,4,true]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"servicedata\",10]}}}";
+const char* _HHCCJCY01HHCC_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiFlora\",\"model_id\":\"HHCCJCY01HHCC\",\"tag\":\"09\",\"cond\":[\"servicedata\",\"index\",4,\"9800\",\"|\",\"servicedata\",\"index\",4,\"bc03\",\"&\",\"uuid\",\"index\",0,\"fe95\",\"&\",\"servicedata\",\">=\",32],\"properties\":{\"tempc\":{\"cond\":[\"servicedata\",24,\"0410\"],\"decoder\":[\"vfhd\",\"servicedata\",30,4,true],\"post_proc\":[\"/\",10]},\"moi\":{\"cond\":[\"servicedata\",24,\"0810\"],\"decoder\":[\"vfhd\",\"servicedata\",30,2,false]},\"lux\":{\"cond\":[\"servicedata\",24,\"0710\"],\"decoder\":[\"vfhd\",\"servicedata\",30,6,true]},\"fer\":{\"cond\":[\"servicedata\",24,\"0910\"],\"decoder\":[\"vfhd\",\"servicedata\",30,4,true]},\"mac\":{\"decoder\":[\"revmac_from_hex_data\",\"servicedata\",10]}}}";
 /*R""""(
 {
    "brand":"Xiaomi/VegTrug",
@@ -9,20 +9,20 @@ const char* _HHCCJCY01HHCC_json = "{\"brand\":\"Xiaomi/VegTrug\",\"model\":\"MiF
    "properties":{
       "tempc":{
          "cond":["servicedata", 24, "0410"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 4, true],
+         "decoder":["vfhd", "servicedata", 30, 4, true],
          "post_proc":["/", 10]
       },
       "moi":{
          "cond":["servicedata", 24, "0810"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 2, false]
+         "decoder":["vfhd", "servicedata", 30, 2, false]
       },
       "lux":{
          "cond":["servicedata", 24, "0710"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 6, true]
+         "decoder":["vfhd", "servicedata", 30, 6, true]
       },
       "fer":{
          "cond":["servicedata", 24, "0910"],
-         "decoder":["value_from_hex_data", "servicedata", 30, 4, true]
+         "decoder":["vfhd", "servicedata", 30, 4, true]
       },
       "mac":{
          "decoder":["revmac_from_hex_data", "servicedata", 10]
