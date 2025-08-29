@@ -179,11 +179,11 @@ will have `… "type":"CTMO","cidc":false,"cont":true …` in the published mess
 ### Condition
 `condition` is a JSON array, which must contain as the first parameter, the data source to test for the condition. Valid inputs are:
 - "servicedata"
-- "manufacturerdata"
+- "mfd"
 - "name"
 - "uuid"
 
-The second parameter is variable. If required, further qualification can be made by setting a conditional data length in the case of "servicedata" or "manufacturerdata" as the first condition. This is an operator in the form of `">" , ">=" , "=" , "<" , "<="` followed by the third parameter being a numeric value that specifies the length of the data to accept. If no data length is defined the second parameter must indicate how the data should be tested. Valid inputs are:
+The second parameter is variable. If required, further qualification can be made by setting a conditional data length in the case of "servicedata" or "mfd" as the first condition. This is an operator in the form of `">" , ">=" , "=" , "<" , "<="` followed by the third parameter being a numeric value that specifies the length of the data to accept. If no data length is defined the second parameter must indicate how the data should be tested. Valid inputs are:
 - "contain" tests if the specified value (see below) exists the data source 
 - "index" tests if the specified value exists at the index location (see below) in the data source
 - "mac@index" tests if the device's MAC address exists at the index location (see below) in the data source
@@ -249,7 +249,7 @@ Then the third parameter is the value to test for, or in case of the `"name"` co
  "properties":{
       "hum":{
          "cond":["name", "not_contain", "GV5108"],
-         "decoder":["vfhd", "manufacturerdata", 8, 6, false, false],
+         "decoder":["vfhd", "mfd", 8, 6, false, false],
          "post_proc":["&", 8388607, "%", 1000, "/", 10]
       },
 ```
@@ -268,8 +268,8 @@ The second parameter can also be an operator in the form of `">" , ">=" , "=" , 
 ```
  "properties":{
       "tempc":{
-         "cond":["manufacturerdata", "=", 40],
-         "decoder":["vfhd", "manufacturerdata", 24, 4, true]
+         "cond":["mfd", "=", 40],
+         "decoder":["vfhd", "mfd", 24, 4, true]
       },
 ```
 
@@ -293,8 +293,8 @@ Property conditions also allow for a NOT comparison, as in
 ```
  "properties":{
       "tempc":{
-         "cond":["manufacturerdata", 24, "!", "ffff"],
-         "decoder":["vfhd", "manufacturerdata", 24, 4, true, false],
+         "cond":["mfd", 24, "!", "ffff"],
+         "decoder":["vfhd", "mfd", 24, 4, true, false],
          "post_proc":["/", 10]
       },
 ```
@@ -359,7 +359,7 @@ Valid operations are:
 
 ```
  "state":{
-    "decoder":["sfhd", "manufacturerdata", 10, 2],
+    "decoder":["sfhd", "mfd", 10, 2],
     "lookup":["01", "initialising", 
               "02", "idle", 
               "03", "running", 
@@ -373,11 +373,11 @@ Valid operations are:
 ```
 "properties":{
       ".cal":{
-         "decoder":["vfhd", "manufacturerdata", 16, 4, true],
+         "decoder":["vfhd", "mfd", 16, 4, true],
          "post_proc":["&", 16383]
       },
       "power":{
-         "decoder":["vfhd", "manufacturerdata", 4, 4, true],
+         "decoder":["vfhd", "mfd", 4, 4, true],
          "post_proc":["/", ".cal", "*", 60000]
       }
    }

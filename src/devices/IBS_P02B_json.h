@@ -1,27 +1,27 @@
-const char* _IBS_P02B_json = "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"tag\":\"0103\",\"cond\":[\"name\",\"index\",0,\"IBS-P02B\",\"&\",\"manufacturerdata\",\"=\",36],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",12,2,true,false],\"post_proc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",20,2]},\"lowbatt\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",26,0,false,true]},\"displayunit\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",23,0,\"°C\",\"°F\"]},\"mac\":{\"decoder\":[\"mfhd\",\"manufacturerdata\",0]}}}";
+const char* _IBS_P02B_json = "{\"brand\":\"Inkbird\",\"model\":\"Pool Thermometer\",\"model_id\":\"IBS-P02B\",\"tag\":\"0103\",\"cond\":[\"name\",\"index\",0,\"IBS-P02B\",\"&\",\"mfd\",\"=\",36],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",12,2,true,false],\"post_proc\":[\"/\",10]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",20,2]},\"lowbatt\":{\"decoder\":[\"bit_static_value\",\"mfd\",26,0,false,true]},\"displayunit\":{\"decoder\":[\"bit_static_value\",\"mfd\",23,0,\"°C\",\"°F\"]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",0]}}}";
 /*R""""(
 {
   "brand":"Inkbird",
   "model":"Pool Thermometer",
   "model_id":"IBS-P02B",
   "tag": "0103",
-  "cond":["name", "index", 0, "IBS-P02B", "&", "manufacturerdata", "=", 36],
+  "cond":["name", "index", 0, "IBS-P02B", "&", "mfd", "=", 36],
   "properties":{
     "tempc":{
-      "decoder":["vfhd","manufacturerdata", 12, 2, true, false],
+      "decoder":["vfhd","mfd", 12, 2, true, false],
       "post_proc":["/",10]
     },
    "batt":{
-      "decoder":["vfhd", "manufacturerdata", 20, 2]
+      "decoder":["vfhd", "mfd", 20, 2]
    },
    "lowbatt":{
-      "decoder":["bit_static_value", "manufacturerdata", 26, 0, false, true]
+      "decoder":["bit_static_value", "mfd", 26, 0, false, true]
    },
    "displayunit":{
-      "decoder":["bit_static_value", "manufacturerdata", 23, 0, "°C", "°F"]
+      "decoder":["bit_static_value", "mfd", 23, 0, "°C", "°F"]
    },
    "mac":{
-      "decoder":["mfhd", "manufacturerdata", 0]
+      "decoder":["mfhd", "mfd", 0]
    }
   }
 })"""";*/

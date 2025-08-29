@@ -1,4 +1,4 @@
-const char* _SBBT_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"tag\":\"110602\",\"cond\":[\"servicedata\",\"index\",0,\"41\",\"|\",\"servicedata\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBBT-\"],\"properties\":{\"cipher\":{\"decoder\":[\"sfhd\",\"servicedata\",2,12]},\"ctr\":{\"decoder\":[\"sfhd\",\"servicedata\",14,8]},\"mic\":{\"decoder\":[\"sfhd\",\"servicedata\",22,8]},\"mac\":{\"cond\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmfhd\",\"manufacturerdata\",18]}}}";
+const char* _SBBT_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1 encrypted\",\"model_id\":\"SBBT_002C_ENCR\",\"tag\":\"110602\",\"cond\":[\"servicedata\",\"index\",0,\"41\",\"|\",\"servicedata\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBBT-\"],\"properties\":{\"cipher\":{\"decoder\":[\"sfhd\",\"servicedata\",2,12]},\"ctr\":{\"decoder\":[\"sfhd\",\"servicedata\",14,8]},\"mic\":{\"decoder\":[\"sfhd\",\"servicedata\",22,8]},\"mac\":{\"cond\":[\"mfd\",\"=\",30],\"decoder\":[\"revmfhd\",\"mfd\",18]}}}";
 /*R""""(
 {
    "brand":"Shelly",
@@ -17,8 +17,8 @@ const char* _SBBT_002C_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU 
          "decoder":["sfhd", "servicedata", 22, 8]
       },
       "mac":{
-         "cond":["manufacturerdata", "=", 30],
-         "decoder":["revmfhd", "manufacturerdata", 18]
+         "cond":["mfd", "=", 30],
+         "decoder":["revmfhd", "mfd", 18]
       }
    }
 })"""";*/

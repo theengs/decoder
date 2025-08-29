@@ -1,62 +1,62 @@
-const char* _RuuviTag_RAWv2_json = "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tag\":\"0708\",\"cond\":[\"manufacturerdata\",\"=\",52,\"index\",0,\"990405\"],\"properties\":{\"tempc\":{\"cond\":[\"manufacturerdata\",6,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",6,4,false,true],\"post_proc\":[\"/\",200]},\"hum\":{\"cond\":[\"manufacturerdata\",10,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",10,4,false,false],\"post_proc\":[\"/\",400]},\"pres\":{\"cond\":[\"manufacturerdata\",14,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",14,4,false,false],\"post_proc\":[\"+\",50000,\"/\",100]},\"accx\":{\"cond\":[\"manufacturerdata\",18,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",18,4,false,true],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"accy\":{\"cond\":[\"manufacturerdata\",22,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",22,4,false,true],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"accz\":{\"cond\":[\"manufacturerdata\",26,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",26,4,false,true],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"volt\":{\"cond\":[\"manufacturerdata\",30,\"!\",\"7ff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",30,4,false,false],\"post_proc\":[\">\",5,\"+\",1600,\"/\",1000]},\"tx\":{\"cond\":[\"manufacturerdata\",33,\"!\",\"f\",\"&\",\"manufacturerdata\",32,\"!\",\"1\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",30,4,false,false],\"post_proc\":[\"%\",32,\"*\",2,\"-\",40]},\"mov\":{\"cond\":[\"manufacturerdata\",34,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",34,2,false,false]},\"seq\":{\"cond\":[\"manufacturerdata\",36,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",36,4,false,false]},\"mac\":{\"decoder\":[\"mfhd\",\"manufacturerdata\",40]}}}";
+const char* _RuuviTag_RAWv2_json = "{\"brand\":\"Ruuvi\",\"model\":\"RuuviTag\",\"model_id\":\"RuuviTag_RAWv2\",\"tag\":\"0708\",\"cond\":[\"mfd\",\"=\",52,\"index\",0,\"990405\"],\"properties\":{\"tempc\":{\"cond\":[\"mfd\",6,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"mfd\",6,4,false,true],\"post_proc\":[\"/\",200]},\"hum\":{\"cond\":[\"mfd\",10,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"mfd\",10,4,false,false],\"post_proc\":[\"/\",400]},\"pres\":{\"cond\":[\"mfd\",14,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"mfd\",14,4,false,false],\"post_proc\":[\"+\",50000,\"/\",100]},\"accx\":{\"cond\":[\"mfd\",18,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"mfd\",18,4,false,true],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"accy\":{\"cond\":[\"mfd\",22,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"mfd\",22,4,false,true],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"accz\":{\"cond\":[\"mfd\",26,\"!\",\"8000\"],\"decoder\":[\"vfhd\",\"mfd\",26,4,false,true],\"post_proc\":[\"/\",10000,\"*\",9.80665]},\"volt\":{\"cond\":[\"mfd\",30,\"!\",\"7ff\"],\"decoder\":[\"vfhd\",\"mfd\",30,4,false,false],\"post_proc\":[\">\",5,\"+\",1600,\"/\",1000]},\"tx\":{\"cond\":[\"mfd\",33,\"!\",\"f\",\"&\",\"mfd\",32,\"!\",\"1\"],\"decoder\":[\"vfhd\",\"mfd\",30,4,false,false],\"post_proc\":[\"%\",32,\"*\",2,\"-\",40]},\"mov\":{\"cond\":[\"mfd\",34,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"mfd\",34,2,false,false]},\"seq\":{\"cond\":[\"mfd\",36,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"mfd\",36,4,false,false]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",40]}}}";
 /*R""""(
 {
    "brand":"Ruuvi",
    "model":"RuuviTag",
    "model_id":"RuuviTag_RAWv2",
    "tag":"0708",
-   "cond":["manufacturerdata", "=", 52, "index", 0, "990405"],
+   "cond":["mfd", "=", 52, "index", 0, "990405"],
    "properties":{
       "tempc":{
-         "cond":["manufacturerdata", 6, "!", "8000"],
-         "decoder":["vfhd", "manufacturerdata", 6, 4, false, true],
+         "cond":["mfd", 6, "!", "8000"],
+         "decoder":["vfhd", "mfd", 6, 4, false, true],
          "post_proc":["/", 200]
       },
       "hum":{
-         "cond":["manufacturerdata", 10, "!", "ffff"],
-         "decoder":["vfhd", "manufacturerdata", 10, 4, false, false],
+         "cond":["mfd", 10, "!", "ffff"],
+         "decoder":["vfhd", "mfd", 10, 4, false, false],
          "post_proc":["/", 400]
       },
       "pres":{
-         "cond":["manufacturerdata", 14, "!", "ffff"],
-         "decoder":["vfhd", "manufacturerdata", 14, 4, false, false],
+         "cond":["mfd", 14, "!", "ffff"],
+         "decoder":["vfhd", "mfd", 14, 4, false, false],
          "post_proc":["+", 50000, "/", 100]
       },
       "accx":{
-         "cond":["manufacturerdata", 18, "!", "8000"],
-         "decoder":["vfhd", "manufacturerdata", 18, 4, false, true],
+         "cond":["mfd", 18, "!", "8000"],
+         "decoder":["vfhd", "mfd", 18, 4, false, true],
          "post_proc":["/", 10000, "*", 9.80665]
       },
       "accy":{
-         "cond":["manufacturerdata", 22, "!", "8000"],
-         "decoder":["vfhd", "manufacturerdata", 22, 4, false, true],
+         "cond":["mfd", 22, "!", "8000"],
+         "decoder":["vfhd", "mfd", 22, 4, false, true],
          "post_proc":["/", 10000, "*", 9.80665]
       },
       "accz":{
-         "cond":["manufacturerdata", 26, "!", "8000"],
-         "decoder":["vfhd", "manufacturerdata", 26, 4, false, true],
+         "cond":["mfd", 26, "!", "8000"],
+         "decoder":["vfhd", "mfd", 26, 4, false, true],
          "post_proc":["/", 10000, "*", 9.80665]
       },
       "volt":{
-         "cond":["manufacturerdata", 30, "!", "7ff"],
-         "decoder":["vfhd", "manufacturerdata", 30, 4, false, false],
+         "cond":["mfd", 30, "!", "7ff"],
+         "decoder":["vfhd", "mfd", 30, 4, false, false],
          "post_proc":[">", 5, "+", 1600, "/", 1000]
       },
       "tx":{
-         "cond":["manufacturerdata", 33, "!", "f", "&", "manufacturerdata", 32, "!", "1"],
-         "decoder":["vfhd", "manufacturerdata", 30, 4, false, false],
+         "cond":["mfd", 33, "!", "f", "&", "mfd", 32, "!", "1"],
+         "decoder":["vfhd", "mfd", 30, 4, false, false],
          "post_proc":["%", 32, "*", 2, "-", 40]
       },
       "mov":{
-         "cond":["manufacturerdata", 34, "!", "ff"],
-         "decoder":["vfhd", "manufacturerdata", 34, 2, false, false]
+         "cond":["mfd", 34, "!", "ff"],
+         "decoder":["vfhd", "mfd", 34, 2, false, false]
       },
       "seq":{
-         "cond":["manufacturerdata", 36, "!", "ffff"],
-         "decoder":["vfhd", "manufacturerdata", 36, 4, false, false]
+         "cond":["mfd", 36, "!", "ffff"],
+         "decoder":["vfhd", "mfd", 36, 4, false, false]
       },
       "mac":{
-         "decoder":["mfhd", "manufacturerdata", 40]
+         "decoder":["mfhd", "mfd", 40]
       }
    }
 })"""";*/

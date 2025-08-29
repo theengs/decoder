@@ -28,14 +28,14 @@ const char* _tracker_json_nutale = "{\"brand\":\"nut\",\"model\":\"Smart Tracker
    }
 })"""";*/
 
-const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"iTAG\",\"&\",\"manufacturerdata\",\">=\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"iTAG Tracker\"]}}}";
+const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\",\"model_id\":\"ITAG\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"iTAG\",\"&\",\"mfd\",\">=\",8],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"iTAG Tracker\"]}}}";
 /*R""""(
 {
    "brand":"iTAG",
    "model":"Smart Tracker",
    "model_id":"ITAG",
    "tag":"100b",
-   "cond":["name", "index", 0, "iTAG", "&", "manufacturerdata", ">=", 8],
+   "cond":["name", "index", 0, "iTAG", "&", "mfd", ">=", 8],
    "properties":{
       "device":{
          "decoder":["static_value", "iTAG Tracker"]
@@ -43,14 +43,14 @@ const char* _tracker_json_itag = "{\"brand\":\"iTAG\",\"model\":\"Smart Tracker\
    }
 })"""";*/
 
-const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Tracker\",\"model_id\":\"TAGIT\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"Tag-It\",\"&\",\"manufacturerdata\",\"=\",26],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tag-It Tracker\"]}}}";
+const char* _tracker_json_tagit = "{\"brand\":\"Tag-It\",\"model\":\"Smart Tracker\",\"model_id\":\"TAGIT\",\"tag\":\"100b\",\"cond\":[\"name\",\"index\",0,\"Tag-It\",\"&\",\"mfd\",\"=\",26],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Tag-It Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Tag-It",
    "model":"Smart Tracker",
    "model_id":"TAGIT",
    "tag":"100b",
-   "cond":["name", "index", 0, "Tag-It", "&", "manufacturerdata", "=", 26],
+   "cond":["name", "index", 0, "Tag-It", "&", "mfd", "=", 26],
    "properties":{
       "device":{
          "decoder":["static_value", "Tag-It Tracker"]
@@ -88,14 +88,14 @@ const char* _tracker_json_tilename = "{\"brand\":\"Tile\",\"model\":\"Smart Trac
    }
 })"""";*/
 
-const char* _tracker_json_theengs01 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB01\",\"tag\":\"1009\",\"cond\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e31\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
+const char* _tracker_json_theengs01 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB01\",\"tag\":\"1009\",\"cond\":[\"mfd\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e31\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Theengs",
    "model":"iBeacon Tracker",
    "model_id":"TheengsIB01",
    "tag":"1009",
-   "cond":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e31"],
+   "cond":["mfd", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e31"],
    "properties":{
       "device":{
          "decoder":["static_value", "Theengs iBeacon Tracker"]
@@ -103,14 +103,14 @@ const char* _tracker_json_theengs01 = "{\"brand\":\"Theengs\",\"model\":\"iBeaco
    }
 })"""";*/
 
-const char* _tracker_json_theengs02 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"tag\":\"1019\",\"cond\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e32\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
+const char* _tracker_json_theengs02 = "{\"brand\":\"Theengs\",\"model\":\"iBeacon Tracker\",\"model_id\":\"TheengsIB02\",\"tag\":\"1019\",\"cond\":[\"mfd\",\"=\",50,\"index\",0,\"4c000215546865656e67732d69426561636f6e32\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Theengs iBeacon Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Theengs",
    "model":"iBeacon Tracker",
    "model_id":"TheengsIB02",
    "tag":"1019",
-   "cond":["manufacturerdata", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e32"],
+   "cond":["mfd", "=", 50, "index", 0, "4c000215546865656e67732d69426561636f6e32"],
    "properties":{
       "device":{
          "decoder":["static_value", "Theengs iBeacon Tracker"]
@@ -133,14 +133,14 @@ const char* _tracker_json_TICWATCHGTH = "{\"brand\":\"Mobvoi\",\"model\":\"TicWa
    }
 })"""";*/
 
-const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"tag\":\"1008\",\"cond\":[\"manufacturerdata\",\"=\",24,\"index\",0,\"800102151234\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Gigaset G-Tag Tracker\"]}}}";
+const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"model_id\":\"GTAG\",\"tag\":\"1008\",\"cond\":[\"mfd\",\"=\",24,\"index\",0,\"800102151234\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Gigaset G-Tag Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Gigaset",
    "model":"G-Tag",
    "model_id":"GTAG",
    "tag":"1008",
-   "cond":["manufacturerdata", "=", 24, "index", 0, "800102151234"],
+   "cond":["mfd", "=", 24, "index", 0, "800102151234"],
    "properties":{
       "device":{
          "decoder":["static_value", "Gigaset G-Tag Tracker"]
@@ -148,14 +148,14 @@ const char* _tracker_json_GTAG = "{\"brand\":\"Gigaset\",\"model\":\"G-Tag\",\"m
    }
 })"""";*/
 
-const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"tag\":\"100a\",\"cond\":[\"name\",\"index\",0,\"Nyon\",\"&\",\"manufacturerdata\",\"=\",14,\"index\",0,\"a602\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Bosch Nyon Tracker\"]}}}";
+const char* _tracker_json_NYON = "{\"brand\":\"Bosch\",\"model\":\"Nyon\",\"model_id\":\"BOSCHNYON\",\"tag\":\"100a\",\"cond\":[\"name\",\"index\",0,\"Nyon\",\"&\",\"mfd\",\"=\",14,\"index\",0,\"a602\"],\"properties\":{\"device\":{\"decoder\":[\"static_value\",\"Bosch Nyon Tracker\"]}}}";
 /*R""""(
 {
    "brand":"Bosch",
    "model":"Nyon",
    "model_id":"BOSCHNYON",
    "tag":"100a",
-   "cond":["name", "index", 0, "Nyon", "&", "manufacturerdata", "=", 14, "index", 0, "a602"],
+   "cond":["name", "index", 0, "Nyon", "&", "mfd", "=", 14, "index", 0, "a602"],
    "properties":{
       "device":{
          "decoder":["static_value", "Bosch Nyon Tracker"]

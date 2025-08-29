@@ -1,51 +1,51 @@
-const char* _Mikrotik_json = "{\"brand\":\"MikroTik\",\"model\":\"TG-BT5-IN/-OUT\",\"model_id\":\"TG-BT5\",\"tag\":\"0708\",\"cond\":[\"manufacturerdata\",\"=\",40,\"index\",0,\"4f090100\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",24,4,true,true],\"post_proc\":[\"/\",256]},\"accx\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",12,4,true,true],\"post_proc\":[\"/\",256]},\"accy\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",16,4,true,true],\"post_proc\":[\"/\",256]},\"accz\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",20,4,true,true],\"post_proc\":[\"/\",256]},\"flag_reed\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",37,0,false,true]},\"flag_tilt\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",37,1,false,true]},\"flag_fall\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",37,2,false,true]},\"flag_impact_x\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",37,3,false,true]},\"flag_impact_y\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",36,0,false,true]},\"flag_impact_z\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",36,1,false,true]},\"uptime\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",28,8,true,false]},\"batt\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",38,2,false,false],\"post_proc\":[\"&\",127]}}}";
+const char* _Mikrotik_json = "{\"brand\":\"MikroTik\",\"model\":\"TG-BT5-IN/-OUT\",\"model_id\":\"TG-BT5\",\"tag\":\"0708\",\"cond\":[\"mfd\",\"=\",40,\"index\",0,\"4f090100\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",24,4,true,true],\"post_proc\":[\"/\",256]},\"accx\":{\"decoder\":[\"vfhd\",\"mfd\",12,4,true,true],\"post_proc\":[\"/\",256]},\"accy\":{\"decoder\":[\"vfhd\",\"mfd\",16,4,true,true],\"post_proc\":[\"/\",256]},\"accz\":{\"decoder\":[\"vfhd\",\"mfd\",20,4,true,true],\"post_proc\":[\"/\",256]},\"flag_reed\":{\"decoder\":[\"bit_static_value\",\"mfd\",37,0,false,true]},\"flag_tilt\":{\"decoder\":[\"bit_static_value\",\"mfd\",37,1,false,true]},\"flag_fall\":{\"decoder\":[\"bit_static_value\",\"mfd\",37,2,false,true]},\"flag_impact_x\":{\"decoder\":[\"bit_static_value\",\"mfd\",37,3,false,true]},\"flag_impact_y\":{\"decoder\":[\"bit_static_value\",\"mfd\",36,0,false,true]},\"flag_impact_z\":{\"decoder\":[\"bit_static_value\",\"mfd\",36,1,false,true]},\"uptime\":{\"decoder\":[\"vfhd\",\"mfd\",28,8,true,false]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",38,2,false,false],\"post_proc\":[\"&\",127]}}}";
 /*R""""(
 {
    "brand":"MikroTik",
    "model":"TG-BT5-IN/-OUT",
    "model_id":"TG-BT5",
    "tag":"0708",
-   "cond":["manufacturerdata", "=", 40, "index", 0, "4f090100"],
+   "cond":["mfd", "=", 40, "index", 0, "4f090100"],
    "properties":{
       "tempc":{
-         "decoder":["vfhd", "manufacturerdata", 24, 4, true, true],
+         "decoder":["vfhd", "mfd", 24, 4, true, true],
          "post_proc":["/", 256]
       },
       "accx":{
-         "decoder":["vfhd", "manufacturerdata", 12, 4, true, true],
+         "decoder":["vfhd", "mfd", 12, 4, true, true],
          "post_proc":["/", 256]
       },
       "accy":{
-         "decoder":["vfhd", "manufacturerdata", 16, 4, true, true],
+         "decoder":["vfhd", "mfd", 16, 4, true, true],
          "post_proc":["/", 256]
       },
       "accz":{
-         "decoder":["vfhd", "manufacturerdata", 20, 4, true, true],
+         "decoder":["vfhd", "mfd", 20, 4, true, true],
          "post_proc":["/", 256]
       },
       "flag_reed":{
-         "decoder":["bit_static_value", "manufacturerdata", 37, 0, false, true]
+         "decoder":["bit_static_value", "mfd", 37, 0, false, true]
       },
       "flag_tilt":{
-         "decoder":["bit_static_value", "manufacturerdata", 37, 1, false, true]
+         "decoder":["bit_static_value", "mfd", 37, 1, false, true]
       },
       "flag_fall":{
-         "decoder":["bit_static_value", "manufacturerdata", 37, 2, false, true]
+         "decoder":["bit_static_value", "mfd", 37, 2, false, true]
       },
       "flag_impact_x":{
-         "decoder":["bit_static_value", "manufacturerdata", 37, 3, false, true]
+         "decoder":["bit_static_value", "mfd", 37, 3, false, true]
       },
       "flag_impact_y":{
-         "decoder":["bit_static_value", "manufacturerdata", 36, 0, false, true]
+         "decoder":["bit_static_value", "mfd", 36, 0, false, true]
       },
       "flag_impact_z":{
-         "decoder":["bit_static_value", "manufacturerdata", 36, 1, false, true]
+         "decoder":["bit_static_value", "mfd", 36, 1, false, true]
       },
       "uptime":{
-         "decoder":["vfhd", "manufacturerdata", 28, 8, true, false]
+         "decoder":["vfhd", "mfd", 28, 8, true, false]
       },
       "batt":{
-         "decoder":["vfhd", "manufacturerdata", 38, 2, false, false],
+         "decoder":["vfhd", "mfd", 38, 2, false, false],
          "post_proc":["&", 127]
       }
    }

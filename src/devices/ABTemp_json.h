@@ -1,29 +1,29 @@
-const char* _ABTemp_json = "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"tag\":\"0608\",\"cond\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"4c000215b5b182c7eab14988aa99b5c1517008d9\"],\"properties\":{\"mfid\":{\"decoder\":[\"sfhd\",\"manufacturerdata\",0,4]},\"uuid\":{\"decoder\":[\"sfhd\",\"manufacturerdata\",8,32]},\"major\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",40,4,false]},\"batt\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",44,2,false]},\"tempc\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",46,2,false]},\"txpower\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",48,2,false]},\"mac\":{\"cond\":[\"servicedata\",\"=\",22],\"decoder\":[\"revmfhd\",\"servicedata\",0]}}}";
+const char* _ABTemp_json = "{\"brand\":\"April Brother\",\"model\":\"ABTemp\",\"model_id\":\"ABTemp\",\"tag\":\"0608\",\"cond\":[\"mfd\",\"=\",50,\"index\",0,\"4c000215b5b182c7eab14988aa99b5c1517008d9\"],\"properties\":{\"mfid\":{\"decoder\":[\"sfhd\",\"mfd\",0,4]},\"uuid\":{\"decoder\":[\"sfhd\",\"mfd\",8,32]},\"major\":{\"decoder\":[\"vfhd\",\"mfd\",40,4,false]},\"batt\":{\"decoder\":[\"vfhd\",\"mfd\",44,2,false]},\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",46,2,false]},\"txpower\":{\"decoder\":[\"vfhd\",\"mfd\",48,2,false]},\"mac\":{\"cond\":[\"servicedata\",\"=\",22],\"decoder\":[\"revmfhd\",\"servicedata\",0]}}}";
 /*R""""(
 {
    "brand":"April Brother",
    "model":"ABTemp",
    "model_id":"ABTemp",
    "tag":"0608",
-   "cond":["manufacturerdata", "=", 50, "index", 0, "4c000215b5b182c7eab14988aa99b5c1517008d9"],
+   "cond":["mfd", "=", 50, "index", 0, "4c000215b5b182c7eab14988aa99b5c1517008d9"],
    "properties":{
       "mfid":{
-         "decoder":["sfhd", "manufacturerdata", 0, 4]
+         "decoder":["sfhd", "mfd", 0, 4]
       },
       "uuid":{
-         "decoder":["sfhd", "manufacturerdata", 8, 32]
+         "decoder":["sfhd", "mfd", 8, 32]
       },
       "major":{
-         "decoder":["vfhd", "manufacturerdata", 40, 4, false]
+         "decoder":["vfhd", "mfd", 40, 4, false]
       },
       "batt":{
-         "decoder":["vfhd", "manufacturerdata", 44, 2, false]
+         "decoder":["vfhd", "mfd", 44, 2, false]
       },
       "tempc":{
-         "decoder":["vfhd", "manufacturerdata", 46, 2, false]
+         "decoder":["vfhd", "mfd", 46, 2, false]
       },
       "txpower":{
-         "decoder":["vfhd","manufacturerdata", 48, 2, false]
+         "decoder":["vfhd","mfd", 48, 2, false]
       },
       "mac":{
          "cond":["servicedata", "=", 22],

@@ -1,14 +1,14 @@
-const char* _VICTSBP_json = "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"tag\":\"1408\",\"cond\":[\"manufacturerdata\",\"=\",50,\"index\",0,\"e10211\",\"&\",\"manufacturerdata\",\"index\",12,\"09ffff\"],\"properties\":{\"device_state\":{\"decoder\":[\"sfhd\",\"manufacturerdata\",20,2],\"lookup\":[\"00\",\"off\",\"01\",\"low power\",\"02\",\"fault\",\"03\",\"bulk\",\"04\",\"absorption\",\"05\",\"float\",\"06\",\"storage\",\"07\",\"equalize manual\",\"09\",\"inverting\",\"0b\",\"power_supply\",\"f5\",\"starting up\",\"f6\",\"repeated absorption\",\"f7\",\"recondition\",\"f8\",\"battery safe\",\"f9\",\"active\",\"fc\",\"external control\",\"ff\",\"N/A\"]},\"output_state\":{\"decoder\":[\"sfhd\",\"manufacturerdata\",22,2],\"lookup\":[\"00\",\"off\",\"01\",\"on\",\"ff\",\"N/A\"]},\"volt_in\":{\"cond\":[\"manufacturerdata\",34,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",34,4,true,true],\"post_proc\":[\"&\",32767,\"/\",100]},\"volt_out\":{\"cond\":[\"manufacturerdata\",38,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",38,4,true,false],\"post_proc\":[\"/\",100]},\"error_code\":{\"cond\":[\"manufacturerdata\",24,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"manufacturerdata\",24,2]},\"alarm_reason\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",26,4]},\"warning_reason\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",30,4]}}}";
+const char* _VICTSBP_json = "{\"brand\":\"Victron Energy\",\"model\":\"Smart BatteryProtect\",\"model_id\":\"VICTSBP\",\"tag\":\"1408\",\"cond\":[\"mfd\",\"=\",50,\"index\",0,\"e10211\",\"&\",\"mfd\",\"index\",12,\"09ffff\"],\"properties\":{\"device_state\":{\"decoder\":[\"sfhd\",\"mfd\",20,2],\"lookup\":[\"00\",\"off\",\"01\",\"low power\",\"02\",\"fault\",\"03\",\"bulk\",\"04\",\"absorption\",\"05\",\"float\",\"06\",\"storage\",\"07\",\"equalize manual\",\"09\",\"inverting\",\"0b\",\"power_supply\",\"f5\",\"starting up\",\"f6\",\"repeated absorption\",\"f7\",\"recondition\",\"f8\",\"battery safe\",\"f9\",\"active\",\"fc\",\"external control\",\"ff\",\"N/A\"]},\"output_state\":{\"decoder\":[\"sfhd\",\"mfd\",22,2],\"lookup\":[\"00\",\"off\",\"01\",\"on\",\"ff\",\"N/A\"]},\"volt_in\":{\"cond\":[\"mfd\",34,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"mfd\",34,4,true,true],\"post_proc\":[\"&\",32767,\"/\",100]},\"volt_out\":{\"cond\":[\"mfd\",38,\"!\",\"ffff\"],\"decoder\":[\"vfhd\",\"mfd\",38,4,true,false],\"post_proc\":[\"/\",100]},\"error_code\":{\"cond\":[\"mfd\",24,\"!\",\"ff\"],\"decoder\":[\"vfhd\",\"mfd\",24,2]},\"alarm_reason\":{\"decoder\":[\"vfhd\",\"mfd\",26,4]},\"warning_reason\":{\"decoder\":[\"vfhd\",\"mfd\",30,4]}}}";
 /*R""""(
 {
    "brand":"Victron Energy",
    "model":"Smart BatteryProtect",
    "model_id":"VICTSBP",
    "tag":"1408",
-   "cond":["manufacturerdata", "=", 50, "index", 0, "e10211", "&", "manufacturerdata", "index", 12, "09ffff"],
+   "cond":["mfd", "=", 50, "index", 0, "e10211", "&", "mfd", "index", 12, "09ffff"],
    "properties":{
       "device_state":{
-         "decoder":["sfhd", "manufacturerdata", 20, 2],
+         "decoder":["sfhd", "mfd", 20, 2],
          "lookup":["00", "off",
                    "01", "low power",
                    "02", "fault",
@@ -28,30 +28,30 @@ const char* _VICTSBP_json = "{\"brand\":\"Victron Energy\",\"model\":\"Smart Bat
                    "ff", "N/A"]
       },
       "output_state":{
-         "decoder":["sfhd", "manufacturerdata", 22, 2],
+         "decoder":["sfhd", "mfd", 22, 2],
          "lookup":["00", "off", 
                    "01", "on",
                    "ff", "N/A"]
       },
       "volt_in":{
-         "cond":["manufacturerdata", 34, "!", "ffff"],
-         "decoder":["vfhd", "manufacturerdata", 34, 4, true, true],
+         "cond":["mfd", 34, "!", "ffff"],
+         "decoder":["vfhd", "mfd", 34, 4, true, true],
          "post_proc":["&", 32767, "/", 100]
       },
       "volt_out":{
-         "cond":["manufacturerdata", 38, "!", "ffff"],
-         "decoder":["vfhd", "manufacturerdata", 38, 4, true, false],
+         "cond":["mfd", 38, "!", "ffff"],
+         "decoder":["vfhd", "mfd", 38, 4, true, false],
          "post_proc":["/", 100]
       },
       "error_code":{
-         "cond":["manufacturerdata", 24, "!", "ff"],
-         "decoder":["vfhd", "manufacturerdata", 24, 2]
+         "cond":["mfd", 24, "!", "ff"],
+         "decoder":["vfhd", "mfd", 24, 2]
       },
       "alarm_reason":{
-         "decoder":["vfhd", "manufacturerdata", 26, 4]
+         "decoder":["vfhd", "mfd", 26, 4]
       },
       "warning_reason":{
-         "decoder":["vfhd", "manufacturerdata", 30, 4]
+         "decoder":["vfhd", "mfd", 30, 4]
       }
    }
 })"""";*/

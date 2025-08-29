@@ -1,27 +1,27 @@
-const char* _SmartDry_json = "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tag\":\"ff01\",\"cond\":[\"manufacturerdata\",\"=\",28,\"index\",0,\"ae01\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",4,8,true,false,true]},\"hum\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",12,8,true,false,true]},\"shake\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",20,4,true,false]},\"volt\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",24,2,false,false],\"post_proc\":[\"+\",\"2847\",\"/\",1000]},\"wake\":{\"decoder\":[\"bit_static_value\",\"manufacturerdata\",27,0,false,true]}}}";
+const char* _SmartDry_json = "{\"brand\":\"SmartDry\",\"model\":\"Laundry Sensor\",\"model_id\":\"SDLS\",\"tag\":\"ff01\",\"cond\":[\"mfd\",\"=\",28,\"index\",0,\"ae01\"],\"properties\":{\"tempc\":{\"decoder\":[\"vfhd\",\"mfd\",4,8,true,false,true]},\"hum\":{\"decoder\":[\"vfhd\",\"mfd\",12,8,true,false,true]},\"shake\":{\"decoder\":[\"vfhd\",\"mfd\",20,4,true,false]},\"volt\":{\"decoder\":[\"vfhd\",\"mfd\",24,2,false,false],\"post_proc\":[\"+\",\"2847\",\"/\",1000]},\"wake\":{\"decoder\":[\"bit_static_value\",\"mfd\",27,0,false,true]}}}";
 /* R""""(
 {
    "brand":"SmartDry",
    "model":"Laundry Sensor",
    "model_id":"SDLS",
    "tag":"ff01",
-   "cond":["manufacturerdata", "=", 28, "index", 0, "ae01"],
+   "cond":["mfd", "=", 28, "index", 0, "ae01"],
    "properties":{
       "tempc":{
-         "decoder":["vfhd", "manufacturerdata", 4, 8, true, false, true]
+         "decoder":["vfhd", "mfd", 4, 8, true, false, true]
       },
       "hum":{
-         "decoder":["vfhd", "manufacturerdata", 12, 8, true, false, true]
+         "decoder":["vfhd", "mfd", 12, 8, true, false, true]
       },
       "shake":{
-         "decoder":["vfhd", "manufacturerdata", 20, 4, true, false]
+         "decoder":["vfhd", "mfd", 20, 4, true, false]
       },
       "volt":{
-         "decoder":["vfhd", "manufacturerdata", 24, 2, false, false],
+         "decoder":["vfhd", "mfd", 24, 2, false, false],
          "post_proc":["+", "2847", "/", 1000]
       },
       "wake":{
-         "decoder":["bit_static_value", "manufacturerdata", 27, 0, false, true]
+         "decoder":["bit_static_value", "mfd", 27, 0, false, true]
       }
    }
 })"""";*/

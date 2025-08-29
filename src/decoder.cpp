@@ -45,7 +45,8 @@ static size_t peakDocSize = 0;
 #endif
 
 #define SVC_DATA "servicedata"
-#define MFG_DATA "manufacturerdata"
+#define MFG_DATA_MSG "manufacturerdata"
+#define MFG_DATA_DECODER "mfd"
 
 typedef double (TheengsDecoder::*decoder_function)(const char* data_str,
                                                    int offset, int data_length,
@@ -224,7 +225,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
           break;
         }
       }
-    } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA) != nullptr) {
+    } else if (mfg_data != nullptr && strstr(cond_str, MFG_DATA_DECODER) != nullptr) {
       if (data_length_is_valid(strlen(mfg_data), m_minMfgDataLen, condition, &i)) {
         cmp_str = mfg_data;
         match = true;
@@ -407,7 +408,7 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
 
       if (svc_data && strstr(prop_data_src, SVC_DATA) != nullptr) {
         data_src = svc_data;
-      } else if (mfg_data && strstr(prop_data_src, MFG_DATA) != nullptr) {
+      } else if (mfg_data && strstr(prop_data_src, MFG_DATA_DECODER) != nullptr) {
         data_src = mfg_data;
       }
 
@@ -482,7 +483,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
   DynamicJsonDocument doc(m_docMax);
 #endif
   const char* svc_data = jsondata[SVC_DATA].as<const char*>();
-  const char* mfg_data = jsondata[MFG_DATA].as<const char*>();
+  const char* mfg_data = jsondata[MFG_DATA_MSG].as<const char*>();
   const char* dev_name = jsondata["name"].as<const char*>();
   const char* svc_uuid = jsondata["servicedatauuid"].as<const char*>();
   const char* mac_id = jsondata["id"].as<const char*>();
@@ -673,7 +674,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
           JsonArray decoder = prop["decoder"];
           if (strstr((const char*)decoder[0], "vfhd") != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], MFG_DATA)) {
+            if (strstr((const char*)decoder[1], MFG_DATA_DECODER)) {
               src = mfg_data;
             }
 
@@ -853,7 +854,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
               if (svc_data && strstr((const char*)staticbitdecoder[1], SVC_DATA) != nullptr) {
                 data_src = svc_data;
-              } else if (mfg_data && strstr((const char*)staticbitdecoder[1], MFG_DATA) != nullptr) {
+              } else if (mfg_data && strstr((const char*)staticbitdecoder[1], MFG_DATA_DECODER) != nullptr) {
                 data_src = mfg_data;
               }
 
@@ -870,7 +871,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             }
           } else if (strstr((const char*)decoder[0], "sfhd") != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], MFG_DATA)) {
+            if (strstr((const char*)decoder[1], MFG_DATA_DECODER)) {
               src = mfg_data;
             }
 
@@ -899,7 +900,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             }
           } else if (strstr((const char*)decoder[0], "mfhd") != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], MFG_DATA)) {
+            if (strstr((const char*)decoder[1], MFG_DATA_DECODER)) {
               src = mfg_data;
             }
 
@@ -929,7 +930,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             success = i_main;
           } else if (strstr((const char*)decoder[0], "ascii_from_hex_data") != nullptr) {
             const char* src = svc_data;
-            if (strstr((const char*)decoder[1], MFG_DATA)) {
+            if (strstr((const char*)decoder[1], MFG_DATA_DECODER)) {
               src = mfg_data;
             }
 

@@ -1,14 +1,14 @@
-const char* _PH10_json = "{\"brand\":\"Polar\",\"model\":\"Heart Rate Sensor\",\"model_id\":\"H10\",\"tag\":\"0b00\",\"cond\":[\"manufacturerdata\",\"=\",12,\"index\",0,\"6b00\"],\"properties\":{\"bpm\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",10,2,false,false]}}}";
+const char* _PH10_json = "{\"brand\":\"Polar\",\"model\":\"Heart Rate Sensor\",\"model_id\":\"H10\",\"tag\":\"0b00\",\"cond\":[\"mfd\",\"=\",12,\"index\",0,\"6b00\"],\"properties\":{\"bpm\":{\"decoder\":[\"vfhd\",\"mfd\",10,2,false,false]}}}";
 /*R""""(
 {
    "brand":"Polar",
    "model":"Heart Rate Sensor",
    "model_id":"H10",
    "tag":"0b00",
-   "cond":["manufacturerdata", "=", 12, "index", 0, "6b00"],
+   "cond":["mfd", "=", 12, "index", 0, "6b00"],
    "properties":{
       "bpm":{
-         "decoder":["vfhd", "manufacturerdata", 10, 2, false, false]
+         "decoder":["vfhd", "mfd", 10, 2, false, false]
       }
    }
 })"""";*/

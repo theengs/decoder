@@ -1,4 +1,4 @@
-const char* _SBBT_004CEU_US_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Switch4\",\"model_id\":\"SBBT-004CEU/US\",\"tag\":\"1106\",\"cond\":[\"servicedata\",\"=\",26,\"index\",0,\"40\",\"|\",\"servicedata\",\"=\",26,\"index\",0,\"44\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBBT-\"],\"properties\":{\"packet\":{\"cond\":[\"servicedata\",2,\"00\"],\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false]},\"batt\":{\"cond\":[\"servicedata\",6,\"01\"],\"decoder\":[\"vfhd\",\"servicedata\",8,2,false,false]},\"button1\":{\"cond\":[\"servicedata\",10,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",12,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"button2\":{\"cond\":[\"servicedata\",14,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",16,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"button3\":{\"cond\":[\"servicedata\",18,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",20,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"button4\":{\"cond\":[\"servicedata\",22,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",24,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"mac\":{\"cond\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmfhd\",\"manufacturerdata\",18]}}}";
+const char* _SBBT_004CEU_US_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Switch4\",\"model_id\":\"SBBT-004CEU/US\",\"tag\":\"1106\",\"cond\":[\"servicedata\",\"=\",26,\"index\",0,\"40\",\"|\",\"servicedata\",\"=\",26,\"index\",0,\"44\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBBT-\"],\"properties\":{\"packet\":{\"cond\":[\"servicedata\",2,\"00\"],\"decoder\":[\"vfhd\",\"servicedata\",4,2,false,false]},\"batt\":{\"cond\":[\"servicedata\",6,\"01\"],\"decoder\":[\"vfhd\",\"servicedata\",8,2,false,false]},\"button1\":{\"cond\":[\"servicedata\",10,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",12,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"button2\":{\"cond\":[\"servicedata\",14,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",16,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"button3\":{\"cond\":[\"servicedata\",18,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",20,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"button4\":{\"cond\":[\"servicedata\",22,\"3a\"],\"decoder\":[\"sfhd\",\"servicedata\",24,2],\"lookup\":[\"00\",0,\"01\",1,\"02\",2,\"03\",3,\"04\",9,\"fe\",11]},\"mac\":{\"cond\":[\"mfd\",\"=\",30],\"decoder\":[\"revmfhd\",\"mfd\",18]}}}";
 /*R""""(
 {
    "brand":"Shelly",
@@ -56,8 +56,8 @@ const char* _SBBT_004CEU_US_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU 
                    "fe", 11]
       },
       "mac":{
-         "cond":["manufacturerdata", "=", 30],
-         "decoder":["revmfhd", "manufacturerdata", 18]
+         "cond":["mfd", "=", 30],
+         "decoder":["revmfhd", "mfd", 18]
       }
    }
 })"""";*/

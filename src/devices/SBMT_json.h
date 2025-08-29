@@ -34,35 +34,35 @@ const char* _SBMT_json = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"
    }
 })"""";*/
 
-const char* _SBMT_json_M = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tag\":\"0100\",\"cond\":[\"name\",\"index\",0,\"WoSensorTH\",\"&\",\"manufacturerdata\",\"=\",26],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",21,1,false,false],\"post_proc\":[\"/\",10]},\"tempc\":{\"cond\":[\"manufacturerdata\",22,\"bit\",3,0],\"decoder\":[\"vfhd\",\"manufacturerdata\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"*\",-1]},\"_tempc\":{\"cond\":[\"manufacturerdata\",22,\"bit\",3,1],\"decoder\":[\"vfhd\",\"manufacturerdata\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"-\",128]},\"hum\":{\"decoder\":[\"vfhd\",\"manufacturerdata\",24,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mfhd\",\"manufacturerdata\",4]}}}";
+const char* _SBMT_json_M = "{\"brand\":\"SwitchBot\",\"model\":\"Meter (Plus)\",\"model_id\":\"THX1/W230150X\",\"tag\":\"0100\",\"cond\":[\"name\",\"index\",0,\"WoSensorTH\",\"&\",\"mfd\",\"=\",26],\"properties\":{\".cal\":{\"decoder\":[\"vfhd\",\"mfd\",21,1,false,false],\"post_proc\":[\"/\",10]},\"tempc\":{\"cond\":[\"mfd\",22,\"bit\",3,0],\"decoder\":[\"vfhd\",\"mfd\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"*\",-1]},\"_tempc\":{\"cond\":[\"mfd\",22,\"bit\",3,1],\"decoder\":[\"vfhd\",\"mfd\",22,2,true,false],\"post_proc\":[\"+\",\".cal\",\"-\",128]},\"hum\":{\"decoder\":[\"vfhd\",\"mfd\",24,2,false,false],\"post_proc\":[\"&\",127]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",4]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
    "model":"Meter (Plus)",
    "model_id":"THX1/W230150X",
    "tag":"0100",
-   "cond":["name", "index", 0, "WoSensorTH", "&", "manufacturerdata", "=", 26],
+   "cond":["name", "index", 0, "WoSensorTH", "&", "mfd", "=", 26],
    "properties":{
       ".cal":{
-         "decoder":["vfhd", "manufacturerdata", 21, 1, false, false],
+         "decoder":["vfhd", "mfd", 21, 1, false, false],
          "post_proc":["/", 10]
       },
       "tempc":{
-         "cond":["manufacturerdata", 22, "bit", 3, 0],
-         "decoder":["vfhd", "manufacturerdata", 22, 2, true, false],
+         "cond":["mfd", 22, "bit", 3, 0],
+         "decoder":["vfhd", "mfd", 22, 2, true, false],
          "post_proc":["+", ".cal", "*", -1]
       },
       "_tempc":{
-         "cond":["manufacturerdata", 22, "bit", 3, 1],
-         "decoder":["vfhd", "manufacturerdata", 22, 2, true, false],
+         "cond":["mfd", 22, "bit", 3, 1],
+         "decoder":["vfhd", "mfd", 22, 2, true, false],
          "post_proc":["+", ".cal", "-", 128]
       },
       "hum":{ 
-         "decoder":["vfhd", "manufacturerdata", 24, 2, false, false],
+         "decoder":["vfhd", "mfd", 24, 2, false, false],
          "post_proc":["&", 127]
       },
       "mac":{
-         "decoder":["mfhd", "manufacturerdata", 4]
+         "decoder":["mfhd", "mfd", 4]
       }
    }
 })"""";*/
