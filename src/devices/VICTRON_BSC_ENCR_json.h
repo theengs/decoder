@@ -1,4 +1,4 @@
-const char* _VICTBSC_ENCR_json = "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger encrypted\",\"model_id\":\"VICTBSC_ENCR\",\"tag\":\"140003\",\"cond\":[\"manufacturerdata\",\"=\",46,\"index\",0,\"e10210\",\"&\",\"manufacturerdata\",\"index\",12,\"08\"],\"properties\":{\"cipher\":{\"decoder\":[\"string_from_hex_data\",\"manufacturerdata\",20,26]},\"ctr\":{\"decoder\":[\"string_from_hex_data\",\"manufacturerdata\",14,4,true]},\"mic\":{\"decoder\":[\"string_from_hex_data\",\"manufacturerdata\",18,2]}}}";
+const char* _VICTBSC_ENCR_json = "{\"brand\":\"Victron Energy\",\"model\":\"Blue Smart Charger encrypted\",\"model_id\":\"VICTBSC_ENCR\",\"tag\":\"140003\",\"cond\":[\"manufacturerdata\",\"=\",46,\"index\",0,\"e10210\",\"&\",\"manufacturerdata\",\"index\",12,\"08\"],\"properties\":{\"cipher\":{\"decoder\":[\"sfhd\",\"manufacturerdata\",20,26]},\"ctr\":{\"decoder\":[\"sfhd\",\"manufacturerdata\",14,4,true]},\"mic\":{\"decoder\":[\"sfhd\",\"manufacturerdata\",18,2]}}}";
 /*R""""(
 {
    "brand":"Victron Energy",
@@ -8,13 +8,13 @@ const char* _VICTBSC_ENCR_json = "{\"brand\":\"Victron Energy\",\"model\":\"Blue
    "cond":["manufacturerdata", "=", 46, "index", 0, "e10210", "&", "manufacturerdata", "index", 12, "08"],
    "properties":{
       "cipher":{
-         "decoder":["string_from_hex_data", "manufacturerdata", 20, 26]
+         "decoder":["sfhd", "manufacturerdata", 20, 26]
       },
       "ctr":{
-         "decoder":["string_from_hex_data", "manufacturerdata", 14, 4, true]
+         "decoder":["sfhd", "manufacturerdata", 14, 4, true]
       },
       "mic":{
-         "decoder":["string_from_hex_data", "manufacturerdata", 18, 2]
+         "decoder":["sfhd", "manufacturerdata", 18, 2]
       }
    }
 })"""";*/

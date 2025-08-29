@@ -1,4 +1,4 @@
-const char* _SBMO_003Z_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion encrypted\",\"model_id\":\"SBMO_003Z_ENCR\",\"tag\":\"040602\",\"cond\":[\"servicedata\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBMO-\"],\"properties\":{\"cipher\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",2,20]},\"ctr\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",22,8]},\"mic\":{\"decoder\":[\"string_from_hex_data\",\"servicedata\",30,8]},\"mac\":{\"cond\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmac_from_hex_data\",\"manufacturerdata\",18]}}}";
+const char* _SBMO_003Z_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Motion encrypted\",\"model_id\":\"SBMO_003Z_ENCR\",\"tag\":\"040602\",\"cond\":[\"servicedata\",\"index\",0,\"45\",\"&\",\"uuid\",\"index\",0,\"fcd2\",\"&\",\"name\",\"index\",0,\"SBMO-\"],\"properties\":{\"cipher\":{\"decoder\":[\"sfhd\",\"servicedata\",2,20]},\"ctr\":{\"decoder\":[\"sfhd\",\"servicedata\",22,8]},\"mic\":{\"decoder\":[\"sfhd\",\"servicedata\",30,8]},\"mac\":{\"cond\":[\"manufacturerdata\",\"=\",30],\"decoder\":[\"revmac_from_hex_data\",\"manufacturerdata\",18]}}}";
 /*R""""(
 {
    "brand":"Shelly",
@@ -8,13 +8,13 @@ const char* _SBMO_003Z_ENCR_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU 
    "cond":["servicedata", "index", 0, "45", "&", "uuid", "index", 0, "fcd2", "&", "name", "index", 0, "SBMO-"],
    "properties":{
       "cipher":{
-         "decoder":["string_from_hex_data", "servicedata", 2, 20]
+         "decoder":["sfhd", "servicedata", 2, 20]
       },
       "ctr":{
-         "decoder":["string_from_hex_data", "servicedata", 22, 8]
+         "decoder":["sfhd", "servicedata", 22, 8]
       },
       "mic":{
-         "decoder":["string_from_hex_data", "servicedata", 30, 8]
+         "decoder":["sfhd", "servicedata", 30, 8]
       },
       "mac":{
          "cond":["manufacturerdata", "=", 30],

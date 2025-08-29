@@ -868,7 +868,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               jsondata[sanitizeJsonKey(kv.key().c_str())] = decoder[1];
               success = i_main;
             }
-          } else if (strstr((const char*)decoder[0], "string_from_hex_data") != nullptr) {
+          } else if (strstr((const char*)decoder[0], "sfhd") != nullptr) {
             const char* src = svc_data;
             if (strstr((const char*)decoder[1], MFG_DATA)) {
               src = mfg_data;
