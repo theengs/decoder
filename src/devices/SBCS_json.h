@@ -1,11 +1,11 @@
-const char* _SBCS_json = "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"tag\":\"0406\",\"cond\":[\"uuid\",\"index\",0,\"0d00\",\"|\",\"uuid\",\"index\",0,\"fd3d\",\"&\",\"svd\",\"=\",18,\"index\",0,\"64\"],\"properties\":{\"contact\":{\"cond\":[\"svd\",7,\"bit\",2,0],\"decoder\":[\"bit_static_value\",\"svd\",7,1,\"closed\",\"open\"]},\"_contact\":{\"cond\":[\"svd\",7,\"bit\",2,1],\"decoder\":[\"static_value\",\"timeout not closed\"]},\"motion\":{\"decoder\":[\"bit_static_value\",\"svd\",2,2,false,true]},\"lightlevel\":{\"decoder\":[\"bit_static_value\",\"svd\",7,0,\"dark\",\"bright\"]},\"scopetested\":{\"decoder\":[\"bit_static_value\",\"svd\",2,3,false,true]},\"in_ct\":{\"decoder\":[\"vfhd\",\"svd\",16,1,false,false],\"post_proc\":[\">\",2]},\"out_ct\":{\"decoder\":[\"vfhd\",\"svd\",16,1,false,false],\"post_proc\":[\"&\",3]},\"push_ct\":{\"decoder\":[\"vfhd\",\"svd\",17,1,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"svd\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
+const char* _SBCS_json = "{\"brand\":\"SwitchBot\",\"model\":\"Contact Sensor\",\"model_id\":\"W120150X\",\"tag\":\"0406\",\"cond\":[\"uuid\",\"ind\",0,\"0d00\",\"|\",\"uuid\",\"ind\",0,\"fd3d\",\"&\",\"svd\",\"=\",18,\"ind\",0,\"64\"],\"properties\":{\"contact\":{\"cond\":[\"svd\",7,\"bit\",2,0],\"decoder\":[\"bit_static_value\",\"svd\",7,1,\"closed\",\"open\"]},\"_contact\":{\"cond\":[\"svd\",7,\"bit\",2,1],\"decoder\":[\"static_value\",\"timeout not closed\"]},\"motion\":{\"decoder\":[\"bit_static_value\",\"svd\",2,2,false,true]},\"lightlevel\":{\"decoder\":[\"bit_static_value\",\"svd\",7,0,\"dark\",\"bright\"]},\"scopetested\":{\"decoder\":[\"bit_static_value\",\"svd\",2,3,false,true]},\"in_ct\":{\"decoder\":[\"vfhd\",\"svd\",16,1,false,false],\"post_proc\":[\">\",2]},\"out_ct\":{\"decoder\":[\"vfhd\",\"svd\",16,1,false,false],\"post_proc\":[\"&\",3]},\"push_ct\":{\"decoder\":[\"vfhd\",\"svd\",17,1,false,false]},\"batt\":{\"decoder\":[\"vfhd\",\"svd\",4,2,false,false],\"post_proc\":[\"&\",127]}}}";
 /*R""""(
 {
    "brand":"SwitchBot",
    "model":"Contact Sensor",
    "model_id":"W120150X",
    "tag":"0406",
-   "cond":["uuid", "index", 0, "0d00", "|", "uuid", "index", 0, "fd3d", "&", "svd", "=", 18, "index", 0, "64"],
+   "cond":["uuid", "ind", 0, "0d00", "|", "uuid", "ind", 0, "fd3d", "&", "svd", "=", 18, "ind", 0, "64"],
    "properties":{
       "contact":{
          "cond":["svd", 7, "bit", 2, 0],

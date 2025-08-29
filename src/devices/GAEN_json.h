@@ -1,4 +1,4 @@
-const char* _GAEN_json = "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"tag\":\"fe\",\"cond\":[\"uuid\",\"index\",0,\"fd6f\"],\"properties\":{\"rpi\":{\"decoder\":[\"sfhd\",\"svd\",0,32]},\"aem\":{\"decoder\":[\"sfhd\",\"svd\",32,8]}}}";
+const char* _GAEN_json = "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\":\"GAEN\",\"tag\":\"fe\",\"cond\":[\"uuid\",\"ind\",0,\"fd6f\"],\"properties\":{\"rpi\":{\"decoder\":[\"sfhd\",\"svd\",0,32]},\"aem\":{\"decoder\":[\"sfhd\",\"svd\",32,8]}}}";
 
 /*R""""(
 {
@@ -6,7 +6,7 @@ const char* _GAEN_json = "{\"brand\":\"GENERIC\",\"model\":\"GAEN\",\"model_id\"
    "model":"GAEN",
    "model_id":"GAEN",
    "tag":"fe",
-   "cond":["uuid", "index", 0, "fd6f"],
+   "cond":["uuid", "ind", 0, "fd6f"],
    "properties":{
       "rpi":{
          "decoder":["sfhd", "svd", 0, 32]

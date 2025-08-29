@@ -1,11 +1,11 @@
-const char* _Miband_json = "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"tag\":\"0b0a\",\"cond\":[\"mfd\",\"=\",52,\"index\",0,\"5701\",\"&\",\"mfd\",\"mac@index\",40],\"conditionnomac\":[\"uuid\",\"contain\",\"fee0\"],\"properties\":{\"steps\":{\"cond\":[\"svd\",\"=\",8],\"decoder\":[\"vfhd\",\"svd\",0,4,true,false]},\"act_bpm\":{\"cond\":[\"mfd\",0,\"570102\",\"&\",\"mfd\",10,\"!\",\"f\"],\"decoder\":[\"vfhd\",\"mfd\",10,2,false,false]},\"device\":{\"decoder\":[\"static_value\",\"Xiaomi/Amazfit Tracker\"]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",40]}}}";
+const char* _Miband_json = "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"tag\":\"0b0a\",\"cond\":[\"mfd\",\"=\",52,\"ind\",0,\"5701\",\"&\",\"mfd\",\"mac@index\",40],\"conditionnomac\":[\"uuid\",\"contain\",\"fee0\"],\"properties\":{\"steps\":{\"cond\":[\"svd\",\"=\",8],\"decoder\":[\"vfhd\",\"svd\",0,4,true,false]},\"act_bpm\":{\"cond\":[\"mfd\",0,\"570102\",\"&\",\"mfd\",10,\"!\",\"f\"],\"decoder\":[\"vfhd\",\"mfd\",10,2,false,false]},\"device\":{\"decoder\":[\"static_value\",\"Xiaomi/Amazfit Tracker\"]},\"mac\":{\"decoder\":[\"mfhd\",\"mfd\",40]}}}";
 /*R""""(
 {
    "brand":"Xiaomi/Amazfit",
    "model":"Mi Band/Smart Watch",
    "model_id":"MB/SW",
    "tag":"0b0a",
-   "cond":["mfd", "=", 52, "index", 0, "5701", "&", "mfd", "mac@index", 40],
+   "cond":["mfd", "=", 52, "ind", 0, "5701", "&", "mfd", "mac@index", 40],
    "conditionnomac":["uuid", "contain", "fee0"],
    "properties":{
       "steps":{

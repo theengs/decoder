@@ -314,7 +314,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
         }
 
         i++;
-      } else if (strstr(cond_str, "index") != nullptr) {
+      } else if (strstr(cond_str, "ind") != nullptr) {
         size_t cond_index = condition[++i].as<size_t>();
         size_t cond_len = strlen(condition[++i].as<const char*>());
 

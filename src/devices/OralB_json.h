@@ -1,11 +1,11 @@
-const char* _OralB_json = "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"tag\":\"0b\",\"cond\":[\"mfd\",\">=\",22,\"index\",0,\"dc00\"],\"properties\":{\"state\":{\"decoder\":[\"sfhd\",\"mfd\",10,2],\"lookup\":[\"01\",\"initialising\",\"02\",\"idle\",\"03\",\"running\",\"04\",\"charging\",\"73\",\"sleeping\"]},\"mode\":{\"decoder\":[\"sfhd\",\"mfd\",18,2],\"lookup\":[\"00\",\"off\",\"01\",\"daily clean\",\"02\",\"sensitive\",\"03\",\"massage\",\"04\",\"whitening\",\"05\",\"deep clean\",\"06\",\"tongue cleaning\",\"07\",\"turbo\"]},\"sector\":{\"decoder\":[\"sfhd\",\"mfd\",20,2],\"lookup\":[\"01\",1,\"02\",2,\"03\",3,\"04\",4,\"05\",5,\"06\",6,\"07\",7,\"08\",8]},\"pressure\":{\"decoder\":[\"vfhd\",\"mfd\",12,2,false,false]},\".cal\":{\"decoder\":[\"vfhd\",\"mfd\",16,2,false,false]},\"duration\":{\"decoder\":[\"vfhd\",\"mfd\",14,2,false,false],\"post_proc\":[\"*\",60,\"+\",\".cal\"]}}}";
+const char* _OralB_json = "{\"brand\":\"Oral-B\",\"model\":\"BT Toothbrush\",\"model_id\":\"ORALB_BT\",\"tag\":\"0b\",\"cond\":[\"mfd\",\">=\",22,\"ind\",0,\"dc00\"],\"properties\":{\"state\":{\"decoder\":[\"sfhd\",\"mfd\",10,2],\"lookup\":[\"01\",\"initialising\",\"02\",\"idle\",\"03\",\"running\",\"04\",\"charging\",\"73\",\"sleeping\"]},\"mode\":{\"decoder\":[\"sfhd\",\"mfd\",18,2],\"lookup\":[\"00\",\"off\",\"01\",\"daily clean\",\"02\",\"sensitive\",\"03\",\"massage\",\"04\",\"whitening\",\"05\",\"deep clean\",\"06\",\"tongue cleaning\",\"07\",\"turbo\"]},\"sector\":{\"decoder\":[\"sfhd\",\"mfd\",20,2],\"lookup\":[\"01\",1,\"02\",2,\"03\",3,\"04\",4,\"05\",5,\"06\",6,\"07\",7,\"08\",8]},\"pressure\":{\"decoder\":[\"vfhd\",\"mfd\",12,2,false,false]},\".cal\":{\"decoder\":[\"vfhd\",\"mfd\",16,2,false,false]},\"duration\":{\"decoder\":[\"vfhd\",\"mfd\",14,2,false,false],\"post_proc\":[\"*\",60,\"+\",\".cal\"]}}}";
 /*R""""(
 {
    "brand":"Oral-B",
    "model":"BT Toothbrush",
    "model_id":"ORALB_BT",
    "tag":"0b",
-   "cond":["mfd", ">=", 22, "index", 0, "dc00"],
+   "cond":["mfd", ">=", 22, "ind", 0, "dc00"],
    "properties":{
       "state":{
         "decoder":["sfhd", "mfd", 10, 2],
