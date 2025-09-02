@@ -106,6 +106,7 @@
 #include "devices/BWBSDOO_json.h"
 #include "devices/BM2_json.h"
 #include "devices/BM6_json.h"
+#include "devices/BRM_json.h"
 #include "devices/TILT_json.h"
 #include "devices/JAALEE_json.h"
 #include "devices/APPLEAIRPODS_json.h"
@@ -226,6 +227,14 @@ const char* _devices[][2] = {
     {_BWBSDOO_json, _BWBSDOO_json_props},
     {_BM2_json, _BM2_json_props},
     {_BM6_json, _BM6_json_props},
+    {_BRM_json_W, _BRM_json_props},
+    {_BRM_json_W3, _BRM_json_props},
+    {_BRM_json_W5, _BRM_json_props},
+    {_BRM_json_XLR, _BRM_json_props},
+    {_BRM_json_TH, _BRM_json_props},
+    {_BRM_json_TH2, _BRM_json_props},
+    {_BRM_json_T, _BRM_json_props},
+    {_BRM_json_TH3, _BRM_json_props},
     {_TILT_json, _TILT_json_props},
     {_RDL52832_json, _RDL52832_json_props},
     {_ABN03_json, _ABN03_json_props},
