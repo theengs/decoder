@@ -128,6 +128,7 @@ public:
     HHCCPOT002,
     HOBOMX2001,
     BPARASITE,
+    BPARASITEV2,
     BWBSDOO,
     BM2,
     BM6,
