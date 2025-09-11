@@ -378,6 +378,9 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet_2\":129,\"volt\":3.034,\"power\":1,\"open\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"be07860de133b342\",\"ctr\":\"23020000\",\"mic\":\"50dea27d\"}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"613c80e969f052\",\"ctr\":\"a9000000\",\"mic\":\"77b39384\"}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":26.55,\"tempf\":79.79,\"hum\":51,\"moi\":0,\"lux\":0,\"batt\":100,\"volt\":3.016}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":27.68,\"tempf\":81.824,\"hum\":73,\"moi\":66,\"lux\":0,\"batt\":100,\"volt\":3.016}",
+    "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":30.36,\"tempf\":86.648,\"hum\":85,\"moi\":74,\"lux\":8392,\"batt\":100,\"volt\":3.005}",
 };
 
 const char* expected_uuid[] = {
@@ -1214,6 +1217,9 @@ const char* test_uuid_name_svcdata[][4] = {
     {"LYWSD03MMC_PVVX_BTHOME_2", "0xfcd2", "ATC_112233", "4000810cda0b10011101"},
     {"LYWSD03MMC_PVVX_BTHOME_1_ENCR", "0xfcd2", "ATC_77B4FC", "41be07860de133b3422302000050dea27d"},  // MAC Address A4:C1:38:77:B4:FC - AES Key 00112233445566778899001122334455
     {"LYWSD03MMC_PVVX_BTHOME_2_ENCR", "0xfcd2", "ATC_77B4FC", "41613c80e969f052a900000077b39384"},  // MAC Address A4:C1:38:77:B4:FC - AES Key 00112233445566778899001122334455
+    {"bParasiteV2", "0xfcd2", "prst", "400164025f0a050000000cc80b2e332f00"},
+    {"bParasiteV2", "0xfcd2", "prst", "40016402d00a050000000cc80b2e492f42"},
+    {"bParasiteV2", "0xfcd2", "prst", "40016402dc0b0520ce0c0cbd0b2e552f4a"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -1314,6 +1320,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME,
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_1_ENCR,
     TheengsDecoder::BLE_ID_NUM::LYWSD03MMC_PVVX_BTHOME_2_ENCR,
+    TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
+    TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
+    TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
@@ -1355,9 +1364,6 @@ const char* test_uuid[][4] = {
     {"bParasite", "181a", "servicedata", "11c30b8658aca6666b85aabbccddeeff30d4"},
     {"bParasite", "181a", "servicedata", "20c30c1c0a00e6667fffaabbccddeeff"},
     {"bParasite", "181a", "servicedata", "21c30b8608dea6666b85aabbccddeeff30d4"},
-    {"bParasiteV2", "fcd2", "servicedata", "400164025f0a050000000cc80b2e332f00"},
-    {"bParasiteV2", "fcd2", "servicedata", "40016402d00a050000000cc80b2e492f42"},
-    {"bParasiteV2", "fcd2", "servicedata", "40016402dc0b0520ce0c0cbd0b2e552f4a"},
     {"Switchbot_Curtain", "0d00", "servicedata", "63c04c1970"},
     {"Switchbot_Curtain", "0d00", "servicedata", "63805599a0"},
     {"ClearGrass clock", "fe95", "servicedata", "70205b0475ffeeddccbbaa090410020001"},
