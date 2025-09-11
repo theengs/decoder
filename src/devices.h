@@ -103,6 +103,7 @@
 #include "devices/BM3IN1_json.h"
 #include "devices/BM4IN1_json.h"
 #include "devices/BPARASITE_json.h"
+#include "devices/BPARASITEV2_json.h"
 #include "devices/BWBSDOO_json.h"
 #include "devices/BM2_json.h"
 #include "devices/BM6_json.h"
@@ -223,6 +224,7 @@ const char* _devices[][2] = {
     {_HHCCPOT002_json, _HHCCPOT002_json_props},
     {_HOBOMX2001_json, _HOBOMX2001_json_props},
     {_BPARASITE_json, _BPARASITE_json_props},
+    {_BPARASITEV2_json, _BPARASITEV2_json_props},
     {_BWBSDOO_json, _BWBSDOO_json_props},
     {_BM2_json, _BM2_json_props},
     {_BM6_json, _BM6_json_props},
