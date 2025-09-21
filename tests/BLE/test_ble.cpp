@@ -228,6 +228,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179_N\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":25.5,\"tempf\":77.9,\"hum\":43,\"batt\":100}", 
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179_N\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":28.5,\"tempf\":83.3,\"hum\":6.8,\"batt\":100}",
     "{\"brand\":\"Govee\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"H5179_N\",\"type\":\"THB\",\"cidc\":false,\"acts\":true,\"tempc\":22.9,\"tempf\":73.22,\"hum\":56.4,\"batt\":100}",
+    "{\"brand\":\"GENERIC\",\"model\":\"BR TPMS\",\"model_id\":\"TPMSBR\",\"type\":\"TIRE\",\"cidc\":false,\"acts\":true,\"tempc\":16,\"tempf\":60.8,\"pres\":1.917241379,\"volt\":3}",
+    "{\"brand\":\"GENERIC\",\"model\":\"BR TPMS\",\"model_id\":\"TPMSBR\",\"type\":\"TIRE\",\"cidc\":false,\"acts\":true,\"tempc\":15,\"tempf\":59,\"pres\":1.917241379,\"volt\":3}",
+    "{\"brand\":\"GENERIC\",\"model\":\"BR TPMS\",\"model_id\":\"TPMSBR\",\"type\":\"TIRE\",\"cidc\":false,\"acts\":true,\"tempc\":20,\"tempf\":68,\"pres\":1.351724138,\"volt\":3}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -806,6 +809,9 @@ const char* test_mfgdata[][3] = {
     {"H5179", "GV5179_1763", "0100010103e5c664"},
     {"H5179", "GV5179_1763", "0100010104598c64"},
     {"H5179", "GV5179_1763", "010001010380bc64"},
+    {"YPMS BR", "BR_1234", "401e1001a79692"},
+    {"YPMS BR", "BR_1234", "401e0f01a70ffa"},
+    {"YPMS BR", "BR_1234", "281e1401558536"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1017,6 +1023,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::H5179_N,
     TheengsDecoder::BLE_ID_NUM::H5179_N,
     TheengsDecoder::BLE_ID_NUM::H5179_N,
+    TheengsDecoder::BLE_ID_NUM::TPMSBR,
+    TheengsDecoder::BLE_ID_NUM::TPMSBR,
+    TheengsDecoder::BLE_ID_NUM::TPMSBR,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

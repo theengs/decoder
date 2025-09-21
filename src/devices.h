@@ -78,6 +78,7 @@
 #include "devices/Skale_json.h"
 #include "devices/SmartDry_json.h"
 #include "devices/TPMS_json.h"
+#include "devices/TPMSBR_json.h"
 #include "devices/KKM_K6P_json.h"
 #include "devices/KKM_K9_json.h"
 #include "devices/ThermoBeacon_json.h"
@@ -171,6 +172,7 @@ const char* _devices[][2] = {
     {_XMTZC05HMKG_json, _XMTZC05HMKG_json_props},
     {_XMTZC05HMLB_json, _XMTZC05HMLB_json_props},
     {_TPMS_json, _TPMS_json_props},
+    {_TPMSBR_json, _TPMSBR_json_props},
     {_KKM_K6P_json, _KKM_K6P_json_props},
     {_KKM_K9_json, _KKM_K9_json_props},
     {_LYWSD03MMC_json_ATC, _LYWSD03MMC_json_props},
