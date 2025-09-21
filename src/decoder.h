@@ -75,6 +75,7 @@ public:
     XMTZC05HMKG,
     XMTZC05HMLB,
     TPMS,
+    TPMSBR,
     KKM_K6P,
     KKM_K9,
     LYWSD03MMC_ATC,
