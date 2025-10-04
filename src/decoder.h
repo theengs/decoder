@@ -180,6 +180,8 @@ public:
     VICTORIONXS,
     VICTSBP_ENCR,
     VICTSBP,
+    VICTSBSBMSS_ENCR,
+    VICTSBS,
     SE_RHT,
     SE_TEMP,
     SE_TPROBE,

@@ -126,6 +126,8 @@
 #include "devices/VICTRON_ORIONXS_json.h"
 #include "devices/VICTRON_SBP_ENCR_json.h"
 #include "devices/VICTRON_SBP_json.h"
+#include "devices/VICTRON_SBSBMSS_ENCR_json.h"
+#include "devices/VICTRON_SBS_json.h"
 #include "devices/SE_RHT_json.h"
 #include "devices/SE_TEMP_json.h"
 #include "devices/SE_TPROBE_json.h"
@@ -277,6 +279,8 @@ const char* _devices[][2] = {
     {_VICTORIONXS_json, _VICTORIONXS_json_props},
     {_VICTSBP_ENCR_json, _VICTSBP_ENCR_json_props},
     {_VICTSBP_json, _VICTSBP_json_props},
+    {_VICTSBSBMSS_ENCR_json, _VICTSBSBMSS_ENCR_json_props},
+    {_VICTSBS_json, _VICTSBS_json_props},
     {_SE_RHT_json, _SE_RHT_json_props},
     {_SE_TEMP_json, _SE_TEMP_json_props},
     {_SE_TPROBE_json, _SE_TPROBE_json_props},
