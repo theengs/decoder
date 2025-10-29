@@ -9,7 +9,7 @@ x = {
   "mac_type": 0,
   "adv_type": 0,
   "name": "eufy T9146",
-  "manufacturerdata": "cfe50c0301eccf0000460500000001008d5d9146",
+  "manufacturerdata": "cfe50c0301eccfa2128c232624540100874a9146",
   "rssi": -61
 }
 z = dble(json.dumps(x))
