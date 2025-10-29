@@ -4,6 +4,14 @@ from TheengsDecoder import getAttribute
 import json
 
 x = {"servicedata":"712098004a63b6658d7cc40d071003f32600"}
+x = {
+  "id": "CF:E5:0C:03:01:EC",
+  "mac_type": 0,
+  "adv_type": 0,
+  "name": "eufy T9146",
+  "manufacturerdata": "cfe50c0301eccf0000460500000001008d5d9146",
+  "rssi": -61
+}
 z = dble(json.dumps(x))
 print(z, "\n")
 
