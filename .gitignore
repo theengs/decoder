@@ -10,3 +10,4 @@
 .cmake
 _skbuild
 dist
+/.idea/*
