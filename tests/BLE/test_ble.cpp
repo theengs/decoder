@@ -393,6 +393,9 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":26.55,\"tempf\":79.79,\"hum\":51,\"moi\":0,\"lux\":0,\"batt\":100,\"volt\":3.016}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":27.68,\"tempf\":81.824,\"hum\":73,\"moi\":66,\"lux\":0,\"batt\":100,\"volt\":3.016}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":30.36,\"tempf\":86.648,\"hum\":85,\"moi\":74,\"lux\":8392,\"batt\":100,\"volt\":3.005}",
+    "{\"brand\":\"Tuya\",\"model\":\"BTH01 Thermo-Hygrometer\",\"model_id\":\"BTH01\",\"type\":\"THB\",\"acts\":true,\"packet\":21,\"tempc\":25.42,\"tempf\":77.756,\"hum\":38.42,\"batt\":100,\"volt\":3.112}",
+    "{\"brand\":\"Tuya\",\"model\":\"BTH01 Thermo-Hygrometer\",\"model_id\":\"BTH01\",\"type\":\"THB\",\"acts\":true,\"packet\":28,\"tempc\":25.34,\"tempf\":77.612,\"hum\":38.26,\"batt\":100,\"volt\":3.12}",
+    "{\"brand\":\"Tuya\",\"model\":\"BTH01 Thermo-Hygrometer\",\"model_id\":\"BTH01\",\"type\":\"THB\",\"acts\":true,\"packet\":97,\"tempc\":28.01,\"tempf\":82.418,\"hum\":85.48,\"batt\":100,\"volt\":3.13}",
 };
 
 const char* expected_uuid[] = {
@@ -1256,6 +1259,9 @@ const char* test_uuid_name_svcdata[][4] = {
     {"bParasiteV2", "0xfcd2", "prst", "400164025f0a050000000cc80b2e332f00"},
     {"bParasiteV2", "0xfcd2", "prst", "40016402d00a050000000cc80b2e492f42"},
     {"bParasiteV2", "0xfcd2", "prst", "40016402dc0b0520ce0c0cbd0b2e552f4a"},
+    {"BTH01 PVVX", "0xfcd2", "BTH01-DDEEFF", "400015016402ee0903020f0c280c"},
+    {"BTH01 PVVX", "0xfcd2", "BTH01-DDEEFF", "40001c016402e60903f20e0c300c"},
+    {"BTH01 PVVX", "0xfcd2", "BTH01-DDEEFF", "400061016402f10a0364210c3a0c"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -1359,6 +1365,9 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
+    TheengsDecoder::BLE_ID_NUM::BTH01,
+    TheengsDecoder::BLE_ID_NUM::BTH01,
+    TheengsDecoder::BLE_ID_NUM::BTH01,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]

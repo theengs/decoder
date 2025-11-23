@@ -96,6 +96,7 @@
 #include "devices/T201_json.h"
 #include "devices/T301_json.h"
 #include "devices/THB1_json.h"
+#include "devices/BTH01_json.h"
 #include "devices/tracker_json.h"
 #include "devices/iNodeEM_json.h"
 #include "devices/ARANET4_json.h"
@@ -246,6 +247,7 @@ const char* _devices[][2] = {
     {_T201_json, _T201_json_props},
     {_T301_json, _T301_json_props},
     {_THB1_json, _THB1_json_props},
+    {_BTH01_json, _BTH01_json_props},
     {_tracker_json_nut, _tracker_json_props},
     {_tracker_json_nutale, _tracker_json_props},
     {_tracker_json_itag, _tracker_json_props},
