@@ -393,6 +393,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":26.55,\"tempf\":79.79,\"hum\":51,\"moi\":0,\"lux\":0,\"batt\":100,\"volt\":3.016}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":27.68,\"tempf\":81.824,\"hum\":73,\"moi\":66,\"lux\":0,\"batt\":100,\"volt\":3.016}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":30.36,\"tempf\":86.648,\"hum\":85,\"moi\":74,\"lux\":8392,\"batt\":100,\"volt\":3.005}",
+    "{\"brand\":\"Tuya\",\"model\":\"TH05F Thermo-Hygrometer\",\"model_id\":\"TH05F\",\"type\":\"THB\",\"acts\":true,\"packet\":163,\"tempc\":26.92,\"tempf\":80.456,\"hum\":67.06,\"batt\":81,\"volt\":2.814}",
 };
 
 const char* expected_uuid[] = {
@@ -1256,6 +1257,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"bParasiteV2", "0xfcd2", "prst", "400164025f0a050000000cc80b2e332f00"},
     {"bParasiteV2", "0xfcd2", "prst", "40016402d00a050000000cc80b2e492f42"},
     {"bParasiteV2", "0xfcd2", "prst", "40016402dc0b0520ce0c0cbd0b2e552f4a"},
+    {"TH05F PVVX", "0xfcd2", "TH05F-C451CC", "4000a3015102840a03321a0cfe0a"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -1359,6 +1361,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
+    TheengsDecoder::BLE_ID_NUM::TH05F,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
