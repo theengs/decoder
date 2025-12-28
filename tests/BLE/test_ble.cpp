@@ -385,7 +385,7 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":true,\"cont\":true}",
     "{\"brand\":\"Sensor Easy\",\"model\":\"SE MAG\",\"model_id\":\"SE_MAG\",\"type\":\"CTMO\",\"open\":false,\"cont\":true}",
     "{\"brand\":\"SwitchBot\",\"model\":\"Outdoor Meter\",\"model_id\":\"W340001X\",\"type\":\"THB\",\"batt\":65}",
-    "{\"brand\":\"Tuya\",\"model\":\"THB1 Thermo-Hygrometer\",\"model_id\":\"THB1\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
+    "{\"brand\":\"Tuya\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"THB1/BTH01/TH05F\",\"type\":\"THB\",\"acts\":true,\"packet\":239,\"tempc\":17.94,\"tempf\":64.292,\"hum\":60.72,\"batt\":74,\"volt\":2.748}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet_1\":132,\"tempc\":20.79,\"tempf\":69.422,\"hum\":71.88,\"batt\":100}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME\",\"type\":\"THB\",\"acts\":true,\"packet_2\":129,\"volt\":3.034,\"power\":1,\"open\":1}",
     "{\"brand\":\"Xiaomi\",\"model\":\"TH Sensor\",\"model_id\":\"LYWSD03MMC/MJWSD05MMC_PVVX_BTHOME_ENCR\",\"type\":\"THB\",\"acts\":true,\"encr\":2,\"cipher\":\"be07860de133b342\",\"ctr\":\"23020000\",\"mic\":\"50dea27d\"}",
@@ -393,9 +393,10 @@ const char* expected_uuid_name_svcdata[] = {
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":26.55,\"tempf\":79.79,\"hum\":51,\"moi\":0,\"lux\":0,\"batt\":100,\"volt\":3.016}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":27.68,\"tempf\":81.824,\"hum\":73,\"moi\":66,\"lux\":0,\"batt\":100,\"volt\":3.016}",
     "{\"brand\":\"rbaron\",\"model\":\"b-parasite\",\"model_id\":\"BPv2.0\",\"type\":\"PLANT\",\"acts\":true,\"tempc\":30.36,\"tempf\":86.648,\"hum\":85,\"moi\":74,\"lux\":8392,\"batt\":100,\"volt\":3.005}",
-    "{\"brand\":\"Tuya\",\"model\":\"BTH01 Thermo-Hygrometer\",\"model_id\":\"BTH01\",\"type\":\"THB\",\"acts\":true,\"packet\":21,\"tempc\":25.42,\"tempf\":77.756,\"hum\":38.42,\"batt\":100,\"volt\":3.112}",
-    "{\"brand\":\"Tuya\",\"model\":\"BTH01 Thermo-Hygrometer\",\"model_id\":\"BTH01\",\"type\":\"THB\",\"acts\":true,\"packet\":28,\"tempc\":25.34,\"tempf\":77.612,\"hum\":38.26,\"batt\":100,\"volt\":3.12}",
-    "{\"brand\":\"Tuya\",\"model\":\"BTH01 Thermo-Hygrometer\",\"model_id\":\"BTH01\",\"type\":\"THB\",\"acts\":true,\"packet\":97,\"tempc\":28.01,\"tempf\":82.418,\"hum\":85.48,\"batt\":100,\"volt\":3.13}",
+    "{\"brand\":\"Tuya\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"THB1/BTH01/TH05F\",\"type\":\"THB\",\"acts\":true,\"packet\":21,\"tempc\":25.42,\"tempf\":77.756,\"hum\":38.42,\"batt\":100,\"volt\":3.112}",
+    "{\"brand\":\"Tuya\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"THB1/BTH01/TH05F\",\"type\":\"THB\",\"acts\":true,\"packet\":28,\"tempc\":25.34,\"tempf\":77.612,\"hum\":38.26,\"batt\":100,\"volt\":3.12}",
+    "{\"brand\":\"Tuya\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"THB1/BTH01/TH05F\",\"type\":\"THB\",\"acts\":true,\"packet\":97,\"tempc\":28.01,\"tempf\":82.418,\"hum\":85.48,\"batt\":100,\"volt\":3.13}",
+    "{\"brand\":\"Tuya\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"THB1/BTH01/TH05F\",\"type\":\"THB\",\"acts\":true,\"packet\":163,\"tempc\":26.92,\"tempf\":80.456,\"hum\":67.06,\"batt\":81,\"volt\":2.814}",
 };
 
 const char* expected_uuid[] = {
@@ -1262,6 +1263,7 @@ const char* test_uuid_name_svcdata[][4] = {
     {"BTH01 PVVX", "0xfcd2", "BTH01-DDEEFF", "400015016402ee0903020f0c280c"},
     {"BTH01 PVVX", "0xfcd2", "BTH01-DDEEFF", "40001c016402e60903f20e0c300c"},
     {"BTH01 PVVX", "0xfcd2", "BTH01-DDEEFF", "400061016402f10a0364210c3a0c"},
+    {"TH05F PVVX", "0xfcd2", "TH05F-C451CC", "4000a3015102840a03321a0cfe0a"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
@@ -1365,9 +1367,10 @@ TheengsDecoder::BLE_ID_NUM test_uuid_name_svcdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
     TheengsDecoder::BLE_ID_NUM::BPARASITEV2,
-    TheengsDecoder::BLE_ID_NUM::BTH01,
-    TheengsDecoder::BLE_ID_NUM::BTH01,
-    TheengsDecoder::BLE_ID_NUM::BTH01,
+    TheengsDecoder::BLE_ID_NUM::THB1,
+    TheengsDecoder::BLE_ID_NUM::THB1,
+    TheengsDecoder::BLE_ID_NUM::THB1,
+    TheengsDecoder::BLE_ID_NUM::THB1,
 };
 
 // uuid test input [test name] [uuid] [data source] [data]
