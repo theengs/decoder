@@ -237,6 +237,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart Battery Sense\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"volt\":12.99,\"tempc\":17.5,\"tempf\":63.5,\"alarm_reason\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart Battery Sense\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"volt\":14.01,\"tempc\":17.5,\"tempf\":63.5,\"alarm_reason\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Smart Battery Sense\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"volt\":12.22,\"tempc\":22.5,\"tempf\":72.5,\"alarm_reason\":0}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":26.1311,\"tempf\":79.03598,\"hum\":31.1,\"co2\":1100}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":15.56,\"tempf\":60.008,\"hum\":60,\"co2\":500}",
+    "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":23.8048,\"tempf\":74.84864,\"hum\":4.8,\"co2\":1700}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -828,6 +831,9 @@ const char* test_mfgdata[][3] = {
     {"Victron Smart Battery Sense", "",                         "e1021180a5a302ffff7bffff130500008971feff7fffffffff"},
     {"Victron Smart Battery Sense", "",                         "e1021180a5a302ffff7bffff790500008971feff7fffffffff"},
     {"Victron Smart Battery Sense", "",                         "e1021100a4a302ffff7cffffc60400007d73feff7fffffffff"},
+    {"H5140", "GV5140_1234", "0100010103fcbf044c00"},
+    {"H5140", "GV5140_1234", "01000101025fd001f400"},
+    {"H5140", "GV5140_1234", "0100010103a1e006a400"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1048,6 +1054,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VICTSBS,
     TheengsDecoder::BLE_ID_NUM::VICTSBS,
     TheengsDecoder::BLE_ID_NUM::VICTSBS,
+    TheengsDecoder::BLE_ID_NUM::H5140,
+    TheengsDecoder::BLE_ID_NUM::H5140,
+    TheengsDecoder::BLE_ID_NUM::H5140,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
