@@ -1,10 +1,10 @@
-const char* _H5140_json = "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"tag\":\"0301\",\"condition\":[\"name\",\"contain\",\"GV5140\",\"&\",\"manufacturerdata\",\">=\",20,\"index\",0,\"01000101\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"/\",10000]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"&\",2147483647,\"%\",1000,\"/\",10]},\"co2\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,false,false]}}}";
+const char* _H5140_json = "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"tag\":\"0f02\",\"condition\":[\"name\",\"contain\",\"GV5140\",\"&\",\"manufacturerdata\",\">=\",20,\"index\",0,\"01000101\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"/\",10000]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"&\",2147483647,\"%\",1000,\"/\",10]},\"co2\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,false,false]}}}";
 /* R""""(
 {
    "brand":"Govee",
    "model":"Smart CO2 Monitor",
    "model_id":"H5140",
-   "tag":"0301",
+   "tag":"0f02",
    "condition":["name", "contain", "GV5140", "&", "manufacturerdata", ">=", 20, "index", 0, "01000101"],
    "properties":{
       "tempc":{
@@ -49,7 +49,7 @@ const char* _H5140_json = "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",
  * Tested with OpenMQTTGateway on ESP32
  */
 
-const char* _H5140_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"co2\":{\"unit\":\"ppm\",\"name\":\"co2\"}}}";
+const char* _H5140_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"name\":\"temperature\"},\"hum\":{\"unit\":\"%\",\"name\":\"humidity\"},\"co2\":{\"unit\":\"ppm\",\"name\":\"carbon_dioxide\"}}}";
 /*R""""(
 {
    "properties":{
@@ -63,7 +63,7 @@ const char* _H5140_json_props = "{\"properties\":{\"tempc\":{\"unit\":\"°C\",\"
       },
       "co2":{
          "unit":"ppm",
-         "name":"co2"
+         "name":"carbon_dioxide"
       }
    }
 })"""";*/
