@@ -1,10 +1,10 @@
-const char* _H5140_json = "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"tag\":\"0f02\",\"condition\":[\"name\",\"contain\",\"GV5140\",\"&\",\"manufacturerdata\",\">=\",20,\"index\",0,\"01000101\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"/\",10000]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"&\",2147483647,\"%\",1000,\"/\",10]},\"co2\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,false,false]}}}";
+const char* _H5140_json = "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"tag\":\"0f03\",\"condition\":[\"name\",\"contain\",\"GV5140\",\"&\",\"manufacturerdata\",\">=\",20,\"index\",0,\"01000101\"],\"properties\":{\"tempc\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"/\",10000]},\"hum\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",8,6,false,false],\"post_proc\":[\"&\",2147483647,\"%\",1000,\"/\",10]},\"co2\":{\"decoder\":[\"value_from_hex_data\",\"manufacturerdata\",14,4,false,false]}}}";
 /* R""""(
 {
    "brand":"Govee",
    "model":"Smart CO2 Monitor",
    "model_id":"H5140",
-   "tag":"0f02",
+   "tag":"0f03",
    "condition":["name", "contain", "GV5140", "&", "manufacturerdata", ">=", 20, "index", 0, "01000101"],
    "properties":{
       "tempc":{
