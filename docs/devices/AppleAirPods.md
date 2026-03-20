@@ -8,7 +8,7 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|Rechargeable battery|
-|Exchanged Data|model version, color, status, (left, right, case) battery level*, (left, right, case) charging state|
+|Exchanged Data|model version, color, (left, right, case) battery level*, (left, right, case) charging state|
 |Encrypted|No|
 |Device Tracker|&#9989;|
 
