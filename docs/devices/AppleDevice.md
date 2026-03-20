@@ -8,7 +8,7 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|Rechargeable battery|
-|Exchanged Data|unlocked|
+|Exchanged Data|~~unlocked~~|
 |Encrypted|No|
 |Device Tracker|&#9989;|
 
