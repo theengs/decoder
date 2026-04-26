@@ -1,0 +1,29 @@
+.VPNavBarTitle .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Full-width layout for pages containing the DevicesTable */
+.VPDoc:has(.devices-table) {
+  padding: 32px 32px 96px !important;
+}
+
+.VPDoc:has(.devices-table) .container {
+  max-width: 100% !important;
+}
+
+.VPDoc:has(.devices-table) .content {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.VPDoc:has(.devices-table) .content-container {
+  max-width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .VPDoc:has(.devices-table) {
+    padding: 24px 16px 64px !important;
+  }
+}

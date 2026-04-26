@@ -1,9 +1,14 @@
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "gen:commonconfig": "curl -sSf -o docs/.vitepress/public/commonConfig.js https://www.theengs.io/commonConfig.js",
+    "gen:devices": "cd docs/devices && python generate_devices_tables.py",
+    "docs:dev": "npm run gen:commonconfig && npm run gen:devices && vitepress dev docs",
+    "docs:build": "npm run gen:commonconfig && npm run gen:devices && vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "vuepress": "^1.9.7"
+    "medium-zoom": "^1.1.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.31"
   }
 }

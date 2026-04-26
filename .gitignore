@@ -10,3 +10,10 @@
 .cmake
 _skbuild
 dist
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/public/commonConfig.js
+docs/.vitepress/public/img/
+docs/.vitepress/data/devices.json
+docs/devices/_app_devices.md
+generated/
