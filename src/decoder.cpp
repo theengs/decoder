@@ -274,23 +274,44 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
       } else if (strstr(cond_str, "mac@index") != nullptr) {
         size_t cond_index = condition[++i].as<size_t>();
         size_t cond_len = 12;
-        const char* string_to_compare = nullptr;
-        std::string mac_string = mac_id;
+        char normalized_mac[13];   // 12 hex chars + null terminator
+        char reverse_mac_string[13];
+        const char* string_to_compare = normalized_mac;
 
-        // remove colons and make lower case
-        for (int x = 0; x < mac_string.length(); x++) {
-          if (mac_string[x] == ':') {
-            mac_string.erase(x, 1);
-          }
-          mac_string[x] = tolower(mac_string[x]);
+        // Bail out cleanly on missing mac_id; passing nullptr to
+        // std::string's constructor (as the previous implementation
+        // did) is undefined behaviour.
+        if (mac_id == nullptr) {
+          DEBUG_PRINT("mac_id is null; skipping mac@index\n");
+          match = false;
+          break;
         }
 
-        string_to_compare = mac_string.c_str();
+        // Normalize mac_id: strip colons, lowercase hex, into a
+        // fixed-size stack buffer. The previous implementation built
+        // a std::string and then erased colons in place while
+        // simultaneously indexing past the just-erased position;
+        // that pattern triggered a miscompile under aggressive LTO
+        // on at least one toolchain (Android NDK Clang 19, observed
+        // to silently return false from this entire branch).
+        size_t out = 0;
+        for (const char* p = mac_id; *p != '\0' && out < cond_len; ++p) {
+          if (*p != ':') {
+            normalized_mac[out++] = (char)tolower((unsigned char)*p);
+          }
+        }
+        if (out != cond_len) {
+          // mac_id had fewer than 12 hex chars after stripping colons,
+          // so a 12-char comparison cannot match.
+          DEBUG_PRINT("mac_id %s has fewer than 12 hex chars; skipping\n", mac_id);
+          match = false;
+          break;
+        }
+        normalized_mac[cond_len] = '\0';
 
         if (strstr(cond_str, "revmac@index") != nullptr) {
-          char reverse_mac_string[13]; // 12 bytes + null terminator
-          reverse_hex_data(string_to_compare, reverse_mac_string, 12);
-          reverse_mac_string[12] = '\0'; // Ensure null termination
+          reverse_hex_data(normalized_mac, reverse_mac_string, (int)cond_len);
+          reverse_mac_string[cond_len] = '\0';
           string_to_compare = reverse_mac_string;
         }
 
@@ -305,7 +326,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
                     string_to_compare,
                     cond_index);
 
-        if (strncmp(&cmp_str[cond_index], string_to_compare, 12) == 0) {
+        if (strncmp(&cmp_str[cond_index], string_to_compare, cond_len) == 0) {
           match = true;
         } else {
           match = false;
