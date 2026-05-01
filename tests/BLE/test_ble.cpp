@@ -240,6 +240,10 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":26.1311,\"tempf\":79.03598,\"hum\":31.1,\"co2\":1100}",
     "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":15.56,\"tempf\":60.008,\"hum\":60,\"co2\":500}",
     "{\"brand\":\"Govee\",\"model\":\"Smart CO2 Monitor\",\"model_id\":\"H5140\",\"type\":\"AIR\",\"cidc\":false,\"acts\":true,\"tempc\":23.8048,\"tempf\":74.84864,\"hum\":4.8,\"co2\":1700}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Victron encrypted\",\"model_id\":\"VICTRON_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"a8874c8374ab762a302ee3fc\",\"ctr\":\"0535\",\"mic\":\"13\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Victron encrypted\",\"model_id\":\"VICTRON_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"9b17c12f82e66b50ccc629e5\",\"ctr\":\"66a7\",\"mic\":\"13\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Solar Charge Controller\",\"model_id\":\"VICTSCC\",\"type\":\"ENRG\",\"track\":true,\"device_state\":\"off\",\"volt_batt\":13.28,\"current_batt\":0,\"yield_today\":0.01,\"pv_power\":0,\"current_load\":0,\"error_code\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Solar Charge Controller\",\"model_id\":\"VICTSCC\",\"type\":\"ENRG\",\"track\":true,\"device_state\":\"absorption\",\"volt_batt\":14.18,\"current_batt\":0,\"yield_today\":0.01,\"pv_power\":1,\"current_load\":0.1,\"error_code\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -834,6 +838,10 @@ const char* test_mfgdata[][3] = {
     {"H5140", "GV5140_1234", "0100010103fcbf044c00"},
     {"H5140", "GV5140_1234", "01000101025fd001f400"},
     {"H5140", "GV5140_1234", "0100010103a1e006a400"},
+    {"Victron MPPT 75/15 ENCR", "", "e102108275a001053513a8874c8374ab762a302ee3fc"},
+    {"Victron MPPT 75/15 ENCR", "", "e102108275a00166a7139b17c12f82e66b50ccc629e5"},
+    {"Victron MPPT 75/15", "", "e102118275a001ffff130000300500000100000000fe"},
+    {"Victron MPPT 75/15", "", "e102118275a001ffff1304008a0500000100010001fe"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1057,6 +1065,10 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::H5140,
     TheengsDecoder::BLE_ID_NUM::H5140,
     TheengsDecoder::BLE_ID_NUM::H5140,
+    TheengsDecoder::BLE_ID_NUM::VICTRON_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTRON_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTSCC,
+    TheengsDecoder::BLE_ID_NUM::VICTSCC,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
