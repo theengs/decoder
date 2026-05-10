@@ -1,0 +1,46 @@
+{
+  "name": "node-red-contrib-theengs-decoder",
+  "version": "0.1.0",
+  "description": "Node-RED node to decode BLE advertisements using Theengs Decoder.",
+  "keywords": [
+    "node-red",
+    "theengs",
+    "ble",
+    "bluetooth",
+    "decoder",
+    "iot",
+    "home-automation"
+  ],
+  "homepage": "https://decoder.theengs.io/",
+  "bugs": "https://github.com/theengs/decoder/issues",
+  "license": "GPL-3.0-only",
+  "author": "Theengs",
+  "main": "theengs-decode.js",
+  "files": [
+    "theengs-decode.js",
+    "theengs-decode.html",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "node-red": {
+    "version": ">=2.0.0",
+    "nodes": {
+      "theengs-decode": "theengs-decode.js"
+    }
+  },
+  "dependencies": {
+    "theengs-decoder": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theengs/decoder.git",
+    "directory": "nodejs/node-red-contrib-theengs-decoder"
+  }
+}

@@ -1,0 +1,64 @@
+<script type="text/javascript">
+  RED.nodes.registerType('theengs-decode', {
+    category: 'function',
+    color: '#3A8FE0',
+    defaults: {
+      name: { value: '' },
+      passOnNoMatch: { value: true }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: 'font-awesome/fa-bluetooth',
+    label: function () {
+      return this.name || 'theengs decode';
+    },
+    paletteLabel: 'theengs decode'
+  });
+</script>
+
+<script type="text/html" data-template-name="theengs-decode">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <input type="checkbox" id="node-input-passOnNoMatch"
+           style="display:inline-block; width:auto; vertical-align:top;">
+    <label for="node-input-passOnNoMatch" style="width:auto;">
+      Pass message through unchanged when no decoder matches
+    </label>
+  </div>
+</script>
+
+<script type="text/html" data-help-name="theengs-decode">
+  <p>Decodes BLE advertisement messages using
+     <a href="https://decoder.theengs.io/">Theengs Decoder</a>.</p>
+
+  <h3>Inputs</h3>
+  <dl class="message-properties">
+    <dt>payload <span class="property-type">object | string</span></dt>
+    <dd>A BLE advertisement with at least one of <code>servicedata</code> or
+        <code>manufacturerdata</code> (hex string), and optionally
+        <code>id</code> and <code>name</code>. A JSON string is also accepted.</dd>
+  </dl>
+
+  <h3>Outputs</h3>
+  <dl class="message-properties">
+    <dt>payload <span class="property-type">object</span></dt>
+    <dd>The decoded device information including <code>brand</code>,
+        <code>model</code>, <code>model_id</code>, and any device-specific
+        readings (temperature, humidity, battery, …).</dd>
+  </dl>
+
+  <h3>Configuration</h3>
+  <dl class="message-properties">
+    <dt>Pass through on no match</dt>
+    <dd>When checked (default), messages that no decoder matches are
+        forwarded unchanged so downstream nodes can still see them. When
+        unchecked, unmatched messages are dropped.</dd>
+  </dl>
+
+  <h3>Details</h3>
+  <p>The decoder runs as WebAssembly, so no native build toolchain is
+     required to install this node.</p>
+</script>

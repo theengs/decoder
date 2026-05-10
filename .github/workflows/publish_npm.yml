@@ -1,0 +1,81 @@
+name: Publish to npm
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish (e.g. 2.2.0). Defaults to the release tag.'
+        required: false
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    name: Build and publish Node packages to npm
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Set up Emscripten
+      uses: mymindstorm/setup-emsdk@v14
+      with:
+        version: 3.1.61
+        actions-cache-folder: emsdk-cache
+
+    - name: Resolve publish version
+      id: version
+      env:
+        INPUT_VERSION: ${{ github.event.inputs.version }}
+        REF_NAME: ${{ github.ref_name }}
+      run: |
+        if [ -n "$INPUT_VERSION" ]; then
+          VERSION="$INPUT_VERSION"
+        else
+          VERSION="${REF_NAME#v}"
+        fi
+        echo "Publishing version: $VERSION"
+        echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+    - name: Stamp package versions
+      env:
+        VERSION: ${{ steps.version.outputs.version }}
+      run: |
+        cd nodejs/theengs-decoder
+        npm version "$VERSION" --no-git-tag-version --allow-same-version
+        cd ../node-red-contrib-theengs-decoder
+        npm version "$VERSION" --no-git-tag-version --allow-same-version
+        npm pkg set "dependencies.theengs-decoder=$VERSION"
+
+    - name: Build WebAssembly module
+      working-directory: nodejs/theengs-decoder
+      run: |
+        npm install --ignore-scripts
+        npm run build
+
+    - name: Run base package tests
+      working-directory: nodejs/theengs-decoder
+      run: npm test
+
+    - name: Publish theengs-decoder to npm
+      working-directory: nodejs/theengs-decoder
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npm publish --provenance --access public
+
+    - name: Publish node-red-contrib-theengs-decoder to npm
+      working-directory: nodejs/node-red-contrib-theengs-decoder
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: npm publish --provenance --access public

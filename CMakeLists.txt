@@ -20,6 +20,27 @@ if(SKBUILD)
     target_compile_features(_decoder PRIVATE cxx_std_11)
     install(TARGETS _decoder LIBRARY DESTINATION TheengsDecoder)
 
+elseif(BUILD_WASM)
+    message(STATUS "Building WebAssembly module via Emscripten")
+
+    add_executable(theengs_decoder_wasm
+        nodejs/theengs-decoder/src/wasm_bindings.cc
+        src/decoder.cpp
+    )
+
+    target_include_directories(theengs_decoder_wasm
+        PRIVATE
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/arduino_json/src
+            ${CMAKE_CURRENT_SOURCE_DIR}/src
+    )
+
+    target_compile_features(theengs_decoder_wasm PRIVATE cxx_std_17)
+
+    set_target_properties(theengs_decoder_wasm PROPERTIES
+        SUFFIX ".js"
+        LINK_FLAGS "-lembind -sMODULARIZE=1 -sEXPORT_NAME=createTheengsDecoderModule -sENVIRONMENT=node -sALLOW_MEMORY_GROWTH=1 -sSINGLE_FILE=1 -sNODEJS_CATCH_EXIT=0 -sNODEJS_CATCH_REJECTION=0"
+    )
+
 else()
 
     add_library(decoder

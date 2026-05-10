@@ -160,3 +160,38 @@ jobs:
       with:
         name: python-package
         path: python/dist/*
+
+  nodejs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    - name: Set up Emscripten
+      uses: mymindstorm/setup-emsdk@v14
+      with:
+        version: 3.1.61
+        actions-cache-folder: emsdk-cache
+    - name: Build WebAssembly module
+      working-directory: nodejs/theengs-decoder
+      run: |
+        npm install --ignore-scripts
+        npm run build
+    - name: Run base package tests
+      working-directory: nodejs/theengs-decoder
+      run: npm test
+    - name: Run Node-RED wrapper tests
+      working-directory: nodejs/node-red-contrib-theengs-decoder
+      run: |
+        # The wrapper's only dependency is the locally-built base package,
+        # which isn't on npm yet at PR time, so install it directly.
+        npm install --no-save ../theengs-decoder
+        npm test
+    - uses: actions/upload-artifact@v4
+      with:
+        name: nodejs-wasm
+        path: nodejs/theengs-decoder/dist/*

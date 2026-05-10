@@ -31,7 +31,9 @@ export default defineConfig({
         items: [
           { text: 'Using the library in a project', link: '/use/include' },
           { text: 'Using with ESP32', link: '/use/ESP32' },
-          { text: 'Using with Python', link: '/use/python' }
+          { text: 'Using with Python', link: '/use/python' },
+          { text: 'Using with Node.js', link: '/use/nodejs' },
+          { text: 'Using with Node-RED', link: '/use/node-red' }
         ]
       },
       {
