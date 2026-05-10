@@ -1,0 +1,55 @@
+[
+  {
+    "id": "theengs-example-tab",
+    "type": "tab",
+    "label": "Theengs Decoder",
+    "disabled": false,
+    "info": "Sample flow that injects a Xiaomi RoPot BLE advertisement, decodes it with the theengs-decode node, and prints the result to the debug pane."
+  },
+  {
+    "id": "theengs-example-inject",
+    "type": "inject",
+    "z": "theengs-example-tab",
+    "name": "RoPot sample",
+    "props": [
+      { "p": "payload" }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "{\"servicedata\":\"71205d0183d20c6d8d7cc40d08100103\"}",
+    "payloadType": "json",
+    "x": 160,
+    "y": 120,
+    "wires": [["theengs-example-decode"]]
+  },
+  {
+    "id": "theengs-example-decode",
+    "type": "theengs-decode",
+    "z": "theengs-example-tab",
+    "name": "",
+    "passOnNoMatch": true,
+    "x": 380,
+    "y": 120,
+    "wires": [["theengs-example-debug"]]
+  },
+  {
+    "id": "theengs-example-debug",
+    "type": "debug",
+    "z": "theengs-example-tab",
+    "name": "decoded",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 580,
+    "y": 120,
+    "wires": []
+  }
+]

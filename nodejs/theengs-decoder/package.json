@@ -1,0 +1,41 @@
+{
+  "name": "theengs-decoder",
+  "version": "0.1.0",
+  "description": "Decode BLE advertisements from supported sensors and devices using TheengsDecoder, in Node.js via WebAssembly.",
+  "keywords": [
+    "theengs",
+    "ble",
+    "bluetooth",
+    "decoder",
+    "iot",
+    "wasm",
+    "webassembly",
+    "bluetooth-low-energy"
+  ],
+  "homepage": "https://decoder.theengs.io/",
+  "bugs": "https://github.com/theengs/decoder/issues",
+  "license": "GPL-3.0-only",
+  "author": "Theengs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theengs/decoder.git",
+    "directory": "nodejs/theengs-decoder"
+  }
+}
