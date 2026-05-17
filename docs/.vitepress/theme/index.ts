@@ -3,12 +3,14 @@ import mediumZoom from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vitepress'
 import DevicesTable from '../components/DevicesTable.vue'
+import WebParser from '../components/WebParser.vue'
 import './custom.css'
 
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('DevicesTable', DevicesTable)
+    app.component('WebParser', WebParser)
   },
   setup() {
     const route = useRoute()

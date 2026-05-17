@@ -28,6 +28,7 @@
   ],
   "scripts": {
     "build": "node scripts/build.js",
+    "build:web": "node scripts/build-web.js",
     "test": "node --test test/*.test.js"
   },
   "engines": {
