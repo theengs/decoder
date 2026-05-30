@@ -38,7 +38,7 @@ elseif(BUILD_WASM)
 
     set_target_properties(theengs_decoder_wasm PROPERTIES
         SUFFIX ".js"
-        LINK_FLAGS "-lembind -sMODULARIZE=1 -sEXPORT_NAME=createTheengsDecoderModule -sENVIRONMENT=node -sALLOW_MEMORY_GROWTH=1 -sSINGLE_FILE=1 -sNODEJS_CATCH_EXIT=0 -sNODEJS_CATCH_REJECTION=0"
+        LINK_FLAGS "-lembind -sMODULARIZE=1 -sEXPORT_NAME=createTheengsDecoderModule -sENVIRONMENT=web,node -sALLOW_MEMORY_GROWTH=1 -sSINGLE_FILE=1 -sNODEJS_CATCH_EXIT=0 -sNODEJS_CATCH_REJECTION=0"
     )
 
 else()
