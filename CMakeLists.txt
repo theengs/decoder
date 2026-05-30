@@ -36,30 +36,13 @@ elseif(BUILD_WASM)
 
     target_compile_features(theengs_decoder_wasm PRIVATE cxx_std_17)
 
+    # Single ES6 module that runs in the browser, web workers and Node.js.
+    # The .mjs suffix lets Node load it as an ES module even though the npm
+    # package itself is CommonJS. SINGLE_FILE inlines the wasm so the same
+    # artifact is shipped to npm (dist/) and to the docs site (public/wasm/).
     set_target_properties(theengs_decoder_wasm PROPERTIES
-        SUFFIX ".js"
-        LINK_FLAGS "-lembind -sMODULARIZE=1 -sEXPORT_NAME=createTheengsDecoderModule -sENVIRONMENT=node -sALLOW_MEMORY_GROWTH=1 -sSINGLE_FILE=1 -sNODEJS_CATCH_EXIT=0 -sNODEJS_CATCH_REJECTION=0"
-    )
-
-elseif(BUILD_WASM_WEB)
-    message(STATUS "Building WebAssembly module via Emscripten (browser target)")
-
-    add_executable(theengs_decoder_web
-        nodejs/theengs-decoder/src/wasm_bindings.cc
-        src/decoder.cpp
-    )
-
-    target_include_directories(theengs_decoder_web
-        PRIVATE
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/arduino_json/src
-            ${CMAKE_CURRENT_SOURCE_DIR}/src
-    )
-
-    target_compile_features(theengs_decoder_web PRIVATE cxx_std_17)
-
-    set_target_properties(theengs_decoder_web PROPERTIES
-        SUFFIX ".js"
-        LINK_FLAGS "-lembind -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=createTheengsDecoderModule -sENVIRONMENT=web,worker -sALLOW_MEMORY_GROWTH=1 -sSINGLE_FILE=1"
+        SUFFIX ".mjs"
+        LINK_FLAGS "-lembind -sMODULARIZE=1 -sEXPORT_ES6=1 -sEXPORT_NAME=createTheengsDecoderModule -sENVIRONMENT=web,worker,node -sALLOW_MEMORY_GROWTH=1 -sSINGLE_FILE=1 -sNODEJS_CATCH_EXIT=0 -sNODEJS_CATCH_REJECTION=0"
     )
 
 else()

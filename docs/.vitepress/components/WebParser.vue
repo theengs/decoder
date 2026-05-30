@@ -24,7 +24,7 @@ async function loadDecoder() {
   status.value = 'loading'
   try {
     const base = (import.meta as any).env?.BASE_URL ?? '/'
-    const path = `${base}wasm/theengs_decoder_web.js`
+    const path = `${base}wasm/theengs_decoder_wasm.mjs`
     const absoluteUrl = new URL(path, window.location.href).href
     const shimSource = `export { default } from ${JSON.stringify(absoluteUrl)}`
     const blob = new Blob([shimSource], { type: 'application/javascript' })

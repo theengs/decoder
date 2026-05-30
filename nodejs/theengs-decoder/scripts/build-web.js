@@ -15,12 +15,12 @@ mkdirSync(outDir, { recursive: true });
 const run = (cmd, args) =>
   execFileSync(cmd, args, { cwd: buildDir, stdio: 'inherit' });
 
-run('emcmake', ['cmake', '-DBUILD_WASM_WEB=ON', repoRoot]);
-run('emmake', ['make', 'theengs_decoder_web', '-j']);
+run('emcmake', ['cmake', '-DBUILD_WASM=ON', repoRoot]);
+run('emmake', ['make', 'theengs_decoder_wasm', '-j']);
 
 copyFileSync(
-  path.join(buildDir, 'theengs_decoder_web.js'),
-  path.join(outDir, 'theengs_decoder_web.js'),
+  path.join(buildDir, 'theengs_decoder_wasm.mjs'),
+  path.join(outDir, 'theengs_decoder_wasm.mjs'),
 );
 
-console.log(`Built ${path.relative(repoRoot, path.join(outDir, 'theengs_decoder_web.js'))}`);
+console.log(`Built ${path.relative(repoRoot, path.join(outDir, 'theengs_decoder_wasm.mjs'))}`);

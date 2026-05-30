@@ -19,8 +19,8 @@ run('emcmake', ['cmake', '-DBUILD_WASM=ON', repoRoot]);
 run('emmake', ['make', 'theengs_decoder_wasm', '-j']);
 
 copyFileSync(
-  path.join(buildDir, 'theengs_decoder_wasm.js'),
-  path.join(distDir, 'theengs_decoder_wasm.js'),
+  path.join(buildDir, 'theengs_decoder_wasm.mjs'),
+  path.join(distDir, 'theengs_decoder_wasm.mjs'),
 );
 
-console.log('Built dist/theengs_decoder_wasm.js');
+console.log('Built dist/theengs_decoder_wasm.mjs');
