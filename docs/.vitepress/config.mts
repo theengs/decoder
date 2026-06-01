@@ -45,7 +45,8 @@ export default defineConfig({
           { text: 'Development contributions', link: '/participate/development' }
         ]
       },
-      { text: 'Compatible devices', link: '/devices/devices' }
+      { text: 'Compatible devices', link: '/devices/devices' },
+      { text: 'Web Parser', link: '/parser' }
     ],
     search: { provider: 'local' }
   },

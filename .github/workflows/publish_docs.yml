@@ -22,6 +22,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pandas markdown pytablereader tabulate
           npm install
+      - name: Set up Emscripten
+        uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: 3.1.61
+          actions-cache-folder: emsdk-cache
+      - name: Build browser WebAssembly decoder
+        run: npm run build:web
+        working-directory: nodejs/theengs-decoder
       - name: Build documentation
         run: |
           npm run docs:build

@@ -1,12 +1,21 @@
 'use strict';
 
+const path = require('node:path');
+const { pathToFileURL } = require('node:url');
+
 let _modulePromise = null;
 let _decoderInstance = null;
 
 function _loadModule() {
   if (!_modulePromise) {
-    const createModule = require('./dist/theengs_decoder_wasm.js');
-    _modulePromise = createModule();
+    // The wasm glue is an ES module (.mjs); load it via dynamic import so it
+    // works from this CommonJS package without changing the public API.
+    const moduleUrl = pathToFileURL(
+      path.join(__dirname, 'dist', 'theengs_decoder_wasm.mjs'),
+    ).href;
+    _modulePromise = import(moduleUrl).then(({ default: createModule }) =>
+      createModule(),
+    );
   }
   return _modulePromise;
 }
