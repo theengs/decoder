@@ -28,6 +28,9 @@ jobs:
         node-version: '20'
         registry-url: 'https://registry.npmjs.org'
 
+    - name: Upgrade npm for Trusted Publishing
+      run: npm install -g npm@latest
+
     - name: Set up Emscripten
       uses: mymindstorm/setup-emsdk@v14
       with:
@@ -70,12 +73,8 @@ jobs:
 
     - name: Publish theengs-decoder to npm
       working-directory: nodejs/theengs-decoder
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npm publish --provenance --access public
 
     - name: Publish node-red-contrib-theengs-decoder to npm
       working-directory: nodejs/node-red-contrib-theengs-decoder
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npm publish --provenance --access public
