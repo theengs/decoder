@@ -48,118 +48,56 @@ Each device should also have an encoded **tag** property to, at the minimum, def
 <table>
     <thead>
         <tr>
-            <th colspan=3>tag encoding</th>
+            <th colspan="3">tag encoding</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td rowspan=24>Byte[0]</td>
-            <td rowspan=24>Device Type > "type":</td>
-            <td rowspan=1>0 - Reserved</td>
+            <td rowspan="24">Byte[0]</td>
+            <td rowspan="24">Device Type > "type":</td>
+            <td>0 - Reserved</td>
         </tr>
+        <tr><td>1 - THB - temperature, humidity, battery</td></tr>
+        <tr><td>2 - THBX - temperature, humidity, battery, extras</td></tr>
+        <tr><td>3 - BBQ - temperatures with several probes</td></tr>
+        <tr><td>4 - CTMO - contact and/or motion sensors</td></tr>
+        <tr><td>5 - SCALE - weight scales</td></tr>
+        <tr><td>6 - BCON - iBeacon protocol</td></tr>
+        <tr><td>7 - ACEL - acceleration</td></tr>
+        <tr><td>8 - BATT - battery</td></tr>
+        <tr><td>9 - PLANT - plant sensors</td></tr>
+        <tr><td>10 - TIRE - tire pressure monitoring system</td></tr>
+        <tr><td>11 - BODY - health monitoring devices</td></tr>
+        <tr><td>12 - ENRG - energy monitoring devices</td></tr>
+        <tr><td>13 - WCVR - window covering devices</td></tr>
+        <tr><td>14 - ACTR - ON/OFF actuators</td></tr>
+        <tr><td>15 - AIR - air environmental monitoring devices</td></tr>
+        <tr><td>16 - TRACK - bluetooth tracker</td></tr>
+        <tr><td>17 - BTN - button</td></tr>
+        <tr><td>18 - AUDIO - audio devices</td></tr>
+        <tr><td>19 - WIND - wind speed anemometers</td></tr>
+        <tr><td>20 - ENRG - energy producing, monitoring and storing devices</td></tr>
+        <tr><td>20-253 - Reserved for future use</td></tr>
+        <tr><td>254 - RMAC - known random MAC address devices</td></tr>
+        <tr><td>255 - UNIQ - unique devices</td></tr>
         <tr>
-            <td rowspan=1>1 - THB - temperature, humidity, battery</td>
+            <td rowspan="7">Byte[1]</td>
+            <td rowspan="7">Additional properties</td>
+            <td>Bits[7-6] - Reserved</td>
         </tr>
+        <tr><td>Bit[5] Devices/actuators which are controllable > "ctrl":</td></tr>
+        <tr><td>Bit[4] Potential RMAC device - if not defined with Identity MAC and IRK in Theengs Gateway > "prmac":</td></tr>
+        <tr><td>Bit[3] Device discoverable as a device tracker > "track":</td></tr>
+        <tr><td>Bit[2] Requires continuous scanning > "cont":</td></tr>
+        <tr><td>Bit[1] Requires active scanning > "acts":</td></tr>
+        <tr><td>Bit[0] Is NOT Company ID compliant > "cidc":</td></tr>
         <tr>
-            <td rowspan=1>2 - THBX - temperature, humidity, battery, extras</td>
+            <td rowspan="3">Byte[2]</td>
+            <td rowspan="3">Encryption Model > "encr":</td>
+            <td>1 - LYWSD03MMC PVVX</td>
         </tr>
-        <tr>
-            <td rowspan=1>3 - BBQ - temperatures with several probes</td>
-        </tr>
-        <tr>
-            <td rowspan=1>4 - CTMO - contact and/or motion sensors</td>
-        </tr>
-        <tr>
-            <td rowspan=1>5 - SCALE - weight scales</td>
-        </tr>
-        <tr>
-            <td rowspan=1>6 - BCON - iBeacon protocol</td>
-        </tr>
-        <tr>
-            <td rowspan=1>7 - ACEL - acceleration</td>
-        </tr>
-        <tr>
-            <td rowspan=1>8 - BATT - battery</td>
-        </tr>
-        <tr>
-            <td rowspan=1>9 - PLANT - plant sensors</td>
-        </tr>
-        <tr>
-            <td rowspan=1>10 - TIRE - tire pressure monitoring system</td>
-        </tr>
-        <tr>
-            <td rowspan=1>11 - BODY - health monitoring devices</td>
-        </tr>
-        <tr>
-            <td rowspan=1>12 - ENRG - energy monitoring devices</td>
-        </tr>
-        <tr>
-            <td rowspan=1>13 - WCVR - window covering devices</td>
-        </tr>
-        <tr>
-            <td rowspan=1>14 - ACTR - ON/OFF actuators</td>
-        </tr>
-        <tr>
-            <td rowspan=1>15 - AIR - air environmental monitoring devices</td>
-        </tr>
-        <tr>
-            <td rowspan=1>16 - TRACK - bluetooth tracker</td>
-        </tr>
-        <tr>
-            <td rowspan=1>17 - BTN - button</td>
-        </tr>
-        <tr>
-            <td rowspan=1>18 - AUDIO - audio devices</td>
-        </tr>
-        <tr>
-            <td rowspan=1>19 - WIND - wind speed anemometers</td>
-        </tr>
-        <tr>
-            <td rowspan=1>20 - ENRG - energy producing, monitoring and storing devices</td>
-        </tr>
-        <tr>
-            <td rowspan=1>20-253 - Reserved for future use</td>
-        </tr>
-        <tr>
-            <td rowspan=1>254 - RMAC - known random MAC address devices</td>
-        </tr>
-        <tr>
-            <td rowspan=1>255 - UNIQ - unique devices</td>
-        </tr>
-		<tr>
-            <td rowspan=8>Byte[1]</td>
-            <td rowspan=8>Additional properties</td>
-            <td rowspan=1>Bits[7-6] - Reserved</td>
-        </tr>
-        <tr>
-            <td rowspan=1>Bit[5] Devices/actuators which are controllable > "ctrl":</td>
-        </tr>
-        <tr>
-            <td rowspan=1>Bit[4] Potential RMAC device - if not defined with Identity MAC and IRK in Theengs Gateway > "prmac":</td>
-        </tr>
-        <tr>
-            <td rowspan=1>Bit[3] Device discoverable as a device tracker > "track":</td>
-        </tr>
-        <tr>
-            <td rowspan=1>Bit[2] Requires continuous scanning > "cont":</td>
-        </tr>
-        <tr>
-            <td rowspan=1>Bit[1] Requires active scanning > "acts":</td>
-        </tr>
-        <tr>
-            <td rowspan=1>Bit[0] Is NOT Company ID compliant > "cidc":</td>
-        </tr>
-        <tr>
-            <td rowspan=3>Byte[2]</td>
-            <td rowspan=3>Encryption Model > "encr":</td>
-            <td rowspan=1>1 - LYWSD03MMC PVVX</td>
-        </tr>
-        <tr>
-            <td rowspan=1>2 - BTHome v2</td>
-        </tr>
-        <tr>
-            <td rowspan=1>3 - Victron Energy</td>
-        </tr>
+        <tr><td>2 - BTHome v2</td></tr>
+        <tr><td>3 - Victron Energy</td></tr>
     </tbody>
 </table>
 
