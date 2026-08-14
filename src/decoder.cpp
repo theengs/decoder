@@ -670,6 +670,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["ctrl"] = true;
             jsondata["ctrl"] = doc["ctrl"];
           }
+
+          if (((data >> 2) & 0x01) == 1) { // BVPP - Battery and/or voltage are primary properties
+            doc.add("bvpp");
+            doc["bvpp"] = true;
+            jsondata["bvpp"] = doc["bvpp"];
+          }
         }
 
         // Octet Byte[2] - Encryption Model

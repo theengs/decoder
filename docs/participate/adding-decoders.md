@@ -81,10 +81,11 @@ Each device should also have an encoded **tag** property to, at the minimum, def
         <tr><td>254 - RMAC - known random MAC address devices</td></tr>
         <tr><td>255 - UNIQ - unique devices</td></tr>
         <tr>
-            <td rowspan="7">Byte[1]</td>
-            <td rowspan="7">Additional properties</td>
-            <td>Bits[7-6] - Reserved</td>
+            <td rowspan="8">Byte[1]</td>
+            <td rowspan="8">Additional properties</td>
+            <td>Bits[7] - Reserved for future use</td>
         </tr>
+        <tr><td>Bit[5] Battery and/or voltage are primary properties > "bvpp":</td></tr>
         <tr><td>Bit[5] Devices/actuators which are controllable > "ctrl":</td></tr>
         <tr><td>Bit[4] Potential RMAC device - if not defined with Identity MAC and IRK in Theengs Gateway > "prmac":</td></tr>
         <tr><td>Bit[3] Device discoverable as a device tracker > "track":</td></tr>
