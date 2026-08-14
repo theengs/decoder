@@ -587,7 +587,7 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             doc["type"] = "BODY"; // health monitoring devices
             break;
           case 12:
-            doc["type"] = "ENRG"; // energy monitoring devices
+            doc["type"] = "ENRG"; // energy producing, monitoring and storing devices
             break;
           case 13:
             doc["type"] = "WCVR"; // window covering
@@ -609,9 +609,6 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             break;
           case 19:
             doc["type"] = "WIND"; // Anemometers
-            break;
-          case 20:
-            doc["type"] = "ENRG"; // Energy
             break;
           case 254:
             doc["type"] = "RMAC"; // random MAC address devices
