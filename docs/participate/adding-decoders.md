@@ -53,8 +53,8 @@ Each device should also have an encoded **tag** property to, at the minimum, def
     </thead>
     <tbody>
         <tr>
-            <td rowspan="24">Byte[0]</td>
-            <td rowspan="24">Device Type > "type":</td>
+            <td rowspan="23">Byte[0]</td>
+            <td rowspan="23">Device Type > "type":</td>
             <td>0 - Reserved</td>
         </tr>
         <tr><td>1 - THB - temperature, humidity, battery</td></tr>
@@ -68,7 +68,7 @@ Each device should also have an encoded **tag** property to, at the minimum, def
         <tr><td>9 - PLANT - plant sensors</td></tr>
         <tr><td>10 - TIRE - tire pressure monitoring system</td></tr>
         <tr><td>11 - BODY - health monitoring devices</td></tr>
-        <tr><td>12 - ENRG - energy monitoring devices</td></tr>
+        <tr><td>12 - ENRG - energy producing, monitoring and storing devices</td></tr>
         <tr><td>13 - WCVR - window covering devices</td></tr>
         <tr><td>14 - ACTR - ON/OFF actuators</td></tr>
         <tr><td>15 - AIR - air environmental monitoring devices</td></tr>
@@ -76,7 +76,6 @@ Each device should also have an encoded **tag** property to, at the minimum, def
         <tr><td>17 - BTN - button</td></tr>
         <tr><td>18 - AUDIO - audio devices</td></tr>
         <tr><td>19 - WIND - wind speed anemometers</td></tr>
-        <tr><td>20 - ENRG - energy producing, monitoring and storing devices</td></tr>
         <tr><td>20-253 - Reserved for future use</td></tr>
         <tr><td>254 - RMAC - known random MAC address devices</td></tr>
         <tr><td>255 - UNIQ - unique devices</td></tr>
@@ -85,7 +84,7 @@ Each device should also have an encoded **tag** property to, at the minimum, def
             <td rowspan="8">Additional properties</td>
             <td>Bits[7] - Reserved for future use</td>
         </tr>
-        <tr><td>Bit[5] Battery and/or voltage are primary properties > "bvpp":</td></tr>
+        <tr><td>Bit[6] Battery and/or voltage are primary properties > "bvpp":</td></tr>
         <tr><td>Bit[5] Devices/actuators which are controllable > "ctrl":</td></tr>
         <tr><td>Bit[4] Potential RMAC device - if not defined with Identity MAC and IRK in Theengs Gateway > "prmac":</td></tr>
         <tr><td>Bit[3] Device discoverable as a device tracker > "track":</td></tr>
