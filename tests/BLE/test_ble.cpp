@@ -244,6 +244,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Victron encrypted\",\"model_id\":\"VICTRON_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"9b17c12f82e66b50ccc629e5\",\"ctr\":\"66a7\",\"mic\":\"13\"}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Solar Charge Controller\",\"model_id\":\"VICTSCC\",\"type\":\"ENRG\",\"track\":true,\"bvpp\":true,\"device_state\":\"off\",\"volt_batt\":13.28,\"current_batt\":0,\"yield_today\":0.01,\"pv_power\":0,\"current_load\":0,\"error_code\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Solar Charge Controller\",\"model_id\":\"VICTSCC\",\"type\":\"ENRG\",\"track\":true,\"bvpp\":true,\"device_state\":\"absorption\",\"volt_batt\":14.18,\"current_batt\":0,\"yield_today\":0.01,\"pv_power\":1,\"current_load\":0.1,\"error_code\":0}",
+    "{\"brand\":\"Schneider Electric\",\"model\":\"Odace WLBL\",\"model_id\":\"S520104\",\"type\":\"BTN\",\"cont\":true,\"uid\":\"005942\",\"action\":\"toggle\"}",
+    "{\"brand\":\"Schneider Electric\",\"model\":\"Odace WLBL\",\"model_id\":\"S520104\",\"type\":\"BTN\",\"cont\":true,\"uid\":\"005942\",\"action\":\"toggle\"}",
+    "{\"brand\":\"Schneider Electric\",\"model\":\"Odace WLBL\",\"model_id\":\"S520104\",\"type\":\"BTN\",\"cont\":true,\"uid\":\"005942\",\"action\":\"toggle\"}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -843,6 +846,9 @@ const char* test_mfgdata[][3] = {
     {"Victron MPPT 75/15 ENCR", "", "e102108275a00166a7139b17c12f82e66b50ccc629e5"},
     {"Victron MPPT 75/15", "", "e102118275a001ffff130000300500000100000000fe"},
     {"Victron MPPT 75/15", "", "e102118275a001ffff1304008a0500000100010001fe"},
+    {"Odace WLBL", "", "b6028e4401010042590001020000040000000000923995c4cc19"},
+    {"Odace WLBL", "", "b6028e4401010042590001020000040000000000232c37285846"},
+    {"Odace WLBL", "", "b6028e44010100425900010200000400000000005b2bd3805d97"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1070,6 +1076,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VICTRON_ENCR,
     TheengsDecoder::BLE_ID_NUM::VICTSCC,
     TheengsDecoder::BLE_ID_NUM::VICTSCC,
+    TheengsDecoder::BLE_ID_NUM::ODACE_WLBL,
+    TheengsDecoder::BLE_ID_NUM::ODACE_WLBL,
+    TheengsDecoder::BLE_ID_NUM::ODACE_WLBL,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

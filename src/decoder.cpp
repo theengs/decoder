@@ -900,6 +900,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
             std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
 
+            if (strstr((const char*)decoder[0], "reverse_") != nullptr) {
+              std::string reversed(value.length(), '\0');
+              reverse_hex_data(value.c_str(), &reversed[0], value.length());
+              value = reversed;
+            }
+
             /* Lookup table */
             if (prop.containsKey("lookup")) {
               JsonArray lookup = prop["lookup"];
