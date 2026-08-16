@@ -131,6 +131,7 @@
 #include "devices/SE_TEMP_json.h"
 #include "devices/SE_TPROBE_json.h"
 #include "devices/SE_MAG_json.h"
+#include "devices/ODACE_WLBL_json.h"
 #include "devices/SBBT_002C_json.h"
 #include "devices/SBBT_002C_ENCR_json.h"
 #include "devices/SBBT_004CEU_US_json.h"
@@ -283,6 +284,7 @@ const char* _devices[][2] = {
     {_SE_TEMP_json, _SE_TEMP_json_props},
     {_SE_TPROBE_json, _SE_TPROBE_json_props},
     {_SE_MAG_json, _SE_MAG_json_props},
+    {_ODACE_WLBL_json, _ODACE_WLBL_json_props},
     {_SBBT_002C_json, _SBBT_002C_json_props},
     {_SBBT_002C_ENCR_json, _SBBT_002C_ENCR_json_props},
     {_SBBT_004CEU_US_json, _SBBT_004CEU_US_json_props},
