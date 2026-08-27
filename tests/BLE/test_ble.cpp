@@ -247,6 +247,9 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Schneider Electric\",\"model\":\"Odace WLBL\",\"model_id\":\"S520104\",\"type\":\"BTN\",\"cont\":true,\"uid\":\"005942\",\"action\":\"toggle\"}",
     "{\"brand\":\"Schneider Electric\",\"model\":\"Odace WLBL\",\"model_id\":\"S520104\",\"type\":\"BTN\",\"cont\":true,\"uid\":\"005942\",\"action\":\"toggle\"}",
     "{\"brand\":\"Schneider Electric\",\"model\":\"Odace WLBL\",\"model_id\":\"S520104\",\"type\":\"BTN\",\"cont\":true,\"uid\":\"005942\",\"action\":\"toggle\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Bat Mon\",\"model_id\":\"VICTRON_BAT_MON\",\"type\":\"ENRG\",\"track\":true,\"bvpp\":true,\"ttg\":14400,\"volt\":13.28,\"alarm_reason\":0,\"aux_voltage\":12.47,\"aux_input\":\"auxiliary voltage\",\"current\":-0.116,\"consumed_ah\":-20.1,\"soc\":92}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Victron encrypted\",\"model_id\":\"VICTRON_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"0751889a5d8c22e24014\",\"ctr\":\"e308\",\"mic\":\"f9\"}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Orion TR\",\"model_id\":\"VICTORIONTR\",\"type\":\"ENRG\",\"track\":true,\"bvpp\":true,\"device_state\":\"off\",\"volt_in\":12.51,\"volt_out\":1.29,\"current_in\":0,\"error_code\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -849,6 +852,9 @@ const char* test_mfgdata[][3] = {
     {"Odace WLBL", "", "b6028e4401010042590001020000040000000000923995c4cc19"},
     {"Odace WLBL", "", "b6028e4401010042590001020000040000000000232c37285846"},
     {"Odace WLBL", "", "b6028e44010100425900010200000400000000005b2bd3805d97"},
+    {"Victron Bat Mon", "", "e102110283a302ffff8d403830050000df0430feffc90080f9"},
+    {"Victron Orion TR Smart ENCR", "", "e1021000d0a304e308f90751889a5d8c22e24014"},
+    {"Victron Orion TR", "", "e1021100d0a304fffff90000e304ff7f81000000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1079,6 +1085,9 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::ODACE_WLBL,
     TheengsDecoder::BLE_ID_NUM::ODACE_WLBL,
     TheengsDecoder::BLE_ID_NUM::ODACE_WLBL,
+    TheengsDecoder::BLE_ID_NUM::VICTRON_BAT_MON,
+    TheengsDecoder::BLE_ID_NUM::VICTRON_ENCR,
+    TheengsDecoder::BLE_ID_NUM::VICTORIONTR,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]

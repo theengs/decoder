@@ -175,8 +175,10 @@ public:
     SPHT,
     SERVICE_DATA,
     UT363BT,
+    VICTRON_BAT_MON,
     VICTRON_ENCR,
     VICTBSC,
+    VICTORIONTR,
     VICTORIONXS,
     VICTSBP,
     VICTSBS,
@@ -202,6 +204,7 @@ public:
 private:
   void        reverse_hex_data(const char* in, char* out, int l);
   double      value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
+  double      value_from_bit_string(const char* data_str, int bit_offset, int bit_length, bool canBeNegative = true);
   double      bf_value_from_hex_string(const char* data_str, int offset, int data_length, bool reverse, bool canBeNegative = true, bool isFloat = false);
   bool        data_index_is_valid(const char* str, size_t index, size_t len);
   bool        data_length_is_valid(size_t data_len, size_t default_min, const JsonArray& condition, int *idx);
