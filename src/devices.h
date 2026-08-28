@@ -121,7 +121,6 @@
 #include "devices/SensorP_HT_json.h"
 #include "devices/ServiceData_json.h"
 #include "devices/UT363BT_json.h"
-#include "devices/VICTRON_BAT_MON_json.h"
 #include "devices/VICTRON__ENCR_json.h"
 #include "devices/VICTRON_BSC_json.h"
 #include "devices/VICTRON_ORIONTR_json.h"
@@ -276,7 +275,6 @@ const char* _devices[][2] = {
     {_SensorPush_HT_json, _SensorPush_HT_json_props},
     {_ServiceData_json, _ServiceData_json_props},
     {_UT363BT_json, _UT363BT_json_props},
-    {_VICTRON_BAT_MON_json, _VICTRON_BAT_MON_json_props},
     {_VICTRON_ENCR_json, _VICTRON_ENCR_json_props},
     {_VICTBSC_json, _VICTBSC_json_props},
     {_VICTORIONTR_json, _VICTORIONTR_json_props},
