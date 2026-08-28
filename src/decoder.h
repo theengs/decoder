@@ -175,7 +175,6 @@ public:
     SPHT,
     SERVICE_DATA,
     UT363BT,
-    VICTRON_BAT_MON,
     VICTRON_ENCR,
     VICTBSC,
     VICTORIONTR,
