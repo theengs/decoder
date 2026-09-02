@@ -1,6 +1,6 @@
 # Victron Energy SmartShunt
 
-|Model Id|[VICTSBS](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_SBS_json.h)|
+|Model Id|[VICTSS](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_SBS_json.h)|
 |-|-|
 |Brand|Victron Energy|
 |Model|SmartShunt|

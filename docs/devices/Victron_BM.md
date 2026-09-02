@@ -1,6 +1,6 @@
 # Victron Energy BMV-712 Smart Battery Monitor
 
-|Model Id|[VICTSBS](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_SBS_json.h)|
+|Model Id|[VICTBM](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_SBS_json.h)|
 |-|-|
 |Brand|Victron Energy|
 |Model|BMV-712 Smart Battery Monitor|
