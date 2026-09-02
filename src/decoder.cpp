@@ -126,6 +126,48 @@ double TheengsDecoder::value_from_hex_string(const char* data_str,
 }
 
 /*
+ * @brief Extracts bit-aligned values from a hex string.
+ * Bit 0 is the least significant bit of the first byte.
+ */
+double TheengsDecoder::value_from_bit_string(const char* data_str,
+                                             int bit_offset, int bit_length,
+                                             bool canBeNegative) {
+  if (bit_offset < 0 || bit_length <= 0 || bit_length > 63) {
+    return 0;
+  }
+
+  size_t data_chars = strlen(data_str);
+  size_t required_chars = ((size_t)(bit_offset + bit_length + 7) / 8) * 2;
+  if (data_chars < required_chars) {
+    return 0;
+  }
+
+  unsigned long long value = 0;
+  for (int i = 0; i < bit_length; ++i) {
+    int abs_bit = bit_offset + i;
+    size_t byte_idx = (size_t)abs_bit / 8;
+    uint8_t bit_idx = (uint8_t)(abs_bit % 8);
+    size_t hex_idx = byte_idx * 2;
+
+    uint8_t byte = (uint8_t)((getBinaryData(data_str[hex_idx]) << 4) |
+                             getBinaryData(data_str[hex_idx + 1]));
+    if ((byte >> bit_idx) & 0x01) {
+      value |= (1ULL << i);
+    }
+  }
+
+  long long signed_value = (long long)value;
+  if (canBeNegative) {
+    unsigned long long sign_bit = (1ULL << (bit_length - 1));
+    if (value & sign_bit) {
+      signed_value -= (long long)(1ULL << bit_length);
+    }
+  }
+
+  return (double)signed_value;
+}
+
+/*
  * @brief Removes the underscores at the beginning of key strings
  * when duplicate properties exist in a device.
  */
@@ -695,7 +737,8 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
         if (checkPropCondition(prop["condition"], svc_data, mfg_data, dev_name)) {
           JsonArray decoder = prop["decoder"];
-          if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr) {
+          if (strstr((const char*)decoder[0], "value_from_hex_data") != nullptr ||
+              strstr((const char*)decoder[0], "value_from_bit_data") != nullptr) {
             const char* src = svc_data;
             if (strstr((const char*)decoder[1], MFG_DATA)) {
               src = mfg_data;
@@ -706,7 +749,21 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             static double cal_val = 0;
             std::string proc_str = "";
 
-            if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
+            if (strstr((const char*)decoder[0], "value_from_bit_data") != nullptr) {
+              int bit_offset = decoder[2].as<int>();
+              int bit_length = decoder[3].as<int>();
+              size_t required_chars = ((size_t)(bit_offset + bit_length + 7) / 8) * 2;
+
+              if (data_index_is_valid(src, 0, required_chars)) {
+                temp_val = value_from_bit_string(
+                    src,
+                    bit_offset,
+                    bit_length,
+                    decoder[4].isNull() ? true : decoder[4].as<bool>());
+              } else {
+                break;
+              }
+            } else if (data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
               decoder_function dec_fun = &TheengsDecoder::value_from_hex_string;
 
               if (strstr((const char*)decoder[0], "bf") != nullptr) {
@@ -815,6 +872,28 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                       proc_str = "—";
                     }
                   }
+                }
+              }
+            }
+
+            /* Optional enum-style lookup for numeric decoders. */
+            if (prop.containsKey("lookup")) {
+              JsonArray lookup = prop["lookup"];
+              for (unsigned int i = 0; i + 1 < lookup.size(); i += 2) {
+                long long lookup_key = LLONG_MIN;
+
+                if (lookup[i].is<const char*>()) {
+                  const char* key_str = lookup[i].as<const char*>();
+                  if (key_str != nullptr) {
+                    lookup_key = strtoll(key_str, NULL, 16);
+                  }
+                }
+
+                if (lookup_key != LLONG_MIN &&
+                    (long long)temp_val == lookup_key &&
+                    lookup[i + 1].is<const char*>()) {
+                  proc_str = lookup[i + 1].as<const char*>();
+                  break;
                 }
               }
             }
