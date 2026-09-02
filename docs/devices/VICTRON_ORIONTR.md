@@ -1,6 +1,6 @@
 # Victron Energy Orion TR
 
-|Model Id|[VICTORIONXS](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_ORIONTR_json.h)|
+|Model Id|[VICTORIONTR](https://github.com/theengs/decoder/blob/development/src/devices/VICTRON_ORIONTR_json.h)|
 |-|-|
 |Brand|Victron Energy|
 |Model|Orion TR|
