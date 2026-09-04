@@ -8,6 +8,6 @@
 |Communication|BLE broadcast|
 |Frequency|2.4Ghz|
 |Power Source|From connected battery/alternator|
-|Exchanged Data|device state, voltage in, voltage out, current in, current out, error code|
+|Exchanged Data|device state, voltage in, voltage out, off reason, error code|
 |Encrypted|Yes|
 |Device Tracker|&#9989;|
