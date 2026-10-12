@@ -183,6 +183,9 @@ std::string TheengsDecoder::sanitizeJsonKey(const char* key_in) {
  * @brief Checks to ensure accessing data at the index + length of the string is valid.
  */
 bool TheengsDecoder::data_index_is_valid(const char* str, size_t index, size_t len) {
+  if (str == nullptr) {
+    return false;
+  }
   if (strlen(str) < (index + len)) {
     return false;
   }
@@ -479,6 +482,9 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
           inverse = *(const char*)prop_condition[i + 2] == '!';
           size_t cond_len = strlen(prop_condition[i + 2 + inverse].as<const char*>());
           if (strstr((const char*)prop_condition[i + 2], "bit") != nullptr) {
+            if (!data_index_is_valid(data_src, prop_condition[i + 1].as<int>(), 1)) {
+              return false;
+            }
             char ch = *(data_src + prop_condition[i + 1].as<int>());
             uint8_t data = getBinaryData(ch);
 
@@ -488,6 +494,8 @@ bool TheengsDecoder::checkPropCondition(const JsonArray& prop_condition,
               cond_met = true;
             }
             i += 2;
+          } else if (!data_index_is_valid(data_src, prop_condition[i + 1].as<int>(), cond_len)) {
+            return false;
           } else if (!strncmp(&data_src[prop_condition[i + 1].as<int>()],
                               prop_condition[i + 2 + inverse].as<const char*>(), cond_len)) {
             cond_met = inverse ? false : true;
@@ -960,6 +968,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
                 data_src = mfg_data;
               }
 
+              if (!data_index_is_valid(data_src, staticbitdecoder[2].as<int>(), 1)) {
+                continue;
+              }
               char ch = *(data_src + staticbitdecoder[2].as<int>());
               uint8_t data = getBinaryData(ch);
               uint8_t shift = staticbitdecoder[3].as<uint8_t>();
@@ -977,6 +988,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               src = mfg_data;
             }
 
+            if (!data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
+              continue;
+            }
             std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
 
             if (strstr((const char*)decoder[0], "reverse_") != nullptr) {
@@ -1012,6 +1026,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               src = mfg_data;
             }
 
+            if (!data_index_is_valid(src, decoder[2].as<int>(), 12)) {
+              continue;
+            }
             std::string value(src + decoder[2].as<int>(), 12);
 
             // reverse MAC
@@ -1042,6 +1059,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
               src = mfg_data;
             }
 
+            if (!data_index_is_valid(src, decoder[2].as<int>(), decoder[3].as<int>())) {
+              continue;
+            }
             std::string value(src + decoder[2].as<int>(), decoder[3].as<int>());
             std::string ascii = "";
 
@@ -1056,7 +1076,12 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
 
             if (ascii != "") {
               if (prop.containsKey("is_double")) {
-                jsondata[sanitizeJsonKey(kv.key().c_str())] = std::stod(ascii);
+                char* endp = nullptr;
+                const double dval = strtod(ascii.c_str(), &endp);
+                if (endp == ascii.c_str() || *endp != '\0') {
+                  continue;
+                }
+                jsondata[sanitizeJsonKey(kv.key().c_str())] = dval;
               } else {
                 jsondata[sanitizeJsonKey(kv.key().c_str())] = ascii;
               }
