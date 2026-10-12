@@ -319,7 +319,7 @@ bool TheengsDecoder::checkDeviceMatch(const JsonArray& condition,
       } else if (strstr(cond_str, "mac@index") != nullptr) {
         size_t cond_index = condition[++i].as<size_t>();
         size_t cond_len = 12;
-        char normalized_mac[13];   // 12 hex chars + null terminator
+        char normalized_mac[13]; // 12 hex chars + null terminator
         char reverse_mac_string[13];
         const char* string_to_compare = normalized_mac;
 
@@ -1077,8 +1077,9 @@ int TheengsDecoder::decodeBLEJson(JsonObject& jsondata) {
             if (ascii != "") {
               if (prop.containsKey("is_double")) {
                 char* endp = nullptr;
+                errno = 0;
                 const double dval = strtod(ascii.c_str(), &endp);
-                if (endp == ascii.c_str() || *endp != '\0') {
+                if (errno == ERANGE || endp == ascii.c_str() || *endp != '\0') {
                   continue;
                 }
                 jsondata[sanitizeJsonKey(kv.key().c_str())] = dval;
