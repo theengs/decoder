@@ -496,9 +496,9 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"type\":\"CTMO\",\"cont\":true,\"open\":false,\"mac\":\"58:2D:34:60:10:75\"}",
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"type\":\"CTMO\",\"cont\":true,\"open\":true,\"mac\":\"58:2D:34:60:10:75\"}",
     "{\"brand\":\"Qingping\",\"model\":\"Contact Sensor\",\"model_id\":\"CGH1\",\"type\":\"CTMO\",\"cont\":true,\"open\":false,\"mac\":\"58:2D:34:60:10:75\"}",
-    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
-    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100,\"mac\":\"YY:YY:YY:YY:YY:YY\"}",
-    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1\",\"type\":\"THB\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100,\"mac\":\"XX:XX:XX:XX:XX:XX\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1/CGG3\",\"type\":\"THB\",\"tempc\":27.4,\"tempf\":81.32,\"hum\":62.6,\"batt\":13,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1/CGG3\",\"type\":\"THB\",\"tempc\":23.5,\"tempf\":74.3,\"hum\":28.3,\"batt\":100,\"mac\":\"YY:YY:YY:YY:YY:YY\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1/CGG3\",\"type\":\"THB\",\"tempc\":24.4,\"tempf\":75.92,\"hum\":31.5,\"batt\":100,\"mac\":\"XX:XX:XX:XX:XX:XX\"}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Alarm Clock\",\"model_id\":\"CGC1/CGD1\",\"type\":\"THB\",\"tempc\":21,\"tempf\":69.8,\"hum\":51,\"batt\":100,\"mac\":\"FF:EE:DD:CC:BB:AA\"}",
     "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525/F51C\",\"type\":\"THB\",\"acts\":true,\"tempc\":26.07347219,\"tempf\":78.93224994,\"hum\":34.27481498,\"batt\":100}",
     "{\"brand\":\"Jaalee\",\"model\":\"TH sensor\",\"model_id\":\"F525/F51C\",\"type\":\"THB\",\"acts\":true,\"tempc\":34.38353552,\"tempf\":93.89036393,\"hum\":34.80582895,\"batt\":100}",
@@ -552,6 +552,7 @@ const char* expected_uuid[] = {
     "{\"brand\":\"Feasycom\",\"model\":\"Beacon\",\"model_id\":\"FEASY\",\"type\":\"BCON\",\"track\":true,\"beaconmodel\":\"BP103B\",\"batt\":100,\"plugged_in\":false,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
     "{\"brand\":\"BlueCharm\",\"model\":\"Beacon 08/04P/021\",\"model_id\":\"KSensor\",\"type\":\"ACEL\",\"track\":true,\"tempc\":21.25,\"tempf\":70.25,\"accx\":4,\"accy\":-12,\"accz\":-4,\"volt\":3.05}",
     "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Thermo-Hygrometer CO2 Detector\",\"model_id\":\"CGP22C\",\"type\":\"AIR\",\"tempc\":25.5,\"tempf\":77.9,\"hum\":43.1,\"co2\":583,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"ClearGrass/Qingping\",\"model\":\"Round TH\",\"model_id\":\"CGG1/CGG3\",\"type\":\"THB\",\"tempc\":20.9,\"tempf\":69.62,\"hum\":49.8,\"batt\":100,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfg[] = {
@@ -1561,6 +1562,7 @@ const char* test_uuid[][4] = {
     {"Feasycom BPXXX", "0xfff0", "servicedata", "29021992aabbccddeeff64"},
     {"BlueCharm BC04P", "0xfeaa", "servicedata", "21000b0bea15400004fff4fffc"},
     {"ClearGrass CO2 Detector", "0xfdcd", "servicedata", "0a5dffeeddccbbaa0104ff00af0102016413024702"},
+    {"Qingping CGG3", "0xfdcd", "servicedata", "884fffeeddccbbaa0104d100f201020164"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
@@ -1699,6 +1701,7 @@ TheengsDecoder::BLE_ID_NUM test_uuid_id_num[]{
     TheengsDecoder::BLE_ID_NUM::FEASY,
     TheengsDecoder::BLE_ID_NUM::BC08,
     TheengsDecoder::BLE_ID_NUM::CGP22C,
+    TheengsDecoder::BLE_ID_NUM::CGG1_STOCK,
 };
 
 // MAC manufacturer data test input [test name] [mac] [data]
