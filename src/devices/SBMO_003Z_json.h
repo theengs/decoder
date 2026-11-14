@@ -44,7 +44,7 @@ const char* _SBMO_003Z_json_props = "{\"properties\":{\"packet\":{\"unit\":\"int
          "name":"battery"
       },
       "lux":{
-         "unit":"lux",
+         "unit":"lx",
          "name":"illuminance"
       },
       "motion":{

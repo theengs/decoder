@@ -49,7 +49,7 @@ const char* _SBDW_002C_json_props = "{\"properties\":{\"packet\":{\"unit\":\"int
          "name":"battery"
       },
       "lux":{
-         "unit":"lux",
+         "unit":"lx",
          "name":"illuminance"
       },
       "open":{
