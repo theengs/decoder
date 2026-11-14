@@ -36,7 +36,7 @@ const char* _SBDW_002C_json = "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Door/
    }
 })"""";*/
 
-const char* _SBDW_002C_json_props = "{\"properties\":{\"packet\":{\"unit\":\"int\",\"name\":\"packet id\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"lux\":{\"unit\":\"lux\",\"name\":\"illuminance\"},\"open\":{\"unit\":\"status\",\"name\":\"door\"},\"rot\":{\"unit\":\"0\",\"name\":\"rotation\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
+const char* _SBDW_002C_json_props = "{\"properties\":{\"packet\":{\"unit\":\"int\",\"name\":\"packet id\"},\"batt\":{\"unit\":\"%\",\"name\":\"battery\"},\"lux\":{\"unit\":\"lx\",\"name\":\"illuminance\"},\"open\":{\"unit\":\"status\",\"name\":\"door\"},\"rot\":{\"unit\":\"0\",\"name\":\"rotation\"},\"mac\":{\"unit\":\"string\",\"name\":\"MAC address\"}}}";
 /*R""""(
 {
    "properties":{
