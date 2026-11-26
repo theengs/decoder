@@ -83,14 +83,14 @@ jobs:
           UBSAN_OPTIONS: print_stacktrace=1
 
   xcode:
-    name: XCode
+    name: Xcode
     needs: clang
-    runs-on: macos-14
+    runs-on: macos-26
     strategy:
       fail-fast: false
       matrix:
         include:
-          - xcode: "16.1"
+          - xcode: "26.6"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
