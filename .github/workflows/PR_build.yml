@@ -71,21 +71,21 @@ jobs:
         run: ctest --output-on-failure -V -C Debug .
 
   xcode:
-    name: XCode
+    name: Xcode
     needs: clang
-    runs-on: macos-14
+    runs-on: macos-26
     strategy:
       fail-fast: false
       matrix:
         include:
-          - xcode: "16.1"
+          - xcode: "26.6"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Select XCode version
-        run: sudo xcode-select --switch /Applications/Xcode_${{ matrix.xcode }}.app
+      - name: Select Xcode version
+        run: sudo xcode-select --switch "/Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer"
       - name: Configure
         run: cmake -DCMAKE_BUILD_TYPE=Debug .
       - name: Build
