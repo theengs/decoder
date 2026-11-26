@@ -253,6 +253,7 @@ const char* expected_mfg[] = {
     "{\"brand\":\"Victron Energy\",\"model\":\"Victron encrypted\",\"model_id\":\"VICTRON_ENCR\",\"type\":\"ENRG\",\"encr\":3,\"cipher\":\"378a5d06e864839e6311898e6911f7\",\"ctr\":\"0e02\",\"mic\":\"a6\"}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Battery Monitor/Smart Battery Sense/SmartShunt\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"bvpp\":true,\"ttg\":2169,\"volt\":13.92,\"volt_aux\":0,\"current\":-1.826,\"consumed_ah\":-0.1,\"soc\":99.9,\"alarm_reason\":0}",
     "{\"brand\":\"Victron Energy\",\"model\":\"Battery Monitor/Smart Battery Sense/SmartShunt\",\"model_id\":\"VICTSBS\",\"type\":\"ENRG\",\"track\":true,\"bvpp\":true,\"volt\":12.93,\"volt_aux\":0,\"current\":-2.002,\"alarm_reason\":0}",
+    "{\"brand\":\"Victron Energy\",\"model\":\"Orion TR\",\"model_id\":\"VICTORIONTR\",\"type\":\"ENRG\",\"track\":true,\"bvpp\":true,\"device_state\":\"off\",\"volt_in\":12.76,\"off_reason\":129,\"error_code\":0}",
 };
 
 const char* expected_name_uuid_mfgsvcdata[] = {
@@ -862,6 +863,7 @@ const char* test_mfgdata[][3] = {
     {"Victron Battery Monitor/Smart Battery Sense/SmartShunt ENCR", "", "e102100232c0020e02a6378a5d06e864839e6311898e6911f7"},
     {"Victron SmartShunt", "","e102110238c002ffffa6790870050000000078e3ff010070fe"},
     {"Victron SmartShunt", "","e102110238c002ffffa6ffff0d0500000000b8e0ffffffffff"},
+    {"Victron Orion TR", "", "e1021100c8a304ffff270000fc04ff7f81000000"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
@@ -1098,6 +1100,7 @@ TheengsDecoder::BLE_ID_NUM test_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::VICTRON_ENCR,
     TheengsDecoder::BLE_ID_NUM::VICTSBS,
     TheengsDecoder::BLE_ID_NUM::VICTSBS,
+    TheengsDecoder::BLE_ID_NUM::VICTORIONTR,
 };
 
 // uuid test input [test name] [device name] [uuid] [manufacturer data] [service data]
